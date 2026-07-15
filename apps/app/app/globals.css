@@ -1,0 +1,14 @@
+/* Import shared design tokens + Tailwind from the ui package */
+@import '@cypher/ui/styles/globals.css';
+
+/* App-specific global overrides go below */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

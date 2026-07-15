@@ -1,0 +1,13 @@
+/* Shared design tokens + Tailwind from the ui package */
+@import '@cypher/ui/styles/globals.css';
+
+/* Starlight CSS variable overrides — maps our tokens onto Starlight's theme system */
+:root {
+  --sl-color-accent: var(--color-accent);
+  --sl-color-bg: var(--color-bg);
+  --sl-color-text: var(--color-text);
+  --sl-color-gray-1: var(--color-text-muted);
+  --sl-color-hairline: var(--color-border);
+  --sl-font: var(--font-sans);
+  --sl-font-mono: var(--font-mono);
+}

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+out
+.next
+.astro
+storybook-static
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/settings.json
+.idea
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pnpm
+pnpm-debug.log
+
+*storybook.log

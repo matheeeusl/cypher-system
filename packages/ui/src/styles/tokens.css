@@ -1,0 +1,32 @@
+/*
+  Design tokens for the Cypher System "Salvage Console" theme.
+
+  These CSS custom properties are the single source of truth for colors.
+  Both apps import this file and Tailwind v4's @theme block reads from them.
+
+  Switching themes: toggle the [data-theme="light"] attribute on <html>.
+  Dark is the default — no attribute needed.
+*/
+
+/* ── Dark mode (default) ── */
+:root {
+  --color-bg: #14181c;
+  --color-panel: #1e252b;
+  --color-text: #d8e3e7;
+  --color-text-muted: #7c8a90;
+  --color-accent: #4fb8b0;
+  --color-warning: #c97b4a;
+  --color-border: #2b333a;
+}
+
+/* ── Light mode ── */
+[data-theme='light'] {
+  --color-bg: #f2f4f4;
+  --color-panel: #ffffff;
+  --color-text: #1a2226;
+  --color-text-muted: #5b6a70;
+  --color-accent: #0f6e56;
+  --color-accent-soft: #dceeea;
+  --color-warning: #a85a2e;
+  --color-border: #d7dbdc;
+}
