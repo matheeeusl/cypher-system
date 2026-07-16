@@ -27,3 +27,6 @@ Thumbs.db
 pnpm-debug.log
 
 *storybook.log
+
+#rulebook
+rulebook

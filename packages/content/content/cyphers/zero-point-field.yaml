@@ -1,0 +1,16 @@
+id: zero-point-field
+name:
+  en: Zero Point Field
+  pt-BR: Campo de Ponto Zero
+level_range: '1d6 + 3'
+category: manifest
+effect_text:
+  en: >-
+    Renders an inanimate object outside the effects of most energy for one
+    minute. This means the object cannot be harmed, moved, or manipulated
+    in any way. It remains in place (even in midair).
+  pt-BR: >-
+    Torna um objeto inanimado imune aos efeitos da maioria das formas de
+    energia por um minuto. Isso significa que o objeto não pode ser
+    danificado, movido ou manipulado de forma alguma. Ele permanece no
+    lugar (mesmo se estiver no ar).

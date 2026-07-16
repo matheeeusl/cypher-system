@@ -1,0 +1,10 @@
+id: bad-ability
+name:
+  en: Bad Ability
+  pt-BR: Habilidade Ruim
+description:
+  en: This ability is missing required fields on purpose.
+  pt-BR: Esta habilidade está faltando campos obrigatórios de propósito.
+tier: 1
+cost: null
+# action_type and sources are intentionally omitted — should fail validation

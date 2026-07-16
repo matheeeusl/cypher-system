@@ -1,0 +1,49 @@
+id: explorer
+name:
+  en: Explorer
+  pt-BR: Explorador
+tagline:
+  en: You are a person of action and physical ability, fearlessly facing the unknown.
+  pt-BR: Você é uma pessoa de ação e capacidade física, enfrentando o desconhecido sem medo.
+description:
+  en: >-
+    You travel to strange, exotic, and dangerous places, and discover new
+    things. This means you're physical but also probably knowledgeable.
+  pt-BR: >-
+    Você viaja para lugares estranhos, exóticos e perigosos, e descobre
+    coisas novas. Isso significa que você é físico, mas também provavelmente
+    versado em conhecimento.
+starting_pools:
+  might: 10
+  speed: 9
+  intellect: 9
+starting_edge:
+  stat_choices:
+    - might
+  amount: 1
+special_ability_id: null
+weapon_proficiency:
+  practiced:
+    - light
+    - medium
+  inability:
+    - heavy
+starting_skills: []
+starting_equipment: []
+tier_abilities:
+  '1':
+    - block
+    - danger-sense
+    - decipher
+    - endurance
+    - find-the-way
+    - fleet-of-foot
+    - improved-edge
+    - knowledge-skills
+    - muscles-of-iron
+    - no-need-for-weapons
+    - physical-skills
+    - practiced-in-armor
+    - practiced-with-all-weapons
+    - surging-confidence
+    - trained-without-armor

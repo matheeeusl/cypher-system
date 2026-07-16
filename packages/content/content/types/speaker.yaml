@@ -1,0 +1,46 @@
+id: speaker
+name:
+  en: Speaker
+  pt-BR: Falante
+tagline:
+  en: You're good with words and good with people.
+  pt-BR: Você é bom com palavras e bom com pessoas.
+description:
+  en: >-
+    You talk your way past challenges and out of jams, and you get people
+    to do what you want.
+  pt-BR: >-
+    Você usa sua fala para superar desafios e sair de enrascadas, e faz as
+    pessoas fazerem o que você quer.
+starting_pools:
+  might: 8
+  speed: 9
+  intellect: 11
+starting_edge:
+  stat_choices:
+    - intellect
+  amount: 1
+special_ability_id: null
+weapon_proficiency:
+  practiced:
+    - light
+  inability:
+    - medium
+    - heavy
+starting_skills: []
+starting_equipment: []
+tier_abilities:
+  '1':
+    - anecdote
+    - babel
+    - demeanor-of-command
+    - encouragement
+    - enthrall
+    - erase-memories
+    - fast-talk
+    - inspire-aggression
+    - interaction-skills
+    - practiced-with-medium-weapons
+    - spin-identity
+    - terrifying-presence
+    - understanding

@@ -1,0 +1,13 @@
+id: disarm
+name:
+  en: Disarm
+  pt-BR: Desarmar
+level_range: '1d6 + 1'
+category: subtle
+effect_text:
+  en: >-
+    One NPC within immediate range whose level is lower than the cypher
+    level drops whatever they are holding.
+  pt-BR: >-
+    Um PdM dentro do alcance imediato cujo nível seja inferior ao nível da
+    cifra derruba o que quer que esteja segurando.

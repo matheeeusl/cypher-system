@@ -14,7 +14,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "vitest run"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@cypher/content": "workspace:*",
+    "vitest": "^4.1.10"
+  }
 }
