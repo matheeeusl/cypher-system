@@ -1,0 +1,18 @@
+id: mind-imager
+name:
+  en: Mind Imager
+  pt-BR: Projetor Mental
+level: '1d6 + 2'
+form:
+  en: Handheld device with a plastic panel screen and wires that must be affixed to the head of a creature.
+  pt-BR: >-
+    Dispositivo portátil com uma tela de painel plástico e fios que devem
+    ser afixados na cabeça de uma criatura.
+depletion_die: '1 in 1d20'
+effect_text:
+  en: >-
+    This device shows a visual image of what a creature is thinking. The
+    affected creature need not be conscious.
+  pt-BR: >-
+    Este dispositivo mostra uma imagem visual do que uma criatura está
+    pensando. A criatura afetada não precisa estar consciente.

@@ -11,3 +11,14 @@ Plain TypeScript implementation of Cypher System mechanics: pools, effort, abili
 ## Current state
 
 `src/index.ts` is a stub (`ENGINE_VERSION`, a placeholder `PoolName` type). Real modules for pools/effort/abilities don't exist yet — build them as separate files under `src/` rather than growing `index.ts` into a monolith, and re-export from there.
+
+## Scope
+
+This package does not read files or perform I/O. Functions take already-parsed data (plain objects/arrays) as arguments — loading and validating YAML from `@cypher/content` is a separate concern, handled by that package's own loader.
+
+Input/output types for `character.ts` type-import from `@cypher/content` (`import type { ... }`) — erased at compile time, so this still holds; `@cypher/content` is a devDependency here, not a runtime one.
+
+## Known gaps
+
+- **Type ability resolution beyond tier 1** isn't modeled in `character.ts`. The "choose N" count for Type abilities varies by both tier and Type (e.g. Warrior is 4,2,3,2,3,2 across tiers 1-6; Adept is 4,1,2,1,2,1) and isn't captured anywhere in `TypeSchema` — only tier-1 content exists today for any Type. `resolveTypeAbilities` only ever resolves the tier-1 "choose four" pick. Extending this needs a schema addition (e.g. a choose-N-per-tier field) plus tiers 2-6 content for all 4 Types, as a follow-up task.
+- **Advancement "OTHER OPTIONS" substitutions** (reduce Speed Effort cost for armor by 1, +2 to recovery rolls, select another special ability from your Type at your tier or lower) aren't modeled. `deriveTier` explicitly rejects any purchase whose `option` isn't one of the 4 standard advancements, rather than silently mis-validating it. The "select another special ability" substitution in particular would need a new `AbilitySource` kind (`known_abilities` currently only has `'type'` and `'focus'` sources, since the standard advancement menu can only train an ability the character already knows, never grant a new one).

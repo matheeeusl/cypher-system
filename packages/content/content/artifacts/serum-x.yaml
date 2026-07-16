@@ -1,0 +1,20 @@
+id: serum-x
+name:
+  en: Serum X
+  pt-BR: Soro X
+level: '1d6 + 2'
+form:
+  en: Vial or syringe of red fluid.
+  pt-BR: Frasco ou seringa de fluido vermelho.
+depletion_die: 'Automatic'
+effect_text:
+  en: >-
+    Strips someone of all superpowers (including abilities granted by
+    magic, psionics, mutation, or science) for twenty-four hours. The
+    target retains only skills and abilities that are mundane, as agreed
+    by the GM and player.
+  pt-BR: >-
+    Retira de alguém todos os superpoderes (incluindo habilidades
+    concedidas por magia, psiônicos, mutação ou ciência) por vinte e
+    quatro horas. O alvo mantém apenas perícias e habilidades mundanas,
+    conforme acordado entre o Mestre e o jogador.

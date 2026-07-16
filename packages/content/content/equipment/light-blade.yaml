@@ -1,0 +1,15 @@
+id: light-blade
+name:
+  en: Light Blade
+  pt-BR: Lâmina Leve
+description:
+  en: >-
+    A light weapon such as a knife, hatchet, or short sword. Attacks with a
+    light weapon are eased by one step.
+  pt-BR: >-
+    Uma arma leve, como uma faca, machadinha ou espada curta. Ataques com
+    uma arma leve são facilitados em um passo.
+category: weapon
+stats:
+  damage: 2
+  cost: moderately_priced

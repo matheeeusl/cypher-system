@@ -1,0 +1,15 @@
+id: medium-armor
+name:
+  en: Medium Armor
+  pt-BR: Armadura Média
+description:
+  en: >-
+    Sturdier protection than light armor, at the cost of a higher Speed
+    Effort penalty while worn.
+  pt-BR: >-
+    Proteção mais robusta que a armadura leve, ao custo de uma penalidade
+    maior de Esforço de Agilidade enquanto vestida.
+category: armor
+stats:
+  armor_value: 2
+  cost: expensive

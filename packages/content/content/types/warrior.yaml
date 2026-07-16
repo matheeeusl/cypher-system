@@ -1,0 +1,51 @@
+id: warrior
+name:
+  en: Warrior
+  pt-BR: Guerreiro
+tagline:
+  en: You're a good ally to have in a fight.
+  pt-BR: Você é um bom aliado para se ter em uma luta.
+description:
+  en: >-
+    You know how to use weapons and defend yourself. Depending on the genre
+    and setting in question, this might mean wielding a sword and shield in
+    the gladiatorial arena, an AK-47 and a bandolier of grenades in a
+    savage firefight, or a blaster rifle and powered armor when exploring
+    an alien planet.
+  pt-BR: >-
+    Você sabe usar armas e se defender. Dependendo do gênero e cenário em
+    questão, isso pode significar empunhar uma espada e um escudo na arena
+    de gladiadores, um AK-47 e um bandoleiro de granadas em um tiroteio
+    selvagem, ou um rifle de energia e uma armadura reforçada ao explorar
+    um planeta alienígena.
+starting_pools:
+  might: 10
+  speed: 10
+  intellect: 8
+starting_edge:
+  stat_choices:
+    - might
+    - speed
+  amount: 1
+special_ability_id: null
+weapon_proficiency:
+  practiced:
+    - light
+    - medium
+    - heavy
+  inability: []
+starting_skills: []
+starting_equipment: []
+tier_abilities:
+  '1':
+    - bash
+    - combat-prowess
+    - control-the-field
+    - improved-edge
+    - no-need-for-weapons
+    - overwatch
+    - physical-skills
+    - practiced-in-armor
+    - quick-throw
+    - swipe
+    - trained-without-armor
