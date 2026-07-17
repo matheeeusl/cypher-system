@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
-import { getAllTypes, getTypeById, getAllAbilities, loadEntities } from '../loader'
-import { AbilitySchema } from '../schemas/ability'
+import { getAllTypes, getTypeById, getAllAbilities, loadEntities } from '../loader.js'
+import { AbilitySchema } from '../schemas/ability.js'
 
 describe('loader', () => {
   it('loads all 4 starter Types with the expected ids', () => {

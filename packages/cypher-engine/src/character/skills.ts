@@ -1,6 +1,6 @@
 import type { Descriptor } from '@cypher/content'
 
-import type { AdvancementPurchase, KnownAbility, SkillLevel } from './types'
+import type { AdvancementPurchase, KnownAbility, SkillLevel } from './types.js'
 
 const ERRORS = {
   ALREADY_MAXED:

@@ -1,6 +1,6 @@
 import type { Type } from '@cypher/content'
 
-import type { KnownAbility } from './types'
+import type { KnownAbility } from './types.js'
 
 const REQUIRED_TIER_1_COUNT = 4
 

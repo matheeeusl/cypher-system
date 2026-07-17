@@ -1,14 +1,14 @@
-export { LocalizedString, type WithVersion } from './schemas/shared'
+export { LocalizedString, type WithVersion } from './schemas/shared.js'
 
-export { AbilitySchema, type Ability } from './schemas/ability'
-export { TypeSchema, type Type } from './schemas/type'
-export { DescriptorSchema, type Descriptor } from './schemas/descriptor'
-export { FocusSchema, type Focus } from './schemas/focus'
-export { SkillSchema, type Skill } from './schemas/skill'
-export { EquipmentItemSchema, type EquipmentItem } from './schemas/equipment-item'
-export { CypherSchema, type Cypher } from './schemas/cypher'
-export { ArtifactSchema, type Artifact } from './schemas/artifact'
-export { OdditySchema, type Oddity } from './schemas/oddity'
+export { AbilitySchema, type Ability } from './schemas/ability.js'
+export { TypeSchema, type Type } from './schemas/type.js'
+export { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
+export { FocusSchema, type Focus } from './schemas/focus.js'
+export { SkillSchema, type Skill } from './schemas/skill.js'
+export { EquipmentItemSchema, type EquipmentItem } from './schemas/equipment-item.js'
+export { CypherSchema, type Cypher } from './schemas/cypher.js'
+export { ArtifactSchema, type Artifact } from './schemas/artifact.js'
+export { OdditySchema, type Oddity } from './schemas/oddity.js'
 
 export {
   getAllTypes,
@@ -29,4 +29,4 @@ export {
   getArtifactById,
   getAllOddities,
   getOddityById,
-} from './loader'
+} from './loader.js'

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { derivePoolMax } from '../character/pool'
+import { derivePoolMax } from '../character/pool.js'
 
 // Real data from content/types/warrior.yaml: might 10, speed 10, intellect 8.
 const warriorPools = { starting_pools: { might: 10, speed: 10, intellect: 8 } }

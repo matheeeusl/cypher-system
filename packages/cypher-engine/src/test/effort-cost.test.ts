@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {effortCost} from '../effort-cost';
+import {effortCost} from '../effort-cost.js';
 
 describe("effortCost", () => {
   it("returns 0 for 0 levels regardless of edge", () => {

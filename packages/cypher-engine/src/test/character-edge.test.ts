@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
-import { deriveEdge, resolveStartingEdge } from '../character/edge'
-import type { Stat } from '../character/types'
+import { deriveEdge, resolveStartingEdge } from '../character/edge.js'
+import type { Stat } from '../character/types.js'
 
 // Real data from content/types/warrior.yaml and adept.yaml.
 const warriorEdge: { stat_choices: Stat[]; amount: number } = {

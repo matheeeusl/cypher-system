@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import type { Descriptor, Focus, Type } from '@cypher/content'
 
-import { deriveCharacter } from '../character'
-import type { AdvancementPurchase, CharacterChoices } from '../character/types'
-import { validateCharacterChoices } from '../validate-character-choices'
+import { deriveCharacter } from '../character.js'
+import type { AdvancementPurchase, CharacterChoices } from '../character/types.js'
+import { validateCharacterChoices } from '../validate-character-choices.js'
 
 // Same real-data fixtures as character.test.ts.
 const warrior: Type = {

@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { LocalizedString } from './shared'
+import { LocalizedString } from './shared.js'
 
 export const AbilitySchema = z.object({
   id: z.string(),

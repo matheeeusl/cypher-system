@@ -1,6 +1,6 @@
 import type { Focus } from '@cypher/content'
 
-import type { KnownAbility } from './types'
+import type { KnownAbility } from './types.js'
 
 const ERRORS = {
   MISSING_SELECTION: (tier: string) =>

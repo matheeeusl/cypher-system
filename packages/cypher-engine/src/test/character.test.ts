@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import type { Descriptor, Focus, Type } from '@cypher/content'
 
-import { deriveCharacter } from '../character'
-import type { CharacterChoices } from '../character/types'
+import { deriveCharacter } from '../character.js'
+import type { CharacterChoices } from '../character/types.js'
 
 // Real data from content/types/warrior.yaml.
 const warrior: Type = {

@@ -1,6 +1,6 @@
 import type { Type } from '@cypher/content'
 
-import type { AdvancementPurchase, Stat } from './types'
+import type { AdvancementPurchase, Stat } from './types.js'
 
 const ERRORS = {
   CHOICE_REQUIRED:

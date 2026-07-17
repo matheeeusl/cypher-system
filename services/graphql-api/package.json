@@ -1,0 +1,26 @@
+{
+  "name": "@cypher/graphql-api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@cypher/content": "workspace:*",
+    "@cypher/engine": "workspace:*",
+    "@graphql-tools/utils": "^11.2.0",
+    "fastify": "^5.10.0",
+    "graphql": "^16.14.2",
+    "graphql-yoga": "^5.21.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "vitest": "^4.1.10"
+  }
+}

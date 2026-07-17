@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { LocalizedString } from './shared'
+import { LocalizedString } from './shared.js'
 
 // No category field: the rulebook is explicit that there's no definitive,
 // categorized list of skills — just a flat, illustrative one.

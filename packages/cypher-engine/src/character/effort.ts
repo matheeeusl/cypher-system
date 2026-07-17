@@ -1,4 +1,4 @@
-import type { AdvancementPurchase } from './types'
+import type { AdvancementPurchase } from './types.js'
 
 /**
  * Every character starts with an Effort score of 1; each 'extra-effort'

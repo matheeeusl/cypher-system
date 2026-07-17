@@ -4,7 +4,13 @@
     "rootDir": "src",
     "outDir": "dist",
     "lib": ["ES2022"],
-    "types": ["node"]
+    "types": ["node"],
+    // Overrides the base's "bundler" resolution: this package's compiled
+    // output is loaded by services/graphql-api via plain `node dist/`, not
+    // a bundler, so relative imports must resolve the way real Node ESM
+    // does (explicit .js extensions) rather than the way webpack/vite do.
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
   },
   "include": ["src"]
 }

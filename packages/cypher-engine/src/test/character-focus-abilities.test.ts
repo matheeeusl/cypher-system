@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { resolveFocusAbilities } from '../character/focus-abilities'
+import { resolveFocusAbilities } from '../character/focus-abilities.js'
 
 // Real data: content/foci/wields-two-weapons-at-once.yaml has only tier 1
 // today (stub content). Tiers 2-6 below are an inline fixture built from

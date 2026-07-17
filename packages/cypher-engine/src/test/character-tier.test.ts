@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
-import { deriveTier } from '../character/tier'
-import type { AdvancementPurchase } from '../character/types'
+import { deriveTier } from '../character/tier.js'
+import type { AdvancementPurchase } from '../character/types.js'
 
 function completeTier(tier: number): AdvancementPurchase[] {
   return [

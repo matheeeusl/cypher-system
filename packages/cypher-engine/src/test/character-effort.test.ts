@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { deriveEffort } from '../character/effort'
+import { deriveEffort } from '../character/effort.js'
 
 describe('deriveEffort', () => {
   it('starts at 1 with no purchases', () => {

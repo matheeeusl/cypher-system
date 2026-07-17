@@ -4,8 +4,8 @@ import {
   applyAbilityTrainingPurchase,
   applyDescriptorSkills,
   applySkillAdvancementPurchase,
-} from '../character/skills'
-import type { AdvancementPurchase, KnownAbility } from '../character/types'
+} from '../character/skills.js'
+import type { AdvancementPurchase, KnownAbility } from '../character/types.js'
 
 describe('applyDescriptorSkills', () => {
   it('seeds trained from skill_bonuses (real data: Strong -> smashing, jumping)', () => {

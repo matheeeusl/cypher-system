@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    // This service runs as a plain `node dist/index.js` process (in Docker,
+    // no bundler), so relative imports must resolve the way real Node ESM
+    // does — explicit .js extensions — rather than the base config's
+    // bundler-oriented "moduleResolution": "bundler".
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["src"]
+}

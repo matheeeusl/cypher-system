@@ -1,5 +1,5 @@
-import { ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement'
-import type { AdvancementPurchase } from './types'
+import { ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement.js'
+import type { AdvancementPurchase } from './types.js'
 
 const ERRORS = {
   SUBSTITUTION_NOT_SUPPORTED: (option: string) =>

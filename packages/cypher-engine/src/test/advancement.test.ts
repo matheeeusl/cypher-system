@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { ADVANCEMENT_COST_XP, ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement'
+import { ADVANCEMENT_COST_XP, ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement.js'
 
 describe('advancement', () => {
   it('costs 4 XP per advancement', () => {

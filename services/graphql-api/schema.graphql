@@ -1,0 +1,318 @@
+directive @oneOf on INPUT_OBJECT
+
+# ---- shared ----
+type LocalizedString {
+  en: String!
+  ptBR: String!
+}
+enum Stat {
+  MIGHT
+  SPEED
+  INTELLECT
+}
+
+# ---- Type ----
+enum WeaponCategory {
+  LIGHT
+  MEDIUM
+  HEAVY
+}
+type StartingPools {
+  might: Int!
+  speed: Int!
+  intellect: Int!
+}
+type StartingEdge {
+  statChoices: [Stat!]!
+  amount: Int!
+}
+type WeaponProficiency {
+  practiced: [WeaponCategory!]!
+  inability: [WeaponCategory!]!
+}
+type TypeTierAbilityGroup {
+  tier: Int!
+  abilityIds: [ID!]!
+}
+
+type Type {
+  id: ID!
+  name: LocalizedString!
+  tagline: LocalizedString!
+  description: LocalizedString!
+  startingPools: StartingPools!
+  startingEdge: StartingEdge!
+  specialAbilityId: ID
+  weaponProficiency: WeaponProficiency!
+  startingSkills: [ID!]!
+  startingEquipment: [ID!]!
+  tierAbilities: [TypeTierAbilityGroup!]!
+  contentVersion: String!
+}
+
+# ---- Descriptor ----
+type Descriptor {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  skillBonuses: [ID!]!
+  skillInabilities: [ID!]!
+  initialBonus: LocalizedString!
+  connectionText: LocalizedString!
+  contentVersion: String!
+}
+
+# ---- Focus ----
+type GrantedAbility {
+  abilityId: ID!
+}
+type ChoiceAbility {
+  options: [ID!]!
+}
+union FocusTierAbilityEntry = GrantedAbility | ChoiceAbility
+type FocusTierAbilityGroup {
+  tier: Int!
+  entries: [FocusTierAbilityEntry!]!
+}
+
+type Focus {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  connectionText: LocalizedString!
+  tierAbilities: [FocusTierAbilityGroup!]!
+  contentVersion: String!
+}
+
+# ---- Ability ----
+enum ActionType {
+  ACTION
+  ENABLER
+  PASSIVE
+}
+enum AbilitySourceType {
+  TYPE
+  FOCUS
+}
+type AbilityCost {
+  pool: Stat!
+  amount: Int!
+}
+type AbilitySourceRef {
+  type: AbilitySourceType!
+  id: ID!
+}
+
+type Ability {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  tier: Int!
+  cost: AbilityCost
+  actionType: ActionType!
+  sources: [AbilitySourceRef!]!
+  contentVersion: String!
+}
+
+# ---- Skill ----
+type Skill {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  contentVersion: String!
+}
+
+# ---- EquipmentItem ----
+enum EquipmentCategory {
+  WEAPON
+  ARMOR
+  GEAR
+}
+enum CostTier {
+  INEXPENSIVE
+  MODERATELY_PRICED
+  EXPENSIVE
+  VERY_EXPENSIVE
+  EXORBITANT
+  PRICELESS
+}
+type EquipmentStats {
+  damage: Int
+  armorValue: Int
+  cost: CostTier
+  weight: Float
+}
+
+type EquipmentItem {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  category: EquipmentCategory!
+  stats: EquipmentStats
+  contentVersion: String!
+}
+
+# ---- Cypher ----
+enum CypherCategory {
+  MANIFEST
+  SUBTLE
+}
+type Cypher {
+  id: ID!
+  name: LocalizedString!
+  levelRange: String!
+  category: CypherCategory!
+  effectText: LocalizedString!
+  contentVersion: String!
+}
+
+# ---- Artifact ----
+type Artifact {
+  id: ID!
+  name: LocalizedString!
+  level: String!
+  form: LocalizedString!
+  depletionDie: String!
+  effectText: LocalizedString!
+  contentVersion: String!
+}
+
+# ---- Oddity ----
+type Oddity {
+  id: ID!
+  description: LocalizedString!
+  contentVersion: String!
+}
+
+# ---- validate operation: inputs ----
+input StatAllocationInput {
+  might: Int!
+  speed: Int!
+  intellect: Int!
+}
+input DescriptorPoolBonusInput {
+  stat: Stat!
+  amount: Int!
+}
+input FocusChoiceSelectionInput {
+  tier: Int!
+  abilityId: ID!
+}
+
+input AdvancementPurchaseInput @oneOf {
+  increasingCapabilities: IncreasingCapabilitiesPurchaseInput
+  movingTowardPerfection: MovingTowardPerfectionPurchaseInput
+  extraEffort: ExtraEffortPurchaseInput
+  skills: SkillsPurchaseInput
+}
+input IncreasingCapabilitiesPurchaseInput {
+  tier: Int!
+  statPoolAllocation: StatAllocationInput!
+}
+input MovingTowardPerfectionPurchaseInput {
+  tier: Int!
+  edgeStat: Stat!
+}
+input ExtraEffortPurchaseInput {
+  tier: Int!
+}
+input SkillsPurchaseInput {
+  tier: Int!
+  target: SkillsPurchaseTargetInput!
+}
+input SkillsPurchaseTargetInput @oneOf {
+  skillId: ID
+  abilityId: ID
+}
+
+input CharacterChoicesInput {
+  typeId: ID!
+  descriptorId: ID!
+  focusId: ID!
+  startingEdgeChoice: Stat
+  poolPointAllocation: StatAllocationInput!
+  descriptorPoolBonus: DescriptorPoolBonusInput
+  tier1TypeAbilityIds: [ID!]!
+  focusChoiceSelections: [FocusChoiceSelectionInput!]!
+  advancementPurchases: [AdvancementPurchaseInput!]!
+}
+
+# ---- validate operation: output ----
+type PoolMax {
+  max: Int!
+}
+type Pools {
+  might: PoolMax!
+  speed: PoolMax!
+  intellect: PoolMax!
+}
+type Edge {
+  might: Int!
+  speed: Int!
+  intellect: Int!
+}
+
+type TypeAbilitySource {
+  typeId: ID!
+}
+type FocusAbilitySource {
+  focusId: ID!
+}
+union AbilitySource = TypeAbilitySource | FocusAbilitySource
+
+enum SkillLevel {
+  INABILITY
+  PRACTICED
+  TRAINED
+  SPECIALIZED
+}
+type KnownAbility {
+  abilityId: ID!
+  source: AbilitySource!
+  trained: Boolean!
+}
+type SkillEntry {
+  skillId: ID!
+  level: SkillLevel!
+}
+
+type DerivedCharacterPayload {
+  tier: Int!
+  pools: Pools!
+  edge: Edge!
+  effort: Int!
+  knownAbilities: [KnownAbility!]!
+  skills: [SkillEntry!]!
+}
+
+type ValidCharacterResult {
+  character: DerivedCharacterPayload!
+}
+type InvalidCharacterResult {
+  errors: [String!]!
+}
+union ValidationResultPayload = ValidCharacterResult | InvalidCharacterResult
+
+# ---- queries ----
+type Query {
+  types: [Type!]!
+  type(id: ID!): Type
+  descriptors: [Descriptor!]!
+  descriptor(id: ID!): Descriptor
+  foci: [Focus!]!
+  focus(id: ID!): Focus
+  abilities: [Ability!]!
+  ability(id: ID!): Ability
+  skills: [Skill!]!
+  skill(id: ID!): Skill
+  equipment: [EquipmentItem!]!
+  equipmentItem(id: ID!): EquipmentItem
+  cyphers: [Cypher!]!
+  cypher(id: ID!): Cypher
+  artifacts: [Artifact!]!
+  artifact(id: ID!): Artifact
+  oddities: [Oddity!]!
+  oddity(id: ID!): Oddity
+
+  validateCharacterChoices(input: CharacterChoicesInput!): ValidationResultPayload!
+}

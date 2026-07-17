@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { resolveTypeAbilities } from '../character/type-abilities'
+import { resolveTypeAbilities } from '../character/type-abilities.js'
 
 // Real data from content/types/warrior.yaml.
 const warrior = {

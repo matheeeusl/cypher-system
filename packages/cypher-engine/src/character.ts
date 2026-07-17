@@ -1,24 +1,24 @@
 import type { Descriptor, Focus, Type } from '@cypher/content'
 
-import { deriveEdge, resolveStartingEdge } from './character/edge'
-import { deriveEffort } from './character/effort'
-import { resolveFocusAbilities } from './character/focus-abilities'
-import { derivePoolMax } from './character/pool'
+import { deriveEdge, resolveStartingEdge } from './character/edge.js'
+import { deriveEffort } from './character/effort.js'
+import { resolveFocusAbilities } from './character/focus-abilities.js'
+import { derivePoolMax } from './character/pool.js'
 import {
   applyAbilityTrainingPurchase,
   applyDescriptorSkills,
   applySkillAdvancementPurchase,
-} from './character/skills'
-import { deriveTier } from './character/tier'
-import { resolveTypeAbilities } from './character/type-abilities'
+} from './character/skills.js'
+import { deriveTier } from './character/tier.js'
+import { resolveTypeAbilities } from './character/type-abilities.js'
 import type {
   CharacterChoices,
   DerivedCharacter,
   KnownAbility,
   SkillLevel,
-} from './character/types'
+} from './character/types.js'
 
-export * from './character/types'
+export * from './character/types.js'
 
 export interface CharacterContent {
   type: Type
