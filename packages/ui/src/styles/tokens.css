@@ -11,7 +11,7 @@
 /* ── Dark mode (default) ── */
 :root {
   --color-bg: #14181c;
-  --color-panel: #1e252b;
+  --color-panel: #232b31;
   --color-text: #d8e3e7;
   --color-text-muted: #7c8a90;
   --color-accent: #4fb8b0;
@@ -22,7 +22,7 @@
 /* ── Light mode ── */
 [data-theme='light'] {
   --color-bg: #f2f4f4;
-  --color-panel: #ffffff;
+  --color-panel: #f7f8f8;
   --color-text: #1a2226;
   --color-text-muted: #5b6a70;
   --color-accent: #0f6e56;

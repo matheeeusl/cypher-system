@@ -1,0 +1,24 @@
+# design-sync NOTES
+
+## Fixes (symptom → root cause → fix)
+
+- **[GENERAL] `storybookConfigDir` must point at the `.storybook/` dir itself, not the package dir.** Symptom: build log printed `story sources: 0/0 stories paired to module exports` and every preview showed the generic floor card. Root cause: `config.json` had `storybookConfigDir: "packages/ui"` (the package dir) instead of `"packages/ui/.storybook"`. Fix: point it at the actual `.storybook` directory — story-source resolution bases its search on `dirname(storybookConfigDir)`.
+- **`extraFonts` paths resolve relative to the DS package dir (`PKG_DIR`), not the repo root.** Fix: `config.json`'s `extraFonts` entry is `"../../.design-sync/fonts/fonts.css"` (relative from `packages/ui`), not a repo-root-relative path.
+- **Button.tsx had a real bug, independent of design-sync**: `bg-[--color-accent]` (Tailwind v4 bracket-arbitrary syntax) compiles to the literal invalid CSS `background-color: --color-accent` (missing `var()`), so the accent background never rendered. Fixed to use the already-generated `bg-accent`/`text-bg`/`border-border`/`bg-panel`/`text-text-muted` utility classes instead (from the `@theme` mapping in `globals.css`). Also switched Button to `font-mono`, per user decision — see Button redesign below.
+- **Google Fonts (Inter, Space Grotesk, IBM Plex Mono) aren't shipped anywhere in the repo** — the app loads them at runtime via `next/font/google`, so there's no local woff2/CSS for the DS package to point `cfg.extraFonts` at. Downloaded static per-weight `.woff2` files (legacy-UA trick against `fonts.googleapis.com/css2` to avoid the variable-font/unicode-range-split response) into `.design-sync/fonts/` with a self-hosted `fonts.css`, wired via `cfg.extraFonts`. Also injected the same `@font-face` rules into `.design-sync/sb-reference/iframe.html` so the compare oracle grades with the real fonts on both sides (see re-sync risk below — this injection does NOT survive a `sb-reference` rebuild).
+
+## Button redesign (this sync, at user's request)
+
+User flagged the existing `Button.tsx` as "outdated" vs. button styles established across mockups in their separate Claude Design project ("Cypher System design system", a `PROJECT_TYPE_PROJECT`, not the design-system-type project this sync targets). Derived the pattern from two concrete examples (Auth.dc.html's submit button, and the mode/lang-toggle buttons repeated across screens):
+- Primary: `bg-accent text-bg text-[13px] font-semibold`
+- Ghost/secondary: `border border-border bg-panel text-text-muted text-[11px]`
+- Both: `font-mono` (extends IBM Plex Mono's documented use from "stat blocks" to all buttons/UI chrome — CLAUDE.md updated)
+
+User approved these decisions explicitly via AskUserQuestion before implementation. **Follow-up correction (same session)**: user asked to drop the separately-added `--color-panel-2` token and instead have the single `--color-panel` token carry that shade (dark `#1E252B`→`#232B31`, light `#FFFFFF`→`#F7F8F8`) — a system-wide token value change, not just a Button tweak. `CLAUDE.md`'s token table updated to match. This removed the Ghost variant's `hover:bg-panel` (base and hover became the same color) — replaced with `hover:opacity-90` per user's choice, matching Primary's hover treatment.
+
+## Re-sync risks
+
+- **The `_injected-fonts/` + `@font-face` `<style>` block manually added to `.design-sync/sb-reference/iframe.html` does NOT survive a storybook rebuild** (`npx storybook build` overwrites the whole output dir). Whoever rebuilds `sb-reference` next must re-run the injection: copy `.design-sync/fonts/*.woff2` into `.design-sync/sb-reference/_injected-fonts/`, then re-insert the `<style>` block right after `<head>` in `iframe.html` (see this file's git history for the exact block, or re-derive from `.design-sync/fonts/fonts.css`). Without this, `[FONT_MISSING]`-class issues become invisible again because both sides would fall back to system fonts identically.
+- **`--font-display` (Space Grotesk) is declared in `packages/ui`'s `@theme` block but doesn't survive into the shipped `_ds_bundle.css`** — Tailwind v4's build only retains it once some synced component actually uses a `font-display` utility class. Currently only `Button` is synced, and it uses `font-mono`. Re-verify this once a heading/typography component is added — the conventions.md note should be removed once `--font-display` starts shipping.
+- **This design system currently has exactly one component (Button).** The solo verification phase covered the entire roster — there was no fan-out. Future re-syncs that add components should follow the full §4 flow (solo → diverse set of 4 → fan-out) rather than assuming single-component simplicity carries forward.
+- **Accepted substitute note**: none needed — all three font families (Inter, Space Grotesk, IBM Plex Mono) are shipped as real self-hosted woff2 files, not system-font substitutes.

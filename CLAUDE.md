@@ -50,12 +50,12 @@ Dark-first, teal/graphite, utilitarian.
 - Apps consume both in one import: `@cypher/ui/styles/globals.css`.
 - Theme switching is just toggling `[data-theme="light"]` on `<html>` — CSS variables cascade automatically, no class changes needed on elements.
 
-Fonts: Space Grotesk (headers/display), Inter (body), IBM Plex Mono (stat blocks).
+Fonts: Space Grotesk (headers/display), Inter (body), IBM Plex Mono (stat blocks, buttons/UI chrome).
 
 | Token | Dark | Light |
 |---|---|---|
 | bg | `#14181C` | `#F2F4F4` |
-| panel | `#1E252B` | `#FFFFFF` |
+| panel | `#232B31` | `#F7F8F8` |
 | text | `#D8E3E7` | `#1A2226` |
 | text-muted | `#7C8A90` | `#5B6A70` |
 | accent | `#4FB8B0` | `#0F6E56` |

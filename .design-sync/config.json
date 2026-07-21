@@ -1,0 +1,11 @@
+{
+  "projectId": "ceff7bed-b64b-4d51-a271-7d69bad39306",
+  "shape": "storybook",
+  "storybookConfigDir": "packages/ui/.storybook",
+  "pkg": "@cypher/ui",
+  "globalName": "CypherUI",
+  "storybookStatic": ".design-sync/sb-reference",
+  "buildCmd": "pnpm -F \"@cypher/ui...\" build",
+  "extraFonts": ["../../.design-sync/fonts/fonts.css"],
+  "readmeHeader": ".design-sync/conventions.md"
+}

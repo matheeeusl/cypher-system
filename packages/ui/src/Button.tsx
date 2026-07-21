@@ -5,10 +5,10 @@ interface ButtonProps {
 }
 
 export function Button({ label, onClick, variant = 'primary' }: ButtonProps) {
-  const base = 'rounded px-4 py-2 font-medium transition-colors cursor-pointer'
+  const base = 'rounded px-4 py-2 font-mono transition-colors cursor-pointer'
   const variants = {
-    primary: 'bg-[--color-accent] text-[--color-bg] hover:opacity-90',
-    ghost: 'border border-[--color-border] text-[--color-text] hover:bg-[--color-panel]',
+    primary: 'bg-accent text-bg text-[13px] font-semibold hover:opacity-90',
+    ghost: 'border border-border bg-panel text-text-muted text-[11px] hover:opacity-90',
   }
 
   return (
