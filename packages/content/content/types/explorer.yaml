@@ -6,13 +6,53 @@ tagline:
   en: You are a person of action and physical ability, fearlessly facing the unknown.
   pt-BR: Você é uma pessoa de ação e capacidade física, enfrentando o desconhecido sem medo.
 description:
-  en: >-
-    You travel to strange, exotic, and dangerous places, and discover new
-    things. This means you're physical but also probably knowledgeable.
-  pt-BR: >-
-    Você viaja para lugares estranhos, exóticos e perigosos, e descobre
-    coisas novas. Isso significa que você é físico, mas também provavelmente
-    versado em conhecimento.
+  individual_role:
+    en: >-
+      Although Explorers can be academics or well studied, they are first
+      and foremost interested in action. They face grave dangers and
+      terrible obstacles as a routine part of life.
+    pt-BR: Tradução em breve.
+  group_role:
+    en: >-
+      Explorers sometimes work alone, but far more often they operate in
+      teams with other characters. The Explorer frequently leads the way,
+      blazing the trail. However, they're also likely to stop and
+      investigate anything intriguing they stumble upon.
+    pt-BR: Tradução em breve.
+  societal_role:
+    en: >-
+      Not all Explorers are out traipsing through the wilderness or poking
+      about an old ruin. Sometimes, an Explorer is a teacher, a scientist,
+      a detective, or an investigative reporter. In any event, an Explorer
+      bravely faces new challenges and gathers knowledge to share with
+      others.
+    pt-BR: Tradução em breve.
+player_intrusions:
+  - name:
+      en: Fortuitous Malfunction
+      pt-BR: Tradução em breve.
+    description:
+      en: A trap or a dangerous device malfunctions before it can affect you.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Serendipitous Landmark
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        Just when it seems like the path is lost (or you are), a trail
+        marker, a landmark, or simply the way the terrain or corridor
+        bends, rises, or falls away suggests to you the best path forward,
+        at least from this point.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Weak Strain
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        The poison or disease turns out not to be as debilitating or deadly
+        as it first seemed, and inflicts only half the damage that it would
+        have otherwise.
+      pt-BR: Tradução em breve.
 starting_pools:
   might: 10
   speed: 9

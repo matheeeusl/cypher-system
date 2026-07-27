@@ -34,12 +34,22 @@ type TypeTierAbilityGroup {
   tier: Int!
   abilityIds: [ID!]!
 }
+type TypeDescription {
+  individualRole: LocalizedString!
+  groupRole: LocalizedString!
+  societalRole: LocalizedString!
+}
+type PlayerIntrusion {
+  name: LocalizedString!
+  description: LocalizedString!
+}
 
 type Type {
   id: ID!
   name: LocalizedString!
   tagline: LocalizedString!
-  description: LocalizedString!
+  description: TypeDescription!
+  playerIntrusions: [PlayerIntrusion!]!
   startingPools: StartingPools!
   startingEdge: StartingEdge!
   specialAbilityId: ID

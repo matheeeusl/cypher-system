@@ -51,7 +51,15 @@ export function mapType(t: WithVersion<Type>) {
     id: t.id,
     name: mapLocalizedString(t.name),
     tagline: mapLocalizedString(t.tagline),
-    description: mapLocalizedString(t.description),
+    description: {
+      individualRole: mapLocalizedString(t.description.individual_role),
+      groupRole: mapLocalizedString(t.description.group_role),
+      societalRole: mapLocalizedString(t.description.societal_role),
+    },
+    playerIntrusions: t.player_intrusions.map((intrusion) => ({
+      name: mapLocalizedString(intrusion.name),
+      description: mapLocalizedString(intrusion.description),
+    })),
     startingPools: t.starting_pools,
     startingEdge: { statChoices: t.starting_edge.stat_choices, amount: t.starting_edge.amount },
     specialAbilityId: t.special_ability_id,

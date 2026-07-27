@@ -6,12 +6,56 @@ tagline:
   en: You're good with words and good with people.
   pt-BR: Você é bom com palavras e bom com pessoas.
 description:
-  en: >-
-    You talk your way past challenges and out of jams, and you get people
-    to do what you want.
-  pt-BR: >-
-    Você usa sua fala para superar desafios e sair de enrascadas, e faz as
-    pessoas fazerem o que você quer.
+  individual_role:
+    en: >-
+      Speakers are smart and charismatic. They like people and, more
+      important, they understand them. This helps speakers get others to do
+      what needs to be done.
+    pt-BR: Tradução em breve.
+  group_role:
+    en: >-
+      The Speaker is often the face of the group, serving as the person
+      who speaks for all and negotiates with others. Combat and action are
+      not a Speaker's strong suits, so other characters sometimes have to
+      defend the Speaker in times of danger.
+    pt-BR: Tradução em breve.
+  societal_role:
+    en: >-
+      Speakers are frequently political or religious leaders. Just as
+      often, however, they are con artists or criminals.
+    pt-BR: Tradução em breve.
+player_intrusions:
+  - name:
+      en: Friendly NPC
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        An NPC you don't know, someone you don't know that well, or someone
+        you know but who hasn't been particularly friendly in the past
+        chooses to help you, though doesn't necessarily explain why. Maybe
+        they'll ask you for a favor in return afterward, depending on how
+        much trouble they go to.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Perfect Suggestion
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        A follower or other already-friendly NPC suggests a course of
+        action with regard to an urgent question, problem, or obstacle
+        you're facing.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Unexpected Gift
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        An NPC hands you a physical gift you were not expecting, one that
+        helps put the situation at ease if things seem strained, or
+        provides you with a new insight for understanding the context of
+        the situation if there's something you're failing to understand or
+        grasp.
+      pt-BR: Tradução em breve.
 starting_pools:
   might: 8
   speed: 9

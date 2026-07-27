@@ -9,7 +9,12 @@ const warrior: Type = {
   id: 'warrior',
   name: { en: 'Warrior', 'pt-BR': 'Guerreiro' },
   tagline: { en: "You're a good ally to have in a fight.", 'pt-BR': '' },
-  description: { en: '', 'pt-BR': '' },
+  description: {
+    individual_role: { en: '', 'pt-BR': '' },
+    group_role: { en: '', 'pt-BR': '' },
+    societal_role: { en: '', 'pt-BR': '' },
+  },
+  player_intrusions: [],
   starting_pools: { might: 10, speed: 10, intellect: 8 },
   starting_edge: { stat_choices: ['might', 'speed'], amount: 1 },
   special_ability_id: null,

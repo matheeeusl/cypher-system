@@ -6,17 +6,59 @@ tagline:
   en: You master powers or abilities outside the experience, understanding, and sometimes belief of others.
   pt-BR: Você domina poderes ou habilidades além da experiência, compreensão e, às vezes, crença dos outros.
 description:
-  en: >-
-    They might be magic, psychic powers, mutant abilities, or just a wide
-    variety of intricate devices, depending on the setting. Your abilities
-    might be an expression of technological devices, channeling spirits,
-    mutations, psionics, nanotechnology, or something else.
-  pt-BR: >-
-    Podem ser magia, poderes psíquicos, habilidades mutantes, ou apenas uma
-    grande variedade de dispositivos intrincados, dependendo do cenário.
-    Suas habilidades podem ser uma expressão de dispositivos tecnológicos,
-    canalização de espíritos, mutações, psiônicos, nanotecnologia, ou outra
-    coisa.
+  individual_role:
+    en: >-
+      Adepts are usually thoughtful, intelligent types. They often think
+      carefully before acting and rely heavily on their supernatural
+      abilities.
+    pt-BR: Tradução em breve.
+  group_role:
+    en: >-
+      Adepts are not powerful in straightforward combat, although they
+      often wield abilities that provide excellent combat support, both
+      offensively and defensively. They sometimes possess abilities that
+      facilitate overcoming challenges. For example, if the group must get
+      through a locked door, an Adept might be able to destroy it or
+      teleport everyone to the other side.
+    pt-BR: Tradução em breve.
+  societal_role:
+    en: >-
+      In settings where the supernatural is rare, strange, or feared,
+      Adepts are likely rare and feared as well. They remain hidden,
+      shadowy figures. When this is not the case, Adepts are more likely to
+      be common and forthright. They might even take leadership roles.
+    pt-BR: Tradução em breve.
+player_intrusions:
+  - name:
+      en: Advantageous Malfunction
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        A device being used against you malfunctions. It might harm the
+        user or one of their allies for a round, or activate a dramatic and
+        distracting side effect for a few rounds.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Convenient Idea
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        A flash of insight provides you with a clear answer or suggests a
+        course of action with regard to an urgent question, problem, or
+        obstacle you're facing.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Inexplicably Unbroken
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        An inactive, ruined, or presumed-destroyed device temporarily
+        activates and performs a useful function relevant to the
+        situation. This is enough to buy you some time for a better
+        solution, alleviate a complication that was interfering with your
+        abilities, or just get you one more use out of a depleted cypher or
+        artifact.
+      pt-BR: Tradução em breve.
 starting_pools:
   might: 7
   speed: 9

@@ -7,7 +7,16 @@ import {
 	getEquipmentById,
 } from '@cypher/content';
 import type { Type } from '@cypher/content';
+import { getCypherLimit } from '@cypher/engine';
 import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+// Universal rules constants (identical for every Type), not per-Type data —
+// already enforced in @cypher/engine (effort.ts's base of 1, pool.ts's
+// sum-to-6 allocation, type-abilities.ts's REQUIRED_TIER_1_COUNT), so these
+// are rendered as static text rather than sourced from a schema field.
+const STARTING_EFFORT = 1;
+const ADDITIONAL_POOL_POINTS = 6;
+const TIER_1_CHOICE_COUNT = 4;
 
 export function getStaticPaths() {
 	const types = getAllTypes();
@@ -27,103 +36,142 @@ interface Props {
 const { locale } = Astro.params as { locale: UrlLocale; slug: string };
 const { type } = Astro.props as Props;
 
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
 const specialAbility = type.special_ability_id ? getAbilityById(type.special_ability_id) : undefined;
 const startingSkills = type.starting_skills.map((id) => getSkillById(id));
 const startingEquipment = type.starting_equipment.map((id) => getEquipmentById(id));
 const tierEntries = Object.entries(type.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
+
+// Natural-language one-liners for the type-wide traits every character of
+// this Type starts with — these are real @cypher/content fields
+// (starting_edge, weapon_proficiency, starting_equipment), just surfaced as
+// tier-1 "fixed traits" per the design instead of their own top-level
+// sections, matching how the source rulebook actually presents them.
+const edgeText = `${type.starting_edge.amount} ${t('point(s) of Edge in', 'ponto(s) de Edge em')} ${type.starting_edge.stat_choices.join(t(' or ', ' ou '))}${
+	type.starting_edge.stat_choices.length > 1 ? t(' (player choice)', ' (à escolha do jogador)') : ''
+}`;
+
+const weaponText = [
+	`${t('Practiced', 'Treinado')}: ${type.weapon_proficiency.practiced.length > 0 ? type.weapon_proficiency.practiced.join(', ') : '—'}`,
+	type.weapon_proficiency.inability.length > 0
+		? `${t('Inability', 'Incapacidade')}: ${type.weapon_proficiency.inability.join(', ')}`
+		: null,
+]
+	.filter(Boolean)
+	.join(' · ');
 ---
 
 <StarlightPage frontmatter={{ title: pick(type.name, locale), description: pick(type.tagline, locale) }}>
-	<p class="text-lg text-text-muted">{pick(type.tagline, locale)}</p>
-	<p>{pick(type.description, locale)}</p>
-
-	<h2>{locale === 'pt-br' ? 'Reservas iniciais' : 'Starting pools'}</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>{locale === 'pt-br' ? 'Vigor' : 'Might'}</th>
-				<th>{locale === 'pt-br' ? 'Velocidade' : 'Speed'}</th>
-				<th>{locale === 'pt-br' ? 'Intelecto' : 'Intellect'}</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>{type.starting_pools.might}</td>
-				<td>{type.starting_pools.speed}</td>
-				<td>{type.starting_pools.intellect}</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<h2>{locale === 'pt-br' ? 'Edge inicial' : 'Starting Edge'}</h2>
-	<p>
-		{type.starting_edge.amount}{' '}
-		{locale === 'pt-br' ? 'ponto(s) de Edge em' : 'point(s) of Edge in'}{' '}
-		{type.starting_edge.stat_choices.join(locale === 'pt-br' ? ' ou ' : ' or ')}
-		{type.starting_edge.stat_choices.length > 1
-			? locale === 'pt-br'
-				? ' (à escolha do jogador)'
-				: ' (player choice)'
-			: ''}
+	<p class="mb-4 font-mono text-xs text-text-muted">
+		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
+		<span class="opacity-50"> / </span>
+		{t('Types', 'Tipos')}
+		<span class="opacity-50"> / </span>
+		<span class="text-text">{pick(type.name, locale)}</span>
 	</p>
 
-	<h2>{locale === 'pt-br' ? 'Habilidade especial' : 'Special ability'}</h2>
-	<p>{specialAbility ? pick(specialAbility.name, locale) : locale === 'pt-br' ? 'Nenhuma' : 'None'}</p>
+	<div class="mb-2.5 flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase not-prose">
+		<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>
+		{t('Type', 'Tipo')}
+	</div>
 
-	<h2>{locale === 'pt-br' ? 'Proficiência com armas' : 'Weapon proficiency'}</h2>
-	<ul>
-		<li>
-			{locale === 'pt-br' ? 'Treinado: ' : 'Practiced: '}
-			{type.weapon_proficiency.practiced.length > 0
-				? type.weapon_proficiency.practiced.join(', ')
-				: '—'}
-		</li>
-		<li>
-			{locale === 'pt-br' ? 'Incapacidade: ' : 'Inability: '}
-			{type.weapon_proficiency.inability.length > 0
-				? type.weapon_proficiency.inability.join(', ')
-				: '—'}
-		</li>
-	</ul>
+	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(type.tagline, locale)}</p>
 
+	<div class="mb-6 h-px bg-border"></div>
+
+	<div class="mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+		{
+			[
+				[t('Might Pool', 'Reserva de Vigor'), String(type.starting_pools.might)],
+				[t('Speed Pool', 'Reserva de Velocidade'), String(type.starting_pools.speed)],
+				[t('Intellect Pool', 'Reserva de Intelecto'), String(type.starting_pools.intellect)],
+				[t('Additional Points', 'Pontos adicionais'), t(`${ADDITIONAL_POOL_POINTS}, divided as you wish`, `${ADDITIONAL_POOL_POINTS}, divididos como desejar`)],
+				[t('Effort (tier 1)', 'Esforço (tier 1)'), String(STARTING_EFFORT)],
+				[t('Cypher Limit', 'Limite de cifras'), String(getCypherLimit(type))],
+			].map(([label, value]) => (
+				<div class="flex justify-between gap-4 border-b border-border py-1.5 font-mono text-[13px] last:border-b-0 last:pb-0 first:pt-0">
+					<span class="tracking-[0.04em] text-text-muted uppercase">{label}</span>
+					<span class="text-right font-medium text-text">{value}</span>
+				</div>
+			))
+		}
+	</div>
+
+	<p><strong>{t('As an individual', 'Como indivíduo')}:</strong> {pick(type.description.individual_role, locale)}</p>
+	<p><strong>{t('In a group', 'Em grupo')}:</strong> {pick(type.description.group_role, locale)}</p>
+	<p><strong>{t('In society', 'Na sociedade')}:</strong> {pick(type.description.societal_role, locale)}</p>
+
+	<h2>{t('Player intrusions', 'Intrusões do jogador')}</h2>
+	<div class="not-prose">
+		{
+			type.player_intrusions.map((intrusion) => (
+				<div class="mb-3 rounded border border-border bg-panel px-4 py-3">
+					<p class="mb-1 font-display font-semibold text-text">{pick(intrusion.name, locale)}</p>
+					<p class="text-[13px] leading-[1.55] text-text-muted">{pick(intrusion.description, locale)}</p>
+				</div>
+			))
+		}
+	</div>
+
+	<h2>{t('Tier abilities', 'Habilidades por tier')}</h2>
 	{
-		startingSkills.length > 0 && (
-			<>
-				<h2>{locale === 'pt-br' ? 'Perícias iniciais' : 'Starting skills'}</h2>
-				<ul>
-					{startingSkills.map((skill) => (
-						<li>{skill ? pick(skill.name, locale) : ''}</li>
-					))}
-				</ul>
-			</>
-		)
-	}
-
-	{
-		startingEquipment.length > 0 && (
-			<>
-				<h2>{locale === 'pt-br' ? 'Equipamento inicial' : 'Starting equipment'}</h2>
-				<ul>
-					{startingEquipment.map((item) => (
-						<li>{item ? pick(item.name, locale) : ''}</li>
-					))}
-				</ul>
-			</>
-		)
-	}
-
-	<h2>{locale === 'pt-br' ? 'Habilidades por tier' : 'Tier abilities'}</h2>
-	{
-		tierEntries.map(([tier, abilityIds]) => (
-			<>
-				<h3>{locale === 'pt-br' ? `Tier ${tier}` : `Tier ${tier}`}</h3>
-				<ul>
-					{abilityIds.map((id) => {
-						const ability = getAbilityById(id);
-						return <li>{ability ? pick(ability.name, locale) : id}</li>;
-					})}
-				</ul>
-			</>
+		tierEntries.map(([tier, abilityIds], i) => (
+			<div class="border-b border-border py-2.5 not-prose" class:list={{ 'border-t': i === 0 }}>
+				<span class="font-mono text-xs text-accent">
+					{t('Tier', 'Tier')} {tier}
+				</span>
+				<div class="mt-2">
+					{i === 0 && (
+						<div class="mb-2.5 rounded border border-border bg-panel px-3 py-0.5">
+							{[
+								[t('Edge', 'Edge'), edgeText],
+								[t('Weapons', 'Armas'), weaponText],
+								specialAbility ? [t('Special ability', 'Habilidade especial'), pick(specialAbility.name, locale)] : null,
+								startingSkills.length > 0
+									? [
+											t('Starting skills', 'Perícias iniciais'),
+											startingSkills.map((s) => (s ? pick(s.name, locale) : '')).join(', '),
+										]
+									: null,
+								startingEquipment.length > 0
+									? [
+											t('Starting equipment', 'Equipamento inicial'),
+											startingEquipment.map((eq) => (eq ? pick(eq.name, locale) : '')).join(', '),
+										]
+									: null,
+							]
+								.filter((row): row is [string, string] => row !== null)
+								.map(([name, desc]) => (
+									<div class="border-b border-border py-1.5 text-[13px] last:border-b-0">
+										<span class="font-display font-semibold">{name}: </span>
+										<span class="text-text-muted">{desc}</span>
+									</div>
+								))}
+						</div>
+					)}
+					{i === 0 && (
+						<div class="mb-1.5 font-mono text-[10px] tracking-[0.06em] text-warning uppercase">
+							{t(`Choose ${TIER_1_CHOICE_COUNT}`, `Escolha ${TIER_1_CHOICE_COUNT}`)}
+						</div>
+					)}
+					<div class="flex flex-wrap gap-1.5">
+						{/* Not real links yet — Abilities has no entity page of its own until
+						    that category is built. Styled like the design's cross-reference
+						    pills, but as inert spans rather than shipping dead `href="#"`s. */}
+						{abilityIds.map((id) => {
+							const ability = getAbilityById(id);
+							return (
+								<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
+									<span class="opacity-50">[</span>
+									{ability ? pick(ability.name, locale) : id}
+									<span class="opacity-50">]</span>
+								</span>
+							);
+						})}
+					</div>
+				</div>
+			</div>
 		))
 	}
 </StarlightPage>

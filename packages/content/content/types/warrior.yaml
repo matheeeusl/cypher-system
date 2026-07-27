@@ -6,18 +6,58 @@ tagline:
   en: You're a good ally to have in a fight.
   pt-BR: Você é um bom aliado para se ter em uma luta.
 description:
-  en: >-
-    You know how to use weapons and defend yourself. Depending on the genre
-    and setting in question, this might mean wielding a sword and shield in
-    the gladiatorial arena, an AK-47 and a bandolier of grenades in a
-    savage firefight, or a blaster rifle and powered armor when exploring
-    an alien planet.
-  pt-BR: >-
-    Você sabe usar armas e se defender. Dependendo do gênero e cenário em
-    questão, isso pode significar empunhar uma espada e um escudo na arena
-    de gladiadores, um AK-47 e um bandoleiro de granadas em um tiroteio
-    selvagem, ou um rifle de energia e uma armadura reforçada ao explorar
-    um planeta alienígena.
+  individual_role:
+    en: >-
+      Warriors are physical, action-oriented people. They're more likely to
+      overcome a challenge using force than by other means, and they often
+      take the most straightforward path toward their goals.
+    pt-BR: Tradução em breve.
+  group_role:
+    en: >-
+      Warriors usually take and deal the most punishment in a dangerous
+      situation. Often it falls on them to protect the other group members
+      from threats. This sometimes means that warriors take on leadership
+      roles as well, at least in combat and other times of danger.
+    pt-BR: Tradução em breve.
+  societal_role:
+    en: >-
+      Warriors aren't always soldiers or mercenaries. Anyone who is ready
+      for violence, or even potential violence, might be a Warrior in the
+      general sense. This includes guards, watchmen, police officers,
+      sailors, or people in other roles or professions who know how to
+      defend themselves with skill.
+    pt-BR: Tradução em breve.
+player_intrusions:
+  - name:
+      en: Perfect Setup
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You're fighting at least three foes and each one is standing in
+        exactly the right spot for you to use a move you trained in long
+        ago, allowing you to attack all three as a single action. Make a
+        separate attack roll for each foe. You remain limited by the amount
+        of Effort you can apply on one action.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Old Friend
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        A comrade in arms from your past shows up unexpectedly and provides
+        aid in whatever you're doing. They are on a mission of their own
+        and can't stay longer than it takes to help out, chat for a while
+        after, and perhaps share a quick meal.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Weapon Break
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        Your foe's weapon has a weak spot. In the course of the combat, it
+        quickly becomes damaged and moves two steps down the object damage
+        track.
+      pt-BR: Tradução em breve.
 starting_pools:
   might: 10
   speed: 10

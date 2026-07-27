@@ -6,7 +6,19 @@ export const TypeSchema = z.object({
   id: z.string(),
   name: LocalizedString,
   tagline: LocalizedString,
-  description: LocalizedString,
+  // Three rulebook-defined lenses on what the Type means to play, not a
+  // single flavor blurb — mirrors how the source text itself is structured.
+  description: z.object({
+    individual_role: LocalizedString,
+    group_role: LocalizedString,
+    societal_role: LocalizedString,
+  }),
+  player_intrusions: z.array(
+    z.object({
+      name: LocalizedString,
+      description: LocalizedString,
+    }),
+  ),
   starting_pools: z.object({ might: z.number(), speed: z.number(), intellect: z.number() }),
   starting_edge: z.object({
     // Every Type has at least one eligible stat; some (like Warrior) offer a

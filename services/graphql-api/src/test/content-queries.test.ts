@@ -13,6 +13,12 @@ describe('content queries', () => {
       type: {
         id: string
         name: LocalizedStringPayload
+        description: {
+          individualRole: LocalizedStringPayload
+          groupRole: LocalizedStringPayload
+          societalRole: LocalizedStringPayload
+        }
+        playerIntrusions: Array<{ name: LocalizedStringPayload; description: LocalizedStringPayload }>
         startingPools: { might: number; speed: number; intellect: number }
         startingEdge: { statChoices: string[]; amount: number }
         weaponProficiency: { practiced: string[]; inability: string[] }
@@ -27,6 +33,15 @@ describe('content queries', () => {
         type(id: "warrior") {
           id
           name { en ptBR }
+          description {
+            individualRole { en ptBR }
+            groupRole { en ptBR }
+            societalRole { en ptBR }
+          }
+          playerIntrusions {
+            name { en ptBR }
+            description { en ptBR }
+          }
           startingPools { might speed intellect }
           startingEdge { statChoices amount }
           weaponProficiency { practiced inability }
@@ -46,6 +61,34 @@ describe('content queries', () => {
       weaponProficiency: { practiced: ['LIGHT', 'MEDIUM', 'HEAVY'], inability: [] },
       specialAbilityId: null,
     })
+    // Real rulebook text from content/types/warrior.yaml, not a paraphrase —
+    // pinned so a future content or mapper regression (e.g. dropping a role,
+    // or wiring the wrong field through mapType) fails loudly instead of
+    // silently passing behind a loose toMatchObject.
+    expect(result.data.type?.description.individualRole.en).toBe(
+      "Warriors are physical, action-oriented people. They're more likely to overcome a challenge using force than by other means, and they often take the most straightforward path toward their goals.",
+    )
+    expect(result.data.type?.description.groupRole.en).toContain(
+      'Warriors usually take and deal the most punishment in a dangerous situation.',
+    )
+    expect(result.data.type?.description.societalRole.en).toContain(
+      "Warriors aren't always soldiers or mercenaries.",
+    )
+    expect(result.data.type?.description.individualRole.ptBR).toBe('Tradução em breve.')
+
+    expect(result.data.type?.playerIntrusions).toHaveLength(3)
+    expect(result.data.type?.playerIntrusions.map((i) => i.name.en)).toEqual([
+      'Perfect Setup',
+      'Old Friend',
+      'Weapon Break',
+    ])
+    expect(result.data.type?.playerIntrusions[2]).toMatchObject({
+      name: { en: 'Weapon Break', ptBR: 'Tradução em breve.' },
+      description: {
+        en: "Your foe's weapon has a weak spot. In the course of the combat, it quickly becomes damaged and moves two steps down the object damage track.",
+      },
+    })
+
     expect(result.data.type?.tierAbilities).toHaveLength(1)
     expect(result.data.type?.tierAbilities[0]).toMatchObject({ tier: 1 })
     for (const abilityId of ['bash', 'overwatch', 'swipe']) {
