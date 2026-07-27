@@ -11,3 +11,10 @@
   --sl-font: var(--font-sans);
   --sl-font-mono: var(--font-mono);
 }
+
+/* Starlight has no separate heading-font variable — --sl-font covers body
+   text and headings alike. Headers/display use Space Grotesk per the design
+   system, so headings need their own override. */
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display);
+}

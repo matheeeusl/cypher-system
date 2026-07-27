@@ -15,6 +15,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/starlight": "^0.41.3",
     "@cypher/content": "workspace:^",
+    "@cypher/engine": "workspace:^",
     "@cypher/ui": "workspace:^",
     "astro": "^7.0.2",
     "sharp": "^0.34.5"
