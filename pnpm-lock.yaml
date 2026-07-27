@@ -105,6 +105,9 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.41.3
         version: 0.41.3(astro@7.0.9)(typescript@5.9.3)
+      '@cypher/content':
+        specifier: workspace:^
+        version: link:../../packages/content
       '@cypher/ui':
         specifier: workspace:^
         version: link:../../packages/ui

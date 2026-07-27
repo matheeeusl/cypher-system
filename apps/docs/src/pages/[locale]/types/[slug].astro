@@ -1,0 +1,129 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import {
+	getAllTypes,
+	getAbilityById,
+	getSkillById,
+	getEquipmentById,
+} from '@cypher/content';
+import type { Type } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+export function getStaticPaths() {
+	const types = getAllTypes();
+
+	return URL_LOCALES.flatMap((locale) =>
+		types.map((type) => ({
+			params: { locale, slug: type.id },
+			props: { type },
+		})),
+	);
+}
+
+interface Props {
+	type: Type;
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { type } = Astro.props as Props;
+
+const specialAbility = type.special_ability_id ? getAbilityById(type.special_ability_id) : undefined;
+const startingSkills = type.starting_skills.map((id) => getSkillById(id));
+const startingEquipment = type.starting_equipment.map((id) => getEquipmentById(id));
+const tierEntries = Object.entries(type.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
+---
+
+<StarlightPage frontmatter={{ title: pick(type.name, locale), description: pick(type.tagline, locale) }}>
+	<p class="text-lg text-text-muted">{pick(type.tagline, locale)}</p>
+	<p>{pick(type.description, locale)}</p>
+
+	<h2>{locale === 'pt-br' ? 'Reservas iniciais' : 'Starting pools'}</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>{locale === 'pt-br' ? 'Vigor' : 'Might'}</th>
+				<th>{locale === 'pt-br' ? 'Velocidade' : 'Speed'}</th>
+				<th>{locale === 'pt-br' ? 'Intelecto' : 'Intellect'}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{type.starting_pools.might}</td>
+				<td>{type.starting_pools.speed}</td>
+				<td>{type.starting_pools.intellect}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>{locale === 'pt-br' ? 'Edge inicial' : 'Starting Edge'}</h2>
+	<p>
+		{type.starting_edge.amount}{' '}
+		{locale === 'pt-br' ? 'ponto(s) de Edge em' : 'point(s) of Edge in'}{' '}
+		{type.starting_edge.stat_choices.join(locale === 'pt-br' ? ' ou ' : ' or ')}
+		{type.starting_edge.stat_choices.length > 1
+			? locale === 'pt-br'
+				? ' (à escolha do jogador)'
+				: ' (player choice)'
+			: ''}
+	</p>
+
+	<h2>{locale === 'pt-br' ? 'Habilidade especial' : 'Special ability'}</h2>
+	<p>{specialAbility ? pick(specialAbility.name, locale) : locale === 'pt-br' ? 'Nenhuma' : 'None'}</p>
+
+	<h2>{locale === 'pt-br' ? 'Proficiência com armas' : 'Weapon proficiency'}</h2>
+	<ul>
+		<li>
+			{locale === 'pt-br' ? 'Treinado: ' : 'Practiced: '}
+			{type.weapon_proficiency.practiced.length > 0
+				? type.weapon_proficiency.practiced.join(', ')
+				: '—'}
+		</li>
+		<li>
+			{locale === 'pt-br' ? 'Incapacidade: ' : 'Inability: '}
+			{type.weapon_proficiency.inability.length > 0
+				? type.weapon_proficiency.inability.join(', ')
+				: '—'}
+		</li>
+	</ul>
+
+	{
+		startingSkills.length > 0 && (
+			<>
+				<h2>{locale === 'pt-br' ? 'Perícias iniciais' : 'Starting skills'}</h2>
+				<ul>
+					{startingSkills.map((skill) => (
+						<li>{skill ? pick(skill.name, locale) : ''}</li>
+					))}
+				</ul>
+			</>
+		)
+	}
+
+	{
+		startingEquipment.length > 0 && (
+			<>
+				<h2>{locale === 'pt-br' ? 'Equipamento inicial' : 'Starting equipment'}</h2>
+				<ul>
+					{startingEquipment.map((item) => (
+						<li>{item ? pick(item.name, locale) : ''}</li>
+					))}
+				</ul>
+			</>
+		)
+	}
+
+	<h2>{locale === 'pt-br' ? 'Habilidades por tier' : 'Tier abilities'}</h2>
+	{
+		tierEntries.map(([tier, abilityIds]) => (
+			<>
+				<h3>{locale === 'pt-br' ? `Tier ${tier}` : `Tier ${tier}`}</h3>
+				<ul>
+					{abilityIds.map((id) => {
+						const ability = getAbilityById(id);
+						return <li>{ability ? pick(ability.name, locale) : id}</li>;
+					})}
+				</ul>
+			</>
+		))
+	}
+</StarlightPage>

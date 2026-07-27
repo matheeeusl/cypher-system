@@ -15,6 +15,7 @@
   --color-text: #d8e3e7;
   --color-text-muted: #7c8a90;
   --color-accent: #4fb8b0;
+  --color-accent-soft: rgba(79, 184, 176, 0.12);
   --color-warning: #c97b4a;
   --color-border: #2b333a;
 }

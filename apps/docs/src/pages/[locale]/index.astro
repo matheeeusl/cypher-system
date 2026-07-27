@@ -1,0 +1,181 @@
+---
+// Standalone landing page — deliberately outside the Starlight docs shell
+// (no sidebar/TOC in the source design), so it isn't a content-collection
+// page and doesn't use <StarlightPage>. Every other page in the site (Rules,
+// Types, …) keeps Starlight's normal header/search/theme/language chrome;
+// this page owns its own header instead, matching the mockup's design.
+//
+// Because this page bypasses Starlight, it can't rely on `customCss` (that's
+// wired into the Starlight integration's own render pipeline) or Starlight's
+// ThemeProvider/LanguageSelect — tokens are imported directly below, and
+// theme/locale switching are reimplemented against the same
+// `localStorage['starlight-theme']` key Starlight itself reads, so a
+// preference set here carries over when navigating into a docs page (and
+// vice versa).
+import '../../styles/globals.css';
+import { URL_LOCALES, type UrlLocale } from '../../lib/locale';
+
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+const htmlLang = locale === 'pt-br' ? 'pt-BR' : 'en';
+
+const CHROME = {
+	en: {
+		eyebrow: 'Reference',
+		title: 'Cypher System Reference',
+		subtitle:
+			'A clean, searchable reference for running and playing the Cypher System — rules, character options, and equipment in one place.',
+		searchPlaceholder: 'Search the reference…',
+	},
+	'pt-br': {
+		eyebrow: 'Referência',
+		title: 'Referência do Cypher System',
+		subtitle:
+			'Uma referência limpa e pesquisável para dirigir e jogar o Cypher System — regras, opções de personagem e equipamentos em um só lugar.',
+		searchPlaceholder: 'Pesquisar na referência…',
+	},
+} as const;
+
+// Hrefs point at each category's intended future route. Only Getting
+// Started resolves today (Types has individual entity pages but no index
+// route yet) — the rest 404 until those sections are built, per plan.
+const SECTIONS = {
+	en: [
+		{ title: 'Getting Started', desc: 'New to the system? Start here.', href: '/en/rules/introduction/' },
+		{ title: 'Character Creation', desc: 'Types, descriptors, and foci.', href: '/en/types/' },
+		{ title: 'Core Mechanics', desc: 'Task resolution, Effort, and Edge.', href: '/en/rules/core-mechanics/' },
+		{ title: 'Combat', desc: 'Initiative, damage, and recovery.', href: '/en/rules/combat/' },
+		{ title: 'Equipment', desc: 'Weapons, armor, and cyphers.', href: '/en/equipment/' },
+		{ title: 'Glossary', desc: 'Every term, defined and linked.', href: '/en/glossary/' },
+	],
+	'pt-br': [
+		{ title: 'Primeiros Passos', desc: 'Novo no sistema? Comece aqui.', href: '/pt-br/rules/introduction/' },
+		{ title: 'Criação de Personagem', desc: 'Tipos, descritores e focos.', href: '/pt-br/types/' },
+		{
+			title: 'Mecânicas Principais',
+			desc: 'Resolução de tarefas, Esforço e Vantagem.',
+			href: '/pt-br/rules/core-mechanics/',
+		},
+		{ title: 'Combate', desc: 'Iniciativa, dano e recuperação.', href: '/pt-br/rules/combat/' },
+		{ title: 'Equipamento', desc: 'Armas, armaduras e cifras.', href: '/pt-br/equipment/' },
+		{ title: 'Glossário', desc: 'Todos os termos, definidos e linkados.', href: '/pt-br/glossary/' },
+	],
+} as const;
+
+const chrome = CHROME[locale];
+const sections = SECTIONS[locale];
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{chrome.title}</title>
+		<meta name="description" content={chrome.subtitle} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		{/* Inlined to avoid a flash of the wrong theme — mirrors Starlight's own ThemeProvider script. */}
+		<script is:inline>
+			{
+				const stored = localStorage.getItem('starlight-theme');
+				const theme =
+					stored === 'light' || stored === 'dark'
+						? stored
+						: window.matchMedia('(prefers-color-scheme: light)').matches
+							? 'light'
+							: 'dark';
+				document.documentElement.dataset.theme = theme;
+			}
+		</script>
+	</head>
+	<body class="m-0 min-h-screen bg-bg font-sans text-text">
+		<div class="flex items-center justify-between gap-4 border-b border-border bg-panel px-7 py-3.5">
+			<div class="flex items-center gap-2.5">
+				<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
+				<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
+			</div>
+			<div class="flex items-center gap-2">
+				<div class="flex overflow-hidden rounded border border-border">
+					<a
+						href="/en/"
+						aria-current={locale === 'en' ? 'page' : undefined}
+						class:list={[
+							'px-2.5 py-1.5 font-mono text-[11px]',
+							locale === 'en' ? 'bg-accent-soft text-accent' : 'text-text-muted',
+						]}>EN</a
+					>
+					<a
+						href="/pt-br/"
+						aria-current={locale === 'pt-br' ? 'page' : undefined}
+						class:list={[
+							'border-l border-border px-2.5 py-1.5 font-mono text-[11px]',
+							locale === 'pt-br' ? 'bg-accent-soft text-accent' : 'text-text-muted',
+						]}>PT-BR</a
+					>
+				</div>
+				<button
+					id="mode-toggle"
+					type="button"
+					class="flex items-center gap-1.5 rounded border border-border bg-panel px-2.5 py-1.5 font-mono text-[11px] text-text-muted"
+				>
+					<span id="mode-label"></span>
+				</button>
+			</div>
+		</div>
+
+		<div class="mx-auto max-w-[820px] px-7 pt-[72px] pb-10 text-center">
+			<div
+				class="mb-[18px] inline-flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase"
+			>
+				<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>{chrome.eyebrow}
+			</div>
+			<h1 class="m-0 mb-3.5 font-display text-[42px] font-semibold tracking-[-0.01em]">{chrome.title}</h1>
+			<p class="mx-auto mb-7 max-w-[560px] text-base leading-[1.65] text-text-muted">{chrome.subtitle}</p>
+			<a
+				href={`/${locale}/rules/introduction/`}
+				class="mx-auto flex max-w-[440px] items-center gap-2.5 rounded-md border border-border bg-panel px-4 py-3 font-mono text-[13px] text-text-muted"
+			>
+				<span>⌕</span>{chrome.searchPlaceholder}
+			</a>
+		</div>
+
+		<div class="mx-auto max-w-[900px] px-7 pt-3 pb-[72px]">
+			<div class="grid grid-cols-3 gap-3.5">
+				{
+					sections.map((sec) => (
+						<a href={sec.href} class="block rounded-md border border-border bg-panel p-5 text-inherit">
+							<span class="mb-3 block h-[7px] w-[7px] rounded-full bg-accent" />
+							<div class="mb-1.5 font-display text-base font-semibold">{sec.title}</div>
+							<div class="text-[13px] leading-[1.5] text-text-muted">{sec.desc}</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+
+		<script is:inline>
+			{
+				const btn = document.getElementById('mode-toggle');
+				const label = document.getElementById('mode-label');
+				function sync() {
+					const theme = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+					label.textContent = theme === 'dark' ? '● DARK' : '○ LIGHT';
+				}
+				sync();
+				btn.addEventListener('click', () => {
+					const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+					document.documentElement.dataset.theme = next;
+					localStorage.setItem('starlight-theme', next);
+					sync();
+				});
+			}
+		</script>
+	</body>
+</html>

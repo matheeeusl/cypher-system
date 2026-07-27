@@ -59,7 +59,7 @@ Fonts: Space Grotesk (headers/display), Inter (body), IBM Plex Mono (stat blocks
 | text | `#D8E3E7` | `#1A2226` |
 | text-muted | `#7C8A90` | `#5B6A70` |
 | accent | `#4FB8B0` | `#0F6E56` |
-| accent-soft | — | `#DCEEEA` |
+| accent-soft | `rgba(79,184,176,0.12)` | `#DCEEEA` |
 | warning | `#C97B4A` | `#A85A2E` |
 | border | `#2B333A` | `#D7DBDC` |
 
