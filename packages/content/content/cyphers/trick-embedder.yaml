@@ -1,0 +1,15 @@
+id: trick-embedder
+name: { en: "Trick embedder", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 399"
+level_range: "1d6"
+effect_text:
+  en: >-
+    A nonintelligent animal immediately and perfectly learns one trick (two
+    tricks if the cypher is level 4 or higher) it is capable of physically
+    performing (roll over, heel, spin, shake, go to an indicated place within
+    long range, and so on). The trick must be designated when the cypher is
+    activated.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

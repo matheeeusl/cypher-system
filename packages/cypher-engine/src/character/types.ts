@@ -36,6 +36,16 @@ export interface CharacterChoices {
    */
   focus_choice_selections: Record<string, string>
 
+  /**
+   * Skill ids chosen for the Descriptor's "N skills of your choice"
+   * skill_training entries (the ones with choice_count set, as opposed to a
+   * specific skill_id). Must total exactly the sum of every choice_count
+   * across the Descriptor's skill_training array, with no duplicates.
+   * Empty for a Descriptor with no choice entries (e.g. Strong, whose two
+   * skill_training entries are both specific skill_ids).
+   */
+  descriptor_skill_choices: string[]
+
   advancement_purchases: AdvancementPurchase[]
 }
 

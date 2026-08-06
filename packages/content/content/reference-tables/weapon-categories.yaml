@@ -1,0 +1,15 @@
+# Ammunition is also part of the rulebook's equipment price summary but
+# isn't a weapon category with damage/attack stats of its own — see
+# reference-tables/ammunition.yaml.
+- id: light
+  damage: 2
+  attack: eased
+  price_tier: moderately_priced
+- id: medium
+  damage: 4
+  attack: normal
+  price_tier: expensive
+- id: heavy
+  damage: 6
+  attack: two_handed
+  price_tier: very_expensive

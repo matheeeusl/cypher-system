@@ -20,7 +20,15 @@ const warrior: Type = {
   special_ability_id: null,
   weapon_proficiency: { practiced: ['light', 'medium', 'heavy'], inability: [] },
   starting_skills: [],
-  starting_equipment: [],
+  starting_equipment: {
+    clothing: true,
+    weapon: { en: 'two weapons of your choice', 'pt-BR': 'Tradução em breve.' },
+    items: [
+      { price_tier: 'expensive', count: 1, exact: true },
+      { price_tier: 'moderately_priced', count: 2, exact: true },
+      { price_tier: 'inexpensive', count: 4, exact: false },
+    ],
+  },
   tier_abilities: {
     '1': [
       'bash',
@@ -43,10 +51,20 @@ const strong: Descriptor = {
   id: 'strong',
   name: { en: 'Strong', 'pt-BR': 'Forte' },
   description: { en: '', 'pt-BR': '' },
-  skill_bonuses: ['smashing', 'jumping'],
-  skill_inabilities: [],
-  initial_bonus: { en: 'Very Powerful: +4 to your Might Pool.', 'pt-BR': '' },
-  connection_text: { en: '', 'pt-BR': '' },
+  pool_bonus: [{ stat: 'might', amount: 4 }],
+  characteristics: [],
+  skill_training: [
+    { skill_id: 'breaking-inanimate-objects', choice_count: null },
+    { skill_id: 'jumping', choice_count: null },
+  ],
+  inabilities: [],
+  additional_equipment: { en: 'You have an extra medium weapon or heavy weapon.', 'pt-BR': '' },
+  connection_options: [
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+  ],
 }
 
 // content/foci/wields-two-weapons-at-once.yaml only has tier 1 shipped;
@@ -57,7 +75,6 @@ const wieldsTwoWeapons: Focus = {
   id: 'wields-two-weapons-at-once',
   name: { en: 'Wields Two Weapons at Once', 'pt-BR': '' },
   description: { en: 'You bear steel with both hands, ready to take on any foe.', 'pt-BR': '' },
-  connection_text: { en: '', 'pt-BR': '' },
   tier_abilities: {
     '1': [{ kind: 'granted', ability_id: 'dual-light-wield' }],
     '2': [
@@ -66,6 +83,7 @@ const wieldsTwoWeapons: Focus = {
     ],
     '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'] }],
   },
+  type_swap_option: null,
 }
 
 describe('deriveCharacter (Warrior, end-to-end)', () => {
@@ -78,6 +96,7 @@ describe('deriveCharacter (Warrior, end-to-end)', () => {
     descriptor_pool_bonus: { stat: 'might', amount: 4 },
     tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
     focus_choice_selections: { '3': 'dual-medium-wield' },
+    descriptor_skill_choices: [],
     advancement_purchases: [
       // Tier 2, all 4 standard options.
       {
@@ -150,7 +169,7 @@ describe('deriveCharacter (Warrior, end-to-end)', () => {
 
   it('derives skills from Descriptor bonuses plus a skill-training purchase', () => {
     expect(derived.skills).toEqual({
-      smashing: { level: 'trained' },
+      'breaking-inanimate-objects': { level: 'trained' },
       jumping: { level: 'trained' },
       perception: { level: 'trained' },
     })

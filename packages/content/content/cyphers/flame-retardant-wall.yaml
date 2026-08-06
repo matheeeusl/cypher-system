@@ -1,0 +1,13 @@
+id: flame-retardant-wall
+name: { en: "Flame-retardant wall", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 388"
+level_range: "1d6"
+effect_text:
+  en: >-
+    Creates an immobile plane of permeable energy up to 20 feet by 20 feet (6
+    m by 6 m) for one hour per cypher level. The plane conforms to the space
+    available. Flames passing through the plane are extinguished.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

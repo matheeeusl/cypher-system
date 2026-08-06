@@ -1,0 +1,14 @@
+id: curse-bringer
+name: { en: "Curse bringer", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 386"
+level_range: "1d6 + 1"
+effect_text:
+  en: >-
+    The cypher can be activated when given to an individual who doesn't realize its significance.
+    The next time the victim attempts an important task when the cypher is in their possession,
+    the task is hindered by three steps.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null
+

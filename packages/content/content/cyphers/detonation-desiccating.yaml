@@ -1,0 +1,14 @@
+id: detonation-desiccating
+name: { en: "Detonation (desiccating)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 386"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Projects a small physical explosive up to a long distance away that bursts in an immediate radius,
+    draining moisture from everything within it. Living creatures take damage equal to the cypher's level.
+    Water in the area is vaporized.
+    (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

@@ -75,7 +75,19 @@ weapon_proficiency:
     - medium
     - heavy
 starting_skills: []
-starting_equipment: []
+starting_equipment:
+  clothing: true
+  weapon: null
+  items:
+    - price_tier: expensive
+      count: 2
+      exact: true
+    - price_tier: moderately_priced
+      count: 2
+      exact: true
+    - price_tier: inexpensive
+      count: 4
+      exact: true
 tier_abilities:
   '1':
     - distortion

@@ -1,0 +1,14 @@
+id: inferno-wall
+name: { en: "Inferno wall", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 390"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Creates a wall of extreme heat up to 30 feet by 30 feet by 1 foot (9 m by
+    9 m by 30 cm) that inflicts damage equal to the cypher's level on anything
+    that passes through it. The wall conforms to the space available. It lasts
+    for ten minutes.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

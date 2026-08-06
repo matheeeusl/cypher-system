@@ -1,0 +1,34 @@
+# Rulebook also lists "even weirder ray emitters" as free-form GM inspiration,
+# not a d100 table: turns target inside out; inflicts damage and turns flesh
+# blue; renders target mute; damages only plants; damages only inorganic matter;
+# turns flesh to dead, stonelike material. Editor's Notes — Chapter 15: Science
+# Fiction's Artifact Weapons include some unique "emitter" options too.
+id: ray-emitter
+name: { en: "Ray emitter", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 395"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Allows the user to project a ray of destructive energy up to very long
+    range that inflicts damage equal to the cypher's level. Roll a d100 to
+    determine the type of energy.
+  pt-BR: >-
+    Tradução em breve.
+effect_table:
+  label:
+    en: "Ray Emitter Effects"
+    pt-BR: "Tradução em breve."
+  entries:
+    - range: "01–50"
+      text: { en: "Heat/concentrated light", "pt-BR": "Tradução em breve." }
+    - range: "51–60"
+      text: { en: "Cell-disrupting radiation", "pt-BR": "Tradução em breve." }
+    - range: "61–80"
+      text: { en: "Force", "pt-BR": "Tradução em breve." }
+    - range: "81–87"
+      text: { en: "Magnetic wave", "pt-BR": "Tradução em breve." }
+    - range: "88–93"
+      text: { en: "Molecular bond disruption", "pt-BR": "Tradução em breve." }
+    - range: "94–00"
+      text: { en: "Concentrated cold", "pt-BR": "Tradução em breve." }

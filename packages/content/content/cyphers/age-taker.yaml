@@ -1,0 +1,7 @@
+id: age-taker
+name: { en: "Age taker", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 384"
+level_range: "1d6 + 4"
+effect_text: { en: "Begins a process of rejuvenation that removes years from the wearer's physiological age.", "pt-BR": "Tradução em breve." }
+effect_table: null

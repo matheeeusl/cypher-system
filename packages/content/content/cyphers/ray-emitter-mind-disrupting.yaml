@@ -1,0 +1,14 @@
+id: ray-emitter-mind-disrupting
+name: { en: "Ray emitter (mind disrupting)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 395"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Allows the user to project a ray of destructive energy up to very long
+    range that inflicts Intellect damage equal to the cypher's level. Also,
+    the victim cannot take actions for a number of rounds equal to the
+    cypher's level.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

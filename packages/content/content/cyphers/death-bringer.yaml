@@ -1,0 +1,17 @@
+id: death-bringer
+name: { en: "Death bringer", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 386"
+level_range: "1d6"
+# "damage track" (also referenced by the Warrior's Weapon Break player
+# intrusion, content/types/warrior.yaml) should become a cross-reference
+# once apps/docs has a Rules/glossary page for it — no such entity category
+# exists yet, so this is plain prose for now, not a broken link.
+effect_text:
+  en: >-
+    For the next minute, when the user strikes an NPC or creature of the cypher level or lower,
+    they can choose to make a second attack roll. If the second attack roll is a success,
+    the target is killed. If the target is a PC, the character instead moves down one step on the damage track.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

@@ -4,7 +4,6 @@ import {
 	getAllTypes,
 	getAbilityById,
 	getSkillById,
-	getEquipmentById,
 } from '@cypher/content';
 import type { Type } from '@cypher/content';
 import { getCypherLimit } from '@cypher/engine';
@@ -17,6 +16,22 @@ import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
 const STARTING_EFFORT = 1;
 const ADDITIONAL_POOL_POINTS = 6;
 const TIER_1_CHOICE_COUNT = 4;
+
+// English/Portuguese adjective phrases for content/reference-tables/
+// price-tiers.yaml's price_tier ids — UI chrome, not rulebook prose, so
+// translated directly here rather than sourced from @cypher/content (whose
+// own pt-BR is still "Tradução em breve." pending a real translation pass).
+// The Portuguese forms are pre-composed with their preposition ("de preço
+// moderado") since adjective order relative to the noun differs from
+// English — see how equipmentText below joins these per locale.
+const PRICE_TIER_LABELS: Record<string, [string, string]> = {
+	inexpensive: ['inexpensive', 'barato'],
+	moderately_priced: ['moderately priced', 'de preço moderado'],
+	expensive: ['expensive', 'caro'],
+	very_expensive: ['very expensive', 'muito caro'],
+	exorbitant: ['exorbitant', 'exorbitante'],
+	priceless: ['priceless', 'inestimável'],
+};
 
 export function getStaticPaths() {
 	const types = getAllTypes();
@@ -40,7 +55,6 @@ const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
 
 const specialAbility = type.special_ability_id ? getAbilityById(type.special_ability_id) : undefined;
 const startingSkills = type.starting_skills.map((id) => getSkillById(id));
-const startingEquipment = type.starting_equipment.map((id) => getEquipmentById(id));
 const tierEntries = Object.entries(type.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
 
 // Natural-language one-liners for the type-wide traits every character of
@@ -57,6 +71,21 @@ const weaponText = [
 	type.weapon_proficiency.inability.length > 0
 		? `${t('Inability', 'Incapacidade')}: ${type.weapon_proficiency.inability.join(', ')}`
 		: null,
+]
+	.filter(Boolean)
+	.join(' · ');
+
+const equipmentText = [
+	type.starting_equipment.clothing ? t('Appropriate clothing', 'Roupas apropriadas') : null,
+	type.starting_equipment.weapon ? pick(type.starting_equipment.weapon, locale) : null,
+	...type.starting_equipment.items.map((item) => {
+		const [en, pt] = PRICE_TIER_LABELS[item.price_tier] ?? [item.price_tier, item.price_tier];
+		const count = item.exact ? String(item.count) : t(`up to ${item.count}`, `até ${item.count}`);
+		const itemWord = item.count === 1 ? t('item', 'item') : t('items', 'itens');
+		// English puts the adjective before the noun ("1 expensive item");
+		// Portuguese puts it after ("1 item caro", "2 itens de preço moderado").
+		return t(`${count} ${en} ${itemWord}`, `${count} ${itemWord} ${pt}`);
+	}),
 ]
 	.filter(Boolean)
 	.join(' · ');
@@ -134,12 +163,7 @@ const weaponText = [
 											startingSkills.map((s) => (s ? pick(s.name, locale) : '')).join(', '),
 										]
 									: null,
-								startingEquipment.length > 0
-									? [
-											t('Starting equipment', 'Equipamento inicial'),
-											startingEquipment.map((eq) => (eq ? pick(eq.name, locale) : '')).join(', '),
-										]
-									: null,
+								[t('Starting equipment', 'Equipamento inicial'), equipmentText],
 							]
 								.filter((row): row is [string, string] => row !== null)
 								.map(([name, desc]) => (

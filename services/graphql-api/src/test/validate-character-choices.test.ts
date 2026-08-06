@@ -43,6 +43,7 @@ const validChoices: CharacterChoices = {
   descriptor_pool_bonus: { stat: 'might', amount: 4 },
   tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
   focus_choice_selections: {},
+  descriptor_skill_choices: [],
   advancement_purchases: [
     ...completeTier(2, {
       tier: 2,
@@ -75,6 +76,7 @@ const validInput = {
   descriptorPoolBonus: { stat: 'MIGHT', amount: 4 },
   tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
   focusChoiceSelections: [],
+  descriptorSkillChoices: [],
   advancementPurchases: [
     ...completeTierInput(2, { skillId: 'perception' }),
     ...completeTierInput(3, { abilityId: 'bash' }),

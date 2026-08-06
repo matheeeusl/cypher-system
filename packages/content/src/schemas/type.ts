@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { LocalizedString } from './shared.js'
+import { LocalizedString, PriceTierId } from './shared.js'
 
 export const TypeSchema = z.object({
   id: z.string(),
@@ -34,7 +34,28 @@ export const TypeSchema = z.object({
     inability: z.array(z.enum(['light', 'medium', 'heavy'])),
   }),
   starting_skills: z.array(z.string()),
-  starting_equipment: z.array(z.string()),
+  // Real, per-Type differences — checked side by side across all 4 Types,
+  // not a universal rule. "Appropriate clothing" is the one line that's
+  // actually identical for every Type; weapon phrasing and the
+  // expensive/moderately-priced/inexpensive item counts genuinely vary
+  // (e.g. Warrior trades a second expensive item for a second weapon).
+  starting_equipment: z.object({
+    clothing: z.boolean(),
+    // Free text, not structured — phrasing varies meaningfully between
+    // Types ("one weapon of your choice" vs "one light weapon of your
+    // choice" vs "two weapons of your choice"). Null for Adept, who gets
+    // no starting weapon.
+    weapon: LocalizedString.nullable(),
+    items: z.array(
+      z.object({
+        price_tier: PriceTierId,
+        count: z.number().int().min(0),
+        // true when the rulebook states the count exactly ("four"), false
+        // when it's a cap ("up to four").
+        exact: z.boolean(),
+      }),
+    ),
+  }),
   tier_abilities: z.record(z.string(), z.array(z.string())),
 })
 

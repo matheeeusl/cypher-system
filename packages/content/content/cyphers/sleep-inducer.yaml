@@ -1,0 +1,12 @@
+id: sleep-inducer
+name: { en: "Sleep inducer", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 397"
+level_range: "1d6"
+effect_text:
+  en: >-
+    Touch puts the victim to sleep for ten minutes per cypher level or until
+    awoken by a violent action or an extremely loud noise.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

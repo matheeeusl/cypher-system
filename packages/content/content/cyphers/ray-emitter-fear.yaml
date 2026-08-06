@@ -1,0 +1,13 @@
+id: ray-emitter-fear
+name: { en: "Ray emitter (fear)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 395"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Allows the user to project a ray up to long range (very long range if the
+    cypher is level 6 or higher) that causes the target to flee in terror for
+    one minute.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

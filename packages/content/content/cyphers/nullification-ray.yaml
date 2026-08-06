@@ -1,0 +1,12 @@
+id: nullification-ray
+name: { en: "Nullification ray", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 393"
+level_range: "1d6 + 3"
+effect_text:
+  en: >-
+    The user can immediately end one ongoing effect within long range that is
+    produced by an artifact, cypher, or special ability.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

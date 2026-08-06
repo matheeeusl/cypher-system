@@ -1,0 +1,14 @@
+id: magnetic-attack-drill
+name: { en: "Magnetic attack drill", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 392"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    The user throws this cypher at a target within short range, and it drills
+    into the target for one round, inflicting damage equal to the cypher's
+    level. If the target is made of metal or wearing metal (such as armor),
+    the attack is eased.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

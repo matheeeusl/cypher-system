@@ -1,0 +1,24 @@
+- id: inexpensive
+  description:
+    en: "Something common people buy — a meal, a drink, or a book."
+    "pt-BR": "Tradução em breve."
+- id: moderately_priced
+  description:
+    en: "Something common people buy, but often or a lot of — a comfortable chair, concert tickets, or a new outfit."
+    "pt-BR": "Tradução em breve."
+- id: expensive
+  description:
+    en: "Something that would strain a common person's finances — rent, plane tickets, or a fancy new outfit."
+    "pt-BR": "Tradução em breve."
+- id: very_expensive
+  description:
+    en: "Something out of the reach of most people — jewelry, a fancy car, luxury travel."
+    "pt-BR": "Tradução em breve."
+- id: exorbitant
+  description:
+    en: "Something only the rich can afford — a mansion, ship, or famous artwork."
+    "pt-BR": "Tradução em breve."
+- id: priceless
+  description:
+    en: "Something only a rich corporation or nation-state might acquire or build."
+    "pt-BR": "Tradução em breve."

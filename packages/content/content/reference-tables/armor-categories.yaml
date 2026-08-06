@@ -1,0 +1,12 @@
+- id: light
+  armor: 1
+  speed_cost: 2
+  price_tier: moderately_priced
+- id: medium
+  armor: 2
+  speed_cost: 3
+  price_tier: expensive
+- id: heavy
+  armor: 3
+  speed_cost: 4
+  price_tier: very_expensive

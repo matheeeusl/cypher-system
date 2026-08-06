@@ -1,0 +1,12 @@
+id: force-screen-projector
+name: { en: "Force screen projector", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 389"
+level_range: "1d6 + 3"
+effect_text:
+  en: >-
+    Creates an immobile plane of solid force up to 20 feet by 20 feet (6 m by
+    6 m) for one hour. The plane conforms to the space available.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

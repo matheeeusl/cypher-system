@@ -1,0 +1,41 @@
+id: mental-scrambler
+name: { en: "Mental scrambler", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 392"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Two rounds after being activated, the device creates an invisible field
+    that fills an area within short range and lasts for one minute. The field
+    scrambles the mental processes of all thinking creatures. The effect lasts
+    as long as they remain in the field and for 1d6 rounds after, although an
+    Intellect defense roll is allowed each round to act normally (both in the
+    field and after leaving it). Each mental scrambler is keyed to a specific
+    effect. Roll a d100 to determine the effect.
+  pt-BR: >-
+    Tradução em breve.
+effect_table:
+  label:
+    en: "Mental Scrambler Effects"
+    pt-BR: "Tradução em breve."
+  entries:
+    - range: "01–30"
+      text: { en: "Victims cannot act.", "pt-BR": "Tradução em breve." }
+    - range: "31–40"
+      text: { en: "Victims cannot speak.", "pt-BR": "Tradução em breve." }
+    - range: "41–50"
+      text: { en: "Victims move slowly (immediate range) and clumsily.", "pt-BR": "Tradução em breve." }
+    - range: "51–60"
+      text: { en: "Victims cannot see or hear.", "pt-BR": "Tradução em breve." }
+    - range: "61–70"
+      text: { en: "Victims lose all sense of direction, depth, and proportion.", "pt-BR": "Tradução em breve." }
+    - range: "71–80"
+      text: { en: "Victims do not recognize anyone they know.", "pt-BR": "Tradução em breve." }
+    - range: "81–88"
+      text: { en: "Victims suffer partial amnesia.", "pt-BR": "Tradução em breve." }
+    - range: "89–94"
+      text: { en: "Victims suffer total amnesia.", "pt-BR": "Tradução em breve." }
+    - range: "95–98"
+      text: { en: "Victims lose all inhibitions, revealing secrets and performing surprising actions.", "pt-BR": "Tradução em breve." }
+    - range: "99–00"
+      text: { en: "Victims' ethics are inverted.", "pt-BR": "Tradução em breve." }

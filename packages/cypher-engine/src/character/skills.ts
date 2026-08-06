@@ -7,23 +7,43 @@ const ERRORS = {
     "This skill is already specialized — that's the maximum training level, per the rulebook",
   ABILITY_NOT_KNOWN: (id: string) =>
     `Cannot train in ability "${id}": it isn't among this character's known abilities — training requires already knowing the ability`,
+  WRONG_CHOICE_COUNT: (required: number) =>
+    `Exactly ${required} descriptor_skill_choices must be chosen, to match the Descriptor's skill_training choice_count entries`,
+  DUPLICATE_CHOICE: 'descriptor_skill_choices contains a duplicate',
 }
 
 /**
- * Seeds a skill-level map from a Descriptor's structured skill_bonuses
- * (-> trained) and skill_inabilities (-> inability). Descriptor.initial_bonus
- * is separate, freeform text and is never auto-applied — see character.ts.
+ * Seeds a skill-level map from a Descriptor's structured skill_training:
+ * entries with a specific skill_id are auto-applied as trained, entries
+ * with a choice_count are filled in from the player-chosen
+ * descriptorSkillChoices. Descriptor.inabilities is prose, not skill ids —
+ * often a whole task category rather than a single skill — so it's never
+ * auto-applied; see "Known gaps" in this package's CLAUDE.md.
  */
 export function applyDescriptorSkills(
-  descriptor: Pick<Descriptor, 'skill_bonuses' | 'skill_inabilities'>,
+  descriptor: Pick<Descriptor, 'skill_training'>,
+  descriptorSkillChoices: string[],
 ): Record<string, { level: SkillLevel }> {
   const skills: Record<string, { level: SkillLevel }> = {}
 
-  for (const skillId of descriptor.skill_bonuses) {
-    skills[skillId] = { level: 'trained' }
+  const requiredChoiceCount = descriptor.skill_training.reduce(
+    (sum, entry) => sum + (entry.choice_count ?? 0),
+    0,
+  )
+  if (descriptorSkillChoices.length !== requiredChoiceCount) {
+    throw new Error(ERRORS.WRONG_CHOICE_COUNT(requiredChoiceCount))
   }
-  for (const skillId of descriptor.skill_inabilities) {
-    skills[skillId] = { level: 'inability' }
+  if (new Set(descriptorSkillChoices).size !== descriptorSkillChoices.length) {
+    throw new Error(ERRORS.DUPLICATE_CHOICE)
+  }
+
+  for (const entry of descriptor.skill_training) {
+    if (entry.skill_id !== null) {
+      skills[entry.skill_id] = { level: 'trained' }
+    }
+  }
+  for (const skillId of descriptorSkillChoices) {
+    skills[skillId] = { level: 'trained' }
   }
 
   return skills

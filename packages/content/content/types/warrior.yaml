@@ -75,7 +75,21 @@ weapon_proficiency:
     - heavy
   inability: []
 starting_skills: []
-starting_equipment: []
+starting_equipment:
+  clothing: true
+  weapon:
+    en: two weapons of your choice
+    pt-BR: Tradução em breve.
+  items:
+    - price_tier: expensive
+      count: 1
+      exact: true
+    - price_tier: moderately_priced
+      count: 2
+      exact: true
+    - price_tier: inexpensive
+      count: 4
+      exact: false
 tier_abilities:
   '1':
     - bash

@@ -1,0 +1,16 @@
+id: detonation-singularity
+name: { en: "Detonation (singularity)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 387"
+level_range: "10"
+effect_text:
+  en: >-
+    Projects a small physical explosive up to a long distance away that explodes and creates a momentary singularity
+    that tears at the fabric of the universe. Inflicts 20 points of damage to all within short range,
+    drawing them (or their remains) together to immediate range (if possible).
+    Player characters in the radius who fail a Might defense roll move down one step on the damage track.
+    (The singularity detonation is a greatly feared device, sought by those interested in truly horrific destruction.)
+    (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

@@ -1,0 +1,12 @@
+id: fireproofing
+name: { en: "Fireproofing", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 388"
+level_range: "1d6 + 4"
+effect_text:
+  en: >-
+    A nonliving object treated by this cypher has Armor against fire damage
+    equal to the cypher's level for one day.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

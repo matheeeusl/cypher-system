@@ -85,7 +85,9 @@ export function validateCharacterChoices(
     knownAbilities = [...typeAbilities, ...focusAbilities]
   }
 
-  let skills = applyDescriptorSkills(descriptor) // never throws
+  let skills = attempt(() =>
+    applyDescriptorSkills(descriptor, choices.descriptor_skill_choices),
+  )
 
   // Order-sensitive (training the same skill twice moves it further along
   // practiced -> trained -> specialized), so purchases are applied in
@@ -96,8 +98,12 @@ export function validateCharacterChoices(
 
   for (const purchase of skillsPurchases) {
     if (purchase.target.kind === 'skill') {
+      // skills === undefined here means applyDescriptorSkills already
+      // failed and reported its own error above — don't attempt (and
+      // don't double-report).
+      if (skills === undefined) continue
       const skillId = purchase.target.skill_id
-      const level = attempt(() => applySkillAdvancementPurchase(skills[skillId]?.level))
+      const level = attempt(() => applySkillAdvancementPurchase(skills![skillId]?.level))
       if (level !== undefined) skills = { ...skills, [skillId]: { level } }
     } else if (knownAbilities !== undefined) {
       const result = attempt(() => applyAbilityTrainingPurchase(knownAbilities!, purchase))
@@ -119,7 +125,7 @@ export function validateCharacterChoices(
       edge: edge!,
       effort,
       known_abilities: knownAbilities!,
-      skills,
+      skills: skills!,
     },
   }
 }

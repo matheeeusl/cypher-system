@@ -1,0 +1,14 @@
+id: memory-switch
+name: { en: "Memory switch", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 392"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    The user selects a point within long range, and the minds of all thinking
+    creatures within immediate range of that point are attacked. Victims are
+    dazed and take no action for a round, and they have no memory of the
+    preceding hour.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

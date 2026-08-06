@@ -23,6 +23,11 @@ describe('content queries', () => {
         startingEdge: { statChoices: string[]; amount: number }
         weaponProficiency: { practiced: string[]; inability: string[] }
         specialAbilityId: string | null
+        startingEquipment: {
+          clothing: boolean
+          weapon: LocalizedStringPayload | null
+          items: Array<{ priceTier: string; count: number; exact: boolean }>
+        }
         tierAbilities: Array<{ tier: number; abilityIds: string[] }>
         contentVersion: string
       } | null
@@ -46,6 +51,11 @@ describe('content queries', () => {
           startingEdge { statChoices amount }
           weaponProficiency { practiced inability }
           specialAbilityId
+          startingEquipment {
+            clothing
+            weapon { en ptBR }
+            items { priceTier count exact }
+          }
           tierAbilities { tier abilityIds }
           contentVersion
         }
@@ -75,6 +85,19 @@ describe('content queries', () => {
       "Warriors aren't always soldiers or mercenaries.",
     )
     expect(result.data.type?.description.individualRole.ptBR).toBe('Tradução em breve.')
+
+    // Real per-Type data (Warrior trades a second expensive item for a
+    // second weapon, unlike the other 3 Types) — not a universal rule, so
+    // pinned exactly rather than loosely matched.
+    expect(result.data.type?.startingEquipment).toEqual({
+      clothing: true,
+      weapon: { en: 'two weapons of your choice', ptBR: 'Tradução em breve.' },
+      items: [
+        { priceTier: 'EXPENSIVE', count: 1, exact: true },
+        { priceTier: 'MODERATELY_PRICED', count: 2, exact: true },
+        { priceTier: 'INEXPENSIVE', count: 4, exact: false },
+      ],
+    })
 
     expect(result.data.type?.playerIntrusions).toHaveLength(3)
     expect(result.data.type?.playerIntrusions.map((i) => i.name.en)).toEqual([
@@ -120,13 +143,16 @@ describe('content queries', () => {
     expect(result.data.type).toBeNull()
   })
 
-  it('resolves a Descriptor, including the ptBR localized field', async () => {
+  it('resolves a Descriptor, including pool bonus, skill training, and connection options', async () => {
     interface DescriptorQueryData {
       descriptor: {
         id: string
-        skillBonuses: string[]
-        skillInabilities: string[]
-        initialBonus: LocalizedStringPayload
+        poolBonus: Array<{ stat: string; amount: number }>
+        characteristics: Array<{ name: LocalizedStringPayload; description: LocalizedStringPayload }>
+        skillTraining: Array<{ skillId: string | null; choiceCount: number | null }>
+        inabilities: LocalizedStringPayload[]
+        additionalEquipment: LocalizedStringPayload | null
+        connectionOptions: LocalizedStringPayload[]
       } | null
     }
 
@@ -134,22 +160,51 @@ describe('content queries', () => {
       query {
         descriptor(id: "strong") {
           id
-          skillBonuses
-          skillInabilities
-          initialBonus { en ptBR }
+          poolBonus { stat amount }
+          characteristics { name { en ptBR } description { en ptBR } }
+          skillTraining { skillId choiceCount }
+          inabilities { en ptBR }
+          additionalEquipment { en ptBR }
+          connectionOptions { en ptBR }
         }
       }
     `)
 
     expect(result.errors).toBeUndefined()
+    // Real data from content/descriptors/strong.yaml — pinned so a future
+    // content or mapper regression (e.g. dropping a field, or wiring the
+    // wrong source through mapDescriptor) fails loudly.
     expect(result.data.descriptor).toEqual({
       id: 'strong',
-      skillBonuses: ['smashing', 'jumping'],
-      skillInabilities: [],
-      initialBonus: {
-        en: 'Very Powerful: +4 to your Might Pool.',
-        ptBR: 'Muito Poderoso: +4 ao seu Reservatório de Vigor.',
+      poolBonus: [{ stat: 'MIGHT', amount: 4 }],
+      characteristics: [],
+      skillTraining: [
+        { skillId: 'breaking-inanimate-objects', choiceCount: null },
+        { skillId: 'jumping', choiceCount: null },
+      ],
+      inabilities: [],
+      additionalEquipment: {
+        en: 'You have an extra medium weapon or heavy weapon.',
+        ptBR: 'Tradução em breve.',
       },
+      connectionOptions: [
+        {
+          en: "Against your better judgment, you joined the other PCs because you saw that they were in danger.",
+          ptBR: 'Contra seu melhor julgamento, você se juntou aos outros PJs porque viu que estavam em perigo.',
+        },
+        {
+          en: 'One of the other PCs convinced you that joining the group would be in your best interests.',
+          ptBR: 'Um dos outros PJs o convenceu de que se juntar ao grupo seria do seu interesse.',
+        },
+        {
+          en: "You're afraid of what might happen if the other PCs fail.",
+          ptBR: 'Você teme o que pode acontecer se os outros PJs falharem.',
+        },
+        {
+          en: 'There is reward involved, and you need the money.',
+          ptBR: 'Há uma recompensa envolvida, e você precisa do dinheiro.',
+        },
+      ],
     })
   })
 
@@ -161,6 +216,7 @@ describe('content queries', () => {
           tier: number
           entries: Array<{ __typename: string; abilityId?: string; options?: string[] }>
         }>
+        typeSwapOption: { abilityId: string } | null
       } | null
     }
 
@@ -176,11 +232,16 @@ describe('content queries', () => {
               ... on ChoiceAbility { options }
             }
           }
+          typeSwapOption { abilityId }
         }
       }
     `)
 
     expect(result.errors).toBeUndefined()
+    // Real data: Wields Two Weapons at Once has no type swap option per the
+    // rulebook — confirms the field is wired through and correctly null,
+    // not silently absent from the query.
+    expect(result.data.focus?.typeSwapOption).toBeNull()
     expect(result.data.focus?.tierAbilities).toEqual([
       {
         tier: 1,
@@ -222,49 +283,4 @@ describe('content queries', () => {
     })
   })
 
-  it('resolves EquipmentItems, exposing only the stats fields each item actually has', async () => {
-    interface EquipmentQueryData {
-      equipment: Array<{
-        id: string
-        category: string
-        stats: {
-          damage: number | null
-          armorValue: number | null
-          cost: string | null
-          weight: number | null
-        } | null
-      }>
-    }
-
-    const result = await graphqlRequest<EquipmentQueryData>(`
-      query {
-        equipment {
-          id
-          category
-          stats { damage armorValue cost weight }
-        }
-      }
-    `)
-
-    expect(result.errors).toBeUndefined()
-    expect(result.data.equipment).toEqual(
-      expect.arrayContaining([
-        {
-          id: 'adventuring-pack',
-          category: 'GEAR',
-          stats: { damage: null, armorValue: null, cost: 'INEXPENSIVE', weight: null },
-        },
-        {
-          id: 'light-blade',
-          category: 'WEAPON',
-          stats: { damage: 2, armorValue: null, cost: 'MODERATELY_PRICED', weight: null },
-        },
-        {
-          id: 'medium-armor',
-          category: 'ARMOR',
-          stats: { damage: null, armorValue: 2, cost: 'EXPENSIVE', weight: null },
-        },
-      ]),
-    )
-  })
 })

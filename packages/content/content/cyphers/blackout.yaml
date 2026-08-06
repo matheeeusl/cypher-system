@@ -1,0 +1,7 @@
+id: blackout
+name: { en: "Blackout", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 384"
+level_range: "1d6 + 2"
+effect_text: { en: "An area within immediate range of the user becomes secure against any effect outside the area that sees, hears, or otherwise senses what occurs inside. To outside observers, the area is a \"blur\" to any sense applied. Taps, scrying sensors, and other direct surveillance methods are also rendered inoperative within the area for a day.", "pt-BR": "Tradução em breve." }
+effect_table: null

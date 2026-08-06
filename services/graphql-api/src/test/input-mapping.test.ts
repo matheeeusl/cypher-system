@@ -102,6 +102,7 @@ describe('mapCharacterChoicesInput', () => {
       descriptorPoolBonus: { stat: 'might', amount: 4 },
       tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
       focusChoiceSelections: [{ tier: 3, abilityId: 'dual-medium-wield' }],
+      descriptorSkillChoices: ['perception'],
       advancementPurchases: [{ extraEffort: { tier: 2 } }],
     })
 
@@ -114,6 +115,7 @@ describe('mapCharacterChoicesInput', () => {
       descriptor_pool_bonus: { stat: 'might', amount: 4 },
       tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
       focus_choice_selections: { '3': 'dual-medium-wield' },
+      descriptor_skill_choices: ['perception'],
       advancement_purchases: [{ tier: 2, option: 'extra-effort' }],
     })
   })
@@ -126,6 +128,7 @@ describe('mapCharacterChoicesInput', () => {
       poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
       tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
       focusChoiceSelections: [],
+      descriptorSkillChoices: [],
       advancementPurchases: [],
     })
 

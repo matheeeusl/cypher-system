@@ -11,23 +11,33 @@ description:
     Você é extremamente forte e fisicamente poderoso, e usa bem essas
     qualidades, seja através da violência ou de feitos de proeza. Você
     provavelmente tem um físico corpulento e músculos impressionantes.
-skill_bonuses:
-  - smashing
-  - jumping
-skill_inabilities: []
-initial_bonus:
-  en: 'Very Powerful: +4 to your Might Pool.'
-  pt-BR: 'Muito Poderoso: +4 ao seu Reservatório de Vigor.'
-connection_text:
-  en: >-
-    Choose or roll: 1) Against your better judgment, you joined the other
-    PCs because you saw that they were in danger. 2) One of the other PCs
-    convinced you that joining the group would be in your best interests.
-    3) You're afraid of what might happen if the other PCs fail. 4) There
-    is reward involved, and you need the money.
-  pt-BR: >-
-    Escolha ou role: 1) Contra seu melhor julgamento, você se juntou aos
-    outros PJs porque viu que estavam em perigo. 2) Um dos outros PJs o
-    convenceu de que se juntar ao grupo seria do seu interesse. 3) Você
-    teme o que pode acontecer se os outros PJs falharem. 4) Há uma
-    recompensa envolvida, e você precisa do dinheiro.
+pool_bonus:
+  - stat: might
+    amount: 4
+characteristics: []
+skill_training:
+  - skill_id: breaking-inanimate-objects
+    choice_count: null
+  - skill_id: jumping
+    choice_count: null
+inabilities: []
+additional_equipment:
+  en: You have an extra medium weapon or heavy weapon.
+  pt-BR: Tradução em breve.
+connection_options:
+  - en: >-
+      Against your better judgment, you joined the other PCs because you
+      saw that they were in danger.
+    pt-BR: >-
+      Contra seu melhor julgamento, você se juntou aos outros PJs porque
+      viu que estavam em perigo.
+  - en: >-
+      One of the other PCs convinced you that joining the group would be
+      in your best interests.
+    pt-BR: >-
+      Um dos outros PJs o convenceu de que se juntar ao grupo seria do
+      seu interesse.
+  - en: You're afraid of what might happen if the other PCs fail.
+    pt-BR: Você teme o que pode acontecer se os outros PJs falharem.
+  - en: There is reward involved, and you need the money.
+    pt-BR: Há uma recompensa envolvida, e você precisa do dinheiro.

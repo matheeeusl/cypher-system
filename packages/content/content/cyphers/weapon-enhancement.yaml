@@ -1,0 +1,44 @@
+id: weapon-enhancement
+name: { en: "Weapon enhancement", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 400"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Modifies a weapon's attack in a particular fashion for ten minutes per
+    cypher level. Roll a d100 for the modification.
+  pt-BR: >-
+    Tradução em breve.
+effect_table:
+  label:
+    en: "Weapon Enhancement Effects"
+    pt-BR: "Tradução em breve."
+  entries:
+    - range: "01–10"
+      text: { en: "Eases attack by one step", "pt-BR": "Tradução em breve." }
+    - range: "11–20"
+      text: { en: "Deals bonus electrical damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "21–30"
+      text: { en: "Deals bonus cold damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "31–40"
+      text: { en: "Deals bonus poison damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "41–50"
+      text: { en: "Deals bonus acid damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "51–60"
+      text: { en: "Deals bonus fire damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "61–70"
+      text: { en: "Deals bonus sonic damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "71–80"
+      text: { en: "Deals bonus psychic damage equal to cypher level", "pt-BR": "Tradução em breve." }
+    - range: "81–90"
+      text: { en: "Knockback (on 18–20 on successful attack roll, target knocked back 30 feet [9 m])", "pt-BR": "Tradução em breve." }
+    - range: "91–95"
+      text: { en: "Holding (on 18–20 on successful attack roll, target can't act on its next turn)", "pt-BR": "Tradução em breve." }
+    - range: "96–97"
+      text: { en: "Eases attack by two steps", "pt-BR": "Tradução em breve." }
+    - range: "98"
+      text: { en: "Banishing (on 18–20 on successful attack roll, target is sent to random location at least 100 miles [160 km] away)", "pt-BR": "Tradução em breve." }
+    - range: "99"
+      text: { en: "Explodes, inflicting damage equal to cypher level to all within immediate range", "pt-BR": "Tradução em breve." }
+    - range: "00"
+      text: { en: "Heart-seeking (on 18–20 on successful attack roll, target is killed)", "pt-BR": "Tradução em breve." }

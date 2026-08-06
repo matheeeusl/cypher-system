@@ -13,7 +13,17 @@ export const AbilitySchema = z.object({
       amount: z.number().int().min(0),
     })
     .nullable(),
-  action_type: z.enum(['action', 'enabler', 'passive']),
+  // "passive" is never actually printed in the rulebook — confirmed zero
+  // occurrences. "action_to_initiate"/"action_to_initiate_or_reinitiate"
+  // are real, distinct printed tags for abilities that must be started
+  // (and possibly restarted) with an action, not stylistic variants of a
+  // plain "action".
+  action_type: z.enum([
+    'action',
+    'enabler',
+    'action_to_initiate',
+    'action_to_initiate_or_reinitiate',
+  ]),
   sources: z
     .array(
       z.object({

@@ -3,7 +3,6 @@ import type {
   Artifact,
   Cypher,
   Descriptor,
-  EquipmentItem,
   Focus,
   Oddity,
   Skill,
@@ -68,7 +67,15 @@ export function mapType(t: WithVersion<Type>) {
       inability: t.weapon_proficiency.inability,
     },
     startingSkills: t.starting_skills,
-    startingEquipment: t.starting_equipment,
+    startingEquipment: {
+      clothing: t.starting_equipment.clothing,
+      weapon: t.starting_equipment.weapon ? mapLocalizedString(t.starting_equipment.weapon) : null,
+      items: t.starting_equipment.items.map((item) => ({
+        priceTier: item.price_tier,
+        count: item.count,
+        exact: item.exact,
+      })),
+    },
     tierAbilities: mapTypeTierAbilities(t.tier_abilities),
     contentVersion: t.content_version,
   }
@@ -79,10 +86,18 @@ export function mapDescriptor(d: WithVersion<Descriptor>) {
     id: d.id,
     name: mapLocalizedString(d.name),
     description: mapLocalizedString(d.description),
-    skillBonuses: d.skill_bonuses,
-    skillInabilities: d.skill_inabilities,
-    initialBonus: mapLocalizedString(d.initial_bonus),
-    connectionText: mapLocalizedString(d.connection_text),
+    poolBonus: d.pool_bonus.map((b) => ({ stat: b.stat, amount: b.amount })),
+    characteristics: d.characteristics.map((c) => ({
+      name: mapLocalizedString(c.name),
+      description: mapLocalizedString(c.description),
+    })),
+    skillTraining: d.skill_training.map((s) => ({
+      skillId: s.skill_id,
+      choiceCount: s.choice_count,
+    })),
+    inabilities: d.inabilities.map(mapLocalizedString),
+    additionalEquipment: d.additional_equipment ? mapLocalizedString(d.additional_equipment) : null,
+    connectionOptions: d.connection_options.map(mapLocalizedString),
     contentVersion: d.content_version,
   }
 }
@@ -92,8 +107,8 @@ export function mapFocus(f: WithVersion<Focus>) {
     id: f.id,
     name: mapLocalizedString(f.name),
     description: mapLocalizedString(f.description),
-    connectionText: mapLocalizedString(f.connection_text),
     tierAbilities: mapFocusTierAbilities(f.tier_abilities),
+    typeSwapOption: f.type_swap_option ? { abilityId: f.type_swap_option.ability_id } : null,
     contentVersion: f.content_version,
   }
 }
@@ -117,24 +132,6 @@ export function mapSkill(s: WithVersion<Skill>) {
     name: mapLocalizedString(s.name),
     description: mapLocalizedString(s.description),
     contentVersion: s.content_version,
-  }
-}
-
-export function mapEquipmentItem(e: WithVersion<EquipmentItem>) {
-  return {
-    id: e.id,
-    name: mapLocalizedString(e.name),
-    description: mapLocalizedString(e.description),
-    category: e.category,
-    stats: e.stats
-      ? {
-          damage: e.stats.damage ?? null,
-          armorValue: e.stats.armor_value ?? null,
-          cost: e.stats.cost ?? null,
-          weight: e.stats.weight ?? null,
-        }
-      : null,
-    contentVersion: e.content_version,
   }
 }
 

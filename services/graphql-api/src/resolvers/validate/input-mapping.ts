@@ -62,6 +62,7 @@ export interface CharacterChoicesInput {
   descriptorPoolBonus?: DescriptorPoolBonusInput | null
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: FocusChoiceSelectionInput[]
+  descriptorSkillChoices: string[]
   advancementPurchases: AdvancementPurchaseInput[]
 }
 
@@ -124,6 +125,7 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       : {}),
     tier_1_type_ability_ids: input.tier1TypeAbilityIds,
     focus_choice_selections: mapFocusChoiceSelections(input.focusChoiceSelections),
+    descriptor_skill_choices: input.descriptorSkillChoices,
     advancement_purchases: input.advancementPurchases.map(mapAdvancementPurchase),
   }
 }

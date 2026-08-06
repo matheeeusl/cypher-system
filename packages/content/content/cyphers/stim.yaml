@@ -1,0 +1,11 @@
+id: stim
+name: { en: "Stim", "pt-BR": "Tradução em breve." }
+category: subtle
+page_ref: "Cypher System Rulebook, page 398"
+level_range: "1d6"
+effect_text:
+  en: >-
+    Eases the user's next action taken by three steps.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

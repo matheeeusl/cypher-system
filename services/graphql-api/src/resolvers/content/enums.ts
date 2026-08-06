@@ -5,11 +5,7 @@
 // strings straight through instead of hand-translating each field.
 export const enumResolvers = {
   Stat: { MIGHT: 'might', SPEED: 'speed', INTELLECT: 'intellect' },
-  WeaponCategory: { LIGHT: 'light', MEDIUM: 'medium', HEAVY: 'heavy' },
-  ActionType: { ACTION: 'action', ENABLER: 'enabler', PASSIVE: 'passive' },
-  AbilitySourceType: { TYPE: 'type', FOCUS: 'focus' },
-  EquipmentCategory: { WEAPON: 'weapon', ARMOR: 'armor', GEAR: 'gear' },
-  CostTier: {
+  PriceTier: {
     INEXPENSIVE: 'inexpensive',
     MODERATELY_PRICED: 'moderately_priced',
     EXPENSIVE: 'expensive',
@@ -17,6 +13,14 @@ export const enumResolvers = {
     EXORBITANT: 'exorbitant',
     PRICELESS: 'priceless',
   },
+  WeaponCategory: { LIGHT: 'light', MEDIUM: 'medium', HEAVY: 'heavy' },
+  ActionType: {
+    ACTION: 'action',
+    ENABLER: 'enabler',
+    ACTION_TO_INITIATE: 'action_to_initiate',
+    ACTION_TO_INITIATE_OR_REINITIATE: 'action_to_initiate_or_reinitiate',
+  },
+  AbilitySourceType: { TYPE: 'type', FOCUS: 'focus' },
   CypherCategory: { MANIFEST: 'manifest', SUBTLE: 'subtle' },
   SkillLevel: {
     INABILITY: 'inability',

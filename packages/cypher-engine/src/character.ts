@@ -56,7 +56,7 @@ export function deriveCharacter(
     ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections),
   ]
 
-  let skills = applyDescriptorSkills(descriptor)
+  let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)
 
   // 'skills' purchases are order-sensitive (training the same skill twice
   // moves it further along practiced -> trained -> specialized), so they're

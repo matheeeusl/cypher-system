@@ -1,0 +1,12 @@
+id: wings
+name: { en: "Wings", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 400"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    User can fly at their normal running speed for ten minutes per cypher
+    level.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

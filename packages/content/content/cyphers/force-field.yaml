@@ -1,0 +1,16 @@
+# Rulebook sidebar (applies to the whole force wall/shield/cube family, not just
+# this cypher): "Some force walls, shields, and cubes are transparent. Others
+# are translucent. A few are opaque."
+id: force-field
+name: { en: "Force field", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 389"
+level_range: "1d6"
+effect_text:
+  en: >-
+    For the next day, the user is surrounded by a powerful force field,
+    granting them +1 to Armor (+2 to Armor if the cypher level is 5 or
+    higher).
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

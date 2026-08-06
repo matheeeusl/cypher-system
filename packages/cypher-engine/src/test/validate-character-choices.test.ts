@@ -21,7 +21,15 @@ const warrior: Type = {
   special_ability_id: null,
   weapon_proficiency: { practiced: ['light', 'medium', 'heavy'], inability: [] },
   starting_skills: [],
-  starting_equipment: [],
+  starting_equipment: {
+    clothing: true,
+    weapon: { en: 'two weapons of your choice', 'pt-BR': 'Tradução em breve.' },
+    items: [
+      { price_tier: 'expensive', count: 1, exact: true },
+      { price_tier: 'moderately_priced', count: 2, exact: true },
+      { price_tier: 'inexpensive', count: 4, exact: false },
+    ],
+  },
   tier_abilities: {
     '1': [
       'bash',
@@ -43,17 +51,26 @@ const strong: Descriptor = {
   id: 'strong',
   name: { en: 'Strong', 'pt-BR': 'Forte' },
   description: { en: '', 'pt-BR': '' },
-  skill_bonuses: ['smashing', 'jumping'],
-  skill_inabilities: [],
-  initial_bonus: { en: 'Very Powerful: +4 to your Might Pool.', 'pt-BR': '' },
-  connection_text: { en: '', 'pt-BR': '' },
+  pool_bonus: [{ stat: 'might', amount: 4 }],
+  characteristics: [],
+  skill_training: [
+    { skill_id: 'breaking-inanimate-objects', choice_count: null },
+    { skill_id: 'jumping', choice_count: null },
+  ],
+  inabilities: [],
+  additional_equipment: { en: 'You have an extra medium weapon or heavy weapon.', 'pt-BR': '' },
+  connection_options: [
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+    { en: '', 'pt-BR': '' },
+  ],
 }
 
 const wieldsTwoWeapons: Focus = {
   id: 'wields-two-weapons-at-once',
   name: { en: 'Wields Two Weapons at Once', 'pt-BR': '' },
   description: { en: 'You bear steel with both hands, ready to take on any foe.', 'pt-BR': '' },
-  connection_text: { en: '', 'pt-BR': '' },
   tier_abilities: {
     '1': [{ kind: 'granted', ability_id: 'dual-light-wield' }],
     '2': [
@@ -62,6 +79,7 @@ const wieldsTwoWeapons: Focus = {
     ],
     '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'] }],
   },
+  type_swap_option: null,
 }
 
 const content = { type: warrior, descriptor: strong, focus: wieldsTwoWeapons }
@@ -91,6 +109,7 @@ const validChoices: CharacterChoices = {
   descriptor_pool_bonus: { stat: 'might', amount: 4 },
   tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
   focus_choice_selections: { '3': 'dual-medium-wield' },
+  descriptor_skill_choices: [],
   advancement_purchases: [
     ...completeTier(2, {
       tier: 2,
@@ -173,21 +192,45 @@ describe('validateCharacterChoices', () => {
     )
   })
 
+  it('blocks skill-target purchase validation when descriptor skill-choice resolution fails, without a spurious skill error', () => {
+    const strongWithChoice: Descriptor = {
+      ...strong,
+      skill_training: [...strong.skill_training, { skill_id: null, choice_count: 1 }],
+    }
+    const choices: CharacterChoices = {
+      ...validChoices,
+      // strongWithChoice requires exactly 1 choice; none supplied ->
+      // applyDescriptorSkills throws.
+      descriptor_skill_choices: [],
+    }
+
+    const result = validateCharacterChoices(choices, { ...content, descriptor: strongWithChoice })
+    expect(result.valid).toBe(false)
+    if (result.valid) throw new Error('expected invalid result')
+
+    expect(result.errors.some((e) => /Exactly 1 descriptor_skill_choices/.test(e))).toBe(true)
+    // validChoices' tier-2/3 skill-target purchases (training 'perception')
+    // were skipped rather than throwing a second, confusing error about a
+    // skill map that was never built.
+    expect(result.errors.filter((e) => /descriptor_skill_choices/.test(e))).toHaveLength(1)
+  })
+
   it('reports every independently-bad advancement purchase, not just the first', () => {
     const choices: CharacterChoices = {
       ...validChoices,
       advancement_purchases: [
-        // tier 2: trains 'smashing' (already trained via Strong) -> specialized. Succeeds.
+        // tier 2: trains 'breaking-inanimate-objects' (already trained via
+        // Strong) -> specialized. Succeeds.
         ...completeTier(2, {
           tier: 2,
           option: 'skills',
-          target: { kind: 'skill', skill_id: 'smashing' },
+          target: { kind: 'skill', skill_id: 'breaking-inanimate-objects' },
         }),
-        // tier 3: trains 'smashing' again -> already specialized. Fails (bad purchase #1).
+        // tier 3: trains it again -> already specialized. Fails (bad purchase #1).
         ...completeTier(3, {
           tier: 3,
           option: 'skills',
-          target: { kind: 'skill', skill_id: 'smashing' },
+          target: { kind: 'skill', skill_id: 'breaking-inanimate-objects' },
         }),
         // tier 4: targets an ability the character doesn't know. Fails (bad purchase #2).
         ...completeTier(4, {

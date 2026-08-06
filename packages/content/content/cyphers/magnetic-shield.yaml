@@ -1,0 +1,13 @@
+id: magnetic-shield
+name: { en: "Magnetic shield", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 392"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    For ten minutes per cypher level, metal objects cannot come within
+    immediate range of the user. Metal items already in the area when the
+    device is activated are slowly pushed out.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

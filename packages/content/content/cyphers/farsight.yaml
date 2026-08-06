@@ -1,0 +1,14 @@
+id: farsight
+name: { en: "Farsight", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 388"
+level_range: "1d6 + 1"
+effect_text:
+  en: >-
+    The user can observe a location they have visited previously, regardless
+    of how far away it is (even across galaxies). This vision persists for up
+    to ten minutes per cypher level. The character can switch between viewing
+    this location and viewing their current location once per round.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

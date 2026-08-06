@@ -1,0 +1,13 @@
+id: teleporter-interstellar
+name: { en: "Teleporter (interstellar)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 398"
+level_range: "1d6 + 4"
+effect_text:
+  en: >-
+    User teleports anywhere in the galaxy to a location they have previously
+    visited or seen. They arrive safely with their possessions but cannot take
+    anything else with them.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

@@ -1,0 +1,13 @@
+id: teleporter-bounder
+name: { en: "Teleporter (bounder)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 398"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    User teleports up to 100 × the cypher level in feet to a location they can
+    see. They arrive safely with their possessions but cannot take anything
+    else with them.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

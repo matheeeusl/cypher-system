@@ -1,0 +1,14 @@
+id: detonation-web
+name: { en: "Detonation (web)", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 387"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Projects a small physical explosive up to a long distance away that explodes in an immediate radius and creates sticky strands of goo.
+    PCs caught in the area must use a Might-based action to get out, with the difficulty determined by the cypher level.
+    NPCs break free if their level is higher than the cypher level.
+    (Rather than strands of sticky goo, some web detonations fill the area with a mass of quick-hardening foam that has the same result.)
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

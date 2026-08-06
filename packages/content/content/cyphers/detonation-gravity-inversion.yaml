@@ -1,0 +1,12 @@
+id: detonation-gravity-inversion
+name: { en: "Detonation (gravity inversion)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 387"
+level_range: "1d6 + 1"
+effect_text: 
+  en: >-
+    Projects a small physical explosive up to a long distance away that explodes,
+    and for one hour gravity reverses within long range of the explosion.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

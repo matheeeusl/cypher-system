@@ -1,0 +1,14 @@
+id: detonation-creature
+name: { en: "Detonation (creature)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 386"
+level_range: "1d6 + 1"
+effect_text:
+  en: >-
+    Projects a small physical explosive up to a long distance away that explodes and creates a momentary teleportation gate.
+    A random creature whose level is equal to or less than the cypher's level appears through the gate and attacks the closest target.
+    After about one minute, the creature vanishes.
+    (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

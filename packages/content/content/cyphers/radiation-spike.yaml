@@ -1,0 +1,12 @@
+id: radiation-spike
+name: { en: "Radiation spike", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 395"
+level_range: "1d6 + 4"
+effect_text:
+  en: >-
+    Delivers a powerful burst of radiation that disrupts the tissue of any
+    creature touched, inflicting damage equal to the cypher's level.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

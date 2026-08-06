@@ -1,0 +1,14 @@
+id: stasis-keeper
+name: { en: "Stasis keeper", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 398"
+level_range: "1d6"
+effect_text:
+  en: >-
+    Puts a subject into stasis for a number of days equal to the cypher's
+    level, or until it is violently disturbed. An object in stasis does not
+    age and comes out of the stasis alive and in the same condition as it went
+    in, with no memory of the period of inactivity.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

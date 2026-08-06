@@ -1,0 +1,12 @@
+id: damage-boost
+name: { en: "Damage boost", "pt-BR": "Tradução em breve." }
+category: power_boost
+page_ref: "Cypher System Rulebook, page 401"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    This cypher boosts an ability that inflicts points of damage. The ability
+    inflicts additional damage equal to this cypher's level.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

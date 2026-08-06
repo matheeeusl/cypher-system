@@ -7,15 +7,25 @@ import { parse } from 'yaml'
 import type { ZodType } from 'zod'
 
 import { AbilitySchema, type Ability } from './schemas/ability.js'
+import { AmmunitionSchema, type Ammunition } from './schemas/ammunition.js'
+import { ArmorCategoryTableSchema, type ArmorCategoryTable } from './schemas/armor-category-table.js'
 import { ArtifactSchema, type Artifact } from './schemas/artifact.js'
 import { CypherSchema, type Cypher } from './schemas/cypher.js'
 import { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
-import { EquipmentItemSchema, type EquipmentItem } from './schemas/equipment-item.js'
 import { FocusSchema, type Focus } from './schemas/focus.js'
+import {
+  FocusConnectionTableSchema,
+  type FocusConnectionTable,
+} from './schemas/focus-connection-table.js'
 import { OdditySchema, type Oddity } from './schemas/oddity.js'
+import { PriceTierTableSchema, type PriceTierTable } from './schemas/price-tier-table.js'
 import type { WithVersion } from './schemas/shared.js'
 import { SkillSchema, type Skill } from './schemas/skill.js'
 import { TypeSchema, type Type } from './schemas/type.js'
+import {
+  WeaponCategoryTableSchema,
+  type WeaponCategoryTable,
+} from './schemas/weapon-category-table.js'
 
 const CONTENT_ROOT = join(dirname(fileURLToPath(import.meta.url)), '../content')
 
@@ -64,15 +74,45 @@ export function loadEntities<T extends { id: string }>(
   return entities
 }
 
+// For content/reference-tables/: a single shared table, not a directory of
+// per-id entities — see "Conventions" in this package's CLAUDE.md. No
+// content_version: nothing snapshots against a reference table.
+function loadReferenceTable<T>(filename: string, schema: ZodType<T>): T {
+  const path = join(CONTENT_ROOT, 'reference-tables', filename)
+  const raw = readFileSync(path, 'utf-8')
+  const parsed: unknown = parse(raw)
+
+  const result = schema.safeParse(parsed)
+  if (!result.success) {
+    throw new Error(`Invalid content in reference-tables/${filename}: ${result.error.message}`)
+  }
+
+  return result.data
+}
+
 const types = loadEntities<Type>('types', TypeSchema)
 const abilities = loadEntities<Ability>('abilities', AbilitySchema)
 const descriptors = loadEntities<Descriptor>('descriptors', DescriptorSchema)
 const foci = loadEntities<Focus>('foci', FocusSchema)
 const skills = loadEntities<Skill>('skills', SkillSchema)
-const equipment = loadEntities<EquipmentItem>('equipment', EquipmentItemSchema)
 const cyphers = loadEntities<Cypher>('cyphers', CypherSchema)
 const artifacts = loadEntities<Artifact>('artifacts', ArtifactSchema)
 const oddities = loadEntities<Oddity>('oddities', OdditySchema)
+
+const focusConnectionTable = loadReferenceTable<FocusConnectionTable>(
+  'focus-connections.yaml',
+  FocusConnectionTableSchema,
+)
+const weaponCategoryTable = loadReferenceTable<WeaponCategoryTable>(
+  'weapon-categories.yaml',
+  WeaponCategoryTableSchema,
+)
+const armorCategoryTable = loadReferenceTable<ArmorCategoryTable>(
+  'armor-categories.yaml',
+  ArmorCategoryTableSchema,
+)
+const priceTierTable = loadReferenceTable<PriceTierTable>('price-tiers.yaml', PriceTierTableSchema)
+const ammunition = loadReferenceTable<Ammunition>('ammunition.yaml', AmmunitionSchema)
 
 export function getAllTypes(): WithVersion<Type>[] {
   return [...types.values()]
@@ -109,13 +149,6 @@ export function getSkillById(id: string): WithVersion<Skill> | undefined {
   return skills.get(id)
 }
 
-export function getAllEquipment(): WithVersion<EquipmentItem>[] {
-  return [...equipment.values()]
-}
-export function getEquipmentById(id: string): WithVersion<EquipmentItem> | undefined {
-  return equipment.get(id)
-}
-
 export function getAllCyphers(): WithVersion<Cypher>[] {
   return [...cyphers.values()]
 }
@@ -135,4 +168,24 @@ export function getAllOddities(): WithVersion<Oddity>[] {
 }
 export function getOddityById(id: string): WithVersion<Oddity> | undefined {
   return oddities.get(id)
+}
+
+export function getFocusConnectionTable(): FocusConnectionTable {
+  return focusConnectionTable
+}
+
+export function getWeaponCategoryTable(): WeaponCategoryTable {
+  return weaponCategoryTable
+}
+
+export function getArmorCategoryTable(): ArmorCategoryTable {
+  return armorCategoryTable
+}
+
+export function getPriceTierTable(): PriceTierTable {
+  return priceTierTable
+}
+
+export function getAmmunition(): Ammunition {
+  return ammunition
 }

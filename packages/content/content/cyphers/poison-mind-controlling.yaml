@@ -1,0 +1,30 @@
+id: poison-mind-controlling
+name: { en: "Poison (mind controlling)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 394"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    The victim must carry out a specific action in response to a specific
+    trigger. Roll a d100 to determine the action.
+  pt-BR: >-
+    Tradução em breve.
+effect_table:
+  label:
+    en: "Poison (Mind Controlling) Effects"
+    pt-BR: "Tradução em breve."
+  entries:
+    - range: "01–20"
+      text: { en: "Lies down for one minute with eyes closed when told to do so.", "pt-BR": "Tradução em breve." }
+    - range: "21–40"
+      text: { en: "Flees in terror for one minute when threatened.", "pt-BR": "Tradução em breve." }
+    - range: "41–60"
+      text: { en: "Answers questions truthfully for one minute.", "pt-BR": "Tradução em breve." }
+    - range: "61–75"
+      text: { en: "Attacks close friend for one round when within immediate range.", "pt-BR": "Tradução em breve." }
+    - range: "76–85"
+      text: { en: "Obeys next verbal command given (if it is understood).", "pt-BR": "Tradução em breve." }
+    - range: "86–95"
+      text: { en: "For one day, becomes sexually attracted to the next creature of its own species that it sees.", "pt-BR": "Tradução em breve." }
+    - range: "96–00"
+      text: { en: "For one minute, moves toward the next red object seen in lieu of all other actions, ignoring self-preservation.", "pt-BR": "Tradução em breve." }

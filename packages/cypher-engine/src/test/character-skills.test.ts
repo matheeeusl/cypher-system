@@ -8,20 +8,48 @@ import {
 import type { AdvancementPurchase, KnownAbility } from '../character/types.js'
 
 describe('applyDescriptorSkills', () => {
-  it('seeds trained from skill_bonuses (real data: Strong -> smashing, jumping)', () => {
-    const skills = applyDescriptorSkills({
-      skill_bonuses: ['smashing', 'jumping'],
-      skill_inabilities: [],
-    })
+  it('seeds trained from fixed skill_id entries (real data: Strong -> breaking-inanimate-objects, jumping)', () => {
+    const skills = applyDescriptorSkills(
+      {
+        skill_training: [
+          { skill_id: 'breaking-inanimate-objects', choice_count: null },
+          { skill_id: 'jumping', choice_count: null },
+        ],
+      },
+      [],
+    )
     expect(skills).toEqual({
-      smashing: { level: 'trained' },
+      'breaking-inanimate-objects': { level: 'trained' },
       jumping: { level: 'trained' },
     })
   })
 
-  it('seeds inability from skill_inabilities', () => {
-    const skills = applyDescriptorSkills({ skill_bonuses: [], skill_inabilities: ['lore'] })
-    expect(skills).toEqual({ lore: { level: 'inability' } })
+  it('seeds trained from a choice_count entry, using the player-chosen skill ids', () => {
+    const skills = applyDescriptorSkills(
+      { skill_training: [{ skill_id: null, choice_count: 2 }] },
+      ['climbing', 'perception'],
+    )
+    expect(skills).toEqual({
+      climbing: { level: 'trained' },
+      perception: { level: 'trained' },
+    })
+  })
+
+  it('throws when the number of choices does not match the required choice_count', () => {
+    expect(() =>
+      applyDescriptorSkills({ skill_training: [{ skill_id: null, choice_count: 2 }] }, [
+        'climbing',
+      ]),
+    ).toThrow(/Exactly 2 descriptor_skill_choices/)
+  })
+
+  it('throws on a duplicate choice', () => {
+    expect(() =>
+      applyDescriptorSkills({ skill_training: [{ skill_id: null, choice_count: 2 }] }, [
+        'climbing',
+        'climbing',
+      ]),
+    ).toThrow(/duplicate/)
   })
 })
 

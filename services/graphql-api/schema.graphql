@@ -10,6 +10,14 @@ enum Stat {
   SPEED
   INTELLECT
 }
+enum PriceTier {
+  INEXPENSIVE
+  MODERATELY_PRICED
+  EXPENSIVE
+  VERY_EXPENSIVE
+  EXORBITANT
+  PRICELESS
+}
 
 # ---- Type ----
 enum WeaponCategory {
@@ -43,6 +51,20 @@ type PlayerIntrusion {
   name: LocalizedString!
   description: LocalizedString!
 }
+type TypeStartingEquipmentItem {
+  priceTier: PriceTier!
+  count: Int!
+  # true when the rulebook states the count exactly ("four"), false when
+  # it's a cap ("up to four").
+  exact: Boolean!
+}
+type TypeStartingEquipment {
+  clothing: Boolean!
+  # Free text, not structured — phrasing varies meaningfully between Types.
+  # Null for a Type that gets no starting weapon (e.g. Adept).
+  weapon: LocalizedString
+  items: [TypeStartingEquipmentItem!]!
+}
 
 type Type {
   id: ID!
@@ -55,20 +77,41 @@ type Type {
   specialAbilityId: ID
   weaponProficiency: WeaponProficiency!
   startingSkills: [ID!]!
-  startingEquipment: [ID!]!
+  startingEquipment: TypeStartingEquipment!
   tierAbilities: [TypeTierAbilityGroup!]!
   contentVersion: String!
 }
 
 # ---- Descriptor ----
+type DescriptorPoolBonus {
+  stat: Stat!
+  amount: Int!
+}
+type DescriptorCharacteristic {
+  name: LocalizedString!
+  description: LocalizedString!
+}
+type DescriptorSkillTraining {
+  # Exactly one of skillId/choiceCount is set per entry: a specific named
+  # skill, or "N skills of your choice."
+  skillId: ID
+  choiceCount: Int
+}
+
 type Descriptor {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
-  skillBonuses: [ID!]!
-  skillInabilities: [ID!]!
-  initialBonus: LocalizedString!
-  connectionText: LocalizedString!
+  poolBonus: [DescriptorPoolBonus!]!
+  characteristics: [DescriptorCharacteristic!]!
+  skillTraining: [DescriptorSkillTraining!]!
+  # Prose, not skill ids — real inability text is often a whole task
+  # category, not a single skill.
+  inabilities: [LocalizedString!]!
+  # Present on some Descriptors, absent on others.
+  additionalEquipment: LocalizedString
+  # Always exactly 4 numbered options in the source.
+  connectionOptions: [LocalizedString!]!
   contentVersion: String!
 }
 
@@ -85,12 +128,18 @@ type FocusTierAbilityGroup {
   entries: [FocusTierAbilityEntry!]!
 }
 
+type FocusTypeSwapOption {
+  abilityId: ID!
+}
+
 type Focus {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
-  connectionText: LocalizedString!
   tierAbilities: [FocusTierAbilityGroup!]!
+  # Set for the few Foci that let a player learn this ability instead of a
+  # Type ability — null for most Foci, not every one has this option.
+  typeSwapOption: FocusTypeSwapOption
   contentVersion: String!
 }
 
@@ -98,7 +147,8 @@ type Focus {
 enum ActionType {
   ACTION
   ENABLER
-  PASSIVE
+  ACTION_TO_INITIATE
+  ACTION_TO_INITIATE_OR_REINITIATE
 }
 enum AbilitySourceType {
   TYPE
@@ -129,36 +179,6 @@ type Skill {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
-  contentVersion: String!
-}
-
-# ---- EquipmentItem ----
-enum EquipmentCategory {
-  WEAPON
-  ARMOR
-  GEAR
-}
-enum CostTier {
-  INEXPENSIVE
-  MODERATELY_PRICED
-  EXPENSIVE
-  VERY_EXPENSIVE
-  EXORBITANT
-  PRICELESS
-}
-type EquipmentStats {
-  damage: Int
-  armorValue: Int
-  cost: CostTier
-  weight: Float
-}
-
-type EquipmentItem {
-  id: ID!
-  name: LocalizedString!
-  description: LocalizedString!
-  category: EquipmentCategory!
-  stats: EquipmentStats
   contentVersion: String!
 }
 
@@ -244,6 +264,7 @@ input CharacterChoicesInput {
   descriptorPoolBonus: DescriptorPoolBonusInput
   tier1TypeAbilityIds: [ID!]!
   focusChoiceSelections: [FocusChoiceSelectionInput!]!
+  descriptorSkillChoices: [ID!]!
   advancementPurchases: [AdvancementPurchaseInput!]!
 }
 
@@ -315,8 +336,6 @@ type Query {
   ability(id: ID!): Ability
   skills: [Skill!]!
   skill(id: ID!): Skill
-  equipment: [EquipmentItem!]!
-  equipmentItem(id: ID!): EquipmentItem
   cyphers: [Cypher!]!
   cypher(id: ID!): Cypher
   artifacts: [Artifact!]!

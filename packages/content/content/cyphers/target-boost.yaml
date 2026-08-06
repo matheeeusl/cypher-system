@@ -1,0 +1,13 @@
+id: target-boost
+name: { en: "Target boost", "pt-BR": "Tradução em breve." }
+category: power_boost
+page_ref: "Cypher System Rulebook, page 401"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    This cypher boosts an ability that affects a target at a range greater
+    than touch. It can affect a second target within range (if the ability is
+    an attack, make a separate attack roll for the second creature).
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

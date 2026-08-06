@@ -1,0 +1,21 @@
+id: armor-reinforcer
+name: { en: "Armor reinforcer", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 384"
+level_range: "1d6 + 1"
+effect_text: { en: "The user's Armor gains an enhancement for twenty-four hours.", "pt-BR": "Tradução em breve." }
+effect_table:
+  label: { en: "Armor Reinforcer Enhancement", "pt-BR": "Tradução em breve." }
+  entries:
+    - range: "1"
+      text: { en: "+1 to Armor", "pt-BR": "Tradução em breve." }
+    - range: "2"
+      text: { en: "+2 to Armor", "pt-BR": "Tradução em breve." }
+    - range: "3"
+      text: { en: "+3 to Armor", "pt-BR": "Tradução em breve." }
+    - range: "4"
+      text: { en: "+2 to Armor, +5 against damage from fire", "pt-BR": "Tradução em breve." }
+    - range: "5"
+      text: { en: "+2 to Armor, +5 against damage from cold", "pt-BR": "Tradução em breve." }
+    - range: "6"
+      text: { en: "+2 to Armor, +5 against damage from acid", "pt-BR": "Tradução em breve." }

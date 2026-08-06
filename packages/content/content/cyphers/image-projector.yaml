@@ -1,0 +1,33 @@
+# Editor's Notes — The words "immediate" and "close" can be used interchangeably
+# to talk about distance.
+id: image-projector
+name: { en: "Image projector", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 390"
+level_range: "1d6"
+effect_text:
+  en: >-
+    Projects one of the following immobile images in the area described for
+    one hour. The image appears up to a close distance from the user (long
+    distance if the cypher level is 4 or higher, very long distance if the
+    cypher level is 6 or higher). Scenes include movement, sound, and smell.
+    Roll a d100 to determine the image.
+  pt-BR: >-
+    Tradução em breve.
+effect_table:
+  label:
+    en: "Image Projector Effects"
+    pt-BR: "Tradução em breve."
+  entries:
+    - range: "01–20"
+      text: { en: "Terrifying creature of an unknown species, perhaps no longer alive in the world (10-foot [3 m] cube)", "pt-BR": "Tradução em breve." }
+    - range: "21–40"
+      text: { en: "Huge machine that obscures sight (30-foot [9 m] cube)", "pt-BR": "Tradução em breve." }
+    - range: "41–50"
+      text: { en: "Beautiful pastoral scene (50-foot [15 m] cube)", "pt-BR": "Tradução em breve." }
+    - range: "51–60"
+      text: { en: "Food that looks delicious but may not be familiar (10-foot [3 m] cube)", "pt-BR": "Tradução em breve." }
+    - range: "61–80"
+      text: { en: "Solid color that obscures sight (50-foot [15 m] cube)", "pt-BR": "Tradução em breve." }
+    - range: "81–00"
+      text: { en: "Incomprehensible scene that is disorienting and strange (20-foot [6 m] cube)", "pt-BR": "Tradução em breve." }

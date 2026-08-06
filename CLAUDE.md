@@ -41,6 +41,12 @@ Tests: Vitest (unit) and Playwright (e2e) are listed as devDependencies but not 
 
 CI (`.github/workflows/ci.yml`) runs lint → typecheck → format check on PRs.
 
+## Verifying a change to @cypher/content or @cypher/engine
+
+`pnpm --filter <pkg> <script>` only runs the script in that one package — it does **not** rebuild that package's workspace dependencies first. After editing `@cypher/content` or `@cypher/engine`, a bare `pnpm --filter @cypher/graphql-api typecheck` (or `apps/docs`, or `apps/app` once it exists) can pass against a *stale* `dist/` of the upstream package, silently masking a real type error instead of catching it.
+
+Use the `...` suffix instead — `pnpm --filter "@cypher/graphql-api..." build` (quote it; an unquoted `...` can glob-expand in some shells) — which pulls in that package's workspace dependencies too and runs them in topological order, so `@cypher/content`/`@cypher/engine` are rebuilt before the downstream package is type-checked or tested against them. Do this for any downstream-package verification after a content/engine change, not just a plain `--filter <pkg>`.
+
 ## Design system: "Salvage Console"
 
 Dark-first, teal/graphite, utilitarian.

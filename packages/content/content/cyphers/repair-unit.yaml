@@ -1,0 +1,16 @@
+id: repair-unit
+name: { en: "Repair unit", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 396"
+level_range: "1d10"
+effect_text:
+  en: >-
+    The cypher becomes a multiarmed sphere that floats. It repairs one
+    designated item (of its own level or lower) that has been damaged but not
+    destroyed. The repair unit can also create spare parts, unless the GM
+    rules that the parts are too specialized or rare (in which case, the unit
+    repairs the device except for the specialized part). Repair time is 1d100
+    + 20 minutes.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

@@ -4,6 +4,8 @@ name:
   pt-BR: Desarmar
 level_range: '1d6 + 1'
 category: subtle
+page_ref: "Cypher System Rulebook, page 387"
+effect_table: null
 effect_text:
   en: >-
     One NPC within immediate range whose level is lower than the cypher

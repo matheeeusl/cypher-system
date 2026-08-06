@@ -1,0 +1,15 @@
+id: information-sensor
+name: { en: "Information sensor", "pt-BR": "Tradução em breve." }
+category: manifest
+page_ref: "Cypher System Rulebook, page 391"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Over the course of one day, the user can activate the cypher a total
+    number of times equal to its level. Each time, they can select a living
+    creature within long range and learn the following about it: level,
+    origin, species, name, and possibly other facts (such as an individual's
+    credit score, home address, phone number, and related information).
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null

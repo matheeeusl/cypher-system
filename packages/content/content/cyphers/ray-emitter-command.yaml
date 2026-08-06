@@ -1,0 +1,13 @@
+id: ray-emitter-command
+name: { en: "Ray emitter (command)", "pt-BR": "Tradução em breve." }
+category: fantastic
+page_ref: "Cypher System Rulebook, page 395"
+level_range: "1d6 + 2"
+effect_text:
+  en: >-
+    Allows the user to project a ray up to long range (very long range if the
+    cypher is level 6 or higher) that forces a target to obey the next verbal
+    command given (if it is understood) for one round per cypher level.
+  pt-BR: >-
+    Tradução em breve.
+effect_table: null
