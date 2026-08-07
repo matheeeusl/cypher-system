@@ -1,0 +1,62 @@
+id: mystical
+name:
+  en: Mystical
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You think of yourself as mystical, attuned with the mysterious and
+    the paranormal. Your true talents lie with the supernatural. You
+    likely have experience with ancient lore, and you can sense and
+    wield the supernatural—though whether that means "magic," "psychic
+    phenomena," or something else is up to you (and probably up to those
+    around you as well). Mystical characters often wear jewelry, such as
+    a ring or an amulet, or have tattoos or other marks that show their
+    interests.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Sense Magic
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You can sense whether the supernatural is active in situations
+        where its presence is not obvious. You must study an object or
+        location closely for a minute to get a feel for whether a
+        mystical touch is at work.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Hedge Magic
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You can perform Hedge Magic as a spell when you have a free hand
+        and can pay the Intellect point cost. Hedge Magic (1 Intellect
+        point): You can perform small tricks: temporarily change the
+        color or basic appearance of a small object, cause small objects
+        to float through the air, clean a small area, mend a broken
+        object, prepare (but not create) food, and so on. You can't use
+        Hedge Magic to harm another creature or object. Action.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: understanding-the-supernatural
+    choice_count: null
+inabilities:
+  - en: >-
+      You have a manner or an aura that others find a bit unnerving. Any
+      task involving charm, persuasion, or deception is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: A dream guided you to this point.
+    pt-BR: Tradução em breve.
+  - en: You need money to fund your studies.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You believed the mission would be a great way to learn more about
+      the supernatural.
+    pt-BR: Tradução em breve.
+  - en: Various signs and portents led you here.
+    pt-BR: Tradução em breve.

@@ -1,0 +1,24 @@
+id: rivals-gaming-sets
+name:
+  en: Rival's Gaming Sets
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: Gaming set
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    This pair of identical gaming sets includes two of each of everything
+    needed to play the game. The sets can be synchronized, allowing the
+    owners to play over any distance, even from across the planes
+    (although time dilation may interfere with the game's pace). While
+    synchronized, playing any piece of the gaming set moves the
+    corresponding piece on the other set. The set can be desynchronized,
+    allowing the owner to pack it up, move it, and continue the game
+    later. Either side can also cause the gaming set to begin a new game.
+    When discovered, a PC might only find one of the rival's gaming sets,
+    and there may already be a game in progress waiting to be resumed.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: '—'

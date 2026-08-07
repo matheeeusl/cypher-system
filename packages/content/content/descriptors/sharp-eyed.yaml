@@ -1,0 +1,41 @@
+id: sharp-eyed
+name:
+  en: Sharp-Eyed
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're perceptive and well aware of your surroundings. You notice
+    the little details and remember them. You can be difficult to
+    surprise.
+  pt-BR: Tradução em breve.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Find the Flaw
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        If an opponent has a straightforward weakness (takes extra
+        damage from fire, can't see out of their left eye, and so on),
+        the GM will tell you what it is.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+  - skill_id: perception
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You heard about what was going on, saw a flaw in the other PCs'
+      plan, and joined up to help them out.
+    pt-BR: Tradução em breve.
+  - en: You noticed that the PCs have a foe (or at least a tail) they weren't aware of.
+    pt-BR: Tradução em breve.
+  - en: You saw that the other PCs were up to something interesting and got involved.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You've been noticing some strange things going on, and this all
+      appears related.
+    pt-BR: Tradução em breve.

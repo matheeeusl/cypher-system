@@ -1,0 +1,36 @@
+id: intelligent
+name:
+  en: Intelligent
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're quite smart. Your memory is sharp, and you easily grasp
+    concepts that others might struggle with. This aptitude doesn't
+    necessarily mean that you've had years of formal education, but you
+    have learned a great deal in your life, primarily because you pick
+    things up quickly and retain so much.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: null
+    choice_count: 1
+  - skill_id: remembering-experienced-events
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      One of the other PCs asked your opinion of the mission, knowing
+      that if you thought it was a good idea, it probably was.
+    pt-BR: Tradução em breve.
+  - en: You saw value in what the other PCs were doing.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You believed that the task might lead to important and interesting
+      discoveries.
+    pt-BR: Tradução em breve.
+  - en: A colleague requested that you take part in the mission as a favor.
+    pt-BR: Tradução em breve.

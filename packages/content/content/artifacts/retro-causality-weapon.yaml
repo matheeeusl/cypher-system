@@ -1,0 +1,45 @@
+id: retro-causality-weapon
+name:
+  en: Retro-Causality Weapon
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: Any weapon
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    This weapon inflicts additional damage equal to the artifact level,
+    and creatures whose level is lower than the artifact's are killed
+    instantly when damaged by it. If you kill a creature with the weapon,
+    reality warps around you to justify the killing and the weapon
+    becomes a mundane weapon. For example, you might kill a person only to
+    discover that they had murdered one of your parents. The GM determines
+    the nature of the reality warp, and the extent to which any changes
+    in reality are immediately obvious to you. Roll a d6 to determine the
+    type of weapon (see the table below).
+  pt-BR: Tradução em breve.
+effect_table:
+  label:
+    en: Weapon Type
+    pt-BR: Tradução em breve.
+  entries:
+    - range: '1'
+      text: { en: Light melee weapon, pt-BR: Tradução em breve. }
+    - range: '2'
+      text: { en: Light ranged weapon, pt-BR: Tradução em breve. }
+    - range: '3'
+      text: { en: Medium melee weapon, pt-BR: Tradução em breve. }
+    - range: '4'
+      text: { en: Medium ranged weapon, pt-BR: Tradução em breve. }
+    - range: '5'
+      text: { en: Heavy melee weapon, pt-BR: Tradução em breve. }
+    - range: '6'
+      text: { en: Heavy ranged weapon, pt-BR: Tradução em breve. }
+flavor_quote:
+  en: >-
+    I don't think I was even married before I shot them. I probably
+    shouldn't tell my kids that they're just a metacausal byproduct of
+    finding an excuse to shoot someone; that's a hell of an existential
+    crisis to inflict on a child. Nobody wants to have that conversation.
+  pt-BR: Tradução em breve.
+depletion_die: '1–2 in 1d6 (check each time the weapon kills a creature)'

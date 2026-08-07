@@ -4,21 +4,29 @@ name:
   pt-BR: Explorador
 tagline:
   en: You are a person of action and physical ability, fearlessly facing the unknown.
-  pt-BR: Você é uma pessoa de ação e capacidade física, enfrentando o desconhecido sem medo.
+  pt-BR: Você é uma pessoa de ação e grande capacidade física, enfrentando o desconhecido sem medo.
 description:
   individual_role:
     en: >-
       Although Explorers can be academics or well studied, they are first
       and foremost interested in action. They face grave dangers and
       terrible obstacles as a routine part of life.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Embora Exploradores possam ser acadêmicos ou muito bem instruídos,
+      seu maior interesse está na ação. Enfrentar grandes perigos e
+      obstáculos terríveis faz parte de sua rotina.
   group_role:
     en: >-
       Explorers sometimes work alone, but far more often they operate in
       teams with other characters. The Explorer frequently leads the way,
       blazing the trail. However, they're also likely to stop and
       investigate anything intriguing they stumble upon.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Exploradores às vezes trabalham sozinhos, mas, com muito mais
+      frequência, atuam ao lado de outros personagens. Geralmente são eles
+      que seguem à frente, abrindo caminho para o restante do grupo. Ao
+      mesmo tempo, dificilmente deixam passar a oportunidade de investigar
+      algo curioso que encontrem pelo caminho.
   societal_role:
     en: >-
       Not all Explorers are out traipsing through the wilderness or poking
@@ -26,33 +34,45 @@ description:
       a detective, or an investigative reporter. In any event, an Explorer
       bravely faces new challenges and gathers knowledge to share with
       others.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Nem todo Explorador passa a vida desbravando regiões selvagens ou
+      vasculhando ruínas antigas. Alguns são professores, cientistas,
+      detetives ou jornalistas investigativos. Seja qual for sua profissão,
+      um Explorador enfrenta novos desafios com coragem e reúne
+      conhecimentos para compartilhá-los com os outros.
 player_intrusions:
   - name:
       en: Fortuitous Malfunction
-      pt-BR: Tradução em breve.
+      pt-BR: Falha Providencial
     description:
       en: A trap or a dangerous device malfunctions before it can affect you.
-      pt-BR: Tradução em breve.
+      pt-BR: Uma armadilha ou dispositivo perigoso sofre uma falha antes que possa afetá-lo.
   - name:
       en: Serendipitous Landmark
-      pt-BR: Tradução em breve.
+      pt-BR: Marco Providencial
     description:
       en: >-
         Just when it seems like the path is lost (or you are), a trail
         marker, a landmark, or simply the way the terrain or corridor
         bends, rises, or falls away suggests to you the best path forward,
         at least from this point.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Justo quando parece que o caminho está perdido (ou que você está),
+        uma trilha, um marco de referência ou simplesmente a forma como o
+        terreno ou corredor faz uma curva, sobe ou desce revela a melhor
+        direção a seguir, pelo menos a partir daquele ponto.
   - name:
       en: Weak Strain
-      pt-BR: Tradução em breve.
+      pt-BR: Cepa Enfraquecida
     description:
       en: >-
         The poison or disease turns out not to be as debilitating or deadly
         as it first seemed, and inflicts only half the damage that it would
         have otherwise.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        O veneno ou a doença acaba não sendo tão debilitante ou letal
+        quanto parecia a princípio, causando apenas metade do dano que
+        normalmente causaria.
 starting_pools:
   might: 10
   speed: 9
@@ -73,7 +93,7 @@ starting_equipment:
   clothing: true
   weapon:
     en: one weapon of your choice
-    pt-BR: Tradução em breve.
+    pt-BR: uma arma à sua escolha
   items:
     - price_tier: expensive
       count: 2

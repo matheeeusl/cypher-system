@@ -1,0 +1,56 @@
+id: foolish
+name:
+  en: Foolish
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    Not everyone can be brilliant. Oh, you don't think of yourself as
+    stupid, and you're not. It's just that others might have a bit more …
+    wisdom. Insight. You prefer to barrel along headfirst through life
+    and let other people worry about things. Worrying's never helped you,
+    so why bother? You take things at face value and don't fret about
+    what tomorrow might bring. People call you "idiot" or "numbskull,"
+    but it doesn't faze you much.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: -4
+characteristics:
+  - name:
+      en: Carefree
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You succeed more on luck than anything. Every time you roll for
+        a task, roll twice and take the higher result.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Intellect Weakness
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        Any time you spend points from your Intellect Pool, it costs you
+        1 more point than usual.
+      pt-BR: Tradução em breve.
+skill_training: []
+inabilities:
+  - en: Any Intellect defense task is hindered.
+    pt-BR: Tradução em breve.
+  - en: >-
+      Any task that involves seeing through a deception, an illusion, or
+      a trap is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: Who knows? Seemed like a good idea at the time.
+    pt-BR: Tradução em breve.
+  - en: >-
+      Someone asked you to join up with the other PCs. They told you not
+      to ask too many questions, and that seemed fine to you.
+    pt-BR: Tradução em breve.
+  - en: >-
+      Your parent (or a parental/mentor figure) got you involved to give
+      you something to do and maybe "teach you some sense."
+    pt-BR: Tradução em breve.
+  - en: The other PCs needed some muscle who wouldn't overthink things.
+    pt-BR: Tradução em breve.

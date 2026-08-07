@@ -1,0 +1,40 @@
+id: virtuous
+name:
+  en: Virtuous
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    Doing the right thing is a way of life. You live by a code, and that
+    code is something you attend to every day. Whenever you slip, you
+    reproach yourself for your weakness and then get right back on
+    track. Your code probably includes moderation, respect for others,
+    cleanliness, and other characteristics that most people would agree
+    are virtues, while you eschew their opposites: sloth, greed,
+    gluttony, and so on.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: discerning-true-motives
+    choice_count: null
+  - skill_id: intellect-defense
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: The PCs are doing something virtuous, and you're all about that.
+    pt-BR: Tradução em breve.
+  - en: >-
+      The PCs are on the road to perdition, and you see it as your task
+      to set them on the proper moral route.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs invited you, hearing of your virtuous ways.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You put virtue before sense and defended someone's honor in the
+      face of an organization or power far greater than you. You joined
+      the PCs because they offered aid and friendship when, out of fear
+      of reprisals, no one else would.
+    pt-BR: Tradução em breve.

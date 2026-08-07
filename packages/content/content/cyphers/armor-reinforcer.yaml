@@ -1,21 +1,39 @@
 id: armor-reinforcer
-name: { en: "Armor reinforcer", "pt-BR": "Tradução em breve." }
+name:
+  en: "Armor reinforcer"
+  pt-BR: "Reforço de Armadura"
 category: manifest
 page_ref: "Cypher System Rulebook, page 384"
 level_range: "1d6 + 1"
-effect_text: { en: "The user's Armor gains an enhancement for twenty-four hours.", "pt-BR": "Tradução em breve." }
+effect_text:
+  en: "The user's Armor gains an enhancement for twenty-four hours."
+  pt-BR: "A Armadura do usuário recebe um aprimoramento por vinte e quatro horas."
 effect_table:
-  label: { en: "Armor Reinforcer Enhancement", "pt-BR": "Tradução em breve." }
+  label:
+    en: "Armor Reinforcer Enhancement"
+    pt-BR: "Aprimoramento do Reforço de Armadura"
   entries:
     - range: "1"
-      text: { en: "+1 to Armor", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+1 to Armor"
+        pt-BR: "+1 na Armadura"
     - range: "2"
-      text: { en: "+2 to Armor", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+2 to Armor"
+        pt-BR: "+2 na Armadura"
     - range: "3"
-      text: { en: "+3 to Armor", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+3 to Armor"
+        pt-BR: "+3 na Armadura"
     - range: "4"
-      text: { en: "+2 to Armor, +5 against damage from fire", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+2 to Armor, +5 against damage from fire"
+        pt-BR: "+2 na Armadura, +5 contra dano de fogo"
     - range: "5"
-      text: { en: "+2 to Armor, +5 against damage from cold", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+2 to Armor, +5 against damage from cold"
+        pt-BR: "+2 na Armadura, +5 contra dano de frio"
     - range: "6"
-      text: { en: "+2 to Armor, +5 against damage from acid", "pt-BR": "Tradução em breve." }
+      text:
+        en: "+2 to Armor, +5 against damage from acid"
+        pt-BR: "+2 na Armadura, +5 contra dano de ácido"

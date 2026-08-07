@@ -1,0 +1,21 @@
+id: eavesdrops
+name:
+  en: Eavesdrops
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: Medicine dropper
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    By placing one droplet in each ear, you heighten your ability to hear
+    over great distances through cluttered environments. For the next 10
+    minutes, you can use your action to create an invisible sensor within
+    long range anywhere you can see. While doing so, you are deafened to
+    your own surroundings, and hear as if you were in the sensor's space
+    out to a 3-foot (1 m) radius. On your turn, you can move the sensor,
+    or abandon the sensor and create a new one.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: '1 in 1d6'

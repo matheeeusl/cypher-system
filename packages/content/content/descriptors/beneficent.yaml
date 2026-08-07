@@ -1,0 +1,63 @@
+id: beneficent
+name:
+  en: Beneficent
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    Helping others is your calling. It's why you're here. Others delight
+    in your outgoing and charitable nature, and you delight in their
+    happiness. You're at your best when you're aiding people, either by
+    explaining how they can best overcome a challenge or by demonstrating
+    how to do so yourself.
+  pt-BR: Tradução em breve.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Generous
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        Allies who have spent the last day with you add +1 to their
+        recovery rolls.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Altruistic
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        If you're standing next to a creature that takes damage, you can
+        intercede and take 1 point of that damage yourself (reducing the
+        damage inflicted on the creature by 1 point). If you have Armor,
+        it does not provide a benefit when you use this ability.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Helpful
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        Whenever you help another character, that character gains the
+        benefit as if you were trained even if you are not trained or
+        specialized in the attempted task.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+inabilities:
+  - en: While you are alone, all Intellect and Speed tasks are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Even though you didn't know most of the other PCs beforehand, you
+      invited yourself along on their quest.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You saw the PCs struggling to overcome a problem and selflessly
+      joined them to help.
+    pt-BR: Tradução em breve.
+  - en: You're nearly certain the PCs will fail without you.
+    pt-BR: Tradução em breve.
+  - en: >-
+      The choice was between your tattered life and helping others. You
+      haven't looked back since.
+    pt-BR: Tradução em breve.

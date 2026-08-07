@@ -1,0 +1,40 @@
+id: honorable
+name:
+  en: Honorable
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You are trustworthy, fair, and forthright. You try to do what is
+    right, to help others, and to treat them well. Lying and cheating are
+    no way to get ahead—these things are for the weak, the lazy, or the
+    despicable. You probably spend a lot of time thinking about your
+    personal honor, how best to maintain it, and how to defend it if
+    challenged. In combat, you are straightforward and offer quarter to
+    any foe. You were likely instilled with this sense of honor by a
+    parent or a mentor. Sometimes the distinction between what is and
+    isn't honorable varies with different schools of thought, but in
+    broad strokes, honorable people can agree on most aspects of what
+    honor means.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: discerning-true-motives
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: The PCs' goals appear to be honorable and commendable.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You see that what the other PCs are about to do is dangerous, and
+      you'd like to help protect them.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs invited you, hearing of your trustworthiness.
+    pt-BR: Tradução em breve.
+  - en: You asked politely if you could join the other PCs in their mission.
+    pt-BR: Tradução em breve.

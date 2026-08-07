@@ -1,5 +1,7 @@
 id: burst-boost
-name: { en: "Burst boost", "pt-BR": "Tradução em breve." }
+name:
+  en: "Burst boost"
+  pt-BR: "Ampliação em Rajada"
 category: power_boost
 page_ref: "Cypher System Rulebook, page 401"
 level_range: "1d6 + 2"
@@ -9,5 +11,7 @@ effect_text:
     or farther. The range decreases to immediate, but the ability affects all
     targets within immediate range.
   pt-BR: >-
-    Tradução em breve.
+    Este cypher aprimora uma habilidade que afeta um único alvo a alcance
+    curto ou maior. O alcance da habilidade passa a ser imediato, mas ela
+    passa a afetar todos os alvos dentro do alcance imediato.
 effect_table: null

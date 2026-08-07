@@ -139,9 +139,19 @@ export function mapCypher(c: WithVersion<Cypher>) {
   return {
     id: c.id,
     name: mapLocalizedString(c.name),
-    levelRange: c.level_range,
     category: c.category,
+    pageRef: c.page_ref,
+    levelRange: c.level_range,
     effectText: mapLocalizedString(c.effect_text),
+    effectTable: c.effect_table
+      ? {
+          label: mapLocalizedString(c.effect_table.label),
+          entries: c.effect_table.entries.map((entry) => ({
+            range: entry.range,
+            text: mapLocalizedString(entry.text),
+          })),
+        }
+      : null,
     contentVersion: c.content_version,
   }
 }
@@ -152,8 +162,18 @@ export function mapArtifact(a: WithVersion<Artifact>) {
     name: mapLocalizedString(a.name),
     level: a.level,
     form: mapLocalizedString(a.form),
-    depletionDie: a.depletion_die,
     effectText: mapLocalizedString(a.effect_text),
+    effectTable: a.effect_table
+      ? {
+          label: mapLocalizedString(a.effect_table.label),
+          entries: a.effect_table.entries.map((entry) => ({
+            range: entry.range,
+            text: mapLocalizedString(entry.text),
+          })),
+        }
+      : null,
+    flavorQuote: a.flavor_quote ? mapLocalizedString(a.flavor_quote) : null,
+    depletionDie: a.depletion_die,
     contentVersion: a.content_version,
   }
 }

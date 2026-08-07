@@ -1,7 +1,11 @@
 id: antivenom
-name: { en: "Antivenom", "pt-BR": "Tradução em breve." }
+name:
+  en: "Antivenom"
+  pt-BR: "Antiveneno"
 category: manifest
 page_ref: "Cypher System Rulebook, page 384"
 level_range: "1d6 + 2"
-effect_text: { en: "Renders user immune to poisons of the cypher's level or lower for one hour per cypher level (and ends any such ongoing effects, if any, already in the user's system).", "pt-BR": "Tradução em breve." }
+effect_text:
+  en: "Renders user immune to poisons of the cypher's level or lower for one hour per cypher level (and ends any such ongoing effects, if any, already in the user's system)."
+  pt-BR: "Torna o usuário imune a venenos de nível igual ou inferior ao do cypher por uma hora por nível do cypher (e encerra quaisquer efeitos contínuos desse tipo que já estejam ativos em seu organismo)."
 effect_table: null

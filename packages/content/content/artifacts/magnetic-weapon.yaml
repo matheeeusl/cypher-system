@@ -1,0 +1,23 @@
+id: magnetic-weapon
+name:
+  en: Magnetic Weapon
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: Any metal melee weapon
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    Provides an asset on attack rolls against ferrous metal objects and
+    creatures wearing ferrous metal armor (or that are made of the
+    stuff). While within long range of such an object or creature, you
+    can mark such a creature or object you can see. For the next 1 hour,
+    you know the general direction toward the object, so long as it
+    remains on the same plane of existence as you. (Common ferrous metals
+    include alloy steel, carbon steel, cast iron and wrought iron.)
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: >-
+  1 in 1d20 (check each time used to provide an asset to an attack, or to
+  mark a creature or object)

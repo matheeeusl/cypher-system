@@ -1,0 +1,55 @@
+id: creative
+name:
+  en: Creative
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    Maybe you have a notebook where you write down ideas so you can
+    develop them later. Perhaps you email yourself ideas that strike you
+    out of the blue so you can sort them in an electronic document. Or
+    maybe you just sit down, stare at your screen and, by indomitable
+    force of will, produce something from nothing. However your gift
+    works, you're creative—you code, write, compose, sculpt, design,
+    direct, or otherwise create narratives that enthrall other people
+    with your vision.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Original
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You're always coming up with something new. You're trained in
+        any task related to creating a narrative (such as a story, play,
+        or scenario). This includes deception, if the deception involves
+        a narrative you're able to tell.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: null
+    choice_count: 1
+  - skill_id: puzzle-solving
+    choice_count: null
+  - skill_id: research
+    choice_count: null
+inabilities:
+  - en: >-
+      You're inventive but not charming. All tasks related to pleasant
+      social interaction are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You were doing research for a project and convinced the PCs to
+      bring you along.
+    pt-BR: Tradução em breve.
+  - en: You're looking for new markets for the results of your creative output.
+    pt-BR: Tradução em breve.
+  - en: You fell in with the wrong crowd, but they grew on you.
+    pt-BR: Tradução em breve.
+  - en: >-
+      A creative life is often one beset with financial hurdles. You
+      joined the PCs because you hoped it would be profitable.
+    pt-BR: Tradução em breve.

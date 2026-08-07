@@ -1,0 +1,41 @@
+id: jovial
+name:
+  en: Jovial
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're cheerful, friendly, and outgoing. You put others at ease with
+    a big smile and a joke, possibly one at your own expense, though
+    lightly ribbing your companions who can take it is also one of your
+    favorite pastimes. Sometimes people say you never take anything
+    seriously. That's not true, of course, but you have learned that to
+    dwell on the bad too long quickly robs the world of joy. You've
+    always got a new joke in your back pocket because you collect them
+    like some people collect bottles of wine.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: puzzle-solving
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You solved a riddle before realizing that answering it would
+      launch you into the adventure.
+    pt-BR: Tradução em breve.
+  - en: The other PCs thought you'd bring some much-needed levity to the team.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You decided that all fun and no work was not the best way to get
+      through life, so you joined up with the PCs.
+    pt-BR: Tradução em breve.
+  - en: >-
+      It was either go with the PCs or face up to a circumstance that
+      was anything but jovial.
+    pt-BR: Tradução em breve.

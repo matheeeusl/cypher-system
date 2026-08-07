@@ -185,25 +185,47 @@ type Skill {
 # ---- Cypher ----
 enum CypherCategory {
   MANIFEST
+  FANTASTIC
   SUBTLE
+  POWER_BOOST
+}
+type CypherEffectTableEntry {
+  range: String!
+  text: LocalizedString!
+}
+type CypherEffectTable {
+  label: LocalizedString!
+  entries: [CypherEffectTableEntry!]!
 }
 type Cypher {
   id: ID!
   name: LocalizedString!
-  levelRange: String!
   category: CypherCategory!
+  pageRef: String!
+  levelRange: String!
   effectText: LocalizedString!
+  effectTable: CypherEffectTable
   contentVersion: String!
 }
 
 # ---- Artifact ----
+type ArtifactEffectTableEntry {
+  range: String!
+  text: LocalizedString!
+}
+type ArtifactEffectTable {
+  label: LocalizedString!
+  entries: [ArtifactEffectTableEntry!]!
+}
 type Artifact {
   id: ID!
   name: LocalizedString!
   level: String!
   form: LocalizedString!
-  depletionDie: String!
   effectText: LocalizedString!
+  effectTable: ArtifactEffectTable
+  flavorQuote: LocalizedString
+  depletionDie: String!
   contentVersion: String!
 }
 

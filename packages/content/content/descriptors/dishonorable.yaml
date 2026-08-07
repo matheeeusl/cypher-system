@@ -1,0 +1,51 @@
+id: dishonorable
+name:
+  en: Dishonorable
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    There is no honor among thieves—or betrayers, backstabbers, liars, or
+    cheats. You are all of these things, and either you don't lose any
+    sleep over it, or you deny the truth to others or to yourself.
+    Regardless, you are willing to do whatever it takes to get your own
+    way. Honor, ethics, and principles are merely words. In your
+    estimation, they have no place in the real world.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: speed
+    amount: 4
+characteristics:
+  - name:
+      en: Just Desserts
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        When the GM gives another player an experience point to award to
+        someone for a GM intrusion, that player cannot give it to you.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: deception
+    choice_count: null
+  - skill_id: stealth
+    choice_count: null
+  - skill_id: intimidation
+    choice_count: null
+inabilities:
+  - en: People don't like or trust you. Pleasant social interactions are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You are interested in what the PCs are doing, so you lied to them
+      to get into their group.
+    pt-BR: Tradução em breve.
+  - en: >-
+      While skulking about, you overheard the PCs' plans and realized
+      that you wanted in.
+    pt-BR: Tradução em breve.
+  - en: >-
+      One of the other PCs invited you, having no idea of what you're
+      truly like.
+    pt-BR: Tradução em breve.
+  - en: You bullied your way in with intimidation and bluster.
+    pt-BR: Tradução em breve.

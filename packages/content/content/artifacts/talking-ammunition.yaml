@@ -1,0 +1,22 @@
+id: talking-ammunition
+name:
+  en: Talking Ammunition
+  pt-BR: Tradução em breve.
+level: '1d6 + 1'
+form:
+  en: Quiver, case, sack, or crate
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    When found, the artifact contains a number of pieces of ammunition
+    equal to the artifact level. You can use an action to set the talking
+    ammunition at the ready or to stow them away. While active, the
+    talking ammunition carry on with you and each other in a boisterous
+    manner, hindering your stealth rolls. Each piece of ammunition
+    provides an asset to the attack roll, and inflicts 2 additional
+    points of damage. The final piece of ammunition provides two assets
+    to the attack roll, and inflicts 4 additional points of damage.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: 'Automatic (when the final piece of ammunition is fired)'

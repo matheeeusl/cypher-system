@@ -1,0 +1,16 @@
+id: seatbelt
+name:
+  en: Seatbelt
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: Belt
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    The user can sit down at any time, and a comfortable chair made of
+    shimmering force appears to catch and conform to the body.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: '—'

@@ -4,21 +4,30 @@ name:
   pt-BR: Guerreiro
 tagline:
   en: You're a good ally to have in a fight.
-  pt-BR: Você é um bom aliado para se ter em uma luta.
+  pt-BR: Você é um excelente aliado em uma luta.
 description:
   individual_role:
     en: >-
       Warriors are physical, action-oriented people. They're more likely to
       overcome a challenge using force than by other means, and they often
       take the most straightforward path toward their goals.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Guerreiros são pessoas voltadas para a ação e para o vigor físico.
+      Costumam superar desafios pela força, em vez de recorrer a outros
+      meios, e normalmente seguem o caminho mais direto para alcançar seus
+      objetivos.
   group_role:
     en: >-
       Warriors usually take and deal the most punishment in a dangerous
       situation. Often it falls on them to protect the other group members
       from threats. This sometimes means that warriors take on leadership
       roles as well, at least in combat and other times of danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Em situações de perigo, os Guerreiros costumam ser aqueles que mais
+      suportam e causam dano. Frequentemente cabe a eles proteger os demais
+      integrantes do grupo contra as ameaças. Por isso, não é incomum que
+      assumam posições de liderança, pelo menos durante combates e outros
+      momentos de risco.
   societal_role:
     en: >-
       Warriors aren't always soldiers or mercenaries. Anyone who is ready
@@ -26,11 +35,16 @@ description:
       general sense. This includes guards, watchmen, police officers,
       sailors, or people in other roles or professions who know how to
       defend themselves with skill.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Guerreiros nem sempre são soldados ou mercenários. Qualquer pessoa
+      preparada para enfrentar a violência — ou a simples possibilidade
+      dela — pode ser considerada um Guerreiro em sentido amplo. Isso
+      inclui guardas, vigias, policiais, marinheiros e profissionais de
+      diversas áreas que sabem se defender com habilidade.
 player_intrusions:
   - name:
       en: Perfect Setup
-      pt-BR: Tradução em breve.
+      pt-BR: Oportunidade Perfeita
     description:
       en: >-
         You're fighting at least three foes and each one is standing in
@@ -38,26 +52,40 @@ player_intrusions:
         ago, allowing you to attack all three as a single action. Make a
         separate attack roll for each foe. You remain limited by the amount
         of Effort you can apply on one action.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você está enfrentando pelo menos três inimigos, e cada um deles se
+        posiciona exatamente onde precisa para que você execute uma técnica
+        aprendida há muito tempo, permitindo atacar os três com uma única
+        ação. Faça uma jogada de ataque separada para cada inimigo. Você
+        continua limitado à quantidade de Esforço que pode aplicar em uma
+        única ação.
   - name:
       en: Old Friend
-      pt-BR: Tradução em breve.
+      pt-BR: Velho Companheiro
     description:
       en: >-
         A comrade in arms from your past shows up unexpectedly and provides
         aid in whatever you're doing. They are on a mission of their own
         and can't stay longer than it takes to help out, chat for a while
         after, and perhaps share a quick meal.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um antigo companheiro de armas surge inesperadamente e oferece
+        ajuda no que você estiver fazendo. Ele está em sua própria missão e
+        não pode permanecer por muito tempo — apenas o suficiente para
+        ajudar, colocar a conversa em dia e, talvez, compartilhar uma
+        refeição rápida.
   - name:
       en: Weapon Break
-      pt-BR: Tradução em breve.
+      pt-BR: Ponto Fraco da Arma
     description:
       en: >-
         Your foe's weapon has a weak spot. In the course of the combat, it
         quickly becomes damaged and moves two steps down the object damage
         track.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        A arma do seu oponente possui um ponto fraco. Durante o combate,
+        ela sofre danos rapidamente e avança duas etapas na trilha de dano
+        de objetos.
 starting_pools:
   might: 10
   speed: 10
@@ -79,7 +107,7 @@ starting_equipment:
   clothing: true
   weapon:
     en: two weapons of your choice
-    pt-BR: Tradução em breve.
+    pt-BR: duas armas à sua escolha
   items:
     - price_tier: expensive
       count: 1

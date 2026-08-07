@@ -1,0 +1,55 @@
+id: craven
+name:
+  en: Craven
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    Courage fails you at every turn. You lack the willpower and resolve
+    to stand fast in the face of danger. Fear gnaws at your heart,
+    chewing away at your mind, driving you to distraction until you
+    cannot bear it. Most times, you back down from confrontations. You
+    flee from threats and vacillate when faced with difficult decisions.
+    Yet for all that fear dogs you and possibly shames you, your cowardly
+    nature proves to be a useful ally from time to time. Listening to
+    your fears has helped you escape danger and avoid taking unnecessary
+    risks. Others may have suffered in your place, and you might be the
+    first to admit this fact, but secretly you feel intense relief from
+    having avoided an unthinkable and terrible fate.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: stealth
+    choice_count: null
+  - skill_id: running
+    choice_count: null
+  - skill_id: escaping-danger
+    choice_count: null
+inabilities:
+  - en: >-
+      You do not willingly enter dangerous situations. Any initiative
+      actions (to determine who goes first in combat) are hindered.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You fall to pieces when you have to undertake a potentially
+      dangerous task alone. Any such task (such as attacking a creature
+      by yourself) is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment:
+  en: You have a good luck charm or protective device to keep you out of harm's way.
+  pt-BR: Tradução em breve.
+connection_options:
+  - en: >-
+      You believe that you're being hunted, and you have hired one of
+      the other PCs as your protector.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You seek to escape your shame and take up with capable individuals
+      in the hopes of repairing your reputation.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs bullied you into coming along.
+    pt-BR: Tradução em breve.
+  - en: The group answered your cries for help when you were in trouble.
+    pt-BR: Tradução em breve.

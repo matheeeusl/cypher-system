@@ -1,0 +1,49 @@
+id: naive
+name:
+  en: Naive
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You've lived a sheltered life. Your childhood was safe and secure,
+    so you didn't get a chance to learn much about the world—and even
+    less chance to experience it. Whether you were training for
+    something, had your nose in a book, or just were sequestered in a
+    secluded place, you haven't done much, met many people, or seen many
+    interesting things so far. That's probably going to change soon, but
+    as you go forward into a larger world, you do so without some of the
+    understanding that others possess about how it all works.
+  pt-BR: Tradução em breve.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Fresh
+      pt-BR: Tradução em breve.
+    description:
+      en: You add +1 to your recovery rolls.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Incorruptible
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You are trained in Intellect defense tasks and all tasks that
+        involve resisting temptation.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: perception
+    choice_count: null
+inabilities:
+  - en: >-
+      Any task that involves seeing through deceptions or determining
+      someone's secret motive is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: Someone told you that you should get involved.
+    pt-BR: Tradução em breve.
+  - en: You needed money, and this seemed like a good way to earn some.
+    pt-BR: Tradução em breve.
+  - en: You believed that you could learn a lot by joining the other PCs.
+    pt-BR: Tradução em breve.
+  - en: Sounded like fun.
+    pt-BR: Tradução em breve.

@@ -1,7 +1,11 @@
 id: analeptic
-name: { en: "Analeptic", "pt-BR": "Tradução em breve." }
+name:
+  en: "Analeptic"
+  pt-BR: "Analéptico"
 category: subtle
 page_ref: "Cypher System Rulebook, page 384"
 level_range: "1d6 + 2"
-effect_text: { en: "Restores a number of points equal to the cypher's level to the user's Speed Pool.", "pt-BR": "Tradução em breve." }
+effect_text:
+  en: "Restores a number of points equal to the cypher's level to the user's Speed Pool."
+  pt-BR: "Restaura um número de pontos igual ao nível do cypher ao Pool de Velocidade do usuário."
 effect_table: null

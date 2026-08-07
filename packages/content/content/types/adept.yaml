@@ -2,16 +2,20 @@ id: adept
 name:
   en: Adept
   pt-BR: Adepto
+
 tagline:
   en: You master powers or abilities outside the experience, understanding, and sometimes belief of others.
-  pt-BR: Você domina poderes ou habilidades além da experiência, compreensão e, às vezes, crença dos outros.
+  pt-BR: Você domina poderes ou habilidades além da experiência, da compreensão e, às vezes, até da crença dos outros.
 description:
   individual_role:
     en: >-
       Adepts are usually thoughtful, intelligent types. They often think
       carefully before acting and rely heavily on their supernatural
       abilities.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Adeptos costumam ser pessoas inteligentes e reflexivas. Geralmente
+      pensam cuidadosamente antes de agir e confiam bastante em suas
+      habilidades sobrenaturais.
   group_role:
     en: >-
       Adepts are not powerful in straightforward combat, although they
@@ -20,36 +24,54 @@ description:
       facilitate overcoming challenges. For example, if the group must get
       through a locked door, an Adept might be able to destroy it or
       teleport everyone to the other side.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Adeptos não costumam se destacar em confrontos diretos. Ainda assim,
+      frequentemente possuem habilidades que oferecem excelente suporte em
+      combate, tanto ofensivo quanto defensivo. Também podem contar com
+      poderes capazes de superar diversos desafios. Por exemplo, se o grupo
+      precisar atravessar uma porta trancada, um Adepto talvez consiga
+      destruí-la ou teletransportar todos para o outro lado.
   societal_role:
     en: >-
       In settings where the supernatural is rare, strange, or feared,
       Adepts are likely rare and feared as well. They remain hidden,
       shadowy figures. When this is not the case, Adepts are more likely to
       be common and forthright. They might even take leadership roles.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Em cenários onde o sobrenatural é raro, estranho ou temido, os
+      Adeptos provavelmente também serão raros e temidos. Costumam viver
+      ocultos, envoltos em mistério. Já em cenários onde isso não acontece,
+      os Adeptos tendem a ser mais comuns e agir abertamente. Alguns podem,
+      inclusive, assumir posições de liderança.
 player_intrusions:
   - name:
       en: Advantageous Malfunction
-      pt-BR: Tradução em breve.
+      pt-BR: Falha Oportuna
     description:
       en: >-
         A device being used against you malfunctions. It might harm the
         user or one of their allies for a round, or activate a dramatic and
         distracting side effect for a few rounds.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um dispositivo usado contra você sofre uma falha. Ele pode ferir
+        seu usuário ou um de seus aliados durante uma rodada, ou então
+        provocar um efeito colateral dramático e distraente por algumas
+        rodadas.
   - name:
       en: Convenient Idea
-      pt-BR: Tradução em breve.
+      pt-BR: Ideia Providencial
     description:
       en: >-
         A flash of insight provides you with a clear answer or suggests a
         course of action with regard to an urgent question, problem, or
         obstacle you're facing.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um lampejo de inspiração lhe fornece uma resposta clara ou sugere
+        um plano de ação para lidar com uma questão urgente, um problema ou
+        um obstáculo que você esteja enfrentando.
   - name:
       en: Inexplicably Unbroken
-      pt-BR: Tradução em breve.
+      pt-BR: Inexplicavelmente Intacto
     description:
       en: >-
         An inactive, ruined, or presumed-destroyed device temporarily
@@ -58,7 +80,12 @@ player_intrusions:
         solution, alleviate a complication that was interfering with your
         abilities, or just get you one more use out of a depleted cypher or
         artifact.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um dispositivo inativo, danificado ou considerado destruído se
+        ativa temporariamente e executa uma função útil para a situação.
+        Isso lhe dá tempo para encontrar uma solução melhor, elimina uma
+        complicação que estava interferindo em suas habilidades ou permite
+        extrair um último uso de um cypher ou artefato esgotado.
 starting_pools:
   might: 7
   speed: 9

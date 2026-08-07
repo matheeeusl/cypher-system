@@ -1,0 +1,47 @@
+id: unstable-mutagen
+name:
+  en: Unstable Mutagen
+  pt-BR: Tradução em breve.
+level: '1d10'
+form:
+  en: Injection, topical ooze, or potion
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    The user gains a random mutation. Each time you use this artifact,
+    roll a d20 to determine which table to roll from for your mutation
+    (see the table below). When rolling from the mutation tables, you can
+    modify your roll's results by adding or subtracting any amount up to
+    the artifact level.
+  pt-BR: Tradução em breve.
+effect_table:
+  label:
+    en: Mutagen Effects
+    pt-BR: Tradução em breve.
+  entries:
+    - range: '1'
+      text:
+        en: Permanently gain one Harmful Mutation (RR, 79) and one Cosmetic Mutation (RR, 84)
+        pt-BR: Tradução em breve.
+    - range: '2'
+      text: { en: For 24 hours, gain one Harmful Mutation (RR, 79), pt-BR: Tradução em breve. }
+    - range: '3–9'
+      text: { en: For 24 hours, gain one Beneficial Mutation (RR, 78), pt-BR: Tradução em breve. }
+    - range: '10–13'
+      text: { en: For 24 hours, gain one Distinctive Mutation (RR, 82), pt-BR: Tradução em breve. }
+    - range: '14–17'
+      text: { en: For 24 hours, gain one Powerful Mutation (RR, 80), pt-BR: Tradução em breve. }
+    - range: '18'
+      text:
+        en: Permanently gain one Beneficial Mutation (RR, 78) and one Cosmetic Mutation (RR, 84)
+        pt-BR: Tradução em breve.
+    - range: '19'
+      text:
+        en: Permanently gain one Distinctive Mutation (RR, 82) and one Cosmetic Mutation (RR, 84)
+        pt-BR: Tradução em breve.
+    - range: '20'
+      text:
+        en: Permanently gain one Powerful Mutation (RR, 80) and one Cosmetic Mutation (RR, 84)
+        pt-BR: Tradução em breve.
+flavor_quote: null
+depletion_die: '5 in 1d20 (Check each use)'

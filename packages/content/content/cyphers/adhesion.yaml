@@ -1,5 +1,7 @@
 id: adhesion
-name: { en: 'Adhesion', 'pt-BR': 'Tradução em breve.' }
+name:
+  en: 'Adhesion'
+  pt-BR: 'Adesão'
 category: manifest
 page_ref: 'Cypher System Rulebook, page 384'
 level_range: '1d6'
@@ -7,5 +9,5 @@ effect_text:
   en: >-
     Allows for automatic climbing of any surface, even horizontal ones. Lasts for ten minutes per cypher level.
   pt-BR: >-
-    Tradução em breve.
+    Permite escalar automaticamente qualquer superfície, inclusive as horizontais. Dura dez minutos por nível do cypher.
 effect_table: null

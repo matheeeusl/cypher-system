@@ -1,7 +1,17 @@
 id: blinking
-name: { en: "Blinking", "pt-BR": "Tradução em breve." }
+name:
+  en: "Blinking"
+  pt-BR: "Piscar"
 category: fantastic
 page_ref: "Cypher System Rulebook, page 385"
 level_range: "1d6"
-effect_text: { en: "For the next day, each time the user is struck hard enough to take damage (but not more than once per round), they teleport an immediate distance in a random direction (not up or down). Since the user is prepared for this effect and their foe is not, the user's defenses are eased for one round after they teleport.", "pt-BR": "Tradução em breve." }
+effect_text:
+  en: "For the next day, each time the user is struck hard enough to take damage (but not more than once per round), they teleport an immediate distance in a random direction (not up or down). Since the user is prepared for this effect and their foe is not, the user's defenses are eased for one round after they teleport."
+  pt-BR: >-
+    Durante o próximo dia, sempre que o usuário for atingido com força
+    suficiente para sofrer dano (mas não mais de uma vez por rodada), ele se
+    teletransporta uma distância imediata em uma direção aleatória (nunca para
+    cima nem para baixo). Como o usuário está preparado para esse efeito e seu
+    inimigo não, suas defesas são facilitadas por uma rodada após o
+    teletransporte.
 effect_table: null

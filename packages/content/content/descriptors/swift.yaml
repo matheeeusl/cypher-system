@@ -1,0 +1,36 @@
+id: swift
+name:
+  en: Swift
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You move quickly, able to sprint in short bursts and work with your
+    hands with dexterity. You're great at crossing distances quickly but
+    not always smoothly. You are likely slim and muscular.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: speed
+    amount: 4
+characteristics: []
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+  - skill_id: running
+    choice_count: null
+inabilities:
+  - en: You're fast but not necessarily graceful. Any task involving balance is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Against your better judgment, you joined the other PCs because you
+      saw that they were in danger.
+    pt-BR: Tradução em breve.
+  - en: >-
+      One of the other PCs convinced you that joining the group would be
+      in your best interests.
+    pt-BR: Tradução em breve.
+  - en: You're afraid of what might happen if the other PCs fail.
+    pt-BR: Tradução em breve.
+  - en: There is reward involved, and you need the money.
+    pt-BR: Tradução em breve.

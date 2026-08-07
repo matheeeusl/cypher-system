@@ -1,0 +1,41 @@
+id: stealthy
+name:
+  en: Stealthy
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're sneaky, slippery, and fast. These talents help you hide, move
+    quietly, and pull off tricks that require sleight of hand. Most
+    likely, you're wiry and small. However, you're not much of a
+    sprinter—you're more dexterous than fleet of foot.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: stealth
+    choice_count: null
+  - skill_id: lies-and-trickery
+    choice_count: null
+  - skill_id: illusions-and-trickery
+    choice_count: null
+inabilities:
+  - en: You're sneaky but not fast. All movement-related tasks are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You attempted to steal from one of the other PCs. That character
+      caught you and forced you to come along with them.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You were tailing one of the other PCs for reasons of your own,
+      which brought you into the action.
+    pt-BR: Tradução em breve.
+  - en: An NPC employer secretly paid you to get involved.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You overheard the other PCs talking about a topic that interested
+      you, so you decided to approach the group.
+    pt-BR: Tradução em breve.

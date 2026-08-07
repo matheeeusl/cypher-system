@@ -1,0 +1,22 @@
+id: skimpy-armor
+name:
+  en: Skimpy Armor
+  pt-BR: Tradução em breve.
+level: '1d6 + 2'
+form:
+  en: >-
+    Little more than a loincloth, fine gold chain, and one fully armored
+    accoutrement—for example, a pauldron, kneeguard, gauntlet, or nipple
+    shield
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    If you wear this skimpy armor and nothing else, you gain a bonus to
+    Armor equal to the artifact level. Skimpy armor doesn't encumber a
+    PC, imposing no Speed Effort cost for wearing armor.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: >-
+  1 in 1d10 (Check each time you fail a defense roll. Upon depletion, you
+  have an embarrassing—or empowering—wardrobe mishap.)

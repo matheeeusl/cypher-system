@@ -1,7 +1,11 @@
 id: best-tool
-name: { en: "Best tool", "pt-BR": "Tradução em breve." }
+name:
+  en: "Best tool"
+  pt-BR: "Melhor Ferramenta"
 category: subtle
 page_ref: "Cypher System Rulebook, page 384"
 level_range: "1d6"
-effect_text: { en: "Provides an additional asset for any one task using a tool, even if that means exceeding the normal limit of two assets.", "pt-BR": "Tradução em breve." }
+effect_text:
+  en: "Provides an additional asset for any one task using a tool, even if that means exceeding the normal limit of two assets."
+  pt-BR: "Concede um recurso adicional em uma única tarefa que utilize uma ferramenta, mesmo que isso ultrapasse o limite normal de dois recursos."
 effect_table: null

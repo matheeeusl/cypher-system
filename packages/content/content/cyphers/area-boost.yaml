@@ -1,5 +1,7 @@
 id: area-boost
-name: { en: "Area boost", "pt-BR": "Tradução em breve." }
+name:
+  en: "Area boost"
+  pt-BR: "Ampliação de Área"
 category: power_boost
 page_ref: "Cypher System Rulebook, page 401"
 level_range: "1d6 + 1"
@@ -12,5 +14,10 @@ effect_text:
     Abilities with very long areas become 1,000-foot (300 m) areas. All other
     areas double in radius.
   pt-BR: >-
-    Tradução em breve.
+    Este cypher aprimora uma habilidade que afeta um único alvo. A habilidade
+    expande seu efeito para incluir a área imediata ao redor desse alvo. Se a
+    habilidade normalmente afeta uma área imediata, ela passa a afetar uma
+    área curta. Áreas curtas tornam-se longas. Áreas longas tornam-se muito
+    longas. Habilidades com áreas muito longas passam a afetar uma área de
+    300 metros (1.000 pés). Todas as demais áreas têm seu raio dobrado.
 effect_table: null

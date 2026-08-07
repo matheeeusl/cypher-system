@@ -1,33 +1,46 @@
 id: speaker
 name:
   en: Speaker
-  pt-BR: Falante
+  pt-BR: Orador
 tagline:
   en: You're good with words and good with people.
-  pt-BR: Você é bom com palavras e bom com pessoas.
+  pt-BR: Você leva jeito com as palavras e com as pessoas.
 description:
   individual_role:
     en: >-
       Speakers are smart and charismatic. They like people and, more
       important, they understand them. This helps speakers get others to do
       what needs to be done.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Oradores são inteligentes e carismáticos. Gostam de pessoas e,
+      mais importante, sabem compreendê-las. Isso lhes permite convencer
+      os outros a fazer o que precisa ser feito.
+
   group_role:
     en: >-
       The Speaker is often the face of the group, serving as the person
       who speaks for all and negotiates with others. Combat and action are
       not a Speaker's strong suits, so other characters sometimes have to
       defend the Speaker in times of danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      O Orador costuma ser o rosto do grupo, atuando como aquele que fala
+      em nome de todos e negocia com outras pessoas. Combate e ação não
+      são seus pontos fortes, por isso, em momentos de perigo, os demais
+      personagens às vezes precisam protegê-lo.
+
   societal_role:
     en: >-
       Speakers are frequently political or religious leaders. Just as
       often, however, they are con artists or criminals.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Oradores frequentemente ocupam posições de liderança política ou
+      religiosa. Com a mesma frequência, porém, também podem ser
+      vigaristas ou criminosos.
+
 player_intrusions:
   - name:
       en: Friendly NPC
-      pt-BR: Tradução em breve.
+      pt-BR: NPC Amigável
     description:
       en: >-
         An NPC you don't know, someone you don't know that well, or someone
@@ -35,19 +48,27 @@ player_intrusions:
         chooses to help you, though doesn't necessarily explain why. Maybe
         they'll ask you for a favor in return afterward, depending on how
         much trouble they go to.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um NPC que você não conhece, alguém que conhece apenas
+        superficialmente ou até mesmo alguém que nunca foi particularmente
+        amigável com você decide ajudá-lo, embora não explique
+        necessariamente o motivo. Dependendo do quanto se envolver para
+        ajudá-lo, talvez peça um favor em troca mais tarde.
   - name:
       en: Perfect Suggestion
-      pt-BR: Tradução em breve.
+      pt-BR: Sugestão Perfeita
     description:
       en: >-
         A follower or other already-friendly NPC suggests a course of
         action with regard to an urgent question, problem, or obstacle
         you're facing.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um seguidor ou outro NPC já amigável sugere um plano de ação para
+        lidar com uma questão urgente, um problema ou um obstáculo que
+        você esteja enfrentando.
   - name:
       en: Unexpected Gift
-      pt-BR: Tradução em breve.
+      pt-BR: Presente Inesperado
     description:
       en: >-
         An NPC hands you a physical gift you were not expecting, one that
@@ -55,7 +76,12 @@ player_intrusions:
         provides you with a new insight for understanding the context of
         the situation if there's something you're failing to understand or
         grasp.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Um NPC lhe entrega um presente físico que você não esperava. O
+        presente ajuda a aliviar a tensão da situação, caso as coisas
+        estejam delicadas, ou oferece uma nova perspectiva que permite
+        compreender melhor o contexto, caso haja algo que você ainda não
+        tenha entendido.
 starting_pools:
   might: 8
   speed: 9
@@ -76,7 +102,7 @@ starting_equipment:
   clothing: true
   weapon:
     en: one light weapon of your choice
-    pt-BR: Tradução em breve.
+    pt-BR: uma arma leve à sua escolha
   items:
     - price_tier: expensive
       count: 2

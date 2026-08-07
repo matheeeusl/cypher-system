@@ -1,0 +1,40 @@
+id: skeptical
+name:
+  en: Skeptical
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You possess a questioning attitude regarding claims that are often
+    taken for granted by others. You're not necessarily a "doubting
+    Thomas" (a skeptic who refuses to believe anything without direct
+    personal experience), but you've often benefited from questioning
+    the statements, opinions, and received knowledge presented to you by
+    others.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: identifying
+    choice_count: null
+  - skill_id: seeing-through-tricks
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You overheard other PCs holding forth on a topic with an opinion
+      you were quite skeptical about, so you decided to approach the
+      group and ask for proof.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You were following one of the other PCs because you were
+      suspicious of him, which brought you into the action.
+    pt-BR: Tradução em breve.
+  - en: >-
+      Your theory about the nonexistence of the supernatural can be
+      invalidated only by your own senses, so you came along.
+    pt-BR: Tradução em breve.
+  - en: You need money to fund your research.
+    pt-BR: Tradução em breve.

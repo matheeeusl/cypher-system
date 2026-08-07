@@ -1,0 +1,44 @@
+id: tongue-tied
+name:
+  en: Tongue-Tied
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You've never been much of a talker. When forced to interact with
+    others, you never think of the right thing to say—words fail you
+    entirely, or they come out all wrong. You often end up saying
+    precisely the wrong thing and insult someone unintentionally. Most
+    of the time, you just keep mum. This makes you a listener instead—a
+    careful observer. It also means that you're better at doing things
+    than talking about them. You're quick to take action.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: might
+    amount: 2
+  - stat: speed
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: perception
+    choice_count: null
+  - skill_id: initiative
+    choice_count: null
+inabilities:
+  - en: All tasks relating to social interaction are hindered.
+    pt-BR: Tradução em breve.
+  - en: >-
+      All tasks involving verbal communication or relaying information
+      are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: You just tagged along and no one told you to leave.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You saw something important the other PCs did not and (with some
+      effort) managed to relate it to them.
+    pt-BR: Tradução em breve.
+  - en: You intervened to save one of the other PCs when they were in danger.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs recruited you for your talents.
+    pt-BR: Tradução em breve.

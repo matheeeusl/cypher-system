@@ -1,0 +1,48 @@
+id: brash
+name:
+  en: Brash
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're a self-assertive sort, confident in your abilities, energetic,
+    and perhaps a bit irreverent toward ideas that you don't agree with.
+    Some people call you bold and brave, but those you've put in their
+    place might call you puffed up and arrogant. Whatever. It's not in
+    your nature to care what other people think about you, unless those
+    people are your friends or family. Even someone as brash as you knows
+    that friends sometimes have to come first.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Bold
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You are trained in all actions that involve overcoming or
+        ignoring the effects of fear or intimidation.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You noticed something weird going on, and without much thought, you
+      jumped in with both feet.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You showed up when and where you did on a dare because, hey, you
+      don't back down from dares.
+    pt-BR: Tradução em breve.
+  - en: >-
+      Someone called you out, but instead of walking into a fight, you
+      walked into your current situation.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You told your friend that nothing could scare you, and nothing you
+      saw would change your mind. They brought you to your current point.
+    pt-BR: Tradução em breve.

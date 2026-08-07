@@ -21,7 +21,12 @@ export const enumResolvers = {
     ACTION_TO_INITIATE_OR_REINITIATE: 'action_to_initiate_or_reinitiate',
   },
   AbilitySourceType: { TYPE: 'type', FOCUS: 'focus' },
-  CypherCategory: { MANIFEST: 'manifest', SUBTLE: 'subtle' },
+  CypherCategory: {
+    MANIFEST: 'manifest',
+    FANTASTIC: 'fantastic',
+    SUBTLE: 'subtle',
+    POWER_BOOST: 'power_boost',
+  },
   SkillLevel: {
     INABILITY: 'inability',
     PRACTICED: 'practiced',

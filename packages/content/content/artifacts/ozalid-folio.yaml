@@ -1,0 +1,105 @@
+id: ozalid-folio
+name:
+  en: Ozalid Folio
+  pt-BR: Tradução em breve.
+level: '1d6 + 4'
+form:
+  en: Tome of translucent pages
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    You can spend 10 minutes to draw a mundane object—no more than 10 feet
+    (3 m) in any given dimension, and that weighs no more than 1,000
+    pounds—into the folio. When complete, the object's substance gives
+    way, stored as a series of 16 full-page illustrations within the
+    book, each featuring the object drawn from a different angle, with
+    precise mathematical notation about the object's construction, notes
+    on materials used, and fine details, for example, a deep scratch left
+    on a table leg. The folio can inscribe a number of items equal to the
+    artifact level. You can retrieve an object by performing a similar
+    10-minute transference, freeing up those pages in the folio. When
+    found, half its pages (rounded up) are already inscribed with items
+    from the Ozalid Folio Contents table. Items inscribed in or
+    transcribed from the folio must rest on a solid surface that can
+    support them. When the ozalid folio is depleted, all items held
+    within its pages are lost.
+  pt-BR: Tradução em breve.
+effect_table:
+  label:
+    en: Ozalid Folio Contents
+    pt-BR: Tradução em breve.
+  entries:
+    - range: '1–3'
+      text: { en: A fine porcelain tea kettle, pt-BR: Tradução em breve. }
+    - range: '4–6'
+      text: { en: A stylish fur coat, pt-BR: Tradução em breve. }
+    - range: '7–9'
+      text: { en: A teddy bear, pt-BR: Tradução em breve. }
+    - range: '10–12'
+      text: { en: A crystal skull, pt-BR: Tradução em breve. }
+    - range: '13–15'
+      text: { en: An 8-foot candelabra, pt-BR: Tradução em breve. }
+    - range: '16–18'
+      text: { en: An armoire, pt-BR: Tradução em breve. }
+    - range: '19–21'
+      text: { en: A mounted taxidermy trophy, pt-BR: Tradução em breve. }
+    - range: '22–24'
+      text: { en: A harpsichord, pt-BR: Tradução em breve. }
+    - range: '25–27'
+      text: { en: A typewriter in a random language, pt-BR: Tradução em breve. }
+    - range: '28–30'
+      text: { en: A set of light tools, pt-BR: Tradução em breve. }
+    - range: '31–33'
+      text: { en: A minecart, pt-BR: Tradução em breve. }
+    - range: '34–36'
+      text: { en: A stack of 12 banana crème pies, pt-BR: Tradução em breve. }
+    - range: '37–39'
+      text: { en: A rowboat, pt-BR: Tradução em breve. }
+    - range: '40–42'
+      text: { en: A jar of honey, pt-BR: Tradução em breve. }
+    - range: '43–45'
+      text:
+        en: A set of 8 brightly colored sticks of chalk, each a different color
+        pt-BR: Tradução em breve.
+    - range: '46–48'
+      text: { en: A snowman, pt-BR: Tradução em breve. }
+    - range: '49–51'
+      text: { en: A roaring campfire, pt-BR: Tradução em breve. }
+    - range: '52–54'
+      text:
+        en: A cannon (with 1 cannonball and enough black powder for one shot)
+        pt-BR: Tradução em breve.
+    - range: '55–57'
+      text: { en: A sack of flour (1 lb.), pt-BR: Tradução em breve. }
+    - range: '58–60'
+      text: { en: A dozen eggs, pt-BR: Tradução em breve. }
+    - range: '61–63'
+      text: { en: A spool of copper wire (100 feet), pt-BR: Tradução em breve. }
+    - range: '64–66'
+      text: { en: A barrel of rum, pt-BR: Tradução em breve. }
+    - range: '67–69'
+      text: { en: A sack of quicklime (5 lb.), pt-BR: Tradução em breve. }
+    - range: '70–72'
+      text: { en: A flawed diamond, pt-BR: Tradução em breve. }
+    - range: '73–75'
+      text: { en: A lavishly furnished four-poster bed, pt-BR: Tradução em breve. }
+    - range: '76–78'
+      text: { en: A treasure map, pt-BR: Tradução em breve. }
+    - range: '79–81'
+      text: { en: A silver bell, pt-BR: Tradução em breve. }
+    - range: '82–84'
+      text: { en: A book of useful phrases in an exotic language, pt-BR: Tradução em breve. }
+    - range: '85–87'
+      text: { en: A cauldron, pt-BR: Tradução em breve. }
+    - range: '88–90'
+      text: { en: A book of erotic imagery, pt-BR: Tradução em breve. }
+    - range: '91–93'
+      text: { en: A clockwork astrolabe, pt-BR: Tradução em breve. }
+    - range: '94–96'
+      text: { en: A large block of ice, pt-BR: Tradução em breve. }
+    - range: '97–99'
+      text: { en: Twelve dozen wheels of various cheeses, pt-BR: Tradução em breve. }
+    - range: '100'
+      text: { en: An old boot, pt-BR: Tradução em breve. }
+flavor_quote: null
+depletion_die: '1 in 1d20'

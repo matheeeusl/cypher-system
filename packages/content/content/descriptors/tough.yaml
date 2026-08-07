@@ -1,0 +1,43 @@
+id: tough
+name:
+  en: Tough
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're strong and can take a lot of physical punishment. You might
+    have a large frame and a square jaw. Tough characters frequently
+    have visible scars.
+  pt-BR: Tradução em breve.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Resilient
+      pt-BR: Tradução em breve.
+    description:
+      en: +1 to Armor.
+      pt-BR: Tradução em breve.
+  - name:
+      en: Healthy
+      pt-BR: Tradução em breve.
+    description:
+      en: Add 1 to the points you regain when you make a recovery roll.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: might-defense
+    choice_count: null
+inabilities: []
+additional_equipment:
+  en: You have an extra light weapon.
+  pt-BR: Tradução em breve.
+connection_options:
+  - en: You're acting as a bodyguard for one of the other PCs.
+    pt-BR: Tradução em breve.
+  - en: One of the PCs is your sibling, and you came along to watch out for them.
+    pt-BR: Tradução em breve.
+  - en: You need money because your family is in debt.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You stepped in to defend one of the PCs when that character was
+      threatened. While talking to them afterward, you heard about the
+      group's task.
+    pt-BR: Tradução em breve.

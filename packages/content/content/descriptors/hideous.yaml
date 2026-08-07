@@ -1,0 +1,45 @@
+id: hideous
+name:
+  en: Hideous
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You are physically repugnant by almost any human standard. You might
+    have had a serious accident, a harmful mutation, or just poor genetic
+    luck, but you are incontrovertibly ugly. You've more than made up for
+    your appearance in other ways, however. Because you have to hide your
+    appearance, you excel at sneaking about unnoticed or disguising
+    yourself. But perhaps most important, being ostracized while others
+    socialized, you took the time growing up to develop yourself as you
+    saw fit—you grew strong or quick, or you honed your mind.
+  pt-BR: Tradução em breve.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Versatile
+      pt-BR: Tradução em breve.
+    description:
+      en: You get 4 additional points to divide among your stat Pools.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: intimidation-and-fear
+    choice_count: null
+  - skill_id: disguise-and-stealth
+    choice_count: null
+inabilities:
+  - en: All tasks relating to pleasant social interaction are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      One of the other PCs approached you while you were in disguise,
+      recruiting you while believing you were someone else.
+    pt-BR: Tradução em breve.
+  - en: >-
+      While skulking about, you overheard the other PCs' plans and
+      realized you wanted in.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs invited you, but you wonder if it was out of pity.
+    pt-BR: Tradução em breve.
+  - en: You bullied your way in with intimidation and bluster.
+    pt-BR: Tradução em breve.

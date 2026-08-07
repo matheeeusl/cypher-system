@@ -1,0 +1,42 @@
+id: petrified-acorns
+name:
+  en: Petrified Acorns
+  pt-BR: Tradução em breve.
+level: '1d6 + 1'
+form:
+  en: Linen pouch containing a few more chalky stone acorns
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    You can throw an acorn a short distance at a creature (or use them as
+    a bullet for a sling). On a miss, the acorn crumbles into chalky dust
+    wherever it impacts. If the acorn strikes a creature, that creature is
+    petrified and turned to stone. A petrified creature gains +10 to
+    Armor against damage of all kinds (including mental attacks), it
+    cannot act, it doesn't age, and it is unaware of its surroundings. The
+    petrification has a duration determined by the cypher level (see the
+    Acorn Level table). When you find a pouch of petrified acorns, roll
+    until you deplete the artifact: the number of rolls you make is the
+    number of acorns in the pouch. Next, roll a d6 on the Acorn Level
+    table for each individual acorn. You can use the acorns in any order
+    you wish.
+  pt-BR: Tradução em breve.
+effect_table:
+  label:
+    en: Acorn Level
+    pt-BR: Tradução em breve.
+  entries:
+    - range: '1'
+      text: { en: 1 minute, pt-BR: Tradução em breve. }
+    - range: '2'
+      text: { en: 1 hour, pt-BR: Tradução em breve. }
+    - range: '3'
+      text: { en: 24 hours, pt-BR: Tradução em breve. }
+    - range: '4'
+      text: { en: 1 week, pt-BR: Tradução em breve. }
+    - range: '5'
+      text: { en: Until the next full moon, pt-BR: Tradução em breve. }
+    - range: '6'
+      text: { en: Until the next solstice, pt-BR: Tradução em breve. }
+flavor_quote: null
+depletion_die: '1 in 1d6'

@@ -1,0 +1,41 @@
+id: strong-willed
+name:
+  en: Strong-Willed
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You're tough-minded, willful, and independent. No one can talk you
+    into anything or change your mind when you don't want it changed.
+    This quality doesn't necessarily make you smart, but it does make
+    you a bastion of willpower and resolve. You likely dress and act
+    with unique style and flair, not caring what others think.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics: []
+skill_training:
+  - skill_id: resisting-mental-effects
+    choice_count: null
+  - skill_id: focus-and-concentration
+    choice_count: null
+inabilities:
+  - en: >-
+      Willful doesn't mean brilliant. Any task that involves figuring
+      out puzzles or problems, memorizing things, or using lore is
+      hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Against your better judgment, you joined the other PCs because you
+      saw that they were in danger.
+    pt-BR: Tradução em breve.
+  - en: >-
+      One of the other PCs convinced you that joining the group would be
+      in your best interests.
+    pt-BR: Tradução em breve.
+  - en: You're afraid of what might happen if the other PCs fail.
+    pt-BR: Tradução em breve.
+  - en: There is reward involved, and you need the money.
+    pt-BR: Tradução em breve.

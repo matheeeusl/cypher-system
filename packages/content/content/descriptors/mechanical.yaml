@@ -1,0 +1,37 @@
+id: mechanical
+name:
+  en: Mechanical
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You have a special talent with machines of all kinds, and you're
+    adept at understanding and, if need be, repairing them. Perhaps
+    you're a bit of an inventor, creating new machines from time to
+    time. You get called "techie," "tech," "mech," "gear-head,"
+    "motor-head," or any of a number of other nicknames. Mechanics
+    usually wear practical work clothes and carry around a lot of tools.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: understanding-machines
+    choice_count: null
+  - skill_id: repairing-and-crafting-machines
+    choice_count: null
+inabilities: []
+additional_equipment:
+  en: You start with a variety of machine tools.
+  pt-BR: Tradução em breve.
+connection_options:
+  - en: While repairing a nearby machine, you overheard the other PCs talking.
+    pt-BR: Tradução em breve.
+  - en: You need money to buy tools and parts.
+    pt-BR: Tradução em breve.
+  - en: >-
+      It was clear that the mission couldn't succeed without your skills
+      and knowledge.
+    pt-BR: Tradução em breve.
+  - en: Another PC asked you to join them.
+    pt-BR: Tradução em breve.

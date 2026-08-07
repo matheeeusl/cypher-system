@@ -1,0 +1,28 @@
+id: batpack
+name:
+  en: Batpack
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: >-
+    Stylish leather backpack with tooled glyphed designs and two small
+    protruding bat-like wings from the sides
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    You can use the pack in any of the following three ways: Bat-Senses.
+    For 1 hour, you gain an asset to hearing tasks, and you can sense your
+    environment within a short distance regardless of your ability to see.
+    You can comprehend and verbally communicate with bats, and you gain an
+    asset on tasks to interact with them. Bat-Flight. For 10 minutes, you
+    can fly a short distance each turn for 10 minutes per artifact level.
+    You can't carry other creatures with you. Bat-Transformation. For 1
+    hour, you assume the form of a bat. If your bat form is reduced to 0
+    health, you revert to your normal form immediately, taking any
+    remainder of the damage inflicted. You can use the Bat-senses and
+    Bat-flight options simultaneously, but must roll twice on the
+    depletion table to do so. (Transforms you into a Bat, Level 1.)
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: '1 in 1d20'

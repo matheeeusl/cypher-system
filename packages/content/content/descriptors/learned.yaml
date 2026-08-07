@@ -1,0 +1,38 @@
+id: learned
+name:
+  en: Learned
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You have studied, either on your own or with an instructor. You know
+    many things and are an expert on a few topics, such as history,
+    biology, geography, mythology, nature, or any other area of study.
+    Learned characters typically carry a few books around with them and
+    spend their spare time reading.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: null
+    choice_count: 3
+inabilities:
+  - en: >-
+      You have few social graces. Any task involving charm, persuasion,
+      or etiquette is hindered.
+    pt-BR: Tradução em breve.
+additional_equipment:
+  en: You have two additional books on topics of your choice.
+  pt-BR: Tradução em breve.
+connection_options:
+  - en: One of the other PCs asked you to come along because of your knowledge.
+    pt-BR: Tradução em breve.
+  - en: You need money to fund your studies.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You believed that the task might lead to important and interesting
+      discoveries.
+    pt-BR: Tradução em breve.
+  - en: A colleague requested that you take part in the mission as a favor.
+    pt-BR: Tradução em breve.

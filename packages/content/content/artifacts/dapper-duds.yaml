@@ -1,0 +1,27 @@
+id: dapper-duds
+name:
+  en: Dapper Duds
+  pt-BR: Tradução em breve.
+level: '1d6'
+form:
+  en: >-
+    Slacks, a jacket, a shirt, and an array of optional accessories: a
+    vest, a tie, a tie clip, a pocket square, a pair of cufflinks, a pair
+    of socks, and a pair of shoes
+  pt-BR: Tradução em breve.
+effect_text:
+  en: >-
+    While worn without any armor, you gain +1 Armor against Intellect
+    Damage. You can use an action to alter the garments' appearance,
+    fabric texture, or details, for example: adding a frilled cuff to a
+    shirt, changing the jacket from velvet single-breasted to pinstripe
+    linen double-breasted, and the tie from a paisley cotton to a solid
+    silk. The retailoring process takes 1 minute. If you remove the
+    clothes, you can command them to clean and mend themselves. After 10
+    minutes, the garments neatly press, fold, and—if a suitable peg or
+    hangar is available—hang themselves. Being dressed for the occasion
+    might provide an asset on certain social interactions.
+  pt-BR: Tradução em breve.
+effect_table: null
+flavor_quote: null
+depletion_die: '1 in 1d100'

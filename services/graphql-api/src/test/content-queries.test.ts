@@ -84,14 +84,16 @@ describe('content queries', () => {
     expect(result.data.type?.description.societalRole.en).toContain(
       "Warriors aren't always soldiers or mercenaries.",
     )
-    expect(result.data.type?.description.individualRole.ptBR).toBe('Tradução em breve.')
+    expect(result.data.type?.description.individualRole.ptBR).toBe(
+      'Guerreiros são pessoas voltadas para a ação e para o vigor físico. Costumam superar desafios pela força, em vez de recorrer a outros meios, e normalmente seguem o caminho mais direto para alcançar seus objetivos.',
+    )
 
     // Real per-Type data (Warrior trades a second expensive item for a
     // second weapon, unlike the other 3 Types) — not a universal rule, so
     // pinned exactly rather than loosely matched.
     expect(result.data.type?.startingEquipment).toEqual({
       clothing: true,
-      weapon: { en: 'two weapons of your choice', ptBR: 'Tradução em breve.' },
+      weapon: { en: 'two weapons of your choice', ptBR: 'duas armas à sua escolha' },
       items: [
         { priceTier: 'EXPENSIVE', count: 1, exact: true },
         { priceTier: 'MODERATELY_PRICED', count: 2, exact: true },
@@ -106,7 +108,7 @@ describe('content queries', () => {
       'Weapon Break',
     ])
     expect(result.data.type?.playerIntrusions[2]).toMatchObject({
-      name: { en: 'Weapon Break', ptBR: 'Tradução em breve.' },
+      name: { en: 'Weapon Break', ptBR: 'Ponto Fraco da Arma' },
       description: {
         en: "Your foe's weapon has a weak spot. In the course of the combat, it quickly becomes damaged and moves two steps down the object damage track.",
       },
@@ -283,4 +285,206 @@ describe('content queries', () => {
     })
   })
 
+  it('resolves a fantastic Cypher with a nested effect table (Chemical Factory)', async () => {
+    interface CypherQueryData {
+      cypher: {
+        id: string
+        category: string
+        pageRef: string
+        levelRange: string
+        effectTable: {
+          label: LocalizedStringPayload
+          entries: Array<{ range: string; text: LocalizedStringPayload }>
+        } | null
+      } | null
+    }
+
+    const result = await graphqlRequest<CypherQueryData>(`
+      query {
+        cypher(id: "chemical-factory") {
+          id
+          category
+          pageRef
+          levelRange
+          effectTable {
+            label { en ptBR }
+            entries { range text { en ptBR } }
+          }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Real data from content/cyphers/chemical-factory.yaml — proves the
+    // nested optional effect table actually resolves end-to-end, not just
+    // that the common (null) case passes through.
+    expect(result.data.cypher?.category).toBe('FANTASTIC')
+    expect(result.data.cypher?.pageRef).toBe('Cypher System Rulebook, page 385')
+    expect(result.data.cypher?.levelRange).toBe('1d6')
+    expect(result.data.cypher?.effectTable).not.toBeNull()
+    expect(result.data.cypher?.effectTable?.entries).toHaveLength(15)
+    expect(result.data.cypher?.effectTable?.entries[0]).toEqual({
+      range: '01–04',
+      text: { en: 'Euphoric for 1d6 hours', ptBR: 'Tradução em breve.' },
+    })
+  })
+
+  it('resolves a manifest Cypher with no effect table (Equipment Cache)', async () => {
+    interface CypherQueryData {
+      cypher: { id: string; category: string; effectTable: unknown } | null
+    }
+
+    const result = await graphqlRequest<CypherQueryData>(`
+      query {
+        cypher(id: "equipment-cache") {
+          id
+          category
+          effectTable {
+            label { en ptBR }
+          }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Most cyphers don't have a sub-table — confirms the common case
+    // resolves to null rather than erroring or defaulting to {}.
+    expect(result.data.cypher).toEqual({
+      id: 'equipment-cache',
+      category: 'MANIFEST',
+      effectTable: null,
+    })
+  })
+
+  it('resolves a power_boost Cypher (Energy Boost)', async () => {
+    interface CypherQueryData {
+      cypher: { id: string; category: string } | null
+    }
+
+    const result = await graphqlRequest<CypherQueryData>(`
+      query {
+        cypher(id: "energy-boost") {
+          id
+          category
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    expect(result.data.cypher).toEqual({ id: 'energy-boost', category: 'POWER_BOOST' })
+  })
+
+  it('resolves an Artifact with a large nested effect table (Ozalid Folio)', async () => {
+    interface ArtifactQueryData {
+      artifact: {
+        id: string
+        effectTable: {
+          label: LocalizedStringPayload
+          entries: Array<{ range: string; text: LocalizedStringPayload }>
+        } | null
+      } | null
+    }
+
+    const result = await graphqlRequest<ArtifactQueryData>(`
+      query {
+        artifact(id: "ozalid-folio") {
+          id
+          effectTable {
+            label { en ptBR }
+            entries { range text { en ptBR } }
+          }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Real data from content/artifacts/ozalid-folio.yaml — 34 entries,
+    // proving both the large-table case and that a plain-number range
+    // ("100") works the same as a dice-range one ("1–3").
+    expect(result.data.artifact?.effectTable?.entries).toHaveLength(34)
+    expect(result.data.artifact?.effectTable?.entries[0]).toEqual({
+      range: '1–3',
+      text: { en: 'A fine porcelain tea kettle', ptBR: 'Tradução em breve.' },
+    })
+    expect(result.data.artifact?.effectTable?.entries[33]).toEqual({
+      range: '100',
+      text: { en: 'An old boot', ptBR: 'Tradução em breve.' },
+    })
+  })
+
+  it('resolves an Artifact with both an effect table and a flavor quote (Retro-Causality Weapon)', async () => {
+    interface ArtifactQueryData {
+      artifact: {
+        id: string
+        effectTable: { entries: Array<{ range: string }> } | null
+        flavorQuote: LocalizedStringPayload | null
+      } | null
+    }
+
+    const result = await graphqlRequest<ArtifactQueryData>(`
+      query {
+        artifact(id: "retro-causality-weapon") {
+          id
+          effectTable { entries { range } }
+          flavorQuote { en ptBR }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // The one entry exercising effectTable and flavorQuote at once.
+    expect(result.data.artifact?.effectTable?.entries).toHaveLength(6)
+    expect(result.data.artifact?.flavorQuote?.en).toBe(
+      "I don't think I was even married before I shot them. I probably shouldn't tell my kids that they're just a metacausal byproduct of finding an excuse to shoot someone; that's a hell of an existential crisis to inflict on a child. Nobody wants to have that conversation.",
+    )
+    expect(result.data.artifact?.flavorQuote?.ptBR).toBe('Tradução em breve.')
+  })
+
+  it('resolves an Artifact with real pt-BR translations and no effect table or flavor quote (Mind Imager)', async () => {
+    interface ArtifactQueryData {
+      artifact: {
+        id: string
+        name: LocalizedStringPayload
+        form: LocalizedStringPayload
+        effectText: LocalizedStringPayload
+        effectTable: unknown
+        flavorQuote: unknown
+      } | null
+    }
+
+    const result = await graphqlRequest<ArtifactQueryData>(`
+      query {
+        artifact(id: "mind-imager") {
+          id
+          name { en ptBR }
+          form { en ptBR }
+          effectText { en ptBR }
+          effectTable { entries { range } }
+          flavorQuote { en ptBR }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Mind Imager already has genuine Portuguese translations in content
+    // (not the 'Tradução em breve.' placeholder every other test has been
+    // implicitly checking against) — confirms the i18n path works
+    // end-to-end with real non-English data, not just the placeholder.
+    expect(result.data.artifact).toEqual({
+      id: 'mind-imager',
+      name: { en: 'Mind Imager', ptBR: 'Projetor Mental' },
+      form: {
+        en: 'Handheld device with a plastic panel screen and wires that must be affixed to the head of a creature.',
+        ptBR:
+          'Dispositivo portátil com uma tela de painel plástico e fios que devem ser afixados na cabeça de uma criatura.',
+      },
+      effectText: {
+        en: 'This device shows a visual image of what a creature is thinking. The affected creature need not be conscious.',
+        ptBR:
+          'Este dispositivo mostra uma imagem visual do que uma criatura está pensando. A criatura afetada não precisa estar consciente.',
+      },
+      effectTable: null,
+      flavorQuote: null,
+    })
+  })
 })

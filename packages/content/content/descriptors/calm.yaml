@@ -1,0 +1,53 @@
+id: calm
+name:
+  en: Calm
+  pt-BR: Tradução em breve.
+description:
+  en: >-
+    You've spent most of your life in sedentary pursuits—books, movies,
+    hobbies, and so on—rather than active ones. You're well versed in all
+    manner of academia or other intellectual pursuits, but nothing
+    physical. You're not weak or feeble, necessarily (although this is a
+    good descriptor for characters who are elderly), but you have no
+    experience in more physical activities.
+  pt-BR: Tradução em breve.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Trivia
+      pt-BR: Tradução em breve.
+    description:
+      en: >-
+        You can come up with a random fact pertinent to the current
+        situation when you wish it. This is always a matter of fact, not
+        conjecture or supposition, and must be something you could have
+        logically read or seen in the past. You can do this one time,
+        although the ability is renewed each time you make a recovery
+        roll.
+      pt-BR: Tradução em breve.
+skill_training:
+  - skill_id: null
+    choice_count: 4
+inabilities:
+  - en: You're just not a fighter. All physical attacks are hindered.
+    pt-BR: Tradução em breve.
+  - en: >-
+      You're not the outdoorsy type. All climbing, running, jumping, and
+      swimming tasks are hindered.
+    pt-BR: Tradução em breve.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You read about the current situation somewhere and decided to
+      check it out for yourself.
+    pt-BR: Tradução em breve.
+  - en: You were in the right (wrong?) place at the right (wrong?) time.
+    pt-BR: Tradução em breve.
+  - en: >-
+      While avoiding an entirely different situation, you walked into
+      your current situation.
+    pt-BR: Tradução em breve.
+  - en: One of the other PCs dragged you into it.
+    pt-BR: Tradução em breve.
