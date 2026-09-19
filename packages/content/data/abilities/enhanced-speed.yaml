@@ -1,10 +1,10 @@
 id: enhanced-speed
 name:
   en: Enhanced Speed
-  pt-BR: Agilidade Aprimorada
+  pt-BR: Velocidade Aprimorada
 description:
   en: You gain 3 points to your Speed Pool.
-  pt-BR: Você ganha 3 pontos na sua Reserva de Agilidade.
+  pt-BR: Você ganha 3 pontos na sua Reserva de Velocidade.
 cost: null
 action_type: enabler
 sources:

@@ -4,7 +4,7 @@ name:
   pt-BR: Forma Bestial Aprimorada
 description:
   en: 'When you use Beast Form, your beast form gains the following additional bonuses: +3 to your Might Pool, +2 to your Speed Pool, and +2 to Armor.'
-  pt-BR: 'Quando você usa Forma Bestial, sua forma bestial ganha os seguintes bônus adicionais: +3 na Reserva de Força, +2 na Reserva de Agilidade, e +2 na Armadura.'
+  pt-BR: 'Quando você usa Forma Bestial, sua forma bestial ganha os seguintes bônus adicionais: +3 na Reserva de Força, +2 na Reserva de Velocidade, e +2 na Armadura.'
 cost: null
 action_type: enabler
 sources:

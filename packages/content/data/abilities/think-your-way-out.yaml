@@ -4,7 +4,7 @@ name:
   pt-BR: Pensar Para Sair
 description:
   en: When you wish it, you can use points from your Intellect Pool rather than your Might Pool or Speed Pool on any noncombat action.
-  pt-BR: Quando desejar, você pode usar pontos de sua Reserva de Intelecto em vez de sua Reserva de Força ou de Agilidade em qualquer ação fora de combate.
+  pt-BR: Quando desejar, você pode usar pontos de sua Reserva de Intelecto em vez de sua Reserva de Força ou de Velocidade em qualquer ação fora de combate.
 cost: null
 action_type: enabler
 sources:

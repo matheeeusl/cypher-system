@@ -1,7 +1,7 @@
 id: agile-wit
 name:
   en: Agile Wit
-  pt-BR: Ardil Ágil
+  pt-BR: Espírito Ágil
 description:
   en: >-
     When attempting a Speed task, you instead can roll (and spend
@@ -9,7 +9,13 @@ description:
     this task, you can spend points from your Intellect Pool instead
     of your Speed Pool (in which case you also use your Intellect Edge
     instead of your Speed Edge).
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Ao realizar uma tarefa de Velocidade, você pode, em vez disso,
+    fazer a rolagem (e gastar pontos) como se fosse uma ação de Intelecto.
+    Se aplicar Esforço a essa tarefa, você pode gastar pontos da sua
+    Reserva de Intelecto em vez da sua Reserva de Velocidade (caso em que
+    também utiliza sua Vantagem em Intelecto em vez da sua
+    Vantagem em Velocidade).
 cost: null
 action_type: enabler
 sources:

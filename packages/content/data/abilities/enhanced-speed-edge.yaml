@@ -1,10 +1,10 @@
 id: enhanced-speed-edge
 name:
   en: Enhanced Speed Edge
-  pt-BR: Bônus de Agilidade Aprimorado
+  pt-BR: Bônus de Velocidade Aprimorado
 description:
   en: You gain +1 to your Speed Edge.
-  pt-BR: Você ganha +1 no seu Bônus de Agilidade.
+  pt-BR: Você ganha +1 no seu Bônus de Velocidade.
 cost: null
 action_type: enabler
 sources:

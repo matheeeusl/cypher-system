@@ -1,10 +1,10 @@
 id: greater-enhanced-speed
 name:
   en: Greater Enhanced Speed
-  pt-BR: Agilidade Aprimorada Superior
+  pt-BR: Velocidade Aprimorada Superior
 description:
   en: You gain 6 points to your Speed Pool.
-  pt-BR: Você ganha 6 pontos na sua Reserva de Agilidade.
+  pt-BR: Você ganha 6 pontos na sua Reserva de Velocidade.
 cost: null
 action_type: enabler
 sources:

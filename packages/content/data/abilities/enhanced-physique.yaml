@@ -4,7 +4,7 @@ name:
   pt-BR: Físico Aprimorado
 description:
   en: You gain 3 points to divide among your Might and Speed Pools however you wish.
-  pt-BR: Você ganha 3 pontos para dividir entre suas Reservas de Força e Agilidade como quiser.
+  pt-BR: Você ganha 3 pontos para dividir entre suas Reservas de Força e Velocidade como quiser.
 cost: null
 action_type: enabler
 sources:

@@ -11,7 +11,15 @@ description:
     until it is killed. If the AI disappears because it was killed,
     you take 4 points of damage that ignore Armor and cannot summon
     the AI again until the next time you jack in.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Enquanto estiver no ciberespaço, você invoca uma IA assistente
+    que surge em qualquer ponto visível a curta distância.
+    A IA é um NPC de nível 3 com 15 pontos de vida. Ela obedece aos
+    seus comandos e age conforme suas instruções. A IA permanece ativa
+    até que você a dispense (usando uma ação) ou até que ela seja destruída.
+    Se a IA desaparecer por ter sido destruída, você sofre 4 pontos de
+    dano que ignoram a Armadura e não poderá invocá-la novamente até a
+    próxima vez que se conectar à rede.
   # Note: source marks this ability with "~" (a cyberware-derived ability
   # marker) — not modeled by the schema (no cyberware-marker field).
   # Flagged for schema review.

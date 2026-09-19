@@ -4,7 +4,7 @@ name:
   pt-BR: Evasão em Microgravidade
 description:
   en: By taking advantage of microgravity conditions, you gain an asset to Speed defense tasks while in zero-gravity or low-gravity conditions.
-  pt-BR: Aproveitando as condições de microgravidade, você ganha um bônus em tarefas de defesa de Agilidade enquanto estiver em condições de gravidade zero ou baixa gravidade.
+  pt-BR: Aproveitando as condições de microgravidade, você ganha um bônus em tarefas de defesa de Velocidade enquanto estiver em condições de gravidade zero ou baixa gravidade.
 cost: null
 action_type: enabler
 sources:

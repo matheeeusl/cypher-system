@@ -9,7 +9,13 @@ description:
     rather than deal extra damage. If you apply Effort to the attack,
     you get a free level of Effort on the task. You can't use this
     ability if your Speed Effort costs are reduced from wearing armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Você salta para o ataque, girando ou realizando acrobacias no ar.
+    Se obtiver um resultado natural 17 ou 18, pode optar por causar um efeito menor
+    em vez de causar dano adicional. Se aplicar Esforço ao ataque,
+    você ganha um nível gratuito de Esforço na tarefa.
+    Você não pode usar esta habilidade se os custos de Esforço de Velocidade
+    forem reduzidos pelo uso de armadura.
   # Note: source cost is printed as "1+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Speed point here, flagged for schema review (same

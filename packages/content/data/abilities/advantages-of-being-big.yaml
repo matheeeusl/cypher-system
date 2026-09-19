@@ -9,7 +9,12 @@ description:
     footholds unavailable to regular-sized people, and jump much
     farther. While you enjoy the effects of Enlarge, all climbing,
     lifting, and jumping tasks are eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Ao usar *Ampliar*, você fica tão grande que consegue mover objetos
+    enormes com mais facilidade, escalar prédios utilizando pontos de
+    apoio para mãos e pés inacessíveis a pessoas de tamanho normal e saltar
+    distâncias muito maiores. Enquanto você desfruta dos efeitos de *Ampliar*,
+    todas as tarefas de escalar, levantar peso e saltar tornam-se mais fáceis.
 cost: null
 action_type: enabler
 sources:

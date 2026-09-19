@@ -4,7 +4,7 @@ name:
   pt-BR: Emboscadora
 description:
   en: When you attack a creature that has not yet acted during the first round of combat, your attack is eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: Quando você ataca uma criatura que ainda não agiu durante a primeira rodada de combate, seu ataque é facilitado.
 cost: null
 action_type: enabler
 sources:

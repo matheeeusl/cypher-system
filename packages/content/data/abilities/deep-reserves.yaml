@@ -4,7 +4,7 @@ name:
   pt-BR: Reservas Profundas
 description:
   en: When others are exhausted, you can push through. Once each day, you can transfer up to 5 points among your Pools in any combination, at a rate of 1 point per round. For example, you could transfer 3 points of Might to Speed and 2 points of Intellect to Speed, which would take a total of five rounds.
-  pt-BR: Quando outros já estariam exaustos, você consegue continuar. Uma vez por dia, você pode transferir até 5 pontos entre suas Reservas, em qualquer combinação, a uma taxa de 1 ponto por rodada. Por exemplo, você poderia transferir 3 pontos de Força para Agilidade e 2 pontos de Intelecto para Agilidade, o que levaria um total de cinco rodadas.
+  pt-BR: Quando outros já estariam exaustos, você consegue continuar. Uma vez por dia, você pode transferir até 5 pontos entre suas Reservas, em qualquer combinação, a uma taxa de 1 ponto por rodada. Por exemplo, você poderia transferir 3 pontos de Força para Velocidade e 2 pontos de Intelecto para Velocidade, o que levaria um total de cinco rodadas.
 cost: null
 action_type: action
 sources:

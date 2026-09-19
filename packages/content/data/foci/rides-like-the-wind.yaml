@@ -65,7 +65,7 @@ connection_options:
     pt-BR: Escolha outro PJ. Devido a um mal-entendido de identidade, você o atropelou uma vez. Ele ainda tem uma cicatriz, mas cabe a ele decidir se guarda rancor por isso.
 minor_effect_suggestion:
   en: You restore 2 points to your Speed Pool or 2 health to your mount.
-  pt-BR: Você restaura 2 pontos em sua Reserva de Agilidade ou 2 de vida à sua montaria.
+  pt-BR: Você restaura 2 pontos em sua Reserva de Velocidade ou 2 de vida à sua montaria.
 major_effect_suggestion:
   en: You can take a second action this round.
   pt-BR: Você pode realizar uma segunda ação nesta rodada.

@@ -6,7 +6,12 @@ description:
   en: >- 
     You can use Copy Power to copy more powerful abilities. In addition to the normal options for using Effort with Copy Power,
     if you apply two levels of Effort, the GM chooses a high-tier ability that most closely resembles that power (instead of a low-tier ability).
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Você pode usar o *Copiar Poder* para copiar habilidades mais poderosas.
+    Além das opções normais de uso de Esforço com o *Copiar Poder*,
+    se você aplicar dois níveis de Esforço, o Mestre escolhe uma habilidade
+    de nível elevado que mais se assemelhe a esse poder (em vez de uma
+    habilidade de nível baixo).
 cost: null
 action_type: enabler
 sources:

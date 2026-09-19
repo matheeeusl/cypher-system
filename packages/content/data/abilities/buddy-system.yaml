@@ -4,7 +4,7 @@ name:
   pt-BR: Sistema de Duplas
 description:
   en: Choose one character standing next to you. That character becomes your buddy for ten minutes. You are trained in all tasks involving finding, healing, interacting with, and protecting your buddy. Also, while you stand next to your buddy, both of you have an asset on Speed defense tasks. You can have only one buddy at a time.
-  pt-BR: Escolha um personagem ao seu lado. Esse personagem se torna seu parceiro por dez minutos. Você é treinado em todas as tarefas envolvendo encontrar, curar, interagir com, e proteger seu parceiro. Além disso, enquanto estiver ao lado de seu parceiro, ambos têm um bônus em tarefas de defesa de Agilidade. Você só pode ter um parceiro por vez.
+  pt-BR: Escolha um personagem ao seu lado. Esse personagem se torna seu parceiro por dez minutos. Você é treinado em todas as tarefas envolvendo encontrar, curar, interagir com, e proteger seu parceiro. Além disso, enquanto estiver ao lado de seu parceiro, ambos têm um bônus em tarefas de defesa de Velocidade. Você só pode ter um parceiro por vez.
 cost:
   pool: intellect
   amount: 3

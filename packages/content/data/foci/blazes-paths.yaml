@@ -74,7 +74,7 @@ connection_options:
       — isso fica a critério do outro PJ.
 minor_effect_suggestion:
   en: You restore 2 points to your Speed Pool.
-  pt-BR: Você restaura 2 pontos à sua Reserva de Agilidade.
+  pt-BR: Você restaura 2 pontos à sua Reserva de Velocidade.
 major_effect_suggestion:
   en: An ally or indicated target can immediately move up to a short distance.
   pt-BR: Um aliado ou o alvo indicado pode se mover imediatamente até uma distância curta.

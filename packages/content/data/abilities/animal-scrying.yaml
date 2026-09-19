@@ -4,7 +4,12 @@ name:
   pt-BR: Vidência Animal
 description:
   en: If you know the general location of an animal that is friendly toward you and within 1 mile (1.5 km) of your location, you can sense through its senses for up to ten minutes. If you are not in animal form or not in a form similar to that animal, you must apply a level of Effort to use this ability.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Se você souber a localização geral de um animal que seja amigável em
+    relação a você e esteja a até 1,5 km (1 milha) de distância, você pode
+    perceber o ambiente através dos sentidos dele por até dez minutos.
+    Se você não estiver na forma de animal ou em uma forma semelhante à
+    desse animal, deverá aplicar um nível de Esforço para usar essa habilidade.
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the baseline
   # 4 Intellect points here, flagged for schema review (same approximation

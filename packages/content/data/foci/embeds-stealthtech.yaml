@@ -63,7 +63,7 @@ connection_options:
       entre eles, algo que nem mesmo eles sabem.
 minor_effect_suggestion:
   en: You regain 1 point to your Speed Pool.
-  pt-BR: Você recupera 1 ponto na sua Reserva de Agilidade.
+  pt-BR: Você recupera 1 ponto na sua Reserva de Velocidade.
 major_effect_suggestion:
   en: You can immediately take a second action during this turn.
   pt-BR: Você pode realizar imediatamente uma segunda ação neste turno.

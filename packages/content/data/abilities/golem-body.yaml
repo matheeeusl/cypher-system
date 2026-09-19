@@ -4,7 +4,7 @@ name:
   pt-BR: Corpo de Golem
 description:
   en: You gain +1 to Armor, +1 to your Might Edge, and 5 additional points to your Might Pool. You do not need to eat, drink, or breathe (though you do need rest and sleep). You move more stiffly than a creature of flesh, which means you can never be trained or specialized in Speed defense rolls. Furthermore, you are practiced in using your stone fists as a medium weapon.
-  pt-BR: Você ganha +1 na Armadura, +1 no Bônus de Força e 5 pontos adicionais na Reserva de Força. Você não precisa comer, beber ou respirar (embora ainda precise descansar e dormir). Você se move de forma mais rígida que uma criatura de carne, o que significa que nunca pode ser treinado ou especializado em rolagens de defesa de Agilidade. Além disso, você é praticado no uso de seus punhos de pedra como arma média.
+  pt-BR: Você ganha +1 na Armadura, +1 no Bônus de Força e 5 pontos adicionais na Reserva de Força. Você não precisa comer, beber ou respirar (embora ainda precise descansar e dormir). Você se move de forma mais rígida que uma criatura de carne, o que significa que nunca pode ser treinado ou especializado em rolagens de defesa de Velocidade. Além disso, você é praticado no uso de seus punhos de pedra como arma média.
 cost: null
 action_type: enabler
 sources:

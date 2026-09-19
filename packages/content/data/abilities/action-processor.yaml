@@ -9,7 +9,11 @@ description:
     task of your choice for ten minutes. For example, you can choose
     running, climbing, swimming, Speed defense, or attacks with a
     specific weapon.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Utilizando informações armazenadas e a capacidade de processar dados
+    recebidos a velocidades incríveis, você é treinado em uma tarefa física
+    de sua escolha por dez minutos. Por exemplo, você pode escolher correr,
+    escalar, nadar, defesa rápida ou ataques com uma arma específica.
   # Note: source marks this ability with "~" (a cyberware-derived ability
   # marker) under Knows Everything, but not under Fuses Mind and
   # Machine — same per-source inconsistency as machine-enhancement. Not

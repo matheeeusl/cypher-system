@@ -11,7 +11,7 @@ name:
 # the Moon, just not the literal substring printed there.
 description:
   en: 'When using Beast Form or Animal Shape, your beast form gains the following additional bonuses: +1 to your Might Edge, +2 to your Speed Pool, and +1 to your Speed Edge.'
-  pt-BR: 'Ao usar Forma Bestial ou Forma Animal, sua forma bestial ganha os seguintes bônus adicionais: +1 no Bônus de Força, +2 na Reserva de Agilidade, e +1 no Bônus de Agilidade.'
+  pt-BR: 'Ao usar Forma Bestial ou Forma Animal, sua forma bestial ganha os seguintes bônus adicionais: +1 no Bônus de Força, +2 na Reserva de Velocidade, e +1 no Bônus de Velocidade.'
 cost: null
 action_type: enabler
 sources:

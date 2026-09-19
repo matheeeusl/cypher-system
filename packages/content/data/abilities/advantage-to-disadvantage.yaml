@@ -8,7 +8,11 @@ description:
     foe, inflicting damage and disarming them so that their weapon is
     now in your hands or 10 feet (3 m) away on the ground—your choice.
     This disarming attack is hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Com uma série de movimentos rápidos, você desfere um ataque contra um
+    oponente armado, causando dano e desarmando-o, de modo que a arma dele
+    passe para as suas mãos ou caia no chão a 3 metros (10 pés) de
+    distância — a escolha é sua. Esse ataque de desarmar é dificultado.
 cost:
   pool: speed
   amount: 3

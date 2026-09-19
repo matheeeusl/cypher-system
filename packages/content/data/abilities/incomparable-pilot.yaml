@@ -4,7 +4,7 @@ name:
   pt-BR: Piloto Incomparável
 description:
   en: While on a starcraft you own or have a direct connection with, your Might Edge, Speed Edge, and Intellect Edge increase by 1. When you make a recovery roll on a starcraft you're familiar with, you recover 5 additional points.
-  pt-BR: Enquanto estiver em uma nave estelar que possui ou com a qual tem uma conexão direta, seu Bônus de Força, Bônus de Agilidade e Bônus de Intelecto aumentam em 1. Quando você faz uma rolagem de recuperação em uma nave estelar com a qual é familiarizado, recupera 5 pontos adicionais.
+  pt-BR: Enquanto estiver em uma nave estelar que possui ou com a qual tem uma conexão direta, seu Bônus de Força, Bônus de Velocidade e Bônus de Intelecto aumentam em 1. Quando você faz uma rolagem de recuperação em uma nave estelar com a qual é familiarizado, recupera 5 pontos adicionais.
 cost: null
 action_type: enabler
 sources:
