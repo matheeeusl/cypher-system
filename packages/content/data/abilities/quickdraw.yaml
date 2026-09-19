@@ -1,0 +1,20 @@
+id: quickdraw
+name:
+  en: Quickdraw
+  pt-BR: Saque Rápido
+description:
+  en: >-
+    If you act first and your firearm is holstered, you can draw and
+    fire your weapon so blindingly fast that you gain a surprise
+    action against your foe, even if your foe was already aware of
+    your presence (but not if combat has already begun). This doesn't
+    allow your allies to act with surprise, only you. You have an
+    asset on the attack. On a successful hit, you inflict 2 additional
+    points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 3

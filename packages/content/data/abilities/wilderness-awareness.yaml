@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: lives-in-the-wilderness
     tier: 4
+  - type: focus
+    id: walks-the-wild-woods
+    tier: 3

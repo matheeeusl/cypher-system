@@ -5,9 +5,16 @@ name:
 description:
   en: You are trained in unarmed attacks.
   pt-BR: "Tradução em breve."
+  # Note: Strikes Like a Rattler's printing adds a clarifying clause,
+  # "assuming you're not already (because this ability provides no
+  # benefit if you are)" — same effect, kept as the standard wording
+  # since 1 of 2 sources uses it.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: needs-no-weapon
+    tier: 2
+  - type: focus
+    id: strikes-like-a-rattler
     tier: 2

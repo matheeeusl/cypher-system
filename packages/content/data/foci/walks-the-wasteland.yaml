@@ -1,0 +1,106 @@
+id: walks-the-wasteland
+name:
+  en: Walks the Wasteland
+  pt-BR: Percorre o Ermo
+description:
+  en: >-
+    Most people want to hide from the devastation or just curl up and
+    die rather than face a hostile world. Not you. You're determined
+    to see what's out there, to survive, and, more than that, to
+    thrive. It's that or let the radioactive rats—or whatever it is
+    that hunts the ruins—get you. If you were around before the end,
+    you could have been a soldier, mercenary, or at least someone who
+    had basic survival training. What sets you apart from all the
+    others like you is that you decided to hope when everything
+    looked darkest. Since then, you have eaten your share of spoiled
+    food and irradiated water, and survived. Whether that's because
+    you've adapted, you're luckier, or you were just tougher than the
+    rest is anyone's guess. But you're still walking the wastes even
+    though so many others are gone. You probably don't spend a lot of
+    time on your appearance, given that you wear the
+    cobbled-together clothing and bits and pieces of armor you're
+    able to scavenge from the ruins. Appearance doesn't matter;
+    actions do.
+  pt-BR: >-
+    A maioria das pessoas quer se esconder da devastação ou apenas se
+    encolher e morrer em vez de enfrentar um mundo hostil. Não você.
+    Você está determinada a ver o que há por aí, sobreviver, e, mais
+    do que isso, prosperar. É isso ou deixar que os ratos radioativos
+    — ou o que quer que ronde as ruínas — a peguem. Se você existia
+    antes do fim, poderia ter sido soldada, mercenária, ou pelo menos
+    alguém com treinamento básico de sobrevivência. O que a diferencia
+    de todos os outros como você é que decidiu ter esperança quando
+    tudo parecia mais sombrio. Desde então, você comeu sua parte de
+    comida estragada e água irradiada, e sobreviveu. Se isso se deve
+    ao fato de ter se adaptado, ser mais sortuda, ou simplesmente ser
+    mais resistente que os outros, ninguém sabe dizer. Mas você ainda
+    está percorrendo os ermos mesmo que tantos outros tenham
+    desaparecido. Você provavelmente não gasta muito tempo com sua
+    aparência, já que usa roupas remendadas e pedaços de armadura que
+    consegue vasculhar nas ruínas. Aparência não importa; ações sim.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: surviving-the-wasteland
+    - kind: granted
+      ability_id: tolerance
+    - kind: granted
+      ability_id: weapon-at-hand
+  '2':
+    - kind: granted
+      ability_id: devoted-defender
+    - kind: granted
+      ability_id: hardened-by-the-end
+  '3':
+    - kind: granted
+      ability_id: apocalyptic-stare
+    - kind: choice
+      options:
+        - hard-to-hit
+        - rapid-attack
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: improved-recovery
+    - kind: granted
+      ability_id: push-on-through
+  '5':
+    - kind: granted
+      ability_id: ignore-the-pain
+  '6':
+    - kind: choice
+      options:
+        - using-whats-available
+        - wasteland-camouflage
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: >-
+    You have a piece of before-times equipment with three analog
+    dials that measure temperature, air pressure, and humidity. (You
+    also know the names for the instruments nestled behind those
+    dials: a thermometer, a barometer, and a hygrometer, respectively.)
+    If you spend a minute operating the device, you have an asset on
+    weather prediction tasks extending into the next day.
+  pt-BR: >-
+    Você tem um equipamento dos tempos de antes com três mostradores
+    analógicos que medem temperatura, pressão do ar, e umidade. (Você
+    também sabe os nomes dos instrumentos por trás desses mostradores:
+    um termômetro, um barômetro, e um higrômetro, respectivamente.) Se
+    você passar um minuto operando o dispositivo, tem um bônus em
+    tarefas de previsão do tempo que se estendem até o dia seguinte.
+connection_options:
+  - en: Pick one other PC. This character appears to be an able survivor, but in your mind, they seem to be at the end of their rope. You're constantly trying to convince them to keep trying, go the distance, and survive for a better tomorrow.
+    pt-BR: Escolha outro PJ. Esse personagem parece ser uma sobrevivente capaz, mas em sua mente, parece estar no limite. Você está constantemente tentando convencê-lo a continuar tentando, ir até o fim, e sobreviver por um amanhã melhor.
+  - en: Pick one other PC. You feel very protective of this character and don't want to see them harmed.
+    pt-BR: Escolha outro PJ. Você se sente muito protetora em relação a esse personagem e não quer vê-lo machucado.
+  - en: Pick one other PC. This character comes from the same place you do, and you knew each other as children. Whether that place exists any longer is something you and that character should decide.
+    pt-BR: Escolha outro PJ. Esse personagem vem do mesmo lugar que você, e vocês se conheciam quando crianças. Se esse lugar ainda existe é algo que você e esse personagem devem decidir.
+  - en: Pick one other PC. You found this character almost dead in the wastes. You rescued them, nursed them back to health, and kept them safe until they were back on their feet. Whether they feel embarrassment, gratitude, or something else is up to them.
+    pt-BR: Escolha outro PJ. Você encontrou esse personagem quase morto nos ermos. Você o resgatou, cuidou dele até se recuperar, e o manteve seguro até que ficasse de pé novamente. Se ele sente vergonha, gratidão, ou outra coisa cabe a ele decidir.
+minor_effect_suggestion:
+  en: You restore 2 points to your Might Pool.
+  pt-BR: Você restaura 2 pontos em sua Reserva de Força.
+major_effect_suggestion:
+  en: Your next action is eased by two steps.
+  pt-BR: Sua próxima ação é facilitada em dois passos.

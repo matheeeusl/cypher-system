@@ -41,3 +41,12 @@ sources:
   - type: focus
     id: rages
     tier: 6
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 6
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 6
+  - type: focus
+    id: weaponizes-chrome
+    tier: 6

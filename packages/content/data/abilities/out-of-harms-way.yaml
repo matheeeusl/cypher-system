@@ -1,0 +1,16 @@
+id: out-of-harms-way
+name:
+  en: Out of Harm's Way
+  pt-BR: Fora de Perigo
+description:
+  en: >-
+    No matter how careful, an investigator sometimes ends up in a
+    scrap. Knowing how to survive is more than half the battle. You
+    are trained in Speed defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: solves-mysteries
+    tier: 2

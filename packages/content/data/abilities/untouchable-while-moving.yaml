@@ -1,0 +1,22 @@
+id: untouchable-while-moving
+name:
+  en: Untouchable While Moving
+  pt-BR: Intocável Enquanto se Move
+description:
+  en: >-
+    You change your phase state for the next minute so that you can't
+    affect or be affected by normal matter or energy, as long as you
+    move at least an immediate distance each round while phased. If
+    you don't move on your turn, the effect ends. While you are
+    phased, only mental attacks and special transdimensional
+    energies, devices, or abilities can affect you, but likewise you
+    can't attack, touch, or otherwise affect anything.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: shreds-the-walls-of-the-world
+    tier: 6

@@ -1,0 +1,13 @@
+id: field-reinforced-armor
+name:
+  en: Field-Reinforced Armor
+  pt-BR: Blindagem Reforçada por Campo
+description:
+  en: You gain +1 to Armor while wearing the power armor from your Powered Armor ability. 
+  pt-BR: Você recebe +1 de Armadura enquanto estiver usando a armadura energizada da sua habilidade Armadura Energizada.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-invisible-force
+    tier: 5

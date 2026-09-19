@@ -1,24 +1,20 @@
 id: walk-through-walls
 name:
   en: Walk Through Walls
-  pt-BR: Caminhar Através de Parede
+  pt-BR: Atravessar Paredes
 description:
   en: >-
     You can slowly pass through physical barriers at a rate of 1 inch
-    (2.5 cm) per round (minimum of one round to pass
-    through any barrier). You can't act (other than moving)
-    or perceive anything until you pass entirely through the
-    barrier. You can't pass through energy barriers
-  pt-BR: >-
-    Você pode atravessar barreiras físicas lentamente, a uma velocidade de 2,5 cm (1 polegada) por rodada
-    (sendo necessária, no mínimo, uma rodada para atravessar qualquer barreira).
-    Você não pode realizar ações (exceto mover-se) nem perceber nada até atravessar
-    a barreira por completo. Você não pode atravessar barreiras de energia.
+    (2.5 cm) per round (minimum of one round to pass through any
+    barrier). You can't act (other than moving) or perceive anything
+    until you pass entirely through the barrier. You can't pass
+    through energy barriers.
+  pt-BR: "Tradução em breve."
 cost:
   pool: intellect
   amount: 2
 action_type: action
 sources:
   - type: focus
-    id: exists-partially-out-of-phase
-    tier: 1
+    id: shreds-the-walls-of-the-world
+    tier: 3

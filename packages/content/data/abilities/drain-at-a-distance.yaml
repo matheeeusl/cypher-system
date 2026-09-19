@@ -1,0 +1,16 @@
+id: drain-at-a-distance
+name:
+  en: Drain at a Distance
+  pt-BR: Drenar à Distância
+description:
+  en: Your Drain Machine and Drain Creature abilities work on a target within short range.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: siphons-power
+    tier: 3
+  - type: focus
+    id: transmits-energy
+    tier: 6

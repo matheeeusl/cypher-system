@@ -3,8 +3,22 @@ name:
   en: Improvise
   pt-BR: Improvisar
 description:
-  en: When you perform a task in which you are not trained, you can improvise to gain an asset on the task. The asset might be a tool you cobble together, a sudden insight into overcoming a problem, or a rush of dumb luck. Improvise can be used on a task you have an inability in, but instead of gaining an asset, you lose your inability penalty, treating the task as if you were practiced.
-  pt-BR: "Tradução em breve."
+  en: >- 
+    When you perform a task in which you are not trained,
+    you can improvise to gain an asset on the task.
+    The asset might be a tool you cobble together, a sudden
+    insight into overcoming a problem, or a rush of dumb luck.
+    Improvise can be used on a task you have an inability in,
+    but instead of gaining an asset, you lose your inability penalty,
+    treating the task as if you were practiced.
+  pt-BR: >-
+    Ao realizar uma tarefa para a qual você não possui treinamento,
+    você pode improvisar para obter uma vantagem na tarefa. 
+    Essa vantagem pode ser uma ferramenta improvisada, um
+    estalo de inspiração para superar um problema ou uma dose de sorte pura. 
+    A ação Improvisar pode ser usada em uma tarefa na qual você tenha uma inaptidão;
+    nesse caso, em vez de ganhar uma vantagem, você anula a penalidade de inaptidão,
+    tratando a tarefa como se tivesse prática nela.
 cost:
   pool: intellect
   amount: 3
@@ -16,3 +30,6 @@ sources:
   - type: focus
     id: prepped-for-the-end
     tier: 4
+  - type: focus
+    id: works-for-a-living
+    tier: 3

@@ -1,0 +1,40 @@
+id: power-crash
+name:
+  en: Power Crash
+  pt-BR: Queda de Energia
+description:
+  en: >-
+    You strike your enchanted weapon against the ground 
+    (or a similar large surface), creating an explosion of energy that
+    affects an area up to immediate range from that point.
+    (If your enchanted weapon is a ranged weapon, you can
+    instead target a point within close range to be the center
+    of the explosion.) The blast inflicts 2 points of damage
+    to all creatures or objects within the area (except for
+    you). Because this is an area attack, adding Effort to
+    increase your damage works differently than it does for
+    single-target attacks. If you apply a level of Effort to
+    increase the damage, add 2 points of damage for each
+    target, and even if you fail your attack roll, all targets in
+    the area still take 1 point of damage. 
+  pt-BR: >-
+    Você golpeia o chão com sua arma encantada (ou uma superfície grande semelhante),
+    criando uma explosão de energia que afeta uma área de até alcance imediato a partir desse ponto. 
+    (Se sua arma encantada for uma arma de ataque à distância, você pode,
+    em vez disso, escolher um ponto dentro do alcance próximo como o centro
+    da explosão.) A explosão causa 2 pontos de dano
+    a todas as criaturas ou objetos dentro da área (exceto
+    você). Por se tratar de um ataque de área, adicionar Esforço para
+    aumentar o dano funciona de maneira diferente do que em
+    ataques contra um único alvo. Se você aplicar um nível de Esforço para
+    aumentar o dano, adicione 2 pontos de dano a cada
+    alvo; além disso, mesmo que você falhe na rolagem de ataque, todos os alvos na
+    área ainda sofrem 1 ponto de dano.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 2

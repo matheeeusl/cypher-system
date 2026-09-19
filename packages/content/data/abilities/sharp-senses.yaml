@@ -4,10 +4,13 @@ name:
   pt-BR: Sentidos Aguçados
 description:
   en: You are trained in all tasks involving perception.
-  pt-BR: "Tradução em breve."
+  pt-BR: Você é treinado em todas as tarefas que envolvem percepção.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: separates-mind-from-body
+    tier: 2
+  - type: focus
+    id: wields-invisible-force
     tier: 2

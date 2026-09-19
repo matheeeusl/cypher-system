@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: moves-like-a-cat
     tier: 2
+  - type: focus
+    id: stretches
+    tier: 3

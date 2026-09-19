@@ -1,0 +1,17 @@
+id: cypher-surge
+name:
+  en: Cypher Surge
+  pt-BR: Surto de Cifra
+description:
+  en: >-
+    When you use a subtle cypher spell, as part of that action you
+    can expend one other subtle cypher. Instead of the second
+    cypher's normal effect, you add one free level of Effort to the
+    first cypher spell.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: uses-wild-magic
+    tier: 3

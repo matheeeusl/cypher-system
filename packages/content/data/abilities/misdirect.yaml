@@ -18,5 +18,5 @@ cost:
 action_type: enabler
 sources:
   - type: focus
-    id: hunts-witches
+    id: slays-monsters
     tier: 3

@@ -1,0 +1,19 @@
+id: never-miss-a-shot
+name:
+  en: Never Miss a Shot
+  pt-BR: Nunca Erra um Tiro
+description:
+  en: >-
+    If you shoot at a target and miss, reroll. If you hit, it's
+    because your shot ricochets off a nearby surface and actually
+    hits, inflicting 2 fewer points of damage. Each time you reroll
+    the same shot, 2 more points are deducted from the total damage,
+    until the wildly ricocheting shot finally hits its target or the
+    damage amount goes to 0.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 6

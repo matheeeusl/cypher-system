@@ -1,0 +1,15 @@
+id: mastery-in-armor
+name:
+  en: Mastery in Armor
+  pt-BR: Maestria em Armadura
+description:
+  en: >-
+    The cost reduction from your Practiced in Armor ability improves.
+    You now reduce the Speed Effort cost for wearing armor to 0.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 5

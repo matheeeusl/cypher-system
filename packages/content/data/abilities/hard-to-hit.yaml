@@ -14,3 +14,9 @@ sources:
   - type: focus
     id: moves-like-the-wind
     tier: 2
+  - type: focus
+    id: soars-on-amazing-wings
+    tier: 4
+  - type: focus
+    id: walks-the-wasteland
+    tier: 3

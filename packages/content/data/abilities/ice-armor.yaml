@@ -1,0 +1,19 @@
+id: ice-armor
+name:
+  en: Ice Armor
+  pt-BR: Armadura de Gelo
+description:
+  en: >-
+    When you wish it, your body is covered in a sheen of ice for ten
+    minutes that gives you +1 to Armor. While the sheen is active,
+    you feel no discomfort from normal cold temperatures and have an
+    additional +2 to Armor versus cold damage specifically.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: wears-a-sheen-of-ice
+    tier: 1

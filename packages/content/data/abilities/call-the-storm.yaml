@@ -1,0 +1,32 @@
+id: call-the-storm
+name:
+  en: Call the Storm
+  pt-BR: Convocar a Tempestade
+description:
+  en: >-
+    If you are outside or in a location that has a ceiling at least
+    300 feet (90 m) above the floor, you summon a boiling layer of
+    lightning-lit, rumbling clouds up to 1,500 feet (460 m) in
+    diameter for ten minutes. During daylight hours, natural
+    illumination beneath the storm is reduced to dim light. While the
+    storm rages, you can use an action to send a lightning bolt from
+    the cloud to attack a target you can see directly, inflicting 4
+    points of damage (you can spend Effort normally on each
+    individual lightning bolt attack).
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "7+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 7 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+  # Source tag is "Three actions to initiate; action to call down a
+  # lightning strike." — a further non-standard action_type tag,
+  # approximated as `action_to_initiate`. Flagged for schema review
+  # (see schema gap item 3).
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: speaks-for-the-land
+    tier: 6

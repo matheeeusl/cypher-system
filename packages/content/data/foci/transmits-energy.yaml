@@ -1,0 +1,71 @@
+id: transmits-energy
+name:
+  en: Transmits Energy
+  pt-BR: Transmite Energia
+description:
+  en: >-
+    Magic is often compared to electromagnetism: it's an invisible
+    and ubiquitous force that holds everything together. Magic runs
+    through every living creature, the ground, and even the air
+    around us. You can sense—and influence—the flow of power, the
+    way some people can hear currents running through wire. In a
+    crisis, you attack by draining a foe's energy. Otherwise, you
+    focus on helping others by catalyzing and enhancing their magic
+    abilities.
+  pt-BR: >-
+    A magia é frequentemente comparada ao eletromagnetismo: é uma
+    força invisível e onipresente que mantém tudo unido. A magia
+    percorre toda criatura viva, o solo, e até mesmo o ar ao nosso
+    redor. Você consegue sentir — e influenciar — o fluxo de poder, da
+    mesma forma que algumas pessoas conseguem ouvir correntes
+    percorrendo fios. Em uma crise, você ataca drenando a energia de
+    um inimigo. Fora isso, você se concentra em ajudar outros
+    catalisando e aprimorando suas habilidades mágicas.
+  # Note: Tier 6 is printed as "Choose either Explosive Release, or
+  # both Continuous Transfer and Drain at a Distance" — see the
+  # comment on `continuous-transfer` for the full explanation of why
+  # this is modeled as a flat 3-option choice rather than the real
+  # bundled-pair rule.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: lend-a-hand
+  '2':
+    - kind: granted
+      ability_id: drain-creature
+  '3':
+    - kind: choice
+      options:
+        - buddy-system
+        - tap-currents
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: store-energy
+  '5':
+    - kind: granted
+      ability_id: share-the-power
+  '6':
+    - kind: choice
+      options:
+        - explosive-release
+        - continuous-transfer
+        - drain-at-a-distance
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. This character thinks you're some sort of energy vampire, either dangerous or just annoying.
+    pt-BR: Escolha outro PJ. Esse personagem acha que você é algum tipo de vampiro de energia, seja perigosa ou apenas irritante.
+  - en: Pick one other PC. You believe they have insight about how to master your magic, if you can just convince them to trust you with their secrets.
+    pt-BR: Escolha outro PJ. Você acredita que ele tem uma percepção sobre como dominar sua magia, se você apenas conseguir convencê-lo a confiar seus segredos a você.
+  - en: Pick one other PC. You once knocked out this character with your power, but were able to jolt them back awake again. At the time they seemed to think it was funny.
+    pt-BR: Escolha outro PJ. Uma vez você nocauteou esse personagem com seu poder, mas conseguiu chocá-lo de volta à consciência. Na época ele pareceu achar isso engraçado.
+  - en: Pick one other PC. You once recharged one of their powerful cyphers, although you're not sure how you managed it.
+    pt-BR: Escolha outro PJ. Uma vez você recarregou uma de suas cifras poderosas, embora não tenha certeza de como conseguiu.
+minor_effect_suggestion:
+  en: You gently drain 2 points of energy from your foe, which you can divide between your Might and Speed Pools.
+  pt-BR: Você drena suavemente 2 pontos de energia de seu inimigo, que pode dividir entre suas Reservas de Força e Velocidade.
+major_effect_suggestion:
+  en: You gently drain 5 points of energy from your foe, which you can divide between your Might and Speed Pools.
+  pt-BR: Você drena suavemente 5 pontos de energia de seu inimigo, que pode dividir entre suas Reservas de Força e Velocidade.

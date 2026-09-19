@@ -1,0 +1,23 @@
+id: throw-enchanted-weapon
+name:
+  en: Throw Enchanted Weapon
+  pt-BR: Lançar Arma Encantada
+description:
+  en: >- 
+    You can throw your enchanted weapon up to short
+    range as a light ranged weapon. Whether it hits
+    or misses, it immediately flies back to your hands,
+    and you can automatically catch it or allow it to land
+    at your feet
+  pt-BR: >-
+    Você pode arremessar sua arma encantada a uma distância
+    de curto alcance, como uma arma de ataque à distância leve.
+    Quer ela acerte ou erre, ela retorna imediatamente para suas
+    mãos, e você pode agarrá-la automaticamente ou deixá-la cair
+    aos seus pés.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 3

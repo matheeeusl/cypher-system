@@ -1,0 +1,39 @@
+id: solves-mysteries
+name:
+  en: Solves Mysteries
+  pt-BR: Resolve Mistérios
+description:
+  en: You're a master of deduction, using evidence to find the answer.
+  pt-BR: Você é uma mestra da dedução, usando evidências para encontrar a resposta.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: investigator
+    - kind: granted
+      ability_id: sleuth
+  '2':
+    - kind: granted
+      ability_id: out-of-harms-way
+  '3':
+    - kind: choice
+      options:
+        - you-studied
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: draw-conclusion
+  '5':
+    - kind: granted
+      ability_id: defuse-situation
+  '6':
+    - kind: choice
+      options:
+        - seize-the-initiative
+        - greater-skill-with-defense
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

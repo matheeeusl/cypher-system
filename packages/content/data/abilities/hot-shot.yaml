@@ -1,0 +1,36 @@
+id: hot-shot
+name:
+  en: Hot Shot
+  pt-BR: Tiro Certeiro
+description:
+  en: >-
+    When you hit a target with a gun attack while Smoldering Gun is
+    active, you can choose to reduce the damage by 1 point but gain an
+    additional related effect and/or hit a target in a precise spot.
+    Possible effects include (but are not limited to) the following:
+
+    - You can ignite a structure (if you succeed on an
+    Intellect-based task against its level).
+
+    - You can create a flaming message in the sky consisting of a
+    handful of words that lasts for up to a minute.
+
+    - You can shoot an object out of someone's hand.
+
+    - You can shoot the leg, wing, or other limb your target uses to
+    move, reducing their maximum movement speed to immediate for a few
+    days or until they receive expert medical care.
+
+    - You can shoot a strap holding a backpack, armor, or a similarly
+    strapped on item so that it falls off.
+  pt-BR: "Tradução em breve."
+  # Note: a "menu ability" — the schema's single `action_type` field
+  # records the baseline value; all 5 sub-effects here share the same
+  # "Enabler" tag, so no per-sub-option variance (unlike drone-upgrade/
+  # trained-gunner). See schema gap item 3's menu-ability note.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 6

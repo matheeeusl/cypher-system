@@ -1,0 +1,17 @@
+id: summon-gun
+name:
+  en: Summon Gun
+  pt-BR: Convocar Arma
+description:
+  en: >-
+    If you're ever without your six shooter, you can summon it (or
+    another just like it) instantly to your hand, already loaded.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 2

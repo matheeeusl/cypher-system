@@ -1,0 +1,18 @@
+id: surviving-the-wasteland
+name:
+  en: Surviving the Wasteland
+  pt-BR: Sobrevivendo ao Ermo
+description:
+  en: >-
+    Given about half a day of walking and scavenging, you find enough
+    edible food and potable water in the ruins or surrounding
+    wasteland for you and up to one other person for one day. The
+    resources might be scavenged from before-times supplies, living
+    flora and fauna, and uncontaminated water sources.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: walks-the-wasteland
+    tier: 1

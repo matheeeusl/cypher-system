@@ -4,7 +4,7 @@ name:
   pt-BR: Cuidador de Feridas
 description:
   en: You are trained in healing.
-  pt-BR: "Tradução em breve."
+  pt-BR: Você é treinado em cura.
 cost: null
 action_type: enabler
 sources:

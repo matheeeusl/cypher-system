@@ -1,0 +1,16 @@
+id: advantages-of-being-small
+name:
+  en: Advantages of Being Small
+  pt-BR: Vantagens de Ser Pequena
+description:
+  en: >-
+    You've learned how to leverage your strength and accuracy in
+    proportion to your size. Your damage is no longer halved when
+    using Shrink, and climbing and jumping tasks are eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: shrinks-to-minute-size
+    tier: 2

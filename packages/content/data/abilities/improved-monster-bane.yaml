@@ -1,0 +1,13 @@
+id: improved-monster-bane
+name:
+  en: Improved Monster Bane
+  pt-BR: Flagelo dos Monstros Aprimorado
+description:
+  en: When you inflict damage to creatures more than twice as large or massive as you, you inflict 3 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: slays-monsters
+    tier: 3

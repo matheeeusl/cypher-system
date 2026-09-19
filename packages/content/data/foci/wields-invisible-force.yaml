@@ -1,0 +1,39 @@
+id: wields-invisible-force
+name:
+  en: Wields Invisible Force
+  pt-BR: Manipula uma força invisível
+description:
+  en: You bend light and manipulate beams of force for offense and defense.
+  pt-BR: Você curva a luz e manipula feixes de força para ataque e defesa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: vanish
+  '2':
+    - kind: granted
+      ability_id: entangling-force
+    - kind: granted
+      ability_id: sharp-senses
+  '3':
+    - kind: choice
+      options:
+        - force-field-barrier
+        - multi-vanish
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: invisibility
+  '5':
+    - kind: granted
+      ability_id: field-reinforced-armor
+  '6':
+    - kind: choice
+      options:
+        - concussion
+        - generate-force-field
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

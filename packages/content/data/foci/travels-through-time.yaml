@@ -1,0 +1,47 @@
+id: travels-through-time
+name:
+  en: Travels Through Time
+  pt-BR: Viaja Pelo Tempo
+description:
+  en: >-
+    You can see through time, try to reach through it, and eventually
+    even travel through it.
+  pt-BR: >-
+    Você consegue ver através do tempo, tentar alcançá-lo, e
+    eventualmente até viajar por ele.
+  # Note: source adds a GM-facing note: "You and the GM should
+  # probably have a conversation about the 'rules' of time travel (if
+  # any) that exist in the setting. Depending on those rules, this
+  # focus might have the ability to drastically alter the setting and
+  # everyone in it." — table guidance, not a mechanical grant, not
+  # folded into the description above.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: anticipation
+  '2':
+    - kind: granted
+      ability_id: see-history
+  '3':
+    - kind: choice
+      options:
+        - temporal-acceleration
+        - time-loop
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: temporal-dislocation
+  '5':
+    - kind: granted
+      ability_id: time-doppelganger
+  '6':
+    - kind: choice
+      options:
+        - call-through-time
+        - time-travel
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

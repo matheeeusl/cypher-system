@@ -7,10 +7,24 @@ description:
     In your explorations of dark places, you've been exposed to all
     sorts of terrible things and are developing a general resistance.
     You gain +1 to Armor and are trained in Might defense tasks.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Ao explorar lugares sombrios, você foi exposto a todo tipo
+    de coisa terrível e está desenvolvendo uma resistência geral.
+    Você ganha +1 de Armadura e recebe treinamento em testes de defesa de Força.
+  # Note: reprinted verbatim under Was Foretold Tier 3, despite that
+  # Focus having nothing to do with "explorations of dark places" —
+  # likely a source-side copy/paste artifact (same pattern as Stands
+  # Like a Bastion/Stretches sharing a flavor-text intro), kept as a
+  # genuine reuse since the text is identical.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: explores-dark-places
     tier: 4
+  - type: focus
+    id: was-foretold
+    tier: 3
+  - type: focus
+    id: works-for-a-living
+    tier: 6

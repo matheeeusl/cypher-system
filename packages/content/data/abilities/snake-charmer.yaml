@@ -1,0 +1,30 @@
+id: snake-charmer
+name:
+  en: Snake Charmer
+  pt-BR: Encantadora de Serpentes
+description:
+  en: >-
+    You calm an ophidian creature within short range. You must speak
+    to it (though it doesn't need to understand your words), and it
+    must see you. It remains calm for one minute or for as long as
+    you focus all your attention on it. The GM has final say over
+    what counts as a snakelike creature, but unless some kind of
+    deception is at work, you should know whether you can affect it
+    before you attempt to use this ability on it. If you spend 1
+    additional Intellect point when you use this ability, you can
+    calm all nonhuman beasts, as the GM determines (aliens, demons,
+    animals that can speak, and forgeborn never count).
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Intellect points" — the
+  # schema's cost field can't represent an open-ended "+". Recorded as
+  # the baseline 1 Intellect point here, flagged for schema review
+  # (same approximation used for divine-intervention/return-to-the-
+  # obelisk).
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: strikes-like-a-rattler
+    tier: 2

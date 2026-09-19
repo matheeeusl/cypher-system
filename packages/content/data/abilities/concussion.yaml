@@ -1,0 +1,25 @@
+id: concussion
+name:
+  en: Concussion
+  pt-BR: Concussão
+description:
+  en: >-
+    You cause a pulse of concussive force to explode out from a point you
+    choose within long range. The pulse extends up to short
+    range in all directions, dealing 5 points of damage to
+    everything in the area. Even if you fail the attack roll,
+    targets in the area take 1 point of damage.
+  pt-BR: >-
+    Você faz com que uma onda de força concussiva exploda a partir de
+    um ponto escolhido por você dentro do alcance longo. A onda se expande
+    até o alcance curto em todas as direções, causando 5 pontos de dano
+    a tudo na área. Mesmo se você falhar na jogada de ataque, os alvos na
+    área sofrem 1 ponto de dano.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: focus
+    id: wields-invisible-force
+    tier: 6

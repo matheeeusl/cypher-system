@@ -1,0 +1,71 @@
+id: steers-the-coven
+name:
+  en: Steers the Coven
+  pt-BR: Guia o Culto
+description:
+  en: >-
+    Magic is strongest when wielded by a community. The strength of a
+    community is derived from the strength of its leader, and you've
+    taken on the role. Maybe you were chosen, or maybe you
+    volunteered. Maybe you have an official title and
+    responsibilities, or maybe you serve as an informal mentor. Maybe
+    you run a coven with bylaws and a charter, or maybe you host
+    gatherings where your friends and family can perform rituals
+    together. Regardless, you're responsible for a coalition of
+    magicians who look to you for guidance, protection, and
+    problem-solving.
+  pt-BR: >-
+    A magia é mais forte quando exercida por uma comunidade. A força
+    de uma comunidade deriva da força de sua líder, e você assumiu
+    esse papel. Talvez tenha sido escolhida, ou talvez tenha se
+    voluntariado. Talvez tenha um título oficial e responsabilidades,
+    ou talvez sirva como mentora informal. Talvez lidere um culto com
+    estatutos e uma carta, ou talvez hospede reuniões onde seus
+    amigos e família podem realizar rituais juntos. De qualquer
+    forma, você é responsável por uma coalizão de magas que recorrem
+    a você em busca de orientação, proteção, e resolução de
+    problemas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: community-activist
+    - kind: granted
+      ability_id: community-knowledge
+  '2':
+    - kind: granted
+      ability_id: shepherds-fury
+  '3':
+    - kind: choice
+      options:
+        - inspire-action
+        - true-guardian
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: ritual-guidance
+  '5':
+    - kind: granted
+      ability_id: protective-instincts
+  '6':
+    - kind: choice
+      options:
+        - deep-consideration
+        - drawing-on-lifes-experiences
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. You have a friendly rivalry with this person, perhaps due to philosophical differences or belonging to another coven with contrary goals.
+    pt-BR: Escolha outro PJ. Você tem uma rivalidade amigável com essa pessoa, talvez devido a diferenças filosóficas ou por pertencer a outro culto com objetivos contrários.
+  - en: Pick one other PC. You want to learn more about this person so you can decide if they should join your coven or are somehow a threat to it.
+    pt-BR: Escolha outro PJ. Você quer aprender mais sobre essa pessoa para decidir se ela deve se juntar ao seu culto ou se representa de alguma forma uma ameaça a ele.
+  - en: Pick one other PC. Long ago you were very close to this character, but you drifted apart. You'll need to decide if you're starting anew or trying to rekindle the old friendship.
+    pt-BR: Escolha outro PJ. Há muito tempo vocês eram muito próximos, mas se afastaram. Você precisará decidir se estão recomeçando ou tentando reacender a velha amizade.
+  - en: Pick one other PC. This character or someone they care about is in your coven, and you feel responsible for protecting them.
+    pt-BR: Escolha outro PJ. Esse personagem ou alguém que ele valoriza está em seu culto, e você se sente responsável por protegê-lo.
+minor_effect_suggestion:
+  en: The evident power of the support from your coven intimidates a foe, who retreats a short distance away on their next turn.
+  pt-BR: O evidente poder do apoio de seu culto intimida um inimigo, que recua a uma distância curta em seu próximo turno.
+major_effect_suggestion:
+  en: Your opponent respects your commitment to your coven so much that they withdraw from the conflict (although they may return later).
+  pt-BR: Seu oponente respeita tanto seu compromisso com seu culto que se retira do conflito (embora possa voltar mais tarde).

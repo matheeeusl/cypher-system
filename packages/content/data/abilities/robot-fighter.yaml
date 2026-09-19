@@ -4,10 +4,10 @@ name:
   pt-BR: Combatente de Robôs
 description:
   en: When fighting a robot or intelligent machine, you are trained in attacks and defense.
-  pt-BR: Ao lutar contra um robô ou máquina inteligente, você é treinado em ataques e defesa.
+  pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: battles-robots
+    id: talks-to-machines
     tier: 4

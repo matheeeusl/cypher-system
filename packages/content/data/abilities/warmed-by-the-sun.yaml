@@ -1,0 +1,22 @@
+id: warmed-by-the-sun
+name:
+  en: Warmed by the Sun
+  pt-BR: Aquecida pelo Sol
+description:
+  en: >-
+    After spending ten minutes in the sun, a hot spring, or other
+    such warm location, you gain a free ten-minute recovery roll.
+    Once you use this ability, you can't use it again until after
+    your next ten-hour recovery roll.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Ten minutes to activate." — a further
+  # non-standard action_type tag, approximated as `action_to_initiate`.
+  # Flagged for schema review (see schema gap item 3).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: strikes-like-a-rattler
+    tier: 4

@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: controls-beasts
     tier: 2
+  - type: focus
+    id: speaks-for-the-land
+    tier: 3

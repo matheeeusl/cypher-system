@@ -1,0 +1,31 @@
+id: phase-sprint
+name:
+  en: Phase Sprint
+  pt-BR: Sprint Fora de Fase
+description:
+  en: >-
+    You can run up to a long distance as long as you take no other
+    actions. During your action and until the beginning of your next
+    turn, you are partially phased, and some attacks pass through you
+    harmlessly. While phased, you gain an asset to your Speed defense
+    tasks, but you lose any benefit from armor you wear. You don't
+    have to run in one long, straight line when using Phase Sprint,
+    but can instead zig and zag, curve, or even return to where you
+    started. Other abilities can be used with Phase Sprint to unlock
+    additional effects, including Disrupting Touch, Scratch Existence,
+    Invisible Phasing, and Phase Detonation. These abilities are
+    additive enablers, requiring the user to spend points for both
+    abilities, and sometimes from two different Pools.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Speed point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: shreds-the-walls-of-the-world
+    tier: 1

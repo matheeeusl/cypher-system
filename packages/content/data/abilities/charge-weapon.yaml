@@ -1,0 +1,25 @@
+id: charge-weapon
+name:
+  en: Charge Weapon
+  pt-BR: Carregar Arma
+description:
+  en: >-
+    As part of making an attack with your enchanted weapon, you
+    charge it with magical power, inflicting 2 additional
+    points of energy damage. If you make more than one
+    attack on your turn, you choose whether to spend the
+    cost for this ability before you make each attack
+  pt-BR: >-
+    Ao realizar um ataque com sua arma encantada, você
+    a carrega com poder mágico, causando 2 pontos
+    adicionais de dano de energia. Se você realizar mais de um
+    ataque em seu turno, você escolhe se deseja pagar o
+    custo desta habilidade antes de realizar cada ataque.
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 1

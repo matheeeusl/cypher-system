@@ -1,0 +1,37 @@
+id: siphons-power
+name:
+  en: Siphons Power
+  pt-BR: Sifona Poder
+description:
+  en: You suck power out of machines and creatures alike in order to empower yourself.
+  pt-BR: Você suga poder de máquinas e criaturas para se fortalecer.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: drain-machine
+  '2':
+    - kind: granted
+      ability_id: drain-creature
+  '3':
+    - kind: choice
+      options:
+        - drain-at-a-distance
+        - unraveling-consumption
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: store-energy
+  '5':
+    - kind: granted
+      ability_id: share-the-power
+  '6':
+    - kind: choice
+      options:
+        - explosive-release
+        - sun-siphon
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,24 @@
+id: handy
+name:
+  en: Handy
+  pt-BR: Habilidoso
+description:
+  en: >-
+    You work for a living and are trained in tasks
+    related to carpentry, plumbing, and electrical repair.
+    Your knowledge in these realms also gives you an asset
+    to craft entirely new items within your spheres of
+    knowledge and the limits of possibility within the
+    setting. 
+  pt-BR: >-
+    Você trabalha para se sustentar e possui treinamento em tarefas
+    relacionadas a carpintaria, encanamento e reparos elétricos. 
+    Seu conhecimento nessas áreas também lhe confere a capacidade
+    de fabricar itens totalmente novos, dentro de suas esferas de
+    conhecimento e dos limites de possibilidade do cenário.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-for-a-living
+    tier: 1

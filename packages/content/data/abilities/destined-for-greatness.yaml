@@ -25,3 +25,6 @@ sources:
   - type: focus
     id: made-a-deal-with-death
     tier: 2
+  - type: focus
+    id: was-foretold
+    tier: 2

@@ -1,0 +1,32 @@
+id: show-them-the-way
+name:
+  en: Show Them the Way
+  pt-BR: Mostrar-lhes o Caminho
+description:
+  en: >-
+    Your presence overwhelms a creature that you touch and ask to aid
+    you. Essentially, if the creature fails to defend against your
+    presence, you control its actions for up to ten minutes. The
+    target must be level 3 or lower. Once you have established
+    control, you maintain control through verbal instruction. You can
+    allow the target to act freely or override control on a
+    case-by-case basis. In addition to the normal options for using
+    Effort, you can choose to use Effort to increase the maximum
+    level of the target. Thus, to affect a level 5 target (two levels
+    above the normal limit), you must apply two levels of Effort.
+    When the effect ends, the creature vaguely remembers doing your
+    will, but it's as blurry as a dream.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "6+ Intellect points" — the
+  # schema's cost field can't represent an open-ended "+". Recorded as
+  # the baseline 6 Intellect points here, flagged for schema review
+  # (same approximation used for divine-intervention/return-to-the-
+  # obelisk).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: was-foretold
+    tier: 5

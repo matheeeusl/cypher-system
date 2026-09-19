@@ -1,0 +1,39 @@
+id: speaks-for-the-land
+name:
+  en: Speaks for the Land
+  pt-BR: Fala pela Terra
+description:
+  en: Your spiritual connection to nature and the environment grants you mystical abilities.
+  pt-BR: Sua conexão espiritual com a natureza e o meio ambiente lhe concede habilidades místicas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: seeds-of-fury
+    - kind: granted
+      ability_id: wilderness-lore
+  '2':
+    - kind: granted
+      ability_id: grasping-foliage
+  '3':
+    - kind: choice
+      options:
+        - soothe-the-savage
+        - communication
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: moon-shape
+  '5':
+    - kind: granted
+      ability_id: insect-eruption
+  '6':
+    - kind: choice
+      options:
+        - call-the-storm
+        - earthquake
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

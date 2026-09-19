@@ -1,0 +1,39 @@
+id: shreds-the-walls-of-the-world
+name:
+  en: Shreds the Walls of the World
+  pt-BR: Despedaça as Paredes do Mundo
+description:
+  en: Speed plus phasing gives you a unique ability to evade danger and simultaneously inflict damage.
+  pt-BR: Velocidade mais desfasagem lhe dá uma habilidade única de evitar perigo e ao mesmo tempo infligir dano.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: phase-sprint
+    - kind: granted
+      ability_id: disrupting-touch
+  '2':
+    - kind: granted
+      ability_id: scratch-existence
+  '3':
+    - kind: choice
+      options:
+        - invisible-phasing
+        - walk-through-walls
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: store-energy
+  '5':
+    - kind: granted
+      ability_id: share-the-power
+  '6':
+    - kind: choice
+      options:
+        - shred-existence
+        - untouchable-while-moving
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

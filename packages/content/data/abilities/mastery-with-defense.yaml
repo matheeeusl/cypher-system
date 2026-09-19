@@ -1,0 +1,17 @@
+id: mastery-with-defense
+name:
+  en: Mastery With Defense
+  pt-BR: Maestria em Defesa
+description:
+  en: >-
+    Choose one type of defense task in which you are trained: Might,
+    Speed, or Intellect. You are specialized in defense tasks of that
+    type. You can select this ability up to three times. Each time
+    you select it, you must choose a different type of defense task.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 6

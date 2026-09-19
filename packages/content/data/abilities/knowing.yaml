@@ -1,0 +1,13 @@
+id: knowing
+name:
+  en: Knowing
+  pt-BR: Sabedoria
+description:
+  en: You are trained in one area of knowledge of your choice.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: was-foretold
+    tier: 1

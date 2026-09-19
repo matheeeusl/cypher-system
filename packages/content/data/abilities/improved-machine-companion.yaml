@@ -1,0 +1,18 @@
+id: improved-machine-companion
+name:
+  en: Improved Machine Companion
+  pt-BR: Companheiro Mecânico Aprimorado
+description:
+  en: >-
+    The machine from your Machine Companion ability improves,
+    becoming a level 5 creature with the ability either to fly a long
+    distance each round (and carry you) for up to ten minutes at a
+    time, or to carry an extra cypher for you that doesn't count
+    against your cypher limit.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: talks-to-machines
+    tier: 6

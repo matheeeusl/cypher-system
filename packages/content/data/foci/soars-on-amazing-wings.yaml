@@ -1,0 +1,39 @@
+id: soars-on-amazing-wings
+name:
+  en: Soars on Amazing Wings
+  pt-BR: Voa em Asas Incríveis
+description:
+  en: Many superheroes can fly, and some even have wings. You can use your wings for movement, attacks, and defense.
+  pt-BR: Muitos super-heróis conseguem voar, e alguns até têm asas. Você usa suas asas para movimento, ataques, e defesa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: hover
+    - kind: granted
+      ability_id: flight-exertion
+  '2':
+    - kind: granted
+      ability_id: wing-weapons
+  '3':
+    - kind: choice
+      options:
+        - acrobatic-attack
+        - flying-companion
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: hard-to-hit
+  '5':
+    - kind: granted
+      ability_id: up-to-speed
+  '6':
+    - kind: choice
+      options:
+        - hard-target
+        - defense-master
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

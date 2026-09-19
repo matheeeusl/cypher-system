@@ -1,0 +1,15 @@
+id: coaxing-power
+name:
+  en: Coaxing Power
+  pt-BR: Persuadir Energia
+description:
+  en: You boost the power or function of a machine so that it operates at one level higher than normal for one hour.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: talks-to-machines
+    tier: 2

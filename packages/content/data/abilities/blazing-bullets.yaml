@@ -1,0 +1,27 @@
+id: blazing-bullets
+name:
+  en: Blazing Bullets
+  pt-BR: Balas Flamejantes
+description:
+  en: >-
+    While Smoldering Gun is active, you inflict an additional 3
+    points of damage with your chosen weapon (+4 points of damage
+    total). In addition to the normal options for using Effort,
+    applying a level of Effort can cause the bullet to explode on
+    impact, potentially dealing damage to all creatures in immediate
+    range of your target; roll an attack for each separately. Even if
+    you miss, you still deal 1 point of damage with fiery lead
+    shrapnel.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Intellect point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 4

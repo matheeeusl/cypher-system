@@ -1,0 +1,20 @@
+id: whirlwind-of-throws
+name:
+  en: Whirlwind of Throws
+  pt-BR: Turbilhão de Arremessos
+description:
+  en: >-
+    With a large handful of small objects—tiny knives, shuriken,
+    stones, jagged bits of metal, coins, or whatever is on hand—you
+    attack every creature in an immediate area within short range.
+    You must make attack rolls against each target. Each attack is
+    hindered. You inflict 3 points of damage on targets you hit.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 5

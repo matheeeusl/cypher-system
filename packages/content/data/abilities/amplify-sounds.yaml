@@ -1,0 +1,30 @@
+id: amplify-sounds
+name:
+  en: Amplify Sounds
+  pt-BR: Amplificar Sons
+description:
+  en: >-
+    For one minute, you can amplify distant or small sounds so that
+    you can hear them clearly, even if it's a conversation or the
+    sound of a small animal moving through an underground burrow up
+    to a very long distance away. You can attempt to perceive the
+    sound even if interceding barriers block it or the sound is very
+    slight, though this requires a few additional rounds of
+    concentration. To discriminate the sound you wish in a noisy
+    environment might also require a few additional rounds of
+    concentration as you audibly explore the surrounding soundscape.
+    Given enough time, you could pinpoint every conversation, every
+    breathing creature, and every device creating noise within range.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Action to initiate, up to several rounds to
+  # complete, depending on the difficulty of the task." — a further
+  # non-standard action_type tag, approximated as `action_to_initiate`.
+  # Flagged for schema review (see schema gap item 3).
+cost:
+  pool: might
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: thunders
+    tier: 5

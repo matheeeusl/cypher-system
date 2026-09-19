@@ -6,7 +6,9 @@ description:
   en: >-
     If you strike a foe of level 3 or lower with a weapon you're
     practiced with, you kill the target instantly.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Se você atingir um inimigo de nível 3 ou inferior com uma arma
+    com a qual você tenha proficiência, você mata o alvo instantaneamente.
 cost:
   pool: might
   amount: 5
@@ -17,4 +19,7 @@ sources:
     tier: 6
   - type: focus
     id: operates-undercover
+    tier: 6
+  - type: focus
+    id: wields-an-enchanted-weapon
     tier: 6

@@ -1,0 +1,31 @@
+id: force-field-barrier
+name:
+  en: Force Field Barrier
+  pt-BR: Barreira de Campo de Força
+description:
+  en: >-
+    You create an opaque, stationary barrier of solid energy (a force
+    field) within immediate range. The barrier is 10 feet by
+    10 feet (3 m by 3 m) and of negligible thickness. It is a
+    level 2 barrier and lasts for ten minutes. It can be placed
+    anywhere it fits, whether against a solid object
+    (including the ground) or floating in the air. Each level
+    of Effort you apply strengthens the barrier by one level.
+    For example, applying two levels of Effort creates a level
+    4 barrier. 
+  pt-BR: >-
+    Você cria uma barreira opaca e estática de energia sólida
+    (um campo de força) a um alcance imediato. A barreira
+    mede 3 m por 3 m (10 pés por 10 pés) e tem espessura desprezível.
+    Ela é uma barreira de nível 2 e dura dez minutos. Pode ser posicionada
+    onde quer que caiba, seja contra um objeto sólido (incluindo o chão) ou
+    flutuando no ar. Cada nível de Esforço aplicado fortalece a barreira em um nível.
+    Por exemplo, aplicar dois níveis de Esforço cria uma barreira de nível 4.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: wields-invisible-force
+    tier: 3

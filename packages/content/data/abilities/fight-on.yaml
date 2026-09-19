@@ -1,0 +1,17 @@
+id: fight-on
+name:
+  en: Fight On
+  pt-BR: Continuar Lutando
+description:
+  en: >-
+    You do not suffer the normal penalties for being impaired on the
+    damage track. If debilitated, instead of suffering the normal
+    penalty of being unable to take most actions, you can continue to
+    act; however, all tasks are hindered.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: slays-monsters
+    tier: 4

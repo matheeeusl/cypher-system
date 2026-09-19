@@ -13,7 +13,9 @@ description:
     provide the answer.
   pt-BR: "Tradução em breve."
   # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) — not modeled by the schema (no cyberware-marker field).
+  # marker) under Explores Cyberspace and Knows Everything, but not
+  # under Talks to Machines — same per-source "~" inconsistency as
+  # machine-enhancement/network-tap. Not modeled by the schema.
   # Flagged for schema review.
 cost:
   pool: intellect
@@ -25,4 +27,7 @@ sources:
     tier: 5
   - type: focus
     id: knows-everything
+    tier: 5
+  - type: focus
+    id: talks-to-machines
     tier: 5

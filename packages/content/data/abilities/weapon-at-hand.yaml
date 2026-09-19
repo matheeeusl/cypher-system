@@ -1,0 +1,16 @@
+id: weapon-at-hand
+name:
+  en: Weapon at Hand
+  pt-BR: Arma à Mão
+description:
+  en: >-
+    You're practiced with all weapons. To gain this benefit with a
+    weapon you've never used before, you must spend at least ten
+    minutes practicing with it first.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: walks-the-wasteland
+    tier: 1

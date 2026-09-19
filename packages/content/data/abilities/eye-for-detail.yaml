@@ -1,0 +1,26 @@
+id: eye-for-detail
+name:
+  en: Eye For Detail
+  pt-BR: Olho para detalhe
+description:
+  en: >-
+    When you spend five minutes or so thoroughly exploring an area no
+    larger than a short distance in diameter, you can ask the
+    GM one question about the area. The GM must answer
+    you truthfully. You cannot use this more than one time
+    per area per 24 hours. 
+  pt-BR: >-
+    Ao passar cerca de cinco minutos explorando minuciosamente
+    uma área de pequeno diâmetro, você pode fazer uma pergunta
+    ao Mestre sobre ela. O Mestre deve responder com sinceridade.
+    Você não pode usar essa habilidade mais de uma vez por área
+    a cada 24 horas.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+# book say: action to initiate, five minutes to complete
+sources:
+  - type: focus
+    id: works-for-a-living
+    tier: 3

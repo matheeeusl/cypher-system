@@ -1,0 +1,41 @@
+id: wields-an-enchanted-weapon
+name:
+  en: Wields an Enchanted Weapon
+  pt-BR: Empunha uma Arma Encantada
+description:
+  en: One who channels magic through or from a weapon to create a unique fighting style.
+  pt-BR: Alguém que canaliza magia através ou a partir de uma arma para criar um estilo de luta único.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enchanted-weapon
+    - kind: granted
+      ability_id: innate-power
+    - kind: granted
+      ability_id: charge-weapon
+  '2':
+    - kind: granted
+      ability_id: power-crash
+  '3':
+    - kind: choice
+      options:
+        - rapid-attack
+        - throw-enchanted-weapon
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: defending-weapon
+  '5':
+    - kind: granted
+      ability_id: enchanted-movement
+  '6':
+    - kind: choice
+      options:
+        - deadly-strike
+        - spin-attack
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

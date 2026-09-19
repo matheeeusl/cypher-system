@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: made-a-deal-with-death
     tier: 6
+  - type: focus
+    id: stretches
+    tier: 6

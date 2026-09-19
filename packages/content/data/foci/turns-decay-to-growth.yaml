@@ -1,0 +1,83 @@
+id: turns-decay-to-growth
+name:
+  en: Turns Decay to Growth
+  pt-BR: Transforma Decadência em Crescimento
+description:
+  en: >-
+    You're comfortable with decomposition: the bacteria and fungi
+    that break down organic material are living creatures, and you
+    coax magic from the interplay of life and death. To you, rot
+    isn't cause for revulsion—it's an opportunity to build something
+    new. Maggots, mushrooms, and mold are actors in your process, not
+    unlike familiars. You probably keep a garden, nourished by your
+    meticulously maintained compost pile. Your community might
+    express discomfort with your methods, leading to friction. If you
+    react to criticism by isolating yourself, you won't be lonely for
+    very long—what you have to offer is vital and rare, and it's
+    inevitable that someone will ask you for help.
+  pt-BR: >-
+    Você se sente confortável com a decomposição: as bactérias e
+    fungos que decompõem material orgânico são criaturas vivas, e
+    você extrai magia da interação entre vida e morte. Para você,
+    podridão não é motivo de repulsa — é uma oportunidade de construir
+    algo novo. Larvas, cogumelos, e mofo são atores em seu processo,
+    não muito diferentes de familiares. Você provavelmente mantém um
+    jardim, nutrido por sua pilha de compostagem meticulosamente
+    mantida. Sua comunidade pode expressar desconforto com seus
+    métodos, gerando atrito. Se você reagir a críticas se isolando,
+    não ficará sozinha por muito tempo — o que você tem a oferecer é
+    vital e raro, e é inevitável que alguém peça sua ajuda.
+  # Note: Tier 3 is printed as "Choose either Reading Decomposition, or
+  # both Grasping Foliage and Necromancy" — a bundled-pair choice the
+  # schema's flat `choice` shape can't represent (same gap as
+  # Transmits Energy Tier 6); modeled as a flat 3-option `count: 1`
+  # choice, flagged. Tier 4 conditionally grants Greater Necromancy or
+  # Rewind Rot depending on the Tier 3 pick — see the note on
+  # `rewind-rot`.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: wilderness-lore
+    - kind: granted
+      ability_id: spore-cloud
+  '2':
+    - kind: granted
+      ability_id: wilderness-explorer
+  '3':
+    - kind: choice
+      options:
+        - reading-decomposition
+        - grasping-foliage
+        - necromancy
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-necromancy
+    - kind: granted
+      ability_id: rewind-rot
+  '5':
+    - kind: granted
+      ability_id: insect-eruption
+  '6':
+    - kind: choice
+      options:
+        - restore-life
+        - word-of-death
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. This character dislikes the smell that your spells make and tries to be at least an immediate distance away when you cast them.
+    pt-BR: Escolha outro PJ. Esse personagem não gosta do cheiro que seus feitiços produzem e tenta ficar a pelo menos uma distância imediata quando você os conjura.
+  - en: Pick one other PC. This character is fascinated by your powers and wants to make use of them (or just thinks you can provide them with medicinal mushrooms).
+    pt-BR: Escolha outro PJ. Esse personagem é fascinado por seus poderes e quer fazer uso deles (ou apenas acha que você pode lhe fornecer cogumelos medicinais).
+  - en: Pick one other PC. This character believes you are a member of a mushroom cult (which to them might be a good, bad, or neutral thing).
+    pt-BR: Escolha outro PJ. Esse personagem acredita que você é membro de um culto de cogumelos (o que para ele pode ser algo bom, ruim, ou neutro).
+  - en: Pick one other PC. You and this character have a magical connection, and you each add +1 to your recovery rolls when within a short distance of each other.
+    pt-BR: Escolha outro PJ. Você e esse personagem têm uma conexão mágica, e cada um adiciona +1 às suas rolagens de recuperação quando estão a uma distância curta um do outro.
+minor_effect_suggestion:
+  en: Your foe is dazed (hindered) for the next round.
+  pt-BR: Seu inimigo fica confuso (dificultado) na próxima rodada.
+major_effect_suggestion:
+  en: Your foe is stunned for one round, or you restore 2 points to any one of your Pools.
+  pt-BR: Seu inimigo fica atordoado por uma rodada, ou você restaura 2 pontos em qualquer uma de suas Reservas.

@@ -1,0 +1,39 @@
+id: thunders
+name:
+  en: Thunders
+  pt-BR: Troveja
+description:
+  en: You emit destructive sound and manipulate soundscapes.
+  pt-BR: Você emite som destrutivo e manipula paisagens sonoras.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: thunder-beam
+  '2':
+    - kind: granted
+      ability_id: sound-conversion-barrier
+  '3':
+    - kind: choice
+      options:
+        - nullify-sound
+        - echolocation
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: shattering-shout
+  '5':
+    - kind: granted
+      ability_id: subsonic-rumble
+    - kind: granted
+      ability_id: amplify-sounds
+  '6':
+    - kind: choice
+      options:
+        - earthquake
+        - lethal-vibration
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

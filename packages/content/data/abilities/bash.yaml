@@ -13,3 +13,6 @@ sources:
   - type: type
     id: warrior
     tier: 1
+  - type: focus
+    id: weaponizes-chrome
+    tier: 1

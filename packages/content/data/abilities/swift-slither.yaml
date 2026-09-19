@@ -1,0 +1,29 @@
+id: swift-slither
+name:
+  en: Swift Slither
+  pt-BR: Deslize Veloz
+description:
+  en: >-
+    You can move a short distance as part of another action. You can
+    move a long distance as your entire action for a turn. If you
+    apply a level of Effort to this ability, you can move a long
+    distance and make an attack as your entire action for a turn, but
+    the attack is hindered.
+  pt-BR: "Tradução em breve."
+  # Note: source text is identical to `fleet-of-foot` (Inks Spells on
+  # Skin, Moves Like the Wind) — same mechanic and cost, but printed
+  # under a different name (and here as a Type Swap Option rather than
+  # a tier grant) — kept as a separate ability per the established
+  # different-name convention.
+  # Source cost is printed as "1+ Speed points" — the schema's cost
+  # field can't represent an open-ended "+". Recorded as the baseline 1
+  # Speed point here, flagged for schema review (same approximation
+  # used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: strikes-like-a-rattler
+    tier: 1

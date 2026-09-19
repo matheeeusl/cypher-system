@@ -1,0 +1,22 @@
+id: winter-gauntlets
+name:
+  en: Winter Gauntlets
+  pt-BR: Manoplas de Inverno
+description:
+  en: >-
+    When you use Frost Touch, you inflict an additional 3 points of
+    damage if you touch a creature, or an additional 2 points of
+    damage if you infuse a weapon. In addition, damaged targets are
+    frozen in place (if standing on a solid surface) and can't move
+    from their location until they use an action to break free. The
+    target can still attack and defend.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Action for touch; enabler for weapon." — a
+  # non-standard tag also used verbatim by `frost-touch`/`shock`, not a
+  # new tag. Approximated as `action`.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: wears-a-sheen-of-ice
+    tier: 6

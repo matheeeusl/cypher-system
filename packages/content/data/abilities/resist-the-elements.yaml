@@ -1,0 +1,16 @@
+id: resist-the-elements
+name:
+  en: Resist the Elements
+  pt-BR: Resistir aos Elementos
+description:
+  en: >-
+    You resist heat, cold, and similar extremes. You have a special
+    +2 to Armor against ambient damage or other damage that would
+    normally ignore Armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 2

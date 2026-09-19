@@ -1,0 +1,13 @@
+id: magical-training
+name:
+  en: Magical Training
+  pt-BR: Treinamento Mágico
+description:
+  en: You are trained in all of your spells. As a result, you ease any task involved in the use of your spells.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: uses-wild-magic
+    tier: 5

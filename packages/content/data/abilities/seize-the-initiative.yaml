@@ -1,0 +1,19 @@
+id: seize-the-initiative
+name:
+  en: Seize the Initiative
+  pt-BR: Tomar a Iniciativa
+description:
+  en: >-
+    Within one minute of successfully using your Draw Conclusion
+    ability, you can take one additional, immediate action, which you
+    can take out of turn. After using this ability, you can't use it
+    again until after your next ten-hour recovery roll.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: solves-mysteries
+    tier: 6

@@ -35,3 +35,6 @@ sources:
   - type: focus
     id: shepherds-the-community
     tier: 3
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 3

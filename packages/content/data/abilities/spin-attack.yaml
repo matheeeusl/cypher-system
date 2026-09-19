@@ -37,3 +37,6 @@ sources:
   - type: focus
     id: wields-two-weapons-at-once
     tier: 6
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 6

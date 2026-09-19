@@ -1,0 +1,39 @@
+id: walks-the-wild-woods
+name:
+  en: Walks the Wild Woods
+  pt-BR: Percorre as Matas Selvagens
+description:
+  en: An adherent of nature magic who draws on the power and strength of trees.
+  pt-BR: Uma adepta da magia da natureza que extrai o poder e a força das árvores.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: wilderness-life
+    - kind: granted
+      ability_id: patient-recovery
+  '2':
+    - kind: granted
+      ability_id: wooden-body
+  '3':
+    - kind: choice
+      options:
+        - tree-companion
+        - wilderness-awareness
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: tree-travel
+  '5':
+    - kind: granted
+      ability_id: great-tree
+  '6':
+    - kind: choice
+      options:
+        - dreadwood
+        - restorative-bloom
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

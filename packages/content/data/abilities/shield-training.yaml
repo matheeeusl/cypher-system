@@ -1,0 +1,13 @@
+id: shield-training
+name:
+  en: Shield Training
+  pt-BR: Treinamento com Escudo
+description:
+  en: If you use a shield, Speed defense tasks are eased by two steps instead of one.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 6

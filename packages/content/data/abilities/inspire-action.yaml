@@ -3,13 +3,18 @@ name:
   en: Inspire Action
   pt-BR: Inspirar Ação
 description:
-  en: If one ally can see and easily understand you, you can instruct that ally to take an action. If the ally chooses to take that exact action, they can do so as an additional action immediately. Doing so doesn't interfere with the ally taking a normal action on their turn.
-  pt-BR: Se um aliado conseguir ver e entender você facilmente, você pode instruí-lo a realizar uma ação. Se o aliado optar por realizar exatamente essa ação, pode fazê-lo imediatamente como uma ação adicional. Isso não interfere no aliado realizar uma ação normal em seu turno.
+  en: >-
+    If one ally can see and easily understand you, you can instruct
+    that ally to take an action. If the ally chooses to take that
+    exact action, they can do so as an additional action immediately.
+    Doing so doesn't interfere with the ally taking a normal action on
+    their turn.
+  pt-BR: "Tradução em breve."
 cost:
   pool: intellect
   amount: 4
 action_type: action
 sources:
   - type: focus
-    id: helps-their-friends
-    tier: 5
+    id: steers-the-coven
+    tier: 3

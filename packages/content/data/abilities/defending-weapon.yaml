@@ -1,0 +1,15 @@
+id: defending-weapon
+name:
+  en: Defending Weapon
+  pt-BR: Arma defensiva
+description:
+  en: >- 
+    When using your enchanted weapon, you are trained in Speed defense tasks.
+  pt-BR: >-
+    Ao usar sua arma encantada, você é treinado em tarefas de defesa baseadas em Velocidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 4

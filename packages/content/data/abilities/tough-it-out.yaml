@@ -1,0 +1,19 @@
+id: tough-it-out
+name:
+  en: Tough it out
+  pt-BR: Aguente firme
+description:
+  en: >- 
+    Working for a living has toughened
+    you over time. You have +1 to Armor against any kind of
+    physical damage, even damage that normally ignores Armor. 
+  pt-BR: >-
+    Trabalhar para ganhar a vida tornou você mais resistente
+    com o passar do tempo. Você tem +1 de Armadura contra qualquer tipo de
+    dano físico, inclusive dano que normalmente ignora a Armadura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-for-a-living
+    tier: 4

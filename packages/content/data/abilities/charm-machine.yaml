@@ -1,0 +1,20 @@
+id: charm-machine
+name:
+  en: Charm Machine
+  pt-BR: Encantar Máquina
+description:
+  en: >-
+    You convince an unintelligent machine to "like" you. A machine
+    that likes you is 50 percent less likely to function if said
+    function would cause you harm. Thus, if a foe attempts to detonate
+    a bomb near you controlled by a detonator that likes you, there is
+    a 50 percent chance that it won't explode.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: talks-to-machines
+    tier: 2

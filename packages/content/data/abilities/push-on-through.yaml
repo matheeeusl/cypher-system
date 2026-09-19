@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: never-says-die
     tier: 1
+  - type: focus
+    id: walks-the-wasteland
+    tier: 4

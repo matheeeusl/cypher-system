@@ -1,0 +1,16 @@
+id: monster-bane
+name:
+  en: Monster Bane
+  pt-BR: Flagelo dos Monstros
+description:
+  en: >-
+    You inflict 1 additional point of damage with weapons. When you
+    inflict damage to creatures more than twice as large or massive
+    as you, you inflict 3 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: slays-monsters
+    tier: 1

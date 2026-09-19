@@ -1,0 +1,39 @@
+id: works-for-a-living
+name:
+  en: Works For A Living
+  pt-BR: Trabalha para viver
+description:
+  en: You take great satisfaction in a job well done, whether it's coding, building houses, or mining asteroids.
+  pt-BR: Você sente grande satisfação com um trabalho bem feito, seja programando, construindo casas ou minerando asteroides.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: handy
+  '2':
+    - kind: granted
+      ability_id: muscles-of-iron
+  '3':
+    - kind: choice
+      options:
+        - eye-for-detail
+        - improvise
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: enhanced-might
+    - kind: granted
+      ability_id: tough-it-out
+  '5':
+    - kind: granted
+      ability_id: expert-skill
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-potential
+        - hard-won-resilience
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

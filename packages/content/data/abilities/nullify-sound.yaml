@@ -1,0 +1,18 @@
+id: nullify-sound
+name:
+  en: Nullify Sound
+  pt-BR: Anular Som
+description:
+  en: >-
+    You pulse perfectly misaligned sounds within short range to
+    create a zone of absolute quiet up to an immediate distance
+    across for one minute. All sound is canceled in the zone.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: thunders
+    tier: 3

@@ -1,0 +1,16 @@
+id: experienced-defender
+name:
+  en: Experienced Defender
+  pt-BR: Defensora Experiente
+description:
+  en: When wearing armor, you gain +1 to Armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 1
+  - type: focus
+    id: stretches
+    tier: 1

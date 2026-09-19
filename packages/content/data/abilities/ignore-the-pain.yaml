@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: sailed-beneath-the-jolly-roger
     tier: 1
+  - type: focus
+    id: walks-the-wasteland
+    tier: 5

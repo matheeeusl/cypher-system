@@ -1,0 +1,16 @@
+id: everything-is-a-weapon
+name:
+  en: Everything Is a Weapon
+  pt-BR: Tudo é uma Arma
+description:
+  en: >-
+    You can take any small object—a coin, a pen, a bottle, a stone,
+    and so on—and throw it with such force and precision that it
+    inflicts damage as a light weapon.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 4

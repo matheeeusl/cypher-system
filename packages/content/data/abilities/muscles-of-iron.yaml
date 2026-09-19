@@ -1,0 +1,23 @@
+id: muscles-of-iron
+name:
+  en: Muscles Of Iron
+  pt-BR: Músculos de Ferro
+description:
+  en: >-
+    For the next ten minutes, all Might-based actions other than attack rolls
+    that you attempt are eased. If you already have this
+    ability from another source, the effect of this ability lasts
+    for one hour instead of ten minutes. 
+  pt-BR: >-
+    Pelos próximos dez minutos, todas as ações baseadas em Força
+    que você tentar realizar — exceto testes de ataque — são facilitadas.
+    Se você já possuir essa habilidade de outra fonte, o efeito dela dura
+    uma hora em vez de dez minutos.
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: works-for-a-living
+    tier: 2

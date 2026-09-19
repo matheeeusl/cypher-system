@@ -1,0 +1,45 @@
+id: was-foretold
+name:
+  en: Was Foretold
+  pt-BR: Foi Predita
+description:
+  en: >-
+    You are the "chosen one," and prophecy, prediction,
+    prognostication, or some other method of determination expects
+    great things of you one day.
+  pt-BR: >-
+    Você é a "escolhida," e profecia, predição, prognóstico, ou algum
+    outro método de determinação espera grandes coisas de você um
+    dia.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: interaction-skills
+    - kind: granted
+      ability_id: knowing
+  '2':
+    - kind: granted
+      ability_id: destined-for-greatness
+  '3':
+    - kind: choice
+      options:
+        - overcome-all-obstacles
+        - hard-won-resilience
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: center-of-attention
+  '5':
+    - kind: granted
+      ability_id: show-them-the-way
+  '6':
+    - kind: choice
+      options:
+        - as-foretold-in-prophecy
+        - greater-enhanced-potential
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

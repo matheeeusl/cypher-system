@@ -1,0 +1,17 @@
+id: unmovable
+name:
+  en: Unmovable
+  pt-BR: Imóvel
+description:
+  en: >-
+    You avoid being knocked down, pushed back, or moved against your
+    will as long as you are upright and able to take actions.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 3

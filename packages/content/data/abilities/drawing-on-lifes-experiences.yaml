@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: lived-among-the-fey
     tier: 6
+  - type: focus
+    id: steers-the-coven
+    tier: 6

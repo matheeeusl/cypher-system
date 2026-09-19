@@ -1,0 +1,26 @@
+id: restorative-bloom
+name:
+  en: Restorative Bloom
+  pt-BR: Flor Restauradora
+description:
+  en: >-
+    When Wooden Body or Great Tree is in effect, you produce a
+    flower, acorn, fruit, or similar plant-based edible item. A
+    creature that eats this food is nourished for a full day and
+    restores their Might Pool, Speed Pool, and Intellect Pool to
+    their maximum values, as if they were fully rested. Eating a
+    second food produced by this ability in a day has no effect. If
+    the food is not eaten within ten minutes, it spoils.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Action to produce, action to eat." — a
+  # further non-standard action_type tag, approximated as
+  # `action_to_initiate`. Flagged for schema review (see schema gap
+  # item 3).
+cost:
+  pool: might
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: walks-the-wild-woods
+    tier: 6

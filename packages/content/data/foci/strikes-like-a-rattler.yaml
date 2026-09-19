@@ -1,0 +1,71 @@
+id: strikes-like-a-rattler
+name:
+  en: Strikes like a Rattler
+  pt-BR: Golpeia como uma Cascavel
+description:
+  en: >-
+    Your body is a venomous weapon able to cripple and kill. Watchful
+    as a coiled rattlesnake, you're ready to evade an attacker, then
+    strike back with fists, elbows, knees, or feet that sink into
+    flesh with the speed of fangs. Fact is, you've got a supernatural
+    connection to venomous serpents, the rattler in particular. That
+    spiritual fusion empowers you both offensively and defensively,
+    maybe even eventually giving you power over snakes, or allowing
+    you to become a serpent avatar after shedding your skin.
+  pt-BR: >-
+    Seu corpo é uma arma venenosa capaz de aleijar e matar. Vigilante
+    como uma cascavel enrolada, você está pronta para esquivar de um
+    atacante, e então revidar com punhos, cotovelos, joelhos, ou pés
+    que se cravam na carne com a velocidade de presas. O fato é que
+    você tem uma conexão sobrenatural com serpentes venenosas, a
+    cascavel em particular. Essa fusão espiritual a fortalece tanto
+    ofensiva quanto defensivamente, talvez até lhe dando eventualmente
+    poder sobre serpentes, ou permitindo que se torne uma avatar
+    serpente após mudar de pele.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: venomous-strike
+    - kind: granted
+      ability_id: scaled
+  '2':
+    - kind: granted
+      ability_id: snake-charmer
+    - kind: granted
+      ability_id: unarmed-fighting-style
+  '3':
+    - kind: choice
+      options:
+        - gain-rattler-companion
+        - stupefying-rattle
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: warmed-by-the-sun
+  '5':
+    - kind: granted
+      ability_id: venom-in-their-blood
+  '6':
+    - kind: choice
+      options:
+        - shed-skin
+        - spray-venom
+      count: 1
+type_swap_option:
+  ability_id: swift-slither
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. You rescued this character from a bad situation, but in doing so, you killed someone close to the character. Maybe that was also the PC's persecutor, but there's still some tension between you.
+    pt-BR: Escolha outro PJ. Você resgatou esse personagem de uma situação ruim, mas ao fazê-lo, matou alguém próximo a ele. Talvez essa pessoa também fosse a perseguidora do PJ, mas ainda há certa tensão entre vocês.
+  - en: Pick one other PC. You were once given a package to deliver to them from a mysterious source, but you lost the package before you were able to hand it over.
+    pt-BR: Escolha outro PJ. Uma vez lhe deram um pacote para entregar a ele vindo de uma fonte misteriosa, mas você perdeu o pacote antes de conseguir entregá-lo.
+  - en: Pick one other PC. You accidently envenomated them when they shook you awake or otherwise startled you. How they feel about that now is up to them.
+    pt-BR: Escolha outro PJ. Você acidentalmente o envenenou quando ele a acordou sacudindo-a ou de outra forma a assustou. Como ele se sente sobre isso agora cabe a ele decidir.
+  - en: Pick one other PC. They owe you a significant amount of money.
+    pt-BR: Escolha outro PJ. Ele lhe deve uma quantia significativa de dinheiro.
+minor_effect_suggestion:
+  en: You make yourself a target, easing your allies' defense rolls until your next turn.
+  pt-BR: Você se torna um alvo, facilitando as rolagens de defesa de seus aliados até seu próximo turno.
+major_effect_suggestion:
+  en: You get a second wind and can make an immediate recovery roll that doesn't count against your regular number of recovery rolls today.
+  pt-BR: Você ganha um novo fôlego e pode fazer uma rolagem de recuperação imediata que não conta contra seu número regular de rolagens de recuperação hoje.

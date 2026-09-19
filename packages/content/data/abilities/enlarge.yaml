@@ -13,24 +13,28 @@ description:
     hindered, and you are practiced in using your fists as heavy
     weapons. When the effects of Enlarge end, your Armor and Might
     Edge return to normal, and you subtract a number of points from
-    your Might Pool equal to the number you gained (if this brings
-    the Pool to 0, subtract the overflow first from your Speed Pool
-    and then, if necessary, from your Intellect Pool). Each
-    additional time you use Enlarge before your next ten-hour
-    recovery roll, you must apply an additional level of Effort.
-    Thus, the second time you use Enlarge, you must apply one level
-    of Effort; the third time you use Enlarge, two levels of Effort;
-    and so on.
+    your Might Pool equal to the number you gained (if this brings the
+    Pool to 0, subtract the overflow first from your Speed Pool and
+    then, if necessary, from your Intellect Pool). Each additional
+    time you use Enlarge before your next ten-hour recovery roll, you
+    must apply an additional level of Effort. Thus, the second time
+    you use Enlarge, you must apply one level of Effort; the third
+    time you use Enlarge, two levels of Effort; and so on.
   pt-BR: "Tradução em breve."
   # Note: source cost is printed as "1+ Might point" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
+  # A sidebar note contrasts this Focus's Enlarge with Grows to
+  # Towering Heights, saying a Shrinks to Minute Size character who
+  # gains Enlarge will never be quite as big as one who Grows to
+  # Towering Heights — flavor text, not folded into the mechanical
+  # description above.
 cost:
   pool: might
   amount: 1
 action_type: action_to_initiate
 sources:
   - type: focus
-    id: grows-to-towering-heights
-    tier: 1
+    id: shrinks-to-minute-size
+    tier: 3

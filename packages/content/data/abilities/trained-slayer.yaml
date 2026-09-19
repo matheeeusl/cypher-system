@@ -1,0 +1,13 @@
+id: trained-slayer
+name:
+  en: Trained Slayer
+  pt-BR: Matadora Treinada
+description:
+  en: You are trained in using swords.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: slays-monsters
+    tier: 3

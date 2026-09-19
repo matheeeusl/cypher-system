@@ -1,0 +1,15 @@
+id: cypher-casting
+name:
+  en: Cypher Casting
+  pt-BR: Conjuração de Cifra
+description:
+  en: >-
+    You can cast any of your subtle cyphers on another creature
+    instead of yourself. You must touch the creature to affect it.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: uses-wild-magic
+    tier: 1

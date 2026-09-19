@@ -1,0 +1,25 @@
+id: expert-skill
+name:
+  en: Expert Skill
+  pt-BR: Habilidade de especialista
+description:
+  en: >- 
+    Instead of rolling a d20, you can choose
+    to automatically succeed on a task you're trained in. The
+    task must be difficulty 4 or lower, and it can't be an
+    attack roll or a defense roll.
+    You can't apply Effort or other abilities to any task you
+    accomplish using Expert Skill
+  pt-BR: >-
+    Em vez de rolar um d20, você pode optar por
+    obter sucesso automático em uma tarefa na qual seja treinado. A
+    tarefa deve ter dificuldade 4 ou inferior, e não pode ser
+    uma jogada de ataque ou de defesa.
+    Você não pode aplicar Esforço ou outras habilidades a
+    nenhuma tarefa que realize utilizando a Habilidade de especialista.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-for-a-living
+    tier: 5

@@ -1,0 +1,42 @@
+id: enchanted-movement
+name:
+  en: Enchanted Movement
+  pt-BR: Movimento Encantado
+description:
+  en: >-
+    You use your enchanted weapon to move yourself to any
+    location within a long distance that you can see, as long
+    as there are no obstacles or barriers in your way. The
+    exact way this happens depends on your weapon; you
+    might throw your magical hammer and be pulled along
+    after it, shoot an arrow from your bow that pulls you
+    forward like a grapple line, and so on. In addition to the
+    normal options for using Effort, you can choose to use
+    Effort to increase the distance traveled; each level of
+    Effort used in this way increases the range by another
+    100 feet (30 m). If you have another ability (such as
+    from your type) that allows you to cross a long distance,
+    the range of that ability and this one increases to very long
+  pt-BR: >-
+    Você usa sua arma encantada para se deslocar até qualquer
+    local dentro de um alcance de longa distância que você consiga ver,
+    desde que não haja obstáculos ou barreiras em seu caminho. A
+    forma exata como isso ocorre depende da sua arma; você
+    pode arremessar seu martelo mágico e ser puxado na direção
+    dele, disparar uma flecha de seu arco que o puxe para frente
+    como um cabo de gancho, e assim por diante. Além das
+    opções normais de uso de Esforço, você pode optar por usar
+    Esforço para aumentar a distância percorrida; cada nível de
+    Esforço utilizado dessa maneira aumenta o alcance em mais
+    100 pés (30 m). Se você possuir outra habilidade (como uma
+    proveniente de seu tipo) que permita percorrer uma longa
+    distância, o alcance dessa habilidade e desta aqui aumenta
+    para distância muito longa.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 5

@@ -1,0 +1,37 @@
+id: wears-a-sheen-of-ice
+name:
+  en: Wears a Sheen of Ice
+  pt-BR: Veste um Brilho de Gelo
+description:
+  en: You command the wintery power of cold and ice.
+  pt-BR: Você comanda o poder invernal do frio e do gelo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: ice-armor
+  '2':
+    - kind: granted
+      ability_id: frost-touch
+  '3':
+    - kind: choice
+      options:
+        - freezing-touch
+        - ice-creation
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: resilient-ice-armor
+  '5':
+    - kind: granted
+      ability_id: cold-burst
+  '6':
+    - kind: choice
+      options:
+        - ice-storm
+        - winter-gauntlets
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

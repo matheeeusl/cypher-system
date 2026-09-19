@@ -1,0 +1,18 @@
+id: communication
+name:
+  en: Communication
+  pt-BR: Comunicação
+description:
+  en: >-
+    You can convey a basic concept to a creature that normally can't
+    speak or understand speech. The creature can also give you a very
+    basic answer to a simple question.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: speaks-for-the-land
+    tier: 3

@@ -1,0 +1,26 @@
+id: cold-burst
+name:
+  en: Cold Burst
+  pt-BR: Explosão de Frio
+description:
+  en: >-
+    You emit a burst of cold in all directions, up to short range.
+    All within the burst (except you) take 5 points of damage. If you
+    apply Effort to increase the damage rather than to ease the task,
+    you deal 2 additional points of damage per level of Effort
+    (instead of 3 points); targets in the area take 1 point of damage
+    even if you fail the attack roll.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Intellect points" — the
+  # schema's cost field can't represent an open-ended "+". Recorded as
+  # the baseline 5 Intellect points here, flagged for schema review
+  # (same approximation used for divine-intervention/return-to-the-
+  # obelisk).
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: wears-a-sheen-of-ice
+    tier: 5

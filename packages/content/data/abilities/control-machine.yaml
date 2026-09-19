@@ -1,0 +1,15 @@
+id: control-machine
+name:
+  en: Control Machine
+  pt-BR: Controlar Máquina
+description:
+  en: You can attempt to control the functions of any machine, intelligent or otherwise, within short range for ten minutes.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: talks-to-machines
+    tier: 6

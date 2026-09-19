@@ -1,0 +1,13 @@
+id: apocalyptic-stare
+name:
+  en: Apocalyptic Stare
+  pt-BR: Olhar Apocalíptico
+description:
+  en: Your demeanor is of someone who shouldn't be trifled with. You are trained in intimidation.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: walks-the-wasteland
+    tier: 3

@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: gambles-it-all-away
     tier: 1
+  - type: focus
+    id: was-foretold
+    tier: 1

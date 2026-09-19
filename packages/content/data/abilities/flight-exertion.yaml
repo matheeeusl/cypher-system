@@ -1,0 +1,22 @@
+id: flight-exertion
+name:
+  en: Flight Exertion
+  pt-BR: Esforço de Voo
+description:
+  en: >-
+    You can fly up to a short distance as your movement this round.
+    If all you do is move on your turn, you can fly up to a long
+    distance.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is a choice-of-pool, "3 Might or 3 Speed points" —
+  # the schema's single `pool` field can't represent that. Recorded as
+  # Might (first-listed option), same approximation used for
+  # devoted-defender/true-guardian/true-defender/extreme-mastery.
+cost:
+  pool: might
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: soars-on-amazing-wings
+    tier: 1

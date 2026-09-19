@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: raids
     tier: 1
+  - type: focus
+    id: walks-the-wild-woods
+    tier: 1

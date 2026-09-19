@@ -1,0 +1,18 @@
+id: quick-throw
+name:
+  en: Quick Throw
+  pt-BR: Arremesso Rápido
+description:
+  en: >-
+    After using a thrown light weapon, you draw another light weapon
+    and make another thrown attack against the same target or a
+    different one.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 3

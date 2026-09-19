@@ -1,0 +1,41 @@
+id: shrinks-to-minute-size
+name:
+  en: Shrinks to Minute Size
+  pt-BR: Encolhe a Tamanho Minúsculo
+description:
+  en: You can shrink down to the size of a bug and, with enough experience, even smaller.
+  pt-BR: Você consegue encolher até o tamanho de um inseto e, com experiência suficiente, até menor ainda.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: shrink
+    - kind: granted
+      ability_id: beneath-notice
+  '2':
+    - kind: granted
+      ability_id: smaller
+    - kind: granted
+      ability_id: advantages-of-being-small
+  '3':
+    - kind: choice
+      options:
+        - enlarge
+        - quick-switch
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: small-flight
+  '5':
+    - kind: granted
+      ability_id: shrink-others
+  '6':
+    - kind: choice
+      options:
+        - bigger
+        - tiny
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

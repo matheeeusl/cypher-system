@@ -47,3 +47,6 @@ sources:
   - type: focus
     id: shepherds-the-community
     tier: 2
+  - type: focus
+    id: solves-mysteries
+    tier: 3

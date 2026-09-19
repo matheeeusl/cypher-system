@@ -4,10 +4,13 @@ name:
   pt-BR: Força Aprimorada
 description:
   en: You gain 3 points to your Might Pool.
-  pt-BR: "Tradução em breve."
+  pt-BR: Você ganha 3 pontos para a sua Reserva de Força.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: lives-in-the-wilderness
     tier: 1
+  - type: focus
+    id: works-for-a-living
+    tier: 4

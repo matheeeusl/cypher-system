@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: merges-mind-with-machine
     tier: 2
+  - type: focus
+    id: weaponizes-chrome
+    tier: 2

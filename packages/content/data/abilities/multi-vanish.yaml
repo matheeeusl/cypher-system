@@ -1,0 +1,31 @@
+id: multi-vanish
+name:
+  en: Multi-Vanish
+  pt-BR: Desaparecer Múltiplo
+description:
+  en: >-
+    You turn up to five human-sized creatures or objects
+    invisible for a short amount of time. The targets you choose must be
+    within an immediate area and within short range of you
+    (if you are in the area, you can make yourself invisible
+    and don't count toward the limit of five invisible
+    targets). Anything invisible has an asset on stealth and
+    Speed defense tasks. Affected creatures can see each
+    other in a limited way, and you can see them clearly.
+  pt-BR: >-
+    Você torna até cinco criaturas ou objetos de tamanho humano
+    invisíveis por um curto período. Os alvos escolhidos devem estar
+    na área imediata e a curta distância de você
+    (se você estiver na área, pode tornar a si mesmo invisível
+    sem contar para o limite de cinco alvos invisíveis).
+    Qualquer coisa invisível recebe uma vantagem em testes de Furtividade e
+    defesa de Velocidade. As criaturas afetadas conseguem ver umas às outras
+    de forma limitada, e você consegue vê-las claramente.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: wields-invisible-force
+    tier: 3

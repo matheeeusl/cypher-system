@@ -1,0 +1,49 @@
+id: talks-to-machines
+name:
+  en: Talks to Machines
+  pt-BR: Fala com Máquinas
+description:
+  en: >-
+    You use your organic brain like a computer, interfacing
+    "wirelessly" with any electronic device. You can control and
+    influence them in ways that others can't.
+  pt-BR: >-
+    Você usa seu cérebro orgânico como um computador, interfaceando
+    "sem fio" com qualquer dispositivo eletrônico. Você consegue
+    controlar e influenciá-los de formas que os outros não conseguem.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: machine-affinity
+    - kind: granted
+      ability_id: distant-interface
+  '2':
+    - kind: granted
+      ability_id: coaxing-power
+    - kind: granted
+      ability_id: charm-machine
+  '3':
+    - kind: choice
+      options:
+        - intelligent-interface
+        - command-machine
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: machine-companion
+    - kind: granted
+      ability_id: robot-fighter
+  '5':
+    - kind: granted
+      ability_id: information-gathering
+  '6':
+    - kind: choice
+      options:
+        - control-machine
+        - improved-machine-companion
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

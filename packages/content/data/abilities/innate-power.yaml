@@ -1,0 +1,25 @@
+id: innate-power
+name:
+  en: Innate Power
+  pt-BR: Poder Inato
+description:
+  en: >-
+    Choose either your Might Pool or your Speed Pool.
+    When spending points to activate your focus
+    abilities, you can spend points from this Pool
+    instead of your Intellect Pool (in which case you use
+    your Might Edge or Speed Edge instead of your Intellect
+    Edge, as appropriate). 
+  pt-BR: >-
+    Escolha entre a sua Reserva de Vigor ou a sua
+    Reserva de Velocidade. Ao gastar pontos para ativar suas
+    habilidades de foco, você pode gastar pontos dessa Reserva
+    em vez da sua Reserva de Intelecto (caso em que você usa
+    sua Vantagem de Força ou Vantagem de Velocidade em vez da
+    sua Vantagem de Intelecto, conforme apropriado).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-an-enchanted-weapon
+    tier: 1

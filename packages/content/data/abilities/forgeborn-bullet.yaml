@@ -1,0 +1,27 @@
+id: forgeborn-bullet
+name:
+  en: Forgeborn Bullet
+  pt-BR: Bala Forjada
+description:
+  en: >-
+    Your fired bullet blooms into a fiery forgeborn with a somewhat
+    humanoid appearance that does your bidding for up to ten minutes.
+    (You can't summon a forgeborn and attack with the same bullet.)
+    After its task is complete, you dismiss the fiery forgeborn as
+    part of another action, or if it is destroyed, it implodes back
+    into a smoldering bullet.
+  pt-BR: "Tradução em breve."
+  # Note: source includes brief creature stats for the fiery forgeborn
+  # (level 4; anyone who tries to touch or strike it with a melee
+  # attack automatically takes 1 fire damage) — no schema field for
+  # inline creature stat blocks on an ability, dropped as with other
+  # summoned-creature abilities (e.g. giant spider/demon under Masters
+  # Spells).
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 5

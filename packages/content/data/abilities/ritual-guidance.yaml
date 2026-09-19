@@ -1,0 +1,16 @@
+id: ritual-guidance
+name:
+  en: Ritual Guidance
+  pt-BR: Orientação Ritual
+description:
+  en: >-
+    When you participate in a magical ritual with two or more members
+    of your coven, ritual tasks for all participants are eased by two
+    steps.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: steers-the-coven
+    tier: 4

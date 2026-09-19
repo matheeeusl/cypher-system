@@ -1,0 +1,15 @@
+id: beneath-notice
+name:
+  en: Beneath Notice
+  pt-BR: Abaixo da Percepção
+description:
+  en: >-
+    Your decreased size makes it difficult to find you. While Shrink
+    is active on you, all stealth tasks you attempt are eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: shrinks-to-minute-size
+    tier: 1

@@ -9,6 +9,9 @@ description:
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention).
+  # Under Turns Decay to Growth, this ability's Tier 4 grant is
+  # conditional on having chosen Necromancy at Tier 3 — see the note
+  # on `rewind-rot` for the full explanation.
 cost:
   pool: intellect
   amount: 5
@@ -16,4 +19,7 @@ action_type: action_to_initiate
 sources:
   - type: focus
     id: consorts-with-the-dead
+    tier: 4
+  - type: focus
+    id: turns-decay-to-growth
     tier: 4

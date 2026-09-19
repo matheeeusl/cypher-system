@@ -1,0 +1,15 @@
+id: melee-chrome
+name:
+  en: Melee Chrome
+  pt-BR: Cromado de Combate
+description:
+  en: Your machine parts grant you +1 to Armor, +1 to your Might Pool, and +1 to your Speed Pool.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived
+  # ability marker, not modeled — see schema gap item 6).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: weaponizes-chrome
+    tier: 1

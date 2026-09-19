@@ -1,0 +1,39 @@
+id: throws-with-deadly-accuracy
+name:
+  en: Throws With Deadly Accuracy
+  pt-BR: Arremessa com Precisão Mortal
+description:
+  en: Everything that leaves your hand goes exactly where you'd like it to go and at the range and speed to make the perfect impact.
+  pt-BR: Tudo que deixa sua mão vai exatamente aonde você quer que vá, e no alcance e velocidade certos para causar o impacto perfeito.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: precision
+  '2':
+    - kind: granted
+      ability_id: careful-aim
+  '3':
+    - kind: choice
+      options:
+        - quick-throw
+        - skill-with-defense
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: everything-is-a-weapon
+    - kind: granted
+      ability_id: specialized-throwing
+  '5':
+    - kind: granted
+      ability_id: whirlwind-of-throws
+  '6':
+    - kind: choice
+      options:
+        - lethal-damage
+        - mastery-with-defense
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

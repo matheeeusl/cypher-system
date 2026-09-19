@@ -1,0 +1,29 @@
+id: tree-companion
+name:
+  en: Tree Companion
+  pt-BR: Companheira Arbórea
+description:
+  en: >-
+    You animate a tree of approximately your size or smaller,
+    creating a level 3 creature with 1 Armor. The tree follows your
+    verbal commands for one hour, after which it reverts to a normal
+    tree (and roots itself where it stands). Unless the tree is
+    killed by damage, you can animate it again when the ability
+    duration expires, but any damage it has carries over to its newly
+    animated state. In addition to the normal options for using
+    Effort, you can choose to use Effort to affect more trees; each
+    level of Effort used affects one additional tree.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Intellect points" — the
+  # schema's cost field can't represent an open-ended "+". Recorded as
+  # the baseline 5 Intellect points here, flagged for schema review
+  # (same approximation used for divine-intervention/return-to-the-
+  # obelisk).
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: walks-the-wild-woods
+    tier: 3

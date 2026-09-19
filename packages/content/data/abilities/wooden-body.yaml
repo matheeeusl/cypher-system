@@ -1,0 +1,28 @@
+id: wooden-body
+name:
+  en: Wooden Body
+  pt-BR: Corpo de Madeira
+description:
+  en: >-
+    You transform your body into living wood for ten minutes, which
+    grants you several benefits. You gain +1 to Armor and you are
+    practiced in using your limbs as medium weapons. You need about
+    one-tenth as much air as a human. Hiding among trees or on a tree
+    is eased. However, in your wooden form you move more stiffly than
+    a creature of flesh, hindering your Speed defense rolls.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Might points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Might point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+  # Source adds a flavor sidebar: "Your wooden body might be smooth
+  # like a polished board, rough like tree bark, or a mix of both." —
+  # not folded into the mechanical description above.
+cost:
+  pool: might
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: walks-the-wild-woods
+    tier: 2

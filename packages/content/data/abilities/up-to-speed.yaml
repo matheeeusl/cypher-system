@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: flies-faster-than-a-bullet
     tier: 4
+  - type: focus
+    id: soars-on-amazing-wings
+    tier: 5

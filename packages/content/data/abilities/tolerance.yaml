@@ -1,0 +1,17 @@
+id: tolerance
+name:
+  en: Tolerance
+  pt-BR: Tolerância
+description:
+  en: >-
+    This hard life has built up your resistance over time, so you are
+    trained in resisting the effects of natural poisons (such as
+    those from plants or living creatures) and radiation. You're also
+    immune to natural diseases.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: walks-the-wasteland
+    tier: 1

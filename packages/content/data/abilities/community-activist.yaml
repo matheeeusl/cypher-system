@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: shepherds-the-community
     tier: 1
+  - type: focus
+    id: steers-the-coven
+    tier: 1

@@ -1,0 +1,16 @@
+id: meticulous-aim
+name:
+  en: Meticulous Aim
+  pt-BR: Mira Meticulosa
+description:
+  en: >-
+    If you spend an action lining up your shot while Smoldering Gun
+    is active, each level of Effort adds 5 points of damage to a
+    successful attack instead of 3.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 3

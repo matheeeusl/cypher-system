@@ -1,0 +1,17 @@
+id: wing-weapons
+name:
+  en: Wing Weapons
+  pt-BR: Armas das Asas
+description:
+  en: >-
+    You can use your wings to make melee attacks (even when flying),
+    leaving your hands and feet free. Your wings are medium bashing
+    or bladed weapons (your choice). You are practiced with this
+    attack.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: soars-on-amazing-wings
+    tier: 2

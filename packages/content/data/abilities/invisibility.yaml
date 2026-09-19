@@ -12,7 +12,16 @@ description:
     an action to hide your position. If you have another ability that
     also confers invisibility, using either one allows you to remain
     invisible for twice as long as the duration specified.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Você se torna invisível por dez minutos. Enquanto invisível, você
+    é especialista em tarefas de furtividade e defesa baseada em Velocidade. 
+    Esse efeito termina se você fizer algo que revele sua presença ou
+    posição — como atacar, usar uma habilidade, mover um objeto grande,
+    e assim por diante. Se isso acontecer, você pode recuperar o tempo
+    restante de invisibilidade realizando uma ação para ocultar sua
+    posição. Se você possuir outra habilidade que também conceda
+    invisibilidade, usar qualquer uma delas permite que você permaneça
+    invisível pelo dobro da duração especificada.
 cost:
   pool: intellect
   amount: 4
@@ -20,4 +29,7 @@ action_type: action_to_initiate_or_reinitiate
 sources:
   - type: focus
     id: infiltrates
+    tier: 4
+  - type: focus
+    id: wields-invisible-force
     tier: 4

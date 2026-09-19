@@ -1,0 +1,13 @@
+id: hardiness
+name:
+  en: Hardiness
+  pt-BR: Robustez
+description:
+  en: You are trained in Might defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 5

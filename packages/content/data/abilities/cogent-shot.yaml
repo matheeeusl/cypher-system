@@ -1,0 +1,24 @@
+id: cogent-shot
+name:
+  en: Cogent Shot
+  pt-BR: Tiro Cogente
+description:
+  en: >-
+    You can spend points from either your Speed Pool or your
+    Intellect Pool to apply Effort to hit a target with a gun or
+    increase the damage inflicted doing so.
+  pt-BR: "Tradução em breve."
+  # Note: source prints this Focus's Type Swap Option as two abilities
+  # (Cogent Shot and Reload) under one "TYPE SWAP OPTION" heading, not
+  # a choice — the schema's `type_swap_option` field holds only a
+  # single `ability_id`. Cogent Shot (the more central,
+  # spellcasting-analog ability) was chosen as the modeled option;
+  # `reload` was created as a separate file with the same Focus as its
+  # source but isn't reachable through `type_swap_option` — flagged as
+  # a new schema gap (a Focus needing more than one type-swap ability).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 1

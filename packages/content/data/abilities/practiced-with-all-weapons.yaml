@@ -1,0 +1,13 @@
+id: practiced-with-all-weapons
+name:
+  en: Practiced With All Weapons
+  pt-BR: Praticada com Todas as Armas
+description:
+  en: You become practiced with light, medium, and heavy weapons and suffer no penalty when using any kind of weapon.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: stands-like-a-bastion
+    tier: 3

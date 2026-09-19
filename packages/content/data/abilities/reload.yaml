@@ -1,0 +1,22 @@
+id: reload
+name:
+  en: Reload
+  pt-BR: Recarregar
+description:
+  en: >-
+    When using a weapon that normally requires an action to reload,
+    you can reload and fire (or fire and reload) in the same action.
+  pt-BR: "Tradução em breve."
+  # Note: printed as the second of two abilities under Spits Fire and
+  # Lead's single "TYPE SWAP OPTION" heading (alongside Cogent Shot) —
+  # the schema's `type_swap_option` field only holds one ability_id, so
+  # this file isn't referenced by that Focus's `type_swap_option`
+  # field. See the comment on `cogent-shot` for the full explanation.
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: spits-fire-and-lead
+    tier: 1

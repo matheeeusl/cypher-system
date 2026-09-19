@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: defends-the-weak
     tier: 2
+  - type: focus
+    id: walks-the-wasteland
+    tier: 2

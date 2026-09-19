@@ -3,8 +3,22 @@ name:
   en: Generate Force Field
   pt-BR: Gerar Campo de Força
 description:
-  en: You create six planes of solid force (level 8), each 30 feet (9 m) to a side, which persist for one hour. The planes must be contiguous, and they retain the position that you choose when initiating this ability. For instance, you could arrange the planes linearly, creating a wall 180 feet (55 m) long, or you could create a closed cube. The planes conform to the space available. Each additional level of Effort you apply increases the level of the barrier by one (to a maximum of level 10) or increases the number of hours it remains by one.
-  pt-BR: "Tradução em breve."
+  en: >-
+    You create six planes of solid force (level 8), each 30 feet (9 m) to a side,
+    which persist for one hour. The planes must be contiguous, and they retain
+    the position that you choose when initiating this ability. For instance, you
+    could arrange the planes linearly, creating a wall 180 feet (55 m) long, or
+    you could create a closed cube. The planes conform to the space available.
+    Each additional level of Effort you apply increases the level of the barrier
+    by one (to a maximum of level 10) or increases the number of hours it remains by one.
+  pt-BR: >-
+    Você cria seis planos de força sólida (nível 8), cada um com 9 metros (30 pés) de lado,
+    que persistem por uma hora. Os planos devem ser contíguos e mantêm
+    a posição escolhida por você ao ativar esta habilidade. Por exemplo, você
+    pode dispor os planos linearmente, criando uma parede de 55 metros (180 pés) de comprimento, ou
+    pode criar um cubo fechado. Os planos se adaptam ao espaço disponível. 
+    Cada nível adicional de Esforço aplicado aumenta o nível da barreira
+    em um (até um máximo de nível 10) ou aumenta em uma hora a duração da barreira.
   # Note: source cost is printed as "9+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 9 Intellect points here, flagged for schema review (same
@@ -16,4 +30,7 @@ action_type: action_to_initiate
 sources:
   - type: focus
     id: defends-the-gate
+    tier: 6
+  - type: focus
+    id: wields-invisible-force
     tier: 6

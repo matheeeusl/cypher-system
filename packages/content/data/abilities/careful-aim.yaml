@@ -1,0 +1,13 @@
+id: careful-aim
+name:
+  en: Careful Aim
+  pt-BR: Mira Cuidadosa
+description:
+  en: You are trained in attacks with all weapons that you throw.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 2

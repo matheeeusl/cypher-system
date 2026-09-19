@@ -1,7 +1,7 @@
 id: practiced-in-armor
 name:
   en: Practiced in Armor
-  pt-BR: Praticado com Armaduras
+  pt-BR: Praticada em Armadura
 description:
   en: >-
     You can wear armor for long periods of time without tiring and
@@ -9,9 +9,13 @@ description:
     reduce the Speed cost for wearing armor by 1. You start the game
     with a type of armor of your choice.
   pt-BR: "Tradução em breve."
+  # Note: source adds a sidebar: "If you have the Practiced in Armor
+  # ability from your type, exchange it with a different tier 1 type
+  # ability instead." — a character-building note, not folded into the
+  # mechanical description above.
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: masters-defense
-    tier: 2
+    id: stands-like-a-bastion
+    tier: 1

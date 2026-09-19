@@ -11,6 +11,10 @@ description:
   # the schema's single `pool` field can't represent that. Recorded as
   # Might (first-listed option), same approximation used for
   # devoted-defender/true-guardian/true-defender.
+  # Weaponizes Chrome's printing also marks this ability with "~" (a
+  # cyberware-derived ability marker, not modeled — see schema gap
+  # item 6); Masters Weaponry's printing has no marker — a new
+  # per-source "~" inconsistency.
 cost:
   pool: might
   amount: 6
@@ -18,4 +22,7 @@ action_type: enabler
 sources:
   - type: focus
     id: masters-weaponry
+    tier: 5
+  - type: focus
+    id: weaponizes-chrome
     tier: 5

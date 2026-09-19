@@ -1,0 +1,44 @@
+id: stretches
+name:
+  en: Stretches
+  pt-BR: Estica-se
+description:
+  en: Your armor, along with your size, strength, incredible training, or machine enhancement, makes you difficult to move or hurt.
+  pt-BR: Sua armadura, junto com seu tamanho, força, treinamento incrível, ou aprimoramento mecânico, torna você difícil de mover ou ferir.
+  # Note: this flavor line is printed identically under Stands Like a
+  # Bastion (page 353) — appears to be a source-side copy/paste
+  # duplication (Stretches' actual theme is elasticity/flexibility,
+  # not armor), not a transcription error on this project's part.
+  # Transcribed verbatim per the content-accuracy rule.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: contortionist
+    - kind: granted
+      ability_id: experienced-defender
+  '2':
+    - kind: granted
+      ability_id: far-step
+  '3':
+    - kind: choice
+      options:
+        - elastic-grip
+        - safe-fall
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: resilience
+  '5':
+    - kind: granted
+      ability_id: free-to-move
+  '6':
+    - kind: choice
+      options:
+        - break-the-ranks
+        - not-dead-yet
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

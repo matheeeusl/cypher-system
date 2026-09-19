@@ -11,7 +11,14 @@ description:
     target can also use its action attempting to break free. You can
     increase the level of the force snare by 1 per level of Effort
     applied.
-  pt-BR: "Tradução em breve."
+  pt-BR: >-
+    Um alvo a curta distância fica preso em uma armadilha feita de
+    linhas de força semitangíveis por um minuto. A armadilha de força é
+    uma construção de nível 2. Um alvo capturado pela armadilha de força
+    não pode sair de sua posição, mas pode atacar e defender normalmente.
+    O alvo também pode usar sua ação para tentar se libertar. Você pode
+    aumentar o nível da armadilha de força em 1 para cada nível de
+    Esforço aplicado.
   # Note: source cost is printed as "1+ Intellect point" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Intellect point here, flagged for schema review (same
@@ -23,4 +30,7 @@ action_type: action_to_initiate
 sources:
   - type: focus
     id: sculpts-hard-light
+    tier: 2
+  - type: focus
+    id: wields-invisible-force
     tier: 2

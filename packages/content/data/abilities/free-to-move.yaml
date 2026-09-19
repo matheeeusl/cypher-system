@@ -1,13 +1,18 @@
 id: free-to-move
 name:
   en: Free to Move
-  pt-BR: Livre para se Mover
+  pt-BR: Livre para Mover-se
 description:
-  en: You ignore all movement penalties and adjustments due to terrain or other obstacles. You can fit through any space large enough to fit your head. You can apply three free levels of Effort to tasks involving breaking free of bonds, a creature's grip, or any similar impediment.
-  pt-BR: Você ignora todas as penalidades e ajustes de movimento devido a terreno ou outros obstáculos. Você consegue passar por qualquer espaço grande o suficiente para caber sua cabeça. Você pode aplicar três níveis gratuitos de Esforço em tarefas envolvendo se libertar de amarras, do aperto de uma criatura, ou de qualquer impedimento semelhante.
+  en: >-
+    You ignore all movement penalties and adjustments due to terrain
+    or other obstacles. You can fit through any space large enough to
+    fit your head. Tasks involving breaking free of bonds, a
+    creature's grip, or any similar impediment gain three free levels
+    of Effort.
+  pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: collects-bounties
+    id: stretches
     tier: 5

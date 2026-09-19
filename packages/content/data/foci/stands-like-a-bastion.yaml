@@ -1,0 +1,43 @@
+id: stands-like-a-bastion
+name:
+  en: Stands Like a Bastion
+  pt-BR: Ergue-se Como um Bastião
+description:
+  en: Your armor, along with your size, strength, incredible training, or machine enhancement, makes you difficult to move or hurt.
+  pt-BR: Sua armadura, junto com seu tamanho, força, treinamento incrível, ou aprimoramento mecânico, torna você difícil de mover ou ferir.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: practiced-in-armor
+    - kind: granted
+      ability_id: experienced-defender
+  '2':
+    - kind: granted
+      ability_id: resist-the-elements
+  '3':
+    - kind: granted
+      ability_id: unmovable
+    - kind: choice
+      options:
+        - greater-enhanced-might
+        - practiced-with-all-weapons
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: living-wall
+  '5':
+    - kind: granted
+      ability_id: hardiness
+    - kind: granted
+      ability_id: mastery-in-armor
+  '6':
+    - kind: choice
+      options:
+        - lethal-damage
+        - shield-training
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

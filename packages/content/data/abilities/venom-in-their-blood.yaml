@@ -1,0 +1,19 @@
+id: venom-in-their-blood
+name:
+  en: Venom in Their Blood
+  pt-BR: Veneno no Sangue
+description:
+  en: >-
+    If you successfully attack a creature that you previously damaged
+    with Venomous Strike, you deal 9 additional points of damage.
+    Once you use this ability, you can't use it again during the
+    current conflict.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: strikes-like-a-rattler
+    tier: 5

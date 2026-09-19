@@ -1,0 +1,19 @@
+id: venomous-strike
+name:
+  en: Venomous Strike
+  pt-BR: Golpe Venenoso
+description:
+  en: For ten minutes, your unarmed attacks inflict 1 additional point of damage (ignores Armor) from venom.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Speed point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: strikes-like-a-rattler
+    tier: 1

@@ -1,0 +1,25 @@
+id: vanish
+name:
+  en: Vanish
+  pt-BR: Desaparecer
+description:
+  en: >-
+    You become invisible for a short amount of time.
+    While invisible, you have an asset on stealth and Speed defense tasks.
+    The invisibility ends at the end of your next turn, or if you do
+    something to reveal your presence or position—attacking, using an ability,
+    moving a large object, and so on.
+  pt-BR: >-
+    Você se torna invisível por um curto período. 
+    Enquanto invisível, você tem uma vantagem em testes de furtividade e de defesa contra velocidade. 
+    A invisibilidade termina ao final do seu próximo turno, ou se você fizer
+    algo que revele sua presença ou posição — atacar, usar uma habilidade,
+    mover um objeto grande, e assim por diante.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: wields-invisible-force
+    tier: 1

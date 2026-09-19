@@ -35,3 +35,9 @@ sources:
   - type: focus
     id: shepherds-the-community
     tier: 4
+  - type: focus
+    id: was-foretold
+    tier: 6
+  - type: focus
+    id: works-for-a-living
+    tier: 6

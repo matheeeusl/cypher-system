@@ -1,0 +1,43 @@
+id: slays-monsters
+name:
+  en: Slays Monsters
+  pt-BR: Mata Monstros
+description:
+  en: You kill monsters.
+  pt-BR: Você mata monstros.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: practiced-with-swords
+    - kind: granted
+      ability_id: monster-bane
+    - kind: granted
+      ability_id: monster-lore
+  '2':
+    - kind: granted
+      ability_id: will-of-legend
+  '3':
+    - kind: granted
+      ability_id: trained-slayer
+    - kind: choice
+      options:
+        - improved-monster-bane
+        - misdirect
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: fight-on
+  '5':
+    - kind: granted
+      ability_id: greater-skill-with-attacks
+  '6':
+    - kind: choice
+      options:
+        - murderer
+        - heroic-monster-bane
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

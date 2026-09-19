@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: masters-defense
     tier: 6
+  - type: focus
+    id: soars-on-amazing-wings
+    tier: 6

@@ -3,13 +3,11 @@ name:
   en: Will of Legend
   pt-BR: Vontade Lendária
 description:
-  en: >-
-    You are immune to attacks that would captivate, mesmerize,
-    charm, or otherwise influence your mind.
+  en: You are immune to attacks that would captivate, mesmerize, charm, or otherwise influence your mind.
   pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: hunts-witches
+    id: slays-monsters
     tier: 2

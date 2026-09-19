@@ -1,0 +1,39 @@
+id: uses-wild-magic
+name:
+  en: Uses Wild Magic
+  pt-BR: Usa Magia Selvagem
+description:
+  en: A spellcaster who learns a variety of spells instead of focusing on just one kind of magic.
+  pt-BR: Uma conjuradora que aprende uma variedade de feitiços em vez de se concentrar em apenas um tipo de magia.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: magical-repertoire
+    - kind: granted
+      ability_id: cypher-casting
+  '2':
+    - kind: granted
+      ability_id: expanded-repertoire
+  '3':
+    - kind: choice
+      options:
+        - cypher-surge
+        - faster-wild-magic
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: expanded-repertoire
+  '5':
+    - kind: granted
+      ability_id: magical-training
+  '6':
+    - kind: choice
+      options:
+        - maximize-cypher
+        - wild-insight
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

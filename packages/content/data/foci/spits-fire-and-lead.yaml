@@ -1,0 +1,73 @@
+id: spits-fire-and-lead
+name:
+  en: Spits Fire and Lead
+  pt-BR: Cospe Fogo e Chumbo
+description:
+  en: >-
+    You once crossed paths with a fiery demon, learned a bit of
+    blazecraft from an alchemist, or maybe just always had a special
+    talent for starting fires. That and your love of letting your six
+    shooters bark combine to make you the feared gunfighter that you
+    are today. You might have developed a reputation already as you
+    move between plains and badlands, using your uncanny skills to
+    avenge, promote justice, or just enrich yourself. Whatever the
+    case, it's how you'll acquit yourself when, inevitably, you draw
+    your burning iron.
+  pt-BR: >-
+    Você já cruzou caminho com um demônio flamejante, aprendeu um
+    pouco de piromancia com uma alquimista, ou talvez sempre tenha
+    tido um talento especial para atear fogo. Isso, somado ao seu
+    amor por deixar seus revólveres latirem, combina para fazer de
+    você a temida pistoleira que é hoje. Você talvez já tenha
+    desenvolvido uma reputação enquanto se move entre planícies e
+    terras hostis, usando suas habilidades incomuns para vingar,
+    promover a justiça, ou apenas se enriquecer. Seja qual for o
+    caso, é assim que você se sairá quando, inevitavelmente, sacar
+    seu ferro em brasa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: smoldering-gun
+    - kind: granted
+      ability_id: practiced-with-guns
+  '2':
+    - kind: granted
+      ability_id: summon-gun
+  '3':
+    - kind: choice
+      options:
+        - meticulous-aim
+        - quickdraw
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: blazing-bullets
+  '5':
+    - kind: granted
+      ability_id: forgeborn-bullet
+  '6':
+    - kind: choice
+      options:
+        - hot-shot
+        - never-miss-a-shot
+      count: 1
+type_swap_option:
+  ability_id: cogent-shot
+additional_equipment:
+  en: A six shooter (medium or heavy weapon) and 20 rounds of ammunition.
+  pt-BR: Um revólver (arma média ou pesada) e 20 cartuchos de munição.
+connection_options:
+  - en: Pick one other PC. This character also likes fire. You both deal 1 additional point of damage when you fight the same foe using fire.
+    pt-BR: Escolha outro PJ. Esse personagem também gosta de fogo. Vocês dois causam 1 ponto adicional de dano quando lutam contra o mesmo inimigo usando fogo.
+  - en: Pick one other PC. You're certain this character appreciates your smoldering gun and is impressed by how well you shoot. This may or may not actually be the case.
+    pt-BR: Escolha outro PJ. Você tem certeza de que esse personagem aprecia sua arma em brasa e fica impressionado com sua pontaria. Isso pode ou não ser verdade.
+  - en: Pick one other PC. They quietly think you're either a demon or kin to demons. How they feel about demons is up to them.
+    pt-BR: Escolha outro PJ. Ele secretamente acha que você é um demônio ou parente de demônios. Como ele se sente em relação a demônios cabe a ele decidir.
+  - en: Pick one other PC. You failed to protect this character at some point in the past, and you feel compelled to make up for your failure.
+    pt-BR: Escolha outro PJ. Você falhou em proteger esse personagem em algum momento do passado, e se sente compelida a compensar sua falha.
+minor_effect_suggestion:
+  en: You graze a target so that their tasks are hindered next round.
+  pt-BR: Você raspa em um alvo de forma que suas tarefas ficam dificultadas na próxima rodada.
+major_effect_suggestion:
+  en: The target ignites, taking 2 points of damage from fire each round for three rounds (or until they or an ally use an action to douse the flame).
+  pt-BR: O alvo pega fogo, sofrendo 2 pontos de dano de fogo a cada rodada por três rodadas (ou até que ele ou um aliado use uma ação para apagar as chamas).

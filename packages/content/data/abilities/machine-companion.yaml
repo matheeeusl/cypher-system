@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: pilots-starcraft
     tier: 3
+  - type: focus
+    id: talks-to-machines
+    tier: 4

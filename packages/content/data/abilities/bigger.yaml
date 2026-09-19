@@ -1,7 +1,7 @@
 id: bigger
 name:
   en: Bigger
-  pt-BR: Maior
+  pt-BR: Ainda Maior
 description:
   en: >-
     When you use Enlarge, you can choose to grow up to 12 feet (4 m)
@@ -12,5 +12,5 @@ cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: grows-to-towering-heights
-    tier: 2
+    id: shrinks-to-minute-size
+    tier: 6

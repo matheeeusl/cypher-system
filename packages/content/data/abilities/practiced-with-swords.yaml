@@ -1,0 +1,19 @@
+id: practiced-with-swords
+name:
+  en: Practiced With Swords
+  pt-BR: Praticada com Espadas
+description:
+  en: You are practiced with swords and can use them without penalty.
+  pt-BR: "Tradução em breve."
+  # Note: source adds a sidebar: "Although wielding a sword in a
+  # setting where people usually do not carry such weapons is fine,
+  # you can change the Slays Monsters sword-related abilities to use a
+  # different weapon, such as a whip, or a gun with silver bullets." —
+  # flavor/setting-adaptation guidance, not folded into the mechanical
+  # description above.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: slays-monsters
+    tier: 1

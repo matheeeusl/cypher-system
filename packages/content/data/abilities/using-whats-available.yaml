@@ -26,3 +26,6 @@ sources:
   - type: focus
     id: operates-undercover
     tier: 5
+  - type: focus
+    id: walks-the-wasteland
+    tier: 6

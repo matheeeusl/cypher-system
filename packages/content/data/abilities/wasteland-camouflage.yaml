@@ -1,0 +1,33 @@
+id: wasteland-camouflage
+name:
+  en: Wasteland Camouflage
+  pt-BR: Camuflagem do Ermo
+description:
+  en: >-
+    By drawing your clothing about you just so and using various
+    tricks and your deep knowledge of your surroundings, you become
+    invisible for ten minutes in any landscape that contains ruins of
+    the before-times. (You may also attempt this in a purely
+    wilderness setting, but if you do, you must spend 1 additional
+    point from Speed or Intellect, whichever Pool you activated this
+    power with.) While you are invisible, this asset eases your
+    stealth and Speed defense tasks by two steps. This effect ends if
+    you do something to reveal your presence or position—attacking,
+    using an ability, moving a large object, and so on. If this
+    occurs, you can regain the remaining invisibility effect by
+    taking an action to focus on hiding your position.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is both open-ended and a choice-of-pool, "5+
+  # Speed or Intellect points" — the schema's cost field can represent
+  # neither. Recorded as the baseline 5 Speed points (first-listed
+  # pool), flagged for schema review (same approximation used for
+  # extreme-mastery/flight-exertion combined with the open-ended-"+"
+  # convention used for divine-intervention).
+cost:
+  pool: speed
+  amount: 5
+action_type: action_to_initiate_or_reinitiate
+sources:
+  - type: focus
+    id: walks-the-wasteland
+    tier: 6

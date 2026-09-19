@@ -1,0 +1,13 @@
+id: resilient-ice-armor
+name:
+  en: Resilient Ice Armor
+  pt-BR: Armadura de Gelo Resiliente
+description:
+  en: The sheen of ice you generate using your Ice Armor ability gives you an additional +1 to Armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wears-a-sheen-of-ice
+    tier: 4

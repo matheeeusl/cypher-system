@@ -1,0 +1,13 @@
+id: precision
+name:
+  en: Precision
+  pt-BR: Precisão
+description:
+  en: You deal 2 additional points of damage with attacks using weapons that you throw.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: throws-with-deadly-accuracy
+    tier: 1

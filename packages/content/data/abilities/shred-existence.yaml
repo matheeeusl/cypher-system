@@ -1,0 +1,16 @@
+id: shred-existence
+name:
+  en: Shred Existence
+  pt-BR: Estraçalhar a Existência
+description:
+  en: >-
+    When you use Disrupting Touch, Scratch Existence, or Phase
+    Detonation, you inflict an additional 5 points of damage that
+    ignores Armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: shreds-the-walls-of-the-world
+    tier: 6

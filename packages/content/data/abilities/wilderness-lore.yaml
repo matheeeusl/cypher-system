@@ -1,0 +1,16 @@
+id: wilderness-lore
+name:
+  en: Wilderness Lore
+  pt-BR: Conhecimento da Natureza Selvagem
+description:
+  en: You are trained in wilderness navigation and in identifying plants and creatures.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: speaks-for-the-land
+    tier: 1
+  - type: focus
+    id: turns-decay-to-growth
+    tier: 1

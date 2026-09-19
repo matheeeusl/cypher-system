@@ -1,0 +1,26 @@
+id: continuous-transfer
+name:
+  en: Continuous Transfer
+  pt-BR: Transferência Contínua
+description:
+  en: >-
+    When you use either Drain Creature or Tap Currents to drain
+    energy, you can transfer it to another creature within short
+    range, restoring points to their Might or Speed Pools (or health
+    for an NPC). This occurs seamlessly, as part of the same action.
+  pt-BR: "Tradução em breve."
+  # Note: source Tier 6 heading reads "Choose either Explosive Release,
+  # or both Continuous Transfer and Drain at a Distance" — not a plain
+  # "choose one of N" but a choice between one path (Explosive Release
+  # alone) and a bundled pair (Continuous Transfer + Drain at a
+  # Distance together). The schema's `choice` shape (options + count)
+  # can't express a bundled option; modeled as a flat 3-option
+  # `count: 1` choice on the Focus file with a comment explaining the
+  # real rule, rather than silently normalizing it into a false "pick
+  # any one of three" — flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: transmits-energy
+    tier: 6

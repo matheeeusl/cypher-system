@@ -1,0 +1,17 @@
+id: anticipation
+name:
+  en: Anticipation
+  pt-BR: Antecipação
+description:
+  en: >-
+    You look ahead to see how your actions might unfold. The first
+    task you perform before the end of the next round gains an asset.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: travels-through-time
+    tier: 1
