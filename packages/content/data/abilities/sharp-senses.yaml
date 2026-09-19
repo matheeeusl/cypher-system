@@ -1,0 +1,13 @@
+id: sharp-senses
+name:
+  en: Sharp Senses
+  pt-BR: Sentidos Aguçados
+description:
+  en: You are trained in all tasks involving perception.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: separates-mind-from-body
+    tier: 2

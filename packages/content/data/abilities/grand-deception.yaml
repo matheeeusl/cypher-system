@@ -1,0 +1,17 @@
+id: grand-deception
+name:
+  en: Grand Deception
+  pt-BR: Grande Engano
+description:
+  en: >-
+    You convince an intelligent creature that can understand you and
+    isn't hostile of something that is wildly and obviously untrue.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: raids
+    tier: 3

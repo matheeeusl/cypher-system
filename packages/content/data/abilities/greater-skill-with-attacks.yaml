@@ -17,3 +17,9 @@ sources:
   - type: focus
     id: hunts-witches
     tier: 5
+  - type: focus
+    id: shepherds-the-community
+    tier: 6
+  - type: focus
+    id: slays-monsters
+    tier: 5

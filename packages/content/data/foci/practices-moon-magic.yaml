@@ -1,0 +1,85 @@
+id: practices-moon-magic
+name:
+  en: Practices Moon Magic
+  pt-BR: Pratica Magia Lunar
+description:
+  en: >-
+    The moon is a powerful force on the world, in terms of both
+    science and magic. She hangs overhead like a watchful eye, makes
+    creatures act strangely, represents cycles of time, and causes
+    the ebb and flow of the tides. To you, she is a friend, an
+    inspiration, and a constant reminder that someone is watching over
+    you. You wield her magic to create beams of dangerous light,
+    influence others, travel, and sense the underlying truth and
+    reality of things. The day is not your foe (after all, the moon is
+    often visible during the day), but you prefer the night when the
+    moon can be the brightest light in the sky. You might call
+    yourself a moonchild or a moon witch. You probably prefer black,
+    white, or grey clothing, with flowing portions such as long
+    sleeves, a cape, or a long coat. You might have one or more
+    tattoos or tokens representing the moon, either full, crescent, or
+    in multiple phases. Your favorite jewelry and adornments (like
+    buttons) usually have moonstones.
+  pt-BR: >-
+    A lua é uma força poderosa sobre o mundo, tanto em termos de
+    ciência quanto de magia. Ela paira no alto como um olho vigilante,
+    faz as criaturas agirem de forma estranha, representa ciclos do
+    tempo, e causa o fluxo e refluxo das marés. Para você, ela é uma
+    amiga, uma inspiração, e um lembrete constante de que alguém vela
+    por você. Você empunha sua magia para criar feixes de luz
+    perigosa, influenciar outros, viajar, e perceber a verdade e a
+    realidade subjacentes das coisas. O dia não é seu inimigo (afinal,
+    a lua costuma estar visível durante o dia), mas você prefere a
+    noite, quando a lua pode ser a luz mais brilhante no céu. Você
+    pode se autodenominar filha da lua ou bruxa lunar. Você
+    provavelmente prefere roupas pretas, brancas, ou cinzas, com
+    partes fluidas como mangas longas, uma capa, ou um casaco longo.
+    Você pode ter uma ou mais tatuagens ou amuletos representando a
+    lua, cheia, crescente, ou em múltiplas fases. Suas joias e
+    adornos favoritos (como botões) costumam ter pedras-da-lua.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: moonbeam
+  '2':
+    - kind: granted
+      ability_id: eyes-adjusted
+    - kind: granted
+      ability_id: inspire-aggression
+  '3':
+    - kind: granted
+      ability_id: moon-adaptation
+    - kind: choice
+      options:
+        - nightstrike
+        - spur-effort
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: moonlight-barrage
+  '5':
+    - kind: granted
+      ability_id: moon-portal
+  '6':
+    - kind: choice
+      options:
+        - precognition
+        - true-senses
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. You can harmlessly bounce your moon spells off them, increasing your range by a short distance and even allowing you to shoot around corners.
+    pt-BR: Escolha outro PJ. Você consegue fazer seus feitiços lunares ricochetearem inofensivamente nele, aumentando seu alcance em uma distância curta e até permitindo que você atire ao redor de esquinas.
+  - en: Pick one other PC. You know they think your obsession with the moon is weird, pointless, or superstitious, and you feel the need to prove them wrong.
+    pt-BR: Escolha outro PJ. Você sabe que ele acha sua obsessão pela lua estranha, sem sentido, ou supersticiosa, e você sente a necessidade de provar que ele está errado.
+  - en: Pick one other PC. Sometimes you can't detect them with any of your senses or affect them with your magic, even when they're right in front of you.
+    pt-BR: Escolha outro PJ. Às vezes você não consegue detectá-lo com nenhum de seus sentidos nem afetá-lo com sua magia, mesmo quando ele está bem na sua frente.
+  - en: Pick one other PC. Your power and theirs have an unusual connection; instead of using your one-action recovery roll on yourself, you can use it on them (and vice versa).
+    pt-BR: Escolha outro PJ. Seu poder e o dele têm uma ligação incomum; em vez de usar sua rolagem de recuperação de uma ação em si mesmo, você pode usá-la nele (e vice-versa).
+minor_effect_suggestion:
+  en: Your foe is dazzled by a burst of moonlight, hindering them for one round.
+  pt-BR: Seu inimigo fica ofuscado por uma explosão de luar, dificultando suas ações por uma rodada.
+major_effect_suggestion:
+  en: A surge of lunar power knocks your foe prone and disarms them of an object they're holding, which lands an immediate distance away.
+  pt-BR: Uma explosão de poder lunar derruba seu inimigo e o desarma de um objeto que estiver segurando, que cai a uma distância imediata.

@@ -1,0 +1,31 @@
+id: moonlight-barrage
+name:
+  en: Moonlight Barrage
+  pt-BR: Barragem de Luar
+description:
+  en: >-
+    You call down dozens of rays of moonlight into an adjacent short
+    area. All within the area take 4 points of damage from mystical
+    cold and glow with faint moonlight equivalent to a candle for one
+    minute (a creature can end this glow early as an action or by
+    entering an area that moonlight cannot penetrate, such as a deep
+    cave or a room with no windows). You automatically know if any
+    creature in the area is a shapechanger (such as a werewolf),
+    although this doesn't tell you what kind of shapechanger they are
+    or what their true form is. If you apply Effort to increase the
+    damage rather than to ease the task, you deal 2 additional points
+    of damage per level of Effort (instead of 3 points); targets in
+    the area take 1 point of damage even if you fail the attack roll.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: practices-moon-magic
+    tier: 4

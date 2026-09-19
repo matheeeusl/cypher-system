@@ -1,0 +1,44 @@
+id: separates-mind-from-body
+name:
+  en: Separates Mind From Body
+  pt-BR: Separa a Mente do Corpo
+description:
+  en: >-
+    You can project your mind out of your body to see faraway places
+    and learn secrets that would otherwise remain hidden.
+  pt-BR: >-
+    Você consegue projetar sua mente para fora do corpo para ver
+    lugares distantes e aprender segredos que de outra forma
+    permaneceriam ocultos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: third-eye
+  '2':
+    - kind: granted
+      ability_id: open-mind
+    - kind: granted
+      ability_id: sharp-senses
+  '3':
+    - kind: choice
+      options:
+        - roaming-third-eye
+        - find-the-hidden
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: sensor
+  '5':
+    - kind: granted
+      ability_id: psychic-passenger
+  '6':
+    - kind: choice
+      options:
+        - mental-projection
+        - improved-sensor
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

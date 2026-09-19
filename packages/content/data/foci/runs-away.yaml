@@ -1,0 +1,41 @@
+id: runs-away
+name:
+  en: Runs Away
+  pt-BR: Foge
+description:
+  en: Your first instinct is to run from danger, and you've gotten very good at it.
+  pt-BR: Seu primeiro instinto é fugir do perigo, e você ficou muito boa nisso.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: go-defensive
+  '2':
+    - kind: granted
+      ability_id: enhanced-speed
+    - kind: granted
+      ability_id: quick-to-flee
+  '3':
+    - kind: choice
+      options:
+        - incredible-running-speed
+        - greater-enhanced-speed
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: increasing-determination
+    - kind: granted
+      ability_id: quick-wits
+  '5':
+    - kind: granted
+      ability_id: go-to-ground
+  '6':
+    - kind: choice
+      options:
+        - burst-of-escape
+        - skill-with-defense
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

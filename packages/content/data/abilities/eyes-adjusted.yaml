@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: explores-dark-places
     tier: 2
+  - type: focus
+    id: practices-moon-magic
+    tier: 2

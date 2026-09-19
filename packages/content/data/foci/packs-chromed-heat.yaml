@@ -1,0 +1,65 @@
+id: packs-chromed-heat
+name:
+  en: Packs Chromed Heat
+  pt-BR: Carrega Cromo Aquecido
+description:
+  en: >-
+    Some of your organic parts have been replaced with artificial
+    components. Like most people in the city, you are a cyborg, but
+    your augmentations are extensive, and they assist you with ranged
+    combat. You almost certainly have metal plating and technical
+    components visible on your skin. As you advance, you can add to,
+    modify, or discover new functions for your machine parts.
+  pt-BR: >-
+    Algumas de suas partes orgânicas foram substituídas por
+    componentes artificiais. Como a maioria das pessoas na cidade,
+    você é um ciborgue, mas suas modificações são extensas, e o
+    auxiliam em combate à distância. Você quase certamente tem
+    placas de metal e componentes técnicos visíveis na pele. Conforme
+    avança, você pode adicionar, modificar, ou descobrir novas funções
+    para suas peças mecânicas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: shooter-chrome
+    - kind: granted
+      ability_id: gunner
+  '2':
+    - kind: granted
+      ability_id: careful-shot
+  '3':
+    - kind: choice
+      options:
+        - damage-dealer
+        - embedded-pistol
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: snap-shot
+  '5':
+    - kind: granted
+      ability_id: mastery-with-attacks
+  '6':
+    - kind: choice
+      options:
+        - advanced-targeting-system
+        - lethal-damage
+      count: 1
+type_swap_option:
+  ability_id: smart-link
+additional_equipment: null
+connection_options:
+  - en: Pick one other PC. This person has a bad habit of getting in the way of your shot. Anytime you miss and the GM rules (typically with a GM intrusion) that you hit an ally, it's usually them.
+    pt-BR: Escolha outro PJ. Essa pessoa tem o mau hábito de ficar no caminho do seu tiro. Sempre que você erra e o Mestre decide (normalmente com uma intrusão do Mestre) que você acerta um aliado, geralmente é essa pessoa.
+  - en: Pick one other PC. While working together on a job, you accidentally shot them. Not only are you not sure they've forgiven you for it, you're embarrassed by your clumsy error.
+    pt-BR: Escolha outro PJ. Enquanto trabalhavam juntos em um serviço, você acidentalmente atirou nele. Além de não ter certeza se ele já o perdoou por isso, você se sente envergonhado pelo seu erro desastrado.
+  - en: Pick one other PC. You suspect this person has a close connection with someone you had to kill. So far, they don't know who was responsible.
+    pt-BR: Escolha outro PJ. Você suspeita que essa pessoa tem uma ligação próxima com alguém que você teve que matar. Até agora, ela não sabe quem foi o responsável.
+  - en: Pick one other PC. You worked together on a job that went bad, but some clever teamwork and a bit of luck got you both out alive.
+    pt-BR: Escolha outro PJ. Vocês trabalharam juntos em um serviço que deu errado, mas um trabalho em equipe inteligente e um pouco de sorte tiraram os dois com vida.
+minor_effect_suggestion:
+  en: You can attempt an intimidation task against your foe as part of this action; if you succeed, the foe immediately surrenders.
+  pt-BR: Você pode tentar uma tarefa de intimidação contra seu inimigo como parte desta ação; se for bem-sucedido, o inimigo se rende imediatamente.
+major_effect_suggestion:
+  en: Your attack makes the foe bleed for 1 point of damage (plus 1 point for every level of Effort added to the attack's damage) each round until someone uses an action to bind the wound.
+  pt-BR: Seu ataque faz o inimigo sangrar, causando 1 ponto de dano (mais 1 ponto para cada nível de Esforço adicionado ao dano do ataque) a cada rodada até que alguém use uma ação para estancar o ferimento.

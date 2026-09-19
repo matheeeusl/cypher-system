@@ -1,0 +1,15 @@
+id: run-and-fight
+name:
+  en: Run and Fight
+  pt-BR: Correr e Lutar
+description:
+  en: You can move a short distance and make a melee attack that inflicts 2 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: operates-undercover
+    tier: 3

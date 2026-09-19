@@ -1,0 +1,13 @@
+id: dangerous-when-mounted
+name:
+  en: Dangerous When Mounted
+  pt-BR: Perigosa Quando Montada
+description:
+  en: When you attack from your saddle, you inflict 3 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: rides-like-the-wind
+    tier: 5

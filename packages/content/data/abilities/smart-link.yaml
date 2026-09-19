@@ -1,0 +1,22 @@
+id: smart-link
+name:
+  en: Smart Link
+  pt-BR: Vínculo Inteligente
+description:
+  en: You gain smart link cybernetics in both of your hands.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker, not modeled — see the schema gap note for Embeds
+  # Stealthtech/Explores Cyberspace). Also has a separate "SMART LINK"
+  # implant stat block (Implant: inserted into one hand, requires
+  # communicator implant / Value: $5,000 / Effect: allows the wearer to
+  # benefit from a smart weapon's special features) — folded into this
+  # description's effect only; implant location and price have no
+  # schema field and were dropped, same treatment as Cat's Paw
+  # (Embeds Stealthtech).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: packs-chromed-heat
+    tier: 1

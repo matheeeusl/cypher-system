@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: sees-beyond
     tier: 6
+  - type: focus
+    id: separates-mind-from-body
+    tier: 6

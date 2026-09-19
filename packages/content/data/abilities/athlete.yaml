@@ -1,0 +1,13 @@
+id: athlete
+name:
+  en: Athlete
+  pt-BR: Atleta
+description:
+  en: You are trained in carrying, climbing, jumping, and smashing.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 1

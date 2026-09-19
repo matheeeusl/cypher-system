@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: knows-everything
     tier: 6
+  - type: focus
+    id: plays-too-many-games
+    tier: 6

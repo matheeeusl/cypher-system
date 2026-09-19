@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: doesnt-do-much
     tier: 3
+  - type: focus
+    id: prepped-for-the-end
+    tier: 4

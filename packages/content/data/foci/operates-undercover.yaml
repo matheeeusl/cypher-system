@@ -1,0 +1,39 @@
+id: operates-undercover
+name:
+  en: Operates Undercover
+  pt-BR: Opera Disfarçado
+description:
+  en: Under the guise of someone else, you seek to find answers the powerful do not want divulged.
+  pt-BR: Sob o disfarce de outra pessoa, você busca encontrar respostas que os poderosos não querem revelar.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: investigate
+  '2':
+    - kind: granted
+      ability_id: disguise
+  '3':
+    - kind: choice
+      options:
+        - agent-provocateur
+        - run-and-fight
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: pull-a-fast-one
+  '5':
+    - kind: granted
+      ability_id: using-whats-available
+  '6':
+    - kind: choice
+      options:
+        - trust-to-luck
+        - deadly-strike
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A disguise kit.
+  pt-BR: Um kit de disfarce.
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

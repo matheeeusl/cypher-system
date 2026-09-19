@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: lived-among-the-fey
     tier: 3
+  - type: focus
+    id: separates-mind-from-body
+    tier: 3

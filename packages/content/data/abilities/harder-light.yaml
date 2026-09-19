@@ -1,0 +1,13 @@
+id: harder-light
+name:
+  en: Harder Light
+  pt-BR: Luz Mais Dura
+description:
+  en: When you create an object out of hard light, the object is one level higher than normal.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sculpts-hard-light
+    tier: 3

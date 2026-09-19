@@ -1,13 +1,17 @@
 id: total-awareness
 name:
   en: Total Awareness
-  pt-BR: Percepção Total
+  pt-BR: Consciência Total
 description:
-  en: You possess such a high level of awareness that it's very difficult to surprise, hide from, or sneak up on you. When you apply a level of Effort to initiative and perception tasks, you gain two free levels of Effort.
-  pt-BR: Você possui um nível tão alto de percepção que é muito difícil surpreendê-lo, esconder-se de você, ou se aproximar furtivamente de você. Quando você aplica um nível de Esforço em tarefas de iniciativa e percepção, ganha dois níveis gratuitos de Esforço.
+  en: >-
+    You possess such a high level of awareness that it's very
+    difficult to surprise, hide from, or sneak up on you. When you
+    apply a level of Effort to initiative and perception tasks, you
+    gain two free levels of Effort.
+  pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: collects-bounties
-    tier: 4
+    id: sheds-their-skin
+    tier: 5

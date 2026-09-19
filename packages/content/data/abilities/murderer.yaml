@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: murders
     tier: 6
+  - type: focus
+    id: slays-monsters
+    tier: 6

@@ -1,0 +1,17 @@
+id: raider-follower
+name:
+  en: Raider Follower
+  pt-BR: Seguidor Saqueador
+description:
+  en: >-
+    You gain a level 3 follower (initiative, stealth, and defense as
+    level 4). The follower does as you say and, generally speaking,
+    isn't someone who makes the other PCs in your group feel
+    uncomfortable because of their presence.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: raids
+    tier: 3

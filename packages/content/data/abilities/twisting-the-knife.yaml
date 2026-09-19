@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: fights-dirty
     tier: 6
+  - type: focus
+    id: raids
+    tier: 6

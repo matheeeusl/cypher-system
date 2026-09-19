@@ -1,0 +1,13 @@
+id: enhanced-might-edge
+name:
+  en: Enhanced Might Edge
+  pt-BR: Bônus de Força Aprimorado
+description:
+  en: You gain +1 to your Might Edge.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 1

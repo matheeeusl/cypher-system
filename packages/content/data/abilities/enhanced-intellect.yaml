@@ -32,3 +32,6 @@ sources:
   - type: focus
     id: learns-quickly
     tier: 5
+  - type: focus
+    id: plays-too-many-games
+    tier: 4

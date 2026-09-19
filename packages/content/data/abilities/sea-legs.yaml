@@ -1,0 +1,17 @@
+id: sea-legs
+name:
+  en: Sea Legs
+  pt-BR: Pernas de Marinheira
+description:
+  en: >-
+    You have gotten used to rough seas and unexpected surges. You are
+    trained in balance. Any movement task that would be hindered by a
+    pitching deck, moving through rigging, and so on is a routine task
+    for you.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 4

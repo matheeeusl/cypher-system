@@ -35,3 +35,9 @@ sources:
   - type: focus
     id: needs-no-weapon
     tier: 6
+  - type: focus
+    id: packs-chromed-heat
+    tier: 6
+  - type: focus
+    id: rages
+    tier: 6

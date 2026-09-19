@@ -1,0 +1,49 @@
+id: sailed-beneath-the-jolly-roger
+name:
+  en: Sailed Beneath the Jolly Roger
+  pt-BR: Navegou Sob a Bandeira Pirata
+description:
+  en: >-
+    You sailed with a crew of dread pirates, but you've decided to
+    end your days as a pirate and join some other cause. The question
+    is, will your past let you go so easily?
+  pt-BR: >-
+    Você navegou com uma tripulação de piratas temíveis, mas decidiu
+    encerrar seus dias como pirata e se juntar a outra causa. A
+    questão é: seu passado a deixará ir tão facilmente?
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: ignore-the-pain
+    - kind: granted
+      ability_id: sailor
+  '2':
+    - kind: granted
+      ability_id: taking-advantage
+    - kind: granted
+      ability_id: fearsome-reputation
+  '3':
+    - kind: choice
+      options:
+        - skill-with-attacks
+        - skill-with-defense
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: sea-legs
+    - kind: granted
+      ability_id: movement-skills
+  '5':
+    - kind: granted
+      ability_id: lost-in-the-chaos
+  '6':
+    - kind: choice
+      options:
+        - duel-to-the-death
+        - successive-attack
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

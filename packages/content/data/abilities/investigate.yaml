@@ -1,0 +1,13 @@
+id: investigate
+name:
+  en: Investigate
+  pt-BR: Investigar
+description:
+  en: You are trained in perception, cryptography, deceiving, and breaking into computers.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: operates-undercover
+    tier: 1

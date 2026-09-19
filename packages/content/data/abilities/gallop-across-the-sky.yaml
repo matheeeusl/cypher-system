@@ -1,0 +1,24 @@
+id: gallop-across-the-sky
+name:
+  en: Gallop Across the Sky
+  pt-BR: Galopar Pelo Céu
+description:
+  en: >-
+    Your ride your mount into the air and fly for one minute at a
+    rate of up to a long distance each round. For each level of
+    Effort you apply, you can increase the duration of the effect by
+    one minute or carry one ally of about your size with you that
+    will also fit on your mount.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Speed points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: rides-like-the-wind
+    tier: 4

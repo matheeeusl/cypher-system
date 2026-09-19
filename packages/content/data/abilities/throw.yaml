@@ -9,6 +9,10 @@ description:
     that creature up to 1d20 feet away from you. The creature lands
     prone.
   pt-BR: "Tradução em breve."
+  # Note: this is the 2019 Cypher System Rulebook misprint text (as
+  # printed under Grows to Towering Heights) — see `throw-unarmed`
+  # (Performs Feats of Strength) for the corrected 2015-text version
+  # under the same printed name "Throw".
 cost:
   pool: might
   amount: 2

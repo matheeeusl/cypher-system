@@ -21,3 +21,6 @@ sources:
   - type: focus
     id: takes-animal-shape
     tier: 3
+  - type: focus
+    id: sheds-their-skin
+    tier: 3

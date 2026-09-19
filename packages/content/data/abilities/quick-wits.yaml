@@ -3,11 +3,14 @@ name:
   en: Quick Wits
   pt-BR: Reflexos Rápidos
 description:
-  en: When performing a task that would normally require spending points from your Intellect Pool, you can spend points from your Speed Pool instead.
+  en: >-
+    When performing a task that would normally require spending
+    points from your Intellect Pool, you can spend points from your
+    Speed Pool instead.
   pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: doesnt-do-much
-    tier: 6
+    id: runs-away
+    tier: 4

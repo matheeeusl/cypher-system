@@ -1,0 +1,20 @@
+id: taking-advantage
+name:
+  en: Taking Advantage
+  pt-BR: Aproveitar a Vantagem
+description:
+  en: >-
+    When your foe is weakened, dazed, stunned, moved down the damage
+    track, or disadvantaged in some other way, your attacks against
+    that foe are eased beyond any other modifications due to the
+    disadvantage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 2
+  - type: focus
+    id: scavenges
+    tier: 3

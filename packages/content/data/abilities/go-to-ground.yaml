@@ -1,0 +1,19 @@
+id: go-to-ground
+name:
+  en: Go to Ground
+  pt-BR: Se Esconder
+description:
+  en: >-
+    You move up to a long distance and attempt to hide. When you do,
+    you gain an asset on the stealth task to blend in, disappear, or
+    otherwise escape the senses of everyone previously aware of your
+    presence.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: runs-away
+    tier: 5

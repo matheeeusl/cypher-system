@@ -4,8 +4,8 @@ name:
   pt-BR: Ataque Sucessivo
 description:
   en: >-
-    If you take down a foe, you can immediately make another attack on
-    that same turn against a new foe within your reach. The second
+    If you take down a foe, you can immediately make another attack
+    on that same turn against a new foe within your reach. The second
     attack is part of the same action. You can use this ability with
     melee attacks and ranged attacks.
   pt-BR: "Tradução em breve."
@@ -15,5 +15,5 @@ cost:
 action_type: enabler
 sources:
   - type: focus
-    id: is-wanted-by-the-law
-    tier: 3
+    id: sailed-beneath-the-jolly-roger
+    tier: 6

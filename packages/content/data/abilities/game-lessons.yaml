@@ -1,0 +1,16 @@
+id: game-lessons
+name:
+  en: Game Lessons
+  pt-BR: Lições de Jogo
+description:
+  en: >-
+    You've played so many games that you've picked up some real
+    knowledge. Choose any two noncombat skills. You are trained in
+    those skills.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: plays-too-many-games
+    tier: 1

@@ -1,0 +1,17 @@
+id: task-specialization
+name:
+  en: Task Specialization
+  pt-BR: Especialização em Tarefa
+description:
+  en: >-
+    Choose one task (other than attacks or defense) that you are
+    trained in. You become specialized in that task. (You can instead
+    use this ability as Task Training to become trained in a task you
+    aren't trained in.)
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: prepped-for-the-end
+    tier: 5

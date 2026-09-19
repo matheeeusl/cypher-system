@@ -1,0 +1,15 @@
+id: preternatural-senses
+name:
+  en: Preternatural Senses
+  pt-BR: Sentidos Preternaturais
+description:
+  en: >-
+    While you are conscious and able to use an action, you cannot be
+    surprised. In addition, you are trained in initiative actions.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: shepherds-spirits
+    tier: 3

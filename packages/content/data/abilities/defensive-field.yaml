@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: conducts-weird-science
     tier: 6
+  - type: focus
+    id: sculpts-hard-light
+    tier: 6

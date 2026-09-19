@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: helps-their-friends
     tier: 6
+  - type: focus
+    id: raids
+    tier: 6

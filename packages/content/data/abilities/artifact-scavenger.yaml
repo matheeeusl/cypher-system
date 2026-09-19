@@ -1,0 +1,31 @@
+id: artifact-scavenger
+name:
+  en: Artifact Scavenger
+  pt-BR: Vasculhadora de Artefatos
+description:
+  en: >-
+    You've developed a sixth sense for searching for the most valuable
+    items in the wasteland. If you spend the time required to succeed
+    on two scavenging tasks, you can exchange all the results you
+    would otherwise obtain for a chance to gain an artifact of the
+    GM's choosing if you succeed on a difficulty 6 Intellect task. You
+    can use this ability at most once per day, and never within the
+    same general area. This costs 6 Intellect points plus 2 XP.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is "6 Intellect points + 2 XP" — an XP-cost
+  # addition the schema's pool+amount `cost` field can't represent;
+  # baseline Intellect cost recorded, the XP addition folded into
+  # prose (same approximation used for divine-intervention's
+  # XP-alternative and word-of-command's cypher-sacrifice cost).
+  # Source tag is "Action to initiate, several hours to complete." — a
+  # further non-standard action_type tag, approximated as
+  # `action_to_initiate`. Flagged for schema review (see schema gap
+  # item 3).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: scavenges
+    tier: 6

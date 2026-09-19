@@ -1,0 +1,19 @@
+id: moon-adaptation
+name:
+  en: Moon Adaptation
+  pt-BR: Adaptação Lunar
+description:
+  en: You can survive indefinitely in a vacuum environment (such as the moon or space).
+  pt-BR: "Tradução em breve."
+  # Note: source prints no action_type tag at all for this ability (the
+  # entry ends and the page moves directly into the Tier 3 ability
+  # choice) — inferred as `enabler` by analogy with other passive,
+  # always-on abilities; same situation as water-sea (Channels Divine
+  # Blessings). Flagged in case a future extraction finds a tag this
+  # one missed.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: practices-moon-magic
+    tier: 3

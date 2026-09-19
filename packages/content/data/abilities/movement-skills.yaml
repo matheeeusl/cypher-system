@@ -11,3 +11,9 @@ sources:
   - type: focus
     id: moves-like-a-cat
     tier: 2
+  - type: focus
+    id: rages
+    tier: 2
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 4

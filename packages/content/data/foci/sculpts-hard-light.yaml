@@ -1,0 +1,39 @@
+id: sculpts-hard-light
+name:
+  en: Sculpts Hard Light
+  pt-BR: Esculpe Luz Sólida
+description:
+  en: You create physical objects out of hard light that you can use for offense and defense.
+  pt-BR: Você cria objetos físicos a partir de luz sólida que pode usar para ataque e defesa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: automatic-glow
+    - kind: granted
+      ability_id: temporary-light
+  '2':
+    - kind: granted
+      ability_id: entangling-force
+  '3':
+    - kind: choice
+      options:
+        - harder-light
+        - sculpt-light
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+  '5':
+    - kind: granted
+      ability_id: improved-sculpt-light
+  '6':
+    - kind: choice
+      options:
+        - defensive-field
+        - flight
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

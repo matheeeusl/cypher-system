@@ -1,0 +1,13 @@
+id: resist-tricks
+name:
+  en: Resist Tricks
+  pt-BR: Resistir a Truques
+description:
+  en: You're trained in solving puzzles and recognizing tricks from years of game playing.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: plays-too-many-games
+    tier: 2

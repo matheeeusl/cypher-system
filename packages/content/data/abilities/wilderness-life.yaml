@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: lives-in-the-wilderness
     tier: 1
+  - type: focus
+    id: raids
+    tier: 1

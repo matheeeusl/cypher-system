@@ -32,3 +32,6 @@ sources:
   - type: focus
     id: merges-mind-with-machine
     tier: 5
+  - type: focus
+    id: sculpts-hard-light
+    tier: 4

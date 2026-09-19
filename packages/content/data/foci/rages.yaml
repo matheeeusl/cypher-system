@@ -1,0 +1,39 @@
+id: rages
+name:
+  en: Rages
+  pt-BR: Enfurece-se
+description:
+  en: When you go berserk, everyone fears you.
+  pt-BR: Quando você entra em fúria, todos a temem.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: frenzy
+  '2':
+    - kind: granted
+      ability_id: greater-enhanced-might
+    - kind: granted
+      ability_id: movement-skills
+  '3':
+    - kind: choice
+      options:
+        - power-strike
+        - unarmored-fighter
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-frenzy
+  '5':
+    - kind: granted
+      ability_id: attack-and-attack-again
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-potential
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,20 @@
+id: fixer
+name:
+  en: Fixer
+  pt-BR: Consertador
+description:
+  en: >-
+    You've learned enough of the past that you are trained in tasks
+    to repair and build before-times equipment, or equipment made
+    with before-times parts. In addition, repairing and building
+    tasks take you about 20% less time to complete.
+  pt-BR: "Tradução em breve."
+  # Note: source prints a trailing "(RR, 123)" internal OG-CSPG page
+  # cross-reference, omitted as an unresolved pointer (same treatment
+  # as as-if-one-creature/embraced-by-darkness).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: remembers-the-past
+    tier: 2

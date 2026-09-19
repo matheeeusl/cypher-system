@@ -1,0 +1,16 @@
+id: trained-for-toughing-it
+name:
+  en: Trained for Toughing It
+  pt-BR: Treinado para Aguentar
+description:
+  en: >-
+    Choose one noncombat skill that would be helpful for surviving
+    after the apocalypse, such as hunting, tracking, carpentry, or
+    stealth. You are trained in that skill.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: prepped-for-the-end
+    tier: 1

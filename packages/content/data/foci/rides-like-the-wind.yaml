@@ -1,0 +1,71 @@
+id: rides-like-the-wind
+name:
+  en: Rides Like the Wind
+  pt-BR: Cavalga Como o Vento
+description:
+  en: >-
+    Few things feel more empowering than when you jump into the
+    saddle and ride! Maybe you have a special mount called Thunder,
+    Caballo, Dusty, or a name you don't share with others. Or perhaps
+    any mount will serve, because you're just that skilled in the
+    saddle. Whatever the case, when you and your mount are moving,
+    other folks say they have a hard time figuring where one of you
+    stops and the other begins—you act as a single creature that
+    almost nothing can stop.
+  pt-BR: >-
+    Poucas coisas parecem mais empoderadoras do que pular na sela e
+    cavalgar! Talvez você tenha uma montaria especial chamada Trovão,
+    Caballo, Poeira, ou um nome que não compartilha com ninguém. Ou
+    talvez qualquer montaria sirva, porque você é simplesmente tão
+    habilidosa na sela assim. Seja qual for o caso, quando você e sua
+    montaria estão em movimento, as pessoas dizem que têm dificuldade
+    em distinguir onde uma termina e a outra começa — vocês agem como
+    uma única criatura que quase nada consegue deter.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: rider
+    - kind: granted
+      ability_id: trick-rider
+  '2':
+    - kind: granted
+      ability_id: supernatural-jump
+  '3':
+    - kind: granted
+      ability_id: expert-rider
+    - kind: choice
+      options:
+        - enhanced-speed-edge
+        - nimble-in-the-saddle
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: gallop-across-the-sky
+  '5':
+    - kind: granted
+      ability_id: dangerous-when-mounted
+  '6':
+    - kind: choice
+      options:
+        - ride-across-the-miles
+        - tornado-rider
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A mount plus riding gear including saddle, bridle, and stirrups.
+  pt-BR: Uma montaria mais equipamento de montaria, incluindo sela, freio, e estribos.
+connection_options:
+  - en: Pick one other PC. You promised that character a ride anywhere they wanted to go on your mount. They haven't yet taken you up on your offer.
+    pt-BR: Escolha outro PJ. Você prometeu a ele uma carona para qualquer lugar que quisesse ir em sua montaria. Ele ainda não aceitou sua oferta.
+  - en: Pick one other PC. You rode them to safety after they got in trouble with the law. Trouble hasn't found you because of it. Yet.
+    pt-BR: Escolha outro PJ. Você o levou em segurança depois que ele se meteu em problemas com a lei. Problemas ainda não a encontraram por causa disso. Ainda.
+  - en: Pick one other PC. That character was hired to kill you, but they didn't, because they like your mount.
+    pt-BR: Escolha outro PJ. Esse personagem foi contratado para matá-la, mas não o fez, porque gosta de sua montaria.
+  - en: Pick one other PC. Due to a misunderstanding of identity, you rode them down once. They still have a scar, but it's up to them whether they hold it against you.
+    pt-BR: Escolha outro PJ. Devido a um mal-entendido de identidade, você o atropelou uma vez. Ele ainda tem uma cicatriz, mas cabe a ele decidir se guarda rancor por isso.
+minor_effect_suggestion:
+  en: You restore 2 points to your Speed Pool or 2 health to your mount.
+  pt-BR: Você restaura 2 pontos em sua Reserva de Agilidade ou 2 de vida à sua montaria.
+major_effect_suggestion:
+  en: You can take a second action this round.
+  pt-BR: Você pode realizar uma segunda ação nesta rodada.

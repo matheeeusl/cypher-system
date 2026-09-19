@@ -3,11 +3,15 @@ name:
   en: Perfect Control
   pt-BR: Controle Perfeito
 description:
-  en: You no longer need to make a roll to use Beast Form or change into your normal form. You can change back and forth as your action. When you return to your normal form, you no longer take a penalty to your rolls.
-  pt-BR: Você não precisa mais fazer uma rolagem para usar Forma Bestial ou voltar à sua forma normal. Você pode se transformar de um lado para o outro como sua ação. Ao retornar à sua forma normal, você não sofre mais penalidade em suas rolagens.
+  en: >-
+    You no longer need to make a roll to use Beast Form or change into
+    your normal form. You can change back and forth as your action.
+    When you return to your normal form, you no longer take a penalty
+    to your rolls.
+  pt-BR: "Tradução em breve."
 cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: howls-at-the-moon
+    id: sheds-their-skin
     tier: 6

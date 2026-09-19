@@ -1,0 +1,24 @@
+id: tinker
+name:
+  en: Tinker
+  pt-BR: Adaptar
+description:
+  en: >-
+    You make a device do something different from its original
+    purpose. For example, a blaster becomes a bomb. A scanner becomes
+    a signal booster for a radio transmitter. A music player becomes a
+    battery for another device. The effective level of the modified
+    device is 1 lower than normal, and the device is rendered unusable
+    (for its original purpose) until repaired.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: prepped-for-the-end
+    tier: 2
+  - type: focus
+    id: raids
+    tier: 2

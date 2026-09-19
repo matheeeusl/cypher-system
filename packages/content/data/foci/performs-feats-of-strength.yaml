@@ -1,0 +1,39 @@
+id: performs-feats-of-strength
+name:
+  en: Performs Feats of Strength
+  pt-BR: Realiza Feitos de Força
+description:
+  en: A muscled prodigy, you can haul incredible weight, hurl your body through the air, and punch through doors.
+  pt-BR: Um prodígio musculoso, você consegue carregar pesos incríveis, arremessar seu corpo pelos ares, e atravessar portas com socos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: athlete
+    - kind: granted
+      ability_id: enhanced-might-edge
+  '2':
+    - kind: granted
+      ability_id: feat-of-strength
+  '3':
+    - kind: choice
+      options:
+        - iron-fist
+        - throw-unarmed
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-might
+  '5':
+    - kind: granted
+      ability_id: brute-strike
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-might
+        - jump-attack
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,21 @@
+id: embedded-pistol
+name:
+  en: Embedded Pistol
+  pt-BR: Pistola Embutida
+description:
+  en: >-
+    You gain an embedded pistol cybernetic in one of your arms. You
+    are trained in using this weapon. (If you replace this embedded
+    weapon with another, you lose the training in the previous weapon
+    and gain training in the new one.) An embedded pistol is a light,
+    medium, or heavy firearm with a ten-round capacity. The weapon is
+    concealed until you wish to use it.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker, not modeled — see schema gap item 6).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: packs-chromed-heat
+    tier: 3

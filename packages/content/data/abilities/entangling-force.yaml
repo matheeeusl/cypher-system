@@ -1,0 +1,26 @@
+id: entangling-force
+name:
+  en: Entangling Force
+  pt-BR: Força Enredante
+description:
+  en: >-
+    A target within short range is subject to a snare constructed of
+    semi-tangible lines of force for one minute. The force snare is a
+    level 2 construct. A target caught in the force snare cannot move
+    from its position, but it can attack and defend normally. The
+    target can also use its action attempting to break free. You can
+    increase the level of the force snare by 1 per level of Effort
+    applied.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Intellect point" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Intellect point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: sculpts-hard-light
+    tier: 2

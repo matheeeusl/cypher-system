@@ -1,0 +1,18 @@
+id: burst-of-escape
+name:
+  en: Burst of Escape
+  pt-BR: Explosão de Fuga
+description:
+  en: >-
+    You can take two separate actions this round, as long as one of
+    them is to hide or to move in a direction that is not toward a
+    foe.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: runs-away
+    tier: 6

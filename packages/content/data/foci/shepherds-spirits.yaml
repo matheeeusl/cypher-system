@@ -1,0 +1,51 @@
+id: shepherds-spirits
+name:
+  en: Shepherds Spirits
+  pt-BR: Pastoreia Espíritos
+description:
+  en: >-
+    Wandering souls, nature spirits, and elemental beings aid and
+    support you. In some settings, the Shepherds Spirits focus applies
+    to only one kind of spirit, such as spirits of the deceased,
+    nature spirits, and so on.
+  pt-BR: >-
+    Almas errantes, espíritos da natureza, e seres elementais a
+    auxiliam e apoiam. Em alguns cenários, o foco Pastoreia Espíritos
+    se aplica a apenas um tipo de espírito, como espíritos dos
+    falecidos, espíritos da natureza, e assim por diante.
+  # Note: the GM might allow trading a high-tier ability for an
+  # "Alternate Ability," Improved Command Spirit (raises Command
+  # Spirit's creature-level cap from 5 to 7) — an optional,
+  # GM-discretion swap outside the normal tier_abilities structure,
+  # not modeled (no schema field for alternate/optional ability
+  # trades). Flagged here rather than silently dropped.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: question-the-spirits
+  '2':
+    - kind: granted
+      ability_id: spirit-accomplice
+  '3':
+    - kind: choice
+      options:
+        - command-spirit
+        - preternatural-senses
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: wraith-cloak
+  '5':
+    - kind: granted
+      ability_id: call-dead-spirit
+  '6':
+    - kind: choice
+      options:
+        - call-otherworldly-spirit
+        - infuse-spirit
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,18 @@
+id: spur-effort
+name:
+  en: Spur Effort
+  pt-BR: Estimular Esforço
+description:
+  en: >-
+    You select an ally within immediate range. If that character
+    applies Effort to a task on their next turn, they can apply a free
+    level of Effort on that task.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: practices-moon-magic
+    tier: 3

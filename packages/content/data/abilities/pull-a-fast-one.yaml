@@ -1,0 +1,18 @@
+id: pull-a-fast-one
+name:
+  en: Pull a Fast One
+  pt-BR: Passar a Perna
+description:
+  en: >-
+    When you're running a con, picking a pocket, fooling or tricking a
+    dupe, sneaking something by a guard, and so on, you gain an asset
+    on the task.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: operates-undercover
+    tier: 4

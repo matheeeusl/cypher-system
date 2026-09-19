@@ -1,0 +1,19 @@
+id: gaming-god
+name:
+  en: Gaming God
+  pt-BR: Deus dos Jogos
+description:
+  en: >-
+    Any time you use Effort on an Intellect action, add one of the
+    following enhancements to the action (your choice):
+
+    - Free level of Effort
+
+    - Automatic minor effect
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: plays-too-many-games
+    tier: 6

@@ -1,0 +1,19 @@
+id: open-mind
+name:
+  en: Open Mind
+  pt-BR: Mente Aberta
+description:
+  en: >-
+    You open your mind to increase your awareness. You gain an asset
+    to any task involving perception. While you have this asset and
+    you are conscious and able to take actions, other characters gain
+    no benefit from surprising you. The effect lasts for one hour.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: separates-mind-from-body
+    tier: 2

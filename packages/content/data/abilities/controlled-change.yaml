@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: howls-at-the-moon
     tier: 2
+  - type: focus
+    id: sheds-their-skin
+    tier: 2

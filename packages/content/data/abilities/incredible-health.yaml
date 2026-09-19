@@ -13,5 +13,5 @@ cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: is-idolized-by-millions
+    id: scavenges
     tier: 3

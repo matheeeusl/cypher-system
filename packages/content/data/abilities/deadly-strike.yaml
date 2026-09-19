@@ -15,3 +15,6 @@ sources:
   - type: focus
     id: masters-weaponry
     tier: 6
+  - type: focus
+    id: operates-undercover
+    tier: 6

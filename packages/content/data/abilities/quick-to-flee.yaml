@@ -1,0 +1,13 @@
+id: quick-to-flee
+name:
+  en: Quick to Flee
+  pt-BR: Rápida em Fugir
+description:
+  en: You are trained in stealth and movement tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: runs-away
+    tier: 2

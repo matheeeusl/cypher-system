@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: murders
     tier: 5
+  - type: focus
+    id: packs-chromed-heat
+    tier: 3

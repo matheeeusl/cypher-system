@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: never-says-die
     tier: 4
+  - type: focus
+    id: runs-away
+    tier: 4

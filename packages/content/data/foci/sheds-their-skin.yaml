@@ -1,0 +1,65 @@
+id: sheds-their-skin
+name:
+  en: Sheds Their Skin
+  pt-BR: Muda de Pele
+description:
+  en: >-
+    You have a secret self. In the quiet and stillness, you become
+    not someone else, but something else. A being of tooth and nail,
+    of flipper and fin, of mane and moon. But you believe that in
+    order to survive and thrive, you must keep your other form
+    secret, safe from prying eyes and listening ears. Your beast form
+    can be anything you choose, such as a selkie, wolf, horse, swan,
+    and so on. Work with your GM to determine the details of your
+    form. A character who Sheds Their Skin may also want to work with
+    the GM to come up with even more suitable abilities for their
+    particular form. For example, a selkie character might choose
+    Aquatic Combatant as their tier 3 ability instead of one of the
+    abilities listed here, particularly if the GM expects the
+    character to be moving through water regularly.
+  pt-BR: >-
+    Você tem um eu secreto. No silêncio e na quietude, você não se
+    torna outra pessoa, mas outra coisa. Um ser de dentes e garras,
+    de nadadeiras e barbatanas, de juba e lua. Mas você acredita que,
+    para sobreviver e prosperar, precisa manter sua outra forma em
+    segredo, protegida de olhos curiosos e ouvidos atentos. Sua forma
+    bestial pode ser o que você escolher, como uma selkie, um lobo,
+    um cavalo, um cisne, e assim por diante. Trabalhe com seu Mestre
+    para determinar os detalhes de sua forma. Um personagem que Muda
+    de Pele também pode querer trabalhar com o Mestre para criar
+    habilidades ainda mais adequadas à sua forma específica. Por
+    exemplo, uma personagem selkie pode escolher Combatente Aquática
+    como sua habilidade de nível 3 em vez de uma das habilidades
+    listadas aqui, particularmente se o Mestre espera que a
+    personagem se mova pela água regularmente.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: beast-form
+  '2':
+    - kind: granted
+      ability_id: controlled-change
+  '3':
+    - kind: choice
+      options:
+        - greater-beast-form
+        - hard-choices
+        - aquatic-combatant
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-controlled-change
+  '5':
+    - kind: granted
+      ability_id: total-awareness
+  '6':
+    - kind: choice
+      options:
+        - escape-plan
+        - perfect-control
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

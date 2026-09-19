@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: is-licensed-to-carry
     tier: 2
+  - type: focus
+    id: packs-chromed-heat
+    tier: 2

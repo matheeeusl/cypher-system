@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: made-a-deal-with-death
     tier: 6
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 6

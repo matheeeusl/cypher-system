@@ -38,3 +38,12 @@ sources:
   - type: focus
     id: masters-the-swarm
     tier: 3
+  - type: focus
+    id: prepped-for-the-end
+    tier: 6
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 3
+  - type: focus
+    id: shepherds-the-community
+    tier: 2

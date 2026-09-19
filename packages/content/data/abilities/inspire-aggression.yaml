@@ -1,0 +1,19 @@
+id: inspire-aggression
+name:
+  en: Inspire Aggression
+  pt-BR: Inspirar Agressão
+description:
+  en: >-
+    Your words twist the mind of a character within short range who
+    is able to understand you, unlocking their more primitive
+    instincts. As a result, they gain an asset on their Might-based
+    attack rolls for one minute.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: practices-moon-magic
+    tier: 2

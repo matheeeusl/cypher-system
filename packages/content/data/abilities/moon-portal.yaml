@@ -1,0 +1,26 @@
+id: moon-portal
+name:
+  en: Moon Portal
+  pt-BR: Portal Lunar
+description:
+  en: >-
+    You instantaneously transmit yourself to any location on Earth, as
+    long as moonlight is shining on you and on the spot you want to
+    be. Alternatively, you can instantaneously transport yourself from
+    Earth to the moon or back again. In addition to the normal options
+    for using Effort, you can use Effort to bring other people with
+    you; each level of Effort used in this way affects up to three
+    additional targets. You must touch any additional targets.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "6+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 6 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: practices-moon-magic
+    tier: 5

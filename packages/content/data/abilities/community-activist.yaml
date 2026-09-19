@@ -1,0 +1,16 @@
+id: community-activist
+name:
+  en: Community Activist
+  pt-BR: Ativista da Comunidade
+description:
+  en: >-
+    When speaking to others in a community you have a strong
+    connection to, you are trained in persuasion and intimidation
+    tasks about topics that directly relate to the community.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: shepherds-the-community
+    tier: 1

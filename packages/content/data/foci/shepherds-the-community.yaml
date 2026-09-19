@@ -1,0 +1,39 @@
+id: shepherds-the-community
+name:
+  en: Shepherds the Community
+  pt-BR: Pastoreia a Comunidade
+description:
+  en: You keep the place where you live safe from all danger.
+  pt-BR: Você mantém o lugar onde vive protegido de todo perigo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: community-knowledge
+    - kind: granted
+      ability_id: community-activist
+  '2':
+    - kind: granted
+      ability_id: skill-with-attacks
+  '3':
+    - kind: choice
+      options:
+        - shepherds-fury
+        - skill-with-defense
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-potential
+  '5':
+    - kind: granted
+      ability_id: evasion
+  '6':
+    - kind: choice
+      options:
+        - greater-skill-with-attacks
+        - protective-wall
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

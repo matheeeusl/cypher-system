@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: is-wanted-by-the-law
     tier: 1
+  - type: focus
+    id: runs-away
+    tier: 2

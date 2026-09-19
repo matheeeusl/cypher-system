@@ -20,3 +20,9 @@ sources:
   - type: focus
     id: moves-like-a-cat
     tier: 3
+  - type: focus
+    id: plays-too-many-games
+    tier: 3
+  - type: focus
+    id: rides-like-the-wind
+    tier: 3

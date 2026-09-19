@@ -1,0 +1,15 @@
+id: brute-strike
+name:
+  en: Brute Strike
+  pt-BR: Golpe Brutal
+description:
+  en: You deal 4 additional points of damage with all melee attacks until the end of the next round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 5

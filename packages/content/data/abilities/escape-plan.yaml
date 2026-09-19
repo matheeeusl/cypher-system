@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: murders
     tier: 6
+  - type: focus
+    id: sheds-their-skin
+    tier: 6

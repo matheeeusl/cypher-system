@@ -1,0 +1,18 @@
+id: lost-in-the-chaos
+name:
+  en: Lost in the Chaos
+  pt-BR: Perdido no Caos
+description:
+  en: >-
+    When faced with several foes at once, you have developed tactics
+    for using their numbers against them. When two or more foes
+    attack you at once in melee, you play one off the other. Speed
+    defense rolls or attack rolls (your choice) against them are
+    eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 5

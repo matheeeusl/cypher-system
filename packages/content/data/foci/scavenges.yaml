@@ -1,0 +1,39 @@
+id: scavenges
+name:
+  en: Scavenges
+  pt-BR: Vasculha
+description:
+  en: When not running and hiding, you sift the ruins of civilization for useful remnants to ensure your survival.
+  pt-BR: Quando não está correndo e se escondendo, você vasculha as ruínas da civilização em busca de remanescentes úteis para garantir sua sobrevivência.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: post-apocalyptic-survivor
+    - kind: granted
+      ability_id: ruin-lore
+  '2':
+    - kind: granted
+      ability_id: junkmonger
+  '3':
+    - kind: choice
+      options:
+        - taking-advantage
+        - incredible-health
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: know-where-to-look
+  '5':
+    - kind: granted
+      ability_id: recycled-cyphers
+  '6':
+    - kind: choice
+      options:
+        - artifact-scavenger
+        - reactive-field
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

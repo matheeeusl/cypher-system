@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: commands-mental-powers
     tier: 5
+  - type: focus
+    id: practices-moon-magic
+    tier: 6

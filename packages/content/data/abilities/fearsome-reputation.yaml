@@ -1,0 +1,21 @@
+id: fearsome-reputation
+name:
+  en: Fearsome Reputation
+  pt-BR: Reputação Temível
+description:
+  en: >-
+    You and those you travel with have earned a fearsome reputation
+    in some parts. If your foes have heard of you, affected targets
+    within earshot become afraid, and all attacks they make against
+    you are hindered until one or more of them successfully inflicts
+    damage on you or one of your allies, at which time their fear
+    abates.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: sailed-beneath-the-jolly-roger
+    tier: 2

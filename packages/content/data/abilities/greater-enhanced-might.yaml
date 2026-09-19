@@ -14,3 +14,12 @@ sources:
   - type: focus
     id: looks-for-trouble
     tier: 6
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 4
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 6
+  - type: focus
+    id: rages
+    tier: 2

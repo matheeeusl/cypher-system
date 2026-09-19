@@ -1,0 +1,18 @@
+id: trick-rider
+name:
+  en: Trick Rider
+  pt-BR: Cavaleira Acrobática
+description:
+  en: >-
+    You can make an attack with a light or medium ranged weapon and
+    attempt a riding task as a single action. Riding tasks could be as
+    straightforward as keeping up with a fleeing foe or as tricky as
+    hanging upside down beneath your galloping mount, standing upright
+    on the saddle of your galloping mount, and so on.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: rides-like-the-wind
+    tier: 1

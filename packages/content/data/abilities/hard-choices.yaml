@@ -1,0 +1,15 @@
+id: hard-choices
+name:
+  en: Hard Choices
+  pt-BR: Escolhas Difíceis
+description:
+  en: >-
+    Sometimes, you believe that you've got to lie to those who trust
+    you for their own good. You are specialized in deception tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sheds-their-skin
+    tier: 3

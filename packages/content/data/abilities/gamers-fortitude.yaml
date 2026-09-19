@@ -1,0 +1,20 @@
+id: gamers-fortitude
+name:
+  en: Gamer's Fortitude
+  pt-BR: Vigor de Jogador
+description:
+  en: >-
+    Sitting and playing a game for twelve hours straight is not
+    something most people can do, but you've figured it out. Once
+    after each ten-hour recovery roll, you can transfer up to 5 points
+    between your Pools in any combination, at a rate of 1 point per
+    round. For example, you could transfer 3 points of Might to Speed
+    and 2 points of Intellect to Speed, which would take a total of
+    five rounds.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: plays-too-many-games
+    tier: 5

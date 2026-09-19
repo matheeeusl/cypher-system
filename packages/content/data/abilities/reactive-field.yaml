@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: awakens-dreams
     tier: 6
+  - type: focus
+    id: scavenges
+    tier: 6

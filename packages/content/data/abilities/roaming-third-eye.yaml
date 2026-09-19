@@ -1,0 +1,19 @@
+id: roaming-third-eye
+name:
+  en: Roaming Third Eye
+  pt-BR: Terceiro Olho Errante
+description:
+  en: >-
+    When you use your Third Eye ability, you can place the sensor
+    anywhere within long range. In addition, until that ability ends,
+    you can use an action to move the sensor anywhere within short
+    range of its starting position.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: separates-mind-from-body
+    tier: 3

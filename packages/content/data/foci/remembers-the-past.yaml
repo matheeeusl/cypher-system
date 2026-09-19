@@ -1,0 +1,77 @@
+id: remembers-the-past
+name:
+  en: Remembers the Past
+  pt-BR: Recorda o Passado
+description:
+  en: >-
+    You are a student of the before-times. Maybe that's because you
+    grew up in the ruins of an old library and read everything as
+    your hobby, you found a friendly AI archivist who taught you
+    about how things once were, you're long-lived and were alive
+    before the apocalypse, or you have a deep recollection of the
+    world before the end for some other reason. This knowledge gives
+    you an appreciation of the before-times as well as a point of
+    view that many other survivors lack that benefits you in and
+    around ruins. You can find things others wouldn't know to look
+    for, plucking fruits of the past that would otherwise go
+    unharvested.
+  pt-BR: >-
+    Você é uma estudiosa dos tempos de antes. Talvez seja porque você
+    cresceu nas ruínas de uma antiga biblioteca e lia tudo como
+    hobby, encontrou uma arquivista de IA amigável que lhe ensinou
+    como as coisas eram antigamente, você é longeva e estava viva
+    antes do apocalipse, ou você tem uma profunda lembrança do mundo
+    de antes do fim por algum outro motivo. Esse conhecimento lhe dá
+    uma apreciação pelos tempos de antes, bem como um ponto de vista
+    que muitos outros sobreviventes não têm, o que a beneficia dentro
+    e ao redor de ruínas. Você consegue encontrar coisas que outros
+    não saberiam procurar, colhendo os frutos do passado que de outra
+    forma ficariam esquecidos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: ruin-lore
+    - kind: granted
+      ability_id: knowledge-skills
+  '2':
+    - kind: granted
+      ability_id: fixer
+    - kind: granted
+      ability_id: know-the-way
+  '3':
+    - kind: choice
+      options:
+        - disable-mechanisms
+        - resource-seeker
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: know-where-to-look
+  '5':
+    - kind: granted
+      ability_id: ambusher
+  '6':
+    - kind: choice
+      options:
+        - discipline-of-watchfulness
+        - escape-the-ruins
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: One book on a technical topic such as plumbing, carpentry, electronics, or physics; it provides you an asset on a related task if you spend ten minutes perusing the book ahead of time.
+  pt-BR: Um livro sobre um tópico técnico, como encanamento, carpintaria, eletrônica, ou física; ele lhe concede um bônus em uma tarefa relacionada se você passar dez minutos folheando o livro previamente.
+connection_options:
+  - en: Pick one other PC. They remind you of someone you knew or learned about from the past, because of either the way they look or the way they act, and that is what first drew you to them.
+    pt-BR: Escolha outro PJ. Ele a lembra de alguém que você conheceu ou sobre quem aprendeu no passado, seja pela forma como se parece ou pela forma como age, e foi isso que primeiro a atraiu para ele.
+  - en: Pick one other PC. You saved their life because you found them trapped in a before-times ruin and you knew how best to free them.
+    pt-BR: Escolha outro PJ. Você salvou a vida dele porque o encontrou preso em uma ruína dos tempos de antes e sabia a melhor forma de libertá-lo.
+  - en: Pick one other PC. You were lost out past the ruins in the wilderness, but they happened across you and saved your life.
+    pt-BR: Escolha outro PJ. Você estava perdida além das ruínas na natureza selvagem, mas ele a encontrou por acaso e salvou sua vida.
+  - en: Pick one other PC. This character comes from the same place you do, and you knew each other as children.
+    pt-BR: Escolha outro PJ. Esse personagem vem do mesmo lugar que você, e vocês se conheciam quando crianças.
+minor_effect_suggestion:
+  en: You remember something about the area that proves advantageous later, such as realizing there's probably a fresh location to scavenge close by that has a good chance of not having been picked over by other survivors.
+  pt-BR: Você se lembra de algo sobre a área que se mostra vantajoso mais tarde, como perceber que provavelmente há um local próximo para vasculhar que ainda não foi saqueado por outros sobreviventes.
+major_effect_suggestion:
+  en: A foe forgets about you unless you draw attention to yourself.
+  pt-BR: Um inimigo se esquece de você, a menos que você chame atenção para si mesma.

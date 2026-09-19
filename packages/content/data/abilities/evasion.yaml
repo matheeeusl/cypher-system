@@ -9,5 +9,5 @@ cost: null
 action_type: enabler
 sources:
   - type: focus
-    id: infiltrates
+    id: shepherds-the-community
     tier: 5

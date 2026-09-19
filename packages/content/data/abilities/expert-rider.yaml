@@ -1,0 +1,13 @@
+id: expert-rider
+name:
+  en: Expert Rider
+  pt-BR: Cavaleira Especialista
+description:
+  en: You are specialized in all tasks related to riding a mount, including those pertinent to the care and healing of your mount.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: rides-like-the-wind
+    tier: 3

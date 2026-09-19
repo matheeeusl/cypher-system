@@ -1,0 +1,13 @@
+id: aquatic-combatant
+name:
+  en: Aquatic Combatant
+  pt-BR: Combatente Aquática
+description:
+  en: You ignore penalties for any action (including fighting) in underwater environments.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sheds-their-skin
+    tier: 3

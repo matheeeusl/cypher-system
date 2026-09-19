@@ -1,0 +1,19 @@
+id: feat-of-strength
+name:
+  en: Feat of Strength
+  pt-BR: Feito de Força
+description:
+  en: >-
+    Any task that depends on brute force is eased. Examples include
+    smashing down a barred door, tearing open a locked container,
+    lifting or moving a heavy object, or striking someone with a
+    melee weapon.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 2

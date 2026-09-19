@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: curses-the-world
     tier: 4
+  - type: focus
+    id: plays-too-many-games
+    tier: 4

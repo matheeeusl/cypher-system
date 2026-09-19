@@ -1,0 +1,20 @@
+id: know-where-to-look
+name:
+  en: Know Where to Look
+  pt-BR: Saber Onde Procurar
+description:
+  en: >-
+    Whenever the GM obtains a result for you on the Useful Stuff
+    table, you get two results instead of one. If the GM is using
+    some other method to generate rewards for finding valuables, you
+    should gain double the result you would otherwise obtain.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: remembers-the-past
+    tier: 4
+  - type: focus
+    id: scavenges
+    tier: 4

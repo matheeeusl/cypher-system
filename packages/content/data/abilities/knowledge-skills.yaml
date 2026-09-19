@@ -29,3 +29,6 @@ sources:
   - type: focus
     id: knows-everything
     tier: 4
+  - type: focus
+    id: remembers-the-past
+    tier: 1

@@ -1,0 +1,25 @@
+id: use-the-network
+name:
+  en: Use the Network
+  pt-BR: Usar a Rede
+description:
+  en: >-
+    With a few minutes of looking around and preparing, you can
+    access remnants of the before-times internet and satellite network
+    (or an active network on which AIs who are not immediately
+    dangerous reside). The GM may decide there is no such connection
+    in the area, but if there is, you can ask one basic question about
+    anything happening within 10 miles (16 km) and receive a simple
+    answer. For example, you could ask about the location of a
+    specific creature or individual, and if they are within the range
+    of this ability, you'll learn about it from a still-functioning
+    camera feed, satellite feed, or AI interaction.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: prepped-for-the-end
+    tier: 6

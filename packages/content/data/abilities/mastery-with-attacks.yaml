@@ -15,3 +15,6 @@ sources:
   - type: focus
     id: looks-for-trouble
     tier: 5
+  - type: focus
+    id: packs-chromed-heat
+    tier: 5

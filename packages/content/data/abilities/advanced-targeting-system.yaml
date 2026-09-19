@@ -1,0 +1,22 @@
+id: advanced-targeting-system
+name:
+  en: Advanced Targeting System
+  pt-BR: Sistema de Mira Avançado
+description:
+  en: >-
+    You gain a limited AI that assists you in eliminating a chosen
+    foe. Choose one target you can see within very long range. For
+    the next ten minutes, you gain an asset to all tasks (including
+    attacks and defenses) involving that target. You can only use the
+    advanced targeting system against one creature at a time.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker, not modeled — see schema gap item 6).
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: packs-chromed-heat
+    tier: 6

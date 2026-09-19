@@ -1,0 +1,49 @@
+id: plays-too-many-games
+name:
+  en: Plays Too Many Games
+  pt-BR: Joga Demais
+description:
+  en: >-
+    Lessons, reflexes, and strategies you've learned by playing too
+    many games have applications in the real world, where people who
+    don't play enough toil and live their dreary lives.
+  pt-BR: >-
+    Lições, reflexos, e estratégias que você aprendeu jogando demais
+    têm aplicações no mundo real, onde pessoas que não jogam o
+    suficiente labutam e vivem suas vidas sombrias.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: game-lessons
+    - kind: granted
+      ability_id: gamer
+  '2':
+    - kind: granted
+      ability_id: zero-dark-eyes
+    - kind: granted
+      ability_id: resist-tricks
+  '3':
+    - kind: choice
+      options:
+        - snipers-aim
+        - enhanced-speed-edge
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: mind-games
+    - kind: granted
+      ability_id: enhanced-intellect
+  '5':
+    - kind: granted
+      ability_id: gamers-fortitude
+  '6':
+    - kind: choice
+      options:
+        - mind-surge
+        - gaming-god
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

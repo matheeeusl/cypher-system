@@ -1,0 +1,79 @@
+id: prepped-for-the-end
+name:
+  en: Prepped for the End
+  pt-BR: Preparada para o Fim
+description:
+  en: >-
+    You prepared for ultimate disaster, unlike most of the sheeple.
+    Which means you stashed away food, water, and other survival gear
+    when things were still okay. You trained yourself for harsh
+    conditions, for basic machine and electronic repair, and maybe
+    even in a musical instrument to pass the time in the bunker when
+    no other entertainments could be had. You'd excel in a small group
+    of other survivors, but you're ready to go it alone if that's what
+    it takes. Above all, you're prepared to make it through whatever
+    the future holds, no matter how daunting the odds. Because you
+    prepped wisely.
+  pt-BR: >-
+    Você se preparou para o desastre final, diferente da maioria das
+    "ovelhas". Isso significa que você guardou comida, água, e outros
+    suprimentos de sobrevivência enquanto as coisas ainda estavam bem.
+    Você se treinou para condições adversas, para reparos básicos de
+    máquinas e eletrônicos, e talvez até em um instrumento musical
+    para passar o tempo no bunker quando nenhum outro entretenimento
+    estivesse disponível. Você se sairia bem em um pequeno grupo de
+    outros sobreviventes, mas está pronta para seguir sozinha se for
+    preciso. Acima de tudo, você está preparada para atravessar o que
+    o futuro reservar, não importa quão assustadoras sejam as chances.
+    Porque você se preparou com sabedoria.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: practiced-in-light-armor
+    - kind: granted
+      ability_id: prepared-caches
+    - kind: granted
+      ability_id: trained-for-toughing-it
+  '2':
+    - kind: granted
+      ability_id: tinker
+    - kind: granted
+      ability_id: weather-the-vicissitudes
+  '3':
+    - kind: choice
+      options:
+        - fruitfully-pass-the-time
+        - stashed-vehicle
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: improvise
+  '5':
+    - kind: granted
+      ability_id: task-specialization
+  '6':
+    - kind: choice
+      options:
+        - skill-with-attacks
+        - skill-with-defense
+        - use-the-network
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A firearm of your choice (with ten bullets or shells), a handloading tool set, and a small musical instrument (such as a harmonica).
+  pt-BR: Uma arma de fogo de sua escolha (com dez balas ou cartuchos), um kit de recarga de munição, e um pequeno instrumento musical (como uma gaita).
+connection_options:
+  - en: Pick one other PC. You found them in your prepped hideout, eating and drinking their fill. You befriended them rather than seeking revenge for using your resources.
+    pt-BR: Escolha outro PJ. Você o encontrou em seu esconderijo preparado, comendo e bebendo à vontade. Você se tornou amigo dele em vez de buscar vingança por usar seus recursos.
+  - en: Pick one other PC. You used to play card games with them before the apocalypse, and you still owe them money, though what that means now is difficult to say.
+    pt-BR: Escolha outro PJ. Vocês costumavam jogar cartas antes do apocalipse, e você ainda deve dinheiro a ele, embora seja difícil dizer o que isso significa agora.
+  - en: Pick one other PC. This character doesn't seem to want any of your stored food or water.
+    pt-BR: Escolha outro PJ. Esse personagem parece não querer nada de sua comida ou água armazenadas.
+  - en: Pick one other PC. When you were hurt, they carried you to your prepped hideout at great risk to themselves.
+    pt-BR: Escolha outro PJ. Quando você se machucou, ele o carregou até seu esconderijo preparado correndo grande risco.
+minor_effect_suggestion:
+  en: You remember something about the area that proves advantageous later, such as realizing there's probably a fresh location to scavenge close by that has a good chance of not having been picked over by other survivors.
+  pt-BR: Você se lembra de algo sobre a área que se mostra vantajoso mais tarde, como perceber que provavelmente há um local próximo para vasculhar que ainda não foi saqueado por outros sobreviventes.
+major_effect_suggestion:
+  en: A foe forgets about you unless you draw attention to yourself.
+  pt-BR: Um inimigo se esquece de você, a menos que você chame atenção para si mesma.

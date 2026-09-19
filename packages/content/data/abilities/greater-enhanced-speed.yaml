@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: moves-like-the-wind
     tier: 3
+  - type: focus
+    id: runs-away
+    tier: 3

@@ -1,0 +1,29 @@
+id: throw-unarmed
+name:
+  en: Throw
+  pt-BR: Arremessar
+description:
+  en: >-
+    When you deal damage to a creature of your size or smaller with
+    an unarmed attack, you can choose to throw that creature up to
+    1d20 feet away from you. The creature lands prone.
+  pt-BR: "Tradução em breve."
+  # Note: this printing (Performs Feats of Strength Tier 3) carries a
+  # source annotation: "This document corrects a misprint introduced to
+  # the Throw ability in the 2019 Cypher System Rulebook, reverting the
+  # ability text to match the 2015 Cypher System Rulebook for this
+  # focus. The unaltered [2019-misprint] text is listed in the Grows to
+  # Towering Heights focus." The existing `throw` ability (Grows to
+  # Towering Heights) is that unaltered/misprint text, referencing
+  # "Enlarge" — genuinely different wording from this corrected version,
+  # despite sharing the printed name "Throw". Kept as a separate
+  # ability under the disambiguated id `throw-unarmed` rather than
+  # merging with or overwriting `throw`.
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: performs-feats-of-strength
+    tier: 3

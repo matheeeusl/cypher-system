@@ -1,0 +1,19 @@
+id: ruin-lore
+name:
+  en: Ruin Lore
+  pt-BR: Conhecimento das Ruínas
+description:
+  en: >-
+    You are trained in scavenging, which means you're more likely to
+    find useful things, and junk that can potentially be turned into
+    useful things in the ruins of what came before.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: remembers-the-past
+    tier: 1
+  - type: focus
+    id: scavenges
+    tier: 1
