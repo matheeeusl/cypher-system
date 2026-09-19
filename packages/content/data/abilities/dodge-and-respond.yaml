@@ -1,0 +1,17 @@
+id: dodge-and-respond
+name:
+  en: Dodge and Respond
+  pt-BR: Esquivar e Responder
+description:
+  en: >-
+    If a melee attack misses you, you can immediately make a melee
+    attack in return, but no more than once per turn.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 3

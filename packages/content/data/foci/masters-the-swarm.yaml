@@ -1,0 +1,37 @@
+id: masters-the-swarm
+name:
+  en: Masters the Swarm
+  pt-BR: Domina o Enxame
+description:
+  en: Insects. Rats. Bats. Even birds. You master one type of small creature that obeys you.
+  pt-BR: Insetos. Ratos. Morcegos. Até pássaros. Você domina um tipo de pequena criatura que lhe obedece.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: influence-swarm
+  '2':
+    - kind: granted
+      ability_id: control-swarm
+  '3':
+    - kind: choice
+      options:
+        - living-armor
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: call-swarm
+  '5':
+    - kind: granted
+      ability_id: gain-unusual-companion
+  '6':
+    - kind: choice
+      options:
+        - deadly-swarm
+        - skill-with-defense
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

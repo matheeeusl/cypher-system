@@ -1,0 +1,39 @@
+id: robot-upgrade
+name:
+  en: Robot Upgrade
+  pt-BR: Aprimoramento Robótico
+description:
+  en: >-
+    You modify your artificial assistant from the Robot Assistant ability
+    with one new capability. Standard options include the following. Work
+    with your GM if you prefer a different capability. Cypher Pod: The
+    robot can carry one extra manifest cypher for you. Flight: The robot
+    can fly a long distance each round. It can carry you, but only for up
+    to an hour between each of your ten-hour recovery rolls. Force Shield:
+    The robot can erect an opaque level 5 force field around itself and
+    anyone within 10 feet (3 m) of it for one minute (or until it is
+    destroyed). It cannot do so again until after your next recovery roll.
+    Mounted Laser Configuration: The robot can reconfigure itself and
+    become an immobile laser weapon on a gimbal mount. In this
+    configuration, the robot is a heavy weapon that deals 7 points of
+    damage. If the robot acts as an autonomous turret, treat it as one
+    level lower than its normal level. However, if the laser is fired by
+    you or someone else who has your permission, the laser attacks are
+    eased.
+  pt-BR: "Tradução em breve."
+  # Note: each of the 4 upgrade options prints its own action_type tag
+  # (Cypher Pod: Enabler. / Flight: Enabler. / Force Shield: Action. /
+  # Mounted Laser Configuration: "Action to reconfigure; action to return
+  # to normal robot configuration."), not one tag for the whole ability —
+  # a per-option-tag shape the schema doesn't model. Recorded as enabler
+  # (2 of the 4 options are enablers; the ability's baseline effect is
+  # choosing a static modification), flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: builds-robots
+    tier: 4
+  - type: focus
+    id: builds-robots
+    tier: 6

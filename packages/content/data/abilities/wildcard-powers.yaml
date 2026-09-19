@@ -1,0 +1,13 @@
+id: wildcard-powers
+name:
+  en: Wildcard Powers
+  pt-BR: Poderes Curinga
+description:
+  en: You have a gift with using copied powers in unusual ways. Whenever you try a power stunt and use a level of Effort on the special roll to modify the ability, you get a free level of Effort on that roll.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: copies-superpowers
+    tier: 3

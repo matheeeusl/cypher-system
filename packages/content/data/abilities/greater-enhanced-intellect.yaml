@@ -1,0 +1,34 @@
+id: greater-enhanced-intellect
+name:
+  en: Greater Enhanced Intellect
+  pt-BR: Intelecto Aprimorado Superior
+description:
+  en: You gain 6 points to your Intellect Pool.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 5
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 6
+  - type: focus
+    id: explores-cyberspace
+    tier: 4
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 4
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 4
+  - type: focus
+    id: knows-everything
+    tier: 4
+  - type: focus
+    id: learned-from-the-classics
+    tier: 6
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 5

@@ -1,0 +1,39 @@
+id: fights-with-panache
+name:
+  en: Fights With Panache
+  pt-BR: Luta Com Panache
+description:
+  en: You're a swashbuckling daredevil who fights with flamboyant style that's entertaining to watch.
+  pt-BR: Você é um dublê de espadachim que luta com um estilo extravagante e divertido de assistir.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: attack-flourish
+  '2':
+    - kind: granted
+      ability_id: quick-block
+  '3':
+    - kind: choice
+      options:
+        - acrobatic-attack
+        - flamboyant-boast
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: block-for-another
+    - kind: granted
+      ability_id: fast-kill
+  '5':
+    - kind: granted
+      ability_id: using-the-environment
+  '6':
+    - kind: choice
+      options:
+        - agile-wit
+        - return-to-sender
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

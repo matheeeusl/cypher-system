@@ -1,0 +1,15 @@
+id: blurring-speed
+name:
+  en: Blurring Speed
+  pt-BR: Velocidade Borrada
+description:
+  en: You move so quickly that until your next turn, you look like a blur. While you are blurred, if you apply Effort to a melee attack task or Speed defense task, you get a free level of Effort on that task; you can move a short distance as part of another action or a long distance as your entire action.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 7
+action_type: enabler
+sources:
+  - type: focus
+    id: takes-animal-shape
+    tier: 6

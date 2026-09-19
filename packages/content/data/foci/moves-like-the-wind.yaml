@@ -1,0 +1,39 @@
+id: moves-like-the-wind
+name:
+  en: Moves Like the Wind
+  pt-BR: Move-se Como o Vento
+description:
+  en: You can move so fast that you become a blur.
+  pt-BR: Você consegue se mover tão rápido que se torna um borrão.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: greater-enhanced-speed
+    - kind: granted
+      ability_id: fleet-of-foot
+  '2':
+    - kind: granted
+      ability_id: hard-to-hit
+  '3':
+    - kind: choice
+      options:
+        - speed-burst
+        - greater-enhanced-speed
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: blink-of-an-eye
+  '5':
+    - kind: granted
+      ability_id: hard-to-see
+  '6':
+    - kind: choice
+      options:
+        - perfect-speed-burst
+        - incredible-running-speed
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

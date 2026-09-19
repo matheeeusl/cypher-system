@@ -1,0 +1,32 @@
+id: guide-bolt
+name:
+  en: Guide Bolt
+  pt-BR: Seta Guia
+description:
+  en: >-
+    When you make an attack with a metallic bolt or metal-tipped arrow on a
+    target within short range, you can improve the attack's
+    aim and velocity, which grants an asset to the attack and
+    inflicts an additional 2 points of damage. If you apply a
+    level of Effort, you grant the same benefits to a ranged
+    attack made by an ally within immediate range. In any
+    case, you can use this ability only once per round.
+  pt-BR: >-
+    Ao realizar um ataque com um virote metálico ou uma flecha de ponta metálica
+    contra um alvo a curta distância, você pode aprimorar a mira e
+    a velocidade do ataque, o que concede uma vantagem ao ataque e causa 2 pontos de dano adicionais.
+    Se você aplicar um nível de Esforço, concede os mesmos benefícios a um ataque à
+    distância realizado por um aliado a alcance imediato. Em qualquer caso,
+    você só pode usar essa habilidade uma vez por rodada.
+# Note: source cost is printed as "4+ Intellect points" — the schema's
+# cost field can't represent an open-ended "+". Recorded as the
+# baseline 4 Intellect points here, flagged for schema review (same
+# approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 3

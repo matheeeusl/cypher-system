@@ -1,0 +1,37 @@
+id: emerged-from-the-obelisk
+name:
+  en: Emerged from the Obelisk
+  pt-BR: Emergiu do Obelisco
+description:
+  en: Your body, hard as crystal, gives you a suite of unique abilities, gained after an interaction with a floating crystalline obelisk.
+  pt-BR: Seu corpo, duro como cristal, lhe confere um conjunto de habilidades únicas, adquiridas após uma interação com um obelisco cristalino flutuante.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: crystalline-body
+  '2':
+    - kind: granted
+      ability_id: hover
+  '3':
+    - kind: choice
+      options:
+        - inhabit-crystal
+        - immovable
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: crystal-lens
+  '5':
+    - kind: granted
+      ability_id: resonant-frequency
+  '6':
+    - kind: choice
+      options:
+        - resonant-quake
+        - return-to-the-obelisk
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,13 @@
+id: enhanced-potential
+name:
+  en: Enhanced Potential
+  pt-BR: Potencial Aprimorado
+description:
+  en: You gain 3 points to divide among your stat Pools however you wish.
+  pt-BR: Você ganha 3 pontos para dividir entre suas Reservas de atributo como quiser.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: leads
+    tier: 2

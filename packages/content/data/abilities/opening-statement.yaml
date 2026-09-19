@@ -1,0 +1,13 @@
+id: opening-statement
+name:
+  en: Opening Statement
+  pt-BR: Declaração de Abertura
+description:
+  en: You're trained in tasks related to persuasion, deception, and detecting the falsehoods of others.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: interprets-the-law
+    tier: 1

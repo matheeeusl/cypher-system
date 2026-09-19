@@ -1,0 +1,13 @@
+id: further-mathematics
+name:
+  en: Further Mathematics
+  pt-BR: Matemática Avançada Superior
+description:
+  en: You are specialized in higher mathematics. If you are already specialized, choose some other sphere of knowledge to become trained in.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 5

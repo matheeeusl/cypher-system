@@ -1,0 +1,15 @@
+id: limited-camouflage
+name:
+  en: Limited Camouflage
+  pt-BR: Camuflagem Limitada
+description:
+  en: You activate camouflage software that alters your appearance to match an adjacent large object such as a wall, cabinet, or vehicle. If you succeed at a stealth task, everyone who was observing you completely loses track of you. Although you're not invisible, you can't be seen until you reveal yourself again by making an attack or moving away from the object.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: embeds-stealthtech
+    tier: 3

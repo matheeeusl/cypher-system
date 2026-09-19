@@ -9,6 +9,29 @@ tier_abilities:
   '1':
     - kind: granted
       ability_id: dual-light-wield
+  '2':
+    - kind: granted
+      ability_id: double-strike
+    - kind: granted
+      ability_id: infiltrator
+  '3':
+    - kind: choice
+      options:
+        - dual-medium-wield
+        - precise-cut
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: dual-defense
+  '5':
+    - kind: granted
+      ability_id: dual-distraction
+  '6':
+    - kind: choice
+      options:
+        - disarming-attack
+        - spin-attack
+      count: 1
 type_swap_option: null
 additional_equipment: null
 connection_options: null

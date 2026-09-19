@@ -121,6 +121,7 @@ type GrantedAbility {
 }
 type ChoiceAbility {
   options: [ID!]!
+  count: Int!
 }
 union FocusTierAbilityEntry = GrantedAbility | ChoiceAbility
 type FocusTierAbilityGroup {
@@ -161,13 +162,13 @@ type AbilityCost {
 type AbilitySourceRef {
   type: AbilitySourceType!
   id: ID!
+  tier: Int!
 }
 
 type Ability {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
-  tier: Int!
   cost: AbilityCost
   actionType: ActionType!
   sources: [AbilitySourceRef!]!

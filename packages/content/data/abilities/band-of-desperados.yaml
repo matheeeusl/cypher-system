@@ -1,0 +1,20 @@
+id: band-of-desperados
+name:
+  en: Band of Desperados
+  pt-BR: Bando de Desesperados
+description:
+  en: >-
+    Your reputation draws a band of six level 2 desperado NPC
+    followers who are completely devoted to you. You and the GM must
+    work out the details of these followers. If a follower dies, you
+    gain a new one after at least two weeks and proper recruitment.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: feigns-no-fear
+    tier: 5
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 5

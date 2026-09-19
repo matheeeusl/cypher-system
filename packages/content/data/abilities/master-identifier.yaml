@@ -1,0 +1,13 @@
+id: master-identifier
+name:
+  en: Master Identifier
+  pt-BR: Mestre Identificador
+description:
+  en: You are trained in identifying the function of any kind of device.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: crafts-unique-objects
+    tier: 1

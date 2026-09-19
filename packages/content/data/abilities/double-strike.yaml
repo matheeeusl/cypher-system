@@ -1,0 +1,23 @@
+id: double-strike
+name:
+  en: Double Strike
+  pt-BR: Golpe Duplo
+description:
+  en: >-
+    When you wield two weapons, you can choose to make one attack roll
+    against a foe. If you hit, you inflict damage with both
+    weapons plus 2 additional points of damage, and
+    because you made a single attack, the target's
+    Armor is subtracted only once
+  pt-BR: >-
+    Ao empunhar duas armas, você pode optar por realizar uma única jogada de ataque contra um oponente.
+    Se acertar, você causa dano com ambas as armas mais 2 pontos de dano adicionais e,
+    como realizou apenas um ataque, a Armadura do alvo é subtraída apenas uma vez.
+cost:
+  pool: might
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 2

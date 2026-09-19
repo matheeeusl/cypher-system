@@ -1,0 +1,18 @@
+id: moving-like-water
+name:
+  en: Moving Like Water
+  pt-BR: Movendo-se Como a Água
+description:
+  en: >-
+    You spin and move so that your defense and attacks are aided by
+    your fluid motion. For one minute, all your attacks and Speed
+    defense tasks gain an asset.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: needs-no-weapon
+    tier: 3

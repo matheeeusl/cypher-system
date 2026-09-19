@@ -1,0 +1,26 @@
+id: perfect-speed-burst
+name:
+  en: Perfect Speed Burst
+  pt-BR: Explosão de Velocidade Perfeita
+description:
+  en: You can take two separate actions this round.
+  pt-BR: "Tradução em breve."
+  # Note: Embeds Stealthtech's printing marks this ability with "~" (a
+  # cyberware-derived ability marker, not modeled — see fast-chrome);
+  # Moves Like a Cat's and Moves Like the Wind's printings have no
+  # marker — same per-source "~" inconsistency as
+  # machine-enhancement/network-tap/escape-plan.
+cost:
+  pool: speed
+  amount: 6
+action_type: enabler
+sources:
+  - type: focus
+    id: embeds-stealthtech
+    tier: 6
+  - type: focus
+    id: moves-like-a-cat
+    tier: 6
+  - type: focus
+    id: moves-like-the-wind
+    tier: 6

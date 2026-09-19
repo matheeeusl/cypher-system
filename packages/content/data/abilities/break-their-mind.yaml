@@ -1,0 +1,22 @@
+id: break-their-mind
+name:
+  en: Break Their Mind
+  pt-BR: Quebrar a Mente
+description:
+  en: Using your clever words and knowledge of others, and given a couple of rounds of conversation to gain a few specific pieces of context regarding your target, you can utter a sentence designed to cause your target immediate psychological distress. If the target can hear and understand you, it suffers 6 points of Intellect damage (ignores Armor) and forgets the last day of its life, which might mean it forgets you and how it came to be where it currently is. In addition to the normal options for using Effort, you can choose to use Effort to attempt to break the mind of one additional target who can hear and understand you.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "7+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 7 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 7
+# Note: source tag is "Action to initiate, action to complete." — not in
+# the schema's action_type enum; approximated as action_to_initiate. See
+# .population-status.md item 3.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: curses-the-world
+    tier: 6

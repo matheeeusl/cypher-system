@@ -1,0 +1,15 @@
+id: beast-eyes
+name:
+  en: Beast Eyes
+  pt-BR: Olhos Bestiais
+description:
+  en: By linking to the creature Beast Companion ability, you can perceive through its senses if it is within 1 mile (1.5 km) of you. This effect lasts up to ten minutes.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: controls-beasts
+    tier: 4

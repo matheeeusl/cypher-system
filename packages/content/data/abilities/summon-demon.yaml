@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 6
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 6

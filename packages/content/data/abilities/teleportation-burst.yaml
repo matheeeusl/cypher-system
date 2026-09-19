@@ -1,0 +1,18 @@
+id: teleportation-burst
+name:
+  en: Teleportation Burst
+  pt-BR: Explosão de Teletransporte
+description:
+  en: >-
+    You rapidly teleport multiple times in an immediate area,
+    confusing your opponents and allowing you to make an additional
+    melee attack this round. You can use this ability once per round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: ignores-physical-distance
+    tier: 3

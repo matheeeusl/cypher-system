@@ -1,0 +1,19 @@
+id: advantage-to-disadvantage
+name:
+  en: Advantage to Disadvantage
+  pt-BR: Vantagem em Desvantagem
+description:
+  en: >-
+    With a number of quick moves, you make an attack against an armed
+    foe, inflicting damage and disarming them so that their weapon is
+    now in your hands or 10 feet (3 m) away on the ground—your choice.
+    This disarming attack is hindered.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: needs-no-weapon
+    tier: 2

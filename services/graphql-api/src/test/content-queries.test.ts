@@ -256,10 +256,9 @@ describe('content queries', () => {
     interface AbilityQueryData {
       ability: {
         id: string
-        tier: number
         cost: { pool: string; amount: number } | null
         actionType: string
-        sources: Array<{ type: string; id: string }>
+        sources: Array<{ type: string; id: string; tier: number }>
       } | null
     }
 
@@ -267,10 +266,9 @@ describe('content queries', () => {
       query {
         ability(id: "bash") {
           id
-          tier
           cost { pool amount }
           actionType
-          sources { type id }
+          sources { type id tier }
         }
       }
     `)
@@ -278,10 +276,9 @@ describe('content queries', () => {
     expect(result.errors).toBeUndefined()
     expect(result.data.ability).toEqual({
       id: 'bash',
-      tier: 1,
       cost: { pool: 'MIGHT', amount: 1 },
       actionType: 'ACTION',
-      sources: [{ type: 'TYPE', id: 'warrior' }],
+      sources: [{ type: 'TYPE', id: 'warrior', tier: 1 }],
     })
   })
 

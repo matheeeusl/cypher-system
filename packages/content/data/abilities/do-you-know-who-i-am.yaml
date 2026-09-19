@@ -1,0 +1,20 @@
+id: do-you-know-who-i-am
+name:
+  en: Do You Know Who I Am?
+  pt-BR: Você Sabe Quem Eu Sou?
+description:
+  en: >-
+    Acting only as someone who is famous and used to privilege can,
+    you verbally harangue a living foe who can hear and understand you
+    so forcefully that it is unable to take any action, including
+    making attacks, for one round. Whether you succeed or fail, the
+    next action the target takes after your attempt is hindered.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: is-idolized-by-millions
+    tier: 5

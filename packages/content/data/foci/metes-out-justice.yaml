@@ -1,0 +1,43 @@
+id: metes-out-justice
+name:
+  en: Metes Out Justice
+  pt-BR: Distribui Justiça
+description:
+  en: You right wrongs, protect the innocent, and punish the guilty.
+  pt-BR: Você corrige injustiças, protege os inocentes, e pune os culpados.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: make-judgment
+    - kind: granted
+      ability_id: designation
+  '2':
+    - kind: granted
+      ability_id: defend-the-innocent
+    - kind: granted
+      ability_id: improved-designation
+  '3':
+    - kind: choice
+      options:
+        - defend-the-innocent
+        - punish-the-guilty
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: find-the-guilty
+    - kind: granted
+      ability_id: greater-designation
+  '5':
+    - kind: granted
+      ability_id: punish-all-the-guilty
+  '6':
+    - kind: choice
+      options:
+        - damn-the-guilty
+        - inspire-the-innocent
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

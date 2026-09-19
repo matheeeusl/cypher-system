@@ -1,0 +1,23 @@
+id: defensive-phasing
+name:
+  en: Defensive Phasing
+  pt-BR: Faseamento Defensivo
+description:
+  en: >-
+    You can change your phase so that some attacks pass through
+    you harmlessly. For the next ten minutes, you gain an
+    asset to your Speed defense tasks, but during this time
+    you lose any benefit from armor you wear
+  pt-BR: >-
+    Você pode alterar sua fase para que alguns ataques atravessem
+    você sem causar dano. Pelos próximos dez minutos, você ganha uma
+    vantagem em testes de defesa baseados em Velocidade, mas, durante esse período,
+    você perde qualquer benefício da armadura que estiver usando.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: exists-partially-out-of-phase
+    tier: 2

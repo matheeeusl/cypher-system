@@ -1,0 +1,19 @@
+id: speaker-for-the-dead
+name:
+  en: Speaker for the Dead
+  pt-BR: Portador da Voz dos Mortos
+description:
+  en: You can ask a question of a dead being whose corpse you are touching. Because the answer comes through the filter of the being's understanding and personality, it can't answer questions that it wouldn't have understood in life, and it can't provide answers that it wouldn't have known in life. In fact, the being is not compelled to answer at all, so you might need to interact with it in a way that would have convinced it to answer while it was alive. For each additional Intellect point you spend when you activate the ability, you can ask the being an additional question.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: consorts-with-the-dead
+    tier: 1

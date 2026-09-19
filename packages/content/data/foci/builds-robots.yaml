@@ -1,0 +1,39 @@
+id: builds-robots
+name:
+  en: Builds Robots
+  pt-BR: Constrói Robôs
+description:
+  en: Your robotic creations do as they are commanded.
+  pt-BR: Suas criações robóticas fazem o que lhes é ordenado.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: robot-assistant
+    - kind: granted
+      ability_id: robot-builder
+  '2':
+    - kind: granted
+      ability_id: robot-control
+  '3':
+    - kind: choice
+      options:
+        - expert-follower
+        - skill-with-defense
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: robot-upgrade
+  '5':
+    - kind: granted
+      ability_id: robot-fleet
+  '6':
+    - kind: choice
+      options:
+        - robot-evolution
+        - robot-upgrade
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

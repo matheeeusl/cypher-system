@@ -1,0 +1,32 @@
+id: trained-gunner
+name:
+  en: Trained Gunner
+  pt-BR: Atirador Treinado
+description:
+  en: >-
+    You can choose from one of two benefits. Either you are trained in
+    using guns, or you have the Spray ability (which costs 2 Speed
+    points): if a weapon has the ability to fire rapid shots without
+    reloading (usually called a rapid-fire weapon, such as an
+    automatic pistol), you can spray multiple shots around your target
+    to increase the chance of hitting. This move uses 1d6 + 1 rounds
+    of ammo (or all the ammo in the weapon, if it has less than the
+    number rolled). The attack roll is eased. If the attack is
+    successful, it deals 1 less point of damage than normal.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Enabler (being trained in using guns) or action
+  # (Spray)." — the two internal sub-benefits have different
+  # action_types, which the schema's single field can't represent.
+  # Approximated to `enabler`, flagged per the running action_type audit
+  # (schema gap item 3). The Spray sub-benefit here duplicates the
+  # standalone `spray` ability's effect with slightly reworded text
+  # (this version omits the crank-crossbow/thrown-weapon examples) —
+  # kept as prose within this ability rather than a cross-reference,
+  # since the source itself also lists Spray as an independent Tier 3
+  # option alongside this one.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-licensed-to-carry
+    tier: 3

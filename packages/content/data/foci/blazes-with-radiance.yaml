@@ -1,0 +1,39 @@
+id: blazes-with-radiance
+name:
+  en: Blazes With Radiance
+  pt-BR: Resplandece com Radiância
+description:
+  en: You can create light, sculpt it, bend it away from you, or gather it to use as a weapon.
+  pt-BR: Você consegue criar luz, moldá-la, desviá-la de si mesmo, ou reuni-la para usar como arma.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enlightened
+    - kind: granted
+      ability_id: illuminating-touch
+  '2':
+    - kind: granted
+      ability_id: dazzling-sunburst
+  '3':
+    - kind: choice
+      options:
+        - burning-light
+        - skill-with-defense
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: sunlight
+  '5':
+    - kind: granted
+      ability_id: disappear
+  '6':
+    - kind: choice
+      options:
+        - living-light
+        - defensive-field
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

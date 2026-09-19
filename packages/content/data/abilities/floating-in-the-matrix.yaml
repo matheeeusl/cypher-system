@@ -1,0 +1,20 @@
+id: floating-in-the-matrix
+name:
+  en: Floating in the Matrix
+  pt-BR: Flutuando na Matriz
+description:
+  en: >-
+    You are trained in navigating cyberspace. If you are already
+    trained in navigating cyberspace, you become specialized. If you
+    are already specialized, choose another area of knowledge (such
+    as coding, research, or repairs).
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) — not modeled by the schema (no cyberware-marker field).
+  # Flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: explores-cyberspace
+    tier: 4

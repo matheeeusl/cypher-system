@@ -1,0 +1,23 @@
+id: as-if-one-creature
+name:
+  en: As If One Creature
+  pt-BR: Como Se Fossem Uma Só Criatura
+description:
+  en: >-
+    When you and your beast (from your Beast Companion ability) are within immediate distance of each other,
+    you can share damage inflicted on either of you. For instance, if one of you is struck by a weapon for 4 points of damage, divide the damage between the two of you as you see fit.
+    Only the Armor and resistances of the target initially damaged come into play. So if you have 2 Armor and are struck by a force blast for 4 points of damage,
+    your beast can take the 2 points of damage you would suffer, but their Armor does not come into play, nor does their immunity to force blasts, if any.
+  pt-BR: "Tradução em breve."
+  # Note: source text prints a trailing "(110)" after the action_type tag
+  # — an internal OG-CSPG page cross-reference, not part of the ability's
+  # mechanical text. Omitted here; not resolved to what it points at.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: befriends-the-black-dog
+    tier: 6
+  - type: focus
+    id: controls-beasts
+    tier: 6

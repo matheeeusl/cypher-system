@@ -1,0 +1,17 @@
+id: dodge-and-resist
+name:
+  en: Dodge and Resist
+  pt-BR: Esquivar e Resistir
+description:
+  en: >-
+    You can reroll any of your Might, Speed, or Intellect defense
+    rolls and take the better of the two results.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 3

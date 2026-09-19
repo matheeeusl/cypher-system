@@ -1,0 +1,27 @@
+id: fleet-of-foot
+name:
+  en: Fleet of Foot
+  pt-BR: Pés Ligeiros
+description:
+  en: >-
+    You can move a short distance as part of another action. You can
+    move a long distance as your entire action for a turn. If you
+    apply a level of Effort to this ability, you can move a long
+    distance and make an attack as your entire action for a turn, but
+    the attack is hindered.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Speed point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 1
+  - type: focus
+    id: moves-like-the-wind
+    tier: 1

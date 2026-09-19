@@ -1,0 +1,40 @@
+id: inhabit-crystal
+name:
+  en: Inhabit Crystal
+  pt-BR: Habitar Cristal
+description:
+  en: >-
+    You transfer your body and whatever you are carrying into a crystal at
+    least the size of your index finger. While in the crystal,
+    you are aware of what is going on around it, seeing and
+    hearing through the crystal. You can even speak through
+    the crystal and carry on conversations. You cannot take
+    actions other than to exit the crystal. You remain within
+    as long as you wish, but you are not in stasis and should
+    exit to eat, drink, sleep, and so on as normal (breathing
+    is not an issue). If the crystal is destroyed or takes major
+    damage while you are within it, you immediately exit,
+    cannot act for three rounds, and move two steps down
+    the damage track.
+  # Note: source tag is "Action to enter and exit." — not in the
+  # schema's action_type enum; approximated as action_to_initiate. See
+  # .population-status.md item 3.
+  pt-BR: >-
+    Você transfere seu corpo e tudo o que estiver carregando para dentro de um cristal de,
+    pelo menos, o tamanho do seu dedo indicador. Enquanto estiver no cristal,
+    você tem consciência do que acontece ao redor dele, vendo e 
+    ouvindo através dele. Você pode até falar por meio do cristal e
+    manter conversas. Você não pode realizar outras ações além de sair do cristal.
+    Você permanece dentro dele pelo tempo que desejar, mas não entra em estado de animação
+    suspensa e deve sair para comer, beber, dormir e assim por diante, como de costume (respirar
+    não é um problema). Se o cristal for destruído ou sofrer dano grave enquanto você estiver
+    dentro dele, você sai imediatamente, fica incapaz de agir por três rodadas e
+    avança dois passos na trilha de dano.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 3

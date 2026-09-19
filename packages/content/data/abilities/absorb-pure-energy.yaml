@@ -1,0 +1,21 @@
+id: absorb-pure-energy
+name:
+  en: Absorb Pure Energy
+  pt-BR: Absorver Energia Pura
+description:
+  en: >-
+    When you use Absorb Kinetic Energy, you can also absorb and store energy from attacks made with pure energy
+    (focused light, radiation, transdimensional, psychic, etc.) or from conduits that direct energy, if you can make direct contact.
+    This ability does not change how many points of energy you can store.
+    If you also have Improved Absorb Kinetic Energy, you can absorb 2 points of damage from other energy sources as well.
+  pt-BR: >-
+    Ao usar Absorver Energia Cinética, você também pode absorver e armazenar energia de ataques feitos com energia pura
+    (luz concentrada, radiação, energia transdimensional, psíquica, etc.) ou de condutos que direcionam energia, caso consiga estabelecer contato direto.
+    Essa habilidade não altera a quantidade de pontos de energia que você pode armazenar.
+    Se você também possuir Absorção de Energia Cinética Aprimorada, poderá absorver 2 pontos de dano provenientes de outras fontes de energia.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: absorbs-energy
+    tier: 3

@@ -1,0 +1,29 @@
+id: captivate-or-inspire
+name:
+  en: Captivate or Inspire
+  pt-BR: Cativar ou Inspirar
+description:
+  en: >-
+    You can use this ability in one of two ways.
+    Either your words keep the attention of all
+    NPCs that hear them for as long as you speak, or your
+    words inspire all NPCs that hear them to function as if
+    they were one level higher for the next hour. In either
+    case, you choose which NPCs are affected. If anyone in
+    the crowd is attacked while you're trying to speak to
+    them, you lose the crowd's attention. 
+  pt-BR: >-
+    Você pode usar esta habilidade de duas maneiras. 
+    Ou suas palavras mantêm a atenção de todos os
+    NPCs que as ouvem enquanto você fala, ou suas
+    palavras inspiram todos os NPCs que as ouvem a agir como se
+    tivessem um nível a mais durante a próxima hora. Em ambos
+    os casos, você escolhe quais NPCs serão afetados. Se alguém
+    na multidão for atacado enquanto você tenta falar com
+    ela, você perde a atenção da multidão.
+cost: null
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: leads
+    tier: 4

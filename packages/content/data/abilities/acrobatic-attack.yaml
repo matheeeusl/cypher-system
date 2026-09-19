@@ -1,0 +1,24 @@
+id: acrobatic-attack
+name:
+  en: Acrobatic Attack
+  pt-BR: Ataque Acrobático
+description:
+  en: >-
+    You leap into the attack, twisting or flipping through the air. If
+    you roll a natural 17 or 18, you can choose to have a minor effect
+    rather than deal extra damage. If you apply Effort to the attack,
+    you get a free level of Effort on the task. You can't use this
+    ability if your Speed Effort costs are reduced from wearing armor.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "1+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 1 Speed point here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-with-panache
+    tier: 3

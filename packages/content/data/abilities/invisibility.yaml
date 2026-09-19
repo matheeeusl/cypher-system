@@ -1,0 +1,23 @@
+id: invisibility
+name:
+  en: Invisibility
+  pt-BR: Invisibilidade
+description:
+  en: >-
+    You become invisible for ten minutes. While invisible, you are
+    specialized in stealth and Speed defense tasks. This effect ends
+    if you do something to reveal your presence or position—attacking,
+    using an ability, moving a large object, and so on. If this
+    occurs, you can regain the remaining invisibility effect by taking
+    an action to hide your position. If you have another ability that
+    also confers invisibility, using either one allows you to remain
+    invisible for twice as long as the duration specified.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate_or_reinitiate
+sources:
+  - type: focus
+    id: infiltrates
+    tier: 4

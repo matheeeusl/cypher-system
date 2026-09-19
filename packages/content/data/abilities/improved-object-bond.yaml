@@ -1,0 +1,21 @@
+id: improved-object-bond
+name:
+  en: Improved Object Bond
+  pt-BR: Vínculo com o Objeto Aprimorado
+description:
+  en: >-
+    When you manifest the ally from your Bound Magic Creature ability,
+    it is now a level 4 creature. Also, the creature gains a pulse
+    attack that renders all artifacts, machines, manifest cyphers, and
+    lesser magic devices within short range inoperable for one minute.
+    After the creature uses this ability, it must retreat to its
+    object to rest for three hours.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: keeps-a-magic-ally
+    tier: 4

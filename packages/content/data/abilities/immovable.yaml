@@ -1,0 +1,25 @@
+id: immovable
+name:
+  en: Immovable
+  pt-BR: Imóvel
+description:
+  en: >-
+    You gain +3 to your Might Pool. You
+    can attempt a Might task to avoid being knocked down,
+    pushed back, or moved against your will even if the
+    effect attempting to move you doesn't allow it. If you
+    apply Effort to this task, you can apply two free levels of
+    Effort.
+  pt-BR: >-
+    Você ganha +3 na sua Reserva de Força.
+    Você pode tentar realizar uma tarefa de Força para evitar
+    ser derrubado, empurrado para trás ou movido contra a sua
+    vontade, mesmo que o efeito que tenta movê-lo não permita
+    isso. Se você aplicar Esforço a essa tarefa, pode aplicar
+    dois níveis gratuitos de Esforço.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 3

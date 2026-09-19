@@ -1,0 +1,21 @@
+id: phased-attack
+name:
+  en: Phased Attack
+  pt-BR: Ataque Faseado
+description:
+  en: >-
+    The attack you make on this turn ignores your foe's armor.
+    The ability works for whatever kind of attack you use
+    (melee, ranged, energy, and so on). 
+  pt-BR: >-
+    O ataque que você realiza neste turno ignora a armadura do seu oponente.
+    A habilidade funciona para qualquer tipo de ataque utilizado
+    (corpo a corpo, à distância, de energia, etc.).
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: exists-partially-out-of-phase
+    tier: 3

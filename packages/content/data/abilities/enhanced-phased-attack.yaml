@@ -1,0 +1,21 @@
+id: enhanced-phased-attack
+name:
+  en: Enhanced Phased Attack
+  pt-BR: Ataque Faseado Aprimorado
+description:
+  en: >-
+    This ability works like the Phased Attack ability except that
+    your attack also disrupts the foe's vitals, dealing an
+    additional 5 points of damage. 
+  pt-BR: >-
+    Esta habilidade funciona como a habilidade Ataque Faseado, exceto que
+    seu ataque também atinge os pontos vitais do oponente, causando
+    5 pontos de dano adicionais.
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: exists-partially-out-of-phase
+    tier: 6

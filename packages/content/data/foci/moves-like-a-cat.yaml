@@ -1,0 +1,43 @@
+id: moves-like-a-cat
+name:
+  en: Moves Like a Cat
+  pt-BR: Move-se Como um Gato
+description:
+  en: Lithe, flexible, and graceful, you move quickly and smoothly, and never seem to be where danger is.
+  pt-BR: Ágil, flexível, e graciosa, você se move rápida e suavemente, e nunca parece estar onde o perigo está.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: greater-enhanced-speed
+    - kind: granted
+      ability_id: balance
+  '2':
+    - kind: granted
+      ability_id: movement-skills
+    - kind: granted
+      ability_id: safe-fall
+  '3':
+    - kind: granted
+      ability_id: hard-to-hit
+    - kind: choice
+      options:
+        - enhanced-speed-edge
+        - greater-enhanced-speed
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: quick-strike
+  '5':
+    - kind: granted
+      ability_id: slippery
+  '6':
+    - kind: choice
+      options:
+        - perfect-speed-burst
+        - greater-enhanced-speed
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

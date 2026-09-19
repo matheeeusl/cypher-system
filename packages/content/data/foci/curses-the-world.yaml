@@ -1,0 +1,37 @@
+id: curses-the-world
+name:
+  en: Curses the World
+  pt-BR: Amaldiçoa o Mundo
+description:
+  en: Fuck the world and its horrors. You have a mean streak living inside you that you can't control—and honestly have no desire to. You'd never hurt your friends and family, of course. But everyone and everything else? Curse them. Characters who Curse the World aren't necessarily evil or wicked; they are angry, hurt, and possibly seeking to get even with those who have wronged them or the ones they love (or at least keep themselves and their loved ones from being hurt again).
+  pt-BR: Foda-se o mundo e seus horrores. Existe dentro de você uma veia cruel que não consegue controlar — e, sinceramente, não tem vontade de controlar. Você jamais machucaria seus amigos e sua família, é claro. Mas todo o resto? Amaldiçoe. Personagens que Amaldiçoam o Mundo não são necessariamente maus ou perversos; eles estão com raiva, machucados, e possivelmente buscando revanche contra quem os prejudicou, a eles ou aos que amam (ou pelo menos tentando evitar que eles ou seus entes queridos sejam feridos novamente).
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: terrifying-presence
+  '2':
+    - kind: granted
+      ability_id: erase-memories
+  '3':
+    - kind: choice
+      options:
+        - psychosis
+        - discerning-mind
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: mind-games
+  '5':
+    - kind: granted
+      ability_id: foul-aura
+  '6':
+    - kind: choice
+      options:
+        - word-of-command
+        - break-their-mind
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

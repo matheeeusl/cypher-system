@@ -1,0 +1,41 @@
+id: calculates-the-incalculable
+name:
+  en: Calculates the Incalculable
+  pt-BR: Calcula o Incalculável
+description:
+  en: Awesome mathematical ability allows you to model the world in real time, giving you an edge over everyone.
+  pt-BR: Uma habilidade matemática impressionante permite que você modele o mundo em tempo real, dando-lhe uma vantagem sobre todos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: predictive-equation
+    - kind: granted
+      ability_id: higher-mathematics
+  '2':
+    - kind: granted
+      ability_id: predictive-model
+  '3':
+    - kind: choice
+      options:
+        - subconscious-defense
+        - enhanced-intellect
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: cognizant-offense
+  '5':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+    - kind: granted
+      ability_id: further-mathematics
+  '6':
+    - kind: choice
+      options:
+        - knowing-the-unknown
+        - greater-enhanced-intellect
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

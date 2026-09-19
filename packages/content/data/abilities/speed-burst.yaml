@@ -1,0 +1,18 @@
+id: speed-burst
+name:
+  en: Speed Burst
+  pt-BR: Explosão de Velocidade
+description:
+  en: >-
+    You can take two separate actions in this round. In the following
+    round, all actions are hindered. You cannot use this ability two
+    rounds in a row.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-the-wind
+    tier: 3

@@ -1,0 +1,13 @@
+id: hard-to-distract
+name:
+  en: Hard to Distract
+  pt-BR: Difícil de Distrair
+description:
+  en: You are trained in Intellect defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: learns-quickly
+    tier: 3

@@ -1,0 +1,16 @@
+id: expert-driver
+name:
+  en: Expert Driver
+  pt-BR: Motorista Especializado
+description:
+  en: You are specialized in all tasks related to driving a car, truck, or motorcycle, including mechanical repair tasks.
+  pt-BR: Você é especializado em todas as tarefas relacionadas à condução de carros, caminhões ou motocicletas, incluindo tarefas de reparo mecânico.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 3
+  - type: focus
+    id: is-a-car-wizard
+    tier: 3

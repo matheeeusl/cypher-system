@@ -1,0 +1,13 @@
+id: crafter
+name:
+  en: Crafter
+  pt-BR: Artesão
+description:
+  en: You are trained in the crafting of two kinds of items.
+  pt-BR: Você é treinado na confecção de dois tipos de itens.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: crafts-unique-objects
+    tier: 1

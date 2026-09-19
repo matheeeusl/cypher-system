@@ -1,0 +1,30 @@
+id: machine-enhancement
+name:
+  en: Machine Enhancement
+  pt-BR: Aprimoramento de Máquina
+description:
+  en: >-
+    Any time you use Effort on an Intellect action, add one of the
+    following enhancements to the action (your choice):
+
+    - Free level of Effort
+
+    - Automatic minor effect
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) only under Explores Cyberspace; under Fuses Mind and Machine
+  # the identical text is printed without the marker. Not modeled by the
+  # schema either way (no cyberware-marker field, and no per-source
+  # override for it). Flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: explores-cyberspace
+    tier: 6
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 6
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 6

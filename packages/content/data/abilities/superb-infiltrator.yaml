@@ -1,0 +1,15 @@
+id: superb-infiltrator
+name:
+  en: Superb Infiltrator
+  pt-BR: Infiltrador Extraordinário
+description:
+  en: >-
+    You are trained in lockpicking and tinkering with devices in an
+    effort to make them work, or at least work for you.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: explores-dark-places
+    tier: 2

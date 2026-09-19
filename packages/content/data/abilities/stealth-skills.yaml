@@ -1,0 +1,19 @@
+id: stealth-skills
+name:
+  en: Stealth Skills
+  pt-BR: Perícias de Furtividade
+description:
+  en: 'You are trained in your choice of two of the following skills: disguise, deception, lockpicking, pickpocketing, seeing through deception, sleight of hand, or stealth. You can choose this ability multiple times, but you must select different skills each time.'
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: embeds-stealthtech
+    tier: 1
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 1
+  - type: focus
+    id: infiltrates
+    tier: 1

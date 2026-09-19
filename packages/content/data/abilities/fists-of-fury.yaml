@@ -1,0 +1,16 @@
+id: fists-of-fury
+name:
+  en: Fists of Fury
+  pt-BR: Punhos da Fúria
+description:
+  en: You inflict 2 additional points of damage with unarmed attacks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: looks-for-trouble
+    tier: 1
+  - type: focus
+    id: needs-no-weapon
+    tier: 1

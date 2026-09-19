@@ -1,0 +1,17 @@
+id: multiplicity
+name:
+  en: Multiplicity
+  pt-BR: Multiplicidade
+description:
+  en: >-
+    This ability functions as Duplicate, except you can create two duplicates.
+  pt-BR: >-
+    Esta habilidade funciona como Duplicata, exceto que você pode criar duas duplicatas.
+cost:
+  pool: might
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 6

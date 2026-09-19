@@ -1,0 +1,15 @@
+id: nothing-but-defend
+name:
+  en: Nothing but Defend
+  pt-BR: Só Defender
+description:
+  en: >-
+    If you do nothing on your turn but defend, you are specialized in
+    all defense tasks for one round.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 5

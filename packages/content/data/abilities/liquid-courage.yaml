@@ -1,0 +1,15 @@
+id: liquid-courage
+name:
+  en: Liquid Courage
+  pt-BR: Coragem Líquida
+description:
+  en: >-
+    Your defense rolls against fear are eased. They are eased by two
+    steps when you are one or more steps down the intoxication track.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: hits-the-saloon
+    tier: 2

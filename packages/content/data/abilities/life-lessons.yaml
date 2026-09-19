@@ -1,0 +1,19 @@
+id: life-lessons
+name:
+  en: Life Lessons
+  pt-BR: Lições de Vida
+description:
+  en: Choose any two noncombat skills. You are trained in those skills.
+  pt-BR: "Tradução em breve."
+  # Note: source prints this ability's full text twice, at Tier 1 and
+  # Tier 4 — modeled as two `sources[]` entries, both pointing here
+  # (same-focus, two-tier reuse — same pattern as robot-upgrade).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: doesnt-do-much
+    tier: 1
+  - type: focus
+    id: doesnt-do-much
+    tier: 4

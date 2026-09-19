@@ -1,0 +1,13 @@
+id: movement-skills
+name:
+  en: Movement Skills
+  pt-BR: Perícias de Movimento
+description:
+  en: You are trained in climbing and jumping.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-a-cat
+    tier: 2

@@ -1,0 +1,25 @@
+id: ai-assistant
+name:
+  en: AI Assistant
+  pt-BR: Assistente de IA
+description:
+  en: >-
+    While in cyberspace, you summon an AI assistant that appears at
+    any point you can see within a short range. The AI is a level 3
+    NPC with 15 health. The AI obeys your commands and does as you
+    direct it. The AI remains until you dismiss it as an action or
+    until it is killed. If the AI disappears because it was killed,
+    you take 4 points of damage that ignore Armor and cannot summon
+    the AI again until the next time you jack in.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) — not modeled by the schema (no cyberware-marker field).
+  # Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: explores-cyberspace
+    tier: 3

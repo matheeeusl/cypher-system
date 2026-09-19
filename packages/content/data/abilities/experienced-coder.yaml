@@ -1,0 +1,17 @@
+id: experienced-coder
+name:
+  en: Experienced Coder
+  pt-BR: Programador Experiente
+description:
+  en: >-
+    All app cyphers and programmed cyphers function at one level
+    higher than normal. If given a week and access to a computer, you
+    can tinker with app and programmed cyphers, changing their
+    function to that of another cypher you had in the past.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: hacks-the-network
+    tier: 3

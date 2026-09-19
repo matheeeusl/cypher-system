@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: abides-in-stone
     tier: 3
+  - type: focus
+    id: fuses-flesh-and-steel
+    tier: 3

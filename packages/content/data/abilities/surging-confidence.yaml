@@ -1,0 +1,17 @@
+id: surging-confidence
+name:
+  en: Surging Confidence
+  pt-BR: Confiança Crescente
+description:
+  en: >-
+    When you use an action to make your first recovery roll of the
+    day, you immediately gain another action.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: feigns-no-fear
+    tier: 1

@@ -1,0 +1,21 @@
+id: cats-paw
+name:
+  en: Cat's Paw
+  pt-BR: Pata de Gato
+description:
+  en: You gain CatsPaw cybernetics that replace your organic feet, granting you an asset on stealth tasks that use your feet—for example, walking or running. Additionally, you reduce falling damage by 2 points.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker, not modeled — see fast-chrome) and prints its mechanical
+  # effect as a separate "CATSPAW" implant sidebar (Implant: Replaces
+  # foot and ankle; Value: $5,000; Effect: ...) rather than inline prose.
+  # The Effect sentence is folded into the description above; the
+  # implant location and $5,000 price have no home in the schema (no
+  # per-item equipment catalog — see this package's CLAUDE.md) and are
+  # omitted, flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: embeds-stealthtech
+    tier: 2

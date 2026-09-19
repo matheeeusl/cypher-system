@@ -1,0 +1,20 @@
+id: jovial-presence
+name:
+  en: Jovial Presence
+  pt-BR: Presença Jovial
+description:
+  en: >-
+    You observe or study a creature, object, or location for at
+    least one round. The next time you interact with it (possibly in
+    the following round), a related task (such as persuading the
+    creature, attacking it, or defending from its attack) is eased.
+    If you're in a saloon, the task is eased by two steps.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: hits-the-saloon
+    tier: 1

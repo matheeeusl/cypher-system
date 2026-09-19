@@ -1,0 +1,17 @@
+id: expert-drone
+name:
+  en: Expert Drone
+  pt-BR: Drone Especialista
+description:
+  en: >-
+    The drone from your Drone Buddy ability advances to level 3. You
+    can either gain (build) a secondary drone, or add +1 Armor to
+    your primary drone. (Secondary drone: level 2; flies a short
+    distance each round.)
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-custom-drone
+    tier: 3

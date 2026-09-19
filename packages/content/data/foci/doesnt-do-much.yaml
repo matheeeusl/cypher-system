@@ -1,0 +1,39 @@
+id: doesnt-do-much
+name:
+  en: Doesn't Do Much
+  pt-BR: Não Faz Muito
+description:
+  en: You're a slacker, but you know a little about a lot of things.
+  pt-BR: Você é um preguiçoso, mas sabe um pouco sobre muitas coisas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: life-lessons
+  '2':
+    - kind: granted
+      ability_id: totally-chill
+  '3':
+    - kind: choice
+      options:
+        - skill-with-attacks
+        - improvise
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: life-lessons
+    - kind: granted
+      ability_id: greater-skill-with-defense
+  '5':
+    - kind: granted
+      ability_id: greater-enhanced-potential
+  '6':
+    - kind: choice
+      options:
+        - drawing-on-lifes-experiences
+        - quick-wits
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

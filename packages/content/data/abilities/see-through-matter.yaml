@@ -5,6 +5,10 @@ name:
 description:
   en: You can see through matter as if it were transparent. You can see through up to 6 inches (15 cm) of material for one round. Doing so is a task whose difficulty is equal to the material or object's level. In addition to the normal options for using Effort, you can choose to use Effort to see through another 6 inches of material for each additional level of Effort you apply toward that goal.
   pt-BR: Você consegue ver através da matéria como se fosse transparente. Você pode ver através de até 15 centímetros de material por uma rodada. Fazer isso é uma tarefa cuja dificuldade é igual ao nível do material ou objeto. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para ver através de mais 15 centímetros de material para cada nível adicional de Esforço aplicado a esse objetivo.
+  # Note: source cost is printed as "3+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 3 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
 cost:
   pool: intellect
   amount: 3
@@ -13,3 +17,6 @@ sources:
   - type: focus
     id: sees-beyond
     tier: 2
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 3

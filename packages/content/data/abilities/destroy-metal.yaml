@@ -1,0 +1,24 @@
+id: destroy-metal
+name:
+  en: Destroy Metal
+  pt-BR: Destruir Metal
+description:
+  en: >-
+    You instantly tear, rip, or burst a metal object that is within sight,
+    within short range, and no bigger than half your size.
+    Attempt an Intellect task to destroy the object; the task
+    is eased by three steps compared to breaking it with
+    brute strength
+  pt-BR: >-
+    Você rasga, despedaça ou rompe instantaneamente um objeto de metal que esteja ao seu alcance visual
+    e a curta distância, e que não seja maior do que a metade do seu tamanho.
+    Realize uma tarefa de Intelecto para destruir o objeto; a tarefa é facilitada em três níveis
+    em comparação a quebrá-lo com força bruta.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 3

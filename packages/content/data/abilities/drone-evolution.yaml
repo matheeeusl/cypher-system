@@ -1,0 +1,18 @@
+id: drone-evolution
+name:
+  en: Drone Evolution
+  pt-BR: Evolução de Drone
+description:
+  en: >-
+    Your primary drone's level increases to 5, and you build up to
+    four fleet drones of the same or smaller size as the primary
+    drone. If a fleet drone is destroyed, you can build a new one (or
+    repair the old one from its parts) after a week of half-time
+    labor. (Fleet drone: level 3; flies a short distance each round.)
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-custom-drone
+    tier: 6

@@ -1,0 +1,21 @@
+id: fast-kill
+name:
+  en: Fast Kill
+  pt-BR: Morte Rápida
+description:
+  en: >-
+    You know how to kill quickly. When you hit with a melee or ranged
+    attack, you deal 4 additional points of damage. You can't make
+    this attack in two consecutive rounds.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: fights-with-panache
+    tier: 4
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 4

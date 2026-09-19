@@ -1,0 +1,19 @@
+id: careful-shot
+name:
+  en: Careful Shot
+  pt-BR: Tiro Cuidadoso
+description:
+  en: >-
+    You can spend points from either your Speed Pool or your
+    Intellect Pool to apply levels of Effort to increase your gun
+    damage. Each level of Effort adds 3 points of damage to a
+    successful attack, and if you spend a turn lining up your shot,
+    each level of Effort instead adds 5 points of damage to a
+    successful attack.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-licensed-to-carry
+    tier: 2

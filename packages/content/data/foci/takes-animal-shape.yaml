@@ -1,0 +1,39 @@
+id: takes-animal-shape
+name:
+  en: Takes Animal Shape
+  pt-BR: Assume Forma Animal
+description:
+  en: A shapechanger who can take the form of various animals.
+  pt-BR: Um metamorfo que pode assumir a forma de vários animais.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: animal-shape
+  '2':
+    - kind: granted
+      ability_id: communication-animal
+    - kind: granted
+      ability_id: soothe-the-savage
+  '3':
+    - kind: choice
+      options:
+        - bigger-animal-shape
+        - greater-beast-form
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: animal-scrying
+  '5':
+    - kind: granted
+      ability_id: hard-to-kill
+  '6':
+    - kind: choice
+      options:
+        - blurring-speed
+        - lend-animal-shape
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

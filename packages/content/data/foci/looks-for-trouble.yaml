@@ -1,0 +1,41 @@
+id: looks-for-trouble
+name:
+  en: Looks for Trouble
+  pt-BR: Procura Encrenca
+description:
+  en: You're a scrapper and love a good fight.
+  pt-BR: Você é um brigão e adora uma boa luta.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: fists-of-fury
+    - kind: granted
+      ability_id: wound-tender
+  '2':
+    - kind: granted
+      ability_id: protector
+    - kind: granted
+      ability_id: straightforward
+  '3':
+    - kind: choice
+      options:
+        - skill-with-attacks
+        - greater-enhanced-potential
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: knock-out
+  '5':
+    - kind: granted
+      ability_id: mastery-with-attacks
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-might
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

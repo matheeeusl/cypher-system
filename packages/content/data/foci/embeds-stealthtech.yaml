@@ -1,0 +1,69 @@
+id: embeds-stealthtech
+name:
+  en: Embeds Stealthtech
+  pt-BR: Incorpora Tecnofurtividade
+description:
+  en: Some of your organic parts have been replaced with artificial components. Like most people in the city, you are a cyborg, but your augmentations are extensive, and your chrome parts are meant for stealth and infiltration. You almost certainly have synthetic materials and technical components visible on your skin. As you advance, you can add to, modify, or discover new functions for your machine parts.
+  pt-BR: Algumas de suas partes orgânicas foram substituídas por componentes artificiais. Como a maioria das pessoas na cidade, você é um ciborgue, mas suas modificações são extensas, e suas partes de "chrome" são feitas para furtividade e infiltração. Você quase certamente tem materiais sintéticos e componentes técnicos visíveis em sua pele. À medida que avança, você pode adicionar, modificar ou descobrir novas funções para suas partes mecânicas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: fast-chrome
+    - kind: granted
+      ability_id: stealth-skills
+  '2':
+    - kind: granted
+      ability_id: cats-paw
+  '3':
+    - kind: choice
+      options:
+        - confidence-artist
+        - limited-camouflage
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: better-surprise-attack
+  '5':
+    - kind: granted
+      ability_id: hard-to-see
+  '6':
+    - kind: choice
+      options:
+        - escape-plan
+        - perfect-speed-burst
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. You grew up in the same neighborhood and have
+      known each other since childhood.
+    pt-BR: >-
+      Escolha outro PJ. Vocês cresceram no mesmo bairro e se conhecem
+      desde a infância.
+  - en: >-
+      Pick one other PC. No matter how hard you try, they're always
+      able to spot you and see through your deceptions.
+    pt-BR: >-
+      Escolha outro PJ. Por mais que você se esforce, ele sempre
+      consegue notar sua presença e ver através de seus embustes.
+  - en: >-
+      Pick one other PC. Something about their organic parts and
+      cybernetics means you two look a lot alike—close enough to be
+      siblings.
+    pt-BR: >-
+      Escolha outro PJ. Algo em suas partes orgânicas e cibernéticas
+      faz com que vocês dois se pareçam muito — o suficiente para
+      serem irmãos.
+  - en: >-
+      Pick two other PCs. You know about an important connection
+      between them, something that even they don't know about.
+    pt-BR: >-
+      Escolha outros dois PJs. Você sabe de uma conexão importante
+      entre eles, algo que nem mesmo eles sabem.
+minor_effect_suggestion:
+  en: You regain 1 point to your Speed Pool.
+  pt-BR: Você recupera 1 ponto na sua Reserva de Agilidade.
+major_effect_suggestion:
+  en: You can immediately take a second action during this turn.
+  pt-BR: Você pode realizar imediatamente uma segunda ação neste turno.

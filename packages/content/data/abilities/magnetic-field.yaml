@@ -1,0 +1,24 @@
+id: magnetic-field
+name:
+  en: Magnetic Field
+  pt-BR: Campo Magnético
+description:
+  en: >-
+    When you wish it, a field of magnetism around you pulls incoming,
+    ranged, metallic projectile attacks (such as arrows,
+    bullets, a thrown metal knife, and so on) to the ground.
+    You are immune to such attacks for one round. You
+    must be aware of an attack to foil it.
+  pt-BR: >-
+    Quando você deseja, um campo magnético ao seu redor atrai para o chão
+    ataques de projéteis metálicos à distância que se aproximam (como flechas, balas,
+    uma faca de metal arremessada, etc.). Você fica imune a tais ataques por uma rodada.
+    Você precisa estar ciente de um ataque para anulá-lo.
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 4

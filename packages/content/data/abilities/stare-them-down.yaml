@@ -1,0 +1,13 @@
+id: stare-them-down
+name:
+  en: Stare Them Down
+  pt-BR: Olhe Eles No Olho
+description:
+  en: One doesn't play games of chicken with other maniac drivers without gaining mental strength. You're trained in Intellect defense tasks.
+  pt-BR: Não se entra em jogos de "quem desvia primeiro" contra outros motoristas maníacos sem ganhar força mental. Você é treinado em tarefas de defesa de intelecto.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 2

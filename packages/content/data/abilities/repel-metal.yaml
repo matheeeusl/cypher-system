@@ -1,0 +1,17 @@
+id: repel-metal
+name:
+  en: Repel Metal
+  pt-BR: Repelir Metal
+description:
+  en: >-
+    By manipulating magnetism, you are trained in Speed defense tasks against
+    any incoming attack that uses metal
+  pt-BR: >-
+    Ao manipular o magnetismo, você é treinado em tarefas de defesa de velocidade contra
+    qualquer ataque que utilize metal.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 2

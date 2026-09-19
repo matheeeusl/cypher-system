@@ -1,0 +1,15 @@
+id: straightforward
+name:
+  en: Straightforward
+  pt-BR: Direto ao Ponto
+description:
+  en: >-
+    You are trained in one of the following tasks (choose one):
+    breaking things, climbing, jumping, or running.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: looks-for-trouble
+    tier: 2

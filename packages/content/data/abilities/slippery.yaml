@@ -1,0 +1,13 @@
+id: slippery
+name:
+  en: Slippery
+  pt-BR: Escorregadio
+description:
+  en: You are trained in escaping any kind of bond or grasp.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-a-cat
+    tier: 5

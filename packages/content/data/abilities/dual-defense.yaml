@@ -1,0 +1,13 @@
+id: dual-defense
+name:
+  en: Dual Defense
+  pt-BR: Defesa Dupla
+description:
+  en: When you wield two weapons, you are trained in Speed defense tasks
+  pt-BR: Quando você empunha duas armas, você é treinado em tarefas de defesa de velocidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 4

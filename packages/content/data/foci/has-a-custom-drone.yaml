@@ -1,0 +1,94 @@
+id: has-a-custom-drone
+name:
+  en: Has a Custom Drone
+  pt-BR: Tem um Drone Personalizado
+description:
+  en: >-
+    You're a genius with drones—building them, controlling them, and
+    repairing them. You've created a unique drone with a limited
+    artificial intelligence; it follows your commands like it's an
+    extension of your thoughts. As you advance, you learn and
+    discover new ways to update your drone and give it additional
+    abilities, and how to control multiple drones at once. You may
+    think of your drone as a tool, pet, or sidekick; it sees you as a
+    best friend or beloved parent.
+  pt-BR: >-
+    Você é um gênio com drones — construindo-os, controlando-os e
+    consertando-os. Você criou um drone único com uma inteligência
+    artificial limitada; ele obedece seus comandos como se fosse uma
+    extensão de seus pensamentos. Conforme avança, você aprende e
+    descobre novas formas de atualizar seu drone e conceder a ele
+    habilidades adicionais, além de como controlar múltiplos drones ao
+    mesmo tempo. Você pode pensar no seu drone como uma ferramenta, um
+    bichinho de estimação, ou um parceiro; ele o vê como um grande
+    amigo ou um pai/mãe querido.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: drone-buddy
+    - kind: granted
+      ability_id: robot-builder
+  '2':
+    - kind: granted
+      ability_id: robot-control
+  '3':
+    - kind: choice
+      options:
+        - coordinated-actions
+        - expert-drone
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: drone-upgrade
+  '5':
+    - kind: granted
+      ability_id: premium-drone
+  '6':
+    - kind: choice
+      options:
+        - drone-evolution
+        - drone-split
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: Drone spare parts, drone tool kit.
+  pt-BR: Peças sobressalentes de drone, kit de ferramentas para drone.
+connection_options:
+  - en: >-
+      Pick one other PC. Your drone accepts commands from them as if
+      they were you (but your commands take precedent).
+    pt-BR: >-
+      Escolha outro PJ. Seu drone aceita comandos dele como se fossem
+      seus (mas seus comandos têm prioridade).
+  - en: >-
+      Pick one other PC. You built a drone for that character, but it
+      promptly tried to kill them, so it had to be destroyed. You're
+      not sure what went wrong.
+    pt-BR: >-
+      Escolha outro PJ. Você construiu um drone para esse personagem,
+      mas ele prontamente tentou matá-lo, então teve que ser destruído.
+      Você não sabe ao certo o que deu errado.
+  - en: >-
+      Pick one other PC. You are certain that character is either an
+      AI in a fully artificial body, or has a FuBo (full body
+      cybernetic), even if they deny it.
+    pt-BR: >-
+      Escolha outro PJ. Você tem certeza de que esse personagem é uma
+      IA num corpo totalmente artificial, ou possui um CorTo (corpo
+      totalmente cibernético), mesmo que ele negue.
+  - en: >-
+      Pick one other PC. You created a level 1 robotic pet for that
+      character that sometimes shows up but is usually off doing its
+      own thing.
+    pt-BR: >-
+      Escolha outro PJ. Você criou um bichinho robótico de nível 1
+      para esse personagem, que às vezes aparece, mas geralmente está
+      por aí fazendo suas próprias coisas.
+minor_effect_suggestion:
+  en: Your drone buddy jostles your foe, hindering its next turn by one step.
+  pt-BR: >-
+    Seu drone companheiro empurra seu oponente, dificultando seu
+    próximo turno em um nível.
+major_effect_suggestion:
+  en: Your drone buddy takes an immediate extra action that you choose.
+  pt-BR: Seu drone companheiro realiza imediatamente uma ação extra que você escolher.

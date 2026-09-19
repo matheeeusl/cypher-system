@@ -1,0 +1,26 @@
+id: dual-distraction
+name:
+  en: Dual Distraction
+  pt-BR: Distração Dupla
+description:
+  en: >-
+    When you wield two weapons, your opponent's next attack is
+    hindered, and if you apply Effort on your next attack
+    against that same foe, you get a free level of Effort on
+    the task. 
+  pt-BR: >-
+    Ao empunhar duas armas, o próximo ataque do seu oponente é
+    prejudicado e, se você aplicar Esforço em seu próximo ataque contra esse mesmo inimigo,
+    você ganha um nível de Esforço gratuito na tarefa.
+# Note: source cost is printed as "1+ Speed points" — the schema's
+# cost field can't represent an open-ended "+". Recorded as the
+# baseline 1 Speed point here, flagged for schema review (same
+# approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 5

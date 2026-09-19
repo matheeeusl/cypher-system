@@ -1,0 +1,31 @@
+id: dimensional-squeeze
+name:
+  en: Dimensional Squeeze
+  pt-BR: Compressão Dimensional
+description:
+  en: >-
+    You cram yourself into a transitional dimension, allowing you to
+    instantaneously appear anywhere you choose within short range if
+    you have a clear and unobstructed path to that location. You can
+    pass through an intervening barrier if it has an open space that
+    you could easily fit your head through—about 1 square foot (30 cm
+    by 30 cm square). In addition to the normal options for using
+    Effort, you can choose to use Effort to pass through a smaller
+    opening in a barrier; each level of Effort used in this way
+    reduces the minimum opening size by one-fourth. You land safely
+    when you use this ability. (A transitional dimension is a
+    dimension where distances are shorter compared to those in other
+    dimensions, so travel through it is faster than normal movement.)
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: ignores-physical-distance
+    tier: 1

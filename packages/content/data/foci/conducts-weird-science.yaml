@@ -1,0 +1,41 @@
+id: conducts-weird-science
+name:
+  en: Conducts Weird Science
+  pt-BR: Conduz Ciência Estranha
+description:
+  en: Your preternatural insight and ability make you a scientist capable of amazing feats.
+  pt-BR: Sua percepção e habilidade sobrenaturais fazem de você um cientista capaz de feitos incríveis.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: lab-analysis
+    - kind: granted
+      ability_id: knowledge-skills
+  '2':
+    - kind: granted
+      ability_id: modify-device
+  '3':
+    - kind: choice
+      options:
+        - better-living-through-chemistry
+        - incredible-health
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: knowledge-skills
+  '5':
+    - kind: granted
+      ability_id: weird-science-breakthrough
+  '6':
+    - kind: granted
+      ability_id: incredible-feat-of-science
+    - kind: choice
+      options:
+        - inventor
+        - defensive-field
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

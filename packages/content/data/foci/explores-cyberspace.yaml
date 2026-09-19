@@ -1,0 +1,99 @@
+id: explores-cyberspace
+name:
+  en: Explores Cyberspace
+  pt-BR: Explora o Ciberespaço
+description:
+  en: >-
+    You've always been fascinated by cyberspace, its architecture, and
+    the wealth of data it contains. You may have started out as a
+    hacker, programmer, or data administrator, but viewing the internet
+    on a screen was never enough for you. You're driven by the urge to
+    transcend your body, to enter a complete simulation of that
+    nonsensical nonspace. You're a netrunner, hooked on the thrill of
+    jacking into the matrix, where you interact with physical
+    manifestations of AI, software, and viruses. You might enter the
+    matrix for legitimate reasons, such as for your job or
+    education—or maybe you make a point of going where you're not
+    welcome, stealing and selling proprietary data. With access to a
+    computer or terminal, you plug yourself in and you're off to the
+    races.
+  pt-BR: >-
+    Você sempre foi fascinado pelo ciberespaço, sua arquitetura e a
+    riqueza de dados que ele contém. Você pode ter começado como
+    hacker, programador ou administrador de dados, mas ver a internet
+    numa tela nunca foi suficiente para você. Você é movido pelo desejo
+    de transcender seu corpo, de entrar numa simulação completa desse
+    espaço sem sentido. Você é um netrunner, viciado na emoção de
+    conectar-se à matriz, onde interage com manifestações físicas de
+    IA, softwares e vírus. Você pode entrar na matriz por motivos
+    legítimos, como trabalho ou educação — ou talvez faça questão de ir
+    aonde não é bem-vindo, roubando e vendendo dados proprietários. Com
+    acesso a um computador ou terminal, você se conecta e parte para a
+    ação.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: datajack
+    - kind: granted
+      ability_id: computer-programming
+  '2':
+    - kind: granted
+      ability_id: hacker
+  '3':
+    - kind: choice
+      options:
+        - ai-assistant
+        - experienced-netrunner
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+    - kind: granted
+      ability_id: floating-in-the-matrix
+  '5':
+    - kind: granted
+      ability_id: information-gathering
+  '6':
+    - kind: choice
+      options:
+        - machine-enhancement
+        - perfect-direction
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one PC. You're convinced you've encountered them in
+      cyberspace, but they don't resemble their avatar offline.
+    pt-BR: >-
+      Escolha um PJ. Você está convencido de que já o encontrou no
+      ciberespaço, mas ele não se parece com seu avatar offline.
+  - en: >-
+      Pick one PC. You've previously worked for the same fixer but
+      were siloed into different jobs.
+    pt-BR: >-
+      Escolha um PJ. Vocês já trabalharam para o mesmo agenciador,
+      mas foram mantidos isolados em tarefas diferentes.
+  - en: >-
+      Pick one PC. When their identity was stolen by hackers, you
+      helped clear things up.
+    pt-BR: >-
+      Escolha um PJ. Quando a identidade dele foi roubada por
+      hackers, você ajudou a resolver a situação.
+  - en: >-
+      Pick one PC. Once, while you were netrunning and they were on
+      watch, they fled from a physical threat and left you to fend
+      for yourself. You're fine, now, but wary around that character.
+    pt-BR: >-
+      Escolha um PJ. Certa vez, enquanto você estava conectado à rede
+      e ele vigiava, ele fugiu de uma ameaça física e o deixou se
+      virar sozinho. Você está bem agora, mas fica precavido perto
+      desse personagem.
+minor_effect_suggestion:
+  en: Any foes or ICE in the frame freeze for one round.
+  pt-BR: Quaisquer inimigos ou ICE no frame ficam paralisados por uma rodada.
+major_effect_suggestion:
+  en: Any foes or ICE in the frame are paralyzed by debilitating glitches.
+  pt-BR: >-
+    Quaisquer inimigos ou ICE no frame ficam paralisados por falhas
+    debilitantes.

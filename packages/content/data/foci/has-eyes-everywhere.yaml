@@ -1,0 +1,95 @@
+id: has-eyes-everywhere
+name:
+  en: Has Eyes Everywhere
+  pt-BR: Tem Olhos em Toda Parte
+description:
+  en: >-
+    Let's be honest: you live in a surveillance state. Security
+    cameras on every corner, smartphones that track the user's
+    activity, cybernetics that track the wearer's movements…It's
+    nearly impossible to avoid being tracked, but you've made the
+    most of it. You hack into these surveillance networks and use
+    your unauthorized access to monitor your environment. It's up to
+    you what you do with this access. You may serve as a lookout for
+    criminal associates, work dispatch for local vigilantes, or just
+    keep an eye on the neighborhood. You likely have multiple phones
+    and computers, alternating between them to obfuscate your
+    activities.
+  pt-BR: >-
+    Sejamos honestos: você vive num estado de vigilância. Câmeras de
+    segurança em cada esquina, smartphones que rastreiam a atividade
+    do usuário, cibernética que rastreia os movimentos de quem a
+    porta... É quase impossível evitar ser rastreado, mas você tirou o
+    máximo proveito disso. Você invade essas redes de vigilância e usa
+    seu acesso não autorizado para monitorar seu ambiente. Cabe a você
+    decidir o que fazer com esse acesso. Você pode servir de vigia para
+    associados criminosos, trabalhar despachando vigilantes locais, ou
+    apenas ficar de olho na vizinhança. Você provavelmente tem vários
+    celulares e computadores, alternando entre eles para ofuscar suas
+    atividades.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: datajack
+    - kind: granted
+      ability_id: stealth-skills
+  '2':
+    - kind: granted
+      ability_id: camera-sight
+  '3':
+    - kind: choice
+      options:
+        - awareness
+        - surveillance-overwatch
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+    - kind: granted
+      ability_id: find-by-phone
+  '5':
+    - kind: granted
+      ability_id: enhanced-camera-sight
+  '6':
+    - kind: choice
+      options:
+        - machine-enhancement
+        - vision-360
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. When they were caught on camera committing a
+      crime, you deleted the footage before anyone else saw it.
+    pt-BR: >-
+      Escolha outro PJ. Quando ele foi flagrado numa câmera cometendo
+      um crime, você apagou a gravação antes que mais alguém a visse.
+  - en: >-
+      Pick one other PC. You taught them how to prevent their
+      cyberware from sharing their location with the manufacturer.
+    pt-BR: >-
+      Escolha outro PJ. Você o ensinou a impedir que a cibernética dele
+      compartilhasse sua localização com o fabricante.
+  - en: >-
+      Pick one other PC. Your hacking skills—and how you use those
+      skills—seem to make that character nervous.
+    pt-BR: >-
+      Escolha outro PJ. Suas habilidades de invasão — e como você as
+      usa — parecem deixar esse personagem nervoso.
+  - en: >-
+      Pick one other PC. You were once hired to track down someone
+      that character was protecting.
+    pt-BR: >-
+      Escolha outro PJ. Você já foi contratado para localizar alguém
+      que esse personagem estava protegendo.
+minor_effect_suggestion:
+  en: Something you see provides information that eases your next action by one step.
+  pt-BR: >-
+    Algo que você vê fornece informações que facilitam sua próxima
+    ação em um nível.
+major_effect_suggestion:
+  en: Other individuals using the surveillance network are logged out for up to a minute.
+  pt-BR: >-
+    Outros indivíduos usando a rede de vigilância são desconectados
+    por até um minuto.

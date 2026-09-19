@@ -1,0 +1,35 @@
+id: network-tap
+name:
+  en: Network Tap
+  pt-BR: Grampo de Rede
+description:
+  en: >-
+    You can ask the GM one question and get a very short answer if you
+    succeed on an Intellect roll against a difficulty assigned by the
+    GM. The more obscure the answer, the more difficult the task. On a
+    failed roll, feedback or perhaps some defense from the network
+    you're accessing inflicts 4 points of Intellect damage on you
+    (ignores Armor).
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) under Hacks the Network and Knows Everything, but not under
+  # Fuses Mind and Machine or Merges Mind With Machine — same per-source
+  # inconsistency as machine-enhancement. Not modeled by the schema.
+  # Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 2
+  - type: focus
+    id: hacks-the-network
+    tier: 3
+  - type: focus
+    id: knows-everything
+    tier: 3
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 4

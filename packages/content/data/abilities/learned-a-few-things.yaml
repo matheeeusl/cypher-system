@@ -1,0 +1,22 @@
+id: learned-a-few-things
+name:
+  en: Learned a Few Things
+  pt-BR: Aprendeu Algumas Coisas
+description:
+  en: >-
+    You are trained in two areas of knowledge of your choice, or
+    specialized in one area of knowledge of your choice.
+  pt-BR: "Tradução em breve."
+  # Note: source text is identical to `learned-a-few-things-over-drinks`
+  # (Hits the Saloon), but printed under a different ability name here
+  # ("Learned a Few Things" vs "Learned a Few Things Over Drinks") —
+  # kept as separate abilities per the established convention (a
+  # different printed name gets its own entity even when the mechanical
+  # text matches verbatim, same as fast-kill/quick-death and
+  # courting-lady-luck/destined-for-greatness).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: learns-quickly
+    tier: 5

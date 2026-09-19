@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: masters-spells
     tier: 6
+  - type: focus
+    id: consorts-with-the-dead
+    tier: 6

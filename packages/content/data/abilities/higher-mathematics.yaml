@@ -1,0 +1,13 @@
+id: higher-mathematics
+name:
+  en: Higher Mathematics
+  pt-BR: Matemática Avançada
+description:
+  en: You are trained in standard and higher mathematics.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 1

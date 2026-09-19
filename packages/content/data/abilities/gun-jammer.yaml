@@ -1,0 +1,23 @@
+id: gun-jammer
+name:
+  en: Gun Jammer
+  pt-BR: Travador de Armas
+description:
+  en: You can interfere with a firearm so the next time it is used, it jams or misfires. The weapon must be within short range and you must be able to see it. Make an Intellect-based attack against the weapon or its bearer (whichever level is higher). If you succeed, the next attack with the firearm fails, and the weapon won't fire until someone uses an action to correct the problem. If you activate this ability when it isn't your turn, your attack against the weapon is hindered. In addition to the normal options for using Effort, you can use Effort to affect more firearms; each level of Effort affects one additional target.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 2
+# Note: source tag is "Action or enabler." — a genuinely dual-mode tag
+# (the ability text confirms it can be used off-turn, functioning
+# reactively) — not in the schema's action_type enum; approximated as
+# action. See .population-status.md item 3.
+action_type: action
+sources:
+  - type: focus
+    id: conjures-bullets
+    tier: 2

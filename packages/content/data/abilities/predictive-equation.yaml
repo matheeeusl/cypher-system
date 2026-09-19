@@ -1,0 +1,15 @@
+id: predictive-equation
+name:
+  en: Predictive Equation
+  pt-BR: Equação Preditiva
+description:
+  en: You observe or study a creature, object, or location for at least one round. The next time you interact with it (possibly in the following round), a related task (such as persuading the creature, attacking it, or defending from its attack) is eased.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 1

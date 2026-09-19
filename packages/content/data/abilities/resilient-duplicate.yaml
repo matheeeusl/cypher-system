@@ -1,0 +1,16 @@
+id: resilient-duplicate
+name:
+  en: Resilient Duplicate
+  pt-BR: Duplicata Resiliente
+description:
+  en: Increase the health of any duplicate you create (such as with Duplicate) by 5
+  pt-BR: Aumenta a vida de qualquer duplicata que você crie (como com Duplicar) em 5
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 3
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 6

@@ -1,0 +1,18 @@
+id: punish-the-guilty
+name:
+  en: Punish the Guilty
+  pt-BR: Punir o Culpado
+description:
+  en: >-
+    For the next ten minutes, if you attack someone you have
+    designated as guilty with your Designation ability, you inflict 2
+    additional points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: metes-out-justice
+    tier: 3

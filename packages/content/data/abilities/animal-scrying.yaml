@@ -1,0 +1,23 @@
+id: animal-scrying
+name:
+  en: Animal Scrying
+  pt-BR: Vidência Animal
+description:
+  en: If you know the general location of an animal that is friendly toward you and within 1 mile (1.5 km) of your location, you can sense through its senses for up to ten minutes. If you are not in animal form or not in a form similar to that animal, you must apply a level of Effort to use this ability.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the baseline
+  # 4 Intellect points here, flagged for schema review (same approximation
+  # used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 4
+# Note: source tag is "Action to establish." — not in the schema's
+# action_type enum; approximated as action_to_initiate, same call made for
+# use-senses-of-others (Commands Mental Powers). See .population-status.md
+# item 3.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: takes-animal-shape
+    tier: 4

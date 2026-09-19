@@ -1,0 +1,17 @@
+id: practiced-in-armor
+name:
+  en: Practiced in Armor
+  pt-BR: Praticado com Armaduras
+description:
+  en: >-
+    You can wear armor for long periods of time without tiring and
+    can compensate for slowed reactions from wearing armor. You
+    reduce the Speed cost for wearing armor by 1. You start the game
+    with a type of armor of your choice.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 2

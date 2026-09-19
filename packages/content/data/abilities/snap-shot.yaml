@@ -1,0 +1,13 @@
+id: snap-shot
+name:
+  en: Snap Shot
+  pt-BR: Tiro Rápido
+description:
+  en: You can make two gun attacks as a single action, but the second attack is hindered by two steps.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-licensed-to-carry
+    tier: 4

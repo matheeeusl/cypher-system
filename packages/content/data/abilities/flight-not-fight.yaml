@@ -1,0 +1,13 @@
+id: flight-not-fight
+name:
+  en: Flight Not Fight
+  pt-BR: Fuga em Vez de Luta
+description:
+  en: If you use your action only to move, all Speed defense tasks are eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: infiltrates
+    tier: 2

@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: codes-magic-apps
     tier: 3
+  - type: focus
+    id: embeds-stealthtech
+    tier: 3

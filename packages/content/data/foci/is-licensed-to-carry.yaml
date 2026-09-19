@@ -1,0 +1,40 @@
+id: is-licensed-to-carry
+name:
+  en: Is Licensed to Carry
+  pt-BR: Tem Licença para Portar Armas
+description:
+  en: You carry a gun and you know how to use it in a fight.
+  pt-BR: Você porta uma arma de fogo e sabe usá-la em uma luta.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: gunner
+    - kind: granted
+      ability_id: practiced-with-guns
+  '2':
+    - kind: granted
+      ability_id: careful-shot
+  '3':
+    - kind: choice
+      options:
+        - trained-gunner
+        - damage-dealer
+        - spray
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: snap-shot
+  '5':
+    - kind: granted
+      ability_id: arc-spray
+  '6':
+    - kind: choice
+      options:
+        - special-shot
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

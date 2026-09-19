@@ -1,0 +1,15 @@
+id: heroic-monster-bane
+name:
+  en: Heroic Monster Bane
+  pt-BR: Flagelo Heroico de Monstros
+description:
+  en: >-
+    When you inflict damage to creatures more than twice as large or
+    massive as you, you inflict 3 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: feigns-no-fear
+    tier: 6

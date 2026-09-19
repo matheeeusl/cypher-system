@@ -1,0 +1,19 @@
+id: weird-science-breakthrough
+name:
+  en: Weird Science Breakthrough
+  pt-BR: Avanço da Ciência Estranha
+description:
+  en: Your research leads to a breakthrough, and you imbue an object with a truly amazing property, though you can use the item only once. To do so, you must buy spare parts equivalent to an expensive item, have a field science kit (or a permanent lab, if you have access to one), and succeed at a difficulty 4 Intellect-based roll to create a random manifest cypher of up to level 2. The GM decides the nature of the cypher you create. Attempting to create a specified cypher hinders the task by two steps. Creating a cypher does not allow you to surpass your normal cypher limit. In addition to the normal options for using Effort, you can choose to use Effort to increase the level of the cypher you create; each level of Effort increases the level of the cypher and the difficulty of the Intellect task to create it.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 5 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: conducts-weird-science
+    tier: 5

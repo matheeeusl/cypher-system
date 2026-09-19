@@ -1,0 +1,15 @@
+id: wilderness-life
+name:
+  en: Wilderness Life
+  pt-BR: Vida na Natureza
+description:
+  en: >-
+    You are trained in two of the following: climbing, swimming,
+    navigation, or identifying plants and creatures.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: lives-in-the-wilderness
+    tier: 1

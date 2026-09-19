@@ -1,0 +1,17 @@
+id: blessing-of-the-gods-death
+name:
+  en: Blessing of the Gods (Death)
+  pt-BR: Bênção dos Deuses (Morte)
+description:
+  en: >-
+    A target you choose within short range withers, suffering 3
+    points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: made-a-deal-with-death
+    tier: 1

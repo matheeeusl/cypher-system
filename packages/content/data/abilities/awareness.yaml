@@ -1,0 +1,30 @@
+id: awareness
+name:
+  en: Awareness
+  pt-BR: Percepção Aguçada
+description:
+  en: >-
+    You become hyperaware of your surroundings in order to better
+    locate your target. For ten minutes, you are aware of all living
+    things within long range (including their general position), and
+    by concentrating (another action), you can attempt to learn the
+    general health and power level of any one of them.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) under Has Eyes Everywhere, but not under Infiltrates — same
+  # per-source inconsistency as machine-enhancement. Not modeled by the
+  # schema. Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 3
+  - type: focus
+    id: infiltrates
+    tier: 3
+  - type: focus
+    id: murders
+    tier: 3

@@ -1,0 +1,18 @@
+id: spring-away
+name:
+  en: Spring Away
+  pt-BR: Saltar Fora
+description:
+  en: >-
+    Whenever you succeed on a Speed defense roll, you can immediately
+    move up to a short distance. You cannot use this ability more
+    than once in a given round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: infiltrates
+    tier: 6

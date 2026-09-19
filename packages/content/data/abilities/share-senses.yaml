@@ -1,0 +1,20 @@
+id: share-senses
+name:
+  en: Share Senses
+  pt-BR: Compartilhar Sentidos
+description:
+  en: >-
+    While your duplicate created by the
+    Duplicate ability is in existence and within 1 mile (1.5
+    km), you know everything it experiences and can
+    communicate with it telepathically. 
+  pt-BR: >-
+    Enquanto a sua duplicata criada pela habilidade Duplicata estiver ativa
+    e a uma distância de até 1,5 km (1 milha), você sabe tudo o que ela vivencia
+    e pode se comunicar com ela telepaticamente.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 2

@@ -1,0 +1,41 @@
+id: lives-in-the-wilderness
+name:
+  en: Lives in the Wilderness
+  pt-BR: Vive na Natureza Selvagem
+description:
+  en: You can survive in badlands where others perish.
+  pt-BR: Você consegue sobreviver em terras hostis onde outros pereceriam.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: wilderness-life
+    - kind: granted
+      ability_id: enhanced-might
+  '2':
+    - kind: granted
+      ability_id: living-off-the-land
+    - kind: granted
+      ability_id: wilderness-explorer
+  '3':
+    - kind: choice
+      options:
+        - animal-senses-and-sensibilities
+        - wilderness-encouragement
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: wilderness-awareness
+  '5':
+    - kind: granted
+      ability_id: the-wild-is-on-your-side
+  '6':
+    - kind: choice
+      options:
+        - one-with-the-wild
+        - wild-camouflage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

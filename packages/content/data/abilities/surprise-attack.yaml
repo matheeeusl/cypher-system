@@ -17,3 +17,9 @@ sources:
   - type: focus
     id: hunts
     tier: 4
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 2
+  - type: focus
+    id: murders
+    tier: 1

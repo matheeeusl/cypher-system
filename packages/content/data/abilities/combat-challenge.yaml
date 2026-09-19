@@ -1,0 +1,16 @@
+id: combat-challenge
+name:
+  en: Combat Challenge
+  pt-BR: Desafio de Combate
+description:
+  en: All attempted tasks that draw an attack to yourself (and away from someone else) are eased by two steps.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: defends-the-weak
+    tier: 4
+  - type: focus
+    id: feigns-no-fear
+    tier: 4

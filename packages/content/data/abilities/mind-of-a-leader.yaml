@@ -13,3 +13,9 @@ sources:
   - type: focus
     id: descends-from-nobility
     tier: 6
+  - type: focus
+    id: leads
+    tier: 6
+  - type: focus
+    id: learned-from-the-classics
+    tier: 5

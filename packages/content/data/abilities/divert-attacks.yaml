@@ -1,0 +1,21 @@
+id: divert-attacks
+name:
+  en: Divert Attacks
+  pt-BR: Desviar Ataques
+description:
+  en: For one minute, you automatically deflect or dodge any ranged projectile attacks. However, on your next turn after you're attacked with ranged projectiles, all your other actions are hindered.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: defends-the-gate
+    tier: 3
+  - type: focus
+    id: focuses-mind-over-matter
+    tier: 1
+  - type: focus
+    id: needs-no-weapon
+    tier: 4

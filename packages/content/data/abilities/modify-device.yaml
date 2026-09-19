@@ -1,0 +1,15 @@
+id: modify-device
+name:
+  en: Modify Device
+  pt-BR: Modificar Dispositivo
+description:
+  en: You jury-rig a piece of mechanical or electrical equipment to make it function above its rated specs for a very limited time. To do so, you must use spare parts equal to an expensive item, have a field science kit (or a permanent lab, if you have access to one), and succeed at a difficulty 3 Intellect-based task. When complete, using the device eases all tasks performed in conjunction with the device, until the device inevitably breaks. Each use of the modified device requires a depletion roll of 1 − 5 on a d20.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: conducts-weird-science
+    tier: 2

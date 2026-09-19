@@ -1,0 +1,15 @@
+id: iron-stomach
+name:
+  en: Iron Stomach
+  pt-BR: Estômago de Ferro
+description:
+  en: >-
+    The more you imbibe, the greater your tolerance grows (at least,
+    so far…). You gain +5 to your Might Pool.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: hits-the-saloon
+    tier: 3

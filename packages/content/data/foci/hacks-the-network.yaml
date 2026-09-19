@@ -1,0 +1,97 @@
+id: hacks-the-network
+name:
+  en: Hacks the Network
+  pt-BR: Hackeia a Rede
+description:
+  en: >-
+    AI and the countless networks integrated into every part of life
+    are as ubiquitous as air and, to most people, about as
+    noticeable. Not you. From the moment you first realized that
+    networks ran on an underlying "Ur" tongue, a code of mathematics
+    and logical symbols, you were hooked. It wasn't your goal to
+    learn everything you could about hacking computers so much as
+    there was nothing else for you. As a thrown stone follows its
+    trajectory, you learned to hack the network. As long as you have
+    access to a computer, hand terminal, or other connection, you
+    accomplish your goals by working the code. You might have a few
+    extra pockets for high-energy snacks and spare storage medium, as
+    well.
+  pt-BR: >-
+    A IA e as inúmeras redes integradas a cada parte da vida são tão
+    onipresentes quanto o ar e, para a maioria das pessoas, quase tão
+    imperceptíveis. Não para você. Desde o momento em que percebeu que
+    as redes rodavam sobre uma língua "Ur" subjacente, um código de
+    matemática e símbolos lógicos, você ficou viciado. Não era seu
+    objetivo aprender tudo sobre invadir computadores, e sim que não
+    havia mais nada para você. Como uma pedra atirada segue sua
+    trajetória, você aprendeu a hackear a rede. Enquanto tiver acesso
+    a um computador, terminal portátil ou outra conexão, você atinge
+    seus objetivos trabalhando o código. Você provavelmente tem alguns
+    bolsos extras para petiscos de alta energia e mídia de
+    armazenamento sobressalente.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: datajack
+    - kind: granted
+      ability_id: computer-programming
+  '2':
+    - kind: granted
+      ability_id: hack-the-impossible
+  '3':
+    - kind: choice
+      options:
+        - network-tap
+        - experienced-coder
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: erased
+  '5':
+    - kind: granted
+      ability_id: repeat-hack
+  '6':
+    - kind: choice
+      options:
+        - mind-surge
+        - machine-bond
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. You believe that this character shows
+      potential for being an excellent hacker, but you don't know if
+      they would be interested in the rigorous training and practice
+      required.
+    pt-BR: >-
+      Escolha outro PJ. Você acredita que esse personagem tem potencial
+      para ser um excelente hacker, mas não sabe se ele teria interesse
+      no treinamento rigoroso e na prática necessários.
+  - en: Pick one other PC. This character once accidentally wrecked your computer.
+    pt-BR: Escolha outro PJ. Esse personagem, sem querer, destruiu seu computador uma vez.
+  - en: >-
+      Pick one other PC. You promised this character you would ease
+      their debts by hacking the places where they owe money and
+      adjusting their balance downward.
+    pt-BR: >-
+      Escolha outro PJ. Você prometeu a esse personagem que aliviaria
+      suas dívidas hackeando os lugares onde ele deve dinheiro e
+      reduzindo seu saldo.
+  - en: >-
+      Pick one other PC. Something about this character interrupts
+      your flow. If they're next to you while you're attempting a
+      coding-related task, your efforts are hindered by one step.
+    pt-BR: >-
+      Escolha outro PJ. Algo nesse personagem interrompe seu fluxo. Se
+      ele estiver ao seu lado enquanto você tenta uma tarefa
+      relacionada a programação, seus esforços são dificultados em um
+      nível.
+minor_effect_suggestion:
+  en: The network security measures or linked cameras are blinded for one round.
+  pt-BR: As medidas de segurança da rede ou as câmeras conectadas ficam cegas por uma rodada.
+major_effect_suggestion:
+  en: The network and all nearby connected machines power down for several rounds, up to one minute.
+  pt-BR: >-
+    A rede e todas as máquinas conectadas próximas se desligam por
+    várias rodadas, até um minuto.

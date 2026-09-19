@@ -1,0 +1,28 @@
+id: bottle-ko
+name:
+  en: Bottle KO
+  pt-BR: Nocaute de Garrafa
+description:
+  en: >-
+    You make a melee attack that inflicts no damage. Instead, if the
+    attack hits, make a second Might-based roll. If successful, a foe
+    of level 3 or lower is knocked unconscious for one minute. For
+    each level of Effort used, you can affect one higher level of
+    foe, or you can extend the duration for an additional minute. If
+    you use a whiskey bottle to make the attack, your attack is
+    eased. If you have a similar sort of knockout ability from
+    another source (such as your type), the attack is eased by an
+    additional step.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Might points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 5 Might points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: might
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: hits-the-saloon
+    tier: 4

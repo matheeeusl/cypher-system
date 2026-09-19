@@ -1,0 +1,25 @@
+id: blessing-of-the-gods-protection
+name:
+  en: Blessing of the Gods (Protection)
+  pt-BR: Bênção dos Deuses (Proteção)
+description:
+  en: >-
+    You create a quiet bubble of protection around you to an
+    immediate radius for one minute. The bubble moves with you. All
+    defense rolls for you and all creatures you designate within the
+    bubble are eased, and no noise, regardless of its origin, sounds
+    louder than a normal speaking voice.
+  pt-BR: "Tradução em breve."
+  # Note: source grants this ability "at the GM's discretion" alongside
+  # Blessing of the Gods (Death) at Tier 1 — a conditional second grant
+  # rather than an automatic one, which the schema's plain `granted`
+  # entry can't distinguish from a guaranteed grant. Modeled as granted
+  # regardless; the GM-discretion caveat is noted here for reference.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: made-a-deal-with-death
+    tier: 1

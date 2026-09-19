@@ -1,0 +1,25 @@
+id: debate
+name:
+  en: Debate
+  pt-BR: Debate
+description:
+  en: >-
+    In any gathering of two or more people trying to establish the
+    truth or come to a decision, you can sway the verdict with
+    masterful rhetoric. If you are given one minute or more to argue
+    your point, either the decision goes your way or, if someone else
+    effectively argues a competing point, any associated persuasion or
+    deception task is eased by two steps.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Action to initiate; one minute to complete." —
+  # not one of the 4 standard action_type enum values. Approximated to
+  # `action_to_initiate`, flagged per the running action_type audit
+  # (schema gap item 3).
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: interprets-the-law
+    tier: 2

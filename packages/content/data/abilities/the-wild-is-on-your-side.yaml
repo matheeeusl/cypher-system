@@ -1,0 +1,19 @@
+id: the-wild-is-on-your-side
+name:
+  en: The Wild Is on Your Side
+  pt-BR: A Natureza Está do Seu Lado
+description:
+  en: >-
+    While you're in the wilderness, foes within short range are
+    tripped by rocks, tangled in vines, bitten by insects, and
+    distracted or confused by small animals, which hinders all their
+    tasks for ten minutes.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: lives-in-the-wilderness
+    tier: 5

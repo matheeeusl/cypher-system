@@ -22,6 +22,10 @@ export {
 } from './schemas/armor-category-table.js'
 export { PriceTierTableSchema, type PriceTierTable } from './schemas/price-tier-table.js'
 export { AmmunitionSchema, type Ammunition } from './schemas/ammunition.js'
+export {
+  AnimalFormMinorAbilitiesTableSchema,
+  type AnimalFormMinorAbilitiesTable,
+} from './schemas/animal-form-minor-abilities-table.js'
 
 export {
   getAllTypes,
@@ -45,4 +49,5 @@ export {
   getArmorCategoryTable,
   getPriceTierTable,
   getAmmunition,
+  getAnimalFormMinorAbilitiesTable,
 } from './loader.js'

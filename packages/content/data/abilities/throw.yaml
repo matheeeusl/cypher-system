@@ -1,0 +1,19 @@
+id: throw
+name:
+  en: Throw
+  pt-BR: Arremessar
+description:
+  en: >-
+    When you are using Enlarge and deal damage to a creature of your
+    size or smaller with an unarmed attack, you can choose to throw
+    that creature up to 1d20 feet away from you. The creature lands
+    prone.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: grows-to-towering-heights
+    tier: 3

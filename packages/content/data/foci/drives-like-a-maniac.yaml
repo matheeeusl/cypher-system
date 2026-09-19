@@ -1,0 +1,43 @@
+id: drives-like-a-maniac
+name:
+  en: Drives Like a Maniac
+  pt-BR: Dirija Como um Maníaco
+description:
+  en: Whether balancing on two wheels, jumping another vehicle, or driving head-on toward an oncoming enemy car, you don't think about the risks when you're behind the wheel. Someone who Drives Like a Maniac needs access to a vehicle.
+  pt-BR: Seja equilibrando-se sobre duas rodas, saltando sobre outro veículo ou dirigindo de frente para um carro inimigo que vem na sua direção, você não pensa nos riscos quando está ao volante. Quem Dirige Como um Maníaco precisa ter acesso a um veículo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: driver
+    - kind: granted
+      ability_id: driving-on-the-edge
+  '2':
+    - kind: granted
+      ability_id: car-surfer
+    - kind: granted
+      ability_id: stare-them-down
+  '3':
+    - kind: choice
+      options:
+        - expert-driver
+        - enhanced-speed-edge
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: sharp-eyed
+    - kind: granted
+      ability_id: enhanced-speed
+  '5':
+    - kind: granted
+      ability_id: something-in-the-road
+  '6':
+    - kind: choice
+      options:
+        - trick-driver
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

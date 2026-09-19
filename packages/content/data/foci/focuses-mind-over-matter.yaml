@@ -1,0 +1,37 @@
+id: focuses-mind-over-matter
+name:
+  en: Focuses Mind Over Matter
+  pt-BR: Faz a Mente Prevalecer Sobre a Matéria
+description:
+  en: You can telekinetically move objects with your mind without physically touching them.
+  pt-BR: Você pode mover objetos telecineticamente com sua mente, sem tocá-los fisicamente.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: divert-attacks
+  '2':
+    - kind: granted
+      ability_id: telekinesis
+  '3':
+    - kind: choice
+      options:
+        - cloak-of-opportunity
+        - enhance-strength
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: apportation
+  '5':
+    - kind: granted
+      ability_id: psychokinetic-attack
+  '6':
+    - kind: choice
+      options:
+        - improved-apportation
+        - reshape
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

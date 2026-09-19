@@ -1,0 +1,18 @@
+id: interface
+name:
+  en: Interface
+  pt-BR: Interface
+description:
+  en: >-
+    By directly plugging into a device, you can identify and learn to
+    operate it as though the task were one level lower.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fuses-flesh-and-steel
+    tier: 2
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 1

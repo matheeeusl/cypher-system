@@ -1,0 +1,22 @@
+id: dual-medium-wield
+name:
+  en: Dual Medium Wield
+  pt-BR: Empunhadura Dupla de Médio
+description:
+  en: >-
+    You can use two light weapons
+    or medium weapons at the same time (or one light
+    weapon and one medium weapon), making two
+    separate attacks on your turn as a single action. This
+    ability otherwise works like the Dual Light Wield ability.
+  pt-BR: >-
+    Você pode usar duas armas leves
+    ou médias ao mesmo tempo (ou uma arma leve e uma média), realizando dois
+    ataques separados em seu turno como uma única ação. Fora isso, esta
+    habilidade funciona como a habilidade Empunhadura Dupla de Armas Leves.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 3

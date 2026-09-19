@@ -1,0 +1,37 @@
+id: fuses-flesh-and-steel
+name:
+  en: Fuses Flesh and Steel
+  pt-BR: Funde Carne e Aço
+description:
+  en: Your body is part machine.
+  pt-BR: Seu corpo é parte máquina.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enhanced-body
+  '2':
+    - kind: granted
+      ability_id: interface
+  '3':
+    - kind: choice
+      options:
+        - sensing-package
+        - weaponization
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: fusion
+  '5':
+    - kind: granted
+      ability_id: deep-reserves
+  '6':
+    - kind: choice
+      options:
+        - mind-surge
+        - ultra-enhancement
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

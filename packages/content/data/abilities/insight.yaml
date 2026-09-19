@@ -1,0 +1,13 @@
+id: insight
+name:
+  en: Insight
+  pt-BR: Perspicácia
+description:
+  en: You are trained in tasks to discern others' motives and to ascertain their general nature. You have a knack for sensing whether or not someone is truly innocent.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: defends-the-weak
+    tier: 2

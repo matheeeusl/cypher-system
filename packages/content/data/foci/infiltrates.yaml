@@ -1,0 +1,41 @@
+id: infiltrates
+name:
+  en: Infiltrates
+  pt-BR: Se Infiltra
+description:
+  en: Subtlety, guile, and stealth allow you to get in where others can't.
+  pt-BR: Sutileza, astúcia e furtividade permitem que você entre onde outros não conseguem.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: stealth-skills
+    - kind: granted
+      ability_id: sense-attitudes
+  '2':
+    - kind: granted
+      ability_id: impersonate
+    - kind: granted
+      ability_id: flight-not-fight
+  '3':
+    - kind: choice
+      options:
+        - awareness
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: invisibility
+  '5':
+    - kind: granted
+      ability_id: evasion
+  '6':
+    - kind: choice
+      options:
+        - brainwashing
+        - spring-away
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

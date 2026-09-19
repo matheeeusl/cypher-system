@@ -1,0 +1,25 @@
+id: untouchable
+name:
+  en: Untouchable
+  pt-BR: Intocável
+description:
+  en: >-
+    You change your phase state for the next minute so that you can't affect
+    or be affected by normal matter or energy. Only mental
+    attacks and special transdimensional energies, devices,
+    or abilities can affect you, but likewise you can't attack,
+    touch, or otherwise affect anything. 
+  pt-BR: >-
+    Você altera seu estado de fase pelo próximo minuto,
+    de modo que não pode afetar nem ser afetado por matéria ou energia normais.
+    Apenas ataques mentais e energias, dispositivos ou habilidades transdimensionais
+    especiais podem afetá-lo; da mesma forma, você não pode atacar,
+    tocar ou afetar qualquer outra coisa.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: exists-partially-out-of-phase
+    tier: 5

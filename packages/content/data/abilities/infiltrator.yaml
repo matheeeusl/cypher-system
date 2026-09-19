@@ -1,0 +1,16 @@
+id: infiltrator
+name:
+  en: Infiltrator
+  pt-BR: Infiltrador
+description:
+  en: You are trained in interactions involving lies or trickery.
+  pt-BR: Você é treinado em interações envolvendo mentiras ou artimanhas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 2
+  - type: focus
+    id: murders
+    tier: 2

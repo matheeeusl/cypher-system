@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: helps-their-friends
     tier: 1
+  - type: focus
+    id: defends-the-weak
+    tier: 1

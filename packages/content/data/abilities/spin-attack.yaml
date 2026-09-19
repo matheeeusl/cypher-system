@@ -1,0 +1,39 @@
+id: spin-attack
+name:
+  en: Spin Attack
+  pt-BR: Ataque Giratório
+description:
+  en: >-
+    You stand still and make attacks against up to five foes,
+    all as part of the same action in one round.
+    All of the attacks have to be the same sort of attack (melee or ranged).
+    Make a separate attack roll for each foe. You remain limited by
+    the amount of Effort you can apply on one action.
+    Anything that modifies your attack or damage applies to
+    all of these attacks. In addition to the normal options for
+    using Effort, you can choose to use Effort to increase the
+    number of foes you can attack with this ability (one
+    additional foe per level of Effort used in this way)
+  pt-BR: >-
+    Você permanece imóvel e desfere ataques contra até cinco oponentes,
+    tudo como parte da mesma ação em uma rodada. 
+    Todos os ataques devem ser do mesmo tipo (corpo a corpo ou à distância). 
+    Realize uma jogada de ataque separada para cada oponente. Você continua limitado
+    pela quantidade de Esforço que pode aplicar em uma única ação. 
+    Qualquer coisa que modifique seu ataque ou dano aplica-se a
+    todos esses ataques. Além das opções normais de
+    uso de Esforço, você pode optar por gastar Esforço para aumentar o
+    número de oponentes que pode atacar com esta habilidade (um
+    oponente adicional por nível de Esforço utilizado dessa forma).
+# Note: source cost is printed as "5+ Speed points" — the schema's
+# cost field can't represent an open-ended "+". Recorded as the
+# baseline 5 Speed points here, flagged for schema review (same
+# approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: speed
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: wields-two-weapons-at-once
+    tier: 6

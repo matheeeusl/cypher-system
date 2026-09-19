@@ -1,0 +1,17 @@
+id: mental-magic
+name:
+  en: Mental Magic
+  pt-BR: Magia Mental
+description:
+  en: >-
+    When attempting a magic-based Might or Speed task, you can
+    instead roll as if it were an Intellect action. This means that if
+    you apply Effort, you spend points from your Intellect Pool and
+    use your Intellect Edge.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: learned-from-the-classics
+    tier: 6

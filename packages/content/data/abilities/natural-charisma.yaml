@@ -1,0 +1,19 @@
+id: natural-charisma
+name:
+  en: Natural Charisma
+  pt-BR: Carisma Natural
+description:
+  en: >-
+    You are trained in all social
+    interactions, whether they involve charm, learning a
+    person's secrets, or intimidating others.
+  pt-BR: >-
+    Você é treinado em todas as interações sociais,
+    sejam elas baseadas em charme, em descobrir os segredos
+    de alguém ou em intimidar outras pessoas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: leads
+    tier: 1

@@ -1,0 +1,13 @@
+id: built-in-weaponry
+name:
+  en: Built-in Weaponry
+  pt-BR: Armamento Embutido
+description:
+  en: Biomechanical implants, a magical jewel fused to your forehead, or something just as wild now provides you with inherent weaponry. This allows you to fire a blast of energy up to long range that inflicts 5 points of damage. There is no cost for you to use this ability.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: crafts-unique-objects
+    tier: 3

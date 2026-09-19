@@ -1,0 +1,16 @@
+id: legal-intern
+name:
+  en: Legal Intern
+  pt-BR: Estagiário Jurídico
+description:
+  en: >-
+    You gain a level 4 follower who is mostly interested in helping
+    with your law-related tasks, but who might also help you in other
+    areas.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: interprets-the-law
+    tier: 6

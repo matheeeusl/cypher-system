@@ -1,0 +1,15 @@
+id: enthusiastic-listener
+name:
+  en: Enthusiastic Listener
+  pt-BR: Ouvinte Entusiasmado
+description:
+  en: >-
+    You pick up stuff listening to folks gab in the bar. You are
+    trained in one area of knowledge of your choice.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: hits-the-saloon
+    tier: 1

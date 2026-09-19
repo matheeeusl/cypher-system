@@ -1,0 +1,15 @@
+id: void-wings
+name:
+  en: Void Wings
+  pt-BR: Asas do Vazio
+description:
+  en: Swirling ribbons of weird matter grasp you and lift you up, allowing you to fly for one round as quickly as you can move.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: dances-with-dark-matter
+    tier: 2

@@ -11,3 +11,21 @@ sources:
   - type: focus
     id: entertains
     tier: 3
+  - type: focus
+    id: doesnt-do-much
+    tier: 5
+  - type: focus
+    id: leads
+    tier: 5
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 2
+  - type: focus
+    id: interprets-the-law
+    tier: 6
+  - type: focus
+    id: looks-for-trouble
+    tier: 3
+  - type: focus
+    id: needs-no-weapon
+    tier: 3

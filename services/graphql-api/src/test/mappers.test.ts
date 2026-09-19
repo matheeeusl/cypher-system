@@ -11,13 +11,15 @@ describe('mapFocusTierAbilities', () => {
     // exercise today. Covered here directly against the mapper function
     // instead, using a literal typed against the real @cypher/content type.
     const tierAbilities: Focus['tier_abilities'] = {
-      '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'] }],
+      '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'], count: 1 }],
     }
 
     expect(mapFocusTierAbilities(tierAbilities)).toEqual([
       {
         tier: 3,
-        entries: [{ __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'] }],
+        entries: [
+          { __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'], count: 1 },
+        ],
       },
     ])
   })

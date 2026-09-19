@@ -1,0 +1,15 @@
+id: rapid-attack
+name:
+  en: Rapid Attack
+  pt-BR: Ataque Rápido
+description:
+  en: Once per round, you can make an additional attack with your chosen weapon.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-weaponry
+    tier: 3

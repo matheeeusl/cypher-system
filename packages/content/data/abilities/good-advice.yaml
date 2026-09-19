@@ -1,0 +1,21 @@
+id: good-advice
+name:
+  en: Good Advice
+  pt-BR: Bom Conselho
+description:
+  en: >-
+    Anyone can help an ally, easing
+    whatever task they're attempting. However, you have
+    the benefit of clarity and wisdom. When you help
+    another character, they gain an additional asset.
+  pt-BR: >-
+    Qualquer um pode ajudar um aliado, facilitando
+    a tarefa que ele esteja tentando realizar. No entanto, você
+    conta com a vantagem da clareza e da sabedoria. Ao ajudar
+    outro personagem, ele ganha um recurso adicional.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: leads
+    tier: 1

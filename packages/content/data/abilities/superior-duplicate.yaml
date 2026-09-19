@@ -1,0 +1,21 @@
+id: superior-duplicate
+name:
+  en: Superior Duplicate
+  pt-BR: Duplicata Superior
+description:
+  en: >-
+    When you use your Duplicate ability, you can create a superior
+    duplicate instead of a normal duplicate. A superior
+    duplicate is a level 3 NPC with 15 health
+  pt-BR: >-
+    Ao usar sua habilidade Duplicar, você pode criar uma duplicata superior
+    em vez de uma duplicata normal. Uma duplicata superior
+    é um NPC de nível 3 com 15 pontos de vida.
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 3

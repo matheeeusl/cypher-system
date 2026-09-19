@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: has-a-thousand-faces
     tier: 6
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 6

@@ -1,0 +1,13 @@
+id: gunner
+name:
+  en: Gunner
+  pt-BR: Atirador
+description:
+  en: You inflict 1 additional point of damage with guns.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-licensed-to-carry
+    tier: 1

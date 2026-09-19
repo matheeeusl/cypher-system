@@ -1,0 +1,37 @@
+id: exists-partially-out-of-phase
+name:
+  en: Exists Partially Out of Phase
+  pt-BR: Existe Parcialmente Fora de Fase
+description:
+  en: A bit translucent, you're slightly out of phase and can move through solid objects.
+  pt-BR: Um tanto translúcido, você está levemente fora de fase e pode atravessar objetos sólidos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: walk-through-walls
+  '2':
+    - kind: granted
+      ability_id: defensive-phasing
+  '3':
+    - kind: choice
+      options:
+        - phased-attack
+        - phase-door
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: ghost
+  '5':
+    - kind: granted
+      ability_id: untouchable
+  '6':
+    - kind: choice
+      options:
+        - enhanced-phased-attack
+        - phase-foe
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

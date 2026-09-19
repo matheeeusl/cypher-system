@@ -1,0 +1,18 @@
+id: cloak-of-opportunity
+name:
+  en: Cloak of Opportunity
+  pt-BR: Manto de Oportunidade
+description:
+  en: >-
+    You set small objects from the environment (rocks, broken items,
+    clumps of dirt, and so on) swirling about you for up to ten
+    minutes, which grants you +2 Armor.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: focuses-mind-over-matter
+    tier: 3

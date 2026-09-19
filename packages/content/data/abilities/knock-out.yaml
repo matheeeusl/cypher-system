@@ -3,13 +3,26 @@ name:
   en: Knock Out
   pt-BR: Nocautear
 description:
-  en: You make a melee attack that inflicts no damage. Instead, if the attack hits, make a second Might-based roll. If successful, a foe of level 3 or lower is knocked unconscious for one minute. For each level of Effort used, you can affect one higher level of foe, or you can extend the duration for an additional minute.
-  pt-BR: Você faz um ataque corpo a corpo que não causa dano. Em vez disso, se o ataque acertar, faça uma segunda rolagem baseada em Força. Se for bem-sucedida, um inimigo de nível 3 ou menor é nocauteado por um minuto. Para cada nível de Esforço usado, você pode afetar um inimigo de nível mais alto, ou pode estender a duração por mais um minuto.
+  en: >-
+    You make a melee attack that inflicts no damage. Instead, if the
+    attack hits, make a second Might-based roll. If successful, a foe
+    of level 3 or lower is knocked unconscious for one minute. For
+    each level of Effort used, you can affect one higher level of
+    foe, or you can extend the duration for an additional minute.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Might points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 5 Might points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+  # Text is a near-subset of `bottle-ko` (Hits the Saloon) — same core
+  # mechanic, but printed under a different name and missing Bottle
+  # KO's whiskey-bottle/knockout-stacking sentences — kept as a separate
+  # ability per the established different-name convention.
 cost:
   pool: might
   amount: 5
 action_type: action
 sources:
   - type: focus
-    id: collects-bounties
-    tier: 6
+    id: looks-for-trouble
+    tier: 4

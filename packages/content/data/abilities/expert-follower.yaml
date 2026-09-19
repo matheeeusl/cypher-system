@@ -11,3 +11,12 @@ sources:
   - type: focus
     id: descends-from-nobility
     tier: 4
+  - type: focus
+    id: builds-robots
+    tier: 3
+  - type: focus
+    id: leads
+    tier: 3
+  - type: focus
+    id: is-idolized-by-millions
+    tier: 4

@@ -1,0 +1,13 @@
+id: weapon-master
+name:
+  en: Weapon Master
+  pt-BR: Mestre de Arma
+description:
+  en: You inflict an additional 1 point of damage with your chosen weapon.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-weaponry
+    tier: 1

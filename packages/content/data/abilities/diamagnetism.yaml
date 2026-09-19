@@ -1,0 +1,24 @@
+id: diamagnetism
+name:
+  en: Diamagnetism
+  pt-BR: Diamagnetismo
+description:
+  en: >-
+    You magnetize any nonmetallic object within short
+    range so that it can be affected by
+    your other magnetic powers. Thus, with Move Metal,
+    you can move any object. With Repel Metal, you are
+    trained in all Speed defense tasks, regardless of whether
+    the incoming attack uses metal. And so on.
+  pt-BR: >-
+    Você magnetiza qualquer objeto não metálico a curta distância,
+    de modo que ele possa ser afetado por seus outros poderes magnéticos.
+    Assim, com Mover Metal, você pode mover qualquer objeto.
+    Com Repelir Metal, você é treinado em todas as tarefas de defesa baseadas em Velocidade,
+    independentemente de o ataque recebido envolver metal. E assim por diante.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 6

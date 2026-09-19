@@ -1,0 +1,43 @@
+id: learns-quickly
+name:
+  en: Learns Quickly
+  pt-BR: Aprende Rápido
+description:
+  en: You deal with bad situations as they arise, learning new lessons each time.
+  pt-BR: Você lida com situações ruins conforme elas surgem, aprendendo novas lições a cada vez.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enhanced-intellect
+    - kind: granted
+      ability_id: theres-your-problem
+  '2':
+    - kind: granted
+      ability_id: quick-study
+  '3':
+    - kind: granted
+      ability_id: hard-to-distract
+    - kind: choice
+      options:
+        - enhanced-intellect-edge
+        - flex-skill
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: pay-it-forward
+  '5':
+    - kind: granted
+      ability_id: enhanced-intellect
+    - kind: granted
+      ability_id: learned-a-few-things
+  '6':
+    - kind: choice
+      options:
+        - two-things-at-once
+        - skill-with-defense
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

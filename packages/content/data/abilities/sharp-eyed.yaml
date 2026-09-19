@@ -1,0 +1,15 @@
+id: sharp-eyed
+name:
+  en: Sharp-Eyed
+  pt-BR: Olhar Atento
+description:
+  en: >-
+    Because you must always keep an eye out when you're traveling, you are trained in all tasks related to perception and navigation.
+  pt-BR: >-
+    Como você deve estar sempre atento ao viajar, você é treinado em todas as tarefas relacionadas à percepção e à navegação.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 4

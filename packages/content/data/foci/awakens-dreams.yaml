@@ -1,0 +1,39 @@
+id: awakens-dreams
+name:
+  en: Awakens Dreams
+  pt-BR: Desperta Sonhos
+description:
+  en: You can pull images from dreams and bring them to life in the waking world.
+  pt-BR: Você consegue extrair imagens de sonhos e trazê-las à vida no mundo desperto.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: dreamcraft
+    - kind: granted
+      ability_id: oneirochemy
+  '2':
+    - kind: granted
+      ability_id: dream-thief
+  '3':
+    - kind: choice
+      options:
+        - dream-becomes-reality
+        - enhanced-intellect
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: daydream
+  '5':
+    - kind: granted
+      ability_id: nightmare
+  '6':
+    - kind: choice
+      options:
+        - chamber-of-dreams
+        - reactive-field
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

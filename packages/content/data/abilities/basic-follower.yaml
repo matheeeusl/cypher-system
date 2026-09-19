@@ -1,0 +1,21 @@
+id: basic-follower
+name:
+  en: Basic Follower
+  pt-BR: Seguidor Básico
+description:
+  en: >-
+    You gain a level 2 follower. One of
+    their modifications must be persuasion. You can take
+    this ability multiple times, each time gaining another
+    level 2 follower. 
+  pt-BR: >-
+    Você ganha um seguidor de nível 2. Uma de
+    suas (seguidor) modificações deve ser Persuasão. Você pode escolher
+    esta habilidade várias vezes, ganhando outro
+    seguidor de nível 2 a cada vez.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: leads
+    tier: 2

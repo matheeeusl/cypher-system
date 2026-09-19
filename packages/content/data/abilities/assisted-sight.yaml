@@ -1,0 +1,19 @@
+id: assisted-sight
+name:
+  en: Assisted Sight
+  pt-BR: Visão Assistida
+description:
+  en: >-
+    You can activate a visual overlay that helps you analyze threats
+    and boons in your environment. When you trigger this ability, you
+    gain an asset on one attack or defense roll of any type, due to
+    your knowledge about the situation.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 3

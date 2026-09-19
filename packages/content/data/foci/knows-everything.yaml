@@ -1,0 +1,86 @@
+id: knows-everything
+name:
+  en: Knows Everything
+  pt-BR: Sabe Tudo
+description:
+  en: >-
+    You're a know-it-all. You've always been curious, likely to be
+    found with your nose in a book and several wiki articles pulled
+    up on your computer. In your school days, you were probably a
+    good student and skilled researcher. In the present, your primary
+    hobby is gathering knowledge. You know what questions to ask, and
+    where to look for the answers. Your mental cybernetics have
+    improved your memory and given you nigh-unlimited access to
+    information. You're a mental powerhouse—and eager to keep
+    learning.
+  pt-BR: >-
+    Você é um sabe-tudo. Sempre foi curioso, provavelmente encontrado
+    com o nariz enfiado em um livro e vários artigos de wiki abertos em
+    seu computador. Nos tempos de escola, você provavelmente era um
+    bom aluno e um pesquisador habilidoso. No presente, seu principal
+    passatempo é acumular conhecimento. Você sabe quais perguntas
+    fazer, e onde procurar as respostas. Sua cibernética mental
+    aprimorou sua memória e lhe deu acesso quase ilimitado a
+    informações. Você é uma potência mental — e ansioso para continuar
+    aprendendo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: datajack
+    - kind: granted
+      ability_id: knowledge-skills
+  '2':
+    - kind: granted
+      ability_id: scan
+  '3':
+    - kind: choice
+      options:
+        - network-tap
+        - action-processor
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+    - kind: granted
+      ability_id: knowledge-skills
+  '5':
+    - kind: granted
+      ability_id: information-gathering
+  '6':
+    - kind: choice
+      options:
+        - knowing-the-unknown
+        - mind-surge
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. You overheard them spouting inaccurate
+      information and stepped in to provide a correction.
+    pt-BR: >-
+      Escolha outro PJ. Você o ouviu espalhando informações incorretas
+      e interveio para corrigi-lo.
+  - en: >-
+      Pick one other PC. You want them to think highly of you, so
+      you've researched their interests in order to make conversation.
+    pt-BR: >-
+      Escolha outro PJ. Você quer que ele pense bem de você, então
+      pesquisou os interesses dele para puxar conversa.
+  - en: Pick one other PC. This character always tries to stump you, but they haven't succeeded.
+    pt-BR: >-
+      Escolha outro PJ. Esse personagem sempre tenta confundir você,
+      mas nunca conseguiu.
+  - en: >-
+      Pick one other PC. You inadvertently deduced and revealed
+      something they were trying to keep secret.
+    pt-BR: >-
+      Escolha outro PJ. Você deduziu e revelou sem querer algo que ele
+      tentava manter em segredo.
+minor_effect_suggestion:
+  en: You gain an insight that eases your next action by one step.
+  pt-BR: Você ganha uma percepção que facilita sua próxima ação em um nível.
+major_effect_suggestion:
+  en: Your intellectual prowess intimidates a foe into retreating from the conflict.
+  pt-BR: >-
+    Sua proeza intelectual intimida um oponente a recuar do confronto.

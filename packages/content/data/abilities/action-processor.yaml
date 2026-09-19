@@ -1,0 +1,27 @@
+id: action-processor
+name:
+  en: Action Processor
+  pt-BR: Processador de Ações
+description:
+  en: >-
+    Drawing upon stored information and the ability to process
+    incoming data at amazing speeds, you are trained in one physical
+    task of your choice for ten minutes. For example, you can choose
+    running, climbing, swimming, Speed defense, or attacks with a
+    specific weapon.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) under Knows Everything, but not under Fuses Mind and
+  # Machine — same per-source inconsistency as machine-enhancement. Not
+  # modeled by the schema. Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 3
+  - type: focus
+    id: knows-everything
+    tier: 3

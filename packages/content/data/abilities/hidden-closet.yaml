@@ -1,0 +1,18 @@
+id: hidden-closet
+name:
+  en: Hidden Closet
+  pt-BR: Compartimento Oculto
+description:
+  en: >-
+    The magic ally from your Bound Magic Creature ability can store
+    items for you within its bound object, including extra sets of
+    clothing, tools, food, and so on. The interior of the object is,
+    in effect, a 10-foot (3 m) square pocket dimension that normally
+    only the magic ally can access.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: keeps-a-magic-ally
+    tier: 2

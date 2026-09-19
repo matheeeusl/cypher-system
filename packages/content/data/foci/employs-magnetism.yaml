@@ -1,0 +1,37 @@
+id: employs-magnetism
+name:
+  en: Employs Magnetism
+  pt-BR: Utiliza Magnetismo
+description:
+  en: You command metal and the power of magnetism.
+  pt-BR: Você comanda o metal e o poder do magnetismo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: move-metal
+  '2':
+    - kind: granted
+      ability_id: repel-metal
+  '3':
+    - kind: choice
+      options:
+        - destroy-metal
+        - guide-bolt
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: magnetic-field
+  '5':
+    - kind: granted
+      ability_id: command-metal
+  '6':
+    - kind: choice
+      options:
+        - diamagnetism
+        - iron-punch
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,13 @@
+id: quick-block
+name:
+  en: Quick Block
+  pt-BR: Bloqueio Rápido
+description:
+  en: If you use a light or medium weapon, you are trained in Speed defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-with-panache
+    tier: 2

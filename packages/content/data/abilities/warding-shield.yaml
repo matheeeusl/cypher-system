@@ -1,0 +1,13 @@
+id: warding-shield
+name:
+  en: Warding Shield
+  pt-BR: Escudo Protetor
+description:
+  en: You have +1 to Armor while you are using a shield.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: defends-the-weak
+    tier: 1

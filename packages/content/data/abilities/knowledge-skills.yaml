@@ -11,3 +11,21 @@ sources:
   - type: focus
     id: entertains
     tier: 3
+  - type: focus
+    id: conducts-weird-science
+    tier: 1
+  - type: focus
+    id: conducts-weird-science
+    tier: 4
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 1
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 4
+  - type: focus
+    id: knows-everything
+    tier: 1
+  - type: focus
+    id: knows-everything
+    tier: 4

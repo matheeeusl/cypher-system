@@ -1,0 +1,17 @@
+id: incapacitate
+name:
+  en: Incapacitate
+  pt-BR: Incapacitar
+description:
+  en: >-
+    You use necromantic magic to make one creature in short range
+    fall prone and be unable to take actions for one round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 4

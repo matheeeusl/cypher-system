@@ -1,0 +1,13 @@
+id: safe-fall
+name:
+  en: Safe Fall
+  pt-BR: Queda Segura
+description:
+  en: You reduce the damage from a fall by 5 points.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-a-cat
+    tier: 2

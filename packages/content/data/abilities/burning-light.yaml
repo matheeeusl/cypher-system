@@ -1,0 +1,18 @@
+id: burning-light
+name:
+  en: Burning Light
+  pt-BR: Luz Ardente
+description:
+  en: You send a beam of light at a creature within long range and then tighten the beam until it burns, inflicting 5 points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: blazes-with-radiance
+    tier: 3
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 6

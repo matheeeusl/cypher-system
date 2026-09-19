@@ -1,0 +1,26 @@
+id: lightning-flash
+name:
+  en: Lightning Flash
+  pt-BR: Clarão de Relâmpago
+description:
+  en: >-
+    Lightning strikes within long range, filling an immediate area
+    and inflicting 3 points of damage on all affected creatures.
+    Effort applied to one attack counts for all attacks against
+    targets in the area of the flash. Even on an unsuccessful attack,
+    a creature in the area still takes 1 point of damage. Your attack
+    is eased against targets wearing, carrying, or made of a
+    significant amount of metal.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 3

@@ -1,0 +1,17 @@
+id: gambler
+name:
+  en: Gambler
+  pt-BR: Jogador
+description:
+  en: >-
+    You are trained in a table game in which you are not already
+    trained. Choose from the following: poker, twenty one, farro,
+    craps, blackjack, roulette, baccarat, or another game where
+    gambling on the outcome is part of play.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 1

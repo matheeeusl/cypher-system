@@ -1,0 +1,35 @@
+id: resonant-quake
+name:
+  en: Resonant Quake
+  pt-BR: Terremoto de Ressonância
+description:
+  en: >-
+    You can infuse the ground beneath you with a special vibration
+    generated from your core. This creates a small quake
+    whose epicenter you can select within a very long
+    distance. Everyone within short range of the epicenter is
+    subject to 8 points of damage (from shaking and being
+    struck by toppling objects, crumbling walls, and so on).
+    However, you are dazed for a round afterward yourself,
+    during which time all your tasks are hindered. If you
+    have the Move Mountains ability, both abilities cost 3
+    fewer Intellect points to use. 
+  pt-BR: >-
+    Você pode infundir o solo sob seus pés com uma vibração especial
+    gerada a partir do seu âmago. Isso cria um pequeno tremor
+    cujo epicentro você pode escolher a uma distância
+    muito longa. Todos que estiverem a curta distância do epicentro
+    sofrem 8 pontos de dano (causado pelo tremor e por serem
+    atingidos por objetos que tombam, paredes que desmoronam, etc.). 
+    No entanto, você fica atordoado por uma rodada logo em seguida,
+    período durante o qual todas as suas tarefas sofrem penalidade. Se
+    você possuir a habilidade Mover Montanhas, o custo de uso
+    de ambas as habilidades é reduzido em 3 pontos de Intelecto.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 6

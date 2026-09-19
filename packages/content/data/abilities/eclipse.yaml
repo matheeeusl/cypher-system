@@ -1,0 +1,21 @@
+id: eclipse
+name:
+  en: Eclipse
+  pt-BR: Eclipse
+description:
+  en: >-
+    You drain the light from an immediate area within long range.
+    Bright light (like a sunny day outdoors) becomes dim light, normal
+    light (like inside a well-lit room) becomes very dim light, and
+    anything darker becomes darkness. If you cast this spell on an
+    object, the darkness moves with the object, and can be suppressed
+    if it is enclosed in a light-proof container or wrapping.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 2

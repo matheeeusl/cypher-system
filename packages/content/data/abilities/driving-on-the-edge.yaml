@@ -1,0 +1,13 @@
+id: driving-on-the-edge
+name:
+  en: Driving on the Edge
+  pt-BR: Dirigindo no Limite
+description:
+  en: You can make an attack with a light or medium ranged weapon and attempt a driving task as a single action.
+  pt-BR: Você pode realizar um ataque com uma arma à distância leve ou média e tentar uma tarefa de condução como uma única ação.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 1

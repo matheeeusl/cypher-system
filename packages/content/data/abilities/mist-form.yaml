@@ -1,0 +1,30 @@
+id: mist-form
+name:
+  en: Mist Form
+  pt-BR: Forma de Névoa
+description:
+  en: >-
+    You change into a cloud of mist for up to ten minutes, filling an
+    immediate area. You gain an asset to sneaking tasks and Speed
+    defense tasks, but you lose the benefit of any armor you wear. You
+    can pass through any barrier that allows air to move through it
+    (such as a fence, wire screen, cloth, or pipe), moving up to an
+    immediate distance each round. You can't affect or be affected by
+    normal matter, but energy attacks (like fire or explosions) and
+    mental attacks still affect you. You cannot speak but can still
+    use abilities that don't rely on human speech or affecting
+    physical matter (other than yourself). If large portions of the
+    mist are separated (such as behind a closed door) when you return
+    to human form, you move one step down the damage track.
+  pt-BR: "Tradução em breve."
+  # Note: source tag is "Action to change or revert." — not one of the 4
+  # standard action_type enum values. Approximated to `action`, flagged
+  # per the running action_type audit (schema gap item 3).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 2

@@ -1,0 +1,15 @@
+id: band-of-followers
+name:
+  en: Band of Followers
+  pt-BR: Grupo de Seguidores
+description:
+  en: >-
+     You gain four level 3 followers. They are not restricted on their modifications. 
+  pt-BR: >-
+    Você ganha quatro seguidores de nível 3. Eles não têm restrições quanto às suas modificações.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: leads
+    tier: 6

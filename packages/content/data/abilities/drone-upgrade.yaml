@@ -1,0 +1,58 @@
+id: drone-upgrade
+name:
+  en: Drone Upgrade
+  pt-BR: Aprimoramento de Drone
+description:
+  en: >-
+    You modify your primary drone with one new capability. Standard
+    options include the following (work with your GM if you prefer a
+    different capability):
+
+    - Amplify. When the drone is within an immediate distance of you,
+    it eases your wireless actions (such as hacking, broadcasting, or
+    activating a machine). Enabler.
+
+    - Defense Mode. The drone can reconfigure itself into armor for a
+    person you designate (typically protecting their head and
+    torso), providing +1 Armor. Action to become armor or return to
+    its normal form.
+
+    - Improved Flight. The drone can fly a long distance each round.
+    It is strong enough to carry you, moving a short distance each
+    round for up to one minute; after carrying you, the drone's tasks
+    are hindered for one hour. Enabler.
+
+    - Increased Range. Your communication range with your drone
+    increases to very long range.
+
+    - Integrated Weapon. The drone has an integrated medium weapon
+    such as a blade, pistol, or monowire. If the weapon uses bullets,
+    it can hold up to 30 of them. You can allow the drone to attack
+    on its own, or you can wield it as a weapon and make eased
+    attacks with it. Enabler, or action to reload the drone's
+    bullets.
+
+    - Medical Intervention. The drone has a hypo injector filled with
+    hospital-grade emergency drugs. Using the hypo on a living
+    creature heals them points equal to the drone's level (Might for
+    PCs, health for NPCs). The drone cannot use this ability again
+    until after your next recovery roll. Enabler.
+
+    - Relay Signal Extender. Using your wireless connection to the
+    drone, you can bounce your wireless actions (such as hacking,
+    broadcasting, or activating a machine) through it, using those
+    abilities as if you were where the drone is. Tasks relayed
+    through the drone are hindered by one step. Action.
+  pt-BR: "Tradução em breve."
+  # Note: this ability is a menu of 6 sub-options, each with its own
+  # action_type (enabler, action, or unspecified) rather than one
+  # consistent value for the ability as a whole — the schema's single
+  # action_type field can't represent that. `action_type` below records
+  # the baseline case (most options are enablers); the sub-option
+  # variance is preserved in the prose. Flagged for schema review.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-custom-drone
+    tier: 4

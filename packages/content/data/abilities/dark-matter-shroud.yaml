@@ -1,0 +1,18 @@
+id: dark-matter-shroud
+name:
+  en: Dark Matter Shroud
+  pt-BR: Manto de Matéria Escura
+description:
+  en: Ribbons of dark matter condense and swirl about you for up to one minute. This shroud eases your Speed defense tasks, inflicts 2 points of damage to anyone who tries to touch you or strike you with a melee attack, and gives you +1 Armor.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: befriends-the-black-dog
+    tier: 3
+  - type: focus
+    id: dances-with-dark-matter
+    tier: 3

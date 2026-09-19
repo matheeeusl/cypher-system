@@ -1,0 +1,13 @@
+id: cognizant-offense
+name:
+  en: Cognizant Offense
+  pt-BR: Ofensiva Cognizante
+description:
+  en: During combat, your brain shifts into a sort of battle mode where all potential attacks you could make are plotted on vector graphs in your mind's eye, which always provides the best option. Your attacks are eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 4

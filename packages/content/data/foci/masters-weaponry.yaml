@@ -1,0 +1,41 @@
+id: masters-weaponry
+name:
+  en: Masters Weaponry
+  pt-BR: Domina Armamento
+description:
+  en: You are a master user of a particular type of weapon, be it a sword, whip, dagger, gun, or something else.
+  pt-BR: Você é um usuário mestre de um tipo particular de arma, seja uma espada, chicote, adaga, arma de fogo, ou outra coisa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: weapon-master
+    - kind: granted
+      ability_id: weapon-crafter
+  '2':
+    - kind: granted
+      ability_id: weapon-defense
+  '3':
+    - kind: choice
+      options:
+        - rapid-attack
+        - disarming-strike
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: never-fumble
+  '5':
+    - kind: granted
+      ability_id: extreme-mastery
+  '6':
+    - kind: choice
+      options:
+        - murderer
+        - deadly-strike
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A high-quality weapon.
+  pt-BR: Uma arma de alta qualidade.
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

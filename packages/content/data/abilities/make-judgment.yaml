@@ -1,0 +1,13 @@
+id: make-judgment
+name:
+  en: Make Judgment
+  pt-BR: Fazer Julgamento
+description:
+  en: You are trained in discerning the truth of a situation, seeing through lies, or otherwise overcoming deception.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: metes-out-justice
+    tier: 1

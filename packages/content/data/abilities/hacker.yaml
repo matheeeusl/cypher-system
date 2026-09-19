@@ -1,0 +1,18 @@
+id: hacker
+name:
+  en: Hacker
+  pt-BR: Hacker
+description:
+  en: >-
+    You gain quick access to a desired bit of information in a
+    computer or similar device, or you access one of its primary
+    functions.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: explores-cyberspace
+    tier: 2

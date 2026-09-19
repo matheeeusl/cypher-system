@@ -1,0 +1,21 @@
+id: pay-it-forward
+name:
+  en: Pay It Forward
+  pt-BR: Retribuir Adiante
+description:
+  en: >-
+    You can pass on what you've learned. When you give another
+    character a suggestion involving their next action that is not an
+    attack, their action is eased for one minute.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: learns-quickly
+    tier: 4
+  - type: focus
+    id: lived-among-the-fey
+    tier: 4

@@ -1,0 +1,37 @@
+id: consorts-with-the-dead
+name:
+  en: Consorts With the Dead
+  pt-BR: Convive com os Mortos
+description:
+  en: The dead answer your questions, and their reanimated corpses serve you.
+  pt-BR: Os mortos respondem suas perguntas, e seus corpos reanimados o servem.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: speaker-for-the-dead
+  '2':
+    - kind: granted
+      ability_id: necromancy
+  '3':
+    - kind: choice
+      options:
+        - reading-the-room
+        - repair-flesh
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-necromancy
+  '5':
+    - kind: granted
+      ability_id: terrifying-gaze
+  '6':
+    - kind: choice
+      options:
+        - true-necromancy
+        - word-of-death
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

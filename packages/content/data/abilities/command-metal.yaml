@@ -1,0 +1,45 @@
+id: command-metal
+name:
+  en: Command Metal
+  pt-BR: Comandar Metal
+description:
+  en: >-
+    You reshape a metallic item as you desire. The item must be within
+    sight and within short range, and its mass can be no
+    greater than your own. You can affect multiple items at
+    once as long as their combined mass falls within these
+    limits. You can fuse multiple items together. You can
+    use this power to destroy a metal object (as the Destroy
+    Metal ability), or you can craft it into another desired
+    shape (crudely, unless you have the proper crafting
+    skills). You can then move the new object anywhere
+    within range. For example, you could take a few metal
+    shields, fuse them together, and use the resulting shape
+    to block a doorway. You can use this ability to make an
+    attack—causing a foe's armor to constrict, rendering a
+    metal item into shards that you fling across the
+    battlefield, and so on—against one target within short
+    range. Regardless of the form of the attack, it is an
+    Intellect action that deals 7 points of damage. 
+  pt-BR: >-
+    Você remodela um item metálico conforme desejar.
+    O item deve estar ao seu alcance curto e dentro do seu campo de visão,
+    e sua massa não pode exceder a sua própria. Você pode afetar vários itens simultaneamente,
+    desde que a massa combinada deles esteja dentro desses limites.
+    Você pode fundir vários itens. Você pode usar esse poder para destruir um objeto de metal
+    (como a habilidade Destruir Metal) ou para moldá-lo em outra forma desejada
+    (de maneira rudimentar, a menos que possua as perícias de criação adequadas).
+    Em seguida, você pode mover o novo objeto para qualquer lugar dentro do alcance.
+    Por exemplo, você poderia pegar alguns escudos de metal, fundi-los e usar a forma resultante
+    para bloquear uma passagem. Você pode usar essa habilidade para realizar um ataque — fazendo
+    a armadura de um inimigo se contrair, transformando um item de metal em estilhaços que você
+    arremessa pelo campo de batalha, e assim por diante — contra um alvo a curta distância.
+    Independentemente da forma do ataque, trata-se de uma ação de Intelecto que causa 7 pontos de dano.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 5

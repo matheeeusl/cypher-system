@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: loves-the-void
     tier: 6
+  - type: focus
+    id: awakens-dreams
+    tier: 6

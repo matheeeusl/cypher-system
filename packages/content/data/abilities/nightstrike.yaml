@@ -1,0 +1,13 @@
+id: nightstrike
+name:
+  en: Nightstrike
+  pt-BR: Golpe Noturno
+description:
+  en: When you attack a foe in dim light or darkness, you get a free level of Effort on the attack.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: explores-dark-places
+    tier: 3

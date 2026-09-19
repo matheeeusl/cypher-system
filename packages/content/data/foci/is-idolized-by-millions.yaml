@@ -1,0 +1,41 @@
+id: is-idolized-by-millions
+name:
+  en: Is Idolized by Millions
+  pt-BR: É Idolatrado por Milhões
+description:
+  en: You're a celebrity and most people adore you.
+  pt-BR: Você é uma celebridade e a maioria das pessoas o adora.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: entourage
+    - kind: granted
+      ability_id: celebrity-talent
+  '2':
+    - kind: granted
+      ability_id: perks-of-stardom
+  '3':
+    - kind: choice
+      options:
+        - incredible-health
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: captivate-with-starshine
+    - kind: granted
+      ability_id: expert-follower
+  '5':
+    - kind: granted
+      ability_id: do-you-know-who-i-am
+  '6':
+    - kind: choice
+      options:
+        - transcend-the-script
+        - improved-companion
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -14,3 +14,9 @@ sources:
   - type: focus
     id: loves-the-void
     tier: 2
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 3
+  - type: focus
+    id: moves-like-a-cat
+    tier: 3

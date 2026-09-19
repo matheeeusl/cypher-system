@@ -1,0 +1,28 @@
+id: swipe
+name:
+  en: Swipe
+  pt-BR: Golpe de Varredura
+description:
+  en: >-
+    This is a quick, agile melee attack.
+    Your attack inflicts 1 less point of
+    damage than normal but dazes your target for one
+    round, during which time all tasks it performs are
+    hindered.
+  pt-BR: >-
+    Este é um ataque corpo a corpo rápido e ágil. 
+    Seu ataque causa 1 ponto de dano a menos
+    que o normal, mas deixa o alvo atordoado por uma
+    rodada; durante esse período, todas as tarefas que
+    ele realizar serão dificultadas.
+cost:
+  pool: speed
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 1
+  - type: type
+    id: solo
+    tier: 1

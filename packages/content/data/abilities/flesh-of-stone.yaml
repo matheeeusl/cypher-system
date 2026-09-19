@@ -1,0 +1,13 @@
+id: flesh-of-stone
+name:
+  en: Flesh of Stone
+  pt-BR: Carne de Pedra
+description:
+  en: You have +1 to Armor if you do not wear physical armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: needs-no-weapon
+    tier: 1

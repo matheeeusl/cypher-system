@@ -1,0 +1,37 @@
+id: dances-with-dark-matter
+name:
+  en: Dances with Dark Matter
+  pt-BR: Dança com Matéria Escura
+description:
+  en: You can manipulate shadow and "dark" matter.
+  pt-BR: Você consegue manipular sombra e matéria "escura".
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: ribbons-of-dark-matter
+  '2':
+    - kind: granted
+      ability_id: void-wings
+  '3':
+    - kind: choice
+      options:
+        - dark-matter-shroud
+        - dark-matter-strike
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: dark-matter-shell
+  '5':
+    - kind: granted
+      ability_id: windwracked-traveler
+  '6':
+    - kind: choice
+      options:
+        - dark-matter-structure
+        - embrace-the-night
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

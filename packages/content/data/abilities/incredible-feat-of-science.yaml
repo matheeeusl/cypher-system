@@ -1,0 +1,18 @@
+id: incredible-feat-of-science
+name:
+  en: Incredible Feat of Science
+  pt-BR: Feito Incrível da Ciência
+description:
+  en: 'You do something amazing in the lab. This takes parts and materials equivalent to three expensive items. Possible incredible feats include: reanimate and command a dead body for one hour; create an engine that runs on perpetual motion; create a teleportation gate that remains open for one minute; transmute one substance into another substance; cure one person with an incurable disease or condition; create a weapon designed to hurt something that can''t otherwise be hurt; create a defense designed to protect against something that can''t otherwise be stopped.'
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 12
+# Note: source tag is "Action to initiate; a full day of work to
+# complete." — not in the schema's action_type enum; approximated as
+# action_to_initiate. See .population-status.md item 3.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: conducts-weird-science
+    tier: 6

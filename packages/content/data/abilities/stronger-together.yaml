@@ -1,0 +1,16 @@
+id: stronger-together
+name:
+  en: Stronger Together
+  pt-BR: Mais Fortes Juntos
+description:
+  en: When you and your companion from the Beast Companion ability are within immediate distance of each other, you inflict 2 additional points of damage when you attack and both of you gain an asset to defense actions.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: befriends-the-black-dog
+    tier: 3
+  - type: focus
+    id: controls-beasts
+    tier: 3

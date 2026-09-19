@@ -1,0 +1,17 @@
+id: incredible-running-speed
+name:
+  en: Incredible Running Speed
+  pt-BR: Velocidade de Corrida Incrível
+description:
+  en: >-
+    You move much farther than normal in a round. This means as a
+    part of another action, you can move up to a long distance. As an
+    action, you can move up to 200 feet (60 m), or up to 500 feet
+    (150 m) as a Speed-based task with a difficulty of 4.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-the-wind
+    tier: 6

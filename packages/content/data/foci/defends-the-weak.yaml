@@ -1,0 +1,41 @@
+id: defends-the-weak
+name:
+  en: Defends the Weak
+  pt-BR: Defende os Fracos
+description:
+  en: You stand up for the helpless, the weak, and the unprotected.
+  pt-BR: Você defende os indefesos, os fracos e os desprotegidos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: courageous
+    - kind: granted
+      ability_id: warding-shield
+  '2':
+    - kind: granted
+      ability_id: devoted-defender
+    - kind: granted
+      ability_id: insight
+  '3':
+    - kind: choice
+      options:
+        - dual-wards
+        - true-guardian
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: combat-challenge
+  '5':
+    - kind: granted
+      ability_id: willing-sacrifice
+  '6':
+    - kind: choice
+      options:
+        - resuscitate
+        - true-defender
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

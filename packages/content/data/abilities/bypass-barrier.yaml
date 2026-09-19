@@ -1,0 +1,32 @@
+id: bypass-barrier
+name:
+  en: Bypass Barrier
+  pt-BR: Contornar Barreira
+description:
+  en: >-
+    You get past a door, force field, or other barrier up to 3 feet
+    (1 m) thick that is blocking your way. Depending on the barrier,
+    this might involve finding a weak spot you can push through,
+    pressing the right button by luck, just breaking through, or even
+    weirder explanations like touching a thin place between dimensions
+    or an unexpected interaction with your equipment. The difficulty
+    of the task is the level of the barrier. This ability allows you
+    alone to pass through, not anyone else, and the way through closes
+    at the end of your turn (which might mean you're trapped on the
+    far side). You have an asset in any attempts to get through it
+    again. In addition to the normal options for using Effort, you can
+    choose to use Effort to increase the maximum thickness of the
+    barrier, each level adding 3 feet (1 m).
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "6+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 6 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 5

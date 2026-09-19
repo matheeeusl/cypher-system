@@ -11,3 +11,15 @@ sources:
   - type: focus
     id: abides-in-stone
     tier: 6
+  - type: focus
+    id: fuses-flesh-and-steel
+    tier: 6
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 6
+  - type: focus
+    id: hacks-the-network
+    tier: 6
+  - type: focus
+    id: knows-everything
+    tier: 6

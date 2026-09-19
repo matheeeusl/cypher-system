@@ -1,0 +1,13 @@
+id: iron-eye
+name:
+  en: Iron Eye
+  pt-BR: Olho de Ferro
+description:
+  en: You inflict an additional 3 points of damage with any single-target attack spell cast through a firearm using Spell Bullet. If the attack spell doesn't inflict damage, you instead can modify the spell as if you had applied a level of Intellect Effort to it.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: conjures-bullets
+    tier: 3

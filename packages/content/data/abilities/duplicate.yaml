@@ -1,0 +1,35 @@
+id: duplicate
+name:
+  en: Duplicate
+  pt-BR: Duplicata
+description:
+  en: >-
+    You cause a duplicate of yourself to appear at any point
+    you can see within short range. The duplicate has no clothing or
+    possessions when it appears. The duplicate is a level 2
+    NPC with 6 health. The duplicate obeys your commands
+    and does as you direct it. The duplicate remains until
+    you dismiss it using an action or until it is killed. When
+    the duplicate disappears, it leaves behind anything it
+    was wearing or carrying. If the duplicate disappears
+    because it was killed, you take 4 points of damage that
+    ignore Armor, and you lose your next action.
+  pt-BR: >-
+    Você faz com que uma duplicata sua surja em qualquer ponto
+    que você consiga ver a curta distância. A duplicata não possui roupas nem
+    pertences ao surgir. A duplicata é um NPC de nível 2
+    com 6 pontos de vida. A duplicata obedece aos seus comandos
+    e faz o que você determinar. A duplicata permanece até
+    que você a dispense usando uma ação ou até que ela seja morta. Quando
+    a duplicata desaparece, ela deixa para trás tudo o que
+    estava vestindo ou carregando. Se a duplicata desaparecer
+    por ter sido morta, você sofre 4 pontos de dano que
+    ignoram a Armadura e perde sua próxima ação.
+cost:
+  pool: might
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 1

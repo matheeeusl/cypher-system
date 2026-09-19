@@ -8,6 +8,10 @@ import type { ZodType } from 'zod'
 
 import { AbilitySchema, type Ability } from './schemas/ability.js'
 import { AmmunitionSchema, type Ammunition } from './schemas/ammunition.js'
+import {
+  AnimalFormMinorAbilitiesTableSchema,
+  type AnimalFormMinorAbilitiesTable,
+} from './schemas/animal-form-minor-abilities-table.js'
 import { ArmorCategoryTableSchema, type ArmorCategoryTable } from './schemas/armor-category-table.js'
 import { ArtifactSchema, type Artifact } from './schemas/artifact.js'
 import { CypherSchema, type Cypher } from './schemas/cypher.js'
@@ -113,6 +117,10 @@ const armorCategoryTable = loadReferenceTable<ArmorCategoryTable>(
 )
 const priceTierTable = loadReferenceTable<PriceTierTable>('price-tiers.yaml', PriceTierTableSchema)
 const ammunition = loadReferenceTable<Ammunition>('ammunition.yaml', AmmunitionSchema)
+const animalFormMinorAbilitiesTable = loadReferenceTable<AnimalFormMinorAbilitiesTable>(
+  'animal-form-minor-abilities.yaml',
+  AnimalFormMinorAbilitiesTableSchema,
+)
 
 export function getAllTypes(): WithVersion<Type>[] {
   return [...types.values()]
@@ -188,4 +196,8 @@ export function getPriceTierTable(): PriceTierTable {
 
 export function getAmmunition(): Ammunition {
   return ammunition
+}
+
+export function getAnimalFormMinorAbilitiesTable(): AnimalFormMinorAbilitiesTable {
+  return animalFormMinorAbilitiesTable
 }

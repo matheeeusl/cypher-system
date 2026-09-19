@@ -1,0 +1,20 @@
+id: transcend-the-script
+name:
+  en: Transcend the Script
+  pt-BR: Transcender o Roteiro
+description:
+  en: >-
+    Whether they are lines you wrote, acted, reported on, or otherwise
+    incorporated into your talent, you compose an oratory on the fly
+    that is so wonderful that even you believe it. For each ally who
+    hears it (and you too), a task attempted within the next hour is
+    eased by two steps.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: is-idolized-by-millions
+    tier: 6

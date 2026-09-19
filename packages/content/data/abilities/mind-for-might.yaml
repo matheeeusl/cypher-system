@@ -1,0 +1,13 @@
+id: mind-for-might
+name:
+  en: Mind for Might
+  pt-BR: Mente por Força
+description:
+  en: When performing a task that would normally require spending points from your Intellect Pool, you can spend points from your Might Pool instead, and vice versa.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: defends-the-gate
+    tier: 2

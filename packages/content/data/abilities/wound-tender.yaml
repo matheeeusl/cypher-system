@@ -1,0 +1,13 @@
+id: wound-tender
+name:
+  en: Wound Tender
+  pt-BR: Cuidador de Feridas
+description:
+  en: You are trained in healing.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: looks-for-trouble
+    tier: 1

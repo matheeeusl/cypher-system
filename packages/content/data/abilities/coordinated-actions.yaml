@@ -1,0 +1,17 @@
+id: coordinated-actions
+name:
+  en: Coordinated Actions
+  pt-BR: Ações Coordenadas
+description:
+  en: >-
+    When you and your drone from the Drone Buddy ability are within
+    immediate distance of each other, you inflict 2 additional points
+    of damage when you attack and both of you gain an asset to
+    defense actions.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-custom-drone
+    tier: 3

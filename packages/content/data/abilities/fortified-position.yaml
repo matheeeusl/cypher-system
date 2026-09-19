@@ -1,0 +1,15 @@
+id: fortified-position
+name:
+  en: Fortified Position
+  pt-BR: Posição Fortificada
+description:
+  en: For the next minute, you gain +1 Armor and an asset to your Might defense tasks, as long as you haven't moved more than an immediate distance since your last turn.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: defends-the-gate
+    tier: 1

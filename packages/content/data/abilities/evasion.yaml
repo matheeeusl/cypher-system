@@ -1,0 +1,13 @@
+id: evasion
+name:
+  en: Evasion
+  pt-BR: Evasão
+description:
+  en: You're hard to affect when you don't want to be affected. You are trained in all defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: infiltrates
+    tier: 5

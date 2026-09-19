@@ -1,0 +1,16 @@
+id: bestiary-knowledge
+name:
+  en: Bestiary Knowledge
+  pt-BR: Conhecimento de Bestiário
+description:
+  en: >-
+    You are trained in the lore of flesh-eating, nonhumanoid
+    creatures—recognizing them, knowing their weaknesses, and knowing
+    their habits and behaviors.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: lived-among-the-fey
+    tier: 2

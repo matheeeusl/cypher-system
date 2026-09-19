@@ -1,0 +1,19 @@
+id: gambling-god
+name:
+  en: Gambling God
+  pt-BR: Deus do Jogo
+description:
+  en: >-
+    Any time you use Effort on an Intellect action, add one of the
+    following enhancements to the action (your choice):
+
+    - Free level of Effort
+
+    - Automatic minor effect
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 6

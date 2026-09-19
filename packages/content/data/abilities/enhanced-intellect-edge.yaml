@@ -1,0 +1,16 @@
+id: enhanced-intellect-edge
+name:
+  en: Enhanced Intellect Edge
+  pt-BR: Bônus de Intelecto Aprimorado
+description:
+  en: You gain +1 to your Intellect Edge.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: interprets-the-law
+    tier: 3
+  - type: focus
+    id: learned-from-the-classics
+    tier: 3

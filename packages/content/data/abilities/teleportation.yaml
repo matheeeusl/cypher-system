@@ -1,0 +1,30 @@
+id: teleportation
+name:
+  en: Teleportation
+  pt-BR: Teletransporte
+description:
+  en: >-
+    You instantaneously transmit yourself to any location that you
+    have seen or been to, no matter the distance, as long as it is on
+    Earth (or whatever world you're currently on). In addition to the
+    normal options for using Effort, you can choose to use Effort to
+    bring other people with you; each level of Effort used in this
+    way affects up to three additional targets. You must touch any
+    additional targets.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "6+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 6 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+  # A trailing note on Teleportive Wound ("If you already have Short
+  # Teleportation when you gain Medium Teleportation or Teleportation,
+  # you can replace Short Teleportation with a tier 4 type ability")
+  # cross-references Type ability selection, not represented here.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: ignores-physical-distance
+    tier: 6

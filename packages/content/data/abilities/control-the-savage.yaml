@@ -1,0 +1,15 @@
+id: control-the-savage
+name:
+  en: Control the Savage
+  pt-BR: Controlar a Fera
+description:
+  en: You can control a calm nonhuman beast within 30 feet (9 m). You control it for as long as you focus all your attention on it, using your turn each round. The GM has final say over what counts as a nonhuman beast, but unless some kind of deception is at work, you should know whether you can affect a creature before you attempt to use this ability on it. Aliens, extradimensional entities, very intelligent creatures, and robots never count.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: controls-beasts
+    tier: 6

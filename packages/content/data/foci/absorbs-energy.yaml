@@ -1,0 +1,39 @@
+id: absorbs-energy
+name:
+  en: Absorbs Energy
+  pt-BR: Absorve Energia
+description:
+  en: You can harness kinetic energy and transform it into other kinds of energy.
+  pt-BR: Você consegue absorver energia cinética e transformá-la em outros tipos de energia.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: absorb-kinetic-energy
+    - kind: granted
+      ability_id: release-energy
+  '2':
+    - kind: granted
+      ability_id: energize-object
+  '3':
+    - kind: choice
+      options:
+        - absorb-pure-energy
+        - improved-absorb-kinetic-energy
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: overcharge-energy
+  '5':
+    - kind: granted
+      ability_id: energize-creature
+  '6':
+    - kind: choice
+      options:
+        - energize-crowd
+        - overcharge-device
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

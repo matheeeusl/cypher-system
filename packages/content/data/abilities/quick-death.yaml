@@ -1,0 +1,25 @@
+id: quick-death
+name:
+  en: Quick Death
+  pt-BR: Morte Rápida
+description:
+  en: >-
+    You know how to kill quickly. When you hit with a melee or ranged
+    attack, you deal 4 additional points of damage. You can't make
+    this attack in two consecutive rounds.
+  pt-BR: "Tradução em breve."
+  # Note: source text is identical to `fast-kill` (Fights With Panache,
+  # Is Wanted by the Law) — same mechanic and cost, but printed under a
+  # different name — kept as a separate ability per the established
+  # different-name convention.
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: made-a-deal-with-death
+    tier: 3
+  - type: focus
+    id: murders
+    tier: 2

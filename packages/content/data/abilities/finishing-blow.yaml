@@ -1,0 +1,18 @@
+id: finishing-blow
+name:
+  en: Finishing Blow
+  pt-BR: Golpe Final
+description:
+  en: >-
+    If your foe is prone, stunned, or somehow helpless or
+    incapacitated when you strike, you inflict 7 additional points of
+    damage on a successful hit.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: feigns-no-fear
+    tier: 6

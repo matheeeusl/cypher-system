@@ -1,0 +1,19 @@
+id: true-guardian
+name:
+  en: True Guardian
+  pt-BR: Verdadeiro Guardião
+description:
+  en: When you stand guard as your action, allies within immediate range of you gain an asset to their defense tasks. This lasts until the end of your next turn.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2 Might or Intellect points" — a
+  # choice-of-pool cost the schema's single `pool` field can't represent.
+  # Recorded as Might (the first-listed option), flagged for schema
+  # review.
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: defends-the-weak
+    tier: 3

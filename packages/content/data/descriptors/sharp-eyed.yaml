@@ -1,24 +1,30 @@
 id: sharp-eyed
 name:
   en: Sharp-Eyed
-  pt-BR: Tradução em breve.
+  pt-BR: Olhos de Águia
 description:
   en: >-
     You're perceptive and well aware of your surroundings. You notice
     the little details and remember them. You can be difficult to
     surprise.
-  pt-BR: Tradução em breve.
+  pt-BR: >- 
+    Você é perspicaz e está bem atento ao que o cerca. Você percebe
+    os pequenos detalhes e se lembra deles. É difícil
+    surpreendê-lo.
 pool_bonus: []
 characteristics:
   - name:
       en: Find the Flaw
-      pt-BR: Tradução em breve.
+      pt-BR: Encontrar a Falha
     description:
       en: >-
         If an opponent has a straightforward weakness (takes extra
         damage from fire, can't see out of their left eye, and so on),
         the GM will tell you what it is.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Se um oponente tiver uma fraqueza evidente (receber dano extra
+        de fogo, não conseguir enxergar com o olho esquerdo, e assim por diante),
+        o Mestre lhe dirá qual ela é.
 skill_training:
   - skill_id: initiative
     choice_count: null
@@ -30,12 +36,18 @@ connection_options:
   - en: >-
       You heard about what was going on, saw a flaw in the other PCs'
       plan, and joined up to help them out.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você ouviu falar do que estava acontecendo, percebeu uma falha no plano dos outros personagens
+      e juntou-se a eles para ajudar.
   - en: You noticed that the PCs have a foe (or at least a tail) they weren't aware of.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você percebeu que os personagens têm um inimigo (ou, pelo menos, alguém na cola deles) de cuja existência não suspeitavam.
   - en: You saw that the other PCs were up to something interesting and got involved.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você viu que os outros personagens dos jogadores estavam tramando algo interessante e se envolveu.
   - en: >-
       You've been noticing some strange things going on, and this all
       appears related.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem notado algumas coisas estranhas acontecendo,
+      e tudo isso parece estar relacionado.

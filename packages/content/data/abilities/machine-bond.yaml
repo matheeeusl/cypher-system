@@ -1,0 +1,27 @@
+id: machine-bond
+name:
+  en: Machine Bond
+  pt-BR: Vínculo com a Máquina
+description:
+  en: >-
+    You can control the functions of any machine that you've
+    previously exploited using Hack the Impossible, as long as it is
+    networked to your current location. Additionally, if you use an
+    action to concentrate on the machine, you are aware of what's
+    going on around it (you see and hear as if you were standing
+    beside it, no matter how far away you are). You must touch the
+    machine to create the bond, but afterward, there is no range
+    limitation. This bond lasts for a week. You can only bond with
+    one machine at a time.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) — not modeled by the schema (no cyberware-marker field).
+  # Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 8
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: hacks-the-network
+    tier: 6

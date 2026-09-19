@@ -1,0 +1,16 @@
+id: master-of-unarmed-fighting-style
+name:
+  en: Master of Unarmed Fighting Style
+  pt-BR: Mestre do Estilo de Luta Desarmada
+description:
+  en: >-
+    You are specialized in unarmed attacks. If you are already
+    specialized in unarmed attacks, you instead deal 2 additional
+    points of damage with unarmed attacks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: needs-no-weapon
+    tier: 6

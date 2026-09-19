@@ -1,0 +1,103 @@
+id: is-a-car-wizard
+name:
+  en: Is a Car Wizard
+  pt-BR: É um Mago dos Carros
+description:
+  en: >-
+    Your skill behind the wheel is legendary, combining natural talent
+    and specialized magic to perform stunts and tricks that are
+    impossible for regular people. Nothing beats the feel of wind in
+    your hair, except maybe the intense purr of a finely tuned engine
+    augmented by sorcery. You love pushing yourself (and your vehicle)
+    to the limit, even if it's dangerous—better to die a legend than
+    live a long, dull life driving something boring. You enjoy drawing
+    attention to yourself, so you tend to wear sleek clothing, stylish
+    sunglasses, and borderline-gaudy jewelry, but never anything that
+    interferes with your ability to control a car or cast a spell.
+  pt-BR: >-
+    Sua habilidade ao volante é lendária, combinando talento natural e
+    magia especializada para realizar manobras e truques impossíveis
+    para pessoas comuns. Nada supera a sensação do vento no cabelo,
+    exceto talvez o ronco intenso de um motor bem ajustado e ampliado
+    por feitiçaria. Você adora se levar (e a seu veículo) ao limite,
+    mesmo que seja perigoso — melhor morrer como lenda do que viver uma
+    vida longa e monótona dirigindo algo entediante. Você gosta de
+    chamar atenção para si, então costuma usar roupas elegantes, óculos
+    de sol estilosos e joias no limite do extravagante, mas nunca nada
+    que atrapalhe sua capacidade de controlar um carro ou lançar um
+    feitiço.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: driver
+  '2':
+    - kind: granted
+      ability_id: one-hand-on-the-wheel
+    - kind: granted
+      ability_id: car-magic
+  '3':
+    - kind: choice
+      options:
+        - expert-driver
+        - perfect-parking-space
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: enhanced-intellect
+  '5':
+    - kind: granted
+      ability_id: deer-in-the-headlights
+  '6':
+    - kind: choice
+      options:
+        - spells-have-no-speed-limit
+        - trick-driver
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A reasonably fast car.
+  pt-BR: Um carro razoavelmente rápido.
+connection_options:
+  - en: >-
+      Pick one other PC. To repay a favor they did for you a while
+      ago, you promised to drive them somewhere. They haven't taken
+      you up on it yet.
+    pt-BR: >-
+      Escolha outro PJ. Para retribuir um favor que ele lhe fez há um
+      tempo, você prometeu levá-lo de carro a algum lugar. Ele ainda
+      não cobrou essa promessa.
+  - en: >-
+      Pick one other PC. You were the getaway driver for them once in
+      the past—perhaps for something criminal, a car stunt for a viral
+      video, or to avoid a bad situation.
+    pt-BR: >-
+      Escolha outro PJ. Você já foi o motorista de fuga dele uma vez
+      no passado — talvez por algo criminoso, uma manobra para um
+      vídeo viral, ou para escapar de uma situação ruim.
+  - en: >-
+      Pick one other PC. You know they were once in a very bad car
+      collision that left the vehicle a wreck, but they somehow
+      weren't hurt at all.
+    pt-BR: >-
+      Escolha outro PJ. Você sabe que ele já sofreu uma colisão muito
+      grave que destruiu o veículo, mas, de alguma forma, ele não se
+      feriu em nada.
+  - en: >-
+      Pick one other PC. They used to associate with someone who was
+      trying to hunt you down, but they haven't been in contact with
+      that person in a while.
+    pt-BR: >-
+      Escolha outro PJ. Ele costumava se associar com alguém que
+      estava tentando caçar você, mas não está em contato com essa
+      pessoa há um tempo.
+minor_effect_suggestion:
+  en: >-
+    The foe you hit (with your spell or car) is moved horizontally an
+    immediate distance in a direction of your choice.
+  pt-BR: >-
+    O oponente que você acertou (com seu feitiço ou carro) é movido
+    horizontalmente por uma distância imediata na direção que você
+    escolher.
+major_effect_suggestion:
+  en: The foe is knocked prone and loses their next action.
+  pt-BR: O oponente é derrubado e perde sua próxima ação.

@@ -1,0 +1,41 @@
+id: needs-no-weapon
+name:
+  en: Needs No Weapon
+  pt-BR: Não Precisa de Arma
+description:
+  en: Powerful punches, kicks, elbows, knees, and full body movements are all the weapons you need.
+  pt-BR: Socos, chutes, cotoveladas, joelhadas poderosos, e movimentos de corpo inteiro são todas as armas de que você precisa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: fists-of-fury
+    - kind: granted
+      ability_id: flesh-of-stone
+  '2':
+    - kind: granted
+      ability_id: advantage-to-disadvantage
+    - kind: granted
+      ability_id: unarmed-fighting-style
+  '3':
+    - kind: choice
+      options:
+        - moving-like-water
+        - greater-enhanced-potential
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: divert-attacks
+  '5':
+    - kind: granted
+      ability_id: stun-attack
+  '6':
+    - kind: choice
+      options:
+        - master-of-unarmed-fighting-style
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

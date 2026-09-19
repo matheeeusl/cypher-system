@@ -1,0 +1,47 @@
+id: lived-among-the-fey
+name:
+  en: Lived Among the Fey
+  pt-BR: Viveu Entre os Fey
+description:
+  en: >-
+    You spent a lot of time in another world, one that others don't
+    believe actually exists. What you learned there gives you insight
+    and vision that most people don't have. You've seen things.
+    Beautiful things. Unspeakable things. Some of them came back with
+    you and stay with you to this day.
+  pt-BR: >-
+    Você passou muito tempo em outro mundo, um que os outros não
+    acreditam que realmente existe. O que você aprendeu lá lhe dá uma
+    percepção e uma visão que a maioria das pessoas não tem. Você viu
+    coisas. Coisas belas. Coisas indescritíveis. Algumas delas voltaram
+    com você e permanecem com você até hoje.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: see-the-unseen
+  '2':
+    - kind: granted
+      ability_id: bestiary-knowledge
+  '3':
+    - kind: choice
+      options:
+        - dream-becomes-reality
+        - find-the-hidden
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: pay-it-forward
+  '5':
+    - kind: granted
+      ability_id: nightmare
+  '6':
+    - kind: choice
+      options:
+        - explains-the-ineffable
+        - drawing-on-lifes-experiences
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

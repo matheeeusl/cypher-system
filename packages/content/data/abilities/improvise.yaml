@@ -1,0 +1,15 @@
+id: improvise
+name:
+  en: Improvise
+  pt-BR: Improvisar
+description:
+  en: When you perform a task in which you are not trained, you can improvise to gain an asset on the task. The asset might be a tool you cobble together, a sudden insight into overcoming a problem, or a rush of dumb luck. Improvise can be used on a task you have an inability in, but instead of gaining an asset, you lose your inability penalty, treating the task as if you were practiced.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: doesnt-do-much
+    tier: 3

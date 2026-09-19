@@ -1,0 +1,103 @@
+id: gambles-it-all-away
+name:
+  en: Gambles It All Away
+  pt-BR: Aposta Tudo
+description:
+  en: >-
+    How long have you been haunting the card tables? Seems like a
+    lifetime. You probably played your first hand of poker before you
+    could even read words. People, though, were much easier to
+    understand. You could always read other folks' tells, whether
+    that's squinting, tapping, stammering, pulling at their earlobe,
+    or any of a thousand other ways you know when to call their
+    bluffs. Which is not to say you haven't walked away from the
+    table in the hole. But you've always been able to make it up
+    later. So far, anyway. Lately, you've been having weird dreams of
+    loss and void. Is Lady Luck fixin' to turn her back on you? You
+    hope not, because there ain't nothing in the world keeping you
+    from gambling it all away.
+  pt-BR: >-
+    Há quanto tempo você assombra as mesas de cartas? Parece uma vida
+    inteira. Você provavelmente jogou sua primeira mão de pôquer
+    antes mesmo de saber ler. As pessoas, porém, sempre foram mais
+    fáceis de entender. Você sempre soube ler os tiques dos outros,
+    seja um piscar de olhos, um tamborilar de dedos, uma gagueira, um
+    puxar de orelha, ou qualquer uma das mil outras formas de saber
+    quando desmascarar um blefe. O que não quer dizer que você nunca
+    tenha saído de uma mesa no vermelho. Mas sempre conseguiu se
+    recuperar depois. Até agora. Ultimamente, você tem tido sonhos
+    estranhos de perda e vazio. Será que a Sorte está prestes a lhe
+    virar as costas? Espera que não, porque não há nada no mundo que
+    o impeça de apostar tudo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: gambler
+    - kind: granted
+      ability_id: interaction-skills
+  '2':
+    - kind: granted
+      ability_id: courting-lady-luck
+  '3':
+    - kind: choice
+      options:
+        - call-their-bluff
+        - card-genius
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: winning-hand
+  '5':
+    - kind: granted
+      ability_id: consequences-of-luck
+  '6':
+    - kind: choice
+      options:
+        - fate-breaker
+        - gambling-god
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: A deck of especially fine playing cards.
+  pt-BR: Um baralho de cartas de jogar especialmente refinado.
+connection_options:
+  - en: >-
+      Pick one other PC. They beat you in a game of cards or dice
+      when you totally thought you had them figured out. You
+      befriended them rather than taking it personally (though it's
+      possible you've won that and more back since).
+    pt-BR: >-
+      Escolha outro PJ. Ele venceu você num jogo de cartas ou dados
+      quando você tinha certeza de que o tinha entendido completamente.
+      Você preferiu fazer amizade a levar para o lado pessoal (embora
+      seja possível que já tenha recuperado aquilo e mais um pouco
+      desde então).
+  - en: >-
+      Pick one other PC. Whenever they sit next to you, Lady Luck
+      seems to notice. Sometimes your tasks are eased, other times
+      hindered, and you never know ahead of time how things will go
+      for a given game.
+    pt-BR: >-
+      Escolha outro PJ. Sempre que ele senta ao seu lado, a Sorte
+      parece notar. Às vezes suas tarefas são facilitadas, outras
+      vezes dificultadas, e você nunca sabe de antemão como as coisas
+      vão se desenrolar numa dada partida.
+  - en: >-
+      Pick one other PC. This character doesn't seem to care for how
+      you make your living at the card tables.
+    pt-BR: >-
+      Escolha outro PJ. Esse personagem parece não aprovar a forma
+      como você ganha a vida nas mesas de cartas.
+  - en: >-
+      Pick one other PC. When you were hurt by another gambler whose
+      clock you cleaned, they stood up for you at great risk to
+      themself.
+    pt-BR: >-
+      Escolha outro PJ. Quando você foi ferido por outro apostador que
+      você havia derrotado, ele o defendeu correndo um grande risco.
+minor_effect_suggestion:
+  en: Your next gambling, wagering, or similar task is eased.
+  pt-BR: Sua próxima tarefa de jogo, aposta ou similar é facilitada.
+major_effect_suggestion:
+  en: You win a wager.
+  pt-BR: Você vence uma aposta.

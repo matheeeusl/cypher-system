@@ -1,0 +1,22 @@
+id: enhanced-camera-sight
+name:
+  en: Enhanced Camera Sight
+  pt-BR: Visão por Câmeras Aprimorada
+description:
+  en: >-
+    Using your Camera Sight ability, you can either look through two
+    security cameras simultaneously, look through one security camera
+    that is up to 5 miles (8 km) away, or look through one camera for
+    up to 30 minutes.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) — not modeled by the schema (no cyberware-marker field).
+  # Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 5

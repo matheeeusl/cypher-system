@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: descends-from-nobility
     tier: 3
+  - type: focus
+    id: leads
+    tier: 3

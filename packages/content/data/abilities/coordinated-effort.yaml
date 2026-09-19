@@ -1,0 +1,26 @@
+id: coordinated-effort
+name:
+  en: Coordinated Effort
+  pt-BR: Esforço Coordenado
+description:
+  en: >-
+    When you and the duplicate from your Duplicate ability would
+    attack the same creature, you can choose to make one
+    attack roll with an asset. If you hit, you inflict damage
+    with both attacks and treat the attacks as if they were
+    one attack for the purpose of subtracting Armor from
+    the damage. 
+  pt-BR: >-
+    Quando você e a duplicata gerada pela sua habilidade Duplicata
+    forem atacar a mesma criatura, você pode optar por realizar uma
+    única jogada de ataque com um recurso. Se acertar, você causa dano com ambos
+    os ataques e trata os ataques como se fossem um único ataque para fins de
+    subtração da Armadura do dano.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: exists-in-two-places-at-once
+    tier: 5

@@ -1,0 +1,37 @@
+id: exists-in-two-places-at-once
+name:
+  en: Exists in Two Places at Once
+  pt-BR: Existe em Dois Lugares ao Mesmo Tempo
+description:
+  en: You exist in two places at once.
+  pt-BR: Você existe em dois lugares ao mesmo tempo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: duplicate
+  '2':
+    - kind: granted
+      ability_id: share-senses
+  '3':
+    - kind: choice
+      options:
+        - superior-duplicate
+        - resilient-duplicate
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: damage-transference
+  '5':
+    - kind: granted
+      ability_id: coordinated-effort
+  '6':
+    - kind: choice
+      options:
+        - multiplicity
+        - resilient-duplicate
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,16 @@
+id: find-the-guilty
+name:
+  en: Find the Guilty
+  pt-BR: Encontrar o Culpado
+description:
+  en: >-
+    If you have used Designation on a target, you are trained in
+    tracking them, spotting them when they are hidden or disguised, or
+    otherwise finding them.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: metes-out-justice
+    tier: 4

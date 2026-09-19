@@ -1,0 +1,13 @@
+id: improved-copying
+name:
+  en: Improved Copying
+  pt-BR: Cópia Aprimorada
+description:
+  en: You can use Copy Power to copy more powerful abilities. In addition to the normal options for using Effort with Copy Power, if you apply one level of Effort, the GM chooses a mid-tier ability that most closely resembles that power (instead of a low-tier ability).
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: copies-superpowers
+    tier: 4

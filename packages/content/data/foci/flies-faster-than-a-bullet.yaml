@@ -1,0 +1,39 @@
+id: flies-faster-than-a-bullet
+name:
+  en: Flies Faster than a Bullet
+  pt-BR: Voa Mais Rápido que uma Bala
+description:
+  en: You can fly, and you're superstrong, hard to hurt, and fast too. Is there anything you can't do?
+  pt-BR: Você pode voar, é superforte, difícil de ferir e também é rápido. Existe algo que você não consiga fazer?
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: hover
+  '2':
+    - kind: granted
+      ability_id: greater-enhanced-potential
+  '3':
+    - kind: choice
+      options:
+        - hidden-reserves
+        - see-through-matter
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: blink-of-an-eye
+    - kind: granted
+      ability_id: up-to-speed
+  '5':
+    - kind: granted
+      ability_id: not-dead-yet
+  '6':
+    - kind: choice
+      options:
+        - burning-light
+        - ignore-affliction
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

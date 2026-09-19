@@ -1,0 +1,19 @@
+id: robot-builder
+name:
+  en: Robot Builder
+  pt-BR: Construtor de Robôs
+description:
+  en: You are trained in tasks related to building and repairing robots. For the purposes of repair, you can use this skill to heal robots and repair cybernetics that use similar technology.
+  pt-BR: "Tradução em breve."
+  # Note: source text differs slightly between printings — Builds Robots
+  # omits "and repair cybernetics" (present under Has a Custom Drone).
+  # Used the fuller wording here since it's a strict superset.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: builds-robots
+    tier: 1
+  - type: focus
+    id: has-a-custom-drone
+    tier: 1

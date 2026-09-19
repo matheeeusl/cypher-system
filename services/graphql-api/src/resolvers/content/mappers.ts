@@ -40,7 +40,7 @@ export function mapFocusTierAbilities(record: Focus['tier_abilities']) {
     entries: items.map((entry) =>
       entry.kind === 'granted'
         ? { __typename: 'GrantedAbility' as const, abilityId: entry.ability_id }
-        : { __typename: 'ChoiceAbility' as const, options: entry.options },
+        : { __typename: 'ChoiceAbility' as const, options: entry.options, count: entry.count },
     ),
   }))
 }
@@ -118,10 +118,9 @@ export function mapAbility(a: WithVersion<Ability>) {
     id: a.id,
     name: mapLocalizedString(a.name),
     description: mapLocalizedString(a.description),
-    tier: a.tier,
     cost: a.cost ? { pool: a.cost.pool, amount: a.cost.amount } : null,
     actionType: a.action_type,
-    sources: a.sources.map((s) => ({ type: s.type, id: s.id })),
+    sources: a.sources.map((s) => ({ type: s.type, id: s.id, tier: s.tier })),
     contentVersion: a.content_version,
   }
 }

@@ -1,0 +1,13 @@
+id: overcharge-device
+name:
+  en: Overcharge Device
+  pt-BR: Sobrecarregar Dispositivo
+description:
+  en: You infuse 1 point of energy gained from using Absorb Energy or related ability into a device, such as an artifact, raising its effective level on its next use by three (to a maximum of 10).
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: absorbs-energy
+    tier: 6

@@ -1,0 +1,16 @@
+id: weapon-defense
+name:
+  en: Weapon Defense
+  pt-BR: Defesa com Arma
+description:
+  en: While your chosen weapon is in your hand(s), you are trained in Speed defense rolls.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-weaponry
+    tier: 2
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 2

@@ -1,0 +1,39 @@
+id: interprets-the-law
+name:
+  en: Interprets the Law
+  pt-BR: Interpreta a Lei
+description:
+  en: You excel at winning others over to your views.
+  pt-BR: Você é excelente em convencer os outros a adotarem seus pontos de vista.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: opening-statement
+    - kind: granted
+      ability_id: knowledge-of-the-law
+  '2':
+    - kind: granted
+      ability_id: debate
+  '3':
+    - kind: choice
+      options:
+        - able-assistance
+        - enhanced-intellect-edge
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: castigate
+  '5':
+    - kind: granted
+      ability_id: no-one-knows-better
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-potential
+        - legal-intern
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

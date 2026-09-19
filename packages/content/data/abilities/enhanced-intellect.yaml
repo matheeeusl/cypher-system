@@ -11,3 +11,24 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 2
+  - type: focus
+    id: awakens-dreams
+    tier: 3
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 3
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 1
+  - type: focus
+    id: is-a-car-wizard
+    tier: 4
+  - type: focus
+    id: learned-from-the-classics
+    tier: 1
+  - type: focus
+    id: learns-quickly
+    tier: 1
+  - type: focus
+    id: learns-quickly
+    tier: 5

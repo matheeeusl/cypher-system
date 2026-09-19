@@ -1,0 +1,24 @@
+id: elemental-protection
+name:
+  en: Elemental Protection
+  pt-BR: Proteção Elemental
+description:
+  en: >-
+    You and every target you designate within immediate range gains
+    +5 Armor against one type of direct elemental damage (such as
+    fire, lightning, shadow, or thorn) for one hour, or until you cast
+    this spell again. Each level of Effort applied increases the
+    elemental protection by +2.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 4

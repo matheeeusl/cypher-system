@@ -1,0 +1,15 @@
+id: dark-matter-strike
+name:
+  en: Dark Matter Strike
+  pt-BR: Golpe de Matéria Escura
+description:
+  en: When you attack a foe within long range, dark matter condenses around your target and entangles its limbs, holding it in place and easing your attack by two steps. The ability works for whatever kind of attack you use (melee, ranged, energy, and so on).
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: dances-with-dark-matter
+    tier: 3

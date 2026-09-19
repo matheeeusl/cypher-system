@@ -1,0 +1,18 @@
+id: poison-touch
+name:
+  en: Poison Touch
+  pt-BR: Toque Venenoso
+description:
+  en: >-
+    You touch a creature and lines of poison crawl through their
+    skin. They take 3 points of Speed damage (ignores Armor) and are
+    hindered on their next turn.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: inks-spells-on-skin
+    tier: 1

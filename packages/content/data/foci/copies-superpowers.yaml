@@ -1,0 +1,39 @@
+id: copies-superpowers
+name:
+  en: Copies Superpowers
+  pt-BR: Copia Superpoderes
+description:
+  en: You can copy others' skills, abilities, and superpowers.
+  pt-BR: Você consegue copiar as perícias, habilidades e superpoderes de outros.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: flex-skill
+    - kind: granted
+      ability_id: flex-skill
+  '2':
+    - kind: granted
+      ability_id: copy-power
+  '3':
+    - kind: choice
+      options:
+        - steal-power
+        - wildcard-powers
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: improved-copying
+  '5':
+    - kind: granted
+      ability_id: power-memory
+  '6':
+    - kind: choice
+      options:
+        - amazing-copying
+        - multiple-copying
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

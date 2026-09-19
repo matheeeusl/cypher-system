@@ -1,0 +1,31 @@
+id: iron-punch
+name:
+  en: Iron Punch
+  pt-BR: Soco de Ferro
+description:
+  en: >-
+    You magnetically pick up a metallic heavy object within short range and
+    hurl it at someone within short range, an Intellect action
+    that deals 6 points of damage to the target and to the
+    hurled object. For each additional level of Effort applied,
+    you can pick up a slightly larger object, allowing you to
+    affect one additional target within short range as long as
+    it is next to the prior target
+  pt-BR: >-
+    Você levanta magneticamente um objeto metálico pesado a curta distância
+    e o arremessa contra alguém também a curta distância; trata-se de uma ação de Intelecto
+    que causa 6 pontos de dano ao alvo e ao objeto arremessado.
+    Para cada nível adicional de Esforço aplicado, você pode levantar um objeto ligeiramente maior,
+    permitindo afetar um alvo adicional a curta distância, desde que ele esteja ao lado do alvo anterior.
+# Note: source cost is printed as "5+ Intellect points" — the schema's
+# cost field can't represent an open-ended "+". Recorded as the
+# baseline 5 Intellect points here, flagged for schema review (same
+# approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 6

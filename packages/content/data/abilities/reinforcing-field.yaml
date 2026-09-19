@@ -1,0 +1,19 @@
+id: reinforcing-field
+name:
+  en: Reinforcing Field
+  pt-BR: Campo Reforçador
+description:
+  en: You can reinforce any object or structure by infusing it with a force field for one hour. The force field increases the level of the object or structure by 2 for tasks related to durability and withstanding damage and destruction.
+  pt-BR: Você pode reforçar qualquer objeto ou estrutura infundindo-o com um campo de força por uma hora. O campo de força aumenta em 2 o nível do objeto ou estrutura para tarefas relacionadas à durabilidade e à resistência a danos e destruição.
+  # Note: source cost is printed as "6+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 6 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: defends-the-gate
+    tier: 5

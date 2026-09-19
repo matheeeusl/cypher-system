@@ -1,0 +1,19 @@
+id: hard-to-kill
+name:
+  en: Hard to Kill
+  pt-BR: Difícil de Matar
+description:
+  en: You can choose to reroll any defense task you make but never more than once per round.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: takes-animal-shape
+    tier: 5
+  - type: focus
+    id: hunts-witches
+    tier: 6
+  - type: focus
+    id: made-a-deal-with-death
+    tier: 5

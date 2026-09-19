@@ -1,0 +1,13 @@
+id: enlightened
+name:
+  en: Enlightened
+  pt-BR: Iluminado
+description:
+  en: You are trained in any perception task that involves sight.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: blazes-with-radiance
+    tier: 1

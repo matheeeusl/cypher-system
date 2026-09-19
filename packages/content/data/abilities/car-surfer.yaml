@@ -1,0 +1,19 @@
+id: car-surfer
+name:
+  en: Car Surfer
+  pt-BR: Surfista de Carro
+description:
+  en: >- 
+    You can stand or move about on a moving vehicle (such as on the hood, on the roof, in the open door well, etc.) with a reasonable expectation of not falling off.
+    Unless the vehicle veers sharply, stops suddenly, or otherwise engages in extreme maneuvers, standing or moving about on a moving vehicle is a routine task for you.
+    If the vehicle engages in extreme maneuvers like those described, any tasks to remain on the vehicle's surface are eased.
+  pt-BR: >-
+    Você pode permanecer de pé ou se deslocar sobre um veículo em movimento (como no capô, no teto, no vão da porta aberta, etc.) com uma expectativa razoável de não cair. 
+    A menos que o veículo mude de direção bruscamente, pare de repente ou realize manobras extremas, permanecer de pé ou se deslocar sobre um veículo em movimento é uma tarefa rotineira para você. 
+    Caso o veículo realize manobras extremas como as descritas, quaisquer tarefas para se manter sobre a superfície do veículo são facilitadas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 2

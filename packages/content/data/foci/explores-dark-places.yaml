@@ -1,0 +1,39 @@
+id: explores-dark-places
+name:
+  en: Explores Dark Places
+  pt-BR: Explora Lugares Sombrios
+description:
+  en: You're the archetypal treasure hunter, scavenger, and finder of lost things.
+  pt-BR: Você é o arquétipo do caçador de tesouros, saqueador e achador de coisas perdidas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: superb-explorer
+  '2':
+    - kind: granted
+      ability_id: superb-infiltrator
+    - kind: granted
+      ability_id: eyes-adjusted
+  '3':
+    - kind: choice
+      options:
+        - nightstrike
+        - slippery-customer
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: hard-won-resilience
+  '5':
+    - kind: granted
+      ability_id: dark-explorer
+  '6':
+    - kind: choice
+      options:
+        - blinding-attack
+        - embraced-by-darkness
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

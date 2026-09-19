@@ -5,6 +5,12 @@ name:
 description:
   en: 'Choose one type of attack in which you are not already trained: light bashing, light bladed, light ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or heavy ranged. You are trained in attacks using that type of weapon. You can select this ability multiple times. Each time you select it, you must choose a different type of attack.'
   pt-BR: 'Escolha um tipo de ataque no qual ainda não seja treinado: contundente leve, cortante leve, à distância leve, contundente médio, cortante médio, à distância médio, contundente pesado, cortante pesado, ou à distância pesado. Você é treinado em ataques usando aquele tipo de arma. Você pode escolher esta habilidade várias vezes. A cada vez, deve escolher um tipo de ataque diferente.'
+  # Note: Hits the Saloon's printing rewords this ability's options,
+  # explicitly calling out "unarmed attacks" as a choosable type
+  # alongside the standard light/medium/heavy bashing/bladed/ranged
+  # categories used everywhere else. Kept the standard wording as
+  # canonical since 3 of 4 sources use it; flagged the Hits the Saloon
+  # variant here for schema review rather than forking a new ability.
 cost: null
 action_type: enabler
 sources:
@@ -14,3 +20,21 @@ sources:
   - type: focus
     id: pilots-starcraft
     tier: 6
+  - type: focus
+    id: doesnt-do-much
+    tier: 3
+  - type: focus
+    id: hits-the-saloon
+    tier: 3
+  - type: focus
+    id: infiltrates
+    tier: 3
+  - type: focus
+    id: is-idolized-by-millions
+    tier: 3
+  - type: focus
+    id: looks-for-trouble
+    tier: 3
+  - type: focus
+    id: masters-the-swarm
+    tier: 3

@@ -1,0 +1,41 @@
+id: crafts-unique-objects
+name:
+  en: Crafts Unique Objects
+  pt-BR: Cria Objetos Únicos
+description:
+  en: You're an inventor of strange and useful objects.
+  pt-BR: Você é um inventor de objetos estranhos e úteis.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: crafter
+    - kind: granted
+      ability_id: master-identifier
+  '2':
+    - kind: granted
+      ability_id: artifact-tinkerer
+    - kind: granted
+      ability_id: quick-work
+  '3':
+    - kind: choice
+      options:
+        - master-crafter
+        - built-in-weaponry
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: cyphersmith
+  '5':
+    - kind: granted
+      ability_id: innovator
+  '6':
+    - kind: choice
+      options:
+        - inventor
+        - fusion-armor
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

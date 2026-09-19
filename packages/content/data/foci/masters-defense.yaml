@@ -1,0 +1,41 @@
+id: masters-defense
+name:
+  en: Masters Defense
+  pt-BR: Domina a Defesa
+description:
+  en: You use protective equipment and practiced techniques to avoid becoming hurt in a fight.
+  pt-BR: Você usa equipamento protetor e técnicas praticadas para evitar se machucar em uma luta.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: shield-master
+  '2':
+    - kind: granted
+      ability_id: sturdy
+    - kind: granted
+      ability_id: practiced-in-armor
+  '3':
+    - kind: choice
+      options:
+        - dodge-and-resist
+        - dodge-and-respond
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: tower-of-will
+    - kind: granted
+      ability_id: experienced-in-armor
+  '5':
+    - kind: granted
+      ability_id: nothing-but-defend
+  '6':
+    - kind: choice
+      options:
+        - defense-master
+        - wear-it-well
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

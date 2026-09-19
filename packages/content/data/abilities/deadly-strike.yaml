@@ -1,0 +1,17 @@
+id: deadly-strike
+name:
+  en: Deadly Strike
+  pt-BR: Golpe Mortal
+description:
+  en: >-
+    If you strike a foe of level 3 or lower with a weapon you're
+    practiced with, you kill the target instantly.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: masters-weaponry
+    tier: 6

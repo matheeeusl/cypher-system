@@ -1,0 +1,20 @@
+id: countercharm
+name:
+  en: Countercharm
+  pt-BR: Contraencanto
+description:
+  en: >-
+    If you are affected by an unwanted ongoing magical condition or
+    affliction (such as a curse, paralysis spell, withering hex, and
+    so on) that gives you additional rolls to end it early, your
+    rolls to end it early are eased by two steps until you break
+    free.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: hunts-witches
+    tier: 4

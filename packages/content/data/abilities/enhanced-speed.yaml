@@ -11,3 +11,9 @@ sources:
   - type: focus
     id: pilots-starcraft
     tier: 4
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 4
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 1

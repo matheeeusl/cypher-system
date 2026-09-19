@@ -1,0 +1,25 @@
+id: ghost
+name:
+  en: Ghost
+  pt-BR: Fantasma
+description:
+  en: >-
+    For the next ten minutes, you gain an asset to sneaking tasks.
+    During this time, you can move through solid barriers
+    (but not energy barriers) at a rate of 1 foot (30 cm) per round,
+    and you can perceive while phased within a barrier or object,
+    which allows you to peek through walls. 
+  pt-BR: >-
+    Pelos próximos dez minutos, você ganha uma vantagem em tarefas de furtividade. 
+    Durante esse período, você pode atravessar barreiras sólidas
+    (mas não barreiras de energia) a uma velocidade de 1 pé (30 cm) por rodada,
+    e pode perceber o ambiente enquanto está em fase dentro de uma barreira ou objeto,
+    o que lhe permite espiar através de paredes.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: exists-partially-out-of-phase
+    tier: 4

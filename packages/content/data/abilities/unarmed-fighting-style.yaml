@@ -1,0 +1,13 @@
+id: unarmed-fighting-style
+name:
+  en: Unarmed Fighting Style
+  pt-BR: Estilo de Luta Desarmada
+description:
+  en: You are trained in unarmed attacks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: needs-no-weapon
+    tier: 2

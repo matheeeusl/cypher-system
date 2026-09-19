@@ -1,0 +1,37 @@
+id: ignores-physical-distance
+name:
+  en: Ignores Physical Distance
+  pt-BR: Ignora a Distância Física
+description:
+  en: You can teleport from one place to another by briefly passing through a parallel dimension.
+  pt-BR: Você pode se teletransportar de um lugar a outro passando brevemente por uma dimensão paralela.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: dimensional-squeeze
+  '2':
+    - kind: granted
+      ability_id: opportunist
+  '3':
+    - kind: choice
+      options:
+        - defensive-blinking
+        - teleportation-burst
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: short-teleportation
+  '5':
+    - kind: granted
+      ability_id: medium-teleportation
+  '6':
+    - kind: choice
+      options:
+        - teleportation
+        - teleportive-wound
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

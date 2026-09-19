@@ -1,0 +1,41 @@
+id: controls-beasts
+name:
+  en: Controls Beasts
+  pt-BR: Controla Feras
+description:
+  en: Your ability to communicate and lead beasts is uncanny.
+  pt-BR: Sua habilidade de se comunicar e liderar feras é extraordinária.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: beast-companion
+  '2':
+    - kind: granted
+      ability_id: soothe-the-savage
+    - kind: granted
+      ability_id: communication-animal
+  '3':
+    - kind: choice
+      options:
+        - mount
+        - stronger-together
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: beast-eyes
+    - kind: granted
+      ability_id: improved-companion
+  '5':
+    - kind: granted
+      ability_id: beast-call
+  '6':
+    - kind: choice
+      options:
+        - as-if-one-creature
+        - control-the-savage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

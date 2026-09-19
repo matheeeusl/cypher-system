@@ -1,0 +1,17 @@
+id: shield-master
+name:
+  en: Shield Master
+  pt-BR: Mestre do Escudo
+description:
+  en: >-
+    When you use a shield, in addition to the asset it gives you
+    (easing Speed defense tasks), you can act as if you are trained
+    in Speed defense tasks. However, in any round in which you use
+    this benefit, your attacks are hindered.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 1

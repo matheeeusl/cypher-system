@@ -11,3 +11,15 @@ sources:
   - type: focus
     id: helps-their-friends
     tier: 6
+  - type: focus
+    id: blazes-with-radiance
+    tier: 3
+  - type: focus
+    id: builds-robots
+    tier: 3
+  - type: focus
+    id: learns-quickly
+    tier: 6
+  - type: focus
+    id: masters-the-swarm
+    tier: 6

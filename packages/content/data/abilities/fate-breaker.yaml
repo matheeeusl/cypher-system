@@ -1,0 +1,21 @@
+id: fate-breaker
+name:
+  en: Fate Breaker
+  pt-BR: Quebrador de Destino
+description:
+  en: >-
+    Something beyond your ken takes an interest in you. If you fail
+    on a task (including an attack or a defense), you can change the
+    die result to a natural 20. (That still might not be enough to
+    succeed if the difficulty is higher than 6.) This ability doesn't
+    work if you roll a natural 1 for an attempted task, unless you
+    reroll using Consequences of Luck and obtain a result that isn't
+    in the failure range. Once you use this ability, it is not
+    available again until after you make a ten-hour recovery roll.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 6

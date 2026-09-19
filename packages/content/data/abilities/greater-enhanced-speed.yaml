@@ -1,0 +1,25 @@
+id: greater-enhanced-speed
+name:
+  en: Greater Enhanced Speed
+  pt-BR: Agilidade Aprimorada Superior
+description:
+  en: You gain 6 points to your Speed Pool.
+  pt-BR: Você ganha 6 pontos na sua Reserva de Agilidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: moves-like-a-cat
+    tier: 1
+  - type: focus
+    id: moves-like-a-cat
+    tier: 3
+  - type: focus
+    id: moves-like-a-cat
+    tier: 6
+  - type: focus
+    id: moves-like-the-wind
+    tier: 1
+  - type: focus
+    id: moves-like-the-wind
+    tier: 3

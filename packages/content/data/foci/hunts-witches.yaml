@@ -1,0 +1,116 @@
+id: hunts-witches
+name:
+  en: Hunts Witches
+  pt-BR: Caça Bruxas
+description:
+  en: >-
+    You know enough about magic to mistrust anyone who uses it,
+    especially witches—people who study ancient rituals, make pacts
+    with evil creatures, and use their power for personal gain.
+    Warped by their abilities, they are dangerous threats to regular
+    folks, and it's up to people like you to find and eliminate those
+    threats. Sure, some witches claim to be good and even act
+    friendly, but you've seen it go bad all too often, and you won't
+    be fooled again. You always carry weapons for fighting witches, or
+    at least know what common tools will do as a weapon in a pinch.
+    You wear clothing appropriate to the region and era (especially
+    if regular people don't know about magic or witches and you have
+    to hide what you do). You may have a token, icon, or other
+    reminder of your purpose, such as a lucky coin, a holy book, or a
+    pouch of magic-thwarting herbs given to you by your mentor.
+  pt-BR: >-
+    Você sabe o suficiente sobre magia para desconfiar de quem a usa,
+    especialmente as bruxas — pessoas que estudam rituais antigos,
+    fazem pactos com criaturas malignas e usam seu poder para ganho
+    pessoal. Deformadas por suas habilidades, elas são ameaças
+    perigosas para as pessoas comuns, e cabe a gente como você
+    encontrar e eliminar essas ameaças. Claro, algumas bruxas afirmam
+    ser boas e até agem de forma amigável, mas você já viu isso dar
+    errado vezes demais, e não vai ser enganado de novo. Você sempre
+    carrega armas para lutar contra bruxas, ou pelo menos sabe o que
+    ferramentas comuns podem fazer como arma em um aperto. Você veste
+    roupas apropriadas para a região e a época (especialmente se as
+    pessoas comuns não souberem sobre magia ou bruxas e você precisar
+    esconder o que faz). Você pode ter um talismã, ícone, ou outro
+    lembrete de seu propósito, como uma moeda da sorte, um livro
+    sagrado, ou uma bolsa de ervas antimagia dada por seu mentor.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: witch-bane
+    - kind: granted
+      ability_id: witch-lore
+  '2':
+    - kind: granted
+      ability_id: will-of-legend
+  '3':
+    - kind: choice
+      options:
+        - improved-witch-bane
+        - misdirect
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: countercharm
+  '5':
+    - kind: granted
+      ability_id: greater-skill-with-attacks
+  '6':
+    - kind: choice
+      options:
+        - hard-to-kill
+        - heroic-witch-bane
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: >-
+    A book of lore about witches, passed down to you from past witch
+    hunters and updated over the years (or decades or centuries) with
+    their advice and discoveries about witches.
+  pt-BR: >-
+    Um livro de conhecimentos sobre bruxas, passado a você por caçadores
+    de bruxas anteriores e atualizado ao longo dos anos (ou décadas ou
+    séculos) com seus conselhos e descobertas sobre bruxas.
+connection_options:
+  - en: Pick one other PC. You are friends, and you'd hate to see anything bad happen to them.
+    pt-BR: >-
+      Escolha outro PJ. Vocês são amigos, e você odiaria ver algo de
+      ruim acontecer com ele.
+  - en: >-
+      Pick one other PC. You know that some mysterious quality about
+      them makes witches tend to choose them as targets over other
+      people.
+    pt-BR: >-
+      Escolha outro PJ. Você sabe que alguma qualidade misteriosa nele
+      faz com que as bruxas tendam a escolhê-lo como alvo em vez de
+      outras pessoas.
+  - en: >-
+      Pick one other PC. You know they've had a run-in with a witch
+      before, and you want to hear how that played out.
+    pt-BR: >-
+      Escolha outro PJ. Você sabe que ele já teve um encontro com uma
+      bruxa antes, e quer saber como aquilo se desenrolou.
+  - en: >-
+      Pick one other PC. You've known this person quite a while, and
+      in fact it was a witch attack against them that convinced you
+      to start hunting witches.
+    pt-BR: >-
+      Escolha outro PJ. Você conhece essa pessoa há bastante tempo, e
+      de fato foi um ataque de bruxa contra ela que o convenceu a
+      começar a caçar bruxas.
+minor_effect_suggestion:
+  en: >-
+    You intimidate your foe so much that they pause, taking no action
+    on their next turn (but they're still able to defend themselves).
+  pt-BR: >-
+    Você intimida tanto seu oponente que ele hesita, não realizando
+    nenhuma ação em seu próximo turno (mas ainda pode se defender).
+major_effect_suggestion:
+  en: >-
+    You are so intimidating that your foe chooses to flee, or at
+    least retreat a bit to recover its courage and think of a new
+    strategy.
+  pt-BR: >-
+    Você é tão intimidante que seu oponente escolhe fugir, ou ao menos
+    recuar um pouco para recuperar a coragem e pensar em uma nova
+    estratégia.

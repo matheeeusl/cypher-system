@@ -1,0 +1,58 @@
+id: made-a-deal-with-death
+name:
+  en: Made a Deal with Death
+  pt-BR: Fez um Acordo com a Morte
+description:
+  en: >-
+    Death eternally walks the labyrinth of the Heartwood, touching
+    those who pass by, but few notice this ever-changing figure. You,
+    however, are intimate with Death in all their many forms. Perhaps
+    you are both drawn to and frightened of them. Perhaps you've
+    spent too much time in their company, and have become infatuated
+    with them. Perhaps you've lost friends and loved ones to their
+    dark embrace. Whatever your feelings about Death, you've made a
+    deal with them, one you hope will bring you the closure that you
+    seek.
+  pt-BR: >-
+    A Morte caminha eternamente pelo labirinto da Floresta do Coração,
+    tocando aqueles que passam por perto, mas poucos percebem essa
+    figura sempre em mudança. Você, porém, é íntimo da Morte em todas
+    as suas muitas formas. Talvez você seja atraído por ela e amedrontado
+    por ela ao mesmo tempo. Talvez tenha passado tempo demais em sua
+    companhia e tenha se apaixonado por ela. Talvez tenha perdido
+    amigos e entes queridos para seu abraço sombrio. Sejam quais forem
+    seus sentimentos sobre a Morte, você fez um acordo com ela, um que
+    espera lhe trazer o fechamento que busca.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: blessing-of-the-gods-death
+    - kind: granted
+      ability_id: blessing-of-the-gods-protection
+  '2':
+    - kind: granted
+      ability_id: destined-for-greatness
+  '3':
+    - kind: choice
+      options:
+        - miraculous-health
+        - quick-death
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: regeneration
+  '5':
+    - kind: granted
+      ability_id: hard-to-kill
+  '6':
+    - kind: choice
+      options:
+        - duel-to-the-death
+        - final-defiance
+        - not-dead-yet
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

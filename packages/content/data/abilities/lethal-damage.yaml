@@ -14,3 +14,24 @@ sources:
   - type: focus
     id: howls-at-the-moon
     tier: 6
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 6
+  - type: focus
+    id: grows-to-towering-heights
+    tier: 6
+  - type: focus
+    id: hits-the-saloon
+    tier: 6
+  - type: focus
+    id: is-licensed-to-carry
+    tier: 6
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 6
+  - type: focus
+    id: looks-for-trouble
+    tier: 6
+  - type: focus
+    id: needs-no-weapon
+    tier: 6

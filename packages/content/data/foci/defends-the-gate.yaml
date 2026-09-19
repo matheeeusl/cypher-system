@@ -1,0 +1,39 @@
+id: defends-the-gate
+name:
+  en: Defends the Gate
+  pt-BR: Defende o Portão
+description:
+  en: Everyone wants you on their side when it comes to a fight because nothing gets by you.
+  pt-BR: Todos querem você do seu lado em uma luta, porque nada passa por você.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: fortified-position
+    - kind: granted
+      ability_id: rally-to-me
+  '2':
+    - kind: granted
+      ability_id: mind-for-might
+  '3':
+    - kind: choice
+      options:
+        - fortification-builder
+        - divert-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-might
+  '5':
+    - kind: granted
+      ability_id: reinforcing-field
+  '6':
+    - kind: choice
+      options:
+        - generate-force-field
+        - stun-attack
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

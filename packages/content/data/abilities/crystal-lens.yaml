@@ -1,0 +1,21 @@
+id: crystal-lens
+name:
+  en: Crystal Lens
+  pt-BR: Lente de Cristal
+description:
+  en: >-
+    You can focus the inherent energy
+    surging through you from your Crystalline Body ability.
+    This allows you to fire a blast of energy that inflicts 5
+    points of damage on a target within very long range.
+  pt-BR: >-
+    Você pode canalizar a energia inerente
+    que flui através de você graças à sua habilidade Corpo de Cristal. 
+    Isso lhe permite disparar uma rajada de energia que causa 5
+    pontos de dano a um alvo a um alcance muito longo.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 4

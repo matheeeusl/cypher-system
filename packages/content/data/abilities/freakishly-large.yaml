@@ -1,0 +1,15 @@
+id: freakishly-large
+name:
+  en: Freakishly Large
+  pt-BR: Anormalmente Grande
+description:
+  en: >-
+    Your increased size intimidates most people. While you enjoy the
+    effects of Enlarge, all intimidation tasks you attempt are eased.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: grows-to-towering-heights
+    tier: 1

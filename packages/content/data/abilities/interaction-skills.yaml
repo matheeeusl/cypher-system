@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: has-a-thousand-faces
     tier: 1
+  - type: focus
+    id: gambles-it-all-away
+    tier: 1

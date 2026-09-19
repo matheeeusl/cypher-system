@@ -1,0 +1,25 @@
+id: drone-buddy
+name:
+  en: Drone Buddy
+  pt-BR: Drone Companheiro
+description:
+  en: >-
+    A robot drone about the size of a small dog (built by you)
+    accompanies you and follows your instructions. When within long
+    range, you can wirelessly communicate with and control the drone
+    and it can transmit what it sees and hears to you. You and the GM
+    must work out the physical details of your drone. You'll probably
+    make rolls for it when it takes actions. A drone in combat
+    usually doesn't make separate attacks but helps with yours. On
+    your action, if the drone is next to you, it serves as an asset
+    for one attack you make on your turn. If the drone is destroyed,
+    you can repair the original with a few days' worth of tinkering,
+    or build a new one with a week's worth of half-time labor.
+    (Drone buddy: level 2; flies a short distance each round.)
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-custom-drone
+    tier: 1

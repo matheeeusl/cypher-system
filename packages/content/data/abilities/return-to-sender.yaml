@@ -1,0 +1,18 @@
+id: return-to-sender
+name:
+  en: Return to Sender
+  pt-BR: Devolução ao Remetente
+description:
+  en: >-
+    If you succeed at a Speed defense task against a melee attack, you
+    can make an immediate melee attack against your foe. You can use
+    this ability only once per round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-with-panache
+    tier: 6

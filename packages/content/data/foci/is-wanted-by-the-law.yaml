@@ -1,0 +1,47 @@
+id: is-wanted-by-the-law
+name:
+  en: Is Wanted by the Law
+  pt-BR: É Procurado pela Lei
+description:
+  en: >-
+    "WANTED, DEAD OR ALIVE" posters (or their equivalent) have
+    appeared featuring your face. It's up to you whether it's a
+    mistake that snowballed out of control or you actually would kill
+    someone just for looking at you.
+  pt-BR: >-
+    Cartazes de "PROCURADO, VIVO OU MORTO" (ou equivalente) apareceram
+    estampando seu rosto. Cabe a você decidir se foi um erro que saiu
+    do controle ou se você realmente mataria alguém só por olhar para
+    você.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enhanced-speed
+    - kind: granted
+      ability_id: danger-sense
+  '2':
+    - kind: granted
+      ability_id: surprise-attack
+  '3':
+    - kind: choice
+      options:
+        - outlaw-reputation
+        - successive-attack
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: fast-kill
+  '5':
+    - kind: granted
+      ability_id: band-of-desperados
+  '6':
+    - kind: choice
+      options:
+        - not-dead-yet
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

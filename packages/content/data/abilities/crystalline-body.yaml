@@ -1,0 +1,29 @@
+id: crystalline-body
+name:
+  en: Crystalline Body
+  pt-BR: Corpo de Cristal
+description:
+  en: >-
+    You are composed of animate, translucent crystal the color of amber.
+    Work with your GM to decide your exact form, though it is likely about the shape and size of a humanoid.
+    Your crystal body grants you +2 Armor and +4 to your Might Pool.
+    However, you're not quick and your Speed defense tasks are hindered.
+    Certain conditions, like mundane diseases and poisons, do not affect you.
+    Your crystalline body repairs itself more slowly than a body of living flesh would.
+    You have only the one-round, one-hour, and ten-hour recovery rolls available each day; you do not have a ten-minute recovery roll available.
+    Any ability you have that requires a ten-minute recovery roll instead requires a one-hour recovery roll.
+  pt-BR: >-
+    Você é composto de um cristal translúcido e animado, da cor de âmbar. 
+    Defina sua forma exata em conjunto com o Mestre, embora ela provavelmente tenha o formato e o tamanho de um humanoide. 
+    Seu corpo de cristal lhe confere +2 de Armadura e +4 na sua Reserva de Força. 
+    No entanto, você não é ágil, e suas tarefas de defesa baseadas em Agilidade sofrem penalidade. 
+    Certas condições, como doenças e venenos comuns, não o afetam. 
+    Seu corpo cristalino se regenera mais lentamente do que um corpo de carne viva. 
+    Você tem acesso apenas às rolagens de recuperação de uma rodada, uma hora e dez horas por dia; você não tem a rolagem de recuperação de dez minutos disponível.
+    Qualquer habilidade sua que exija uma rolagem de recuperação de dez minutos passa a exigir uma rolagem de recuperação de uma hora.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 1

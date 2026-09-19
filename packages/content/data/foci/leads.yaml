@@ -1,0 +1,41 @@
+id: leads
+name:
+  en: Leads
+  pt-BR: Lidera
+description:
+  en: Your natural leadership capability allows you to command others, including a loyal band of followers
+  pt-BR: Sua capacidade natural de liderança permite que você comande outros, incluindo um grupo fiel de seguidores.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: natural-charisma
+    - kind: granted
+      ability_id: good-advice
+  '2':
+    - kind: granted
+      ability_id: enhanced-potential
+    - kind: granted
+      ability_id: basic-follower
+  '3':
+    - kind: choice
+      options:
+        - advanced-command
+        - expert-follower
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: captivate-or-inspire
+  '5':
+    - kind: granted
+      ability_id: greater-enhanced-potential
+  '6':
+    - kind: choice
+      options:
+        - band-of-followers
+        - mind-of-a-leader
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

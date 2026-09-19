@@ -1,0 +1,17 @@
+id: improved-designation
+name:
+  en: Improved Designation
+  pt-BR: Designação Aprimorada
+description:
+  en: >-
+    When you use Designation, you can designate one additional
+    creature to be innocent or guilty, which means up to two creatures
+    at a time may be innocent, or two guilty, or one innocent and one
+    guilty.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: metes-out-justice
+    tier: 2

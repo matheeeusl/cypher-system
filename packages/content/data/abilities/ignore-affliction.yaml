@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: never-says-die
     tier: 6
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 6

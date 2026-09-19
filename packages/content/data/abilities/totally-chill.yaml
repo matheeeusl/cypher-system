@@ -1,0 +1,13 @@
+id: totally-chill
+name:
+  en: Totally Chill
+  pt-BR: Totalmente Tranquilo
+description:
+  en: Your ten-minute recovery roll takes you only one round.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: doesnt-do-much
+    tier: 2

@@ -1,0 +1,13 @@
+id: something-in-the-road
+name:
+  en: Something in the Road
+  pt-BR: Algo na Estrada
+description:
+  en: When you use a vehicle as a weapon, you inflict 5 additional points of damage.
+  pt-BR: Quando você usa um veículo como arma, você inflige 5 pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: drives-like-a-maniac
+    tier: 5

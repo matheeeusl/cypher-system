@@ -2,12 +2,22 @@ id: greater-beast-form
 name:
   en: Greater Beast Form
   pt-BR: Forma Bestial Superior
+# Reprinted verbatim-except-one-clause under Takes Animal Shape (p. 361),
+# which reads "When using Beast Form or Animal Shape..." and adds a trailing
+# note "Greater Beast Form applies to using Animal Shape." Howls at the
+# Moon's original printing omits the "or Animal Shape" clause,
+# since that Focus never grants Animal Shape. Canonical text below uses the
+# fuller Takes Animal Shape wording — still 100% accurate under Howls at
+# the Moon, just not the literal substring printed there.
 description:
-  en: 'When using Beast Form, your beast form gains the following additional bonuses: +1 to your Might Edge, +2 to your Speed Pool, and +1 to your Speed Edge.'
-  pt-BR: 'Ao usar Forma Bestial, sua forma bestial ganha os seguintes bônus adicionais: +1 no Bônus de Força, +2 na Reserva de Agilidade, e +1 no Bônus de Agilidade.'
+  en: 'When using Beast Form or Animal Shape, your beast form gains the following additional bonuses: +1 to your Might Edge, +2 to your Speed Pool, and +1 to your Speed Edge.'
+  pt-BR: 'Ao usar Forma Bestial ou Forma Animal, sua forma bestial ganha os seguintes bônus adicionais: +1 no Bônus de Força, +2 na Reserva de Agilidade, e +1 no Bônus de Agilidade.'
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: howls-at-the-moon
+    tier: 3
+  - type: focus
+    id: takes-animal-shape
     tier: 3

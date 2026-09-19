@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: fights-dirty
     tier: 5
+  - type: focus
+    id: fights-with-panache
+    tier: 5

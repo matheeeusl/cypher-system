@@ -1,0 +1,15 @@
+id: experienced-in-armor
+name:
+  en: Experienced in Armor
+  pt-BR: Experiente com Armaduras
+description:
+  en: >-
+    The cost reduction from your Practiced in Armor ability improves.
+    You now reduce the Speed cost by 2.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 4

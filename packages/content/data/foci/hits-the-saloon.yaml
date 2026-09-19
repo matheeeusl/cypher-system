@@ -1,0 +1,114 @@
+id: hits-the-saloon
+name:
+  en: Hits the Saloon
+  pt-BR: Frequenta o Salão
+description:
+  en: >-
+    The saloon is an old friend, whether or not you visit the same
+    one twice. Whatever the name on the sign out front, the pungent
+    smells of whiskey, cigars, and sawdust lift your spirits like
+    nothing else. 'Cept for actual spirits, of course. When that
+    first shot hits your throat and sets a warm blaze in your belly,
+    you can't keep a smile from your lips. This here's your home away
+    from home, and inside are your friends, both old and those soon
+    to be made. Though not everyone's happy to see you—troublemakers
+    soon learn that in a scrap, you only hit harder with each shot of
+    whiskey you pour down your throat.
+  pt-BR: >-
+    O salão é um velho amigo, quer você visite o mesmo duas vezes ou
+    não. Seja qual for o nome no letreiro na frente, os cheiros
+    pungentes de uísque, charutos e serragem elevam seu espírito como
+    nada mais. Exceto pelos espíritos de verdade, é claro. Quando
+    aquele primeiro gole desce pela garganta e acende um calor no seu
+    estômago, você não consegue evitar um sorriso nos lábios. Este é
+    seu lar longe de casa, e dentro dele estão seus amigos, tanto os
+    antigos quanto aqueles que logo fará. Embora nem todos fiquem
+    felizes em vê-lo — encrenqueiros logo aprendem que, numa briga,
+    você bate mais forte a cada dose de uísque que desce pela sua
+    garganta.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: jovial-presence
+    - kind: granted
+      ability_id: enthusiastic-listener
+  '2':
+    - kind: granted
+      ability_id: blitzer
+    - kind: granted
+      ability_id: liquid-courage
+  '3':
+    - kind: choice
+      options:
+        - iron-stomach
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: bottle-ko
+  '5':
+    - kind: granted
+      ability_id: learned-a-few-things-over-drinks
+  '6':
+    - kind: choice
+      options:
+        - inspiration-in-a-glass
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: You carry a sturdy, leak-proof metallic whiskey flask.
+  pt-BR: Você carrega um cantil metálico de uísque, resistente e à prova de vazamentos.
+connection_options:
+  - en: >-
+      Pick one other PC. This character has spent a lot of time with
+      you saloon hopping. Once between any ten hour rest, you gain an
+      additional asset when you collaborate on the same task, fight
+      the same foe, and so on.
+    pt-BR: >-
+      Escolha outro PJ. Esse personagem passou muito tempo com você
+      pulando de salão em salão. Uma vez entre quaisquer dois
+      descansos de dez horas, você ganha uma vantagem adicional quando
+      colabora na mesma tarefa, luta contra o mesmo inimigo, e assim
+      por diante.
+  - en: >-
+      Pick one other PC. You saw them get their ass whooped in a
+      saloon fight once, though they didn't know you saw it. You can
+      choose whether or not to share that information.
+    pt-BR: >-
+      Escolha outro PJ. Você já o viu apanhar numa briga de salão, mas
+      ele não sabe que você viu. Você pode escolher se compartilha ou
+      não essa informação.
+  - en: >-
+      Pick one other PC. You and this character once had a terrible
+      drunken argument that neither of you remember exactly, but
+      neither can you let it go. Once between any ten hour rest (when
+      the GM chooses), an action is hindered when you collaborate on
+      the same task, fight the same foe, and so on.
+    pt-BR: >-
+      Escolha outro PJ. Você e esse personagem já tiveram uma
+      discussão terrível de tão bêbados que nenhum dos dois se lembra
+      exatamente, mas nenhum dos dois consegue esquecer. Uma vez entre
+      quaisquer dois descansos de dez horas (quando o Mestre escolher),
+      uma ação é dificultada quando vocês colaboram na mesma tarefa,
+      lutam contra o mesmo inimigo, e assim por diante.
+  - en: >-
+      Pick one other PC. This character has still never visited your
+      favorite saloon, and you've promised to take them one day.
+      Whether or not the character is interested is up to them.
+    pt-BR: >-
+      Escolha outro PJ. Esse personagem ainda nunca visitou seu salão
+      favorito, e você prometeu levá-lo um dia. Cabe a ele decidir se
+      está interessado ou não.
+minor_effect_suggestion:
+  en: You don't have to use an action to activate your next Jovial Presence ability.
+  pt-BR: >-
+    Você não precisa usar uma ação para ativar sua próxima habilidade
+    Presença Jovial.
+major_effect_suggestion:
+  en: >-
+    You remember something a stranger in a saloon once said, and you
+    can ask the GM one question about what you're looking at.
+  pt-BR: >-
+    Você se lembra de algo que um estranho num salão disse uma vez, e
+    pode fazer ao Mestre uma pergunta sobre o que está observando.

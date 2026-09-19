@@ -11,3 +11,12 @@ sources:
   - type: focus
     id: never-says-die
     tier: 5
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 5
+  - type: focus
+    id: is-wanted-by-the-law
+    tier: 6
+  - type: focus
+    id: made-a-deal-with-death
+    tier: 6

@@ -1,0 +1,13 @@
+id: sturdy
+name:
+  en: Sturdy
+  pt-BR: Robusto
+description:
+  en: You are trained in Might defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-defense
+    tier: 2

@@ -1,0 +1,45 @@
+id: keeps-a-magic-ally
+name:
+  en: Keeps a Magic Ally
+  pt-BR: Mantém um Aliado Mágico
+description:
+  en: >-
+    An allied magic creature bound to an object (such as a minor djinn
+    in a lamp, or a ghost in a pipe) is your friend, protector, and
+    weapon.
+  pt-BR: >-
+    Uma criatura mágica aliada, vinculada a um objeto (como um djinn
+    menor em uma lâmpada, ou um fantasma em um cano), é sua amiga, sua
+    protetora e sua arma.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: bound-magic-creature
+  '2':
+    - kind: granted
+      ability_id: object-bond
+    - kind: granted
+      ability_id: hidden-closet
+  '3':
+    - kind: choice
+      options:
+        - minor-wish
+        - mount
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: improved-object-bond
+  '5':
+    - kind: granted
+      ability_id: moderate-wish
+  '6':
+    - kind: choice
+      options:
+        - object-bond-mastery
+        - trust-to-luck
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,18 @@
+id: impressive-display
+name:
+  en: Impressive Display
+  pt-BR: Exibição Impressionante
+description:
+  en: >-
+    You perform a feat of strength, speed, or combat, impressing those
+    nearby. For the next minute you gain an asset on all interaction
+    tasks with people who saw you use this ability.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: feigns-no-fear
+    tier: 2

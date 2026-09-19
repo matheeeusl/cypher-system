@@ -1,0 +1,19 @@
+id: true-defender
+name:
+  en: True Defender
+  pt-BR: Verdadeiro Defensor
+description:
+  en: This ability functions as the Devoted Defender ability, except the benefit applies to up to three characters you choose. If you choose just one character, you become specialized in the tasks described under the Devoted Defender ability.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "6 Might or Intellect points" — a
+  # choice-of-pool cost the schema's single `pool` field can't represent.
+  # Recorded as Might (the first-listed option), flagged for schema
+  # review.
+cost:
+  pool: might
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: defends-the-weak
+    tier: 6

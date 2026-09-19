@@ -1,0 +1,43 @@
+id: move-metal
+name:
+  en: Move Metal
+  pt-BR: Mover Metal
+description:
+  en: >-
+    You can exert force on metal objects within short range for one round.
+    Once activated, your power has an effective Might Pool of 10,
+    a Might Edge of 1, and an Effort of 2 (approximately
+    equal to the strength of a fit, capable, adult human), and
+    you can use it to move metal objects, push against
+    metal objects, and so on. For example, in your round,
+    you could lift and pull a light metal object anywhere
+    within range to yourself or move a heavy object (like a
+    piece of furniture) about 10 feet (3 m). This power lacks
+    the fine control to wield a weapon or move objects with
+    much speed, so in most situations, it's not a means of
+    attack. You can't use this ability on your own body. The
+    power lasts for one hour or until its Might Pool is
+    depleted, whichever comes first
+  pt-BR: >-
+    Você pode exercer força sobre objetos metálicos a curta distância por uma rodada. 
+    Uma vez ativado, seu poder possui uma Reserva de Força efetiva de 10,
+    uma Bonus de Força de 1 e um Esforço de 2 (aproximadamente
+    equivalente à força de um ser humano adulto, apto e capaz), e
+    você pode usá-lo para mover objetos metálicos, empurrar
+    objetos metálicos e assim por diante. Por exemplo, em sua rodada,
+    você poderia levantar e puxar um objeto metálico leve, em qualquer
+    ponto do alcance, para perto de si, ou mover um objeto pesado (como
+    uma peça de mobiliário) por cerca de 3 metros (10 pés). Este poder não
+    oferece o controle refinado necessário para manejar uma arma ou mover objetos com
+    grande velocidade; portanto, na maioria das situações, não serve como meio
+    de ataque. Você não pode usar essa habilidade em seu próprio corpo. O
+    poder dura uma hora ou até que sua Reserva de Força se
+    esgote, o que ocorrer primeiro.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: employs-magnetism
+    tier: 1

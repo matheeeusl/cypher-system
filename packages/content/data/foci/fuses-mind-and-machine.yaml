@@ -1,0 +1,41 @@
+id: fuses-mind-and-machine
+name:
+  en: Fuses Mind and Machine
+  pt-BR: Funde Mente e Máquina
+description:
+  en: Electronic aids implanted in your brain make you a mental powerhouse.
+  pt-BR: Auxílios eletrônicos implantados em seu cérebro fazem de você uma potência mental.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enhanced-intellect
+    - kind: granted
+      ability_id: knowledge-skills
+  '2':
+    - kind: granted
+      ability_id: network-tap
+  '3':
+    - kind: choice
+      options:
+        - action-processor
+        - machine-telepathy
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+    - kind: granted
+      ability_id: knowledge-skills
+  '5':
+    - kind: granted
+      ability_id: see-the-future
+  '6':
+    - kind: choice
+      options:
+        - machine-enhancement
+        - mind-surge
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

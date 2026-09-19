@@ -1,0 +1,19 @@
+id: repeat-hack
+name:
+  en: Repeat Hack
+  pt-BR: Hack Repetido
+description:
+  en: >-
+    You can control the functions of any machine, no matter how far
+    from you it is, that you've previously exploited using Hack the
+    Impossible, as long as it is networked to your current location.
+    This effect lasts for ten minutes.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: hacks-the-network
+    tier: 5

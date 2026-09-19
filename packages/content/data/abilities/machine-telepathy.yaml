@@ -1,0 +1,25 @@
+id: machine-telepathy
+name:
+  en: Machine Telepathy
+  pt-BR: Telepatia com Máquinas
+description:
+  en: >-
+    You can read the surface thoughts of a machine within short range,
+    even if the machine doesn't want you to. You must be able to see
+    the machine. Once you have established contact, you can read the
+    target's thoughts for up to one minute. If you or the target move
+    out of range, the connection is broken. If you have the Mind
+    Reading ability, when you apply Effort to Machine Telepathy, you
+    gain a free level of Effort.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: fuses-mind-and-machine
+    tier: 3
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 3

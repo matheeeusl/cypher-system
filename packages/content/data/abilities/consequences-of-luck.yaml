@@ -1,0 +1,31 @@
+id: consequences-of-luck
+name:
+  en: Consequences of Luck
+  pt-BR: Consequências da Sorte
+description:
+  en: >-
+    It used to be easier to be lucky all the time. Now, it takes a
+    toll. When you roll a 1, you can reroll. If you reroll and roll a
+    1, 2, or 3, you must reroll again, this time expending a level of
+    Effort plus the base Pool cost to activate this ability (5
+    Intellect points). If you roll a 1–5 on the second reroll, you
+    must reroll again, expending a level of Effort and spending the
+    base cost again (5 Intellect points), too. This progression of
+    forced rerolls coupled with an increasing failure range continues
+    until you roll higher than the failure range or you run out of
+    Intellect points. (If the target number you roll is below the
+    failure range, you might succeed on the task, but the forced
+    rerolling continues.)
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "5+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 5 Intellect points here, flagged for schema review (same
+  # approximation used for divine-intervention/return-to-the-obelisk).
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 5

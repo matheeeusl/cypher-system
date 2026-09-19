@@ -1,0 +1,18 @@
+id: blink-of-an-eye
+name:
+  en: Blink of an Eye
+  pt-BR: Piscar de Olhos
+description:
+  en: You move up to 1,000 feet (300 m) in one round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: flies-faster-than-a-bullet
+    tier: 4
+  - type: focus
+    id: moves-like-the-wind
+    tier: 4

@@ -1,0 +1,88 @@
+id: learned-from-the-classics
+name:
+  en: Learned from the Classics
+  pt-BR: Aprendeu com os Clássicos
+description:
+  en: >-
+    Magic comes intuitively to some people, but you've always had to
+    work a bit harder. Luckily, you find that research comes
+    naturally. You know what questions to ask; you know which books,
+    websites, or professionals will have the answers. You spent years
+    studying and practicing, and you taught yourself everything you
+    know. Now you're a skilled magician who's always eager to learn
+    more—evidenced by your lengthy reading list.
+  pt-BR: >-
+    A magia vem intuitivamente para algumas pessoas, mas você sempre
+    teve que se esforçar um pouco mais. Felizmente, você descobre que a
+    pesquisa lhe vem naturalmente. Você sabe quais perguntas fazer;
+    sabe quais livros, sites, ou profissionais terão as respostas. Você
+    passou anos estudando e praticando, e ensinou a si mesmo tudo o que
+    sabe. Agora você é um mago habilidoso, sempre ansioso para aprender
+    mais — como evidencia sua extensa lista de leitura.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enhanced-intellect
+    - kind: granted
+      ability_id: library-life
+  '2':
+    - kind: granted
+      ability_id: flex-skill
+  '3':
+    - kind: choice
+      options:
+        - enhanced-intellect-edge
+        - repeated-rituals
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: knowing-the-unknown
+  '5':
+    - kind: granted
+      ability_id: mind-of-a-leader
+  '6':
+    - kind: choice
+      options:
+        - greater-enhanced-intellect
+        - mental-magic
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. They appreciate (but do not necessarily
+      share) your obsession with books, libraries, and research.
+    pt-BR: >-
+      Escolha outro PJ. Ele aprecia (mas não necessariamente
+      compartilha) sua obsessão por livros, bibliotecas e pesquisa.
+  - en: >-
+      Pick one other PC. You once owed this character a lot of money
+      (or vice versa), although that debt is now paid.
+    pt-BR: >-
+      Escolha outro PJ. Você já deveu muito dinheiro a esse personagem
+      (ou vice-versa), embora essa dívida já esteja quitada.
+  - en: >-
+      Pick one other PC. They remind you about an obscure author whose
+      books you enjoy, and you can't help but like them.
+    pt-BR: >-
+      Escolha outro PJ. Ele o lembra de um autor obscuro cujos livros
+      você aprecia, e você não consegue deixar de gostar dele por isso.
+  - en: >-
+      Pick one other PC. You think this person is woefully ignorant
+      about a lot of important topics (history, magic, ethics, and so
+      on).
+    pt-BR: >-
+      Escolha outro PJ. Você acha que essa pessoa é lamentavelmente
+      ignorante sobre muitos tópicos importantes (história, magia,
+      ética, e assim por diante).
+minor_effect_suggestion:
+  en: You gain a burst of insight, easing your next action by one step.
+  pt-BR: Você ganha um lampejo de percepção, facilitando sua próxima ação em um nível.
+major_effect_suggestion:
+  en: >-
+    Your knowledge lets you tap into an obscure current of magic and
+    make a free recovery roll as part of your current action.
+  pt-BR: >-
+    Seu conhecimento permite que você acesse uma corrente obscura de
+    magia e faça uma rolagem de recuperação gratuita como parte de sua
+    ação atual.

@@ -1,0 +1,23 @@
+id: courting-lady-luck
+name:
+  en: Courting Lady Luck
+  pt-BR: Cortejando a Sorte
+description:
+  en: >-
+    Maybe Lady Luck's watching over you and keeping you from harm, or
+    maybe you're just damn lucky. When you would otherwise descend a
+    step on the damage track, make an Intellect defense roll against
+    the level of the foe or effect. If you succeed, you do not
+    descend that step. If the step was because you fell to 0 points
+    in a Pool, you are still at 0 points; you just don't suffer the
+    negative effects of being impaired or debilitated. If you would
+    otherwise descend the final step on the damage track to death, a
+    successful defense roll keeps you at 1 point in one Pool, and you
+    remain debilitated.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 2

@@ -1,0 +1,13 @@
+id: overcharge-energy
+name:
+  en: Overcharge Energy
+  pt-BR: Sobrecarregar Energia
+description:
+  en: When you use Release Energy, it inflicts an additional 2 points of damage.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: absorbs-energy
+    tier: 4

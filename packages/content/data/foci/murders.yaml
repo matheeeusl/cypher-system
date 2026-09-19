@@ -1,0 +1,43 @@
+id: murders
+name:
+  en: Murders
+  pt-BR: Assassina
+description:
+  en: You're an assassin, whether by trade, by inclination, or because it was that or be killed yourself.
+  pt-BR: Você é um assassino, seja por ofício, por inclinação, ou porque era isso ou ser morto.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: surprise-attack
+    - kind: granted
+      ability_id: assassin-skills
+  '2':
+    - kind: granted
+      ability_id: quick-death
+    - kind: granted
+      ability_id: infiltrator
+  '3':
+    - kind: choice
+      options:
+        - awareness
+        - poison-crafter
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: better-surprise-attack
+  '5':
+    - kind: granted
+      ability_id: damage-dealer
+  '6':
+    - kind: choice
+      options:
+        - escape-plan
+        - murderer
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: Three doses of a level 2 blade poison that inflicts 5 points of damage.
+  pt-BR: Três doses de um veneno de lâmina de nível 2 que inflige 5 pontos de dano.
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

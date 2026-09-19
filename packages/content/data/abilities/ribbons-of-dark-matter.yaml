@@ -1,0 +1,18 @@
+id: ribbons-of-dark-matter
+name:
+  en: Ribbons of Dark Matter
+  pt-BR: Fitas de Matéria Escura
+description:
+  en: For the next minute, dark matter condenses within an area within long range that is no bigger than an immediate distance in diameter, manifesting as swirling ribbons. All tasks attempted by creatures in the area are hindered, and leaving the area requires a creature's entire action to move. You can dismiss the dark matter early as an action.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: befriends-the-black-dog
+    tier: 2
+  - type: focus
+    id: dances-with-dark-matter
+    tier: 1

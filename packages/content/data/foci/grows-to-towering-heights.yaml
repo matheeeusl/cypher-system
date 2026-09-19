@@ -1,0 +1,41 @@
+id: grows-to-towering-heights
+name:
+  en: Grows to Towering Heights
+  pt-BR: Cresce a Alturas Colossais
+description:
+  en: For brief periods, you can grow larger and, with enough experience, to towering heights.
+  pt-BR: Por breves períodos, você pode crescer e, com experiência suficiente, alcançar alturas colossais.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: enlarge
+    - kind: granted
+      ability_id: freakishly-large
+  '2':
+    - kind: granted
+      ability_id: bigger
+    - kind: granted
+      ability_id: advantages-of-being-big
+  '3':
+    - kind: choice
+      options:
+        - huge
+        - throw
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: grab
+  '5':
+    - kind: granted
+      ability_id: gargantuan
+  '6':
+    - kind: choice
+      options:
+        - colossal
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

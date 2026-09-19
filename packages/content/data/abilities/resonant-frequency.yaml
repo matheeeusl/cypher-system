@@ -1,0 +1,29 @@
+id: resonant-frequency
+name:
+  en: Resonant Frequency
+  pt-BR: Frequência de Ressonância
+description:
+  en: >-
+    You can infuse an item of up
+    to level 7 that you can hold in one hand with a special
+    vibration generated from your core. The object then
+    functions as if two levels higher for one minute. At the
+    end of that minute, the resonant frequency ramps up
+    exponentially until the object finally shatters from the
+    energy buildup. Anything within immediate range of the
+    detonation suffers 5 points of damage
+  pt-BR: >-
+    Você pode infundir um item de até nível 7, que possa ser
+    empunhado com uma mão, com uma vibração especial gerada a
+    partir do seu núcleo. O objeto passa a funcionar como se
+    tivesse dois níveis a mais por um minuto. Ao final desse
+    minuto, a frequência de ressonância aumenta exponencialmente
+    até que o objeto finalmente se estilhace devido ao acúmulo
+    de energia. Qualquer coisa dentro do alcance imediato da
+    detonação sofre 5 pontos de dano.
+cost: null
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: emerged-from-the-obelisk
+    tier: 5

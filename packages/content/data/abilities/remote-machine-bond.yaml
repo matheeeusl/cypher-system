@@ -1,0 +1,26 @@
+id: remote-machine-bond
+name:
+  en: Machine Bond
+  pt-BR: Vínculo com a Máquina
+description:
+  en: >-
+    From very long range, you can activate and control a device
+    (including a robot or vehicle) that you have bonded with. For
+    example, you can detonate a manifest cypher even when it is held
+    by someone else, or cause an automated turret to fire where you
+    direct. Bonding is a process that requires 24 hours of meditation
+    in the presence of the machine.
+  pt-BR: "Tradução em breve."
+  # Note: uses id `remote-machine-bond` rather than `machine-bond`
+  # because that id is already taken by a different ability of the
+  # same printed name (Hacks the Network Tier 6, "Machine Bond" — the
+  # "Hack the Impossible" version with an 8 Intellect cost). This
+  # printing is textually and mechanically distinct (no cost, different
+  # range/duration rules) despite sharing the exact same name — kept as
+  # a separate entity under a disambiguated id.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: merges-mind-with-machine
+    tier: 4

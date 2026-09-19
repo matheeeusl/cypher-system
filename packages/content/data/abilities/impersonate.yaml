@@ -1,0 +1,19 @@
+id: impersonate
+name:
+  en: Impersonate
+  pt-BR: Personificar
+description:
+  en: >-
+    For one hour, you alter your voice, posture, and mannerisms, whip
+    together a disguise, and gain an asset on an attempt to
+    impersonate someone else, whether it is a specific individual (Bob
+    the cop) or a general role (a police officer).
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: infiltrates
+    tier: 2

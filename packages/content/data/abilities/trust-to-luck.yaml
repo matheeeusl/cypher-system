@@ -1,0 +1,19 @@
+id: trust-to-luck
+name:
+  en: Trust to Luck
+  pt-BR: Confiar na Sorte
+description:
+  en: >-
+    Sometimes, you've just got to roll the dice and hope things add up
+    in your favor. When you use Trust to Luck, roll a d6. On any even
+    result, the task you're attempting is eased by two steps. On a
+    roll of 1, the task is hindered.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: keeps-a-magic-ally
+    tier: 6

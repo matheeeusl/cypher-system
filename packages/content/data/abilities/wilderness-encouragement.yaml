@@ -1,0 +1,20 @@
+id: wilderness-encouragement
+name:
+  en: Wilderness Encouragement
+  pt-BR: Encorajamento da Natureza
+description:
+  en: >-
+    While in the wilderness, or when talking about your time in the
+    wilderness, your stirring words of encouragement grant a target
+    within short range that can understand you 1d6 points to one
+    Pool. You can't use this ability on the same creature again until
+    they've made a recovery roll.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: lives-in-the-wilderness
+    tier: 3

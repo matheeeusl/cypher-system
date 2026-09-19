@@ -1,0 +1,17 @@
+id: never-fumble
+name:
+  en: Never Fumble
+  pt-BR: Nunca Falha
+description:
+  en: >-
+    If you roll a natural 1 when attacking with your chosen weapon,
+    you can ignore or countermand the GM intrusion for that roll. You
+    can never be disarmed of your chosen weapon, nor will you ever
+    drop it accidentally.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-weaponry
+    tier: 4

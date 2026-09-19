@@ -1,0 +1,22 @@
+id: find-by-phone
+name:
+  en: Find by Phone
+  pt-BR: Localizar por Telefone
+description:
+  en: >-
+    If you know someone's full name, phone number, or some other
+    identifier, you can determine the approximate location (within
+    100 feet or 30 m) of their smartphone, computer, or other
+    portable device.
+  pt-BR: "Tradução em breve."
+  # Note: source marks this ability with "~" (a cyberware-derived ability
+  # marker) — not modeled by the schema (no cyberware-marker field).
+  # Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: has-eyes-everywhere
+    tier: 4

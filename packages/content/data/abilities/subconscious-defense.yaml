@@ -1,0 +1,13 @@
+id: subconscious-defense
+name:
+  en: Subconscious Defense
+  pt-BR: Defesa Subconsciente
+description:
+  en: Your subconscious constantly runs predictive models for avoiding danger. You gain an asset on your Speed defense tasks.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: calculates-the-incalculable
+    tier: 3

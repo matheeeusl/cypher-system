@@ -1,0 +1,19 @@
+id: winning-hand
+name:
+  en: Winning Hand
+  pt-BR: Mão Vencedora
+description:
+  en: >-
+    If you win a hand of cards or other wager, or if you succeed on
+    an Intellect defense roll to resist a foe's attack, you gain an
+    action. You can use it immediately even if you have already taken
+    a turn in the round. You can use this ability once per round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: gambles-it-all-away
+    tier: 4

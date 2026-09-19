@@ -1,0 +1,17 @@
+id: celebrity-talent
+name:
+  en: Celebrity Talent
+  pt-BR: Talento de Celebridade
+description:
+  en: >-
+    You are trained in two of the following areas: writing,
+    journalism, a particular style of art, a particular sport, chess,
+    science communication, acting, news presentation, or some related
+    noncombat skill that led to your celebrity.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-idolized-by-millions
+    tier: 1
