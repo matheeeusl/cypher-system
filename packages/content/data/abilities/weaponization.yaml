@@ -1,0 +1,13 @@
+id: weaponization
+name:
+  en: Weaponization
+  pt-BR: Armamento
+description:
+  en: One light or medium melee weapon of your choice is built into your body, and you are trained in using it. The weapon is concealed until you wish to use it.
+  pt-BR: Uma arma corpo a corpo leve ou média à sua escolha é incorporada ao seu corpo, e você é treinado em seu uso. A arma fica oculta até que você deseje usá-la.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 3

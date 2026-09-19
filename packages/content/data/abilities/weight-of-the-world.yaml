@@ -1,0 +1,15 @@
+id: weight-of-the-world
+name:
+  en: Weight of the World
+  pt-BR: Peso do Mundo
+description:
+  en: You can increase a target's weight dramatically. The target is pulled to the ground and can't move physically under its own power for one minute. The target must be within short range. In addition to the normal options for using Effort, you can choose to use Effort to affect additional creatures (one per level of Effort).
+  pt-BR: Você pode aumentar drasticamente o peso de um alvo. O alvo é puxado para o chão e não consegue se mover fisicamente por conta própria por um minuto. O alvo deve estar a alcance curto. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para afetar criaturas adicionais (uma por nível de Esforço).
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 6

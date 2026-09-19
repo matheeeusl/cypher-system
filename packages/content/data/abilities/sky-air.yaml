@@ -1,0 +1,15 @@
+id: sky-air
+name:
+  en: Sky/Air
+  pt-BR: Céu/Ar
+description:
+  en: A creature you touch is immune to airborne toxins or contaminants for ten minutes.
+  pt-BR: Uma criatura que você tocar fica imune a toxinas ou contaminantes transportados pelo ar por dez minutos.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

@@ -1,0 +1,13 @@
+id: interaction-skills
+name:
+  en: Interaction Skills
+  pt-BR: Perícias de Interação
+description:
+  en: 'You are trained in two skills in which you are not already trained. Choose two of the following: deceiving, persuading, public speaking, seeing through deception, or intimidation. You can select this ability multiple times. Each time you select it, you must choose two different skills.'
+  pt-BR: 'Você é treinado em duas perícias nas quais ainda não é treinado. Escolha duas das seguintes: enganar, persuadir, falar em público, perceber engano, ou intimidar. Você pode escolher esta habilidade várias vezes. A cada vez, deve escolher duas perícias diferentes.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 1

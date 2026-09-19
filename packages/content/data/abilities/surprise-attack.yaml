@@ -1,0 +1,19 @@
+id: surprise-attack
+name:
+  en: Surprise Attack
+  pt-BR: Ataque Surpresa
+description:
+  en: If attacking from a hidden vantage, with surprise, or before your opponent has acted, you get an asset on the attack. On a successful hit, you inflict 2 additional points of damage.
+  pt-BR: Se atacar a partir de um ponto oculto, com surpresa, ou antes que seu oponente tenha agido, você ganha um bônus no ataque. Em caso de acerto, você inflige 2 pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 3
+  - type: focus
+    id: fights-dirty
+    tier: 3
+  - type: focus
+    id: hunts
+    tier: 4

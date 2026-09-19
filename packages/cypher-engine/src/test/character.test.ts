@@ -67,7 +67,7 @@ const strong: Descriptor = {
   ],
 }
 
-// content/foci/wields-two-weapons-at-once.yaml only has tier 1 shipped;
+// data/foci/wields-two-weapons-at-once.yaml only has tier 1 shipped;
 // tiers 2-3 here are the same inline fixture used in
 // character-focus-abilities.test.ts, built from the Focus's real rulebook
 // text (extracted during planning).
@@ -81,9 +81,13 @@ const wieldsTwoWeapons: Focus = {
       { kind: 'granted', ability_id: 'double-strike' },
       { kind: 'granted', ability_id: 'infiltrator' },
     ],
-    '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'] }],
+    '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'], count: 1 }],
   },
   type_swap_option: null,
+  additional_equipment: null,
+  connection_options: null,
+  minor_effect_suggestion: null,
+  major_effect_suggestion: null,
 }
 
 describe('deriveCharacter (Warrior, end-to-end)', () => {

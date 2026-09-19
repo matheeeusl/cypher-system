@@ -14,10 +14,10 @@ const wieldsTwoWeapons = {
       { kind: 'granted' as const, ability_id: 'double-strike' },
       { kind: 'granted' as const, ability_id: 'infiltrator' },
     ],
-    '3': [{ kind: 'choice' as const, options: ['dual-medium-wield', 'precise-cut'] }],
+    '3': [{ kind: 'choice' as const, options: ['dual-medium-wield', 'precise-cut'], count: 1 }],
     '4': [{ kind: 'granted' as const, ability_id: 'dual-defense' }],
     '5': [{ kind: 'granted' as const, ability_id: 'dual-distraction' }],
-    '6': [{ kind: 'choice' as const, options: ['disarming-attack', 'spin-attack'] }],
+    '6': [{ kind: 'choice' as const, options: ['disarming-attack', 'spin-attack'], count: 1 }],
   },
 }
 

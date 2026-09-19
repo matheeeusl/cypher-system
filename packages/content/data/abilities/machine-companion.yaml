@@ -1,0 +1,13 @@
+id: machine-companion
+name:
+  en: Machine Companion
+  pt-BR: Companheiro Mecânico
+description:
+  en: You create a level 3 animate, intelligent machine that accompanies you and acts as you direct. As a level 3 machine companion, it has a target number of 9 and 9 health, and it inflicts 3 points of damage. If it's destroyed, it takes you one month to create a new one.
+  pt-BR: Você cria uma máquina animada e inteligente de nível 3 que o acompanha e age conforme você a direciona. Como companheiro mecânico de nível 3, tem número-alvo 9 e 9 pontos de vida, e inflige 3 pontos de dano. Se for destruída, você leva um mês para criar uma nova.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 3

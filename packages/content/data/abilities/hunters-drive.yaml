@@ -1,0 +1,15 @@
+id: hunters-drive
+name:
+  en: Hunter's Drive
+  pt-BR: Impulso do Caçador
+description:
+  en: Through force of will, when you wish it, you grant yourself greater prowess in the hunt for ten minutes. During this time, you gain an asset to all tasks involving your quarry, including attacks. Your quarry is the creature you selected with your Quarry ability.
+  pt-BR: Por força de vontade, quando desejar, você se concede maior habilidade na caça por dez minutos. Durante esse tempo, você ganha um bônus em todas as tarefas envolvendo sua presa, incluindo ataques. Sua presa é a criatura que você selecionou com sua habilidade Presa.
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: hunts
+    tier: 5

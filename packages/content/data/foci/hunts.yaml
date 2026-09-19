@@ -1,0 +1,41 @@
+id: hunts
+name:
+  en: Hunts
+  pt-BR: Caça
+description:
+  en: You are a stalking hunter who excels at bringing down your selected quarry.
+  pt-BR: Você é um caçador furtivo que se destaca em abater a presa que escolheu.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: attack-flourish
+    - kind: granted
+      ability_id: tracker
+  '2':
+    - kind: granted
+      ability_id: quarry
+    - kind: granted
+      ability_id: sneak
+  '3':
+    - kind: choice
+      options:
+        - horde-fighting
+        - sprint-and-grab
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: surprise-attack
+  '5':
+    - kind: granted
+      ability_id: hunters-drive
+  '6':
+    - kind: choice
+      options:
+        - greater-skill-with-attacks
+        - multiple-quarry
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

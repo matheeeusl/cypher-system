@@ -1,0 +1,13 @@
+id: stalker
+name:
+  en: Stalker
+  pt-BR: Perseguidor
+description:
+  en: You gain an asset to all types of movement tasks (including climbing, swimming, jumping, and balancing).
+  pt-BR: Você ganha um bônus em todos os tipos de tarefas de movimento (incluindo escalada, natação, salto e equilíbrio).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 1

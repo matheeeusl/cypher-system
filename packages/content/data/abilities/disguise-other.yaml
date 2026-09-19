@@ -1,0 +1,15 @@
+id: disguise-other
+name:
+  en: Disguise Other
+  pt-BR: Disfarçar Outro
+description:
+  en: You apply your shapechanging ability to another creature of your size or smaller, giving them a form that you are able to assume. This lasts for about ten minutes. In addition to the normal options for using Effort, you can choose to use Effort to increase the duration; one level of Effort increases it to an hour, two increases it to a day. A creature can revert to its normal form as an action, but it cannot then change back into the altered form.
+  pt-BR: Você aplica sua habilidade de metamorfose a outra criatura de seu tamanho ou menor, dando a ela uma forma que você é capaz de assumir. Isso dura cerca de dez minutos. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar a duração; um nível de Esforço a aumenta para uma hora, dois a aumentam para um dia. Uma criatura pode reverter à sua forma normal como uma ação, mas não pode então voltar à forma alterada.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 3

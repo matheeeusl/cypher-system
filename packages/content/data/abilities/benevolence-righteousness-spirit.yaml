@@ -1,0 +1,27 @@
+id: benevolence-righteousness-spirit
+name:
+  en: Benevolence/Righteousness/Spirit
+  pt-BR: Benevolência/Retidão/Espírito
+description:
+  en: >-
+    One level 1 demon, spirit, or similar creature within short range is
+    destroyed or banished. In addition to the normal options for using
+    Effort, you can choose to use Effort to increase the maximum level
+    of the target. Thus, to destroy or banish a level 5 target (four
+    levels above the normal limit), you must apply four levels of
+    Effort.
+  pt-BR: >-
+    Um demônio, espírito, ou criatura semelhante de nível 1, a alcance
+    curto, é destruído ou banido. Além das opções normais de uso de
+    Esforço, você pode optar por usar Esforço para aumentar o nível
+    máximo do alvo. Assim, para destruir ou banir um alvo de nível 5
+    (quatro níveis acima do limite normal), você deve aplicar quatro
+    níveis de Esforço.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

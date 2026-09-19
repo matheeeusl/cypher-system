@@ -1,0 +1,13 @@
+id: blood-fever
+name:
+  en: Blood Fever
+  pt-BR: Febre de Sangue
+description:
+  en: When you have no points in one or two Pools, you gain an asset to attacks or defense rolls (your choice).
+  pt-BR: Quando você não tem pontos em uma ou duas Reservas, ganha um bônus em ataques ou rolagens de defesa (à sua escolha).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 3

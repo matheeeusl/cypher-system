@@ -1,0 +1,15 @@
+id: remote-viewing
+name:
+  en: Remote Viewing
+  pt-BR: Visão Remota
+description:
+  en: "Distance is an illusion, as all space is one space. With great concentration, you can see another place. This ability can be used in one of two ways: pick a spot a specific distance away and in a specific direction, and you can see from that vantage point as if you had used the Sensor ability there, but only for one minute; or think of a place you have seen before, either conventionally or using the other application of this power, and you can see from that vantage point as if you had used the Sensor ability there, but only for one or two rounds. Either application takes anywhere from one action to hours of concentration, depending on what the GM feels is appropriate due to time, distance, or other mitigating circumstances. However, you don't know in advance how long it will take."
+  pt-BR: 'A distância é uma ilusão, pois todo o espaço é um único espaço. Com grande concentração, você pode ver outro lugar. Esta habilidade pode ser usada de duas formas: escolha um ponto a uma distância e direção específicas, e você pode ver a partir daquele ponto de vista como se tivesse usado a habilidade Sensor ali, mas apenas por um minuto; ou pense em um lugar que já tenha visto antes, seja de forma convencional ou usando a outra aplicação deste poder, e você pode ver a partir daquele ponto de vista como se tivesse usado a habilidade Sensor ali, mas apenas por uma ou duas rodadas. Qualquer uma das aplicações leva de uma ação a horas de concentração, dependendo do que o Mestre considerar apropriado devido a tempo, distância, ou outras circunstâncias atenuantes. Porém, você não sabe de antemão quanto tempo levará.'
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: sees-beyond
+    tier: 4

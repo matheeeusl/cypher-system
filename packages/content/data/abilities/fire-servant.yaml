@@ -1,0 +1,18 @@
+id: fire-servant
+name:
+  en: Fire Servant
+  pt-BR: Servo de Fogo
+description:
+  en: While your Shroud of Flame is active, you reach into your halo and produce an automaton of fire that is your general shape and size. It acts as you direct each round. Directing the servant is an action, and you can command it only when you are within long range of it. Without a command, the servant continues to follow your previous command. You can also give it a simple programmed action, such as "Wait here, and attack anyone who comes within short range until they're dead." The servant lasts for ten minutes, is a level 5 creature, and deals 1 extra point of damage from fire when it attacks.
+  pt-BR: Enquanto seu Manto de Chamas estiver ativo, você alcança sua auréola e produz um autômato de fogo com sua forma e tamanho gerais. Ele age conforme você o direciona a cada rodada. Direcionar o servo é uma ação, e você só pode comandá-lo quando estiver a alcance longo dele. Sem um comando, o servo continua seguindo seu comando anterior. Você também pode dar a ele uma ação programada simples, como "Espere aqui e ataque qualquer um que chegue a alcance curto até que morra." O servo dura dez minutos, é uma criatura de nível 5 e causa 1 ponto extra de dano de fogo quando ataca.
+cost:
+  pool: intellect
+  amount: 6
+# Note: source tag is "Action to create; action to direct." — a
+# compound action-type not covered by the current action_type enum.
+# Approximated as action_to_initiate; flagged for schema review.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 6

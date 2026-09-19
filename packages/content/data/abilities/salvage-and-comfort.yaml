@@ -1,0 +1,15 @@
+id: salvage-and-comfort
+name:
+  en: Salvage and Comfort
+  pt-BR: Salvados e Conforto
+description:
+  en: You're familiar with open space. If you spend an hour using your spacecraft's sensors and make a difficulty 3 Intellect roll, you can find salvage in the form of abandoned spacecraft, drifting motes of matter that were once inhabited, or a place to hide from pursuit in what most people would otherwise assume to be empty space (such as in a nebula, an asteroid field, or the shadow of a moon). Salvage you turn up includes enough food and water for you and several others, as well as the possibility of weapons, clothing, technological artifacts, survivors, or other usable items. In other contexts, this ability counts as training in tasks related to perception.
+  pt-BR: Você é familiarizado com o espaço aberto. Se passar uma hora usando os sensores de sua espaçonave e fizer uma rolagem de Intelecto de dificuldade 3, você pode encontrar salvados na forma de espaçonaves abandonadas, fragmentos flutuantes de matéria outrora habitados, ou um lugar para se esconder de uma perseguição naquilo que a maioria das pessoas presumiria ser espaço vazio (como em uma nebulosa, um campo de asteroides, ou a sombra de uma lua). Os salvados que você encontrar incluem comida e água suficientes para você e várias outras pessoas, além da possibilidade de armas, roupas, artefatos tecnológicos, sobreviventes, ou outros itens utilizáveis. Em outros contextos, esta habilidade conta como treinamento em tarefas relacionadas a percepção.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 2

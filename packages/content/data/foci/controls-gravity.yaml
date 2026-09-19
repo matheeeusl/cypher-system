@@ -1,0 +1,38 @@
+id: controls-gravity
+name:
+  en: Controls Gravity
+  pt-BR: Controla a Gravidade
+description:
+  en: You can sway the attraction of gravity itself.
+  pt-BR: Você consegue influenciar a própria atração da gravidade.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: hover
+  '2':
+    - kind: granted
+      ability_id: enhanced-speed-edge
+  '3':
+    - kind: choice
+      options:
+        - define-down
+        - gravity-cleave
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: field-of-gravity
+  '5':
+    - kind: granted
+      ability_id: flight
+  '6':
+    - kind: choice
+      options:
+        - improved-gravity-cleave
+        - weight-of-the-world
+      count: 1
+type_swap_option:
+  ability_id: weighty
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

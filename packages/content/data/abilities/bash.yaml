@@ -1,0 +1,15 @@
+id: bash
+name:
+  en: Bash
+  pt-BR: Golpe Atordoante
+description:
+  en: This is a pummeling melee attack. Your attack inflicts 1 less point of damage than normal, but dazes your target for one round, during which time all tasks it performs are hindered.
+  pt-BR: Este é um ataque corpo a corpo contundente. Seu ataque causa 1 ponto de dano a menos que o normal, mas atordoa o alvo por uma rodada, durante a qual todas as tarefas que ele realizar são dificultadas.
+cost:
+  pool: might
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 1

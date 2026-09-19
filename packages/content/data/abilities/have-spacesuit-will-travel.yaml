@@ -1,0 +1,13 @@
+id: have-spacesuit-will-travel
+name:
+  en: Have Spacesuit, Will Travel
+  pt-BR: Tenho Traje Espacial, Viajarei
+description:
+  en: Somehow or another, you became the legal owner of a fully functional and advanced spacesuit. The spacesuit provides +1 Armor and, more important, allows you to survive in the vacuum of space using suit reserves for up to twelve hours at a time with enough reaction mass to get around in zero gravity on jets of ionized gas for that same period. After each use, the suit must be recharged, either with already-charged cartridges of air and reaction mass or by allowing the suit to sit idle in an area with breathable atmosphere for at least two hours, during which time it will recharge both air and reaction mass using integrated solid state mechanisms. The suit's power supply is a radioisotope thermoelectric generator, which means it'll function for a few decades before needing to be changed out.
+  pt-BR: De alguma forma, você se tornou o proprietário legal de um traje espacial avançado e totalmente funcional. O traje espacial oferece +1 na Armadura e, mais importante, permite que você sobreviva no vácuo do espaço usando as reservas do traje por até doze horas seguidas, com massa de reação suficiente para se locomover em gravidade zero em jatos de gás ionizado pelo mesmo período. Após cada uso, o traje deve ser recarregado, seja com cartuchos já carregados de ar e massa de reação, seja deixando o traje ocioso em uma área com atmosfera respirável por pelo menos duas horas, durante as quais ele recarregará tanto o ar quanto a massa de reação usando mecanismos de estado sólido integrados. A fonte de energia do traje é um gerador termoelétrico de radioisótopos, o que significa que funcionará por algumas décadas antes de precisar ser trocado.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 1

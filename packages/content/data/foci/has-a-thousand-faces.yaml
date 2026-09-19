@@ -1,0 +1,41 @@
+id: has-a-thousand-faces
+name:
+  en: Has a Thousand Faces
+  pt-BR: Tem Mil Rostos
+description:
+  en: You can change your appearance to look like anyone else.
+  pt-BR: Você pode mudar sua aparência para se parecer com qualquer outra pessoa.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: face-morph
+    - kind: granted
+      ability_id: interaction-skills
+  '2':
+    - kind: granted
+      ability_id: body-morph
+    - kind: granted
+      ability_id: war-flesh
+  '3':
+    - kind: choice
+      options:
+        - disguise-other
+        - resilience
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: ageless
+  '5':
+    - kind: granted
+      ability_id: think-your-way-out
+  '6':
+    - kind: choice
+      options:
+        - divide-your-mind
+        - infer-thoughts
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

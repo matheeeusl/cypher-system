@@ -1,0 +1,15 @@
+id: terrifying-image
+name:
+  en: Terrifying Image
+  pt-BR: Imagem Aterrorizante
+description:
+  en: You use a bit of subtle telepathy to learn which images would appear terrifying to creatures that you choose within long range. Those images appear within that area and menace the appropriate creatures. Make an Intellect attack roll against each creature you want to affect. Success means the creature flees in terror for one minute, pursued by its nightmares. Failure means the creature ignores the images, which do not hamper it in any way.
+  pt-BR: Você usa um pouco de telepatia sutil para descobrir quais imagens pareceriam aterrorizantes para as criaturas que escolher a alcance longo. Essas imagens aparecem naquela área e ameaçam as criaturas apropriadas. Faça uma rolagem de ataque de Intelecto contra cada criatura que deseja afetar. Sucesso significa que a criatura foge em terror por um minuto, perseguida por seus pesadelos. Falha significa que a criatura ignora as imagens, que não a atrapalham de forma alguma.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 5

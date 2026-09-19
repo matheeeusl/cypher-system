@@ -1,0 +1,38 @@
+id: descends-from-nobility
+name:
+  en: Descends From Nobility
+  pt-BR: Descende da Nobreza
+description:
+  en: A descendent of wealth and power, you carry a noble title and the abilities granted by a privileged upbringing.
+  pt-BR: Descendente de riqueza e poder, você carrega um título nobre e as habilidades concedidas por uma criação privilegiada.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: privileged-nobility
+  '2':
+    - kind: granted
+      ability_id: trained-interlocutor
+  '3':
+    - kind: choice
+      options:
+        - advanced-command
+        - nobles-courage
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: expert-follower
+  '5':
+    - kind: granted
+      ability_id: asserting-your-privilege
+  '6':
+    - kind: choice
+      options:
+        - able-assistance
+        - mind-of-a-leader
+      count: 1
+type_swap_option:
+  ability_id: retinue
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

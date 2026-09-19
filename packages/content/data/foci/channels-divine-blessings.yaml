@@ -1,0 +1,51 @@
+id: channels-divine-blessings
+name:
+  en: Channels Divine Blessings
+  pt-BR: Canaliza Bênçãos Divinas
+description:
+  en: A devout follower of a divine being, you channel some of your deity's power to achieve wonders.
+  pt-BR: Devoto seguidor de um ser divino, você canaliza parte do poder de sua divindade para realizar maravilhas.
+tier_abilities:
+  '1':
+    - kind: choice
+      count: 2
+      options:
+        - authority-law-peace
+        - benevolence-righteousness-spirit
+        - death-darkness
+        - desire-love-health
+        - earth-stone
+        - knowledge-wisdom
+        - nature-animals-plants
+        - protection-silence
+        - sky-air
+        - sun-light-fire
+        - trickery-greed-commerce
+        - war
+        - water-sea
+  '2':
+    - kind: granted
+      ability_id: enhanced-intellect
+  '3':
+    - kind: choice
+      count: 1
+      options:
+        - divine-radiance
+        - fire-bloom
+  '4':
+    - kind: granted
+      ability_id: overawe
+  '5':
+    - kind: granted
+      ability_id: divine-intervention
+  '6':
+    - kind: choice
+      count: 1
+      options:
+        - divine-symbol
+        - summon-demon
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

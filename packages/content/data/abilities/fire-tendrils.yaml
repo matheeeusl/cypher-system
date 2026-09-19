@@ -1,0 +1,15 @@
+id: fire-tendrils
+name:
+  en: Fire Tendrils
+  pt-BR: Tentáculos de Fogo
+description:
+  en: When you wish it, your halo (from your Shroud of Flame ability) sprouts three tendrils of flame that last for up to ten minutes. As an action, you can use the tendrils to attack, making a separate attack roll for each. Each tendril inflicts 4 points of damage. Otherwise, the attacks function as standard attacks. If you don't use the tendrils to attack, they remain but do nothing.
+  pt-BR: Quando desejar, sua auréola (da habilidade Manto de Chamas) brota três tentáculos de fogo que duram até dez minutos. Como uma ação, você pode usar os tentáculos para atacar, fazendo uma rolagem de ataque separada para cada um. Cada tentáculo inflige 4 pontos de dano. Fora isso, os ataques funcionam como ataques padrão. Se você não usar os tentáculos para atacar, eles permanecem, mas não fazem nada.
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 5

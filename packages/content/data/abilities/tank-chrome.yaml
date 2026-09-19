@@ -1,0 +1,13 @@
+id: tank-chrome
+name:
+  en: Tank Chrome
+  pt-BR: Cromo de Tanque
+description:
+  en: Your machine parts grant you +1 to Armor and +2 to your Might Pool.
+  pt-BR: Suas peças mecânicas concedem +1 na Armadura e +2 na Reserva de Força.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-a-walking-tank
+    tier: 1

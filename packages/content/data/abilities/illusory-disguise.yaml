@@ -1,0 +1,15 @@
+id: illusory-disguise
+name:
+  en: Illusory Disguise
+  pt-BR: Disfarce Ilusório
+description:
+  en: You appear to be someone or something else, roughly of your size and shape, for up to one hour. Once created, the disguise requires no concentration. For each additional Intellect point you spend, you can disguise one other creature. All disguised creatures must stay within sight of you or lose their disguise.
+  pt-BR: Você aparenta ser outra pessoa ou coisa, aproximadamente de seu tamanho e forma, por até uma hora. Uma vez criado, o disfarce não exige concentração. Para cada ponto adicional de Intelecto que gastar, você pode disfarçar outra criatura. Todas as criaturas disfarçadas devem permanecer à sua vista, ou perdem o disfarce.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 2

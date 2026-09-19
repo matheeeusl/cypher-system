@@ -1,0 +1,13 @@
+id: trained-interlocutor
+name:
+  en: Trained Interlocutor
+  pt-BR: Interlocutor Treinado
+description:
+  en: Through wit, charm, humor, and grace (or sometimes rudeness, threatening posture, and obscenity), you're better able to talk others into what you want. You are trained in all interactions.
+  pt-BR: Por meio de agudeza, charme, humor e graça (ou às vezes rudeza, postura ameaçadora e obscenidade), você é mais capaz de convencer os outros a fazer o que deseja. Você é treinado em todas as interações.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: descends-from-nobility
+    tier: 2

@@ -1,0 +1,16 @@
+id: able-assistance
+name:
+  en: Able Assistance
+  pt-BR: Assistência Capaz
+description:
+  en: When you help someone with a task and they apply a level of Effort, they get a free level of Effort on that task.
+  pt-BR: Quando você ajuda alguém em uma tarefa e essa pessoa aplica um nível de Esforço, ela ganha um nível gratuito de Esforço naquela tarefa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: descends-from-nobility
+    tier: 6
+  - type: focus
+    id: entertains
+    tier: 5

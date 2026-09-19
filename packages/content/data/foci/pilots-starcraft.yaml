@@ -1,0 +1,47 @@
+id: pilots-starcraft
+name:
+  en: Pilots Starcraft
+  pt-BR: Pilota Naves Estelares
+description:
+  en: You're a crack starship pilot.
+  pt-BR: Você é um piloto de naves estelares de primeira linha.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: pilot
+    - kind: granted
+      ability_id: flex-lore
+  '2':
+    - kind: granted
+      ability_id: salvage-and-comfort
+    - kind: granted
+      ability_id: mentally-tough
+  '3':
+    - kind: granted
+      ability_id: expert-pilot
+    - kind: choice
+      options:
+        - ship-footing
+        - machine-companion
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: sensor-array
+    - kind: granted
+      ability_id: enhanced-speed
+  '5':
+    - kind: granted
+      ability_id: like-the-back-of-your-hand
+  '6':
+    - kind: granted
+      ability_id: incomparable-pilot
+    - kind: choice
+      options:
+        - remote-control
+        - skill-with-attacks
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

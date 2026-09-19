@@ -1,0 +1,15 @@
+id: blaze-door
+name:
+  en: Blaze Door
+  pt-BR: Portal de Trilha
+description:
+  en: You can instantly transport yourself between two blaze symbols you've previously marked, as long as you use this ability while within immediate range of one of your symbols. In addition to the normal options for using Effort, you can choose to use Effort to bring other people within immediate range with you; each level of Effort used in this way affects up to three additional targets.
+  pt-BR: Você pode se transportar instantaneamente entre dois símbolos de trilha que marcou anteriormente, desde que use esta habilidade estando a alcance imediato de um de seus símbolos. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para trazer outras pessoas em alcance imediato com você; cada nível de Esforço usado dessa forma afeta até três alvos adicionais.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 4

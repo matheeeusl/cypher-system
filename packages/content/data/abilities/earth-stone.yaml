@@ -1,0 +1,13 @@
+id: earth-stone
+name:
+  en: Earth/Stone
+  pt-BR: Terra/Pedra
+description:
+  en: You are trained in climbing, stonecraft, and spelunking.
+  pt-BR: Você é treinado em escalada, trabalho com pedra, e espeleologia.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

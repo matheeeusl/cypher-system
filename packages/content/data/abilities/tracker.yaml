@@ -1,0 +1,16 @@
+id: tracker
+name:
+  en: Tracker
+  pt-BR: Rastreador
+description:
+  en: You are trained in following and identifying tracks.
+  pt-BR: Você é treinado em seguir e identificar rastros.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 1
+  - type: focus
+    id: hunts
+    tier: 1

@@ -1,0 +1,15 @@
+id: grandiose-illusion
+name:
+  en: Grandiose Illusion
+  pt-BR: Ilusão Grandiosa
+description:
+  en: You create a fantastically complex scene of images that fit within a 1-mile (1.5 km) cube that you are also within. You must be able to see the images when you create them. The images can move in the cube and act in accordance with your desires. They can also act logically (such as reacting appropriately to fire or attacks) when you aren't directly observing them. The illusion includes sound and smell. For example, armies can clash in battle, with air support from machines or flying creatures, on and above terrain of your creation. The illusion lasts for one hour (or longer, if you concentrate on it after that time).
+  pt-BR: Você cria uma cena fantasticamente complexa de imagens que cabem em um cubo de 1,5 quilômetro, no qual você também está. Você precisa conseguir ver as imagens ao criá-las. As imagens podem se mover no cubo e agir de acordo com seus desejos. Elas também podem agir de forma lógica (como reagir apropriadamente a fogo ou ataques) quando você não as observa diretamente. A ilusão inclui som e cheiro. Por exemplo, exércitos podem entrar em batalha, com apoio aéreo de máquinas ou criaturas voadoras, sobre um terreno de sua criação. A ilusão dura uma hora (ou mais, se você se concentrar nela após esse tempo).
+cost:
+  pool: intellect
+  amount: 8
+action_type: action
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 6

@@ -1,0 +1,13 @@
+id: specialized-basher
+name:
+  en: Specialized Basher
+  pt-BR: Golpeador Especializado
+description:
+  en: You are specialized in using the stone fists from your Golem Body ability as a medium weapon.
+  pt-BR: Você é especializado no uso dos punhos de pedra de sua habilidade Corpo de Golem como arma média.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 5

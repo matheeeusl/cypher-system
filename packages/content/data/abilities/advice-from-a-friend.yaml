@@ -1,0 +1,15 @@
+id: advice-from-a-friend
+name:
+  en: Advice From a Friend
+  pt-BR: Conselho de um Amigo
+description:
+  en: You know your friend's strengths and weaknesses, and how to motivate them to succeed. When you give an ally a suggestion involving their next action, the character is trained in that action for one round.
+  pt-BR: Você conhece os pontos fortes e fracos de seu amigo, e como motivá-lo a ter sucesso. Quando você dá a um aliado uma sugestão envolvendo sua próxima ação, o personagem se torna treinado naquela ação por uma rodada.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 1

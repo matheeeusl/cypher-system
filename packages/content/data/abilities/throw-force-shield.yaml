@@ -1,0 +1,13 @@
+id: throw-force-shield
+name:
+  en: Throw Force Shield
+  pt-BR: Arremessar Escudo de Força
+description:
+  en: You can throw your Force Field Shield up to short range as a light ranged weapon. Whether the shield hits or misses, it immediately dissipates and then reforms in your grasp.
+  pt-BR: Você pode arremessar seu Escudo de Campo de Força a até alcance curto como arma leve à distância. Independentemente de o escudo acertar ou errar, ele se dissipa imediatamente e depois se reforma em sua mão.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 3

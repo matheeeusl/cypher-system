@@ -1,0 +1,15 @@
+id: wall-of-lightning
+name:
+  en: Wall of Lightning
+  pt-BR: Muralha de Relâmpago
+description:
+  en: You create a barrier of crackling electricity up to 2,500 square feet (230 sq. m) in size, shaped as you wish. The wall is a level 7 barrier. Anyone within immediate distance of the wall automatically takes 10 points of damage. The wall lasts for one hour.
+  pt-BR: Você cria uma barreira de eletricidade crepitante de até 230 metros quadrados, com a forma que desejar. A muralha é uma barreira de nível 7. Qualquer um a alcance imediato da muralha sofre automaticamente 10 pontos de dano. A muralha dura uma hora.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 6

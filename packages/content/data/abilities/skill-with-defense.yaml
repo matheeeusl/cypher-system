@@ -1,0 +1,13 @@
+id: skill-with-defense
+name:
+  en: Skill With Defense
+  pt-BR: Perícia em Defesa
+description:
+  en: 'Choose one type of defense task in which you are not already trained: Might, Speed, or Intellect. You are trained in defense tasks of that type.'
+  pt-BR: 'Escolha um tipo de tarefa de defesa na qual ainda não seja treinado: Força, Agilidade, ou Intelecto. Você é treinado em tarefas de defesa daquele tipo.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 6

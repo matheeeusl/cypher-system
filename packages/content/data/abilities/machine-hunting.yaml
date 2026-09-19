@@ -1,0 +1,13 @@
+id: machine-hunting
+name:
+  en: Machine Hunting
+  pt-BR: Caça a Máquinas
+description:
+  en: You are trained in tasks associated with tracking, spotting, or otherwise finding robots and animate machines. You are also trained in all stealth tasks.
+  pt-BR: Você é treinado em tarefas associadas a rastrear, avistar ou de alguma outra forma encontrar robôs e máquinas animadas. Você também é treinado em todas as tarefas de furtividade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 2

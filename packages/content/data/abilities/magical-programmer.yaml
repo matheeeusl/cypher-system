@@ -1,0 +1,13 @@
+id: magical-programmer
+name:
+  en: Magical Programmer
+  pt-BR: Programador Mágico
+description:
+  en: You are trained in crafting magical apps and in using (and exploiting) computer software. You know one or more computer languages well enough to write basic programs, and you are fluent in internet protocol.
+  pt-BR: Você é treinado em criar aplicativos mágicos e em usar (e explorar) programas de computador. Você conhece uma ou mais linguagens de programação o suficiente para escrever programas básicos, e é fluente em protocolos de internet.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 1

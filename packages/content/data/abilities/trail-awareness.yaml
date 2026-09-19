@@ -1,0 +1,13 @@
+id: trail-awareness
+name:
+  en: Trail Awareness
+  pt-BR: Percepção de Trilha
+description:
+  en: Your connection with trails you've blazed is always with you. When traveling on, camping near, or within visual range of any trail you've blazed, you gain an asset on one attack or defense roll thanks to your knowledge about what else is using the path. Once used, this ability renews after your next recovery roll.
+  pt-BR: Sua conexão com as trilhas que você abriu está sempre com você. Quando estiver viajando, acampando perto ou dentro do alcance visual de qualquer trilha que você tenha aberto, você ganha um bônus em uma rolagem de ataque ou defesa graças ao seu conhecimento sobre o que mais usa aquele caminho. Uma vez usada, esta habilidade se renova após sua próxima rolagem de recuperação.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 3

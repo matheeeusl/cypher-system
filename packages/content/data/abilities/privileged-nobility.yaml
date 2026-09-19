@@ -1,0 +1,13 @@
+id: privileged-nobility
+name:
+  en: Privileged Nobility
+  pt-BR: Nobreza Privilegiada
+description:
+  en: You are adept at claiming the rewards that a noble background can generate. When recognized, you can be seated at any eating establishment no matter how full, get a room in an inn even if that means others are turned out, be let into any court or other structure where laws are decided or nobility rules, be invited to any gala, and get a seat at a private function of any sort. In addition, you are trained in persuasion.
+  pt-BR: Você é hábil em reivindicar as recompensas que uma origem nobre pode gerar. Quando reconhecido, você pode ser sentado em qualquer estabelecimento de refeições, não importa o quão cheio esteja, conseguir um quarto em uma pousada mesmo que isso signifique expulsar outros hóspedes, ser admitido em qualquer corte ou outra estrutura onde leis são decididas ou a nobreza governa, ser convidado para qualquer gala, e conseguir um lugar em qualquer evento privado. Além disso, você é treinado em persuasão.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: descends-from-nobility
+    tier: 1

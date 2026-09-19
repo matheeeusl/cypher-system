@@ -1,0 +1,15 @@
+id: embedded-drone
+name:
+  en: Embedded Drone
+  pt-BR: Drone Embutido
+description:
+  en: Your chrome now has an embedded drone that you can launch and control for up to an hour. The drone is no larger than 1 foot (30 cm) on a side. It has manipulators, allowing it to attempt to accomplish physical tasks, and a built-in medium pistol that it can use to make attacks. The drone can immediately take an action on the turn that you launch it. You'll probably make rolls for your drone when it takes actions. A drone in combat usually doesn't make separate attacks but helps with your defenses. On your action, if the drone is next to you, it serves as an asset for one defense roll you make on your turn. If the drone is destroyed, you can spend 2 XP to rebuild it. The embedded drone is level 4, has a long-range embedded pistol that inflicts 4 damage, and flies a short distance each round.
+  pt-BR: Seu cromo agora tem um drone embutido que você pode lançar e controlar por até uma hora. O drone não é maior que 30 centímetros de lado. Ele tem manipuladores, permitindo tentar realizar tarefas físicas, e uma pistola média embutida que pode usar para atacar. O drone pode realizar imediatamente uma ação no turno em que é lançado. Você provavelmente fará as rolagens pelo seu drone quando ele realizar ações. Um drone em combate geralmente não faz ataques separados, mas ajuda em suas defesas. Em sua ação, se o drone estiver ao seu lado, ele serve como bônus para uma rolagem de defesa que você fizer em seu turno. Se o drone for destruído, você pode gastar 2 XP para reconstruí-lo. O drone embutido é de nível 4, tem uma pistola embutida de alcance longo que inflige 4 de dano, e voa uma distância curta a cada rodada.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: is-a-walking-tank
+    tier: 6

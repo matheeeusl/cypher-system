@@ -6,7 +6,6 @@ export const AbilitySchema = z.object({
   id: z.string(),
   name: LocalizedString,
   description: LocalizedString,
-  tier: z.number().int().min(1).max(6),
   cost: z
     .object({
       pool: z.enum(['might', 'speed', 'intellect']),
@@ -24,11 +23,17 @@ export const AbilitySchema = z.object({
     'action_to_initiate',
     'action_to_initiate_or_reinitiate',
   ]),
+  // tier lives per-source, not on the ability itself: the same named
+  // ability is sometimes printed under more than one Type/Focus at
+  // different tiers (confirmed — e.g. "Surprise Attack" is tier 3 under
+  // two Foci and tier 4 under a third), so a single top-level tier can't
+  // represent it.
   sources: z
     .array(
       z.object({
         type: z.enum(['type', 'focus']),
         id: z.string(),
+        tier: z.number().int().min(1).max(6),
       }),
     )
     .min(1),

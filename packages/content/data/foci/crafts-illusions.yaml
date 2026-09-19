@@ -1,0 +1,37 @@
+id: crafts-illusions
+name:
+  en: Crafts Illusions
+  pt-BR: Cria Ilusões
+description:
+  en: You fashion images from light that are so perfect they seem real.
+  pt-BR: Você molda imagens de luz tão perfeitas que parecem reais.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: minor-illusion
+  '2':
+    - kind: granted
+      ability_id: illusory-disguise
+  '3':
+    - kind: choice
+      options:
+        - cast-illusion
+        - major-illusion
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: illusory-selves
+  '5':
+    - kind: granted
+      ability_id: terrifying-image
+  '6':
+    - kind: choice
+      options:
+        - grandiose-illusion
+        - permanent-illusion
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

@@ -1,0 +1,13 @@
+id: final-defiance
+name:
+  en: Final Defiance
+  pt-BR: Desafio Final
+description:
+  en: When you would normally be dead, you instead remain conscious and active for one more round plus one additional round each time you succeed on a difficulty 5 Might task. During these rounds, you are debilitated. If you do not receive healing or otherwise gain points in a Pool during your final round(s) of activity, you are subject to the effects of Not Dead Yet.
+  pt-BR: Quando normalmente você estaria morto, em vez disso permanece consciente e ativo por mais uma rodada, mais uma rodada adicional cada vez que for bem-sucedido em uma tarefa de Força de dificuldade 5. Durante essas rodadas, você está debilitado. Se não receber cura ou de outra forma ganhar pontos em uma Reserva durante sua(s) última(s) rodada(s) de atividade, você fica sujeito aos efeitos de Ainda Não Morri.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 6

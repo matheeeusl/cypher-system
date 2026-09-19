@@ -1,0 +1,15 @@
+id: call-in-favor
+name:
+  en: Call in Favor
+  pt-BR: Cobrar um Favor
+description:
+  en: A guard, doctor, technician, or hired thug in the employ of or allied with a foe is secretly your ally or owes you a favor. When you call in the favor, the target does what they can to help you out of a specific fix (unties you, slips you a knife, leaves a cell door unlocked) in a way that minimizes their risk of revealing their divided loyalties to their employer or other allies. This ability is a difficulty 3 Intellect task. Each additional time you use this ability, the task is hindered by an additional step. The difficulty returns to 3 after you rest for ten hours.
+  pt-BR: Um guarda, médico, técnico ou capanga a serviço de um inimigo, ou aliado a ele, é secretamente seu aliado ou lhe deve um favor. Quando você cobra o favor, o alvo faz o que pode para tirá-lo de um aperto específico (desamarra você, desliza uma faca até você, deixa a porta de uma cela destrancada) de um jeito que minimiza o risco de revelar sua lealdade dividida ao empregador ou a outros aliados. Esta habilidade é uma tarefa de Intelecto de dificuldade 3. Cada vez adicional que você usa esta habilidade, a tarefa fica dificultada em mais um passo. A dificuldade volta a 3 depois que você descansa por dez horas.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 6

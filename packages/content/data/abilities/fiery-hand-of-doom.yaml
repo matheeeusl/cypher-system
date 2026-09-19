@@ -1,0 +1,18 @@
+id: fiery-hand-of-doom
+name:
+  en: Fiery Hand of Doom
+  pt-BR: Mão Flamejante da Perdição
+description:
+  en: While your Shroud of Flame is active, you can reach into your halo and produce a hand made of animate flame that is twice the size of a human's hand. The hand acts as you direct, floating in the air. Directing the hand is an action. Without a command, the hand does nothing. It can move a long distance in a round, but it never moves farther away from you than long range. The hand can grab, move, and carry things, but anything it touches takes 1 point of damage per round from the heat. The hand can also attack. It's a level 3 creature and deals 1 extra point of damage from fire when it attacks. Once created, the hand lasts for ten minutes.
+  pt-BR: Enquanto seu Manto de Chamas estiver ativo, você pode alcançar sua auréola e produzir uma mão feita de chama animada, duas vezes o tamanho de uma mão humana. A mão age conforme você a direciona, flutuando no ar. Direcionar a mão é uma ação. Sem um comando, a mão não faz nada. Ela pode se mover uma distância longa em uma rodada, mas nunca se afasta de você além do alcance longo. A mão pode agarrar, mover e carregar coisas, mas tudo que ela tocar sofre 1 ponto de dano por rodada devido ao calor. A mão também pode atacar. É uma criatura de nível 3 e causa 1 ponto extra de dano de fogo quando ataca. Uma vez criada, a mão dura dez minutos.
+cost:
+  pool: intellect
+  amount: 3
+# Note: source tag is "Action to create; action to direct." — a
+# compound action-type not covered by the current action_type enum.
+# Approximated as action_to_initiate; flagged for schema review.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 3

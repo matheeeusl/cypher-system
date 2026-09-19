@@ -1,0 +1,13 @@
+id: enhanced-speed
+name:
+  en: Enhanced Speed
+  pt-BR: Agilidade Aprimorada
+description:
+  en: You gain 3 points to your Speed Pool.
+  pt-BR: Você ganha 3 pontos na sua Reserva de Agilidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 4

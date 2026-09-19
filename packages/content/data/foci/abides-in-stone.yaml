@@ -1,0 +1,43 @@
+id: abides-in-stone
+name:
+  en: Abides in Stone
+  pt-BR: Habita na Pedra
+description:
+  en: Your flesh is made of hard mineral, making you a hulking, difficult-to-harm humanoid.
+  pt-BR: Sua carne é feita de mineral duro, o que faz de você um humanoide corpulento e difícil de ferir.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: golem-body
+    - kind: granted
+      ability_id: golem-healing
+  '2':
+    - kind: granted
+      ability_id: golem-grip
+  '3':
+    - kind: granted
+      ability_id: trained-basher
+    - kind: choice
+      options:
+        - golem-stomp
+        - weaponization
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: deep-reserves
+  '5':
+    - kind: granted
+      ability_id: specialized-basher
+    - kind: granted
+      ability_id: still-as-a-statue
+  '6':
+    - kind: choice
+      options:
+        - ultra-enhancement
+        - mind-surge
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

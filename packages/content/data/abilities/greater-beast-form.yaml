@@ -1,0 +1,13 @@
+id: greater-beast-form
+name:
+  en: Greater Beast Form
+  pt-BR: Forma Bestial Superior
+description:
+  en: 'When using Beast Form, your beast form gains the following additional bonuses: +1 to your Might Edge, +2 to your Speed Pool, and +1 to your Speed Edge.'
+  pt-BR: 'Ao usar Forma Bestial, sua forma bestial ganha os seguintes bônus adicionais: +1 no Bônus de Força, +2 na Reserva de Agilidade, e +1 no Bônus de Agilidade.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: howls-at-the-moon
+    tier: 3

@@ -1,0 +1,13 @@
+id: shield-burst
+name:
+  en: Shield Burst
+  pt-BR: Explosão de Escudo
+description:
+  en: When you make a melee or ranged attack and hit with your Force Field Shield, it releases an explosion of energy, inflicting an additional 2 points of damage on the target and everything within immediate range of the target. If you applied Effort to inflict additional damage as part of the attack, each level of Effort inflicts only 2 additional points to all targets instead of 3 points. If you use Shield Burst with a melee attack, you and creatures behind you are not affected by this explosion. If you use Shield Burst with a ranged attack, the shield dissipates after the attack and then reforms in your grasp.
+  pt-BR: Quando você faz um ataque corpo a corpo ou à distância e acerta com seu Escudo de Campo de Força, ele libera uma explosão de energia, infligindo 2 pontos adicionais de dano ao alvo e a tudo que estiver a alcance imediato do alvo. Se você aplicou Esforço para infligir dano adicional como parte do ataque, cada nível de Esforço inflige apenas 2 pontos adicionais a todos os alvos, em vez de 3 pontos. Se você usar Explosão de Escudo com um ataque corpo a corpo, você e as criaturas atrás de você não são afetados por essa explosão. Se você usar Explosão de Escudo com um ataque à distância, o escudo se dissipa após o ataque e depois se reforma em sua mão.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 6

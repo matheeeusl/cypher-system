@@ -1,0 +1,15 @@
+id: bolts-of-power
+name:
+  en: Bolts of Power
+  pt-BR: Descargas de Poder
+description:
+  en: You blast a fan of lightning out to short range in an arc that is approximately 50 feet (15 m) wide at the end. This discharge inflicts 4 points of damage. If you apply Effort to increase the damage rather than to ease the task, you deal 2 additional points of damage per level of Effort (instead of 3 points); targets in the area take 1 point of damage even if you fail the attack roll.
+  pt-BR: Você dispara um leque de raios a alcance curto, em um arco de aproximadamente 15 metros de largura na extremidade. Essa descarga inflige 4 pontos de dano. Se você aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); alvos na área sofrem 1 ponto de dano mesmo que você falhe na rolagem de ataque.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 4

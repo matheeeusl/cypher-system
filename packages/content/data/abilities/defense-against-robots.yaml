@@ -1,0 +1,13 @@
+id: defense-against-robots
+name:
+  en: Defense Against Robots
+  pt-BR: Defesa Contra Robôs
+description:
+  en: You have studied your enemy and are trained in anticipating the actions that a robot or machine is likely to take in a fight. Defense tasks you attempt against these foes are eased.
+  pt-BR: Você estudou seu inimigo e é treinado em antecipar as ações que um robô ou máquina provavelmente tomará em uma luta. Tarefas de defesa que você tentar contra esses inimigos são facilitadas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 2

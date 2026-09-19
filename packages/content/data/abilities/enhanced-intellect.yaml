@@ -1,0 +1,13 @@
+id: enhanced-intellect
+name:
+  en: Enhanced Intellect
+  pt-BR: Intelecto Aprimorado
+description:
+  en: You gain 3 points to your Intellect Pool.
+  pt-BR: Você ganha 3 pontos na sua Reserva de Intelecto.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 2

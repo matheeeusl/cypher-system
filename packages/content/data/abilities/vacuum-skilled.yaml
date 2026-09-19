@@ -1,0 +1,13 @@
+id: vacuum-skilled
+name:
+  en: Vacuum Skilled
+  pt-BR: Habilidoso no Vácuo
+description:
+  en: 'You are trained in two of the following skills: vacuum welding, algae farming, ecosystem design, circuit design, spacecraft maintenance and repair, or some similar skill related to traveling and colonizing planets, moons, and stations located in the solar system.'
+  pt-BR: 'Você é treinado em duas das seguintes perícias: soldagem a vácuo, cultivo de algas, projeto de ecossistemas, projeto de circuitos, manutenção e reparo de naves espaciais, ou alguma perícia semelhante relacionada a viajar e colonizar planetas, luas e estações localizadas no sistema solar.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 1

@@ -1,0 +1,13 @@
+id: capable-warrior
+name:
+  en: Capable Warrior
+  pt-BR: Guerreiro Capaz
+description:
+  en: Your attacks deal 1 additional point of damage.
+  pt-BR: Seus ataques causam 1 ponto adicional de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 4

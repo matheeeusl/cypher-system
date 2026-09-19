@@ -1,0 +1,13 @@
+id: master-magical-programmer
+name:
+  en: Master Magical Programmer
+  pt-BR: Programador Mágico Mestre
+description:
+  en: You are specialized in crafting magical apps and in using (and exploiting) computer software.
+  pt-BR: Você é especializado em criar aplicativos mágicos e em usar (e explorar) programas de computador.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 3

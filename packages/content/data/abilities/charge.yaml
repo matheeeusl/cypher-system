@@ -1,0 +1,15 @@
+id: charge
+name:
+  en: Charge
+  pt-BR: Carregar
+description:
+  en: You can charge an artifact or other device (except a cypher) so that it can be used once. The cost is 1 Intellect point plus 1 point per level of the device.
+  pt-BR: Você pode carregar um artefato ou outro dispositivo (exceto uma cifra) para que possa ser usado uma vez. O custo é 1 ponto de Intelecto mais 1 ponto por nível do dispositivo.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 1

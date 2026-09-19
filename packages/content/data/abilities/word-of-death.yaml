@@ -1,0 +1,15 @@
+id: word-of-death
+name:
+  en: Word of Death
+  pt-BR: Palavra da Morte
+description:
+  en: Your attack is the utterance of a magic word so terrible that it snuffs the life from a living target within short range. The target must be level 1. In addition to the normal options for using Effort, you can choose to use Effort to increase the maximum level of the target. Thus, to kill a level 5 target (four levels above the normal limit), you must apply four levels of Effort.
+  pt-BR: Seu ataque é a pronúncia de uma palavra mágica tão terrível que extingue a vida de um alvo vivo a alcance curto. O alvo deve ser de nível 1. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do alvo. Assim, para matar um alvo de nível 5 (quatro níveis acima do limite normal), você deve aplicar quatro níveis de Esforço.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 6

@@ -1,0 +1,15 @@
+id: nobles-courage
+name:
+  en: Noble's Courage
+  pt-BR: Coragem Nobre
+description:
+  en: Your noble lineage teaches that courage is necessary to do things that are difficult, tedious, or dangerous. When your mind would be negatively affected by an effect of up to level 4, whether something as overt as a psychic command or illness or something as subtle as fear or even boredom, your courage neutralizes the effect for up to a minute or, if you're actively being attacked, until the next attack. For each level of Effort applied, you can increase the level of the effect you can neutralize by 1.
+  pt-BR: Sua linhagem nobre ensina que a coragem é necessária para fazer coisas difíceis, tediosas ou perigosas. Quando sua mente seria afetada negativamente por um efeito de até nível 4, seja algo tão óbvio quanto um comando psíquico ou uma doença, ou algo tão sutil quanto medo ou até mesmo tédio, sua coragem neutraliza o efeito por até um minuto ou, se estiver sendo ativamente atacado, até o próximo ataque. Para cada nível de Esforço aplicado, você pode aumentar em 1 o nível do efeito que consegue neutralizar.
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: descends-from-nobility
+    tier: 3

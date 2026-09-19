@@ -1,0 +1,13 @@
+id: outlast-the-foe
+name:
+  en: Outlast the Foe
+  pt-BR: Superar o Inimigo pela Resistência
+description:
+  en: If you have been in combat for five full rounds, you have an asset for all tasks in the remainder of the combat, and you deal 1 additional point of damage per attack.
+  pt-BR: Se você estiver em combate por cinco rodadas completas, passa a ter um bônus em todas as tarefas pelo restante do combate, e causa 1 ponto adicional de dano por ataque.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 4

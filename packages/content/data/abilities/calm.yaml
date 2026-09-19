@@ -1,0 +1,15 @@
+id: calm
+name:
+  en: Calm
+  pt-BR: Acalmar
+description:
+  en: Through jokes, song, or other art, you prevent a living foe from attacking anyone or anything for one round.
+  pt-BR: Por meio de piadas, canção, ou outra forma de arte, você impede que um inimigo vivo ataque qualquer um ou qualquer coisa por uma rodada.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: entertains
+    tier: 4

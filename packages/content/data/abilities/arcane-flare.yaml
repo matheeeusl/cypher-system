@@ -1,0 +1,19 @@
+id: arcane-flare
+name:
+  en: Arcane Flare
+  pt-BR: Chama Arcana
+description:
+  en: You enhance the damage of another attack spell with an extra charge of energy so that it deals 1 additional point of damage. Alternatively, you attack a target within long range by projecting a flare of raw magic that inflicts 4 points of damage.
+  pt-BR: Você aprimora o dano de outro feitiço de ataque com uma carga extra de energia, para que cause 1 ponto adicional de dano. Alternativamente, você ataca um alvo a alcance longo projetando uma chama de magia bruta que inflige 4 pontos de dano.
+cost:
+  pool: intellect
+  amount: 1
+# Note: source tag is "Enabler for enhancement; action for long-range
+# attack." — a dual action_type not covered by the current enum (which
+# allows only one value per ability). Recorded as enabler (the
+# passive-enhancement half); flagged for schema review.
+action_type: enabler
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 1

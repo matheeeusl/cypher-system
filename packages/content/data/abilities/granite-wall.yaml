@@ -1,0 +1,15 @@
+id: granite-wall
+name:
+  en: Granite Wall
+  pt-BR: Muralha de Granito
+description:
+  en: You create a level 6 granite wall within short range. The wall is 1 foot (30 cm) thick and up to 20 feet by 20 feet (6 m by 6 m) in size. It appears resting on a solid foundation and lasts for about ten hours. If you apply three levels of Effort, the wall is permanent until destroyed naturally.
+  pt-BR: Você cria uma muralha de granito de nível 6 a alcance curto. A muralha tem 30 centímetros de espessura e até 6 por 6 metros de tamanho. Ela surge apoiada em uma fundação sólida e dura cerca de dez horas. Se você aplicar três níveis de Esforço, a muralha se torna permanente até ser destruída naturalmente.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 5

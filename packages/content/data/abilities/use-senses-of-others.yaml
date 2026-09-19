@@ -1,0 +1,17 @@
+id: use-senses-of-others
+name:
+  en: Use Senses of Others
+  pt-BR: Usar os Sentidos de Outros
+description:
+  en: You can see, hear, smell, touch, and taste through the senses of anyone with whom you have telepathic contact by using Telepathic or similar abilities. You can attempt to use this ability on a willing or unwilling target within long range; an unwilling target can try to resist. You don't need to see the target, but you must know that it's within range. Your shared senses last ten minutes.
+  pt-BR: Você pode ver, ouvir, sentir cheiros, tocar e provar através dos sentidos de qualquer um com quem tenha contato telepático usando Telepata ou habilidades semelhantes. Você pode tentar usar esta habilidade em um alvo disposto ou não a alcance longo; um alvo não disposto pode tentar resistir. Você não precisa ver o alvo, mas deve saber que ele está no alcance. Seus sentidos compartilhados duram dez minutos.
+cost:
+  pool: intellect
+  amount: 4
+# Note: source tag is "Action to establish." — approximated as
+# action_to_initiate; flagged for schema review.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 4

@@ -1,0 +1,39 @@
+id: rides-the-lightning
+name:
+  en: Rides the Lightning
+  pt-BR: Cavalga o Relâmpago
+description:
+  en: You create and discharge electrical power.
+  pt-BR: Você cria e descarrega poder elétrico.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: shock
+    - kind: granted
+      ability_id: charge
+  '2':
+    - kind: granted
+      ability_id: bolt-rider
+  '3':
+    - kind: choice
+      options:
+        - electric-armor
+        - drain-charge
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: bolts-of-power
+  '5':
+    - kind: granted
+      ability_id: electrical-flight
+  '6':
+    - kind: choice
+      options:
+        - flash-across-the-miles
+        - wall-of-lightning
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

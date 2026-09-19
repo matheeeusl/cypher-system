@@ -1,0 +1,15 @@
+id: soul-interrogation
+name:
+  en: Soul Interrogation
+  pt-BR: Interrogatório da Alma
+description:
+  en: You determine the weaknesses, vulnerabilities, qualities, and mannerisms of a single creature within long range. The GM should reveal the creature's level, basic abilities, and obvious weaknesses (if any). All actions you attempt that affect that creature—attack, defense, interaction, and so on—are eased for a few months afterward.
+  pt-BR: Você determina as fraquezas, vulnerabilidades, qualidades e maneirismos de uma única criatura a alcance longo. O Mestre deve revelar o nível da criatura, suas habilidades básicas, e fraquezas óbvias (se houver). Todas as ações que você tentar que afetem aquela criatura — ataque, defesa, interação, e assim por diante — ficam facilitadas por alguns meses depois.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 4

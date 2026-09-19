@@ -1,0 +1,13 @@
+id: let-them-try
+name:
+  en: Let Them Try
+  pt-BR: Deixe-os Tentar
+description:
+  en: They usually don't give up without a fight. You are trained in Speed defense tasks. If your foe is someone you've successfully interacted with (as noted under Know Where It Hurts), your Speed defense tasks against them also gain an asset.
+  pt-BR: Eles geralmente não desistem sem lutar. Você é treinado em tarefas de defesa de Agilidade. Se seu inimigo for alguém com quem você interagiu com sucesso (conforme descrito em Saber Onde Dói), suas tarefas de defesa de Agilidade contra ele também ganham um bônus.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 3

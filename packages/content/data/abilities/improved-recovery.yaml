@@ -1,0 +1,13 @@
+id: improved-recovery
+name:
+  en: Improved Recovery
+  pt-BR: Recuperação Aprimorada
+description:
+  en: Your ten-minute recovery roll takes only one action instead, so that your first two recovery rolls are one action, the third is one hour, and the fourth is ten hours.
+  pt-BR: Sua rolagem de recuperação de dez minutos passa a exigir apenas uma ação, de modo que suas duas primeiras rolagens de recuperação são de uma ação, a terceira é de uma hora, e a quarta é de dez horas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 1

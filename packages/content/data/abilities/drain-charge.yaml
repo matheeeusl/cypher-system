@@ -1,0 +1,13 @@
+id: drain-charge
+name:
+  en: Drain Charge
+  pt-BR: Drenar Carga
+description:
+  en: You can drain the power from an artifact or device, allowing you to regain 1 Intellect point per level drained. You regain points at the rate of 1 point per round and must give your full concentration to the process each round. The GM determines whether the device is fully drained (likely true of most handheld or smaller devices) or retains some power (likely true of large machines).
+  pt-BR: Você pode drenar a energia de um artefato ou dispositivo, recuperando 1 ponto de Intelecto por nível drenado. Você recupera pontos a uma taxa de 1 ponto por rodada e precisa dedicar total concentração ao processo a cada rodada. O Mestre determina se o dispositivo fica totalmente drenado (provavelmente verdade para a maioria dos dispositivos portáteis ou menores) ou mantém alguma energia (provavelmente verdade para máquinas grandes).
+cost: null
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 3

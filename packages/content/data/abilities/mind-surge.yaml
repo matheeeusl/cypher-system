@@ -1,0 +1,13 @@
+id: mind-surge
+name:
+  en: Mind Surge
+  pt-BR: Surto Mental
+description:
+  en: In addition to your normal recovery rolls each day, you can—at any time between ten-hour rests—recover 1d6 + 6 points to your Intellect Pool.
+  pt-BR: Além de suas rolagens de recuperação normais a cada dia, você pode — a qualquer momento entre descansos de dez horas — recuperar 1d6 + 6 pontos em sua Reserva de Intelecto.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 6

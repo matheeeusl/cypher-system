@@ -1,0 +1,13 @@
+id: see-the-unseen
+name:
+  en: See the Unseen
+  pt-BR: Ver o Invisível
+description:
+  en: You can automatically perceive creatures and objects that are normally invisible, out of phase, or only partially in this universe. When looking for things more conventionally hidden, the task is eased.
+  pt-BR: Você consegue perceber automaticamente criaturas e objetos que normalmente são invisíveis, fora de fase, ou apenas parcialmente presentes neste universo. Ao procurar por coisas escondidas de forma mais convencional, a tarefa é facilitada.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: sees-beyond
+    tier: 1

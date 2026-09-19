@@ -1,0 +1,13 @@
+id: attack-flourish
+name:
+  en: Attack Flourish
+  pt-BR: Floreio de Ataque
+description:
+  en: With your attack, you add stylish moves, entertaining quips, or a certain something that entertains or impresses others. One creature you choose within short range who can see you gains an asset to its next task if taken within a round or two.
+  pt-BR: Com seu ataque, você acrescenta movimentos estilosos, tiradas divertidas, ou algo especial que diverte ou impressiona os outros. Uma criatura que você escolher a alcance curto e que consiga vê-lo ganha um bônus em sua próxima tarefa, se realizada dentro de uma ou duas rodadas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: hunts
+    tier: 1

@@ -1,0 +1,15 @@
+id: ray-of-confusion
+name:
+  en: Ray of Confusion
+  pt-BR: Raio de Confusão
+description:
+  en: You project a grey beam of confusion at a creature within short range, inflicting 1 point of damage that ignores Armor. In addition, until the end of the next round, all tasks, attacks, and defenses the target attempts are hindered.
+  pt-BR: Você projeta um raio cinzento de confusão em uma criatura a alcance curto, infligindo 1 ponto de dano que ignora Armadura. Além disso, até o fim da próxima rodada, todas as tarefas, ataques e defesas que o alvo tentar ficam dificultados.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 2

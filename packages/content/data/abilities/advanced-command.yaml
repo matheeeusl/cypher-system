@@ -1,0 +1,15 @@
+id: advanced-command
+name:
+  en: Advanced Command
+  pt-BR: Comando Avançado
+description:
+  en: A target within short range obeys any command you give as long as they can hear and understand you. Further, as long as you continue to do nothing but issue commands (taking no other action), you can give that same target a new command. This effect ends when you stop issuing commands or they are out of short range.
+  pt-BR: Um alvo a alcance curto obedece a qualquer comando que você der, desde que consiga ouvi-lo e entendê-lo. Além disso, contanto que você continue apenas dando comandos (sem realizar nenhuma outra ação), pode dar ao mesmo alvo um novo comando. Este efeito termina quando você para de dar comandos ou o alvo sai do alcance curto.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: descends-from-nobility
+    tier: 3

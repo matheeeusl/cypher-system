@@ -1,0 +1,19 @@
+id: summon-giant-spider
+name:
+  en: Summon Giant Spider
+  pt-BR: Convocar Aranha Gigante
+description:
+  en: |-
+    A giant spider appears within immediate range. If you applied a level of Effort as part of the summoning, the spider is amenable to your instructions; otherwise, it acts according to its nature. Regardless, the creature persists for up to one minute before it fades away.
+    Giant spider (level 3, 9 to defend; health 12; movement short, long when traveling on web; perception as level 5; Speed defense as level 4 due to quickness, loses both modifications in bright light): envenomed fangs inflict 3 damage, and if the target fails a Might defense roll, add 3 Speed damage that ignores Armor. Giant spider webs (level 4) can hold victims immobile, unable to take actions until they break free.
+  pt-BR: |-
+    Uma aranha gigante aparece a alcance imediato. Se você aplicou um nível de Esforço como parte da convocação, a aranha é receptiva às suas instruções; caso contrário, age de acordo com sua natureza. De qualquer forma, a criatura persiste por até um minuto antes de desaparecer.
+    Aranha gigante (nível 3, defesa 9; vida 12; movimento curto, longo ao viajar sobre teia; percepção como nível 5; defesa de Agilidade como nível 4 devido à rapidez, perde ambas as modificações sob luz forte): presas envenenadas infligem 3 de dano, e se o alvo falhar em uma rolagem de defesa de Força, soma-se 3 de dano de Agilidade que ignora Armadura. Teias de aranha gigante (nível 4) podem manter vítimas imóveis, incapazes de agir até que se libertem.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 3

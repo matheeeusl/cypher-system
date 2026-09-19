@@ -1,0 +1,39 @@
+id: brandishes-an-exotic-shield
+name:
+  en: Brandishes an Exotic Shield
+  pt-BR: Empunha um Escudo Exótico
+description:
+  en: You deploy an amazing shield of pure force that provides protection and some offensive options.
+  pt-BR: Você projeta um incrível escudo de força pura, que oferece proteção e algumas opções ofensivas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: force-field-shield
+    - kind: granted
+      ability_id: force-bash
+  '2':
+    - kind: granted
+      ability_id: enveloping-shield
+  '3':
+    - kind: choice
+      options:
+        - healing-pulse
+        - throw-force-shield
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: energized-shield
+  '5':
+    - kind: granted
+      ability_id: force-wall
+  '6':
+    - kind: choice
+      options:
+        - bouncing-shield
+        - shield-burst
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

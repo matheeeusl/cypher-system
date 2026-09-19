@@ -1,0 +1,83 @@
+id: collects-bounties
+name:
+  en: Collects Bounties
+  pt-BR: Caça Recompensas
+description:
+  en: You know just where to look to find the latest wanted posters. Each one that goes up on the side of the jail or the wall of the post office is potentially another job and another reward. But money's only half the deal—you also do it for the rush when you finally apprehend someone you've tracked across three territories. Some folks prefer to collect bounties without any undue fuss. But it wouldn't be fun if those you stalk don't put up a fight when you finally find them. And if it's a fight, well, they'd best watch themselves. Most bounties you take on are advertised as dead or alive. You'd prefer them alive so they can face justice, but if it's down to you or them, that's no choice at all.
+  pt-BR: Você sabe exatamente onde procurar os últimos cartazes de procurados. Cada um que aparece na parede da cadeia ou dos correios é potencialmente mais um serviço e mais uma recompensa. Mas o dinheiro é só metade do acordo — você também faz isso pela adrenalina de finalmente prender alguém que rastreou por três territórios. Algumas pessoas preferem coletar recompensas sem alarde. Mas não seria divertido se aqueles que você persegue não reagissem quando você finalmente os encontrasse. E se for luta, bem, é melhor que se cuidem. A maioria das recompensas que você aceita são anunciadas como "morto ou vivo". Você prefere que estejam vivos, para que enfrentem a justiça, mas se for você ou eles, não há escolha alguma.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: seek-and-hide
+    - kind: granted
+      ability_id: know-where-it-hurts
+  '2':
+    - kind: granted
+      ability_id: ignore-the-pain
+  '3':
+    - kind: choice
+      options:
+        - let-them-try
+        - surprise-attack
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: total-awareness
+  '5':
+    - kind: granted
+      ability_id: free-to-move
+  '6':
+    - kind: granted
+      ability_id: knock-out
+    - kind: choice
+      options:
+        - greater-skill-with-attacks
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: Heavy leather duster (light armor).
+  pt-BR: Sobretudo de couro pesado (armadura leve).
+connection_options:
+  - en: >-
+      Pick one other PC. They accidentally provided information to a
+      competing bounty hunter that lost you a quarry with a
+      particularly lucrative reward.
+    pt-BR: >-
+      Escolha outro PJ. Ele forneceu acidentalmente informações a um
+      caçador de recompensas rival, o que lhe custou uma presa com uma
+      recompensa particularmente lucrativa.
+  - en: >-
+      Pick one other PC. You happened to see a few documents while
+      tracking down something unrelated, which leads you to believe
+      they're not exactly who they claim to be. You've since grown
+      comfortable with them, but remain vigilant in case they turn out
+      to be dangerous.
+    pt-BR: >-
+      Escolha outro PJ. Você viu por acaso alguns documentos enquanto
+      rastreava algo não relacionado, o que o leva a acreditar que ele
+      não é exatamente quem afirma ser. Desde então, você criou
+      confiança nele, mas permanece vigilante caso ele se revele
+      perigoso.
+  - en: >-
+      Pick one other PC. They rescued you from a train when outlaws
+      blew it up, pulling you out of the wreckage at great risk to
+      themself.
+    pt-BR: >-
+      Escolha outro PJ. Ele o resgatou de um trem quando bandidos o
+      explodiram, tirando você dos destroços com grande risco para si
+      mesmo.
+  - en: >-
+      Pick one other PC. They know a secret story about your past that
+      doesn't reflect especially well on your character. But back
+      then, you were young and stupid. Not like today. Right?
+    pt-BR: >-
+      Escolha outro PJ. Ele conhece uma história secreta sobre seu
+      passado que não reflete muito bem sobre seu personagem. Mas
+      naquela época você era jovem e tolo. Não como hoje. Certo?
+minor_effect_suggestion:
+  en: Your attack against a foe is eased.
+  pt-BR: Seu ataque contra um inimigo é facilitado.
+major_effect_suggestion:
+  en: Make an immediate extra attack on your target.
+  pt-BR: Faça um ataque extra imediato contra seu alvo.

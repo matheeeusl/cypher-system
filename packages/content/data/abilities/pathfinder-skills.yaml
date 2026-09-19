@@ -1,0 +1,13 @@
+id: pathfinder-skills
+name:
+  en: Pathfinder Skills
+  pt-BR: Perícias de Desbravador
+description:
+  en: 'You are trained in your choice of two of the following skills: blazing, navigation, perception, initiative, sensing danger, or tracking. You can choose this ability multiple times, but you must select different skills each time.'
+  pt-BR: 'Você é treinado, à sua escolha, em duas das seguintes perícias: marcação de trilhas, navegação, percepção, iniciativa, detecção de perigo ou rastreamento. Você pode escolher esta habilidade várias vezes, mas deve selecionar perícias diferentes a cada vez.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 1

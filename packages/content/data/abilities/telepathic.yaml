@@ -1,0 +1,17 @@
+id: telepathic
+name:
+  en: Telepathic
+  pt-BR: Telepata
+description:
+  en: You can speak telepathically with others who are within short range. Communication is two-way, but the other party must be willing and able to communicate. You don't have to see the target, but you must know that it's within range. You can have more than one active contact at once, but you must establish contact with each target individually. Each contact lasts up to ten minutes. If you apply a level of Effort to increase the duration rather than ease the task, the contact lasts for 24 hours.
+  pt-BR: Você pode falar telepaticamente com outros que estejam a alcance curto. A comunicação é bidirecional, mas a outra parte deve estar disposta e ser capaz de se comunicar. Você não precisa ver o alvo, mas deve saber que ele está no alcance. Você pode ter mais de um contato ativo ao mesmo tempo, mas deve estabelecer contato com cada alvo individualmente. Cada contato dura até dez minutos. Se você aplicar um nível de Esforço para aumentar a duração em vez de facilitar a tarefa, o contato dura 24 horas.
+cost:
+  pool: intellect
+  amount: 1
+# Note: source tag is "Action to establish contact." — approximated as
+# action_to_initiate; flagged for schema review.
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 1

@@ -1,0 +1,15 @@
+id: flash-across-the-miles
+name:
+  en: Flash Across the Miles
+  pt-BR: Relâmpago Através das Milhas
+description:
+  en: You can move to an open location on the planet that you're familiar with almost instantaneously, transformed into a bolt of lightning. If you apply a level of Effort, you can attempt to penetrate covered locations that you're aware of as long as a route exists from the open air to the area you want to reach that electricity can easily follow.
+  pt-BR: Você pode se mover quase instantaneamente para um local aberto no planeta com o qual está familiarizado, transformado em um raio. Se aplicar um nível de Esforço, pode tentar penetrar em locais cobertos dos quais tenha conhecimento, desde que exista uma rota do ar aberto até a área que deseja alcançar, pela qual a eletricidade consiga passar facilmente.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 6

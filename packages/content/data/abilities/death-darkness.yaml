@@ -1,0 +1,15 @@
+id: death-darkness
+name:
+  en: Death/Darkness
+  pt-BR: Morte/Escuridão
+description:
+  en: A target you choose within short range withers, suffering 3 points of damage.
+  pt-BR: Um alvo que você escolher a alcance curto definha, sofrendo 3 pontos de dano.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

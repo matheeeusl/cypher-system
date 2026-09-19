@@ -1,0 +1,13 @@
+id: expert-pilot
+name:
+  en: Expert Pilot
+  pt-BR: Piloto Especialista
+description:
+  en: You are specialized in all tasks related to piloting a starcraft.
+  pt-BR: Você é especializado em todas as tarefas relacionadas a pilotar uma nave estelar.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 3

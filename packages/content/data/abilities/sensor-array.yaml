@@ -1,0 +1,15 @@
+id: sensor-array
+name:
+  en: Sensor Array
+  pt-BR: Conjunto de Sensores
+description:
+  en: You are trained in using starcraft sensory instruments. These instruments allow users to answer general questions about a location, such as "How many people are in the mining colony?" or "Where did the other spacecraft crash?"
+  pt-BR: Você é treinado no uso de instrumentos sensoriais de naves estelares. Esses instrumentos permitem responder perguntas gerais sobre um local, como "Quantas pessoas há na colônia de mineração?" ou "Onde a outra espaçonave caiu?"
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 4

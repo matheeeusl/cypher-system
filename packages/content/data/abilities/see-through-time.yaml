@@ -1,0 +1,15 @@
+id: see-through-time
+name:
+  en: See Through Time
+  pt-BR: Ver Através do Tempo
+description:
+  en: Time is an illusion, as all time is one time. With great concentration, you can see into another time. You specify a time period regarding the place where you now stand. Interestingly, the easiest time to view is about one hundred years in the past or future. Viewing farther back or ahead is a nearly impossible task. This takes anywhere from one action to hours of concentration, depending on what the GM feels is appropriate due to time, distance, or other mitigating circumstances. However, you don't know in advance how long it will take.
+  pt-BR: O tempo é uma ilusão, pois todo o tempo é um único tempo. Com grande concentração, você pode ver em outro tempo. Você especifica um período de tempo em relação ao lugar onde está agora. Curiosamente, o tempo mais fácil de visualizar é cerca de cem anos no passado ou futuro. Visualizar mais longe, para trás ou para frente, é uma tarefa quase impossível. Isso leva de uma ação a horas de concentração, dependendo do que o Mestre considerar apropriado devido a tempo, distância, ou outras circunstâncias atenuantes. Porém, você não sabe de antemão quanto tempo levará.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: sees-beyond
+    tier: 5

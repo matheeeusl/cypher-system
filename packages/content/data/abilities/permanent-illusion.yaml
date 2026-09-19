@@ -1,0 +1,13 @@
+id: permanent-illusion
+name:
+  en: Permanent Illusion
+  pt-BR: Ilusão Permanente
+description:
+  en: An illusion (or portion of an illusion) that you create using Minor Illusion or related ability that fits within a 10-foot (3 m) cube becomes permanent. You can permanently end the illusion as an action, but others must expend exceptional ingenuity to prevent the illusion from regenerating even if it has apparently been dispersed.
+  pt-BR: Uma ilusão (ou parte de uma ilusão) que você cria usando Ilusão Menor ou habilidade semelhante, e que caiba em um cubo de 3 metros, torna-se permanente. Você pode encerrar permanentemente a ilusão como uma ação, mas outros precisam de engenhosidade excepcional para impedir que a ilusão se regenere, mesmo que aparentemente tenha sido dispersa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 6

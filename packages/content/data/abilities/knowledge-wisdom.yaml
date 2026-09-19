@@ -1,0 +1,23 @@
+id: knowledge-wisdom
+name:
+  en: Knowledge/Wisdom
+  pt-BR: Conhecimento/Sabedoria
+description:
+  en: >-
+    Choose up to three creatures (potentially including yourself). For
+    one minute, a particular type of task (but not an attack roll or
+    defense roll) is eased for those creatures, but only while they
+    remain within immediate range of you.
+  pt-BR: >-
+    Escolha até três criaturas (potencialmente incluindo você mesmo).
+    Por um minuto, um tipo específico de tarefa (mas não uma rolagem de
+    ataque ou defesa) é facilitado para essas criaturas, mas apenas
+    enquanto permanecerem a alcance imediato de você.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

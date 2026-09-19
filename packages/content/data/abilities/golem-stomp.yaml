@@ -1,0 +1,15 @@
+id: golem-stomp
+name:
+  en: Golem Stomp
+  pt-BR: Pisada de Golem
+description:
+  en: You stomp on the ground with all of your strength, creating a shock wave that attacks all creatures in immediate range. Affected creatures take 3 points of damage and are either pushed out of immediate range or fall down (your choice).
+  pt-BR: Você pisa no chão com toda a sua força, criando uma onda de choque que ataca todas as criaturas em alcance imediato. As criaturas afetadas sofrem 3 pontos de dano e são empurradas para fora do alcance imediato ou caem no chão (à sua escolha).
+cost:
+  pool: might
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 3

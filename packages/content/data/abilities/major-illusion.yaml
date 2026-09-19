@@ -1,0 +1,15 @@
+id: major-illusion
+name:
+  en: Major Illusion
+  pt-BR: Ilusão Maior
+description:
+  en: You create a complex scene of images within immediate range. The entire scene must fit within a 100-foot (30 m) cube. The images can move, but they can't leave the area defined by the cube. The illusion includes sound and smell. It lasts for ten minutes and changes as you direct (no concentration is needed). If you move beyond immediate range of the cube, the illusion vanishes.
+  pt-BR: Você cria uma cena complexa de imagens a alcance imediato. A cena inteira deve caber em um cubo de 30 metros. As imagens podem se mover, mas não podem sair da área definida pelo cubo. A ilusão inclui som e cheiro. Ela dura dez minutos e muda conforme você direciona (nenhuma concentração é necessária). Se você se afastar além do alcance imediato do cubo, a ilusão desaparece.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 3

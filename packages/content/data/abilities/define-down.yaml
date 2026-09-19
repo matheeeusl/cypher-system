@@ -1,0 +1,15 @@
+id: define-down
+name:
+  en: Define Down
+  pt-BR: Definir Para Baixo
+description:
+  en: The natural gravity within an area a short distance across that you are within immediate range of changes directions so that it flows in the direction you determine (up, up and to the south, west, and so on) for a few seconds, then snaps back. Affected targets could be tossed up to 20 feet (6 m) and take a few points of damage.
+  pt-BR: A gravidade natural dentro de uma área com o diâmetro de uma distância curta, à qual você está a alcance imediato, muda de direção, passando a fluir na direção que você determinar (para cima, para cima e para o sul, para o oeste, e assim por diante) por alguns segundos, voltando então ao normal. Os alvos afetados podem ser arremessados até 6 metros e sofrer alguns pontos de dano.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 3

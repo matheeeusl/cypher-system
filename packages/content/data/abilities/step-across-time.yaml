@@ -1,0 +1,15 @@
+id: step-across-time
+name:
+  en: Step Across Time
+  pt-BR: Passo Através do Tempo
+description:
+  en: While you are within immediate range of any blaze symbol you've previously marked, you and up to three willing characters who are next to you travel to a point of your choosing earlier in time, when you were all traveling on the same trail the marker is part of or a connecting trail. When you appear in the past, you do so at the location you were along the trail then, replacing earlier versions of yourself in so doing. Upon arriving at your temporal destination, you and your fellow time travelers are stunned (and unable to act) for one minute. Using this ability is usually a one-way trip. In addition to the normal options for using Effort, you can choose to use Effort to bring additional people with you; each level of Effort used in this way affects up to three additional targets.
+  pt-BR: Enquanto estiver a alcance imediato de qualquer símbolo de trilha que tenha marcado anteriormente, você e até três personagens dispostos que estejam ao seu lado viajam para um ponto anterior no tempo, à sua escolha, quando todos vocês estavam viajando pela mesma trilha da qual o marcador faz parte, ou por uma trilha conectada. Ao surgir no passado, você o faz no local onde estava na trilha naquele momento, substituindo versões anteriores de si mesmo ao fazê-lo. Ao chegar ao seu destino temporal, você e seus companheiros viajantes do tempo ficam atordoados (e incapazes de agir) por um minuto. Usar esta habilidade costuma ser uma viagem sem volta. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para trazer pessoas adicionais com você; cada nível de Esforço usado dessa forma afeta até três alvos adicionais.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 6

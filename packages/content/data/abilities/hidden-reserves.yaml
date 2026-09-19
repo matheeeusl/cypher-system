@@ -1,0 +1,13 @@
+id: hidden-reserves
+name:
+  en: Hidden Reserves
+  pt-BR: Reservas Ocultas
+description:
+  en: When you use an action to make a recovery roll, you also gain +1 to both your Might Edge and your Speed Edge for ten minutes thereafter.
+  pt-BR: Quando você usa uma ação para fazer uma rolagem de recuperação, também ganha +1 tanto no Bônus de Força quanto no Bônus de Agilidade pelos dez minutos seguintes.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 3

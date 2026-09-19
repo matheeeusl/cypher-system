@@ -1,0 +1,13 @@
+id: war-flesh
+name:
+  en: War Flesh
+  pt-BR: Carne de Guerra
+description:
+  en: You can instantly transform your hands and feet into claws, and your human teeth into fangs, or revert to your normal human appearance. When you make attacks with your claws or fangs, they count as medium weapons instead of light weapons.
+  pt-BR: Você pode transformar instantaneamente suas mãos e pés em garras, e seus dentes humanos em presas, ou reverter à sua aparência humana normal. Quando você faz ataques com suas garras ou presas, elas contam como armas médias em vez de armas leves.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 2

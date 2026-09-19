@@ -1,0 +1,13 @@
+id: friendly-help
+name:
+  en: Friendly Help
+  pt-BR: Ajuda Amigável
+description:
+  en: If your friend tries a task and fails, they can try again without spending Effort if you help. You provide this advantage to your friend even if you are not trained in the task that they are retrying.
+  pt-BR: Se seu amigo tentar uma tarefa e falhar, ele pode tentar novamente sem gastar Esforço se você o ajudar. Você concede essa vantagem ao seu amigo mesmo que não seja treinado na tarefa que ele está tentando novamente.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 1

@@ -1,0 +1,15 @@
+id: murderer
+name:
+  en: Murderer
+  pt-BR: Assassino
+description:
+  en: With a swift and sudden attack, you strike a foe in a vital spot. If the target is level 4 or lower, it is killed outright. For each additional level of Effort you apply, you can increase the level of the target by 1.
+  pt-BR: Com um ataque rápido e repentino, você atinge um inimigo em um ponto vital. Se o alvo for de nível 4 ou menor, é morto instantaneamente. Para cada nível adicional de Esforço aplicado, você pode aumentar em 1 o nível do alvo.
+cost:
+  pool: speed
+  amount: 8
+action_type: action
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 6

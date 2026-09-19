@@ -1,0 +1,13 @@
+id: magical-app-hacker
+name:
+  en: Magical App Hacker
+  pt-BR: Hacker de Aplicativos Mágicos
+description:
+  en: All magical app cyphers you use function at one level higher than normal. If given a week, you can tinker with one of your magical app cyphers, transforming it into another magical app cypher of the same type that you had in the past. The GM and player should collaborate to ensure that the transformation is logical—for example, a magical app that creates a fiery explosion probably can't be turned into a healing app.
+  pt-BR: Todas as cifras de aplicativo mágico que você usa funcionam em um nível acima do normal. Se tiver uma semana, você pode ajustar uma de suas cifras de aplicativo mágico, transformando-a em outra cifra de aplicativo mágico do mesmo tipo que já teve no passado. O Mestre e o jogador devem colaborar para garantir que a transformação seja lógica — por exemplo, um aplicativo mágico que cria uma explosão de fogo provavelmente não pode se tornar um aplicativo de cura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 4

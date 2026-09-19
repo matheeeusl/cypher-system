@@ -1,0 +1,37 @@
+id: masters-spells
+name:
+  en: Masters Spells
+  pt-BR: Domina Feitiços
+description:
+  en: By specializing in spellcasting and keeping a spellbook, you can quickly cast spells of arcing lightning, rolling fire, creeping shadow, and summoning.
+  pt-BR: Ao se especializar em lançar feitiços e manter um grimório, você pode conjurar rapidamente feitiços de relâmpagos, fogo, sombras rastejantes e convocação.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: arcane-flare
+  '2':
+    - kind: granted
+      ability_id: ray-of-confusion
+  '3':
+    - kind: choice
+      options:
+        - fire-bloom
+        - summon-giant-spider
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: soul-interrogation
+  '5':
+    - kind: granted
+      ability_id: granite-wall
+  '6':
+    - kind: choice
+      options:
+        - summon-demon
+        - word-of-death
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

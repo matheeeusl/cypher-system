@@ -1,0 +1,15 @@
+id: ignore-affliction
+name:
+  en: Ignore Affliction
+  pt-BR: Ignorar Aflição
+description:
+  en: If you are affected by an unwanted condition or affliction (such as disease, paralysis, mind control, broken limb, and so on, but not damage), you can ignore it and act as if it does not affect you for one hour. If the condition would normally last less than an hour, it is entirely negated.
+  pt-BR: Se você for afetado por uma condição ou aflição indesejada (como doença, paralisia, controle mental, membro quebrado, e assim por diante, mas não dano), você pode ignorá-la e agir como se ela não o afetasse por uma hora. Se a condição normalmente durasse menos de uma hora, ela é totalmente anulada.
+cost:
+  pool: might
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 6

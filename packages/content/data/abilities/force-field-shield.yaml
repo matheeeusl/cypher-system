@@ -1,0 +1,13 @@
+id: force-field-shield
+name:
+  en: Force Field Shield
+  pt-BR: Escudo de Campo de Força
+description:
+  en: You manifest a small plane of pure force, which takes on a shield-like shape with the barest flicker of a thought. You can dismiss it just as easily. To use the force shield, you must hold it in one of your hands. You are practiced in using your exotic shield in one hand as a light melee weapon; however, if you attack with both your shield and a weapon held in the other hand, both attacks are hindered. When you are unconscious or sleeping, the force field dissipates.
+  pt-BR: Você manifesta um pequeno plano de força pura, que assume a forma de um escudo com o mais leve lampejo de pensamento. Você pode dispensá- lo com a mesma facilidade. Para usar o escudo de força, você precisa segurá-lo em uma das mãos. Você é praticado no uso de seu escudo exótico em uma mão como arma leve corpo a corpo; porém, se atacar tanto com o escudo quanto com uma arma na outra mão, ambos os ataques ficam dificultados. Quando você fica inconsciente ou adormecido, o campo de força se dissipa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 1

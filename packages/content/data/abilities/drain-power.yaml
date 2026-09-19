@@ -1,0 +1,15 @@
+id: drain-power
+name:
+  en: Drain Power
+  pt-BR: Drenar Energia
+description:
+  en: You affect the main power source of a robot or machine, inflicting upon it all four conditions in Disable Mechanisms at once. You must touch the robot to do this (if you are making an attack, it inflicts no damage).
+  pt-BR: Você afeta a fonte de energia principal de um robô ou máquina, infligindo-lhe todas as quatro condições de Desativar Mecanismos de uma só vez. Você precisa tocar o robô para fazer isso (se estiver fazendo um ataque, ele não causa dano).
+cost:
+  pool: speed
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 5

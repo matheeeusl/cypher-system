@@ -1,0 +1,13 @@
+id: not-dead-yet
+name:
+  en: Not Dead Yet
+  pt-BR: Ainda Não Morri
+description:
+  en: When you would normally be dead, you instead fall unconscious for one round and then awaken. You immediately gain 1d6 + 6 points to restore your stat Pools, and you are treated as if debilitated until you rest for ten hours. If you die again before you make your ten-hour recovery roll, you are truly dead. If you also have this ability from another source, your healing from this ability increases to 1d6 + 12.
+  pt-BR: Quando normalmente você estaria morto, em vez disso fica inconsciente por uma rodada e depois desperta. Você imediatamente ganha 1d6 + 6 pontos para restaurar suas Reservas de atributo, e é tratado como debilitado até descansar por dez horas. Se morrer de novo antes de fazer sua rolagem de recuperação de dez horas, você está realmente morto. Se você também tiver esta habilidade de outra fonte, sua cura por esta habilidade aumenta para 1d6 + 12.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 5

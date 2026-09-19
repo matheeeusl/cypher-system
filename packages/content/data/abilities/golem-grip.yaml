@@ -1,0 +1,15 @@
+id: golem-grip
+name:
+  en: Golem Grip
+  pt-BR: Aperto de Golem
+description:
+  en: Your attack with the stone fists from your Golem Body ability is eased. If you hit, you can grab the target, preventing it from moving on its next turn. While you hold the target, its attacks or attempts to break free are hindered. If the target attempts to break free instead of attacking, you must make a Might-based roll to maintain your grip. If the target fails to break free, you can continue to hold it each round as your subsequent actions, automatically inflicting 4 points of damage each round by squeezing.
+  pt-BR: Seu ataque com os punhos de pedra da habilidade Corpo de Golem é facilitado. Se você acertar, pode agarrar o alvo, impedindo-o de se mover em seu próximo turno. Enquanto você segura o alvo, seus ataques ou tentativas de se soltar são dificultados. Se o alvo tentar se soltar em vez de atacar, você deve fazer uma rolagem baseada em Força para manter o aperto. Se o alvo não conseguir se soltar, você pode continuar a segurá-lo a cada rodada como suas ações seguintes, infligindo automaticamente 4 pontos de dano a cada rodada ao espremê-lo.
+cost:
+  pool: might
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 2

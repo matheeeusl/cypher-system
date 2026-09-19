@@ -1,0 +1,16 @@
+id: wields-two-weapons-at-once
+name:
+  en: Wields Two Weapons at Once
+  pt-BR: Empunha Duas Armas ao Mesmo Tempo
+description:
+  en: You bear steel with both hands, ready to take on any foe.
+  pt-BR: Você empunha aço com as duas mãos, pronto para enfrentar qualquer inimigo.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: dual-light-wield
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

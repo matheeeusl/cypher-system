@@ -1,0 +1,13 @@
+id: confidence-artist
+name:
+  en: Confidence Artist
+  pt-BR: Vigarista
+description:
+  en: When you're hacking into a computer system, running a con, picking a pocket, fooling or tricking a dupe, sneaking something by a guard, and so on, you gain an asset on the task.
+  pt-BR: Quando você está invadindo um sistema de computador, aplicando um golpe, batendo uma carteira, enganando ou ludibriando um otário, passando algo despercebido por um guarda, e assim por diante, você ganha um bônus na tarefa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 3

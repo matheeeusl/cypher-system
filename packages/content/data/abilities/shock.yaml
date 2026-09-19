@@ -1,0 +1,15 @@
+id: shock
+name:
+  en: Shock
+  pt-BR: Choque
+description:
+  en: Your hands crackle with electricity, and the next time you touch a creature, you inflict 3 points of damage. Alternatively, if you wield a weapon, for ten minutes it crackles with electricity and inflicts 1 additional point of damage per attack.
+  pt-BR: Suas mãos crepitam com eletricidade, e na próxima vez que tocar uma criatura, você inflige 3 pontos de dano. Alternativamente, se empunhar uma arma, por dez minutos ela crepita com eletricidade e inflige 1 ponto adicional de dano por ataque.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 1

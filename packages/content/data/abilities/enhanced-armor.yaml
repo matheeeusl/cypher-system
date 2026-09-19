@@ -1,0 +1,13 @@
+id: enhanced-armor
+name:
+  en: Enhanced Armor
+  pt-BR: Armadura Aprimorada
+description:
+  en: You upgrade your hardware to give you armor plating, subdermal implants, or some other material that provides physical protection. This change gives you +1 to Armor.
+  pt-BR: Você atualiza seu hardware para lhe dar blindagem, implantes subdérmicos, ou algum outro material que ofereça proteção física. Essa mudança lhe dá +1 na Armadura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: is-a-walking-tank
+    tier: 3

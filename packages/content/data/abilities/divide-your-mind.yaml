@@ -1,0 +1,15 @@
+id: divide-your-mind
+name:
+  en: Divide Your Mind
+  pt-BR: Dividir a Mente
+description:
+  en: You split your consciousness into two parts. For one minute, you can take two actions on each of your turns, but only one of them can be to use a special ability.
+  pt-BR: Você divide sua consciência em duas partes. Por um minuto, você pode realizar duas ações em cada um de seus turnos, mas apenas uma delas pode ser usar uma habilidade especial.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 6

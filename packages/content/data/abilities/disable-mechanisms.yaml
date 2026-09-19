@@ -1,0 +1,15 @@
+id: disable-mechanisms
+name:
+  en: Disable Mechanisms
+  pt-BR: Desativar Mecanismos
+description:
+  en: 'With a keen eye and quick moves, you disrupt some functions of a robot or machine and inflict upon it one of the following maladies: all its tasks are hindered for one minute; its speed is halved; it can take no action for one round; or it deals 2 fewer points of damage (minimum 1 point) for one minute. You must touch the robot or machine to disrupt it (if you are making an attack, it inflicts no damage).'
+  pt-BR: 'Com olhar aguçado e movimentos rápidos, você perturba algumas funções de um robô ou máquina e lhe inflige um dos seguintes males: todas as suas tarefas ficam dificultadas por um minuto; sua velocidade é reduzida à metade; ele não pode realizar nenhuma ação por uma rodada; ou ele causa 2 pontos a menos de dano (mínimo de 1 ponto) por um minuto. Você precisa tocar o robô ou máquina para perturbá-lo (se estiver fazendo um ataque, ele não causa dano).'
+cost:
+  pool: speed
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 3

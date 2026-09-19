@@ -1,0 +1,15 @@
+id: inferno-trail
+name:
+  en: Inferno Trail
+  pt-BR: Trilha Infernal
+description:
+  en: For the next minute, you leave a trail of flame in your wake. The trail matches your path and lasts for up to a minute, creating a wall of flame about 6 feet (2 m) high that inflicts 5 points of damage to any creature that passes through it, potentially catching them on fire for an additional 1 point of damage each round (if they are flammable) until they spend a round putting out the fire.
+  pt-BR: Pelo próximo minuto, você deixa uma trilha de chamas em seu rastro. A trilha acompanha seu caminho e dura até um minuto, criando uma parede de fogo de cerca de 2 metros de altura que inflige 5 pontos de dano a qualquer criatura que passe por ela, podendo incendiá-la por mais 1 ponto de dano adicional a cada rodada (se for inflamável) até que ela gaste uma rodada apagando o fogo.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 6

@@ -1,0 +1,13 @@
+id: nature-animals-plants
+name:
+  en: Nature/Animals/Plants
+  pt-BR: Natureza/Animais/Plantas
+description:
+  en: You are trained in botany and handling natural animals.
+  pt-BR: Você é treinado em botânica e no manejo de animais naturais.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

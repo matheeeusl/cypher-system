@@ -1,0 +1,15 @@
+id: psychic-suggestion
+name:
+  en: Psychic Suggestion
+  pt-BR: Sugestão Psíquica
+description:
+  en: You attempt to make the target take the action you indicate on its next turn. If the action you wish the target to take would cause direct harm to itself or its allies, your mental attack is hindered.
+  pt-BR: Você tenta fazer com que o alvo realize a ação que você indicar em seu próximo turno. Se a ação que deseja que o alvo realize causaria dano direto a ele mesmo ou a seus aliados, seu ataque mental fica dificultado.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 3

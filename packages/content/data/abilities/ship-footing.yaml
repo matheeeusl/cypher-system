@@ -1,0 +1,15 @@
+id: ship-footing
+name:
+  en: Ship Footing
+  pt-BR: Equilíbrio de Nave
+description:
+  en: For ten minutes, all tasks you attempt while on a spaceship are eased.
+  pt-BR: Por dez minutos, todas as tarefas que você tentar enquanto estiver em uma espaçonave são facilitadas.
+cost:
+  pool: speed
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 3

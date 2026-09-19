@@ -1,0 +1,16 @@
+id: sneak
+name:
+  en: Sneak
+  pt-BR: Furtivo
+description:
+  en: You are trained in stealth and initiative tasks.
+  pt-BR: Você é treinado em tarefas de furtividade e iniciativa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 2
+  - type: focus
+    id: hunts
+    tier: 2

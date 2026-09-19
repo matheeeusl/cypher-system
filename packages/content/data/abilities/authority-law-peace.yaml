@@ -1,0 +1,19 @@
+id: authority-law-peace
+name:
+  en: Authority/Law/Peace
+  pt-BR: Autoridade/Lei/Paz
+description:
+  en: >-
+    You prevent a foe that can hear and understand you from attacking
+    anyone or anything for one round.
+  pt-BR: >-
+    Você impede que um inimigo que possa ouvi-lo e entendê-lo ataque
+    qualquer um ou qualquer coisa por uma rodada.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

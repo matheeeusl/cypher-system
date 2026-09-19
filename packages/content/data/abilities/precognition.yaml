@@ -1,0 +1,15 @@
+id: precognition
+name:
+  en: Precognition
+  pt-BR: Precognição
+description:
+  en: 'You dimly sense the future for the next ten minutes. This has the following effects until the duration expires: your defense tasks gain an asset; you can predict the actions of those around you and gain an asset to seeing through deceptions and attempts to betray you as well as avoiding traps and ambushes; and you know what people are probably thinking and what they will say before they say it, which gives you an edge, granting an asset to all interaction skills.'
+  pt-BR: 'Você percebe vagamente o futuro pelos próximos dez minutos. Isso tem os seguintes efeitos até o fim da duração: suas tarefas de defesa ganham um bônus; você pode prever as ações daqueles ao seu redor e ganha um bônus para perceber enganos e tentativas de traição, bem como para evitar armadilhas e emboscadas; e você sabe o que as pessoas provavelmente estão pensando e o que dirão antes que digam, o que lhe dá vantagem, concedendo um bônus em todas as perícias de interação.'
+cost:
+  pool: intellect
+  amount: 6
+action_type: enabler
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 5

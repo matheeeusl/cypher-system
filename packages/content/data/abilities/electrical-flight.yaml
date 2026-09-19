@@ -1,0 +1,15 @@
+id: electrical-flight
+name:
+  en: Electrical Flight
+  pt-BR: Voo Elétrico
+description:
+  en: You exude an aura of crackling electricity that lets you fly a long distance each round for ten minutes. You can't carry other creatures with you.
+  pt-BR: Você exala uma aura de eletricidade crepitante que permite voar uma distância longa a cada rodada por dez minutos. Você não pode levar outras criaturas com você.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 5

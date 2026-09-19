@@ -1,0 +1,15 @@
+id: push-on-through
+name:
+  en: Push on Through
+  pt-BR: Seguir em Frente
+description:
+  en: You ignore the effects of terrain while moving for one hour.
+  pt-BR: Você ignora os efeitos do terreno ao se mover por uma hora.
+cost:
+  pool: might
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: never-says-die
+    tier: 1

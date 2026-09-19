@@ -1,0 +1,13 @@
+id: master-entertainer
+name:
+  en: Master Entertainer
+  pt-BR: Artista Mestre
+description:
+  en: Your Inspiring Ease ability works more effectively, easing your friends' tasks by two steps rather than one step.
+  pt-BR: Sua habilidade Facilidade Inspiradora funciona de forma mais eficaz, facilitando as tarefas de seus amigos em dois passos em vez de um.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: entertains
+    tier: 6

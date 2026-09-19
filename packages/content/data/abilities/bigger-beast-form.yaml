@@ -1,0 +1,13 @@
+id: bigger-beast-form
+name:
+  en: Bigger Beast Form
+  pt-BR: Forma Bestial Maior
+description:
+  en: "When you use Beast Form, your beast form grows bigger than before, during which time you achieve a height of 12 feet (4 m). Being so large, your beast form gains the following additional bonuses: +1 to Armor, +5 to your Might Pool, and you are trained in using your fists as heavy weapons (if you weren't already). However, your Speed defense tasks are hindered. While bigger, you also gain an asset to tasks that are easier for a larger creature to perform, like climbing, intimidating, wading rivers, and so on."
+  pt-BR: 'Quando você usa Forma Bestial, sua forma bestial cresce ainda mais do que antes, atingindo uma altura de 4 metros. Por ser tão grande, sua forma bestial ganha os seguintes bônus adicionais: +1 na Armadura, +5 na Reserva de Força, e você é treinado no uso de seus punhos como armas pesadas (se ainda não fosse). Porém, suas tarefas de defesa de Agilidade ficam dificultadas. Enquanto estiver maior, você também ganha um bônus em tarefas mais fáceis para uma criatura grande realizar, como escalar, intimidar, atravessar rios a vau, e assim por diante.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: howls-at-the-moon
+    tier: 3

@@ -1,0 +1,42 @@
+id: never-says-die
+name:
+  en: Never Says Die
+  pt-BR: Nunca Desiste
+description:
+  en: You never quit, can shrug off a beating, and always come back for more.
+  pt-BR: Você nunca desiste, consegue ignorar uma surra e sempre volta para mais.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: improved-recovery
+    - kind: granted
+      ability_id: push-on-through
+  '2':
+    - kind: granted
+      ability_id: ignore-the-pain
+  '3':
+    - kind: choice
+      options:
+        - blood-fever
+        - hidden-reserves
+      count: 1
+  '4':
+    - kind: choice
+      options:
+        - increasing-determination
+        - outlast-the-foe
+      count: 1
+  '5':
+    - kind: granted
+      ability_id: not-dead-yet
+  '6':
+    - kind: choice
+      options:
+        - final-defiance
+        - ignore-affliction
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

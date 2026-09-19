@@ -1,0 +1,13 @@
+id: golem-healing
+name:
+  en: Golem Healing
+  pt-BR: Cura de Golem
+description:
+  en: Your stone form from the Golem Body ability is more difficult to repair than flesh, which means you are unable to use the first, single-action recovery roll of the day that other PCs have access to. Thus, your first recovery roll on any given day requires ten minutes of rest, the second requires an hour of rest, and the third requires ten hours.
+  pt-BR: Sua forma de pedra, obtida com a habilidade Corpo de Golem, é mais difícil de reparar do que carne, o que significa que você não pode usar a primeira rolagem de recuperação de uma única ação que os demais PJs têm à disposição todos os dias. Assim, sua primeira rolagem de recuperação em um determinado dia exige dez minutos de descanso, a segunda exige uma hora de descanso, e a terceira exige dez horas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 1

@@ -77,9 +77,13 @@ const wieldsTwoWeapons: Focus = {
       { kind: 'granted', ability_id: 'double-strike' },
       { kind: 'granted', ability_id: 'infiltrator' },
     ],
-    '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'] }],
+    '3': [{ kind: 'choice', options: ['dual-medium-wield', 'precise-cut'], count: 1 }],
   },
   type_swap_option: null,
+  additional_equipment: null,
+  connection_options: null,
+  minor_effect_suggestion: null,
+  major_effect_suggestion: null,
 }
 
 const content = { type: warrior, descriptor: strong, focus: wieldsTwoWeapons }

@@ -1,0 +1,13 @@
+id: greater-controlled-change
+name:
+  en: Greater Controlled Change
+  pt-BR: Mudança Controlada Superior
+description:
+  en: It's easier to change into and out of the shape granted by your Beast Form ability. Transforming either way is now a difficulty 2 Intellect task.
+  pt-BR: É mais fácil se transformar na forma concedida por sua habilidade Forma Bestial e voltar dela. Transformar-se em qualquer direção agora é uma tarefa de Intelecto de dificuldade 2.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: howls-at-the-moon
+    tier: 4

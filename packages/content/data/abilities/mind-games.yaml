@@ -1,0 +1,15 @@
+id: mind-games
+name:
+  en: Mind Games
+  pt-BR: Jogos Mentais
+description:
+  en: You use lies and trickery, mockery, and perhaps even hateful, obscene language against a foe that can understand you. If successful, the foe is stunned for one round and cannot act, and it is dazed in the following round, during which time its tasks are hindered.
+  pt-BR: Você usa mentiras e artimanhas, zombaria, e talvez até linguagem odiosa e obscena contra um inimigo que consiga entendê-lo. Se bem-sucedido, o inimigo fica atordoado por uma rodada e não pode agir, e fica confuso na rodada seguinte, durante a qual suas tarefas ficam dificultadas.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 4

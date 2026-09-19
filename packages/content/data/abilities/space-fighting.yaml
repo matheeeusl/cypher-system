@@ -1,0 +1,13 @@
+id: space-fighting
+name:
+  en: Space Fighting
+  pt-BR: Combate Espacial
+description:
+  en: By taking advantage of microgravity conditions, you can use inertia and mass to your advantage. If you spend a round setting up a melee attack (or an attack from a thrown or launched object) while in zero-gravity or low-gravity conditions, the attack inflicts 6 additional points of damage.
+  pt-BR: Aproveitando as condições de microgravidade, você pode usar a inércia e a massa a seu favor. Se você gastar uma rodada preparando um ataque corpo a corpo (ou um ataque com um objeto arremessado ou lançado) em condições de gravidade zero ou baixa gravidade, o ataque inflige 6 pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 3

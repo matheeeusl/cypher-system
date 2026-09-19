@@ -1,0 +1,25 @@
+id: protection-silence
+name:
+  en: Protection/Silence
+  pt-BR: Proteção/Silêncio
+description:
+  en: >-
+    You create a quiet bubble of protection around you to an immediate
+    radius for one minute. The bubble moves with you. All defense rolls
+    for you and all creatures you designate within the bubble are
+    eased, and no noise, regardless of its origin, sounds louder than a
+    normal speaking voice.
+  pt-BR: >-
+    Você cria uma bolha silenciosa de proteção ao seu redor, com raio
+    imediato, por um minuto. A bolha se move com você. Todas as
+    rolagens de defesa suas e de todas as criaturas que você designar
+    dentro da bolha são facilitadas, e nenhum ruído, seja qual for sua
+    origem, soa mais alto que uma voz normal de conversa.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

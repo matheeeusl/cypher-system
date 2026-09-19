@@ -1,0 +1,13 @@
+id: energized-shield
+name:
+  en: Energized Shield
+  pt-BR: Escudo Energizado
+description:
+  en: Your force shield from your Force Field Shield ability now pulses with dangerous energy whenever you manifest it. Each time you use your shield as a melee or ranged weapon, it inflicts an additional 3 points of damage.
+  pt-BR: Seu escudo de força, da habilidade Escudo de Campo de Força, agora pulsa com energia perigosa sempre que você o manifesta. Cada vez que você usa seu escudo como arma corpo a corpo ou à distância, ele inflige 3 pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 4

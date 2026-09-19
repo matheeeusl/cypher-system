@@ -1,0 +1,15 @@
+id: sprint-and-grab
+name:
+  en: Sprint and Grab
+  pt-BR: Correr e Agarrar
+description:
+  en: You can run a short distance and make a melee attack to grab a foe of your size or smaller. A successful attack means you grab the foe and bring it to a halt if it was moving (this can be treated as a tackle, if appropriate).
+  pt-BR: Você pode correr uma distância curta e fazer um ataque corpo a corpo para agarrar um inimigo de seu tamanho ou menor. Um ataque bem-sucedido significa que você agarra o inimigo e o faz parar caso estivesse se movendo (isso pode ser tratado como um bote, se apropriado).
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: hunts
+    tier: 3

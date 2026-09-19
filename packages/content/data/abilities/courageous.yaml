@@ -1,0 +1,13 @@
+id: courageous
+name:
+  en: Courageous
+  pt-BR: Corajoso
+description:
+  en: You are trained in Intellect defense tasks and initiative tasks.
+  pt-BR: Você é treinado em tarefas de defesa de Intelecto e em tarefas de iniciativa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 1

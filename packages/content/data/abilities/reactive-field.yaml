@@ -1,0 +1,13 @@
+id: reactive-field
+name:
+  en: Reactive Field
+  pt-BR: Campo Reativo
+description:
+  en: Thanks to a remarkable enhancement of science, magic, psionics, or something even stranger, you now have a force field that radiates 1 inch (2.5 cm) from your body and provides you with +2 to Armor. In addition, if struck by a melee attack, the field creates a backlash that inflicts 4 points of electricity damage to the attacker.
+  pt-BR: Graças a um notável aprimoramento de ciência, magia, psiônica, ou algo ainda mais estranho, você agora tem um campo de força que se irradia 2,5 centímetros de seu corpo e lhe concede +2 na Armadura. Além disso, se atingido por um ataque corpo a corpo, o campo cria uma reação que inflige 4 pontos de dano elétrico ao atacante.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 6

@@ -1,0 +1,37 @@
+id: howls-at-the-moon
+name:
+  en: Howls at the Moon
+  pt-BR: Uiva para a Lua
+description:
+  en: For brief periods, you become a fearsome and powerful creature with control issues.
+  pt-BR: Por breves períodos, você se torna uma criatura temível e poderosa com problemas de controle.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: beast-form
+  '2':
+    - kind: granted
+      ability_id: controlled-change
+  '3':
+    - kind: choice
+      options:
+        - bigger-beast-form
+        - greater-beast-form
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: greater-controlled-change
+  '5':
+    - kind: granted
+      ability_id: enhanced-beast-form
+  '6':
+    - kind: choice
+      options:
+        - lethal-damage
+        - perfect-control
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

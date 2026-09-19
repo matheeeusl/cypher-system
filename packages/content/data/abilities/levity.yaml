@@ -1,0 +1,13 @@
+id: levity
+name:
+  en: Levity
+  pt-BR: Leveza
+description:
+  en: Through wit, charm, humor, and grace, you are trained in all social interactions other than those involving coercion or intimidation. During rests, you put friends and comrades at ease so much that they gain +1 to their recovery rolls.
+  pt-BR: Por meio de agudeza, charme, humor e graça, você é treinado em todas as interações sociais, exceto aquelas que envolvem coerção ou intimidação. Durante descansos, você deixa amigos e companheiros tão à vontade que eles ganham +1 em suas rolagens de recuperação.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: entertains
+    tier: 1

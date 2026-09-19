@@ -1,0 +1,15 @@
+id: force-bash
+name:
+  en: Force Bash
+  pt-BR: Golpe de Força
+description:
+  en: This is a pummeling melee attack you make with your Force Field Shield. Your attack inflicts 1 less point of damage than normal but dazes your target for one round, during which time all tasks it performs are hindered.
+  pt-BR: Este é um ataque corpo a corpo contundente feito com seu Escudo de Campo de Força. Seu ataque inflige 1 ponto de dano a menos que o normal, mas atordoa o alvo por uma rodada, durante a qual todas as tarefas que ele realizar ficam dificultadas.
+cost:
+  pool: might
+  amount: 1
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 1

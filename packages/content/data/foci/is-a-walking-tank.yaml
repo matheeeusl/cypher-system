@@ -1,0 +1,60 @@
+id: is-a-walking-tank
+name:
+  en: Is a Walking Tank
+  pt-BR: É um Tanque Ambulante
+description:
+  en: Some of your organic parts have been replaced with artificial components. Like most people in the city, you are a cyborg, but your augmentations are extensive, and your chrome parts are meant for defense and protecting others. You almost certainly have metal plating and technical components visible on your skin. As you advance, you can add to, modify, or discover new functions for your machine parts.
+  pt-BR: Algumas de suas partes orgânicas foram substituídas por componentes artificiais. Como a maioria das pessoas na cidade, você é um ciborgue, mas seus aprimoramentos são extensos, e suas peças de cromo têm o propósito de defender e proteger os outros. Você quase certamente tem placas metálicas e componentes técnicos visíveis em sua pele. À medida que avança, você pode adicionar, modificar, ou descobrir novas funções para suas peças mecânicas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: tank-chrome
+  '2':
+    - kind: granted
+      ability_id: defensive-hud
+  '3':
+    - kind: choice
+      options:
+        - hidden-shield
+        - enhanced-armor
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: living-wall
+  '5':
+    - kind: granted
+      ability_id: deep-reserves
+  '6':
+    - kind: choice
+      options:
+        - embedded-drone
+        - ultra-enhancement
+      count: 1
+type_swap_option:
+  ability_id: hidden-shield
+additional_equipment: null
+connection_options:
+  - en: >-
+      Pick one other PC. This character protected you from harm
+      recently, and you feel indebted to them for saving your life.
+    pt-BR: >-
+      Escolha outro PJ. Esse personagem o protegeu de perigo
+      recentemente, e você se sente em dívida por ele ter salvado sua
+      vida.
+  - en: >-
+      Pick one other PC. They think you are an incredibly selfish
+      person, perhaps based on their belief that you always save
+      yourself first.
+    pt-BR: >-
+      Escolha outro PJ. Ele acha que você é uma pessoa incrivelmente
+      egoísta, talvez por acreditar que você sempre se salva primeiro.
+  - en: Pick one other PC. You once fought on opposite sides of a combat.
+    pt-BR: Escolha outro PJ. Vocês já lutaram em lados opostos em um combate.
+  - en: Pick one other PC. Something about them makes you feel very protective toward them.
+    pt-BR: Escolha outro PJ. Algo nele faz você se sentir muito protetor em relação a ele.
+minor_effect_suggestion:
+  en: You gain +1 to Armor for one round.
+  pt-BR: Você ganha +1 na Armadura por uma rodada.
+major_effect_suggestion:
+  en: You regain 2 points to your Might Pool.
+  pt-BR: Você recupera 2 pontos em sua Reserva de Força.

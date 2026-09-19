@@ -1,0 +1,16 @@
+id: lethal-damage
+name:
+  en: Lethal Damage
+  pt-BR: Dano Letal
+description:
+  en: Choose one of your existing attacks that inflicts points of damage (depending on your type and focus, this might be a specific weapon, a special ability such as a blast of fire, or your unarmed attacks). When you hit with that attack, you inflict an additional 5 points of damage.
+  pt-BR: Escolha um de seus ataques existentes que inflige pontos de dano (dependendo de seu tipo e foco, isso pode ser uma arma específica, uma habilidade especial como uma rajada de fogo, ou seus ataques desarmados). Quando você acerta com esse ataque, inflige 5 pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 6
+  - type: focus
+    id: howls-at-the-moon
+    tier: 6

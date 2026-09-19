@@ -1,0 +1,15 @@
+id: improved-sensor
+name:
+  en: Improved Sensor
+  pt-BR: Sensor Aprimorado
+description:
+  en: When you use Sensor, you can place the sensor anywhere you choose within long range.
+  pt-BR: Quando você usa Sensor, pode posicionar o sensor em qualquer lugar que escolher a alcance longo.
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: sees-beyond
+    tier: 6

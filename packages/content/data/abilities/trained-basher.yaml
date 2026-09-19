@@ -1,0 +1,13 @@
+id: trained-basher
+name:
+  en: Trained Basher
+  pt-BR: Golpeador Treinado
+description:
+  en: You are trained in using the stone fists from your Golem Body as a medium weapon.
+  pt-BR: Você é treinado no uso dos punhos de pedra de sua habilidade Corpo de Golem como arma média.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 3

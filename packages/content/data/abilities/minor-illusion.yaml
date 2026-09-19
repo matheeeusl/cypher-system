@@ -1,0 +1,15 @@
+id: minor-illusion
+name:
+  en: Minor Illusion
+  pt-BR: Ilusão Menor
+description:
+  en: You create a single image of a creature or object within immediate range. The image must fit within a 10-foot (3 m) cube. The image can move (for example, you could make the illusion of a person walk or attack), but it can't leave the area defined by the cube. The illusion includes sound but not smell. It lasts for ten minutes, but if you want to change the original illusion significantly—such as making a creature appear to be wounded—you must concentrate on it again (though doing so doesn't cost additional Intellect points). If you move beyond immediate range of the cube, the illusion vanishes.
+  pt-BR: Você cria uma única imagem de uma criatura ou objeto a alcance imediato. A imagem deve caber em um cubo de 3 metros. A imagem pode se mover (por exemplo, você pode fazer a ilusão de uma pessoa andar ou atacar), mas não pode sair da área definida pelo cubo. A ilusão inclui som, mas não cheiro. Ela dura dez minutos, mas se você quiser mudar significativamente a ilusão original — como fazer uma criatura parecer ferida — deve se concentrar nela novamente (embora isso não custe pontos adicionais de Intelecto). Se você se afastar além do alcance imediato do cubo, a ilusão desaparece.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 1

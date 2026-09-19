@@ -1,0 +1,42 @@
+id: divine-intervention
+name:
+  en: Divine Intervention
+  pt-BR: Intervenção Divina
+description:
+  en: >-
+    You ask the divine to intervene on your behalf, usually against a
+    creature within long range, changing the course of its life in a
+    small way by introducing a major special effect upon it. The major
+    special effect is akin to what occurs when you roll a natural 20 on
+    an attack. If you want to try for a larger effect, and if the GM
+    allows it, you can attempt a divine intervention with a
+    more far-reaching effect, which is more like the kind of GM
+    intrusion initiated by the GM on their players. In this case,
+    Divine Intervention also costs 4 XP, the effect may not work out
+    exactly like you hope, and you may not make another plea for divine
+    intervention for a week.
+  pt-BR: >-
+    Você pede que o divino intervenha em seu favor, geralmente contra
+    uma criatura a alcance longo, mudando o curso de sua vida de uma
+    forma pequena ao introduzir nela um efeito especial maior. O efeito
+    especial maior é semelhante ao que ocorre quando você tira um 20
+    natural em um ataque. Se quiser tentar um efeito maior, e se o
+    Mestre permitir, você pode tentar uma intervenção divina com um
+    efeito mais abrangente, que se assemelha mais ao tipo de intrusão
+    do Mestre que ele mesmo inicia sobre os jogadores. Nesse caso, a
+    Intervenção Divina também custa 4 PX, o efeito pode não se
+    concretizar exatamente como você espera, e você não pode fazer
+    outro apelo por intervenção divina por uma semana.
+  # Note: source cost is printed as "(2 Intellect points, or 2
+  # Intellect points + 4 XP)" — an alternative-cost structure the
+  # single pool+amount `cost` field can't represent. Recorded as the
+  # baseline 2 Intellect points; the +4 XP larger-effect option is
+  # folded into the prose above instead. Flagged for schema review.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 5

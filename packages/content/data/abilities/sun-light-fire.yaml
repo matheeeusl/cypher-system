@@ -1,0 +1,21 @@
+id: sun-light-fire
+name:
+  en: Sun/Light/Fire
+  pt-BR: Sol/Luz/Fogo
+description:
+  en: >-
+    You cause one creature or object within short range to catch fire,
+    inflicting 1 point of ambient damage each round until the fire is
+    extinguished (requiring an action).
+  pt-BR: >-
+    Você faz uma criatura ou objeto a alcance curto pegar fogo,
+    infligindo 1 ponto de dano ambiente a cada rodada até que o fogo
+    seja apagado (o que exige uma ação).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

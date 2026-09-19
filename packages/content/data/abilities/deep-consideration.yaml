@@ -1,0 +1,15 @@
+id: deep-consideration
+name:
+  en: Deep Consideration
+  pt-BR: Consideração Profunda
+description:
+  en: When you develop a plan that involves you and your friends working together to accomplish a goal, you can ask the GM one very general question about what is likely to happen if you carry out the plan, and you will get a simple, brief answer. In addition, all of you gain an asset to one roll related to enacting the plan you developed together, as long as you put the plan into action within a few days of the plan's creation.
+  pt-BR: Quando você elabora um plano que envolve você e seus amigos trabalhando juntos para alcançar um objetivo, pode fazer ao Mestre uma pergunta bem geral sobre o que provavelmente acontecerá se executarem o plano, e receberá uma resposta simples e breve. Além disso, todos vocês ganham um bônus em uma rolagem relacionada à execução do plano que criaram juntos, desde que o coloquem em prática poucos dias após sua criação.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 6

@@ -1,0 +1,44 @@
+id: loves-the-void
+name:
+  en: Loves the Void
+  pt-BR: Ama o Vazio
+description:
+  en: When it's just you, your spacesuit, and the panorama of stars wheeling out forever and always, you are at peace.
+  pt-BR: Quando é só você, seu traje espacial, e o panorama de estrelas girando para sempre, você está em paz.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: vacuum-skilled
+    - kind: granted
+      ability_id: microgravity-adept
+  '2':
+    - kind: granted
+      ability_id: enhanced-speed-edge
+    - kind: granted
+      ability_id: enhanced-physique
+  '3':
+    - kind: choice
+      options:
+        - space-fighting
+        - fusion-armor
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: silent-as-space
+    - kind: granted
+      ability_id: push-off-and-throw
+  '5':
+    - kind: granted
+      ability_id: microgravity-avoidance
+  '6':
+    - kind: choice
+      options:
+        - weightless-shot
+        - reactive-field
+      count: 1
+type_swap_option:
+  ability_id: have-spacesuit-will-travel
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

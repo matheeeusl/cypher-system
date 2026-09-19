@@ -1,0 +1,18 @@
+id: quarry
+name:
+  en: Quarry
+  pt-BR: Presa
+description:
+  en: Choose a quarry (a single individual creature that you can see). You are trained in all tasks involving following, understanding, interacting with, or fighting that creature. You can have only one quarry at a time.
+  pt-BR: Escolha uma presa (uma única criatura que você consiga ver). Você é treinado em todas as tarefas que envolvam seguir, entender, interagir com, ou lutar contra aquela criatura. Você só pode ter uma presa por vez.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 2
+  - type: focus
+    id: hunts
+    tier: 2

@@ -1,0 +1,15 @@
+id: in-harms-way
+name:
+  en: In Harm's Way
+  pt-BR: No Caminho do Perigo
+description:
+  en: When you put your friends before yourself as your action, you ease all defense tasks for all characters you choose that are adjacent to you. This lasts until the end of your next turn. If one of your friends would be damaged, you can choose to take up to half the number of points of damage they would otherwise take, but only if you're not already impaired or debilitated.
+  pt-BR: Quando você coloca seus amigos antes de si mesmo como sua ação, facilita todas as tarefas de defesa de todos os personagens que escolher que estejam adjacentes a você. Isso dura até o fim de seu próximo turno. Se um de seus amigos fosse sofrer dano, você pode optar por receber até metade do número de pontos de dano que ele sofreria, mas apenas se você ainda não estiver prejudicado ou debilitado.
+cost:
+  pool: intellect
+  amount: 3
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 4

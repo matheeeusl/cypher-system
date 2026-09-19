@@ -1,0 +1,16 @@
+id: enhanced-speed-edge
+name:
+  en: Enhanced Speed Edge
+  pt-BR: Bônus de Agilidade Aprimorado
+description:
+  en: You gain +1 to your Speed Edge.
+  pt-BR: Você ganha +1 no seu Bônus de Agilidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 2
+  - type: focus
+    id: loves-the-void
+    tier: 2

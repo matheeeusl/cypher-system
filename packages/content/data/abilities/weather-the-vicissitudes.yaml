@@ -1,0 +1,13 @@
+id: weather-the-vicissitudes
+name:
+  en: Weather the Vicissitudes
+  pt-BR: Suportar as Vicissitudes
+description:
+  en: Helping your friends means being able to stand up to everything the world throws at you. You have +1 to Armor. Also, you resist heat, cold, and similar extremes and have an additional +1 to Armor against ambient damage or other damage that would normally ignore Armor.
+  pt-BR: Ajudar seus amigos significa ser capaz de suportar tudo o que o mundo lançar contra você. Você tem +1 na Armadura. Além disso, você resiste a calor, frio e extremos semelhantes, e tem mais +1 na Armadura contra dano ambiente ou outro dano que normalmente ignoraria a Armadura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 2

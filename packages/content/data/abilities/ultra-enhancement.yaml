@@ -1,0 +1,16 @@
+id: ultra-enhancement
+name:
+  en: Ultra Enhancement
+  pt-BR: Aprimoramento Extremo
+description:
+  en: You gain +1 to Armor and +5 to each of your three stat Pools.
+  pt-BR: Você ganha +1 na Armadura e +5 em cada uma de suas três Reservas de atributo.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: abides-in-stone
+    tier: 6
+  - type: focus
+    id: is-a-walking-tank
+    tier: 6

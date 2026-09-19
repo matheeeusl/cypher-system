@@ -1,0 +1,16 @@
+id: expert-cypher-use
+name:
+  en: Expert Cypher Use
+  pt-BR: Uso Perito de Cifras
+description:
+  en: You can bear three cyphers at a time.
+  pt-BR: Você pode portar três cifras ao mesmo tempo.
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: adept
+    tier: 3
+  - type: type
+    id: warrior
+    tier: 3

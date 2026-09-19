@@ -1,0 +1,13 @@
+id: flex-lore
+name:
+  en: Flex Lore
+  pt-BR: Saber Flexível
+description:
+  en: After each ten-hour recovery roll when you have access to a high-technology digital reference library (such as one that might be found in a starship or in a learning center), choose one field of knowledge related to a specific planet or some other location. The field might be habitations, customs, governments, characteristics of the main species, important figures, and so on. You're trained in that field until you use this ability again. You could use this ability with an area of knowledge you're already trained in to become specialized.
+  pt-BR: Após cada rolagem de recuperação de dez horas, quando tiver acesso a uma biblioteca de referência digital de alta tecnologia (como uma que poderia ser encontrada em uma nave estelar ou centro de aprendizado), escolha um campo de conhecimento relacionado a um planeta específico ou outro local. O campo pode ser habitações, costumes, governos, características da espécie principal, figuras importantes, e assim por diante. Você fica treinado naquele campo até usar esta habilidade novamente. Você pode usar esta habilidade em uma área de conhecimento na qual já é treinado para se tornar especializado.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 1

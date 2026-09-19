@@ -1,0 +1,13 @@
+id: machine-vulnerabilities
+name:
+  en: Machine Vulnerabilities
+  pt-BR: Vulnerabilidades de Máquinas
+description:
+  en: You inflict 3 additional points of damage against robots and animate machines of all kinds.
+  pt-BR: Você inflige 3 pontos adicionais de dano contra robôs e máquinas animadas de todos os tipos.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: battles-robots
+    tier: 1

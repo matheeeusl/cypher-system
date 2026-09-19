@@ -1,0 +1,13 @@
+id: trickery-greed-commerce
+name:
+  en: Trickery/Greed/Commerce
+  pt-BR: Trapaça/Ganância/Comércio
+description:
+  en: You are trained in detecting the deceptions of other creatures.
+  pt-BR: Você é treinado em detectar os enganos de outras criaturas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

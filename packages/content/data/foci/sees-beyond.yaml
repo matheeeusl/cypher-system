@@ -1,0 +1,37 @@
+id: sees-beyond
+name:
+  en: Sees Beyond
+  pt-BR: Vê Além
+description:
+  en: You have a psychic sense that allows you to see what others cannot.
+  pt-BR: Você tem um sentido psíquico que permite ver o que outros não conseguem.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: see-the-unseen
+  '2':
+    - kind: granted
+      ability_id: see-through-matter
+  '3':
+    - kind: choice
+      options:
+        - find-the-hidden
+        - sensor
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: remote-viewing
+  '5':
+    - kind: granted
+      ability_id: see-through-time
+  '6':
+    - kind: choice
+      options:
+        - mental-projection
+        - improved-sensor
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

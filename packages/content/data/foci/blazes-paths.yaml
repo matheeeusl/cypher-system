@@ -1,0 +1,80 @@
+id: blazes-paths
+name:
+  en: Blazes Paths
+  pt-BR: Abre Trilhas
+description:
+  en: You read the land. You know every twisted arroyo, spiny cactus, and change in the weather. And what you don't know, you soon learn by sniffing the wind, tasting the dirt, and squinting across the wilderness landscapes. As you go, you mark the way for others to follow, notching trees or scribing stones with your personal symbol. As you become more and more accomplished, the network of trails you've blazed enhances not only your reputation as a pathfinder, but also your personal spiritual strength, allowing you to see what's happening along them, to flash along the miles you blazed in mere moments, and even return to the first time you ever set foot on a trail.
+  pt-BR: Você lê a terra. Conhece cada riacho sinuoso, cada cacto espinhoso e cada mudança no clima. E o que não sabe, logo aprende farejando o vento, provando a terra e observando atentamente as paisagens selvagens. À medida que avança, você marca o caminho para que outros o sigam, entalhando árvores ou gravando pedras com seu símbolo pessoal. À medida que se torna mais e mais experiente, a rede de trilhas que você abriu fortalece não apenas sua reputação como desbravador, mas também sua força espiritual pessoal, permitindo que veja o que acontece ao longo delas, que percorra em poucos instantes as milhas que abriu, e até que retorne ao primeiro momento em que pisou em uma trilha.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: pathfinder-skills
+  '2':
+    - kind: granted
+      ability_id: happy-trails
+  '3':
+    - kind: choice
+      options:
+        - trail-awareness
+        - trail-sensor
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: blaze-door
+  '5':
+    - kind: granted
+      ability_id: blaze-recovery
+  '6':
+    - kind: choice
+      options:
+        - step-across-time
+        - trail-cypher
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: You have a hatchet, blue dye, and a brush—all equipment you use to blaze your trails in the wilderness.
+  pt-BR: Você tem um machado, tintura azul e um pincel — todo o equipamento que usa para marcar suas trilhas na natureza selvagem.
+connection_options:
+  - en: >-
+      Pick one other PC. For some reason, whenever that character stands
+      right next to you, your navigation tasks are hindered.
+    pt-BR: >-
+      Escolha outro PJ. Por algum motivo, sempre que esse personagem
+      fica bem ao seu lado, suas tarefas de navegação ficam
+      dificultadas.
+  - en: >-
+      Pick one other PC. You're not sure how they found out, but that
+      character knows about the one time you got lost and couldn't find
+      your way without help.
+    pt-BR: >-
+      Escolha outro PJ. Você não sabe bem como, mas esse personagem
+      descobriu sobre a vez em que você se perdeu e não conseguiu
+      encontrar o caminho sem ajuda.
+  - en: >-
+      Pick one other PC. Seeing you use your focus abilities triggers
+      memories in them of having grown up someplace completely
+      different than where they previously remembered. That memory is
+      up to the other PC. If the memory is weird enough, they may want
+      your help to find a way back there.
+    pt-BR: >-
+      Escolha outro PJ. Ver você usar suas habilidades de foco desperta
+      nele memórias de ter crescido em um lugar completamente diferente
+      daquele de que se lembrava antes. Essa memória fica a critério do
+      outro PJ. Se a memória for estranha o suficiente, ele pode querer
+      sua ajuda para encontrar um caminho de volta para lá.
+  - en: >-
+      Pick one other PC. You found them close to death while you were
+      blazing a path out in the wilderness. They either have no memory
+      of what led them to that spot, or ended up there for a harrowing
+      reason—it's up to that PC.
+    pt-BR: >-
+      Escolha outro PJ. Você o encontrou à beira da morte enquanto
+      abria uma trilha na natureza selvagem. Ele não tem memória do que
+      o levou até aquele lugar, ou chegou lá por um motivo angustiante
+      — isso fica a critério do outro PJ.
+minor_effect_suggestion:
+  en: You restore 2 points to your Speed Pool.
+  pt-BR: Você restaura 2 pontos à sua Reserva de Agilidade.
+major_effect_suggestion:
+  en: An ally or indicated target can immediately move up to a short distance.
+  pt-BR: Um aliado ou o alvo indicado pode se mover imediatamente até uma distância curta.

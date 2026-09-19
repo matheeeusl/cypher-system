@@ -1,0 +1,15 @@
+id: using-the-environment
+name:
+  en: Using the Environment
+  pt-BR: Usando o Ambiente
+description:
+  en: You find some way to use the environment to your advantage in a fight. For the next ten minutes, attack rolls and Speed defense rolls are eased.
+  pt-BR: Você encontra uma forma de usar o ambiente a seu favor em uma luta. Pelos próximos dez minutos, rolagens de ataque e de defesa de Agilidade são facilitadas.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 5

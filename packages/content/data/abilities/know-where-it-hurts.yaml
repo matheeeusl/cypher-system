@@ -1,0 +1,13 @@
+id: know-where-it-hurts
+name:
+  en: Know Where It Hurts
+  pt-BR: Saber Onde Dói
+description:
+  en: You inflict 1 additional point of damage against targets you've successfully tracked, hidden from, used Overwatch on, or studied for one full action.
+  pt-BR: Você inflige 1 ponto adicional de dano contra alvos que rastreou com sucesso, dos quais se escondeu, contra os quais usou Vigilância, ou que estudou por uma ação completa.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 1

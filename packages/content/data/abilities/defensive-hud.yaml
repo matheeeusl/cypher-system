@@ -1,0 +1,15 @@
+id: defensive-hud
+name:
+  en: Defensive HUD
+  pt-BR: HUD Defensivo
+description:
+  en: You upgrade your chrome with heads-up display (HUD) systems that help you make sense of, analyze, and use your defenses in your environment. When you trigger this ability, you gain an asset on one defense roll as your software outlines foes and predicts their attacks. Alternatively, you can use the heads-up display to magnify your vision, increasing your vision range to 5 miles (8 km) for two rounds. If you apply one level of Effort, you can also see through basic materials (such as wood, concrete, plastic, and stone) to a short distance in false color images. If you apply two levels of Effort, you can see through special materials (such as solid lead or other substances) to an immediate distance in false color images; however, the GM might require you to succeed at an Intellect-based task first, depending on the material blocking your armor's sensors.
+  pt-BR: Você atualiza seu cromo com sistemas de exibição frontal (HUD) que ajudam você a entender, analisar e usar suas defesas no ambiente. Quando aciona esta habilidade, ganha um bônus em uma rolagem de defesa, pois seu software delineia inimigos e prevê seus ataques. Alternativamente, você pode usar a exibição frontal para ampliar sua visão, aumentando seu alcance visual para 8 quilômetros por duas rodadas. Se aplicar um nível de Esforço, também pode enxergar através de materiais básicos (como madeira, concreto, plástico e pedra) até uma distância curta, em imagens de cores falsas. Se aplicar dois níveis de Esforço, pode enxergar através de materiais especiais (como chumbo maciço ou outras substâncias) até uma distância imediata, em imagens de cores falsas; porém, o Mestre pode exigir que você primeiro seja bem-sucedido em uma tarefa baseada em Intelecto, dependendo do material que bloqueia os sensores de sua armadura.
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: is-a-walking-tank
+    tier: 2

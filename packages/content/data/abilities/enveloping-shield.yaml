@@ -1,0 +1,13 @@
+id: enveloping-shield
+name:
+  en: Enveloping Shield
+  pt-BR: Escudo Envolvente
+description:
+  en: Your Force Field Shield ability produces an envelope of force that enfolds you while you are holding the shield, granting you +1 to Armor.
+  pt-BR: Sua habilidade Escudo de Campo de Força produz um envoltório de força que o envolve enquanto você segura o escudo, concedendo-lhe +1 na Armadura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 2

@@ -1,0 +1,13 @@
+id: blaze-recovery
+name:
+  en: Blaze Recovery
+  pt-BR: Recuperação de Trilha
+description:
+  en: You gain an additional one-action recovery roll if you take it within long range of a blaze symbol you've made. Once you've used this ability, you can't use it again until after your next ten-hour recovery roll.
+  pt-BR: Você ganha uma rolagem de recuperação adicional de uma ação, se a fizer dentro do alcance longo de um símbolo de trilha que criou. Uma vez que você tenha usado esta habilidade, não pode usá-la novamente até depois de sua próxima rolagem de recuperação de dez horas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 5

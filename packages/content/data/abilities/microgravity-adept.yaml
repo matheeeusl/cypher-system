@@ -1,0 +1,13 @@
+id: microgravity-adept
+name:
+  en: Microgravity Adept
+  pt-BR: Adepto da Microgravidade
+description:
+  en: You ignore all the ill effects of low gravity and no gravity on movement; you are trained in low-gravity maneuvers and zero-gravity maneuvers. (You might still be subject to negative biological effects of long-term exposure, if any.)
+  pt-BR: Você ignora todos os efeitos ruins de baixa gravidade e ausência de gravidade sobre o movimento; você é treinado em manobras de baixa gravidade e manobras de gravidade zero. (Você ainda pode estar sujeito a efeitos biológicos negativos de exposição prolongada, se houver.)
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 1

@@ -1,0 +1,13 @@
+id: seek-and-hide
+name:
+  en: Seek and Hide
+  pt-BR: Procurar e Esconder
+description:
+  en: Tasks for tracking, looking for, or hiding from other creatures are eased.
+  pt-BR: Tarefas de rastrear, procurar por, ou se esconder de outras criaturas são facilitadas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 1

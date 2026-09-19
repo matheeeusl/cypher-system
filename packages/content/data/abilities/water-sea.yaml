@@ -1,0 +1,23 @@
+id: water-sea
+name:
+  en: Water/Sea
+  pt-BR: Água/Mar
+description:
+  en: A target you touch can breathe water for ten minutes.
+  pt-BR: Um alvo que você tocar pode respirar debaixo d'água por dez minutos.
+  # Note: the source text for this sub-ability has no printed
+  # action_type tag at all — it's the last item in the Blessing of the
+  # Gods list and the page break straight into "TIER 2" without one
+  # (unlike every other sub-ability in this list, which does have one).
+  # Inferred as "action" by analogy with the other touch-based
+  # sub-abilities here (Desire/Love/Health, Sky/Air), both tagged
+  # "Action."; flagged for confirmation against the source rather than
+  # treated as certain.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

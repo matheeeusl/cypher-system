@@ -1,0 +1,69 @@
+id: codes-magic-apps
+name:
+  en: Codes Magic Apps
+  pt-BR: Programa Aplicativos Mágicos
+description:
+  en: You are a maker, a crafter, but you use a unique combination of code and magic instead of wood, steel, or circuit boards. Like anyone who's spent a lot of time working on a computer, you've learned some strange secrets, not all of them entirely legal, and you know a lot about games, people, and how things work. More than just a computer nerd, you're a developer and (although you might not admit it) a hacker. Most of your specialized gear is hardware or software for your computer or smart device, so you can dress however you want. You're probably used to wearing comfortable clothes, sitting for hours at a time, and enjoying many caffeinated beverages (that have permanently discolored some of your clothing).
+  pt-BR: Você é um criador, um artesão, mas usa uma combinação única de código e magia em vez de madeira, aço ou placas de circuito. Como qualquer pessoa que passou muito tempo trabalhando em um computador, você aprendeu alguns segredos estranhos, nem todos totalmente legais, e sabe muito sobre jogos, pessoas e como as coisas funcionam. Mais do que apenas um nerd de computador, você é um desenvolvedor e (embora talvez não admita) um hacker. A maior parte de seu equipamento especializado é hardware ou software para seu computador ou dispositivo inteligente, então você pode se vestir como quiser. Você provavelmente está acostumado a usar roupas confortáveis, ficar sentado por horas a fio, e apreciar muitas bebidas cafeinadas (que já descoloriram permanentemente parte de suas roupas).
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: magical-programmer
+  '2':
+    - kind: granted
+      ability_id: app-tinkerer
+  '3':
+    - kind: choice
+      options:
+        - confidence-artist
+        - master-magical-programmer
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: magical-app-hacker
+  '5':
+    - kind: granted
+      ability_id: knowing-the-unknown
+  '6':
+    - kind: choice
+      options:
+        - call-in-favor
+        - usurp-cypher
+      count: 1
+type_swap_option: null
+additional_equipment:
+  en: Computer (laptop or desktop) and a smartphone or tablet.
+  pt-BR: Computador (laptop ou desktop) e um smartphone ou tablet.
+connection_options:
+  - en: >-
+      Pick one other PC. You once created a magical app to help get
+      them out of a sticky situation (parking ticket, failing grade,
+      clingy relationship, and so on).
+    pt-BR: >-
+      Escolha outro PJ. Certa vez você criou um aplicativo mágico para
+      tirá-lo de uma situação complicada (uma multa de estacionamento,
+      uma nota baixa, um relacionamento sufocante, e assim por diante).
+  - en: Pick one other PC. You know they know an embarrassing or incriminating secret about you.
+    pt-BR: Escolha outro PJ. Você sabe que ele conhece um segredo vergonhoso ou incriminador sobre você.
+  - en: >-
+      Pick one other PC. Something about this person annoys or
+      distracts you so that when they're within immediate range, your
+      tasks with computers and magical lore are hindered.
+    pt-BR: >-
+      Escolha outro PJ. Algo nessa pessoa o incomoda ou distrai, de
+      modo que, quando ela está a alcance imediato, suas tarefas com
+      computadores e saber mágico ficam dificultadas.
+  - en: >-
+      Pick one other PC. Every now and then, you're able to copy a
+      magical app cypher and send it to them (effectively creating a
+      duplicate of one of yours).
+    pt-BR: >-
+      Escolha outro PJ. De vez em quando, você consegue copiar uma
+      cifra de aplicativo mágico e enviá-la a ele (criando efetivamente
+      uma duplicata de uma das suas).
+minor_effect_suggestion:
+  en: Your next use of a magical app cypher within the next hour is eased.
+  pt-BR: Seu próximo uso de uma cifra de aplicativo mágico dentro da próxima hora é facilitado.
+major_effect_suggestion:
+  en: Your next use of a magical app cypher within the next day is eased.
+  pt-BR: Seu próximo uso de uma cifra de aplicativo mágico dentro do próximo dia é facilitado.

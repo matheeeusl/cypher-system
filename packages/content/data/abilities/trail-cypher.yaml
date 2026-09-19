@@ -1,0 +1,13 @@
+id: trail-cypher
+name:
+  en: Trail Cypher
+  pt-BR: Cifra de Trilha
+description:
+  en: Choose one cypher that you carry. The cypher must have an effect that is not instantaneous. You destroy the cypher and embed its power into a trail you've blazed. Any time you are on that trail or a connecting trail, you gain the effect of that cypher continuously. You can choose a cypher when you gain this ability, or you can wait and make the choice later. However, once you embed a cypher into your system of trails, you cannot later switch to a different cypher—the ability works only once.
+  pt-BR: Escolha uma cifra que você carrega. A cifra deve ter um efeito que não seja instantâneo. Você destrói a cifra e incorpora seu poder a uma trilha que abriu. Sempre que estiver naquela trilha ou em uma trilha conectada, você ganha o efeito daquela cifra continuamente. Você pode escolher uma cifra ao ganhar esta habilidade, ou pode esperar e fazer a escolha depois. Porém, uma vez que incorpore uma cifra ao seu sistema de trilhas, não pode mais trocá-la por outra — a habilidade funciona apenas uma vez.
+cost: null
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 6

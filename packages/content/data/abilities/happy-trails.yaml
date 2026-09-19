@@ -1,0 +1,13 @@
+id: happy-trails
+name:
+  en: Happy Trails
+  pt-BR: Boas Trilhas
+description:
+  en: Whether you're traveling along a path you've previously marked, or you're navigating and blazing a new trail, roaming with you puts your companions at ease. During rests on any day you've traveled together, you and your party gain +1 to your recovery rolls.
+  pt-BR: Seja viajando por um caminho que você já marcou, ou navegando e abrindo uma nova trilha, vagar com você deixa seus companheiros mais tranquilos. Durante descansos em qualquer dia em que tenham viajado juntos, você e seu grupo ganham +1 em suas rolagens de recuperação.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: blazes-paths
+    tier: 2

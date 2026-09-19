@@ -1,0 +1,44 @@
+id: fights-dirty
+name:
+  en: Fights Dirty
+  pt-BR: Luta Sujo
+description:
+  en: "You'll do anything to win a fight: bite, scratch, kick, trick, and worse."
+  pt-BR: 'Você faz qualquer coisa para vencer uma luta: morder, arranhar, chutar, enganar, e coisa pior.'
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: tracker
+    - kind: granted
+      ability_id: stalker
+  '2':
+    - kind: granted
+      ability_id: sneak
+    - kind: granted
+      ability_id: quarry
+  '3':
+    - kind: choice
+      options:
+        - betrayal
+        - surprise-attack
+      count: 1
+  '4':
+    - kind: choice
+      options:
+        - mind-games
+        - capable-warrior
+      count: 1
+  '5':
+    - kind: granted
+      ability_id: using-the-environment
+  '6':
+    - kind: choice
+      options:
+        - twisting-the-knife
+        - murderer
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

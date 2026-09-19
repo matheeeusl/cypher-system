@@ -1,0 +1,31 @@
+id: overawe
+name:
+  en: Overawe
+  pt-BR: Assombrar
+description:
+  en: >-
+    A blast of divine radiance from the heavens spotlights a target you
+    select within long range, pushing the target to its knees (or
+    similar appendages, if any) and rendering it helpless in the light
+    for up to ten minutes, or until it breaks free. The overawed target
+    cannot defend itself, make attacks, or attempt anything other than
+    to shake free of the divine awe each round. If the target is a
+    demon, spirit, or something similar, it also takes 1 point of
+    damage that ignores Armor each round it remains affected.
+  pt-BR: >-
+    Uma rajada de radiância divina dos céus ilumina um alvo que você
+    seleciona a alcance longo, forçando-o a ajoelhar-se (ou apêndice
+    semelhante, se houver) e tornando-o indefeso na luz por até dez
+    minutos, ou até se libertar. O alvo assombrado não pode se
+    defender, atacar, ou tentar qualquer coisa além de tentar se livrar
+    do assombro divino a cada rodada. Se o alvo for um demônio,
+    espírito, ou algo semelhante, também sofre 1 ponto de dano que
+    ignora Armadura a cada rodada em que permanecer afetado.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 4

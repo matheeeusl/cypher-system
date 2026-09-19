@@ -1,0 +1,15 @@
+id: twisting-the-knife
+name:
+  en: Twisting the Knife
+  pt-BR: Torcendo a Faca
+description:
+  en: In a round after successfully striking a foe with a melee weapon, you can opt to automatically deal standard damage to the foe with that same weapon without any modifiers (2 points for a light weapon, 4 points for a medium weapon, or 6 points for a heavy weapon).
+  pt-BR: Em uma rodada após acertar com sucesso um inimigo com uma arma corpo a corpo, você pode optar por causar automaticamente dano padrão ao inimigo com essa mesma arma, sem quaisquer modificadores (2 pontos para arma leve, 4 pontos para arma média, ou 6 pontos para arma pesada).
+cost:
+  pool: speed
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: fights-dirty
+    tier: 6

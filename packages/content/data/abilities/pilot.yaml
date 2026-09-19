@@ -1,0 +1,13 @@
+id: pilot
+name:
+  en: Pilot
+  pt-BR: Piloto
+description:
+  en: You are trained in all tasks related to piloting a starcraft. Generally speaking, piloting tasks are Speed-based tasks, though using sensors and communication instruments are Intellect-based tasks.
+  pt-BR: Você é treinado em todas as tarefas relacionadas a pilotar uma nave estelar. De modo geral, tarefas de pilotagem são baseadas em Agilidade, embora o uso de sensores e instrumentos de comunicação seja baseado em Intelecto.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 1

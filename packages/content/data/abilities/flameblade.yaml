@@ -1,0 +1,15 @@
+id: flameblade
+name:
+  en: Flameblade
+  pt-BR: Lâmina Flamejante
+description:
+  en: When you wish it, you extend your Shroud of Flame to cover a weapon you wield in flame for one hour. The flame ends if you stop holding or carrying the weapon. While the flame lasts, the weapon inflicts 2 additional points of damage.
+  pt-BR: Quando desejar, você estende seu Manto de Chamas para cobrir uma arma que empunha em fogo por uma hora. As chamas terminam se você parar de segurar ou carregar a arma. Enquanto as chamas durarem, a arma inflige 2 pontos adicionais de dano.
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 4

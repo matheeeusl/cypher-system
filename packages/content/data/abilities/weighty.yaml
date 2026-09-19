@@ -1,0 +1,15 @@
+id: weighty
+name:
+  en: Weighty
+  pt-BR: Pesado
+description:
+  en: You briefly increase the weight of a target within short range enough to stop them in their tracks, preventing the target from moving and hindering any attempted tasks on their next turn.
+  pt-BR: Você aumenta brevemente o peso de um alvo a alcance curto o suficiente para detê-lo em seu caminho, impedindo o alvo de se mover e dificultando quaisquer tarefas que tente em seu próximo turno.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 1

@@ -1,0 +1,13 @@
+id: greater-enhanced-potential
+name:
+  en: Greater Enhanced Potential
+  pt-BR: Potencial Aprimorado Maior
+description:
+  en: You gain 6 points to divide among your stat Pools however you wish.
+  pt-BR: Você ganha 6 pontos para dividir entre suas Reservas de atributo como quiser.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: entertains
+    tier: 3

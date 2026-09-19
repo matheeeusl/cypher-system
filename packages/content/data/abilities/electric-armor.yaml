@@ -1,0 +1,15 @@
+id: electric-armor
+name:
+  en: Electric Armor
+  pt-BR: Armadura Elétrica
+description:
+  en: When you wish it, electricity crackles across your body for ten minutes, granting you +1 Armor. While electrified, you have an additional +2 Armor versus electrical damage specifically, and you inflict 2 points of damage on any creature that touches you or attacks you with a melee weapon that conducts electricity.
+  pt-BR: Quando desejar, eletricidade crepita por todo o seu corpo por dez minutos, concedendo-lhe +1 na Armadura. Enquanto eletrificado, você tem mais +2 na Armadura especificamente contra dano elétrico, e inflige 2 pontos de dano a qualquer criatura que o tocar ou o atacar com uma arma corpo a corpo que conduza eletricidade.
+cost:
+  pool: intellect
+  amount: 4
+action_type: enabler
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 3

@@ -1,0 +1,38 @@
+id: battles-robots
+name:
+  en: Battles Robots
+  pt-BR: Combate Robôs
+description:
+  en: You excel in battling robots, automatons, and machine entities.
+  pt-BR: Você se destaca em combater robôs, autômatos e entidades mecânicas.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: machine-vulnerabilities
+    - kind: granted
+      ability_id: tech-skills
+  '2':
+    - kind: granted
+      ability_id: defense-against-robots
+    - kind: granted
+      ability_id: machine-hunting
+  '3':
+    - kind: granted
+      ability_id: disable-mechanisms
+  '4':
+    - kind: granted
+      ability_id: robot-fighter
+  '5':
+    - kind: granted
+      ability_id: drain-power
+  '6':
+    - kind: choice
+      options:
+        - deactivate-mechanisms
+        - lethal-damage
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

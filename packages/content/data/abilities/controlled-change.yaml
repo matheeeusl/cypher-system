@@ -1,0 +1,13 @@
+id: controlled-change
+name:
+  en: Controlled Change
+  pt-BR: Mudança Controlada
+description:
+  en: You can try to use your Beast Form ability to change into your beast form on any night you wish (a difficulty 3 Intellect task). Any transformations you make using this power are in addition to the five nights per month that you change involuntarily.
+  pt-BR: Você pode tentar usar sua habilidade Forma Bestial para se transformar em sua forma bestial em qualquer noite que desejar (uma tarefa de Intelecto de dificuldade 3). Quaisquer transformações que fizer usando este poder são além das cinco noites por mês em que se transforma involuntariamente.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: howls-at-the-moon
+    tier: 2

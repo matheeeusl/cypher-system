@@ -1,0 +1,29 @@
+id: divine-symbol
+name:
+  en: Divine Symbol
+  pt-BR: Símbolo Divino
+description:
+  en: >-
+    You invoke divine power by scribing a glowing symbol in the air
+    with your fingers. Writhing pillars of divine radiance spear up to
+    five targets within long range. A successful attack on a target
+    inflicts 5 points of damage. If you apply Effort to increase the
+    damage, you deal 2 additional points of damage per level of Effort
+    (instead of 3 points); targets take 1 point of damage even if you
+    fail the attack roll.
+  pt-BR: >-
+    Você invoca o poder divino ao traçar no ar um símbolo luminoso com
+    os dedos. Pilares retorcidos de radiância divina atravessam até
+    cinco alvos a alcance longo. Um ataque bem-sucedido contra um alvo
+    inflige 5 pontos de dano. Se você aplicar Esforço para aumentar o
+    dano, causa 2 pontos adicionais de dano por nível de Esforço (em
+    vez de 3 pontos); os alvos sofrem 1 ponto de dano mesmo que você
+    falhe na rolagem de ataque.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 6

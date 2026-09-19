@@ -1,0 +1,13 @@
+id: mentally-tough
+name:
+  en: Mentally Tough
+  pt-BR: Mentalmente Resistente
+description:
+  en: Staring into the naked weave of hyperspace, warped space, or a similar effect related to faster-than-light travel is hard on the mind, but you've developed resistance. You're trained in Intellect defense tasks.
+  pt-BR: Encarar a trama nua do hiperespaço, espaço deformado, ou um efeito semelhante relacionado a viagens mais rápidas que a luz é difícil para a mente, mas você desenvolveu resistência. Você é treinado em tarefas de defesa de Intelecto.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 2

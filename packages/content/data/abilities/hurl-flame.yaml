@@ -1,0 +1,15 @@
+id: hurl-flame
+name:
+  en: Hurl Flame
+  pt-BR: Arremessar Chamas
+description:
+  en: While your Shroud of Flame is active, you can reach into your halo and hurl a handful of fire at a target. This is a ranged attack with short range that deals 4 points of fire damage.
+  pt-BR: Enquanto seu Manto de Chamas estiver ativo, você pode alcançar sua auréola e arremessar um punhado de fogo em um alvo. Este é um ataque à distância de alcance curto que causa 4 pontos de dano de fogo.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: bears-a-halo-of-fire
+    tier: 2

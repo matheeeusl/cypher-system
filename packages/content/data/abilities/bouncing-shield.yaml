@@ -1,0 +1,13 @@
+id: bouncing-shield
+name:
+  en: Bouncing Shield
+  pt-BR: Escudo Saltitante
+description:
+  en: When you use Throw Force Shield, instead of dissipating after one attack (whether it hits or misses), it will attack up to two additional targets within short range. Effort or other modifiers applied to the first attack affect all other targets as well. Whether you hit all, some, or none of your targets, the shield dissipates and then reforms in your grasp. (If you choose Bouncing Shield and have previously taken the Throw Force Shield ability, you have the option to exchange that ability for Healing Pulse.)
+  pt-BR: Quando você usa Arremessar Escudo de Força, em vez de se dissipar após um ataque (acertando ou errando), ele atacará até dois alvos adicionais dentro do alcance curto. Esforço ou outros modificadores aplicados ao primeiro ataque afetam também todos os outros alvos. Independentemente de acertar todos, alguns ou nenhum dos alvos, o escudo se dissipa e depois se reforma em sua mão. (Se você escolher Escudo Saltitante e já tiver a habilidade Arremessar Escudo de Força, tem a opção de trocá-la por Pulso Curativo.)
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: brandishes-an-exotic-shield
+    tier: 6

@@ -1,0 +1,13 @@
+id: silent-as-space
+name:
+  en: Silent As Space
+  pt-BR: Silencioso Como o Espaço
+description:
+  en: By taking advantage of microgravity conditions, you gain an asset to stealth and initiative tasks while in zero-gravity or low-gravity conditions.
+  pt-BR: Aproveitando as condições de microgravidade, você ganha um bônus em tarefas de furtividade e iniciativa enquanto estiver em condições de gravidade zero ou baixa gravidade.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 4

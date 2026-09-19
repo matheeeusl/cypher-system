@@ -1,0 +1,13 @@
+id: weightless-shot
+name:
+  en: Weightless Shot
+  pt-BR: Disparo sem Peso
+description:
+  en: "You have a sixth sense when it comes to lining up trajectories and moving in low-gravity and zero-gravity environments, which also translates to making ranged attacks. When you hit a target with a ranged attack in microgravity conditions, you can choose to reduce the damage by 2 points but hit the target in a precise spot. Some of the possible effects include (but are not limited to) the following: you punch a hole in the target's suit, so it begins to leak air into the vacuum slowly, or all at once (your choice); you hit the reaction mass of the target's maneuvering pack, which means the target can no longer change their trajectory, or they go spinning off in a random direction (your choice); or you can shoot a spacecraft, and degrade one ship system by one step (systems include engines, weapons, and atmosphere)."
+  pt-BR: 'Você tem um sexto sentido quando se trata de alinhar trajetórias e se mover em ambientes de baixa gravidade e gravidade zero, o que também se traduz em fazer ataques à distância. Quando você acerta um alvo com um ataque à distância em condições de microgravidade, pode optar por reduzir o dano em 2 pontos, mas acertar o alvo em um ponto preciso. Alguns dos efeitos possíveis incluem (mas não se limitam a): você abre um buraco no traje do alvo, fazendo com que ele comece a vazar ar para o vácuo lentamente, ou tudo de uma vez (à sua escolha); você atinge a massa de reação do pacote de manobras do alvo, o que significa que ele não pode mais mudar sua trajetória, ou começa a girar descontroladamente em uma direção aleatória (à sua escolha); ou você pode atirar em uma nave espacial, degradando um sistema da nave em um passo (os sistemas incluem motores, armas, e atmosfera).'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: loves-the-void
+    tier: 6

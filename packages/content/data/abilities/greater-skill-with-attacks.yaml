@@ -1,0 +1,16 @@
+id: greater-skill-with-attacks
+name:
+  en: Greater Skill With Attacks
+  pt-BR: Maior Perícia em Ataques
+description:
+  en: "Choose one type of attack, even one in which you are already trained: light bashing, light bladed, light ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or heavy ranged. You are trained in attacks using that type of weapon. If you're already trained in that type of attack, you instead are specialized in that type of attack."
+  pt-BR: 'Escolha um tipo de ataque, mesmo um no qual já seja treinado: contundente leve, cortante leve, à distância leve, contundente médio, cortante médio, à distância médio, contundente pesado, cortante pesado, ou à distância pesado. Você é treinado em ataques usando aquele tipo de arma. Se já for treinado naquele tipo de ataque, passa a ser especializado nele.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 6
+  - type: focus
+    id: hunts
+    tier: 6

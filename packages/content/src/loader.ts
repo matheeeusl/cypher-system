@@ -27,7 +27,7 @@ import {
   type WeaponCategoryTable,
 } from './schemas/weapon-category-table.js'
 
-const CONTENT_ROOT = join(dirname(fileURLToPath(import.meta.url)), '../content')
+const CONTENT_ROOT = join(dirname(fileURLToPath(import.meta.url)), '../data')
 
 // Recursively sorts object keys before stringifying so content_version only
 // changes when actual data changes, not when YAML key order or whitespace does.
@@ -74,7 +74,7 @@ export function loadEntities<T extends { id: string }>(
   return entities
 }
 
-// For content/reference-tables/: a single shared table, not a directory of
+// For data/reference-tables/: a single shared table, not a directory of
 // per-id entities — see "Conventions" in this package's CLAUDE.md. No
 // content_version: nothing snapshots against a reference table.
 function loadReferenceTable<T>(filename: string, schema: ZodType<T>): T {

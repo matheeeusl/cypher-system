@@ -1,0 +1,15 @@
+id: gravity-cleave
+name:
+  en: Gravity Cleave
+  pt-BR: Fenda Gravitacional
+description:
+  en: You can harm a target within short range by rapidly increasing gravity's pull on one portion of the target and decreasing it on another, inflicting 6 points of damage.
+  pt-BR: Você pode ferir um alvo a alcance curto aumentando rapidamente a atração da gravidade sobre uma parte do alvo e diminuindo-a em outra, infligindo 6 pontos de dano.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 3

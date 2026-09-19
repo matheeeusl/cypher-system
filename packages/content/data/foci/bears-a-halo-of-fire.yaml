@@ -1,0 +1,37 @@
+id: bears-a-halo-of-fire
+name:
+  en: Bears a Halo of Fire
+  pt-BR: Carrega uma Auréola de Fogo
+description:
+  en: You can sheath your body in flames, which protects you and harms your foes.
+  pt-BR: Você pode envolver seu corpo em chamas, o que o protege e prejudica seus inimigos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: shroud-of-flame
+  '2':
+    - kind: granted
+      ability_id: hurl-flame
+  '3':
+    - kind: choice
+      options:
+        - wings-of-fire
+        - fiery-hand-of-doom
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: flameblade
+  '5':
+    - kind: granted
+      ability_id: fire-tendrils
+  '6':
+    - kind: choice
+      options:
+        - fire-servant
+        - inferno-trail
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

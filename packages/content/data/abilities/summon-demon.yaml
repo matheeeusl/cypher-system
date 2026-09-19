@@ -1,0 +1,22 @@
+id: summon-demon
+name:
+  en: Summon Demon
+  pt-BR: Convocar Demônio
+description:
+  en: |-
+    A demon appears within immediate range. If you applied a level of Effort as part of the summoning, the demon is amenable to your instructions; otherwise, it acts according to its nature. Regardless, the demon persists for up to one minute before it fades away—you hope.
+    Demon (level 5, 15 to defend; health 25; movement short, can fly an immediate distance while immaterial; stealth as level 7 while immaterial, deception as level 6): in immaterial form, the demon can pass through solid objects up to level 4, and mundane attacks inflict only 1 damage while magic, energy, and psychic attacks inflict damage normally. Its immaterial touch inflicts 5 points of damage, and the target must succeed at an Intellect defense roll or be possessed; once in possession of a host, the demon is immune to most attacks and can only control or leave its host. After one round (and every other round thereafter) of possession, the host must make an Intellect defense roll — on a success the host loses their action, on a failure the demon controls the host's actions. Each day, the host can make an Intellect defense roll to cast out the demon; after seven days, these attempts are hindered one additional step each day. Exorcisms, rituals, or other methods might be used to cast out a demon. Killing the host will also eject the demon. Cast-out demons are usually powerless—for a while.
+  pt-BR: |-
+    Um demônio aparece a alcance imediato. Se você aplicou um nível de Esforço como parte da convocação, o demônio é receptivo às suas instruções; caso contrário, age de acordo com sua natureza. De qualquer forma, o demônio persiste por até um minuto antes de desaparecer — é o que se espera.
+    Demônio (nível 5, defesa 15; vida 25; movimento curto, pode voar uma distância imediata enquanto imaterial; furtividade como nível 7 enquanto imaterial, engano como nível 6): em forma imaterial, o demônio pode atravessar objetos sólidos de até nível 4, e ataques comuns infligem apenas 1 de dano, enquanto ataques mágicos, de energia e psíquicos infligem dano normalmente. Seu toque imaterial inflige 5 pontos de dano, e o alvo deve ser bem-sucedido em uma rolagem de defesa de Intelecto ou ser possuído; uma vez de posse de um hospedeiro, o demônio fica imune à maioria dos ataques e só pode controlar ou deixar seu hospedeiro. Após uma rodada (e a cada outra rodada depois) de possessão, o hospedeiro deve fazer uma rolagem de defesa de Intelecto — em caso de sucesso, o hospedeiro perde sua ação; em caso de falha, o demônio controla as ações do hospedeiro. A cada dia, o hospedeiro pode fazer uma rolagem de defesa de Intelecto para expulsar o demônio; após sete dias, essas tentativas ficam dificultadas em mais um passo a cada dia. Exorcismos, rituais, ou outros métodos podem ser usados para expulsar um demônio. Matar o hospedeiro também expulsa o demônio. Demônios expulsos costumam ficar impotentes — por um tempo.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: masters-spells
+    tier: 6
+  - type: focus
+    id: channels-divine-blessings
+    tier: 6

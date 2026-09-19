@@ -1,0 +1,37 @@
+id: commands-mental-powers
+name:
+  en: Commands Mental Powers
+  pt-BR: Comanda Poderes Mentais
+description:
+  en: You have honed the power of your mind to perform amazing psychic deeds.
+  pt-BR: Você aprimorou o poder de sua mente para realizar feitos psíquicos incríveis.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: telepathic
+  '2':
+    - kind: granted
+      ability_id: mind-reading
+  '3':
+    - kind: choice
+      options:
+        - psychic-burst
+        - psychic-suggestion
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: use-senses-of-others
+  '5':
+    - kind: granted
+      ability_id: precognition
+  '6':
+    - kind: choice
+      options:
+        - mind-control
+        - telepathic-network
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

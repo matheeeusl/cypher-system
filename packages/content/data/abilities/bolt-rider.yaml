@@ -1,0 +1,15 @@
+id: bolt-rider
+name:
+  en: Bolt Rider
+  pt-BR: Cavaleiro do Raio
+description:
+  en: You can move a long distance from one location to another almost instantaneously, carried by a bolt of lightning. You must be able to see the new location, and there must be no intervening barriers.
+  pt-BR: Você pode se mover uma distância longa de um local a outro quase instantaneamente, carregado por um raio. Você precisa conseguir ver o novo local, e não pode haver barreiras entre os dois pontos.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: rides-the-lightning
+    tier: 2

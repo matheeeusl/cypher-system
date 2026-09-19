@@ -1,0 +1,37 @@
+id: entertains
+name:
+  en: Entertains
+  pt-BR: Entretém
+description:
+  en: You perform, mostly for the benefit of others.
+  pt-BR: Você se apresenta, principalmente para o benefício dos outros.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: levity
+  '2':
+    - kind: granted
+      ability_id: inspiring-ease
+  '3':
+    - kind: choice
+      options:
+        - knowledge-skills
+        - greater-enhanced-potential
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: calm
+  '5':
+    - kind: granted
+      ability_id: able-assistance
+  '6':
+    - kind: choice
+      options:
+        - master-entertainer
+        - vindictive-performance
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

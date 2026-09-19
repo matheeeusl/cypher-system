@@ -1,0 +1,13 @@
+id: knowledge-skills
+name:
+  en: Knowledge Skills
+  pt-BR: Perícias de Conhecimento
+description:
+  en: You are trained in two skills in which you are not already trained. Choose two areas of knowledge such as history, geography, archeology, and so on. You can select this ability multiple times. Each time you select it, you must choose two different skills.
+  pt-BR: Você é treinado em duas perícias nas quais ainda não é treinado. Escolha duas áreas de conhecimento, como história, geografia, arqueologia, e assim por diante. Você pode escolher esta habilidade várias vezes. A cada vez, deve escolher duas perícias diferentes.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: entertains
+    tier: 3

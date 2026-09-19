@@ -1,0 +1,15 @@
+id: mind-reading
+name:
+  en: Mind Reading
+  pt-BR: Leitura Mental
+description:
+  en: You can read the surface thoughts of a creature within short range, even if the target doesn't want you to. You must be able to see your target. Once you have established contact, you can read the target's thoughts for up to one minute. If you also have the Mind Reading special ability from another source, you can use this ability at long range, and you don't need to be able to see the target (but you do have to know that the target is within range).
+  pt-BR: Você pode ler os pensamentos superficiais de uma criatura a alcance curto, mesmo que o alvo não queira. Você precisa conseguir ver seu alvo. Uma vez estabelecido o contato, você pode ler os pensamentos do alvo por até um minuto. Se você também tiver a habilidade especial Leitura Mental de outra fonte, pode usar esta habilidade a alcance longo, e não precisa conseguir ver o alvo (mas precisa saber que ele está no alcance).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 2

@@ -1,0 +1,15 @@
+id: improved-gravity-cleave
+name:
+  en: Improved Gravity Cleave
+  pt-BR: Fenda Gravitacional Aprimorada
+description:
+  en: You can harm a group of targets within long range by rapidly increasing gravity's pull on one portion of each target and decreasing it on another, inflicting 6 points of damage. The targets must be within immediate range of each other.
+  pt-BR: Você pode ferir um grupo de alvos a alcance longo aumentando rapidamente a atração da gravidade sobre uma parte de cada alvo e diminuindo-a em outra, infligindo 6 pontos de dano. Os alvos devem estar a alcance imediato uns dos outros.
+cost:
+  pool: intellect
+  amount: 9
+action_type: action
+sources:
+  - type: focus
+    id: controls-gravity
+    tier: 6

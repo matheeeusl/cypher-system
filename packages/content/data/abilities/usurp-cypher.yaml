@@ -1,0 +1,13 @@
+id: usurp-cypher
+name:
+  en: Usurp Cypher
+  pt-BR: Usurpar Cifra
+description:
+  en: Choose one cypher that you carry. The cypher must have an effect that is not instantaneous. You destroy the cypher and gain its power, which functions for you continuously. You can choose a cypher when you gain this ability, or you can wait and make the choice later. However, once you usurp a cypher's power, you cannot later switch to a different cypher—the usurping ability works only once.
+  pt-BR: Escolha uma cifra que você carrega. A cifra deve ter um efeito que não seja instantâneo. Você destrói a cifra e ganha seu poder, que passa a funcionar continuamente para você. Você pode escolher uma cifra ao ganhar esta habilidade, ou pode esperar e fazer a escolha depois. Porém, uma vez que usurpe o poder de uma cifra, não pode mais trocá-la por outra — a habilidade de usurpar funciona apenas uma vez.
+cost: null
+action_type: action_to_initiate
+sources:
+  - type: focus
+    id: codes-magic-apps
+    tier: 6

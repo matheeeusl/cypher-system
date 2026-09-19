@@ -1,0 +1,21 @@
+id: war
+name:
+  en: War
+  pt-BR: Guerra
+description:
+  en: >-
+    A target you choose within short range (potentially yourself) deals
+    2 additional points of damage with its next successful weapon
+    attack.
+  pt-BR: >-
+    Um alvo que você escolher a alcance curto (potencialmente você
+    mesmo) causa 2 pontos adicionais de dano em seu próximo ataque bem-
+    sucedido com arma.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: channels-divine-blessings
+    tier: 1

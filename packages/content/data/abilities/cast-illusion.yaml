@@ -1,0 +1,13 @@
+id: cast-illusion
+name:
+  en: Cast Illusion
+  pt-BR: Projetar Ilusão
+description:
+  en: You can increase the range at which you create and maintain your immediate-range illusions (such as from Minor Illusion) to anywhere within short range that you can perceive.
+  pt-BR: Você pode aumentar o alcance em que cria e mantém suas ilusões de alcance imediato (como a de Ilusão Menor) para qualquer lugar dentro do alcance curto que consiga perceber.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: crafts-illusions
+    tier: 3

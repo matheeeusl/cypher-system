@@ -1,0 +1,15 @@
+id: body-morph
+name:
+  en: Body Morph
+  pt-BR: Metamorfose Corporal
+description:
+  en: You alter your facial and bodily features and coloration for one hour, hiding your identity or impersonating someone. If you apply a level of Effort, you can imitate a specific person accurately enough to fool someone who knows them well or has observed them closely (including fingerprints and voice prints, but not their retina print or DNA). You have an asset in all tasks involving disguise (this is in addition to the asset from Face Morph). You must apply a separate level of Effort to be able to impersonate a different species (such as a human morphing into a humanoid alien).
+  pt-BR: Você altera suas feições faciais e corporais e sua coloração por uma hora, ocultando sua identidade ou se passando por outra pessoa. Se aplicar um nível de Esforço, pode imitar uma pessoa específica com precisão suficiente para enganar alguém que a conheça bem ou a tenha observado de perto (incluindo impressões digitais e de voz, mas não sua impressão de retina ou DNA). Você tem um bônus em todas as tarefas envolvendo disfarce (isso é além do bônus de Metamorfose Facial). Você deve aplicar um nível de Esforço separado para conseguir se passar por uma espécie diferente (como um humano se transformando em um alienígena humanoide).
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 2

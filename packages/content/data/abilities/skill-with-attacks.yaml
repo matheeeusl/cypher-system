@@ -1,0 +1,16 @@
+id: skill-with-attacks
+name:
+  en: Skill With Attacks
+  pt-BR: Perícia em Ataques
+description:
+  en: 'Choose one type of attack in which you are not already trained: light bashing, light bladed, light ranged, medium bashing, medium bladed, medium ranged, heavy bashing, heavy bladed, or heavy ranged. You are trained in attacks using that type of weapon. You can select this ability multiple times. Each time you select it, you must choose a different type of attack.'
+  pt-BR: 'Escolha um tipo de ataque no qual ainda não seja treinado: contundente leve, cortante leve, à distância leve, contundente médio, cortante médio, à distância médio, contundente pesado, cortante pesado, ou à distância pesado. Você é treinado em ataques usando aquele tipo de arma. Você pode escolher esta habilidade várias vezes. A cada vez, deve escolher um tipo de ataque diferente.'
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: helps-their-friends
+    tier: 3
+  - type: focus
+    id: pilots-starcraft
+    tier: 6

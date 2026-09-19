@@ -1,0 +1,42 @@
+id: helps-their-friends
+name:
+  en: Helps Their Friends
+  pt-BR: Ajuda os Amigos
+description:
+  en: You love your friends and help them out of any difficulty, no matter what.
+  pt-BR: Você ama seus amigos e os ajuda a sair de qualquer dificuldade, custe o que custar.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: friendly-help
+    - kind: granted
+      ability_id: courageous
+  '2':
+    - kind: granted
+      ability_id: weather-the-vicissitudes
+  '3':
+    - kind: choice
+      options:
+        - buddy-system
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: in-harms-way
+    - kind: granted
+      ability_id: enhanced-physique
+  '5':
+    - kind: granted
+      ability_id: inspire-action
+  '6':
+    - kind: choice
+      options:
+        - deep-consideration
+        - skill-with-defense
+      count: 1
+type_swap_option:
+  ability_id: advice-from-a-friend
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

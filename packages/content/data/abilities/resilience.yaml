@@ -1,0 +1,13 @@
+id: resilience
+name:
+  en: Resilience
+  pt-BR: Resiliência
+description:
+  en: You have 1 point of Armor against any kind of physical damage, even physical damage that normally ignores Armor.
+  pt-BR: Você tem 1 ponto de Armadura contra qualquer tipo de dano físico, mesmo dano físico que normalmente ignora Armadura.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 3

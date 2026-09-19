@@ -1,0 +1,16 @@
+id: ignore-the-pain
+name:
+  en: Ignore the Pain
+  pt-BR: Ignorar a Dor
+description:
+  en: You ignore the impaired condition and treat the debilitated condition as impaired.
+  pt-BR: Você ignora a condição de prejudicado e trata a condição de debilitado como prejudicado.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: collects-bounties
+    tier: 2
+  - type: focus
+    id: never-says-die
+    tier: 2

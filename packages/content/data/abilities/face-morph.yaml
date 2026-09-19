@@ -1,0 +1,15 @@
+id: face-morph
+name:
+  en: Face Morph
+  pt-BR: Metamorfose Facial
+description:
+  en: You alter your features and coloration for one hour, hiding your identity or impersonating someone. This affects only your face, not the rest of your body. You can't perfectly duplicate someone else's face, but you can be accurate enough to fool someone who knows that person casually. You have an asset in all tasks involving disguise. You must apply a level of Effort to be able to impersonate a different species (such as a human morphing into a humanoid alien).
+  pt-BR: Você altera suas feições e coloração por uma hora, ocultando sua identidade ou se passando por outra pessoa. Isso afeta apenas seu rosto, não o resto do corpo. Você não consegue duplicar perfeitamente o rosto de outra pessoa, mas pode ser preciso o suficiente para enganar alguém que conheça aquela pessoa casualmente. Você tem um bônus em todas as tarefas envolvendo disfarce. Você deve aplicar um nível de Esforço para conseguir se passar por uma espécie diferente (como um humano se transformando em um alienígena humanoide).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: focus
+    id: has-a-thousand-faces
+    tier: 1

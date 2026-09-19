@@ -1,0 +1,15 @@
+id: remote-control
+name:
+  en: Remote Control
+  pt-BR: Controle Remoto
+description:
+  en: You can use a starcraft's communication and sensor arrays to launch an attack that briefly renders an enemy starcraft within 20 miles (32 km) inoperative for up to a minute.
+  pt-BR: Você pode usar os conjuntos de comunicação e sensores de uma nave estelar para lançar um ataque que deixa brevemente uma nave estelar inimiga a até 32 quilômetros inoperante por até um minuto.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: pilots-starcraft
+    tier: 6

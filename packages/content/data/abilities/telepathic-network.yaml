@@ -1,0 +1,15 @@
+id: telepathic-network
+name:
+  en: Telepathic Network
+  pt-BR: Rede Telepática
+description:
+  en: When you wish it, you can contact up to ten creatures known to you, no matter where they are. All targets must be willing and able to communicate. You automatically succeed at establishing a telepathic network; no roll is required. All creatures in the network are linked and can communicate telepathically with one another. They can also "overhear" anything said in the network, if they wish. Activating this ability doesn't require an action and doesn't cost Intellect points; to you, it's as easy as speaking out loud. The network lasts until you choose to end it. If you spend 5 Intellect points, you can contact twenty creatures at once, and for every 1 Intellect point you spend above that, you can add ten more creatures to the network. These larger networks last for ten minutes. Creating a network of twenty or more creatures does require an action to establish contact.
+  pt-BR: Quando desejar, você pode contatar até dez criaturas que conhece, não importa onde estejam. Todos os alvos devem estar dispostos e aptos a se comunicar. Você automaticamente consegue estabelecer uma rede telepática; nenhuma rolagem é necessária. Todas as criaturas na rede ficam ligadas e podem se comunicar telepaticamente umas com as outras. Elas também podem "escutar" qualquer coisa dita na rede, se quiserem. Ativar esta habilidade não exige uma ação nem custa pontos de Intelecto; para você, é tão fácil quanto falar em voz alta. A rede dura até que você escolha encerrá-la. Se você gastar 5 pontos de Intelecto, pode contatar vinte criaturas de uma vez, e para cada 1 ponto de Intelecto gasto além disso, pode adicionar mais dez criaturas à rede. Essas redes maiores duram dez minutos. Criar uma rede de vinte ou mais criaturas exige uma ação para estabelecer contato.
+cost:
+  pool: intellect
+  amount: 0
+action_type: enabler
+sources:
+  - type: focus
+    id: commands-mental-powers
+    tier: 6
