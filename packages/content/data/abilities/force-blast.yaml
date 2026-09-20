@@ -1,0 +1,21 @@
+id: force-blast
+name:
+  en: Force Blast
+  pt-BR: Explosão de Força
+description:
+  en: >-
+    You figure out how to project blasts of pure force from the
+    gauntlets of the power armor from your Powered Armor ability.
+    This allows you to fire a blast of force that inflicts 5 points
+    of damage with a range of 200 feet (60 m).
+  pt-BR: >-
+    Você descobre como projetar rajadas de força pura a partir das
+    manoplas da armadura energizada de sua habilidade Armadura
+    Energizada. Isso permite que você dispare uma rajada de força que
+    causa 5 pontos de dano a um alcance de 60 m (200 pés).
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: wears-power-armor
+    tier: 4

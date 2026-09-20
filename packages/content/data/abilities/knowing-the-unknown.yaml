@@ -27,3 +27,6 @@ sources:
   - type: focus
     id: learned-from-the-classics
     tier: 4
+  - type: focus
+    id: would-rather-be-reading
+    tier: 4

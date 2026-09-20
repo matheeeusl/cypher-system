@@ -1,0 +1,25 @@
+id: healing-touch
+name:
+  en: Healing Touch
+  pt-BR: Toque Curativo
+description:
+  en: >-
+    With a touch, you restore 1d6 points to one stat Pool of any
+    creature. This ability is a difficulty 2 Intellect task. Each
+    time you attempt to heal the same creature, the task is hindered
+    by an additional step. The difficulty returns to 2 after that
+    creature rests for ten hours.
+  pt-BR: >-
+    Com um toque, você restaura 1d6 pontos em uma Reserva de atributo
+    de qualquer criatura. Esta habilidade é uma tarefa de Intelecto de
+    dificuldade 2. Cada vez que você tentar curar a mesma criatura, a
+    tarefa fica dificultada em mais um passo. A dificuldade volta a 2
+    depois que essa criatura descansa por dez horas.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: focus
+    id: works-miracles
+    tier: 1

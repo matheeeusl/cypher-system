@@ -1,0 +1,26 @@
+id: alley-rat
+name:
+  en: Alley Rat
+  pt-BR: Rato de Beco
+description:
+  en: >-
+    While in a city, you find or create a significant shortcut,
+    secret entrance, or emergency escape route where it looked like
+    none existed. Doing so requires that you succeed on an Intellect
+    action whose difficulty is set by the GM based on the situation.
+    You and the GM should work out the details.
+  pt-BR: >-
+    Enquanto estiver em uma cidade, você encontra ou cria um atalho
+    significativo, uma entrada secreta ou uma rota de fuga de
+    emergência onde parecia não haver nenhuma. Fazer isso requer que
+    você seja bem-sucedido em uma ação de Intelecto cuja dificuldade é
+    definida pelo Mestre com base na situação. Você e o Mestre devem
+    definir os detalhes.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: focus
+    id: works-the-back-alleys
+    tier: 6

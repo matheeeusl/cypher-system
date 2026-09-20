@@ -1,0 +1,37 @@
+id: works-the-back-alleys
+name:
+  en: Works the Back Alleys
+  pt-BR: Trabalha nos Becos
+description:
+  en: You make your way unseen, stealing from the wealthy to achieve your ends.
+  pt-BR: Você se move sem ser visto, roubando dos ricos para atingir seus objetivos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: stealth-skills
+  '2':
+    - kind: granted
+      ability_id: underworld-contacts
+  '3':
+    - kind: choice
+      options:
+        - pull-a-fast-one
+        - guild-training
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: master-thief
+  '5':
+    - kind: granted
+      ability_id: dirty-fighter
+  '6':
+    - kind: choice
+      options:
+        - alley-rat
+        - all-out-con
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

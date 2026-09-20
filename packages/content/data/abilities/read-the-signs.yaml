@@ -1,0 +1,22 @@
+id: read-the-signs
+name:
+  en: Read the Signs
+  pt-BR: Ler os Sinais
+description:
+  en: >-
+    You examine an area and learn precise, useful details about the
+    past (if any exist). You can ask the GM up to four questions
+    about the immediate area; each requires its own roll.
+  pt-BR: >-
+    Você examina uma área e descobre detalhes precisos e úteis sobre
+    o passado (se algum existir). Você pode fazer ao Mestre até
+    quatro perguntas sobre a área imediata; cada uma exige sua própria
+    jogada.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: would-rather-be-reading
+    tier: 6

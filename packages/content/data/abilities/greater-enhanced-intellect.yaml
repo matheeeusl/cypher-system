@@ -35,3 +35,9 @@ sources:
   - type: focus
     id: sculpts-hard-light
     tier: 4
+  - type: focus
+    id: would-rather-be-reading
+    tier: 2
+  - type: focus
+    id: would-rather-be-reading
+    tier: 5

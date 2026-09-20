@@ -41,3 +41,6 @@ sources:
   - type: focus
     id: works-for-a-living
     tier: 6
+  - type: focus
+    id: works-the-system
+    tier: 6

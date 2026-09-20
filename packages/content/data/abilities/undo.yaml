@@ -1,0 +1,21 @@
+id: undo
+name:
+  en: Undo
+  pt-BR: Desfazer
+description:
+  en: >-
+    You turn back time a few seconds, effectively undoing a single
+    creature's most recent action. That creature can then immediately
+    repeat the same action or try something different.
+  pt-BR: >-
+    Você retrocede o tempo em alguns segundos, desfazendo efetivamente
+    a ação mais recente de uma única criatura. Essa criatura pode
+    então imediatamente repetir a mesma ação ou tentar algo diferente.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: focus
+    id: works-miracles
+    tier: 5

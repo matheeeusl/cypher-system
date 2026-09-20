@@ -1,0 +1,22 @@
+id: font-of-healing
+name:
+  en: Font of Healing
+  pt-BR: Fonte de Cura
+description:
+  en: >-
+    With your approval, other creatures can touch you and regain 1d6
+    points to either their Might Pool or their Speed Pool. This
+    healing costs them 2 Intellect points. A single creature can
+    benefit from this ability only once each day.
+  pt-BR: >-
+    Com sua aprovação, outras criaturas podem tocar em você e
+    recuperar 1d6 pontos em sua Reserva de Força ou em sua Reserva de
+    Velocidade. Essa cura custa a elas 2 pontos de Intelecto. Uma
+    única criatura pode se beneficiar desta habilidade apenas uma vez
+    por dia.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-miracles
+    tier: 3

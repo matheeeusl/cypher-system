@@ -1,0 +1,24 @@
+id: connected
+name:
+  en: Connected
+  pt-BR: Conectado
+description:
+  en: >-
+    You know people who get things done—not just respected people in
+    positions of authority, but also a variety of online hackers and
+    regular street criminals. These people are not necessarily your
+    friends and might not be trustworthy, but they owe you a favor.
+    You and the GM should work out the details of your contacts.
+  pt-BR: >-
+    Você conhece pessoas que fazem as coisas acontecerem — não apenas
+    pessoas respeitadas em posições de autoridade, mas também uma
+    variedade de hackers online e criminosos de rua comuns. Essas
+    pessoas não são necessariamente suas amigas e podem não ser
+    confiáveis, mas lhe devem um favor. Você e o Mestre devem definir
+    os detalhes de seus contatos.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-the-system
+    tier: 2

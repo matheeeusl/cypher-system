@@ -31,3 +31,6 @@ sources:
   - type: focus
     id: turns-decay-to-growth
     tier: 6
+  - type: focus
+    id: works-miracles
+    tier: 6

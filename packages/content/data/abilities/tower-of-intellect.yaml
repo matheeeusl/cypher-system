@@ -1,0 +1,17 @@
+id: tower-of-intellect
+name:
+  en: Tower of Intellect
+  pt-BR: Torre de Intelecto
+description:
+  en: >-
+    You are trained in Intellect defense tasks. If you are already
+    trained, you are specialized in those tasks instead.
+  pt-BR: >-
+    Você é treinado em tarefas de defesa de Intelecto. Se já for
+    treinado, torna-se especialista nessas tarefas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: would-rather-be-reading
+    tier: 6

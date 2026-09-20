@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: operates-undercover
     tier: 4
+  - type: focus
+    id: works-the-back-alleys
+    tier: 3

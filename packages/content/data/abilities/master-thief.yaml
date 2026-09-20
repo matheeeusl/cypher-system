@@ -1,0 +1,18 @@
+id: master-thief
+name:
+  en: Master Thief
+  pt-BR: Ladrão Mestre
+description:
+  en: >-
+    You are trained in climbing, escaping from bonds, slipping through
+    narrow places, and other contortionist moves.
+  pt-BR: >-
+    Você é treinado em escalada, em se libertar de amarras, em se
+    espremer por espaços estreitos e em outros movimentos
+    contorcionistas.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-the-back-alleys
+    tier: 4

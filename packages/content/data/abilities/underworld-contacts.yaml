@@ -1,0 +1,23 @@
+id: underworld-contacts
+name:
+  en: Underworld Contacts
+  pt-BR: Contatos do Submundo
+description:
+  en: >-
+    You know many people in a variety of communities who engage in
+    illegal activities. These people are not necessarily your friends
+    and might not be trustworthy, but they recognize you as a peer.
+    You and the GM should work out the details of your underworld
+    contacts.
+  pt-BR: >-
+    Você conhece muitas pessoas em diversas comunidades que se
+    envolvem em atividades ilegais. Essas pessoas não são
+    necessariamente suas amigas e podem não ser confiáveis, mas o
+    reconhecem como um dos seus. Você e o Mestre devem definir os
+    detalhes de seus contatos do submundo.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-the-back-alleys
+    tier: 2

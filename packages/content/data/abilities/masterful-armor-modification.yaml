@@ -1,0 +1,86 @@
+id: masterful-armor-modification
+name:
+  en: Masterful Armor Modification
+  pt-BR: Modificação Magistral da Armadura
+description:
+  en: >-
+    Choose one of the following modifications to make to the Powered
+    Armor from your Powered Armor ability. If you choose to make a
+    different modification later, you can do so, but you must spend 2
+    XP each time and substitute the updated modification for the
+    previous modification.
+
+
+    - Cypher Pod. The power armor provides an insulated pod in which
+    you can carry one additional manifest cypher beyond what your
+    cypher limit normally allows. Enabler.
+
+    - Drone (3 Intellect points). A level 4 drone no larger than 1
+    foot (30 cm) on a side launches from your armor for one hour,
+    flying up to a long distance each round. The drone accompanies
+    you and follows your instructions. It has manipulators, allowing
+    it to attempt to accomplish physical tasks. You'll probably make
+    rolls for your drone when it takes actions. A drone in combat
+    usually doesn't make separate attacks but helps with yours. On
+    your action, if the drone is next to you, it serves as an asset
+    for one attack you make on your turn. If the drone is destroyed,
+    you must spend another 2 XP to rebuild it or choose another
+    Masterful Armor Modification. Action to initiate.
+
+    - Improved Field Reinforcement. You gain +1 to Armor while
+    wearing your power armor. Enabler.
+
+    - Jet-Assisted Flight (3+ Might points). You modify your power
+    armor to allow you to blast off the ground and fly for one minute
+    at a time. For each level of Effort applied, you can increase the
+    duration by an additional minute. Action.
+  pt-BR: >-
+    Escolha uma das seguintes modificações para fazer em sua Armadura
+    Energizada, proveniente de sua habilidade Armadura Energizada. Se
+    você optar por fazer uma modificação diferente mais tarde, pode
+    fazê-lo, mas deve gastar 2 PX a cada vez e substituir a
+    modificação atualizada pela modificação anterior.
+
+
+    - Vagem de Cifras. A armadura energizada fornece uma vagem isolada
+    na qual você pode carregar uma cifra manifesta adicional além do
+    que seu limite de cifras normalmente permite. Facilitador.
+
+    - Drone (3 pontos de Intelecto). Um drone de nível 4, com no
+    máximo 30 cm (1 pé) de lado, é lançado de sua armadura por uma
+    hora, voando a uma distância longa a cada rodada. O drone
+    acompanha você e segue suas instruções. Ele possui manipuladores,
+    o que lhe permite tentar realizar tarefas físicas. Você
+    provavelmente fará as jogadas pelo seu drone quando ele realizar
+    ações. Um drone em combate geralmente não realiza ataques
+    separados, mas auxilia os seus. Em seu turno, se o drone estiver
+    ao seu lado, ele serve como uma vantagem para um ataque que você
+    realizar. Se o drone for destruído, você deve gastar mais 2 PX
+    para reconstruí-lo ou escolher outra Modificação Magistral da
+    Armadura. Ação para iniciar.
+
+    - Reforço de Campo Aprimorado. Você recebe +1 de Armadura enquanto
+    estiver usando sua armadura energizada. Facilitador.
+
+    - Voo Assistido por Jato (3+ pontos de Força). Você modifica sua
+    armadura energizada para permitir que você decole do chão e voe
+    por um minuto de cada vez. Para cada nível de Esforço aplicado,
+    você pode aumentar a duração em mais um minuto. Ação.
+  # Note: this is a menu ability (4 sub-options: Cypher Pod, Drone,
+  # Improved Field Reinforcement, Jet-Assisted Flight), each with its
+  # own cost/action_type the schema can't represent per-option —
+  # recorded as a single `enabler` baseline, sub-option variance kept
+  # in prose (same pattern as `drone-upgrade`/`robot-upgrade`/
+  # `minor-wish`, see schema gap item 3). Also: the source restricts
+  # the *initial* pick to only Cypher Pod or Jet-Assisted Flight
+  # ("Choose either Cypher Pod or Jet-Assisted Flight as your initial
+  # Masterful Armor Modification") — Drone and Improved Field
+  # Reinforcement only become available on a later 2-XP swap. The
+  # schema has no field for this initial-pick restriction; kept in
+  # prose above rather than modeled as a `choice`.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wears-power-armor
+    tier: 6

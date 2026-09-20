@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: works-for-a-living
     tier: 4
+  - type: focus
+    id: wears-power-armor
+    tier: 1

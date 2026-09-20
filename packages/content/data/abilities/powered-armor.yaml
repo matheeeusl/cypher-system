@@ -1,0 +1,30 @@
+id: powered-armor
+name:
+  en: Powered Armor
+  pt-BR: Armadura Energizada
+description:
+  en: >-
+    You have a suit of powered armor. It is effectively medium armor
+    (+2 to Armor); however, you suffer no Speed penalties for wearing
+    it. Also, your suit grants other benefits: it provides breathable
+    air for up to eight hours and a comfortable environment even in
+    bitter heat, cold, vacuum, or underwater to a depth of 4 miles (6
+    km); and it allows you to see in the dark up to a short distance.
+    Getting into the suit requires an action (and, of course, access
+    to your suit).
+  pt-BR: >-
+    Você possui uma armadura energizada. Ela funciona efetivamente
+    como armadura média (+2 na Armadura); porém, você não sofre
+    penalidades de Velocidade por usá-la. Além disso, sua armadura
+    concede outros benefícios: fornece ar respirável por até oito
+    horas e um ambiente confortável mesmo em calor ou frio extremos,
+    vácuo, ou debaixo d'água até uma profundidade de 6 km (4 milhas);
+    e permite que você enxergue no escuro a uma curta distância.
+    Vestir a armadura exige uma ação (e, claro, acesso à sua
+    armadura).
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: wears-power-armor
+    tier: 1

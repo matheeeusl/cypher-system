@@ -1,0 +1,24 @@
+id: work-the-friendship
+name:
+  en: Work the Friendship
+  pt-BR: Explorar a Amizade
+description:
+  en: >-
+    You know just what to say to draw a little extra effort from an
+    ally. This grants one creature you choose within short range an
+    additional, immediate action, which it can take out of turn. The
+    creature uses the additional action however it wishes.
+  pt-BR: >-
+    Você sabe exatamente o que dizer para extrair um pouco de esforço
+    extra de um aliado. Isso concede a uma criatura que você escolher
+    a curta distância uma ação adicional imediata, que ela pode
+    realizar fora de seu turno. A criatura usa a ação adicional como
+    desejar.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: focus
+    id: works-the-system
+    tier: 5

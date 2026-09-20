@@ -50,3 +50,6 @@ sources:
   - type: focus
     id: solves-mysteries
     tier: 3
+  - type: focus
+    id: works-the-system
+    tier: 3

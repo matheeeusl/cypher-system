@@ -1,0 +1,51 @@
+id: heads-up-display
+name:
+  en: Heads-Up Display
+  pt-BR: Visor de Dados
+description:
+  en: >-
+    Your Powered Armor ability comes with systems that help you make
+    sense of, analyze, and use your weapons in your environment. When
+    you trigger this ability, you gain an asset on one attack roll as
+    the suit perfectly outlines foes and steadies your aim, regardless
+    of whether you're making a melee or ranged attack. Alternatively,
+    you can use the heads-up display to magnify your vision,
+    increasing your vision range to 5 miles (8 km) for two rounds. If
+    you apply one level of Effort, you can also see through mundane
+    materials (such as wood, concrete, plastic, and stone) to a short
+    distance in false color images. If you apply two levels of
+    Effort, you can see through special materials (such as solid lead
+    or other substances) to an immediate distance in false color
+    images; however, the GM might require you to succeed at an
+    Intellect-based task first, depending on the material blocking
+    your armor's sensors.
+  pt-BR: >-
+    Sua habilidade Armadura Energizada vem com sistemas que ajudam
+    você a compreender, analisar e usar suas armas em seu ambiente.
+    Ao ativar esta habilidade, você ganha uma vantagem em uma jogada
+    de ataque, pois a armadura delimita perfeitamente os inimigos e
+    estabiliza sua mira, seja em um ataque corpo a corpo ou à
+    distância. Alternativamente, você pode usar o visor de dados para
+    ampliar sua visão, aumentando seu alcance visual para 8 km (5
+    milhas) por duas rodadas. Se você aplicar um nível de Esforço,
+    também pode enxergar através de materiais comuns (como madeira,
+    concreto, plástico e pedra) a uma curta distância, em imagens de
+    cores falsas. Se você aplicar dois níveis de Esforço, pode
+    enxergar através de materiais especiais (como chumbo sólido ou
+    outras substâncias) a uma distância imediata, em imagens de cores
+    falsas; porém, o Mestre pode exigir que você seja bem-sucedido
+    primeiro em uma tarefa baseada em Intelecto, dependendo do
+    material que estiver bloqueando os sensores de sua armadura.
+  # Note: source cost is printed as "2+ Intellect points" — the
+  # schema's cost field can't represent an open-ended "+". Recorded as
+  # the baseline 2 Intellect points here, flagged for schema review
+  # (same approximation used for divine-intervention/return-to-the-
+  # obelisk).
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: focus
+    id: wears-power-armor
+    tier: 2

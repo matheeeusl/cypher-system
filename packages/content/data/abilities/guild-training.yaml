@@ -1,0 +1,21 @@
+id: guild-training
+name:
+  en: Guild Training
+  pt-BR: Treinamento de Guilda
+description:
+  en: >-
+    Your type abilities that have durations last twice as long. Your
+    type abilities that have short ranges reach to long range
+    instead. Your type abilities that inflict damage deal 1
+    additional point of damage.
+  pt-BR: >-
+    Suas habilidades de tipo que possuem duração duram o dobro do
+    tempo. Suas habilidades de tipo que possuem alcance curto
+    alcançam a longa distância. Suas habilidades de tipo que causam
+    dano causam 1 ponto adicional de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: works-the-back-alleys
+    tier: 3

@@ -1,0 +1,39 @@
+id: works-the-system
+name:
+  en: Works the System
+  pt-BR: Trabalha o Sistema
+description:
+  en: You can exploit flaws in artificial systems, including but not limited to computer code.
+  pt-BR: Você pode explorar falhas em sistemas artificiais, incluindo, mas não se limitando a, código de computador.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: hack-the-impossible
+    - kind: granted
+      ability_id: computer-programming
+  '2':
+    - kind: granted
+      ability_id: connected
+  '3':
+    - kind: choice
+      options:
+        - confidence-artist
+        - skill-with-attacks
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: confuse-enemy
+  '5':
+    - kind: granted
+      ability_id: work-the-friendship
+  '6':
+    - kind: choice
+      options:
+        - call-in-favor
+        - greater-enhanced-potential
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

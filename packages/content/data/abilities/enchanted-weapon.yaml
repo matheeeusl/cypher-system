@@ -30,6 +30,9 @@ description:
     - Se você se sintonizar a uma arma diferente, crie uma
     justificativa narrativa para o motivo de conseguir fazer
     isso e por que escolheu essa nova arma.
+  # Note: source tag is "Action to initiate, ten minutes to complete."
+  # — a non-standard tag, approximated as `enabler` (see schema gap
+  # item 3).
 cost:
   pool: intellect
   amount: 1

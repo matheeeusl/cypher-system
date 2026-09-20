@@ -1,0 +1,15 @@
+id: alleviate
+name:
+  en: Alleviate
+  pt-BR: Aliviar
+description:
+  en: You attempt to cancel or cure one malady (such as disease or poison) in one creature.
+  pt-BR: Você tenta cancelar ou curar um mal (como uma doença ou veneno) em uma criatura.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: focus
+    id: works-miracles
+    tier: 2

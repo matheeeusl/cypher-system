@@ -1,10 +1,15 @@
 id: wields-invisible-force
 name:
   en: Wields Invisible Force
-  pt-BR: Manipula uma força invisível
+  pt-BR: Manipula uma Força Invisível
 description:
-  en: You bend light and manipulate beams of force for offense and defense.
-  pt-BR: Você curva a luz e manipula feixes de força para ataque e defesa.
+  en: >-
+    You bend light and manipulate beams of force for offense and
+    defense. This focus is a good match for the psionics rule in
+    Chapter 7.
+  pt-BR: >-
+    Você curva a luz e manipula feixes de força para ataque e defesa.
+    Este foco combina bem com a regra de psiônicos do Capítulo 7.
 tier_abilities:
   '1':
     - kind: granted
@@ -24,6 +29,15 @@ tier_abilities:
     - kind: granted
       ability_id: invisibility
   '5':
+    # Note: page 388's Tier 5 text is a verbatim duplicate of Wears
+    # Power Armor's Tier 5 "Field-Reinforced Armor" (it even references
+    # "the power armor from your Powered Armor ability", an ability
+    # this Focus doesn't grant) — confirmed by a fresh independent PDF
+    # re-extraction, not an extraction artifact. This looks like a
+    # genuine rulebook printing error (this Focus's real Tier 5 text is
+    # missing from the source), but transcribed verbatim per this
+    # project's content-accuracy rule rather than silently dropped or
+    # invented. See the flagging comment on `field-reinforced-armor`.
     - kind: granted
       ability_id: field-reinforced-armor
   '6':

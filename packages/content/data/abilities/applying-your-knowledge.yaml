@@ -1,0 +1,18 @@
+id: applying-your-knowledge
+name:
+  en: Applying Your Knowledge
+  pt-BR: Aplicando Seu Conhecimento
+description:
+  en: >-
+    When you help another character undertake any action that you're
+    untrained in, you are treated as if you are trained in it.
+  pt-BR: >-
+    Quando você ajuda outro personagem a realizar qualquer ação na
+    qual você não é treinado, você é tratado como se fosse treinado
+    nela.
+cost: null
+action_type: action
+sources:
+  - type: focus
+    id: would-rather-be-reading
+    tier: 3

@@ -1,0 +1,27 @@
+id: knowledge-is-power
+name:
+  en: Knowledge Is Power
+  pt-BR: Conhecimento É Poder
+description:
+  en: Choose two noncombat skills in which you are not trained. You are trained in those skills.
+  pt-BR: Escolha duas perícias não relacionadas a combate nas quais você não seja treinado. Você se torna treinado nessas perícias.
+  # Note: source text prints this exact ability, under this exact name,
+  # three times for this same Focus (Tier 1, Tier 4, Tier 6, granted
+  # each time with no "ABILITY CHOICE" heading) — modeled as three
+  # `sources[]` entries at different tiers of the same Focus, an
+  # extension of the established same-focus multi-tier reuse pattern
+  # (previously seen at up to three tiers with `greater-enhanced-speed`,
+  # Moves Like a Cat) to a plain repeated grant rather than a
+  # granted+choice-option combination.
+cost: null
+action_type: enabler
+sources:
+  - type: focus
+    id: would-rather-be-reading
+    tier: 1
+  - type: focus
+    id: would-rather-be-reading
+    tier: 4
+  - type: focus
+    id: would-rather-be-reading
+    tier: 6

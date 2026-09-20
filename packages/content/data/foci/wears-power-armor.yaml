@@ -1,0 +1,36 @@
+id: wears-power-armor
+name:
+  en: Wears Power Armor
+  pt-BR: Veste uma Armadura Energizada
+description:
+  en: You wear a fantastic suit of armor.
+  pt-BR: Você veste uma fantástica armadura.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: powered-armor
+    - kind: granted
+      ability_id: enhanced-might
+  '2':
+    - kind: granted
+      ability_id: heads-up-display
+  '3':
+    - kind: choice
+      options:
+        - fusion-armor
+        - incredible-health
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: force-blast
+  '5':
+    - kind: granted
+      ability_id: field-reinforced-armor
+  '6':
+    - kind: granted
+      ability_id: masterful-armor-modification
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

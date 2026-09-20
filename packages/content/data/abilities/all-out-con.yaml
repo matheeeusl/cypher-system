@@ -1,0 +1,21 @@
+id: all-out-con
+name:
+  en: All-Out Con
+  pt-BR: Golpe Total
+description:
+  en: >-
+    You put everything into it. You add three free levels of Effort
+    to the next task you attempt. You can't use this ability again
+    until after you've taken a ten-hour recovery action.
+  pt-BR: >-
+    Você dá tudo de si. Você adiciona três níveis gratuitos de Esforço
+    à próxima tarefa que tentar. Você não pode usar esta habilidade
+    novamente até realizar uma ação de recuperação de dez horas.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: focus
+    id: works-the-back-alleys
+    tier: 6

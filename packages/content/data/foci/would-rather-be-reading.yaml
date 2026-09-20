@@ -1,0 +1,41 @@
+id: would-rather-be-reading
+name:
+  en: Would Rather Be Reading
+  pt-BR: Preferia Estar Lendo
+description:
+  en: Books are your friends. What's more important than knowledge? Nothing.
+  pt-BR: Livros são seus amigos. O que é mais importante que o conhecimento? Nada.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: knowledge-is-power
+  '2':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+  '3':
+    - kind: choice
+      options:
+        - applying-your-knowledge
+        - flex-skill
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: knowledge-is-power
+    - kind: granted
+      ability_id: knowing-the-unknown
+  '5':
+    - kind: granted
+      ability_id: greater-enhanced-intellect
+  '6':
+    - kind: granted
+      ability_id: knowledge-is-power
+    - kind: choice
+      options:
+        - tower-of-intellect
+        - read-the-signs
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null

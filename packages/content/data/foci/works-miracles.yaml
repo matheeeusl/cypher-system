@@ -1,0 +1,41 @@
+id: works-miracles
+name:
+  en: Works Miracles
+  pt-BR: Realiza Milagres
+description:
+  en: >-
+    You can heal others with a touch, alter time to help others, and
+    are generally beloved by everyone.
+  pt-BR: >-
+    Você pode curar outras pessoas com um toque, alterar o tempo para
+    ajudar os outros, e é geralmente amado por todos.
+tier_abilities:
+  '1':
+    - kind: granted
+      ability_id: healing-touch
+  '2':
+    - kind: granted
+      ability_id: alleviate
+  '3':
+    - kind: choice
+      options:
+        - font-of-healing
+        - miraculous-health
+      count: 1
+  '4':
+    - kind: granted
+      ability_id: inspire-action
+  '5':
+    - kind: granted
+      ability_id: undo
+  '6':
+    - kind: choice
+      options:
+        - greater-healing-touch
+        - restore-life
+      count: 1
+type_swap_option: null
+additional_equipment: null
+connection_options: null
+minor_effect_suggestion: null
+major_effect_suggestion: null
