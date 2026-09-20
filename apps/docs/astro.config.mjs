@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 
-import { getAllTypes } from '@cypher/content'
+import { getAllTypes, getAllDescriptors } from '@cypher/content'
 
 // Manual sidebar group for Type reference pages. These pages are generated
 // from @cypher/content (src/pages/[locale]/types/[slug].astro), not Starlight
@@ -23,6 +23,21 @@ const typesSidebarGroup = {
     label: type.name.en,
     translations: { 'pt-BR': type.name['pt-BR'] },
     link: `/types/${type.id}/`,
+  })),
+}
+
+// Same manual-group pattern as Types, for the same reason: Descriptor pages
+// (src/pages/[locale]/descriptors/[slug].astro) are also generated from
+// @cypher/content rather than Starlight content-collection files.
+const descriptors = getAllDescriptors()
+
+const descriptorsSidebarGroup = {
+  label: 'Descriptors',
+  translations: { 'pt-BR': 'Descritores' },
+  items: descriptors.map((descriptor) => ({
+    label: descriptor.name.en,
+    translations: { 'pt-BR': descriptor.name['pt-BR'] },
+    link: `/descriptors/${descriptor.id}/`,
   })),
 }
 
@@ -59,6 +74,7 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'rules' } }],
         },
         typesSidebarGroup,
+        descriptorsSidebarGroup,
       ],
     }),
   ],
