@@ -14,9 +14,8 @@ description:
     until you use a one-hour or ten-hour recovery roll.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action to initiate, one minute to complete." —
-  # a further non-standard action_type tag, approximated as
-  # `action_to_initiate`. Flagged for schema review (see schema gap
-  # item 3).
+  # the "one minute to complete" clause is a duration, not modeled by
+  # action_type.
 cost:
   pool: intellect
   amount: 4

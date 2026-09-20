@@ -12,11 +12,9 @@ description:
     If one of the two drones is destroyed, you can repair the primary
     drone as described in Drone Buddy.
   pt-BR: "Tradução em breve."
-  # Note: source tag is "Action to split or recombine." — not one of the
-  # 4 standard action_type enum values. Approximated to `action`, flagged
-  # per the running action_type audit (schema gap item 3).
+  # Note: source tag is "Action to split or recombine."
 cost: null
-action_type: action
+action_type: action_to_split_or_recombine
 sources:
   - type: focus
     id: has-a-custom-drone

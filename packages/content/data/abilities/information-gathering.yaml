@@ -12,11 +12,6 @@ description:
     are within a mile of you, one or more machines will probably
     provide the answer.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) under Explores Cyberspace and Knows Everything, but not
-  # under Talks to Machines — same per-source "~" inconsistency as
-  # machine-enhancement/network-tap. Not modeled by the schema.
-  # Flagged for schema review.
 cost:
   pool: intellect
   amount: 5
@@ -25,9 +20,11 @@ sources:
   - type: focus
     id: explores-cyberspace
     tier: 5
+    cyberware: true
   - type: focus
     id: knows-everything
     tier: 5
+    cyberware: true
   - type: focus
     id: talks-to-machines
     tier: 5

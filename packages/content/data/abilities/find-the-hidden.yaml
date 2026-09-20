@@ -9,10 +9,13 @@ description:
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
+# Note: source tag is "Action to initiate; action each round to
+# concentrate." — same tag as remote-viewing/see-through-time (Sees
+# Beyond) and nightmare (Lived Among the Fey).
 cost:
   pool: intellect
   amount: 4
-action_type: action_to_initiate
+action_type: action_to_initiate_and_concentrate
 sources:
   - type: focus
     id: sees-beyond

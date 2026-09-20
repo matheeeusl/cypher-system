@@ -5,10 +5,6 @@ name:
 description:
   en: Once per round, you can make an additional attack with your chosen weapon.
   pt-BR: Uma vez por rodada, você pode realizar um ataque adicional com a arma escolhida.
-  # Note: Weaponizes Chrome's printing marks this ability with "~" (a
-  # cyberware-derived ability marker, not modeled — see schema gap
-  # item 6); Masters Weaponry's and Wields an Enchanted Weapon's
-  # printings have no marker — a new per-source "~" inconsistency.
 cost:
   pool: speed
   amount: 3
@@ -20,6 +16,7 @@ sources:
   - type: focus
     id: weaponizes-chrome
     tier: 3
+    cyberware: true
   - type: focus
     id: wields-an-enchanted-weapon
     tier: 3

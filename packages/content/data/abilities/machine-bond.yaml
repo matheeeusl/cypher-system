@@ -14,9 +14,6 @@ description:
     limitation. This bond lasts for a week. You can only bond with
     one machine at a time.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) — not modeled by the schema (no cyberware-marker field).
-  # Flagged for schema review.
 cost:
   pool: intellect
   amount: 8
@@ -25,3 +22,4 @@ sources:
   - type: focus
     id: hacks-the-network
     tier: 6
+    cyberware: true

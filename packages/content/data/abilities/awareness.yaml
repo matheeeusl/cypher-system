@@ -10,10 +10,6 @@ description:
     by concentrating (another action), you can attempt to learn the
     general health and power level of any one of them.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) under Has Eyes Everywhere, but not under Infiltrates — same
-  # per-source inconsistency as machine-enhancement. Not modeled by the
-  # schema. Flagged for schema review.
 cost:
   pool: intellect
   amount: 3
@@ -22,6 +18,7 @@ sources:
   - type: focus
     id: has-eyes-everywhere
     tier: 3
+    cyberware: true
   - type: focus
     id: infiltrates
     tier: 3

@@ -5,17 +5,13 @@ name:
 description:
   en: When you move, you are a blur. It is impossible to make out your identity as you run past, and in a round where you do nothing but move, stealth tasks and Speed defense tasks are eased.
   pt-BR: "Tradução em breve."
-  # Note: Embeds Stealthtech's printing marks this ability with "~" (a
-  # cyberware-derived ability marker, not modeled — see fast-chrome);
-  # Moves Like the Wind's printing has no marker — same per-source "~"
-  # inconsistency as machine-enhancement/network-tap/escape-plan/
-  # perfect-speed-burst.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: embeds-stealthtech
     tier: 5
+    cyberware: true
   - type: focus
     id: moves-like-the-wind
     tier: 5

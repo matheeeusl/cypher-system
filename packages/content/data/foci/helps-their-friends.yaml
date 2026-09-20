@@ -35,7 +35,8 @@ tier_abilities:
         - skill-with-defense
       count: 1
 type_swap_option:
-  ability_id: advice-from-a-friend
+  ability_ids:
+    - advice-from-a-friend
 additional_equipment: null
 connection_options: null
 minor_effect_suggestion: null

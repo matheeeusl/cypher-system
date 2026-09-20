@@ -8,7 +8,9 @@ description:
 cost:
   pool: intellect
   amount: 1
-action_type: action
+# Note: source tag is "Action for touch; enabler for weapon." — a
+# genuinely dual-mode tag, same as frost-touch/winter-gauntlets.
+action_type: action_or_enabler
 sources:
   - type: focus
     id: rides-the-lightning

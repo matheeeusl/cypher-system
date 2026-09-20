@@ -12,10 +12,8 @@ description:
 cost:
   pool: intellect
   amount: 7
-# Note: source tag is "Action to initiate, action to complete." — not in
-# the schema's action_type enum; approximated as action_to_initiate. See
-# .population-status.md item 3.
-action_type: action_to_initiate
+# Note: source tag is "Action to initiate, action to complete."
+action_type: action_to_initiate_and_complete
 sources:
   - type: focus
     id: curses-the-world

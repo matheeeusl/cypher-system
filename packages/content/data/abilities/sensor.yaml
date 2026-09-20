@@ -8,9 +8,9 @@ description:
 cost:
   pool: intellect
   amount: 4
-# Note: source tag is "Action to create; action to check." —
-# approximated as action_to_initiate; flagged for schema review.
-action_type: action_to_initiate
+# Note: source tag is "Action to create; action to check." Same tag as
+# trail-sensor.
+action_type: action_to_create_and_check
 sources:
   - type: focus
     id: sees-beyond

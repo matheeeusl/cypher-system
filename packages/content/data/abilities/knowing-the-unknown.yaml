@@ -5,11 +5,6 @@ name:
 description:
   en: By accessing the resources appropriate to your character, you can ask the GM one question and get a general answer. The GM assigns a level to the question, so the more obscure the answer, the more difficult the task. Generally, knowledge that you could find by looking somewhere other than your current location is level 1, and obscure knowledge of the past is level 7. Gaining knowledge of the future is impossible.
   pt-BR: Ao acessar os recursos apropriados ao seu personagem, você pode fazer uma pergunta ao Mestre e obter uma resposta geral. O Mestre atribui um nível à pergunta, de modo que quanto mais obscura a resposta, mais difícil a tarefa. Em geral, conhecimento que você poderia encontrar procurando em outro lugar que não sua localização atual é de nível 1, e conhecimento obscuro do passado é de nível 7. Obter conhecimento do futuro é impossível.
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) under Knows Everything, but not under Codes Magic Apps or
-  # Calculates the Incalculable — same per-source inconsistency as
-  # machine-enhancement. Not modeled by the schema. Flagged for schema
-  # review.
 cost:
   pool: intellect
   amount: 6
@@ -24,6 +19,7 @@ sources:
   - type: focus
     id: knows-everything
     tier: 6
+    cyberware: true
   - type: focus
     id: learned-from-the-classics
     tier: 4

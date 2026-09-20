@@ -22,10 +22,9 @@ description:
     um inimigo. Fora isso, você se concentra em ajudar outros
     catalisando e aprimorando suas habilidades mágicas.
   # Note: Tier 6 is printed as "Choose either Explosive Release, or
-  # both Continuous Transfer and Drain at a Distance" — see the
-  # comment on `continuous-transfer` for the full explanation of why
-  # this is modeled as a flat 3-option choice rather than the real
-  # bundled-pair rule.
+  # both Continuous Transfer and Drain at a Distance" — modeled below
+  # as a bundled-pair `choice` option (nested array), not a flat
+  # 3-option pick.
 tier_abilities:
   '1':
     - kind: granted
@@ -49,8 +48,7 @@ tier_abilities:
     - kind: choice
       options:
         - explosive-release
-        - continuous-transfer
-        - drain-at-a-distance
+        - [continuous-transfer, drain-at-a-distance]
       count: 1
 type_swap_option: null
 additional_equipment: null

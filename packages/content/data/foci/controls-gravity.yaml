@@ -31,7 +31,8 @@ tier_abilities:
         - weight-of-the-world
       count: 1
 type_swap_option:
-  ability_id: weighty
+  ability_ids:
+    - weighty
 additional_equipment: null
 connection_options: null
 minor_effect_suggestion: null

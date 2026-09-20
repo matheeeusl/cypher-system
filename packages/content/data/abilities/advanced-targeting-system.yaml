@@ -15,8 +15,6 @@ description:
     Pelos próximos dez minutos, você recebe um bônus em todas as tarefas
     (incluindo ataques e defesas) que envolvam esse alvo. Você só pode usar
     o sistema de mira avançada contra uma criatura por vez.
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker, not modeled — see schema gap item 6).
 cost:
   pool: intellect
   amount: 5
@@ -25,3 +23,4 @@ sources:
   - type: focus
     id: packs-chromed-heat
     tier: 6
+    cyberware: true

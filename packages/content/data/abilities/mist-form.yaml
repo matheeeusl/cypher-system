@@ -17,13 +17,12 @@ description:
     mist are separated (such as behind a closed door) when you return
     to human form, you move one step down the damage track.
   pt-BR: "Tradução em breve."
-  # Note: source tag is "Action to change or revert." — not one of the 4
-  # standard action_type enum values. Approximated to `action`, flagged
-  # per the running action_type audit (schema gap item 3).
+  # Note: source tag is "Action to change or revert." — same tag as
+  # animal-shape.
 cost:
   pool: intellect
   amount: 4
-action_type: action
+action_type: action_to_change_or_revert
 sources:
   - type: focus
     id: inks-spells-on-skin

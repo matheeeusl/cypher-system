@@ -8,6 +8,9 @@ description:
 cost:
   pool: intellect
   amount: 2
+# Note: source tag is "Action to initiate, one hour to complete." —
+# the "one hour to complete" clause is a duration, not modeled by
+# action_type.
 action_type: action_to_initiate
 sources:
   - type: focus

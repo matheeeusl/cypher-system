@@ -12,9 +12,8 @@ description:
     deception task is eased by two steps.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action to initiate; one minute to complete." —
-  # not one of the 4 standard action_type enum values. Approximated to
-  # `action_to_initiate`, flagged per the running action_type audit
-  # (schema gap item 3).
+  # the "one minute to complete" clause is a duration, not modeled by
+  # action_type.
 cost:
   pool: intellect
   amount: 3

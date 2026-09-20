@@ -17,11 +17,9 @@ description:
 cost:
   pool: intellect
   amount: 4
-# Note: source tag is "Action to establish." — not in the schema's
-# action_type enum; approximated as action_to_initiate, same call made for
-# use-senses-of-others (Commands Mental Powers). See .population-status.md
-# item 3.
-action_type: action_to_initiate
+# Note: source tag is "Action to establish." — same tag as
+# use-senses-of-others (Commands Mental Powers).
+action_type: action_to_establish
 sources:
   - type: focus
     id: takes-animal-shape

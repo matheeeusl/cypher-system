@@ -6,7 +6,10 @@ description:
   en: You can try to use your Beast Form ability to change into your beast form on any night you wish (a difficulty 3 Intellect task). Any transformations you make using this power are in addition to the five nights per month that you change involuntarily.
   pt-BR: Você pode tentar usar sua habilidade Forma Bestial para se transformar em sua forma bestial em qualquer noite que desejar (uma tarefa de Intelecto de dificuldade 3). Quaisquer transformações que fizer usando este poder são além das cinco noites por mês em que se transforma involuntariamente.
 cost: null
-action_type: action
+# Note: source tag is "Action to Change." Distinct from beast-form's
+# "Action to change back." — these are two separate tags, not a single
+# "change or revert" tag like animal-shape/mist-form/moon-shape.
+action_type: action_to_change
 sources:
   - type: focus
     id: howls-at-the-moon

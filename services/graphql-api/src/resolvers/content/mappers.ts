@@ -108,7 +108,7 @@ export function mapFocus(f: WithVersion<Focus>) {
     name: mapLocalizedString(f.name),
     description: mapLocalizedString(f.description),
     tierAbilities: mapFocusTierAbilities(f.tier_abilities),
-    typeSwapOption: f.type_swap_option ? { abilityId: f.type_swap_option.ability_id } : null,
+    typeSwapOption: f.type_swap_option ? { abilityIds: f.type_swap_option.ability_ids } : null,
     contentVersion: f.content_version,
   }
 }
@@ -120,7 +120,7 @@ export function mapAbility(a: WithVersion<Ability>) {
     description: mapLocalizedString(a.description),
     cost: a.cost ? { pool: a.cost.pool, amount: a.cost.amount } : null,
     actionType: a.action_type,
-    sources: a.sources.map((s) => ({ type: s.type, id: s.id, tier: s.tier })),
+    sources: a.sources.map((s) => ({ type: s.type, id: s.id, tier: s.tier, cyberware: s.cyberware ?? false })),
     contentVersion: a.content_version,
   }
 }

@@ -47,7 +47,8 @@ tier_abilities:
         - ultra-enhancement
       count: 1
 type_swap_option:
-  ability_id: integrated-weapon
+  ability_ids:
+    - integrated-weapon
 additional_equipment: null
 connection_options:
   - en: Pick one other PC. You think they shows potential for learning your combat style (and choice of chrome), but you're not necessarily qualified to teach them.

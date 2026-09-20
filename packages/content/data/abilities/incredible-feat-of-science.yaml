@@ -9,8 +9,8 @@ cost:
   pool: intellect
   amount: 12
 # Note: source tag is "Action to initiate; a full day of work to
-# complete." — not in the schema's action_type enum; approximated as
-# action_to_initiate. See .population-status.md item 3.
+# complete." — the "a full day of work" clause is a duration, not
+# modeled by action_type.
 action_type: action_to_initiate
 sources:
   - type: focus

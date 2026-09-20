@@ -9,10 +9,8 @@ cost:
   pool: intellect
   amount: 8
 # Note: source tag is "Action to step into chamber of dreams; action to
-# move through a door in the chamber." — not in the schema's action_type
-# enum; approximated as action_to_initiate. See .population-status.md
-# item 3.
-action_type: action_to_initiate
+# move through a door in the chamber."
+action_type: action_to_enter_and_traverse
 sources:
   - type: focus
     id: awakens-dreams

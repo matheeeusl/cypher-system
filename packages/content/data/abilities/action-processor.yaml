@@ -14,10 +14,6 @@ description:
     recebidos a velocidades incríveis, você é treinado em uma tarefa física
     de sua escolha por dez minutos. Por exemplo, você pode escolher correr,
     escalar, nadar, defesa rápida ou ataques com uma arma específica.
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) under Knows Everything, but not under Fuses Mind and
-  # Machine — same per-source inconsistency as machine-enhancement. Not
-  # modeled by the schema. Flagged for schema review.
 cost:
   pool: intellect
   amount: 4
@@ -29,3 +25,4 @@ sources:
   - type: focus
     id: knows-everything
     tier: 3
+    cyberware: true

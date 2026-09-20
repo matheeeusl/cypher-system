@@ -28,12 +28,10 @@ description:
     não ficará sozinha por muito tempo — o que você tem a oferecer é
     vital e raro, e é inevitável que alguém peça sua ajuda.
   # Note: Tier 3 is printed as "Choose either Reading Decomposition, or
-  # both Grasping Foliage and Necromancy" — a bundled-pair choice the
-  # schema's flat `choice` shape can't represent (same gap as
-  # Transmits Energy Tier 6); modeled as a flat 3-option `count: 1`
-  # choice, flagged. Tier 4 conditionally grants Greater Necromancy or
-  # Rewind Rot depending on the Tier 3 pick — see the note on
-  # `rewind-rot`.
+  # both Grasping Foliage and Necromancy" — modeled below as a
+  # bundled-pair `choice` option (nested array). Tier 4 conditionally
+  # grants Greater Necromancy or Rewind Rot depending on the Tier 3
+  # pick — see the note on `rewind-rot`.
 tier_abilities:
   '1':
     - kind: granted
@@ -47,8 +45,7 @@ tier_abilities:
     - kind: choice
       options:
         - reading-decomposition
-        - grasping-foliage
-        - necromancy
+        - [grasping-foliage, necromancy]
       count: 1
   '4':
     - kind: granted

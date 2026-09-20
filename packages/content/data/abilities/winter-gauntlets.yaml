@@ -12,10 +12,9 @@ description:
     target can still attack and defend.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action for touch; enabler for weapon." — a
-  # non-standard tag also used verbatim by `frost-touch`/`shock`, not a
-  # new tag. Approximated as `action`.
+  # genuinely dual-mode tag, also used verbatim by `frost-touch`/`shock`.
 cost: null
-action_type: action
+action_type: action_or_enabler
 sources:
   - type: focus
     id: wears-a-sheen-of-ice

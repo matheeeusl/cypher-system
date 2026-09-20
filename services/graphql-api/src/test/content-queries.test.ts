@@ -218,7 +218,7 @@ describe('content queries', () => {
           tier: number
           entries: Array<{ __typename: string; abilityId?: string; options?: string[] }>
         }>
-        typeSwapOption: { abilityId: string } | null
+        typeSwapOption: { abilityIds: string[] } | null
       } | null
     }
 
@@ -234,7 +234,7 @@ describe('content queries', () => {
               ... on ChoiceAbility { options }
             }
           }
-          typeSwapOption { abilityId }
+          typeSwapOption { abilityIds }
         }
       }
     `)
@@ -249,7 +249,53 @@ describe('content queries', () => {
         tier: 1,
         entries: [{ __typename: 'GrantedAbility', abilityId: 'dual-light-wield' }],
       },
+      {
+        tier: 2,
+        entries: [
+          { __typename: 'GrantedAbility', abilityId: 'double-strike' },
+          { __typename: 'GrantedAbility', abilityId: 'infiltrator' },
+        ],
+      },
+      {
+        tier: 3,
+        entries: [
+          { __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'] },
+        ],
+      },
+      {
+        tier: 4,
+        entries: [{ __typename: 'GrantedAbility', abilityId: 'dual-defense' }],
+      },
+      {
+        tier: 5,
+        entries: [{ __typename: 'GrantedAbility', abilityId: 'dual-distraction' }],
+      },
+      {
+        tier: 6,
+        entries: [{ __typename: 'ChoiceAbility', options: ['disarming-attack', 'spin-attack'] }],
+      },
     ])
+  })
+
+  it("resolves a Focus's typeSwapOption with more than one ability_id", async () => {
+    interface FocusQueryData {
+      focus: { typeSwapOption: { abilityIds: string[] } | null } | null
+    }
+
+    const result = await graphqlRequest<FocusQueryData>(`
+      query {
+        focus(id: "spits-fire-and-lead") {
+          typeSwapOption { abilityIds }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Spits Fire and Lead prints two abilities (Cogent Shot, Reload) under
+    // one "TYPE SWAP OPTION" heading, both granted together.
+    expect(result.data.focus?.typeSwapOption).toEqual({
+      abilityIds: ['cogent-shot', 'reload'],
+    })
   })
 
   it('resolves an Ability, including its cost and sources', async () => {
@@ -278,7 +324,10 @@ describe('content queries', () => {
       id: 'bash',
       cost: { pool: 'MIGHT', amount: 1 },
       actionType: 'ACTION',
-      sources: [{ type: 'TYPE', id: 'warrior', tier: 1 }],
+      sources: [
+        { type: 'TYPE', id: 'warrior', tier: 1 },
+        { type: 'FOCUS', id: 'weaponizes-chrome', tier: 1 },
+      ],
     })
   })
 

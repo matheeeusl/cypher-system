@@ -8,10 +8,9 @@ description:
 cost:
   pool: intellect
   amount: 6
-# Note: source tag is "Action to create; action to direct." — a
-# compound action-type not covered by the current action_type enum.
-# Approximated as action_to_initiate; flagged for schema review.
-action_type: action_to_initiate
+# Note: source tag is "Action to create; action to direct." Same tag as
+# fiery-hand-of-doom.
+action_type: action_to_create_and_direct
 sources:
   - type: focus
     id: bears-a-halo-of-fire

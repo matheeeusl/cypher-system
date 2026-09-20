@@ -24,13 +24,13 @@ description:
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
-  # Source tag is "Action to change; action to revert." — a further
-  # non-standard action_type tag, approximated as `action_to_initiate`.
-  # Flagged for schema review (see schema gap item 3).
+  # Source tag is "Action to change; action to revert." — same
+  # change-or-revert category as animal-shape/mist-form's "Action to
+  # change or revert."
 cost:
   pool: intellect
   amount: 4
-action_type: action_to_initiate
+action_type: action_to_change_or_revert
 sources:
   - type: focus
     id: speaks-for-the-land

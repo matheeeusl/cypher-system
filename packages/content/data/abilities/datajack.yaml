@@ -8,10 +8,8 @@ description:
     about something you can see. You get an asset on a task involving
     that person or object.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) — not modeled by the schema (no cyberware-marker field).
-  # Also prints a sidebar note: "Characters who have chosen Datajack as a
-  # type ability should replace it with a different special ability
+  # Note: also prints a sidebar note: "Characters who have chosen Datajack
+  # as a type ability should replace it with a different special ability
   # selection from their type" — cross-references Type ability selection,
   # not represented in this Focus/Ability data. Flagged for schema review.
 cost:
@@ -22,12 +20,16 @@ sources:
   - type: focus
     id: explores-cyberspace
     tier: 1
+    cyberware: true
   - type: focus
     id: hacks-the-network
     tier: 1
+    cyberware: true
   - type: focus
     id: has-eyes-everywhere
     tier: 1
+    cyberware: true
   - type: focus
     id: knows-everything
     tier: 1
+    cyberware: true

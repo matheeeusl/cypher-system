@@ -27,12 +27,9 @@ description:
     object in 1d6 + 2 days. If you lose the bound object, you retain a
     sense of the direction in which it lies.
   pt-BR: "Tradução em breve."
-  # Note: source tag is "Action to manifest the magic creature." — not
-  # one of the 4 standard action_type enum values. Approximated to
-  # `action`, flagged per the running action_type audit (schema gap
-  # item 3).
+  # Note: source tag is "Action to manifest the magic creature."
 cost: null
-action_type: action
+action_type: action_to_manifest
 sources:
   - type: focus
     id: keeps-a-magic-ally

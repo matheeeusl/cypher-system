@@ -37,7 +37,8 @@ tier_abilities:
         - reactive-field
       count: 1
 type_swap_option:
-  ability_id: have-spacesuit-will-travel
+  ability_ids:
+    - have-spacesuit-will-travel
 additional_equipment: null
 connection_options: null
 minor_effect_suggestion: null

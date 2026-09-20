@@ -28,15 +28,12 @@ description:
     5 points of damage that ignore Armor.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action to initiate, action each round to
-  # concentrate." — not one of the 4 standard action_type enum values
-  # (same non-standard tag as Sees Beyond's find-the-hidden/
-  # remote-viewing/see-through-time). Approximated to
-  # `action_to_initiate`, flagged per the running action_type audit
-  # (schema gap item 3).
+  # concentrate." — same tag as Sees Beyond's
+  # find-the-hidden/remote-viewing/see-through-time.
 cost:
   pool: intellect
   amount: 5
-action_type: action_to_initiate
+action_type: action_to_initiate_and_concentrate
 sources:
   - type: focus
     id: lived-among-the-fey

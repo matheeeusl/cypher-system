@@ -9,10 +9,8 @@ description:
     transport willing creatures with you, with each creature
     requiring 1 additional Intellect point.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) — not modeled by the schema (no cyberware-marker field).
-  # Source cost is printed as "5+ Intellect points" — the schema's cost
-  # field can't represent an open-ended "+". Recorded as the baseline 5
+  # Note: source cost is printed as "5+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the baseline 5
   # Intellect points here, flagged for schema review (same approximation
   # used for divine-intervention/return-to-the-obelisk).
 cost:
@@ -23,3 +21,4 @@ sources:
   - type: focus
     id: explores-cyberspace
     tier: 6
+    cyberware: true

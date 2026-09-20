@@ -6,13 +6,9 @@ import { describe, expect, it } from 'vitest'
 import { graphqlRequest } from './helpers.js'
 
 // Real content, resolved the same way the resolver itself does — NOT hand-
-// built literals. Unlike packages/cypher-engine's own validate-character-
-// choices.test.ts (whose Focus fixture invents tiers 2-3 with a 'choice'
-// entry that don't exist in the real YAML), this only relies on what's
-// actually authored today: Warrior, Strong, and Wields Two Weapons at Once
-// with just a tier-1 granted ability. resolveFocusAbilities tolerates a
-// resolved tier higher than any tier the Focus defines (it just has nothing
-// to add for tiers 2/3), so a build can still legitimately reach tier 3.
+// built literals: Warrior, Strong, and Wields Two Weapons at Once. This
+// Focus's tier 3 offers a real 'choice' entry (dual-medium-wield vs.
+// precise-cut), so a build reaching tier 3 must supply a selection for it.
 const type = getTypeById('warrior')!
 const descriptor = getDescriptorById('strong')!
 const focus = getFocusById('wields-two-weapons-at-once')!
@@ -42,7 +38,7 @@ const validChoices: CharacterChoices = {
   pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
   descriptor_pool_bonus: { stat: 'might', amount: 4 },
   tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
-  focus_choice_selections: {},
+  focus_choice_selections: { '3': 'dual-medium-wield' },
   descriptor_skill_choices: [],
   advancement_purchases: [
     ...completeTier(2, {
@@ -75,7 +71,7 @@ const validInput = {
   poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
   descriptorPoolBonus: { stat: 'MIGHT', amount: 4 },
   tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
-  focusChoiceSelections: [],
+  focusChoiceSelections: [{ tier: 3, abilityId: 'dual-medium-wield' }],
   descriptorSkillChoices: [],
   advancementPurchases: [
     ...completeTierInput(2, { skillId: 'perception' }),

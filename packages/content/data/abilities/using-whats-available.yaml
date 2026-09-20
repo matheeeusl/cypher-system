@@ -15,13 +15,13 @@ description:
     one minute, or until used for the intended purpose.
   pt-BR: "Tradução em breve."
   # Note: source tag is "One minute to assemble materials; action to
-  # create asset." — a further non-standard action_type tag, approximated
-  # as `action_to_initiate`. Flagged for schema review (see schema gap
-  # item 3).
+  # create asset." — the "one minute to assemble" clause is a duration,
+  # not modeled by action_type (preserved here in this comment); the
+  # action itself is to create.
 cost:
   pool: intellect
   amount: 4
-action_type: action_to_initiate
+action_type: action_to_create
 sources:
   - type: focus
     id: operates-undercover

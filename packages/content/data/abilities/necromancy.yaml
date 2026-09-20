@@ -15,10 +15,8 @@ description:
     additional undead creature for each additional Intellect point you
     spend when you activate the ability.
   pt-BR: "Tradução em breve."
-  # Note: source tag is "Action to animate." — not in the schema's
-  # action_type enum; approximated as action_to_initiate. Also used
-  # (verbatim) by greater-necromancy and true-necromancy in this same
-  # Focus. See .population-status.md item 3.
+  # Note: source tag is "Action to animate." Also used (verbatim) by
+  # greater-necromancy and true-necromancy in this same Focus.
   # Cost is printed as "3+ Intellect points" — the schema's cost field
   # can't represent an open-ended "+". Recorded as the baseline 3
   # Intellect points here, flagged for schema review (same
@@ -26,7 +24,7 @@ description:
 cost:
   pool: intellect
   amount: 3
-action_type: action_to_initiate
+action_type: action_to_animate
 sources:
   - type: focus
     id: consorts-with-the-dead

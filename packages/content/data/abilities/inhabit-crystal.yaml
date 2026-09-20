@@ -16,9 +16,7 @@ description:
     damage while you are within it, you immediately exit,
     cannot act for three rounds, and move two steps down
     the damage track.
-  # Note: source tag is "Action to enter and exit." — not in the
-  # schema's action_type enum; approximated as action_to_initiate. See
-  # .population-status.md item 3.
+  # Note: source tag is "Action to enter and exit."
   pt-BR: >-
     Você transfere seu corpo e tudo o que estiver carregando para dentro de um cristal de,
     pelo menos, o tamanho do seu dedo indicador. Enquanto estiver no cristal,
@@ -33,7 +31,7 @@ description:
 cost:
   pool: intellect
   amount: 4
-action_type: action_to_initiate
+action_type: action_to_enter_or_exit
 sources:
   - type: focus
     id: emerged-from-the-obelisk

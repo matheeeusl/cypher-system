@@ -10,12 +10,12 @@ description:
     additional point of damage from the cold.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action for touch; enabler for weapon." — a
-  # non-standard tag also used verbatim by `shock` (Rides the
-  # Lightning), not a new tag. Approximated as `action`.
+  # genuinely dual-mode tag, also used verbatim by `shock` (Rides the
+  # Lightning).
 cost:
   pool: intellect
   amount: 1
-action_type: action
+action_type: action_or_enabler
 sources:
   - type: focus
     id: wears-a-sheen-of-ice

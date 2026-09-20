@@ -9,10 +9,8 @@ cost:
   pool: intellect
   amount: 1
 # Note: source tag is "Enabler for enhancement; action for long-range
-# attack." — a dual action_type not covered by the current enum (which
-# allows only one value per ability). Recorded as enabler (the
-# passive-enhancement half); flagged for schema review.
-action_type: enabler
+# attack." — a genuinely dual-mode tag.
+action_type: action_or_enabler
 sources:
   - type: focus
     id: masters-spells

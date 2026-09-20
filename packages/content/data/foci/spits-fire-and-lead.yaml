@@ -51,8 +51,13 @@ tier_abilities:
         - hot-shot
         - never-miss-a-shot
       count: 1
+# Note: source prints this Focus's Type Swap Option as two abilities
+# (Cogent Shot and Reload) under one "TYPE SWAP OPTION" heading, both
+# granted together when the type-swap is taken.
 type_swap_option:
-  ability_id: cogent-shot
+  ability_ids:
+    - cogent-shot
+    - reload
 additional_equipment:
   en: A six shooter (medium or heavy weapon) and 20 rounds of ammunition.
   pt-BR: Um revólver (arma média ou pesada) e 20 cartuchos de munição.

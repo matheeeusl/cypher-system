@@ -11,17 +11,13 @@ description:
 
     - Automatic minor effect
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) only under Explores Cyberspace; under Fuses Mind and Machine
-  # the identical text is printed without the marker. Not modeled by the
-  # schema either way (no cyberware-marker field, and no per-source
-  # override for it). Flagged for schema review.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: explores-cyberspace
     tier: 6
+    cyberware: true
   - type: focus
     id: fuses-mind-and-machine
     tier: 6

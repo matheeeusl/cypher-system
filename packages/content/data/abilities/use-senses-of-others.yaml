@@ -8,9 +8,8 @@ description:
 cost:
   pool: intellect
   amount: 4
-# Note: source tag is "Action to establish." — approximated as
-# action_to_initiate; flagged for schema review.
-action_type: action_to_initiate
+# Note: source tag is "Action to establish."
+action_type: action_to_establish
 sources:
   - type: focus
     id: commands-mental-powers

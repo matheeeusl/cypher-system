@@ -5,10 +5,6 @@ name:
 description:
   en: You can make two gun attacks as a single action, but the second attack is hindered by two steps.
   pt-BR: "Tradução em breve."
-  # Note: Packs Chromed Heat's printing marks this ability with "~" (a
-  # cyberware-derived ability marker, not modeled — see shooter-chrome);
-  # Is Licensed to Carry's printing has no marker — same per-source "~"
-  # inconsistency as machine-enhancement/network-tap/escape-plan.
 cost: null
 action_type: enabler
 sources:
@@ -18,3 +14,4 @@ sources:
   - type: focus
     id: packs-chromed-heat
     tier: 4
+    cyberware: true

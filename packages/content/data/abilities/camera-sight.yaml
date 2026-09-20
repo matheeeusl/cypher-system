@@ -20,8 +20,6 @@ description:
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
-  # Also marks this ability with "~" (a cyberware-derived ability
-  # marker), not modeled by the schema.
 cost:
   pool: intellect
   amount: 3
@@ -30,3 +28,4 @@ sources:
   - type: focus
     id: has-eyes-everywhere
     tier: 2
+    cyberware: true

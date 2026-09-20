@@ -8,10 +8,8 @@ description:
 cost:
   pool: intellect
   amount: 1
-# Note: source tag is "Action to initiate; action to animate." — not in
-# the schema's action_type enum; approximated as action_to_initiate. See
-# .population-status.md item 3.
-action_type: action_to_initiate
+# Note: source tag is "Action to initiate; action to animate."
+action_type: action_to_initiate_and_animate
 sources:
   - type: focus
     id: awakens-dreams

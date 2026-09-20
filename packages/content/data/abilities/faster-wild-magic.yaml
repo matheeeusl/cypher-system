@@ -13,9 +13,8 @@ description:
     fill your cypher slots.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action to initiate, ten minutes to complete."
-  # — a further non-standard action_type tag, approximated as
-  # `action_to_initiate`. Flagged for schema review (see schema gap
-  # item 3).
+  # — the "ten minutes to complete" clause is a duration, not modeled by
+  # action_type.
 cost: null
 action_type: action_to_initiate
 sources:

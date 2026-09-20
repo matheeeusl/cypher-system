@@ -130,7 +130,7 @@ type FocusTierAbilityGroup {
 }
 
 type FocusTypeSwapOption {
-  abilityId: ID!
+  abilityIds: [ID!]!
 }
 
 type Focus {
@@ -163,6 +163,10 @@ type AbilitySourceRef {
   type: AbilitySourceType!
   id: ID!
   tier: Int!
+  # True when the rulebook marks this specific source's printing with "~"
+  # (a cyberware-derived ability) — per-source, since the book itself
+  # marks the same ability inconsistently across the Foci that grant it.
+  cyberware: Boolean!
 }
 
 type Ability {

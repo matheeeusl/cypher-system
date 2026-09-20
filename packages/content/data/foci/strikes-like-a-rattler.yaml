@@ -52,7 +52,8 @@ tier_abilities:
         - spray-venom
       count: 1
 type_swap_option:
-  ability_id: swift-slither
+  ability_ids:
+    - swift-slither
 additional_equipment: null
 connection_options:
   - en: Pick one other PC. You rescued this character from a bad situation, but in doing so, you killed someone close to the character. Maybe that was also the PC's persecutor, but there's still some tension between you.

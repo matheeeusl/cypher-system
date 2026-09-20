@@ -17,10 +17,9 @@ description:
   # baseline Intellect cost recorded, the XP addition folded into
   # prose (same approximation used for divine-intervention's
   # XP-alternative and word-of-command's cypher-sacrifice cost).
-  # Source tag is "Action to initiate, several hours to complete." — a
-  # further non-standard action_type tag, approximated as
-  # `action_to_initiate`. Flagged for schema review (see schema gap
-  # item 3).
+  # Source tag is "Action to initiate, several hours to complete." —
+  # the "several hours to complete" clause is a duration, not modeled
+  # by action_type.
 cost:
   pool: intellect
   amount: 6

@@ -19,12 +19,11 @@ description:
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
-  # Also marks this ability with "~" (a cyberware-derived ability
-  # marker), not modeled by the schema. Source also carries a trailing
-  # errata note ("This document corrects a suspected misprint in Neon
-  # Rain where Machine Enhancement is not marked as a Cyberware-derived
-  # ability") — an editorial note about a *different* ability, not part
-  # of 360° Vision's own mechanics; omitted.
+  # Source also carries a trailing errata note ("This document corrects
+  # a suspected misprint in Neon Rain where Machine Enhancement is not
+  # marked as a Cyberware-derived ability") — an editorial note about a
+  # *different* ability, not part of 360° Vision's own mechanics;
+  # omitted.
 cost:
   pool: intellect
   amount: 6
@@ -33,3 +32,4 @@ sources:
   - type: focus
     id: has-eyes-everywhere
     tier: 6
+    cyberware: true

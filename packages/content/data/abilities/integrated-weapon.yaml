@@ -8,11 +8,10 @@ description:
     mantis blade or monowire) is built into one of your arms. The
     weapon is concealed until you wish to use it.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived
-  # ability marker, not modeled — see schema gap item 6).
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: weaponizes-chrome
     tier: 1
+    cyberware: true

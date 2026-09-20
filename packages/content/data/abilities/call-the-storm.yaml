@@ -19,13 +19,13 @@ description:
   # baseline 7 Intellect points here, flagged for schema review (same
   # approximation used for divine-intervention/return-to-the-obelisk).
   # Source tag is "Three actions to initiate; action to call down a
-  # lightning strike." — a further non-standard action_type tag,
-  # approximated as `action_to_initiate`. Flagged for schema review
-  # (see schema gap item 3).
+  # lightning strike." — the "three actions" clause is an action-count
+  # to initiate, not a duration, but still not modeled beyond the
+  # action_type category itself.
 cost:
   pool: intellect
   amount: 7
-action_type: action_to_initiate
+action_type: action_to_initiate_and_call
 sources:
   - type: focus
     id: speaks-for-the-land

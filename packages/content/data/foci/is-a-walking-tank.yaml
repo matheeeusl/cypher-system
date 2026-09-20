@@ -31,7 +31,8 @@ tier_abilities:
         - ultra-enhancement
       count: 1
 type_swap_option:
-  ability_id: hidden-shield
+  ability_ids:
+    - hidden-shield
 additional_equipment: null
 connection_options:
   - en: >-

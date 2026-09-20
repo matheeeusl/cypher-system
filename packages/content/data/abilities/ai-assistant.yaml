@@ -20,9 +20,6 @@ description:
     Se a IA desaparecer por ter sido destruída, você sofre 4 pontos de
     dano que ignoram a Armadura e não poderá invocá-la novamente até a
     próxima vez que se conectar à rede.
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) — not modeled by the schema (no cyberware-marker field).
-  # Flagged for schema review.
 cost:
   pool: intellect
   amount: 2
@@ -31,3 +28,4 @@ sources:
   - type: focus
     id: explores-cyberspace
     tier: 3
+    cyberware: true

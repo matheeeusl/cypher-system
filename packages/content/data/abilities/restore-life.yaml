@@ -19,10 +19,9 @@ description:
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 9 Intellect points here, flagged for schema review
   # (same approximation used for divine-intervention/return-to-the-
-  # obelisk). Source tag is "Action; one minute to initiate." — a
-  # further non-standard action_type tag, approximated as
-  # `action_to_initiate`. Flagged for schema review (see schema gap
-  # item 3).
+  # obelisk). Source tag is "Action; one minute to initiate." — the
+  # "one minute to initiate" clause is a duration, not modeled by
+  # action_type.
 cost:
   pool: intellect
   amount: 9

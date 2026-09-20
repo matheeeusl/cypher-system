@@ -10,14 +10,10 @@ description:
     for an NPC). This occurs seamlessly, as part of the same action.
   pt-BR: "Tradução em breve."
   # Note: source Tier 6 heading reads "Choose either Explosive Release,
-  # or both Continuous Transfer and Drain at a Distance" — not a plain
-  # "choose one of N" but a choice between one path (Explosive Release
-  # alone) and a bundled pair (Continuous Transfer + Drain at a
-  # Distance together). The schema's `choice` shape (options + count)
-  # can't express a bundled option; modeled as a flat 3-option
-  # `count: 1` choice on the Focus file with a comment explaining the
-  # real rule, rather than silently normalizing it into a false "pick
-  # any one of three" — flagged for schema review.
+  # or both Continuous Transfer and Drain at a Distance" — a choice
+  # between one path (Explosive Release alone) and a bundled pair
+  # (Continuous Transfer + Drain at a Distance together), modeled on
+  # the Focus file as a bundled-pair `choice` option.
 cost: null
 action_type: enabler
 sources:

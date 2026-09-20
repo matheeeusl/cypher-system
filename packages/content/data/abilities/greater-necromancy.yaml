@@ -15,7 +15,9 @@ description:
 cost:
   pool: intellect
   amount: 5
-action_type: action_to_initiate
+# Note: source tag is "Action to animate.", per necromancy's comment
+# (this ability works like Necromancy).
+action_type: action_to_animate
 sources:
   - type: focus
     id: consorts-with-the-dead

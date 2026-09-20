@@ -31,12 +31,13 @@ description:
     justificativa narrativa para o motivo de conseguir fazer
     isso e por que escolheu essa nova arma.
   # Note: source tag is "Action to initiate, ten minutes to complete."
-  # — a non-standard tag, approximated as `enabler` (see schema gap
-  # item 3).
+  # — the "ten minutes to complete" clause is a duration, not modeled by
+  # action_type. Was previously miscategorized as `enabler`; the source
+  # tag is unambiguously action_to_initiate.
 cost:
   pool: intellect
   amount: 1
-action_type: enabler
+action_type: action_to_initiate
 sources:
   - type: focus
     id: wields-an-enchanted-weapon

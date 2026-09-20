@@ -9,10 +9,9 @@ cost:
   pool: intellect
   amount: 5
 # Note: source tag is "Action to teleport along an existing path or to
-# fire a bullet and teleport along its path." — not in the schema's
-# action_type enum; approximated as action_to_initiate. See
-# .population-status.md item 3.
-action_type: action_to_initiate
+# fire a bullet and teleport along its path." — both variants are still
+# a single action, just two ways to trigger the same teleport.
+action_type: action_to_teleport
 sources:
   - type: focus
     id: conjures-bullets

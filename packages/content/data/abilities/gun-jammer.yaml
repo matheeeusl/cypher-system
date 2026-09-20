@@ -14,9 +14,8 @@ cost:
   amount: 2
 # Note: source tag is "Action or enabler." — a genuinely dual-mode tag
 # (the ability text confirms it can be used off-turn, functioning
-# reactively) — not in the schema's action_type enum; approximated as
-# action. See .population-status.md item 3.
-action_type: action
+# reactively).
+action_type: action_or_enabler
 sources:
   - type: focus
     id: conjures-bullets

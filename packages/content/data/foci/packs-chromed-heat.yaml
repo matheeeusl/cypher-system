@@ -46,7 +46,8 @@ tier_abilities:
         - lethal-damage
       count: 1
 type_swap_option:
-  ability_id: smart-link
+  ability_ids:
+    - smart-link
 additional_equipment: null
 connection_options:
   - en: Pick one other PC. This person has a bad habit of getting in the way of your shot. Anytime you miss and the GM rules (typically with a GM intrusion) that you hit an ally, it's usually them.

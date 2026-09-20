@@ -9,14 +9,13 @@ description:
     omega bat) is built into your gorilla arm. The weapon is
     concealed until you wish to use it.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived
-  # ability marker, not modeled — see schema gap item 6). Also has a
-  # trailing note: "If you have both Integrated Weapon and Heavy
-  # Integrated Weapon, each weapon is built into a different arm." —
-  # folded here as context.
+  # Note: also has a trailing note: "If you have both Integrated Weapon
+  # and Heavy Integrated Weapon, each weapon is built into a different
+  # arm." — folded here as context.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: weaponizes-chrome
     tier: 3
+    cyberware: true

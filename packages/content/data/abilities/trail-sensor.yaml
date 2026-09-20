@@ -9,9 +9,10 @@ cost:
   pool: intellect
   amount: 3
 # Note: source tag is "A few rounds to create the enhanced blaze
-# symbol; action to check." — not covered by the current action_type
-# enum. Approximated as action_to_initiate; flagged for schema review.
-action_type: action_to_initiate
+# symbol; action to check." — the "a few rounds to create" clause is a
+# duration, not modeled by action_type (preserved here in this comment);
+# the check half matches sensor's "action to create; action to check."
+action_type: action_to_create_and_check
 sources:
   - type: focus
     id: blazes-paths

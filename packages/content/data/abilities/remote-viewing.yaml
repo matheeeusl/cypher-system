@@ -8,7 +8,9 @@ description:
 cost:
   pool: intellect
   amount: 6
-action_type: action_to_initiate
+# Note: source tag is "Action to initiate; action each round to
+# concentrate." — same tag as find-the-hidden/see-through-time.
+action_type: action_to_initiate_and_concentrate
 sources:
   - type: focus
     id: sees-beyond

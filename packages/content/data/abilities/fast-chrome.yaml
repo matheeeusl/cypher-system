@@ -5,14 +5,13 @@ name:
 description:
   en: Your machine parts grant you +1 to Armor and +2 to your Speed Pool.
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker) and a trailing "(NR, 30)" page cross-reference — neither is
-  # modeled by the schema (no cyberware-marker field; the page ref is the
-  # same kind of unresolved internal OG-CSPG pointer omitted elsewhere,
-  # e.g. as-if-one-creature). Flagged for schema review.
+  # Note: source carries a trailing "(NR, 30)" page cross-reference,
+  # omitted (same kind of unresolved internal OG-CSPG pointer omitted
+  # elsewhere, e.g. as-if-one-creature).
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: embeds-stealthtech
     tier: 1
+    cyberware: true

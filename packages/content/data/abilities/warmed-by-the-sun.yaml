@@ -9,9 +9,9 @@ description:
     Once you use this ability, you can't use it again until after
     your next ten-hour recovery roll.
   pt-BR: "Tradução em breve."
-  # Note: source tag is "Ten minutes to activate." — a further
-  # non-standard action_type tag, approximated as `action_to_initiate`.
-  # Flagged for schema review (see schema gap item 3).
+  # Note: source tag is "Ten minutes to activate." — no "action" word
+  # printed at all, just a duration before the effect triggers; closest
+  # existing category is action_to_initiate.
 cost:
   pool: intellect
   amount: 2

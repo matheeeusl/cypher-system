@@ -8,7 +8,8 @@ description:
 cost:
   pool: intellect
   amount: 4
-action_type: action_to_initiate
+# Note: source tag is "Action to create."
+action_type: action_to_create
 sources:
   - type: focus
     id: crafts-illusions

@@ -35,12 +35,13 @@ description:
     ability that lets you make additional attacks on your turn.
   pt-BR: "Tradução em breve."
 cost: null
-# Note: source tag is "Action to change or revert." — not in the schema's
-# action_type enum; approximated as action_to_initiate, same call made for
-# the analogous "Action to change."/"Action to change back." tags on
-# controlled-change/beast-form (Howls at the Moon). See
-# .population-status.md item 3.
-action_type: action_to_initiate
+# Note: source tag is "Action to change or revert." — same tag as
+# mist-form/moon-shape. NOT the same as controlled-change/beast-form
+# (Howls at the Moon), whose confirmed tags turned out to be two
+# separate single-direction tags ("Action to Change."/"Action to change
+# back.") rather than one combined "change or revert" tag — see their
+# own action_type comments.
+action_type: action_to_change_or_revert
 sources:
   - type: focus
     id: takes-animal-shape

@@ -17,9 +17,8 @@ description:
     breathing creature, and every device creating noise within range.
   pt-BR: "Tradução em breve."
   # Note: source tag is "Action to initiate, up to several rounds to
-  # complete, depending on the difficulty of the task." — a further
-  # non-standard action_type tag, approximated as `action_to_initiate`.
-  # Flagged for schema review (see schema gap item 3).
+  # complete, depending on the difficulty of the task." — the
+  # duration/timing clause is not modeled by action_type.
 cost:
   pool: might
   amount: 2

@@ -5,10 +5,6 @@ name:
 description:
   en: You gain +1 to Armor and +5 to each of your three stat Pools.
   pt-BR: Você ganha +1 na Armadura e +5 em cada uma de suas três Reservas de atributo.
-  # Note: Weaponizes Chrome's printing marks this ability with "~" (a
-  # cyberware-derived ability marker, not modeled — see schema gap
-  # item 6); none of its other sources use the marker — a new
-  # per-source "~" inconsistency.
 cost: null
 action_type: enabler
 sources:
@@ -24,3 +20,4 @@ sources:
   - type: focus
     id: weaponizes-chrome
     tier: 6
+    cyberware: true

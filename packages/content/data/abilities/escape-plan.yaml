@@ -5,18 +5,17 @@ name:
 description:
   en: When you kill a foe, you can attempt a stealth task to immediately hide from anyone around, assuming that a suitable hiding place is nearby.
   pt-BR: "Tradução em breve."
-  # Note: Embeds Stealthtech's printing marks this ability with "~" (a
-  # cyberware-derived ability marker, not modeled — see fast-chrome) and
-  # a trailing "(136)" page cross-reference (omitted as an unresolved
-  # internal OG-CSPG pointer, same treatment as as-if-one-creature);
-  # Murders' printing has neither marker nor page reference — same
-  # per-source "~" inconsistency as machine-enhancement/network-tap.
+  # Note: Embeds Stealthtech's printing carries a trailing "(136)" page
+  # cross-reference (omitted as an unresolved internal OG-CSPG pointer,
+  # same treatment as as-if-one-creature); Murders' printing has no such
+  # page reference.
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: embeds-stealthtech
     tier: 6
+    cyberware: true
   - type: focus
     id: murders
     tier: 6

@@ -9,9 +9,8 @@ cost:
   pool: intellect
   amount: 4
 # Note: source tag is "Action to initiate; if you direct the dream, action
-# to direct per round." — not in the schema's action_type enum;
-# approximated as action_to_initiate. See .population-status.md item 3.
-action_type: action_to_initiate
+# to direct per round."
+action_type: action_to_initiate_and_direct_per_round
 sources:
   - type: focus
     id: awakens-dreams

@@ -9,9 +9,7 @@ description:
   pt-BR: "Tradução em breve."
   # Note: printed as the second of two abilities under Spits Fire and
   # Lead's single "TYPE SWAP OPTION" heading (alongside Cogent Shot) —
-  # the schema's `type_swap_option` field only holds one ability_id, so
-  # this file isn't referenced by that Focus's `type_swap_option`
-  # field. See the comment on `cogent-shot` for the full explanation.
+  # both are listed in that Focus's `type_swap_option.ability_ids`.
 cost:
   pool: speed
   amount: 1

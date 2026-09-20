@@ -5,14 +5,14 @@ name:
 description:
   en: If attacking from a hidden vantage, with surprise, or before an opponent has acted, you get an asset on the attack (if you have Surprise Attack, this is in addition to the asset from that ability). On a successful hit with this surprise attack, you inflict 2 additional points of damage (for a total of 4 additional points of damage if you have Surprise Attack).
   pt-BR: "Tradução em breve."
-  # Note: source marks this ability with "~" (a cyberware-derived ability
-  # marker, not modeled — see fast-chrome).
 cost: null
 action_type: enabler
 sources:
   - type: focus
     id: embeds-stealthtech
     tier: 4
+    cyberware: true
   - type: focus
     id: murders
     tier: 4
+    cyberware: true

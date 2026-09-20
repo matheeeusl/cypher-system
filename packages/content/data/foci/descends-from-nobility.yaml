@@ -31,7 +31,8 @@ tier_abilities:
         - mind-of-a-leader
       count: 1
 type_swap_option:
-  ability_id: retinue
+  ability_ids:
+    - retinue
 additional_equipment: null
 connection_options: null
 minor_effect_suggestion: null
