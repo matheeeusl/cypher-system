@@ -173,9 +173,13 @@ export default defineConfig({
       // add the breadcrumb above the content box and the entity-type
       // eyebrow above the title (both derived from the URL, see
       // src/lib/page-context.ts).
+      //
+      // Sidebar wraps it too, to list the current page's sections under its
+      // menu entry (see Sidebar.astro); the menu's look is CSS in globals.css.
       components: {
         Head: './src/components/Head.astro',
         Header: './src/components/Header.astro',
+        Sidebar: './src/components/Sidebar.astro',
         TwoColumnContent: './src/components/TwoColumnContent.astro',
         PageTitle: './src/components/PageTitle.astro',
       },

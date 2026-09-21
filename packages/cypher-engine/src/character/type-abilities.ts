@@ -16,8 +16,8 @@ const ERRORS = {
  * plus the Type's auto-granted special ability, if it has one.
  *
  * Type ability resolution beyond tier 1 is out of scope for now — the
- * "choose N" count varies by both tier and Type and isn't captured in
- * TypeSchema yet. See "Known gaps" in this package's CLAUDE.md.
+ * per-tier counts exist in `tier_choose_counts`, but picks for later tiers
+ * aren't modeled yet. See "Known gaps" in this package's CLAUDE.md.
  */
 export function resolveTypeAbilities(
   type: Pick<Type, 'id' | 'tier_abilities' | 'special_ability_id'>,

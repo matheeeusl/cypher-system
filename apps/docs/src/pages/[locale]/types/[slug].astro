@@ -11,11 +11,11 @@ import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
 
 // Universal rules constants (identical for every Type), not per-Type data —
 // already enforced in @cypher/engine (effort.ts's base of 1, pool.ts's
-// sum-to-6 allocation, type-abilities.ts's REQUIRED_TIER_1_COUNT), so these
-// are rendered as static text rather than sourced from a schema field.
+// sum-to-6 allocation), so these are rendered as static text rather than
+// sourced from a schema field. The per-tier "Choose N" counts are *not* here:
+// they vary by Type and tier, so they come from type.tier_choose_counts.
 const STARTING_EFFORT = 1;
 const ADDITIONAL_POOL_POINTS = 6;
-const TIER_1_CHOICE_COUNT = 4;
 
 // English/Portuguese adjective phrases for content/reference-tables/
 // price-tiers.yaml's price_tier ids — UI chrome, not rulebook prose, so
@@ -140,16 +140,29 @@ const equipmentText = [
 	{
 		tierEntries.map(([tier, abilityIds], i) => (
 			<div class="border-b border-border py-2.5 not-prose" class:list={{ 'border-t': i === 0 }}>
-				<span class="font-mono text-xs text-accent">
-					{t('Tier', 'Tier')} {tier}
-				</span>
+				<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+					<span class="font-mono text-xs text-accent">
+						{t('Tier', 'Tier')} {tier}
+					</span>
+					{/* From tier 2 up the pick can come from that tier or any lower
+					    one (rulebook, "Type Abilities"); tier 1 has nothing lower. */}
+					<span class="font-mono text-[10px] tracking-[0.06em] text-warning uppercase">
+						{t('Choose', 'Escolha')} {type.tier_choose_counts[tier]}
+						{Number(tier) > 1 && (
+							<span class="normal-case text-text-muted">
+								{' · '}
+								{t('from this tier or lower', 'deste tier ou inferior')}
+							</span>
+						)}
+					</span>
+				</div>
 				<div class="mt-2">
 					{i === 0 && (
 						<div class="mb-2.5 rounded border border-border bg-panel px-3 py-0.5">
 							{[
 								[t('Edge', 'Edge'), edgeText],
 								[t('Weapons', 'Armas'), weaponText],
-								specialAbility ? [t('Special ability', 'Habilidade especial'), pick(specialAbility.name, locale)] : null,
+								specialAbility ? [t('Special ability', 'Habilidade especial'), <a href={`/${locale}/abilities/${specialAbility.id}/`}>{pick(specialAbility.name, locale)}</a>] : null,
 								startingSkills.length > 0
 									? [
 											t('Starting skills', 'Perícias iniciais'),
@@ -165,11 +178,6 @@ const equipmentText = [
 										<span class="text-text-muted">{desc}</span>
 									</div>
 								))}
-						</div>
-					)}
-					{i === 0 && (
-						<div class="mb-1.5 font-mono text-[10px] tracking-[0.06em] text-warning uppercase">
-							{t(`Choose ${TIER_1_CHOICE_COUNT}`, `Escolha ${TIER_1_CHOICE_COUNT}`)}
 						</div>
 					)}
 					<div class="flex flex-wrap gap-1.5">

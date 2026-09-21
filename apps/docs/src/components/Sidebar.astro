@@ -1,0 +1,46 @@
+---
+// Starlight `components.Sidebar` override (wired in astro.config.mjs). Wraps
+// Starlight's own sidebar and adds one thing from the Narrative Chapter mock:
+// the current page's sections listed under its own entry in the menu, in place
+// of the right-hand "On this page" column (every chapter turns that off).
+//
+// Starlight builds the sidebar as one recursive list we can't hook into per
+// entry (only the whole `Sidebar` is overridable), so the list is rendered here
+// from the route's `headings` — which exist even with `tableOfContents: false` —
+// into an inert <template>, and the inline script below moves it under the
+// current link. The script is `is:inline` on purpose: it runs the moment the
+// parser reaches it, i.e. before first paint, so the entry never appears to
+// grow after load. Without JS the menu is simply Starlight's own.
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+
+const { headings } = Astro.locals.starlightRoute;
+// h2 only: the mock lists one level of sections, and deeper headings would
+// turn a chapter's menu entry into a second full table of contents.
+const sections = headings.filter((heading) => heading.depth === 2);
+---
+
+<Default {...Astro.props}><slot /></Default>
+
+{
+	sections.length > 0 && (
+		<template id="page-sections">
+			<ul class="page-sections" aria-label={Astro.locals.t('tableOfContents.onThisPage')}>
+				{sections.map((section) => (
+					<li>
+						<a href={`#${section.slug}`}>{section.text}</a>
+					</li>
+				))}
+			</ul>
+		</template>
+		<script is:inline>
+			(function () {
+				var template = document.getElementById('page-sections');
+				var current = document.querySelector('#starlight__sidebar a[aria-current="page"]');
+				if (template && current && current.parentElement) {
+					current.parentElement.appendChild(template.content);
+					template.remove();
+				}
+			})();
+		</script>
+	)
+}

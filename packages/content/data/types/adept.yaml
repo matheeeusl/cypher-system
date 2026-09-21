@@ -115,6 +115,13 @@ starting_equipment:
     - price_tier: inexpensive
       count: 4
       exact: true
+tier_choose_counts:
+  '1': 4
+  '2': 1
+  '3': 2
+  '4': 1
+  '5': 2
+  '6': 1
 tier_abilities:
   '1':
     - distortion
