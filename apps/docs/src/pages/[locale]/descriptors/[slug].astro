@@ -63,26 +63,13 @@ const additionalEquipmentText = descriptor.additional_equipment
 		tableOfContents: false,
 	}}
 >
-	<p class="mb-4 font-mono text-xs text-text-muted">
-		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
-		<span class="opacity-50"> / </span>
-		{t('Descriptors', 'Descritores')}
-		<span class="opacity-50"> / </span>
-		<span class="text-text">{pick(descriptor.name, locale)}</span>
-	</p>
-
-	<div class="mb-2.5 flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase not-prose">
-		<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>
-		{t('Descriptor', 'Descritor')}
-	</div>
-
 	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(descriptor.description, locale)}</p>
 
 	<div class="mb-6 h-px bg-border"></div>
 
 	{
 		poolBonusRows.length > 0 && (
-			<div class="mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+			<div class="not-content mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
 				{poolBonusRows.map(([label, value]) => (
 					<div class="flex justify-between gap-4 border-b border-border py-1.5 font-mono text-[13px] last:border-b-0 last:pb-0 first:pt-0">
 						<span class="tracking-[0.04em] text-text-muted uppercase">{label}</span>

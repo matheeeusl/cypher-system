@@ -1,0 +1,64 @@
+---
+// Inline `[Category: Name]` pill for prose (the design's Narrative Chapter Page
+// link treatment), used from MDX chapters. Takes an entity id rather than a
+// hand-written href + label: the name is resolved from @cypher/content, so a
+// mistyped id fails the build instead of shipping a dead link, and the label
+// follows the page's locale automatically.
+import {
+	getAbilityById,
+	getArtifactById,
+	getCypherById,
+	getDescriptorById,
+	getFocusById,
+	getTypeById,
+} from '@cypher/content';
+import { pick, type UrlLocale } from '../lib/locale';
+
+interface Props {
+	kind: 'type' | 'descriptor' | 'focus' | 'ability' | 'cypher' | 'artifact';
+	id: string;
+}
+
+const { kind, id } = Astro.props;
+
+const locale = (Astro.url.pathname.split('/')[1] || 'en') as UrlLocale;
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+const entity = {
+	type: () => getTypeById(id),
+	descriptor: () => getDescriptorById(id),
+	focus: () => getFocusById(id),
+	ability: () => getAbilityById(id),
+	cypher: () => getCypherById(id),
+	artifact: () => getArtifactById(id),
+}[kind]();
+
+if (!entity) throw new Error(`EntityLink: no ${kind} with id "${id}"`);
+
+const categoryLabel = {
+	type: t('Type', 'Tipo'),
+	descriptor: t('Descriptor', 'Descritor'),
+	focus: t('Focus', 'Foco'),
+	ability: t('Ability', 'Habilidade'),
+	cypher: t('Cypher', 'Cifra'),
+	artifact: t('Artifact', 'Artefato'),
+}[kind];
+
+const routeSegment = {
+	type: 'types',
+	descriptor: 'descriptors',
+	focus: 'foci',
+	ability: 'abilities',
+	cypher: 'cyphers',
+	artifact: 'artifacts',
+}[kind];
+---
+
+{/* `not-content` excludes descendants only, so it has to sit on a wrapper: on the <a> itself it wouldn't stop Starlight's link colour/underline. */}
+<span class="not-content"
+	><a
+		href={`/${locale}/${routeSegment}/${id}/`}
+		class="rounded-[3px] border border-border bg-panel px-1.5 py-px font-mono text-[13px] whitespace-nowrap text-accent no-underline hover:border-accent"
+		><span class="opacity-50">[</span>{categoryLabel}: {pick(entity.name, locale)}<span class="opacity-50">]</span></a
+	></span
+>

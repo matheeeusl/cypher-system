@@ -1,0 +1,61 @@
+---
+# STUB (pt-BR): headings, links and the table structure are in place, but the
+# rulebook prose is deliberately left as "Tradução em breve." — this project does
+# not machine-translate rulebook text (see @cypher/content's CLAUDE.md, "Content
+# accuracy"). The table's pt-BR column is the data package's own placeholder.
+# English source and its verification notes: ../../en/rules/character-creation.mdx
+title: Criação de Personagem
+description: Como um personagem é descrito por um descritor, um tipo e um foco, e como escolher uma conexão de foco.
+sidebar:
+  order: 7
+tableOfContents: false
+---
+
+import EntityLink from '../../../../components/EntityLink.astro'
+import ReferenceTable from '../../../../components/ReferenceTable.astro'
+import { getFocusConnectionTable } from '@cypher/content'
+
+export const connections = getFocusConnectionTable()
+
+## A Frase do Personagem
+
+Tradução em breve.
+
+## Descritor
+
+Tradução em breve.
+
+## Tipo
+
+Os quatro tipos: <EntityLink kind="type" id="warrior" />, <EntityLink kind="type" id="adept" />, <EntityLink kind="type" id="explorer" /> e <EntityLink kind="type" id="speaker" />.
+
+Tradução em breve.
+
+## Foco
+
+Exemplo: <EntityLink kind="focus" id="walks-the-wild-woods" /> concede <EntityLink kind="ability" id="wilderness-life" /> no tier 1.
+
+Tradução em breve.
+
+## Fazendo Escolhas
+
+Tradução em breve.
+
+## Escolhendo uma Conexão
+
+Tradução em breve.
+
+<ReferenceTable
+  caption="Conexões de foco"
+  columns={[
+    { label: 'd100', kind: 'key', width: '5.5rem' },
+    { label: 'Conexão de Foco', kind: 'prose' },
+  ]}
+  rows={connections.map((connection) => [connection.range, connection.text['pt-BR']])}
+/>
+
+:::note
+Este capítulo ainda está sendo escrito. Arcos de personagem, a definição das Reservas e do Edge, e outras personalizações ainda não estão cobertos.
+:::
+
+_Fonte: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Character Sentence: Descriptor, Type, and Focus" (p. 28) e "Focus Connections" (p. 165)._

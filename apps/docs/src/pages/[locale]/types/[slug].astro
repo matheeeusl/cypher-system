@@ -98,24 +98,11 @@ const equipmentText = [
 		tableOfContents: false,
 	}}
 >
-	<p class="mb-4 font-mono text-xs text-text-muted">
-		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
-		<span class="opacity-50"> / </span>
-		{t('Types', 'Tipos')}
-		<span class="opacity-50"> / </span>
-		<span class="text-text">{pick(type.name, locale)}</span>
-	</p>
-
-	<div class="mb-2.5 flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase not-prose">
-		<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>
-		{t('Type', 'Tipo')}
-	</div>
-
 	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(type.tagline, locale)}</p>
 
 	<div class="mb-6 h-px bg-border"></div>
 
-	<div class="mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+	<div class="not-content mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
 		{
 			[
 				[t('Might Pool', 'Reserva de Força'), String(type.starting_pools.might)],

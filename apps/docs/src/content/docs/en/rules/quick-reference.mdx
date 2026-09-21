@@ -1,0 +1,140 @@
+---
+# Maintenance notes (YAML comments: MDX body comments get mangled by Prettier).
+# - Adapted from the OG-CSPG (rulebook/cypherrules.pdf, gitignored), Chapter 1,
+#   "Quick Reference" (p. 10).
+# - The source page is a three-column sheet; sections here follow its reading order.
+# - Values are transcribed as printed, including the sheet's own weapon/armor
+#   tables. The Equipment page renders the same figures from @cypher/content.
+title: Quick Reference
+description: A one-page summary of the core rules — modifying difficulty, special rolls, costs, movement, XP, range and combat.
+sidebar:
+  order: 2
+tableOfContents: false
+---
+
+import ReferenceTable from '../../../../components/ReferenceTable.astro'
+
+## Try Anything!
+
+The GM sets the difficulty. If you retry, use 1 level of Effort.
+
+## Modifying the Difficulty
+
+<ReferenceTable
+  caption="Skills and their effect on difficulty"
+  columns={[
+    { label: 'Skills (2 steps)', kind: 'name' },
+    { label: 'Difficulty', kind: 'value' },
+  ]}
+  rows={[
+    ['Inability', '+1'],
+    ['Practiced (default)', '—'],
+    ['Trained', '−1'],
+    ['Specialized', '−2'],
+  ]}
+/>
+
+**Assets (2 steps):** A useful item, help, or favorable circumstance.
+
+**Effort (6 steps):** Costs 3 Pool points + 2 points per additional level.
+
+## Special Rolls
+
+<ReferenceTable
+  caption="Special rolls"
+  columns={[
+    { label: 'd20', kind: 'key', width: '5rem' },
+    { label: 'Effects', kind: 'prose' },
+  ]}
+  rows={[
+    ['1', 'GM Intrusion, no XP'],
+    ['17', '+1 damage'],
+    ['18', '+2 damage'],
+    ['19', 'Minor effect or +3 damage'],
+    ['20', 'Major effect or +4 damage, spent Pool refunded'],
+  ]}
+/>
+
+## Paying Costs
+
+Total Pool cost, subtract Edge.
+
+## Moving
+
+**Immediate:** take an action
+
+**Short:** action, difficulty 4 Speed task for another action
+
+**Long:** difficulty 4 Speed task
+
+## Spending XP
+
+<ReferenceTable
+  caption="Spending XP"
+  columns={[
+    { label: 'XP', kind: 'key', width: '5rem' },
+    { label: 'Effect', kind: 'prose' },
+  ]}
+  rows={[
+    ['1 XP', 'reroll, avoid GM intrusion, create player intrusion'],
+    ['2 XP', 'temporary skill or ability'],
+    ['3 XP', 'job, title, wealth, home'],
+    ['4 XP', 'character advancement—increase Pool, Effort, or Edge'],
+  ]}
+/>
+
+## Range and Distance
+
+<ReferenceTable
+  caption="Range and distance"
+  columns={[
+    { label: 'Distance', kind: 'name' },
+    { label: 'Range', kind: 'value' },
+  ]}
+  rows={[
+    ['Immediate', '10 feet (3 m)'],
+    ['Short', '50 feet (15 m)'],
+    ['Long', '100 feet (30 m)'],
+    ['Very long', '500 feet (150 m)'],
+  ]}
+/>
+
+## Cyphers
+
+Use cyphers, you'll find more!
+
+## Combat
+
+<ReferenceTable
+  caption="Weapons"
+  columns={[
+    { label: 'Weapon', kind: 'name' },
+    { label: 'Damage', kind: 'value' },
+    { label: 'Attack', kind: 'value' },
+  ]}
+  rows={[
+    ['Light', '2', 'eased'],
+    ['Medium', '4', '—'],
+    ['Heavy', '6', 'two-handed'],
+  ]}
+/>
+
+**Damage from Effort:** +3 per level
+
+<ReferenceTable
+  caption="Armor"
+  columns={[
+    { label: 'Armor', kind: 'name' },
+    { label: 'Armor bonus', kind: 'value' },
+    { label: 'Speed cost', kind: 'value' },
+  ]}
+  rows={[
+    ['Light', '+1', '+2'],
+    ['Medium', '+2', '+3'],
+    ['Heavy', '+3', '+4'],
+  ]}
+/>
+
+The rest of Chapter 1 is on these pages: [Core Mechanics](/en/rules/core-mechanics/), [Combat](/en/rules/combat/), [Cyphers and Artifacts](/en/rules/cyphers-and-artifacts/) and [Experience and Advancement](/en/rules/experience-and-advancement/). Prices and full equipment tables are on the [Equipment](/en/equipment/) page.
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Quick Reference" (p. 10)._

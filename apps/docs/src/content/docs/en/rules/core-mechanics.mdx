@@ -1,0 +1,195 @@
+---
+# Maintenance notes (YAML comments: MDX body comments get mangled by Prettier).
+# - Adapted from the OG-CSPG (rulebook/cypherrules.pdf, gitignored), Chapter 1:
+#   task difficulty through special rolls (p. 11), encounters, timekeeping,
+#   equipment and currency (p. 12), taking action, moving and range (p. 13).
+# - The wheel (src/assets/task-difficulty-wheel.png) accompanies the Task
+#   Difficulty table; it comes from the Quick Reference sheet (p. 10).
+# - The six price categories are not repeated here: they live on the Equipment
+#   page (from @cypher/content), which this chapter links to.
+# - Omitted on purpose: the source's inline ability boxes for abilities that
+#   have no Ability page yet, and its references to chapters this site lacks.
+title: Core Mechanics
+description: Task difficulty, modifying difficulty, rolling the die, special rolls, encounters, timekeeping, taking action, moving and range.
+sidebar:
+  order: 3
+tableOfContents: false
+---
+
+import DifficultyWheel from '../../../../components/DifficultyWheel.astro'
+import EntityLink from '../../../../components/EntityLink.astro'
+import ReferenceTable from '../../../../components/ReferenceTable.astro'
+
+## Task Difficulty
+
+<DifficultyWheel alt="Task difficulty wheel: difficulty 0 (Routine) through 10 (Impossible) arranged around a d20, each with its target number and success chance. The same figures are in the table below." />
+
+<ReferenceTable
+  caption="Task difficulty"
+  columns={[
+    { label: 'Task difficulty', kind: 'key' },
+    { label: 'Target number', kind: 'value' },
+    { label: 'Task success rate', kind: 'value' },
+    { label: 'Description', kind: 'name' },
+    { label: 'Guidance', kind: 'prose' },
+  ]}
+  rows={[
+    ['0', '0', '100%', 'Routine', 'Anyone can do this basically every time.'],
+    ['1', '3', '90%', 'Simple', 'Most people can do this most of the time.'],
+    ['2', '6', '75%', 'Standard', 'Requires attention, but most people can usually do this.'],
+    ['3', '9', '60%', 'Demanding', 'Requires focus; most people have a decent chance to succeed.'],
+    ['4', '12', '45%', 'Difficult', 'Trained people have a good chance to succeed.'],
+    ['5', '15', '30%', 'Challenging', 'Trained people often fail.'],
+    ['6', '18', '15%', 'Intimidating', 'Normal people almost never succeed.'],
+    ['7', '21', '—', 'Formidable', 'Impossible without skills or great effort.'],
+    ['8', '24', '−15%', 'Heroic', 'A task worthy of tales told for years afterward.'],
+    ['9', '27', '−30%', 'Immortal', 'A task worthy of legends that last lifetimes.'],
+    [
+      '10',
+      '30',
+      '−45%',
+      'Impossible',
+      "A task that normal humans couldn't consider (but one that doesn't break the laws of physics).",
+    ],
+  ]}
+/>
+
+## Modifying the Difficulty
+
+Everything has a level. A creature's level determines how difficult they are to hit, avoid, and how difficult they are to persuade. A door's level is how difficult it is to break down. A lock's level is how difficult it is to pick.
+
+Lowering difficulty is easing, and raising it is hindering. Skills can ease a task up to two steps. There are four different levels of skill training. You are practiced unless otherwise indicated.
+
+- **Inability:** Hindered by one step.
+- **Practiced:** No change in task difficulty.
+- **Trained:** Eased by one step.
+- **Specialized:** Eased by two steps.
+
+**Assets** can ease a task up to two steps. Anything that helps with a task is an asset. A crowbar is an asset when forcing open a door, and so is cooperation from another PC or capable follower.
+
+**Effort** can ease a task up to six steps. You ease a task one step for each level of Effort you use, spending points from the Pool for the stat the GM assigns to the task—3 points for the first level, plus 2 points for each additional level, up to a number of levels equal to your Effort score.
+
+A few special abilities can grant you a free level of Effort.
+
+## Rolling the Die
+
+The target number is the number you must roll on the d20 to succeed. A target number is three times the task difficulty—after you are finished modifying it.
+
+**Retrying a Task after Failure:** You must apply at least one level of Effort on a new action. Retrying a task is not always possible (this doesn't apply to dynamic situations like attacking in combat).
+
+## Special Rolls
+
+When you roll the die, certain outcomes on the d20 can trigger special effects like increased damage. You can suggest your own minor or major effects to the GM.
+
+<ReferenceTable
+  caption="Special rolls"
+  columns={[
+    { label: 'd20', kind: 'key', width: '5rem' },
+    { label: 'Effects', kind: 'prose' },
+  ]}
+  rows={[
+    ['1', 'GM Intrusion, no XP awarded'],
+    ['17', 'In combat, inflict +1 damage'],
+    ['18', 'In combat, inflict +2 damage'],
+    ['19', 'Minor effect (or inflict +3 damage)'],
+    ['20', 'Major effect (or inflict +4 damage), Pool points spent on the action are refunded'],
+  ]}
+/>
+
+## Encounters, Rounds, Initiative, and Timekeeping
+
+An encounter might be any number of things—a fight with a foe, a dramatic crossing of a raging river, or a stressful negotiation with an important official. An encounter is made up of one or more rounds.
+
+### Keeping Time
+
+**Initiative:** When many characters—including NPCs—want to take an action all at once, the GM calls for an initiative roll to determine who goes first. An initiative roll is a Speed task.
+
+**Rounds:** A round lasts five to ten seconds. The length of time is variable—one round might be a bit longer than the next. On average, there are about ten rounds in a minute. Each round, you—and each other character—get a turn.
+
+**Action:** On your turn, you get to choose what action you take. Actions usually prompt one task, but a few might prompt more than one. Because the player always rolls, you perform actions and tasks in response to other characters' actions. Defending against an enemy's attack is an action, it's just one you didn't choose, because it's not your turn.
+
+**Task:** A test of one of your stats–Might, Speed, or Intellect—the difficulty is determined by the GM.
+
+### Duration
+
+In an encounter, a duration of one minute generally lasts for the rest of the encounter. Likewise, an ability that lasts for ten minutes can safely be considered the length of an in-depth conversation, the time it takes to quickly explore a small area, or the time it takes to rest after a strenuous activity.
+
+In addition to determining difficulty, the GM might assign a minimum amount of time required to accomplish a task—minutes, hours, or even days, weeks, months, and years.
+
+## Equipment and Currency
+
+Outside of weapons, armor, and manifest cyphers and artifacts, equipment plays only a small role in the game. It's more important to focus on what you can do than on what you have, but the right equipment might provide an asset on a related task.
+
+The GM determines what equipment, goods, and services are available, their properties, and how costs and price categories are used and accounted for.
+
+### Price Categories
+
+Dollars, yuan, dinar, credits, gold pieces, alien beads, or bottle caps—different currencies appear in different settings, but there are usually six price categories. Think of the categories as ranges that encompass powers of 10, using these modern setting examples.
+
+The six categories, and the price category of ammunition and of each weapon and armor category, are on the [Equipment](/en/equipment/) page.
+
+## Taking Action
+
+Anything significant you do—attack a foe, resist hypnosis, leap a chasm, intimidate a captive, bargain with a shopkeeper, help an ally, or activate a special ability or a cypher—is an action.
+
+You can try anything. Skills, assets, and Effort are not required, but they help with success, and also with providing you a description of how you are doing what you are doing.
+
+The GM determines how NPCs react to your successes or failures.
+
+### Additional Actions
+
+In addition to the actions covered in detail in this chapter, common actions include:
+
+- Crafting, Building, and Repairing
+- Interacting with Creatures
+- Looking or Listening
+- Moving a Heavy Object
+- Operating or Disabling a Device or Vehicle
+- Riding or Piloting
+- Sneaking
+- Swimming
+- Understanding, Identifying, or Remembering
+
+### Waiting
+
+You can wait to react to another character's action. You decide what action will trigger your action, and if the triggering action happens, you get to take your action first (unless going first wouldn't make sense, like attacking a foe before they come into view).
+
+Waiting is a good way to deal with a ranged attacker who rises from behind cover, fires an attack, and ducks back down. You could say "I wait to see them pop up from behind cover and then I shoot them."
+
+### Initial Cost
+
+Using special abilities or Effort means spending stat Pool points. The GM can also assign an initial cost to a particularly taxing task just for trying it. Total all Pool point costs, then subtract your Edge.
+
+### Moving
+
+In combat, you're usually within immediate distance of most other combatants, unless the GM rules otherwise.
+
+**Move an Immediate Distance:** You can adjust your position and still take any other action—stepping back a few feet to use an ability, sliding over to help a friend, or pushing through a door you just knocked down. You can move before or after you take your action.
+
+**Move a Short Distance:** You can move a short distance as a routine action. If you succeed on a difficulty 4 Speed task, you can make a short move and take another (relatively simple) physical action, like make an attack.
+
+**Move a Long Distance:** You can use your action to move a long distance as a difficulty 4 Speed task.
+
+**Movement Modifiers:** Movement skills—like climbing, jumping, zero-gravity maneuvering—ease related movement tasks. Obstacles, difficult terrain, and strong currents of wind or water can hinder them.
+
+Before you move and take another action, it's a good idea to ask the GM if what you want to do is possible.
+
+Example ability: <EntityLink kind="ability" id="fleet-of-foot" />
+
+### Range and Distance
+
+<ReferenceTable
+  caption="Range and distance"
+  columns={[
+    { label: 'Distance', kind: 'name' },
+    { label: 'Range', kind: 'value' },
+  ]}
+  rows={[
+    ['Immediate distance', 'Up to 10 feet (3 m)'],
+    ['Short distance', 'Up to 50 feet (15 m)'],
+    ['Long distance', 'Up to 100 feet (30 m)'],
+    ['Very long distance', 'Up to 500 feet (150 m)'],
+  ]}
+/>
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — Chapter 1, pp. 11–13._

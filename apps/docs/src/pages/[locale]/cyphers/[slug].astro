@@ -1,0 +1,101 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllCyphers } from '@cypher/content';
+import type { Cypher } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+export function getStaticPaths() {
+	const cyphers = getAllCyphers();
+
+	return URL_LOCALES.flatMap((locale) =>
+		cyphers.map((cypher) => ({
+			params: { locale, slug: cypher.id },
+			props: { cypher },
+		})),
+	);
+}
+
+interface Props {
+	cypher: Cypher;
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { cypher } = Astro.props as Props;
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// English/Portuguese labels for the 4-value category enum — UI chrome, not
+// rulebook prose, same rationale as every other *_LABELS record on these
+// entity pages. Paired with a color/border treatment (below) since the
+// task calls category out as a real mechanical fact that needs a clear
+// visual distinction, not just a label buried in a panel row.
+const CATEGORY_LABELS: Record<Cypher['category'], [string, string]> = {
+	manifest: ['Manifest', 'Manifestação'],
+	fantastic: ['Fantastic', 'Fantástico'],
+	subtle: ['Subtle', 'Sutil'],
+	power_boost: ['Power Boost', 'Impulso de Poder'],
+};
+
+// Four categories, four visually distinct treatments drawn entirely from
+// the existing "Salvage Console" token set (no new colors) — accent for
+// the baseline category, warning for the standout one, a muted/dim
+// treatment for "subtle" (matches its name), and full-brightness text for
+// "power boost". Rendered as a standalone bordered badge (not just a
+// colored word) so it reads as a real classification tag, not decoration.
+const CATEGORY_STYLES: Record<Cypher['category'], { border: string; text: string }> = {
+	manifest: { border: 'border-accent', text: 'text-accent' },
+	fantastic: { border: 'border-warning', text: 'text-warning' },
+	subtle: { border: 'border-border', text: 'text-text-muted' },
+	power_boost: { border: 'border-text', text: 'text-text' },
+};
+
+const categoryLabel = t(...CATEGORY_LABELS[cypher.category]);
+const categoryStyle = CATEGORY_STYLES[cypher.category];
+---
+
+<StarlightPage
+	frontmatter={{
+		title: pick(cypher.name, locale),
+		description: pick(cypher.effect_text, locale),
+		tableOfContents: false,
+	}}
+>
+	<div class="mb-4 not-prose">
+		<span
+			class={`inline-block rounded border px-2.5 py-1 font-mono text-[11px] tracking-[0.06em] uppercase ${categoryStyle.border} ${categoryStyle.text}`}
+		>
+			{categoryLabel}
+		</span>
+	</div>
+
+	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(cypher.effect_text, locale)}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<div class="not-content mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+		<div class="flex justify-between gap-4 border-b border-border py-1.5 font-mono text-[13px] first:pt-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Level', 'Nível')}</span>
+			<span class="text-right font-medium text-text">{cypher.level_range}</span>
+		</div>
+		<div class="flex justify-between gap-4 py-1.5 font-mono text-[13px] last:pb-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Page Reference', 'Referência')}</span>
+			<span class="text-right font-medium text-text">{cypher.page_ref}</span>
+		</div>
+	</div>
+
+	{
+		cypher.effect_table && (
+			<>
+				<h2>{pick(cypher.effect_table.label, locale)}</h2>
+				<div class="not-content not-prose">
+					{cypher.effect_table.entries.map((entry) => (
+						<div class="flex gap-4 border-b border-border py-2 last:border-b-0">
+							<span class="w-16 shrink-0 font-mono text-xs text-accent">{entry.range}</span>
+							<p class="text-[13px] leading-[1.55] text-text-muted">{pick(entry.text, locale)}</p>
+						</div>
+					))}
+				</div>
+			</>
+		)
+	}
+</StarlightPage>

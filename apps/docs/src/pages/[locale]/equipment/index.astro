@@ -1,0 +1,138 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAmmunition, getArmorCategoryTable, getPriceTierTable, getWeaponCategoryTable } from '@cypher/content';
+import type { PriceTierTable } from '@cypher/content';
+import ReferenceTable from '../../../components/ReferenceTable.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+// One fixed page per locale — not a per-item [slug] route, because the rulebook
+// has no named-item equipment catalog (see @cypher/content's CLAUDE.md); this is
+// just its four small reference tables.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+const weapons = getWeaponCategoryTable();
+const armors = getArmorCategoryTable();
+const priceTiers = getPriceTierTable();
+const ammunition = getAmmunition();
+
+// English/Portuguese labels for the schema's fixed enums — UI chrome, not
+// rulebook prose, same rationale as the other *_LABELS records on the entity
+// pages. Records are keyed by the schema types themselves so a new enum value
+// fails typecheck instead of silently rendering as a raw id.
+const CATEGORY_LABELS: Record<(typeof weapons)[number]['id'], [string, string]> = {
+	light: ['Light', 'Leve'],
+	medium: ['Medium', 'Média'],
+	heavy: ['Heavy', 'Pesada'],
+};
+
+const ATTACK_LABELS: Record<(typeof weapons)[number]['attack'], [string, string]> = {
+	eased: ['Eased', 'Facilitado'],
+	normal: ['Normal', 'Normal'],
+	two_handed: ['Two-handed', 'Duas mãos'],
+};
+
+const PRICE_TIER_NAMES: Record<PriceTierTable[number]['id'], [string, string]> = {
+	inexpensive: ['Inexpensive', 'Barato'],
+	moderately_priced: ['Moderately priced', 'Preço moderado'],
+	expensive: ['Expensive', 'Caro'],
+	very_expensive: ['Very expensive', 'Muito caro'],
+	exorbitant: ['Exorbitant', 'Exorbitante'],
+	priceless: ['Priceless', 'Inestimável'],
+};
+
+const tierName = (id: PriceTierTable[number]['id']) => t(...PRICE_TIER_NAMES[id]);
+
+const weaponRows = weapons.map((w) => [
+	t(...CATEGORY_LABELS[w.id]),
+	String(w.damage),
+	t(...ATTACK_LABELS[w.attack]),
+	tierName(w.price_tier),
+]);
+
+// The rulebook prints armor and speed cost as bonuses ("+1", "+2"), so they
+// are shown that way rather than as bare numbers.
+const armorRows = armors.map((a) => [
+	t(...CATEGORY_LABELS[a.id]),
+	`+${a.armor}`,
+	`+${a.speed_cost}`,
+	tierName(a.price_tier),
+]);
+
+const priceTierRows = priceTiers.map((tier) => [tierName(tier.id), pick(tier.description, locale)]);
+
+const summary = t(
+	`${weapons.length} weapon categories · ${armors.length} armor categories · ${priceTiers.length} price tiers`,
+	`${weapons.length} categorias de arma · ${armors.length} categorias de armadura · ${priceTiers.length} faixas de preço`,
+);
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Equipment', 'Equipamento'),
+		description: t(
+			'Weapon categories, armor categories, price tiers and ammunition.',
+			'Categorias de arma, categorias de armadura, faixas de preço e munição.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6 text-[13px] text-text-muted">{summary}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<h2>{t('Weapon Categories', 'Categorias de Arma')}</h2>
+	<ReferenceTable
+		caption={t('Weapon categories', 'Categorias de arma')}
+		columns={[
+			{ label: t('Weapon', 'Arma'), kind: 'name' },
+			{ label: t('Damage', 'Dano'), kind: 'value' },
+			{ label: t('Attack', 'Ataque'), kind: 'value' },
+			{ label: t('Price', 'Preço'), kind: 'value' },
+		]}
+		rows={weaponRows}
+	/>
+
+	<h2>{t('Armor Categories', 'Categorias de Armadura')}</h2>
+	<ReferenceTable
+		caption={t('Armor categories', 'Categorias de armadura')}
+		columns={[
+			{ label: t('Armor', 'Armadura'), kind: 'name' },
+			{ label: t('Armor bonus', 'Bônus de Armadura'), kind: 'value' },
+			{ label: t('Speed cost', 'Custo de Velocidade'), kind: 'value' },
+			{ label: t('Price', 'Preço'), kind: 'value' },
+		]}
+		rows={armorRows}
+	/>
+	<p class="text-[13px] text-text-muted">
+		{
+			t(
+				'Speed cost is the additional cost from your Pool you pay for each level of Effort used on Speed tasks while wearing the armor.',
+				'O custo de Velocidade é o custo adicional, retirado da sua Reserva, pago por cada nível de Esforço usado em tarefas de Velocidade enquanto você usa a armadura.',
+			)
+		}
+	</p>
+
+	<h2>{t('Ammunition', 'Munição')}</h2>
+	<div class="not-content mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+		<div class="flex justify-between gap-4 font-mono text-[13px]">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Price', 'Preço')}</span>
+			<span class="text-right font-medium text-text">{tierName(ammunition.price_tier)}</span>
+		</div>
+	</div>
+
+	<h2>{t('Price Tiers', 'Faixas de Preço')}</h2>
+	<ReferenceTable
+		caption={t('Price tiers', 'Faixas de preço')}
+		columns={[
+			{ label: t('Tier', 'Faixa'), kind: 'name', width: '11rem' },
+			{ label: t('What it covers', 'O que abrange'), kind: 'prose' },
+		]}
+		rows={priceTierRows}
+	/>
+</StarlightPage>

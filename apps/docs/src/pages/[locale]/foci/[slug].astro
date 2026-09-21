@@ -1,8 +1,9 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { getAllFoci, getAbilityById, getFocusConnectionTable } from '@cypher/content';
+import { getAllFoci, getFocusConnectionTable } from '@cypher/content';
 import type { Focus } from '@cypher/content';
 import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import AbilityEntry from '../../../components/AbilityEntry.astro';
 
 export function getStaticPaths() {
 	const foci = getAllFoci();
@@ -24,22 +25,7 @@ const { focus } = Astro.props as Props;
 
 const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
 
-// Resolves an ability id to display data once, shared by every ability
-// pill on this page (tier grants, tier choices, type swap option) — reuses
-// the Ability page's own real-link-when-resolved/inert-pill-fallback
-// pattern (also used by the Types page) rather than reinventing it.
-const resolveAbilityPill = (id: string) => {
-	const ability = getAbilityById(id);
-	return {
-		id,
-		label: ability ? pick(ability.name, locale) : id,
-		href: ability ? `/${locale}/abilities/${id}/` : null,
-	};
-};
-
-type TierEntryView =
-	| { kind: 'granted'; pill: ReturnType<typeof resolveAbilityPill> }
-	| { kind: 'choice'; count: number; options: ReturnType<typeof resolveAbilityPill>[][] };
+type TierEntryView = { kind: 'granted'; id: string } | { kind: 'choice'; count: number; options: string[][] };
 
 // tier_abilities is keyed by tier as a string ('1'..'6'); most tiers hold a
 // single entry, but e.g. collects-bounties has two entries at one tier
@@ -47,23 +33,24 @@ type TierEntryView =
 // rather than assuming one-entry-per-tier. A choice's `options` can itself
 // hold a bundled pick (an array of >=2 ability ids selected together, e.g.
 // Transmits Energy tier 6), so every option is normalized to an array of
-// pills even when it's really just one ability.
+// ids even when it's really just one ability. Ids are passed through
+// unresolved: <AbilityEntry> looks each one up and handles ones that don't
+// resolve to an Ability.
 const tierEntries = Object.entries(focus.tier_abilities)
 	.sort(([a], [b]) => Number(a) - Number(b))
 	.map(
 		([tier, entries]) =>
 			[
 				tier,
-				entries.map((entry): TierEntryView =>
-					entry.kind === 'granted'
-						? { kind: 'granted', pill: resolveAbilityPill(entry.ability_id) }
-						: {
-								kind: 'choice',
-								count: entry.count,
-								options: entry.options.map((option) =>
-									(Array.isArray(option) ? option : [option]).map(resolveAbilityPill),
-								),
-							},
+				entries.map(
+					(entry): TierEntryView =>
+						entry.kind === 'granted'
+							? { kind: 'granted', id: entry.ability_id }
+							: {
+									kind: 'choice',
+									count: entry.count,
+									options: entry.options.map((option) => (Array.isArray(option) ? option : [option])),
+								},
 				),
 			] as const,
 	);
@@ -74,16 +61,20 @@ const tierEntries = Object.entries(focus.tier_abilities)
 // and Lead's source prints two abilities (Cogent Shot, Reload) granted
 // together under one "Type Swap Option" heading — see that Focus's own
 // data file and @cypher/content's FocusSchema comment.
-const typeSwapPills = focus.type_swap_option ? focus.type_swap_option.ability_ids.map(resolveAbilityPill) : null;
+const typeSwapIds = focus.type_swap_option ? focus.type_swap_option.ability_ids : null;
 
 const additionalEquipmentText = focus.additional_equipment ? pick(focus.additional_equipment, locale) : null;
 
-// Only 4 of 50 Foci define their own connection_options; every other Focus
-// still has a connection — it just comes from the shared d100 Focus
+// Only a handful of Foci define their own connection_options; every other
+// Focus still has a connection — it just comes from the shared d100 Focus
 // Connections table instead. Rendering a fallback note (rather than hiding
 // the section) keeps that the common, unremarkable case it actually is,
-// not something that looks missing from this Focus's page.
+// not something that looks missing from this Focus's page. The note links to
+// the table's own section in the Character Creation chapter (heading slugs
+// come from that chapter's "Choosing a Connection" / "Escolhendo uma
+// Conexão" headings, so they must stay in sync with it).
 const connectionTableSize = focus.connection_options ? null : getFocusConnectionTable().length;
+const connectionTableHref = `/${locale}/rules/character-creation/#${t('choosing-a-connection', 'escolhendo-uma-conexão')}`;
 
 const hasEffectSuggestion = focus.minor_effect_suggestion !== null || focus.major_effect_suggestion !== null;
 ---
@@ -95,116 +86,64 @@ const hasEffectSuggestion = focus.minor_effect_suggestion !== null || focus.majo
 		tableOfContents: false,
 	}}
 >
-	<p class="mb-4 font-mono text-xs text-text-muted">
-		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
-		<span class="opacity-50"> / </span>
-		{t('Foci', 'Focos')}
-		<span class="opacity-50"> / </span>
-		<span class="text-text">{pick(focus.name, locale)}</span>
-	</p>
-
-	<div class="mb-2.5 flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase not-prose">
-		<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>
-		{t('Focus', 'Foco')}
-	</div>
-
 	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(focus.description, locale)}</p>
 
 	<div class="mb-6 h-px bg-border"></div>
 
 	<h2>{t('Tier Abilities', 'Habilidades por Tier')}</h2>
-	{
-		tierEntries.map(([tier, entries], i) => (
-			<div class="border-b border-border py-2.5 not-prose" class:list={{ 'border-t': i === 0 }}>
-				<span class="font-mono text-xs text-accent">
-					{t('Tier', 'Tier')} {tier}
-				</span>
-				<div class="mt-2 space-y-2.5">
-					{entries.map((entry) =>
-						entry.kind === 'granted' ? (
-							<div class="flex flex-wrap gap-1.5">
-								{entry.pill.href ? (
-									<a
-										href={entry.pill.href}
-										class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
-									>
-										<span class="opacity-50">[</span>
-										{entry.pill.label}
-										<span class="opacity-50">]</span>
-									</a>
-								) : (
-									<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
-										<span class="opacity-50">[</span>
-										{entry.pill.label}
-										<span class="opacity-50">]</span>
-									</span>
-								)}
-							</div>
-						) : (
-							<div>
-								<div class="mb-1.5 font-mono text-[10px] tracking-[0.06em] text-warning uppercase">
-									{t(`Choose ${entry.count} of the following`, `Escolha ${entry.count} das seguintes`)}
-								</div>
-								<div class="not-content flex flex-wrap gap-1.5">
-									{entry.options.map((group) => (
-										<div class="flex flex-wrap items-center gap-1">
-											{group.map((pill, pi) => (
-												<>
-													{pi > 0 && <span class="font-mono text-xs text-text-muted">+</span>}
-													{pill.href ? (
-														<a
-															href={pill.href}
-															class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
-														>
-															<span class="opacity-50">[</span>
-															{pill.label}
-															<span class="opacity-50">]</span>
-														</a>
-													) : (
-														<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
-															<span class="opacity-50">[</span>
-															{pill.label}
-															<span class="opacity-50">]</span>
-														</span>
-													)}
-												</>
-											))}
-										</div>
+	{/* not-content on the wrapper (not the rows): opts everything inside out of Starlight's sibling-margin rules, which would otherwise pad every tier row. */}
+	<div class="not-content border-t border-border">
+		{
+			tierEntries.map(([tier, entries]) => (
+				<div class="grid grid-cols-[4.25rem_1fr] gap-x-4 border-b border-border py-3">
+					<span class="pt-0.5 font-mono text-xs text-accent">
+						{t('Tier', 'Tier')} {tier}
+					</span>
+					<div class="space-y-3">
+						{entries.map((entry) =>
+							entry.kind === 'granted' ? (
+								<AbilityEntry id={entry.id} locale={locale} />
+							) : (
+								<div>
+									<div class="mb-1.5 font-mono text-[10px] tracking-[0.06em] text-warning uppercase">
+										{entry.count === 1
+											? t('Choose one', 'Escolha uma')
+											: t(`Choose ${entry.count} of the following`, `Escolha ${entry.count} das seguintes`)}
+									</div>
+									{entry.options.map((group, gi) => (
+										<>
+											{gi > 0 && (
+												<div class="my-1.5 ml-3 font-mono text-[11px] tracking-[0.06em] text-text-muted uppercase">
+													{t('or', 'ou')}
+												</div>
+											)}
+											{/* A bundled pick (>=2 abilities chosen together) shares one left rule, with "+" between them. */}
+											<div class="space-y-2 border-l-2 border-border pl-3">
+												{group.map((id, pi) => (
+													<>
+														{pi > 0 && <div class="font-mono text-xs text-text-muted">+</div>}
+														<AbilityEntry id={id} locale={locale} />
+													</>
+												))}
+											</div>
+										</>
 									))}
 								</div>
-							</div>
-						),
-					)}
+							),
+						)}
+					</div>
 				</div>
-			</div>
-		))
-	}
+			))
+		}
+	</div>
 
 	{
-		typeSwapPills && (
+		typeSwapIds && (
 			<>
 				<h2>{t('Type Swap Option', 'Opção de Troca de Tipo')}</h2>
-				<div class="flex flex-wrap items-center gap-1.5 not-prose">
-					{typeSwapPills.map((pill, i) => (
-						<>
-							{i > 0 && <span class="font-mono text-xs text-text-muted">{t('and', 'e')}</span>}
-							{pill.href ? (
-								<a
-									href={pill.href}
-									class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
-								>
-									<span class="opacity-50">[</span>
-									{pill.label}
-									<span class="opacity-50">]</span>
-								</a>
-							) : (
-								<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
-									<span class="opacity-50">[</span>
-									{pill.label}
-									<span class="opacity-50">]</span>
-								</span>
-							)}
-						</>
+				<div class="not-content space-y-3 border-l-2 border-border pl-3">
+					{typeSwapIds.map((id) => (
+						<AbilityEntry id={id} locale={locale} />
 					))}
 				</div>
 			</>
@@ -239,9 +178,11 @@ const hasEffectSuggestion = focus.minor_effect_suggestion !== null || focus.majo
 			</div>
 		) : (
 			<p class="text-text-muted">
+				{t('This Focus uses the shared ', 'Este Foco usa a ')}
+				<a href={connectionTableHref}>{t('Focus Connections table', 'tabela compartilhada de Conexões de Foco')}</a>
 				{t(
-					`This Focus uses the shared Focus Connections table — roll or choose from its ${connectionTableSize} entries.`,
-					`Este Foco usa a tabela compartilhada de Conexões de Foco — role ou escolha entre suas ${connectionTableSize} entradas.`,
+					` — roll or choose from its ${connectionTableSize} entries.`,
+					` — role ou escolha entre suas ${connectionTableSize} entradas.`,
 				)}
 			</p>
 		)

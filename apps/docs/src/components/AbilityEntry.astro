@@ -1,0 +1,60 @@
+---
+// One ability as an inline entry — name (linked to its Ability page), a
+// one-line "cost · action type" meta, then its description. Used by the Focus
+// page's tier list and Type Swap Option, where a bare name pill wasn't enough
+// to read a Focus without opening every ability.
+//
+// Takes an id, not an Ability: a Focus's tier_abilities ids aren't guaranteed
+// to resolve (the same defensive gap as everywhere else these ids get looked
+// up — see the Types page), so resolution and the unresolved fallback live
+// here once instead of in every caller. Unresolved ids keep their id as the
+// name, with no link, and an explicit "not transcribed" note in place of the
+// description — never a dead link.
+import { getAbilityById } from '@cypher/content';
+import { formatAbilityCost, formatActionType } from '../lib/ability-format';
+import { pick, type UrlLocale } from '../lib/locale';
+
+interface Props {
+	id: string;
+	locale: UrlLocale;
+}
+
+const { id, locale } = Astro.props;
+
+const ability = getAbilityById(id);
+
+// No cost (e.g. a passive enabler) is just omitted here rather than printed as
+// "None" — on a compact one-line meta the absence already reads as "free".
+const meta = ability
+	? [formatAbilityCost(ability.cost, locale), formatActionType(ability.action_type, locale)]
+			.filter(Boolean)
+			.join(' · ')
+	: null;
+---
+
+<div>
+	<div class="flex flex-wrap items-baseline gap-x-2">
+		{
+			ability ? (
+				<a
+					href={`/${locale}/abilities/${id}/`}
+					class="font-display text-sm font-semibold text-text no-underline hover:text-accent"
+				>
+					{pick(ability.name, locale)}
+				</a>
+			) : (
+				<span class="font-display text-sm font-semibold text-text">{id}</span>
+			)
+		}
+		{meta && <span class="font-mono text-[11px] text-text-muted">{meta}</span>}
+	</div>
+	{
+		ability ? (
+			<p class="mt-1 text-[13px] leading-[1.55] text-text-muted">{pick(ability.description, locale)}</p>
+		) : (
+			<p class="mt-1 font-mono text-xs text-text-muted italic">
+				{locale === 'pt-br' ? 'Texto completo ainda não transcrito.' : 'Full text not yet transcribed.'}
+			</p>
+		)
+	}
+</div>

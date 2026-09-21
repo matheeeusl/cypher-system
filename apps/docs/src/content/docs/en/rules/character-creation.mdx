@@ -1,0 +1,69 @@
+---
+# Maintenance notes (YAML comments: MDX body comments get mangled by Prettier).
+# - Prose is adapted from the OG-CSPG (rulebook/cypherrules.pdf, gitignored):
+#   "Character Sentence: Descriptor, Type, and Focus" (p. 28) and "Focus
+#   Connections" (p. 165).
+# - The 50-row table is @cypher/content's focus-connections table, checked
+#   entry-by-entry against pp. 165-167 of that PDF.
+# - SCOPE: only the character sentence and focus connections are written.
+#   Stats/Pools/Edge setup (OG-CSPG ch. 2, pp. 23-27), character arcs and
+#   further customization are not (see the note at the bottom of the page).
+title: Character Creation
+description: How a character is described by a descriptor, a type and a focus, and how to choose a focus connection.
+sidebar:
+  order: 7
+tableOfContents: false
+---
+
+import EntityLink from '../../../../components/EntityLink.astro'
+import ReferenceTable from '../../../../components/ReferenceTable.astro'
+import { getFocusConnectionTable } from '@cypher/content'
+
+export const connections = getFocusConnectionTable()
+
+## The Character Sentence
+
+To create your character, you make a simple statement that describes them. The character sentence takes this form:
+
+> I am a [descriptor] [type] who [focus].
+
+For example: I am a <EntityLink kind="descriptor" id="mad" />{" "}<EntityLink kind="type" id="explorer" /> who <EntityLink kind="focus" id="walks-the-wild-woods" />.
+
+## Descriptor
+
+The adjective is your descriptor. A descriptor defines what you are like, including some strengths and weaknesses. In some settings, it might also describe your species or other unique things about your personal history. The GM might limit which descriptors are appropriate for the game setting. There are many descriptors, so it's unlikely two PCs in a group will need to use the same one.
+
+## Type
+
+The noun is your character type: <EntityLink kind="type" id="warrior" />, <EntityLink kind="type" id="adept" />, <EntityLink kind="type" id="explorer" />, or <EntityLink kind="type" id="speaker" />. Your character type defines your role in the world, and includes a broad choice of special abilities you might want your character to have. Types are very broad, so it's fine if two PCs have the same type—no two will be alike.
+
+## Focus
+
+The verb is your focus. Focus is what your character does best, granting you new special abilities each tier. For example, <EntityLink kind="focus" id="walks-the-wild-woods" /> grants <EntityLink kind="ability" id="wilderness-life" /> at tier 1. Your focus also helps you understand how you relate with the other player characters in your group. The foci you choose from will probably depend on the setting and genre of your game.
+
+Foci are unique. No two PCs in the group will have the same focus.
+
+## Making Choices
+
+Your descriptor and focus are less flexible than your type, so try narrowing those options down first. Then determine which type best fills in the gaps for your concept.
+
+## Choosing a Connection
+
+Roll a d100 or choose a connection that goes well with your focus. Your choice affects your relationship to one of the other PCs. A few foci also list connection options of their own on their pages.
+
+<ReferenceTable
+  caption="Focus connections"
+  columns={[
+    { label: 'd100', kind: 'key', width: '5.5rem' },
+    { label: 'Focus Connection', kind: 'prose' },
+  ]}
+  rows={connections.map((connection) => [connection.range, connection.text.en])}
+/>
+
+Some ranges overlap at their boundaries (for example 5–6 and 6–8); they are printed that way in the source.
+
+:::note
+This chapter is still being written. Character arcs, setting up your stat Pools and Edge, and further customization are not covered yet.
+:::
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Character Sentence: Descriptor, Type, and Focus" (p. 28) and "Focus Connections" (p. 165)._

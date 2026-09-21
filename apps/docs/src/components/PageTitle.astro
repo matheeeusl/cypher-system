@@ -1,0 +1,31 @@
+---
+// Starlight `components.PageTitle` override (wired in astro.config.mjs).
+// Adds the small "● FOCUS" eyebrow *above* Starlight's own <h1>, for entity
+// reference pages only (see `kind` in src/lib/page-context.ts — narrative
+// chapters have none, so they render exactly Starlight's default title).
+// Wraps the default component rather than copying its markup/styles.
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { getPageContext } from '../lib/page-context';
+
+const ctx = getPageContext(Astro.url.pathname);
+const kind = ctx?.section?.kind?.[ctx.locale];
+---
+
+{
+	kind && (
+		<div class="page-eyebrow flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase">
+			<span class="h-[7px] w-[7px] rounded-full bg-accent" />
+			{kind}
+		</div>
+	)
+}
+<Default {...Astro.props}><slot /></Default>
+
+<style>
+	/* Starlight gives the h1 a 1rem top margin, and its container adds 1.5rem
+	   between siblings; both are too loose for an eyebrow that belongs to the
+	   title, so pull the h1 in. */
+	.page-eyebrow + :global(h1) {
+		margin-top: 0.5rem;
+	}
+</style>

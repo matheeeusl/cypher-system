@@ -8,7 +8,9 @@
 // Search is the one deliberate difference between the two: Starlight's own
 // <Search> only works inside Starlight's pipeline, so it's passed in as a
 // named slot by whichever caller has access to it, rather than imported
-// here — the homepage passes none.
+// here — the homepage passes none. The `leading` slot (before the brand) works
+// the same way, for the sidebar toggle: only Starlight-shell pages have a
+// sidebar to toggle, so only Header.astro fills it.
 import { URL_LOCALES, type UrlLocale } from '../lib/locale';
 
 interface Props {
@@ -44,10 +46,13 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 	class="flex h-full min-h-(--sl-nav-height,auto) items-center justify-between gap-4 border-b border-border bg-panel px-7 py-3.5"
 	style="margin: calc(-1 * var(--sl-nav-pad-y, 0px)) calc(-1 * var(--sl-nav-pad-x, 0px));"
 >
-	<a href={`/${locale}/`} class="flex items-center gap-2.5 text-inherit no-underline">
-		<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
-		<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
-	</a>
+	<div class="flex items-center gap-3">
+		<slot name="leading" />
+		<a href={`/${locale}/`} class="flex items-center gap-2.5 text-inherit no-underline">
+			<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
+			<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
+		</a>
+	</div>
 
 	<div class="mx-4 max-w-[420px] flex-1"><slot name="search" /></div>
 

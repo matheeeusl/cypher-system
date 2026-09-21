@@ -1,0 +1,19 @@
+---
+// The Core Mechanics page's task-difficulty wheel (a raster figure from the
+// rulebook's own artwork). It has an opaque white background, so it is framed
+// as a white card rather than dropped bare onto the dark theme. The wheel's
+// labels are baked into the image and stay English in both locales, which is
+// why `alt` carries the locale-specific description.
+import { Image } from 'astro:assets';
+import wheel from '../assets/task-difficulty-wheel.png';
+
+interface Props {
+	alt: string;
+}
+
+const { alt } = Astro.props;
+---
+
+<figure class="not-content mx-auto my-6 w-fit rounded-lg bg-white p-3">
+	<Image src={wheel} alt={alt} width={360} class="block h-auto max-w-full" />
+</figure>

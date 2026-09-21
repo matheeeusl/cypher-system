@@ -1,0 +1,11 @@
+---
+// Starlight `components.Head` override (wired in astro.config.mjs). Wraps
+// Starlight's own <head> content and adds the web-font links, since Starlight
+// pages otherwise never load Space Grotesk / Inter / IBM Plex Mono (see
+// FontLinks.astro). Wrapping keeps Starlight's metadata handling untouched.
+import Default from '@astrojs/starlight/components/Head.astro';
+import FontLinks from './FontLinks.astro';
+---
+
+<Default {...Astro.props}><slot /></Default>
+<FontLinks />

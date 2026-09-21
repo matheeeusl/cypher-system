@@ -1,0 +1,85 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllArtifacts } from '@cypher/content';
+import type { Artifact } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+export function getStaticPaths() {
+	const artifacts = getAllArtifacts();
+
+	return URL_LOCALES.flatMap((locale) =>
+		artifacts.map((artifact) => ({
+			params: { locale, slug: artifact.id },
+			props: { artifact },
+		})),
+	);
+}
+
+interface Props {
+	artifact: Artifact;
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { artifact } = Astro.props as Props;
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+const flavorQuoteText = artifact.flavor_quote ? pick(artifact.flavor_quote, locale) : null;
+---
+
+<StarlightPage
+	frontmatter={{
+		title: pick(artifact.name, locale),
+		description: pick(artifact.effect_text, locale),
+		tableOfContents: false,
+	}}
+>
+	{
+		// In-character flavor text, present on only a handful of artifacts
+		// (Retro-Causality Weapon is the confirmed real case). Rendered as a
+		// left-bordered quote block, ahead of the mechanical description —
+		// an epigraph, not a stat — so it reads as narrative voice rather
+		// than being mistaken for part of effect_text. Reuses the same
+		// left-border-quote treatment the Focus page uses for Connection
+		// options, which already reads as "quoted content" on this site.
+		flavorQuoteText && (
+			<div class="not-content mb-5 rounded-r border-l-2 border-accent bg-panel py-3 pr-4 pl-5">
+				<p class="text-[13px] leading-[1.6] text-text-muted italic">“{flavorQuoteText}”</p>
+			</div>
+		)
+	}
+
+	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(artifact.effect_text, locale)}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<div class="not-content mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+		<div class="flex justify-between gap-4 border-b border-border py-1.5 font-mono text-[13px] first:pt-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Level', 'Nível')}</span>
+			<span class="text-right font-medium text-text">{artifact.level}</span>
+		</div>
+		<div class="flex justify-between gap-4 py-1.5 font-mono text-[13px] last:pb-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Depletion', 'Esgotamento')}</span>
+			<span class="text-right font-medium text-text">{artifact.depletion_die}</span>
+		</div>
+	</div>
+
+	<h2>{t('Form', 'Forma')}</h2>
+	<p>{pick(artifact.form, locale)}</p>
+
+	{
+		artifact.effect_table && (
+			<>
+				<h2>{pick(artifact.effect_table.label, locale)}</h2>
+				<div class="not-content not-prose">
+					{artifact.effect_table.entries.map((entry) => (
+						<div class="flex gap-4 border-b border-border py-2 last:border-b-0">
+							<span class="w-16 shrink-0 font-mono text-xs text-accent">{entry.range}</span>
+							<p class="text-[13px] leading-[1.55] text-text-muted">{pick(entry.text, locale)}</p>
+						</div>
+					))}
+				</div>
+			</>
+		)
+	}
+</StarlightPage>

@@ -11,6 +11,7 @@
 // imported directly below instead.
 import '../../styles/globals.css';
 import SiteHeader from '../../components/SiteHeader.astro';
+import FontLinks from '../../components/FontLinks.astro';
 import { URL_LOCALES, type UrlLocale } from '../../lib/locale';
 
 export function getStaticPaths() {
@@ -74,11 +75,7 @@ const sections = SECTIONS[locale];
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{chrome.title}</title>
 		<meta name="description" content={chrome.subtitle} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-			rel="stylesheet"
-		/>
+		<FontLinks />
 	</head>
 	<body class="m-0 min-h-screen bg-bg font-sans text-text">
 		<SiteHeader locale={locale} />

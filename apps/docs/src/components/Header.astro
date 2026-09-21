@@ -4,14 +4,18 @@
 // pages (Rules, Types, Descriptors, Abilities) match the standalone
 // homepage's header exactly, with real Pagefind search as the one
 // deliberate difference (SiteHeader.astro's doc comment explains why that
-// lives here rather than in the shared component).
+// lives here rather than in the shared component). The sidebar toggle is the
+// other Starlight-shell-only addition, and only on pages that have a sidebar.
 import SiteHeader from './SiteHeader.astro';
+import SidebarToggle from './SidebarToggle.astro';
 import Search from '@astrojs/starlight/components/Search.astro';
 import type { UrlLocale } from '../lib/locale';
 
 const locale = (Astro.url.pathname.split('/')[1] || 'en') as UrlLocale;
+const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 <SiteHeader locale={locale}>
+	{hasSidebar && <SidebarToggle slot="leading" />}
 	<Search slot="search" />
 </SiteHeader>

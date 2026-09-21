@@ -3,7 +3,14 @@ import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 
-import { getAllTypes, getAllDescriptors, getAllAbilities, getAllFoci } from '@cypher/content'
+import {
+  getAllTypes,
+  getAllDescriptors,
+  getAllAbilities,
+  getAllFoci,
+  getAllCyphers,
+  getAllArtifacts,
+} from '@cypher/content'
 
 // Manual sidebar group for Type reference pages. These pages are generated
 // from @cypher/content (src/pages/[locale]/types/[slug].astro), not Starlight
@@ -84,6 +91,43 @@ const fociSidebarGroup = {
   })),
 }
 
+// Same manual-group pattern, at a scale between Descriptors' 50 and
+// Abilities' 965 — 166 Cyphers, closer to Abilities' situation than Foci's,
+// so it gets the same treatment: sorted alphabetically and collapsed by
+// default rather than dumping 166 links into the sidebar.
+const cyphers = getAllCyphers()
+  .slice()
+  .sort((a, b) => a.name.en.localeCompare(b.name.en))
+
+const cyphersSidebarGroup = {
+  label: 'Cyphers',
+  translations: { 'pt-BR': 'Cifras' },
+  collapsed: true,
+  items: cyphers.map((cypher) => ({
+    label: cypher.name.en,
+    translations: { 'pt-BR': cypher.name['pt-BR'] },
+    link: `/cyphers/${cypher.id}/`,
+  })),
+}
+
+// 15 Artifacts — bigger than Types' 4 but the same order of magnitude, so
+// it follows the Types/Descriptors treatment: sorted alphabetically (cheap
+// and consistent, even though 15 is short enough to scan in any order) and
+// left expanded rather than collapsed.
+const artifacts = getAllArtifacts()
+  .slice()
+  .sort((a, b) => a.name.en.localeCompare(b.name.en))
+
+const artifactsSidebarGroup = {
+  label: 'Artifacts',
+  translations: { 'pt-BR': 'Artefatos' },
+  items: artifacts.map((artifact) => ({
+    label: artifact.name.en,
+    translations: { 'pt-BR': artifact.name['pt-BR'] },
+    link: `/artifacts/${artifact.id}/`,
+  })),
+}
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -106,12 +150,34 @@ export default defineConfig({
     starlight({
       title: 'Cypher System Reference',
       customCss: ['./src/styles/globals.css'],
+      // Applies the saved sidebar-collapsed state before first paint, the same
+      // way Starlight's own ThemeProvider inlines the theme — otherwise a
+      // collapsed sidebar would flash open on every navigation. The button
+      // that flips it is src/components/SidebarToggle.astro; keep the storage
+      // key in sync with that file.
+      head: [
+        {
+          tag: 'script',
+          content:
+            "try{if(localStorage.getItem('cypher-sidebar-collapsed')==='1')document.documentElement.setAttribute('data-sidebar-collapsed','')}catch(e){}",
+        },
+      ],
       // Custom Header so Starlight-shell pages use the same bar as the
       // standalone homepage (src/components/SiteHeader.astro) — real
       // Pagefind search is the one deliberate difference, wired in
       // src/components/Header.astro.
+      //
+      // Head wraps Starlight's and adds the web-font links (see FontLinks.astro).
+      //
+      // TwoColumnContent and PageTitle wrap Starlight's own components to
+      // add the breadcrumb above the content box and the entity-type
+      // eyebrow above the title (both derived from the URL, see
+      // src/lib/page-context.ts).
       components: {
+        Head: './src/components/Head.astro',
         Header: './src/components/Header.astro',
+        TwoColumnContent: './src/components/TwoColumnContent.astro',
+        PageTitle: './src/components/PageTitle.astro',
       },
       defaultLocale: 'en',
       locales: {
@@ -127,6 +193,15 @@ export default defineConfig({
         descriptorsSidebarGroup,
         abilitiesSidebarGroup,
         fociSidebarGroup,
+        cyphersSidebarGroup,
+        artifactsSidebarGroup,
+        // A single fixed page (src/pages/[locale]/equipment/index.astro), not a
+        // per-item category, so it's one link rather than a generated group.
+        {
+          label: 'Equipment',
+          translations: { 'pt-BR': 'Equipamento' },
+          link: '/equipment/',
+        },
       ],
     }),
   ],
