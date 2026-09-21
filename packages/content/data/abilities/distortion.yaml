@@ -1,0 +1,19 @@
+id: distortion
+name:
+  en: Distortion
+  pt-BR: Distorção
+description:
+  en: >-
+    You modify how a willing creature within short range reflects light
+    for one minute. The target rapidly shifts between its normal
+    appearance and a blot of darkness. The target has an asset on Speed
+    defense rolls until the effect wears off.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: adept
+    tier: 1

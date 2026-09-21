@@ -10,6 +10,9 @@ cost:
   amount: 6
 action_type: action_to_initiate
 sources:
+  - type: type
+    id: adept
+    tier: 4
   - type: focus
     id: commands-mental-powers
     tier: 6

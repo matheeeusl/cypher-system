@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: speaker
+    tier: 3
   - type: focus
     id: curses-the-world
     tier: 3

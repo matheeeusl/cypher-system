@@ -1,0 +1,19 @@
+id: negate-danger
+name:
+  en: Negate Danger
+  pt-BR: Anular Perigo
+description:
+  en: >-
+    You permanently negate a source of potential danger related to one
+    creature or object within immediate distance. This could be a
+    weapon or device held by someone, a creature's natural ability, or
+    a trap triggered by a pressure plate.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: type
+    id: explorer
+    tier: 6

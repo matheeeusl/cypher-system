@@ -25,6 +25,9 @@ cost:
   amount: 6
 action_type: action
 sources:
+  - type: type
+    id: adept
+    tier: 5
   - type: focus
     id: ignores-physical-distance
     tier: 6

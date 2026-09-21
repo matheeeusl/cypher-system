@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: warrior
+    tier: 4
   - type: focus
     id: stands-like-a-bastion
     tier: 1

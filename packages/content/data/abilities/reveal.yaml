@@ -1,0 +1,25 @@
+id: reveal
+name:
+  en: Reveal
+  pt-BR: Revelar
+description:
+  en: >-
+    You adjust a creature's eyesight so that it can see normally in
+    areas of dim light and darkness. You can affect one willing creature
+    within immediate range for one hour. In addition to the normal
+    options for using Effort, you can choose to use Effort to affect
+    more targets; each level of Effort applied affects two additional
+    targets. You must touch additional targets to affect them.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Intellect points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: adept
+    tier: 2

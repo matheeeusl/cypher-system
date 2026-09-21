@@ -1,0 +1,27 @@
+id: traverse-the-worlds
+name:
+  en: Traverse the Worlds
+  pt-BR: Atravessar os Mundos
+description:
+  en: >-
+    You instantaneously transmit yourself to another planet, dimension,
+    plane, or level of reality. You must know that the destination
+    exists; the GM will decide if you have enough information to
+    confirm its existence and the level of difficulty to reach the
+    destination. In addition to the normal options for using Effort,
+    you can choose to use Effort to bring other people with you; each
+    level of Effort used in this way affects up to three additional
+    targets. You must touch any additional targets.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "8+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 8 Intellect points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: intellect
+  amount: 8
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 6

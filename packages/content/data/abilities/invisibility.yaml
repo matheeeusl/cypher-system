@@ -27,6 +27,9 @@ cost:
   amount: 4
 action_type: action_to_initiate_or_reinitiate
 sources:
+  - type: type
+    id: adept
+    tier: 4
   - type: focus
     id: infiltrates
     tier: 4

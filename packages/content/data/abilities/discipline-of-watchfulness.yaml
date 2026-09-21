@@ -20,6 +20,9 @@ cost:
   amount: 7
 action_type: enabler
 sources:
+  - type: type
+    id: speaker
+    tier: 5
   - type: focus
     id: remembers-the-past
     tier: 6

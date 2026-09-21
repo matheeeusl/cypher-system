@@ -131,3 +131,49 @@ tier_abilities:
     - quick-throw
     - swipe
     - trained-without-armor
+  '2':
+    - crushing-blow
+    - hemorrhage
+    - reload
+    - skill-with-attacks
+    - skill-with-defense
+    - successive-attack
+  '3':
+    - deadly-aim
+    - energy-resistance
+    - experienced-in-armor
+    - expert-cypher-use
+    - fury
+    - lunge
+    - reaction
+    - seize-the-moment
+    - slice
+    - spray
+    - trick-shot
+    - vigilance
+  '4':
+    - amazing-effort
+    - capable-warrior
+    - experienced-defender
+    - feint
+    - increased-effects
+    - momentum
+    - pry-open
+    - snipe
+    - tough-as-nails
+  '5':
+    - adroit-cypher-use
+    - arc-spray
+    - improved-success
+    - jump-attack
+    - mastery-in-armor
+    - mastery-with-attacks
+    - mastery-with-defense
+    - parry
+  '6':
+    - again-and-again
+    - finishing-blow
+    - magnificent-moment
+    - murderer
+    - spin-attack
+    - weapon-and-body

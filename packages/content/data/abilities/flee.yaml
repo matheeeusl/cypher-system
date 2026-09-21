@@ -1,0 +1,17 @@
+id: flee
+name:
+  en: Flee
+  pt-BR: Fugir
+description:
+  en: >-
+    All non-allies within short distance who can hear your dreadful,
+    intimidating words flee from you at top speed for one minute.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 5

@@ -58,6 +58,7 @@ export const AbilitySchema = z.object({
     'action_to_change',
     'action_to_change_back',
     'action_to_activate',
+    'action_per_target_to_initiate',
   ]),
   // tier lives per-source, not on the ability itself: the same named
   // ability is sometimes printed under more than one Type/Focus at

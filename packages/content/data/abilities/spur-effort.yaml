@@ -13,6 +13,9 @@ cost:
   amount: 5
 action_type: enabler
 sources:
+  - type: type
+    id: speaker
+    tier: 4
   - type: focus
     id: practices-moon-magic
     tier: 3

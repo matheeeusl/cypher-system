@@ -13,6 +13,9 @@ cost:
   amount: 2
 action_type: action
 sources:
+  - type: type
+    id: warrior
+    tier: 1
   - type: focus
     id: throws-with-deadly-accuracy
     tier: 3

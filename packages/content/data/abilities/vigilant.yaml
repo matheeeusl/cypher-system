@@ -1,0 +1,17 @@
+id: vigilant
+name:
+  en: Vigilant
+  pt-BR: Vigilante
+description:
+  en: >-
+    When affected by an attack or effect that would daze or stun you,
+    you are not dazed or stunned.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 5
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 5

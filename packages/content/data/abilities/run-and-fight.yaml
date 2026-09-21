@@ -10,6 +10,9 @@ cost:
   amount: 4
 action_type: action
 sources:
+  - type: type
+    id: explorer
+    tier: 3
   - type: focus
     id: operates-undercover
     tier: 3

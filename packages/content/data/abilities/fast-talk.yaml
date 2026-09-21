@@ -1,0 +1,20 @@
+id: fast-talk
+name:
+  en: Fast Talk
+  pt-BR: Conversa Rápida
+description:
+  en: >-
+    When speaking with an intelligent creature who can understand you
+    and isn't hostile, you convince that creature to take one
+    reasonable action in the next round. A reasonable action must be
+    agreed upon by the GM; it should not put the creature or its allies
+    in obvious danger or be wildly out of character.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 1

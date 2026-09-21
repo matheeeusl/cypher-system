@@ -1,0 +1,20 @@
+id: rapid-processing
+name:
+  en: Rapid Processing
+  pt-BR: Processamento Rápido
+description:
+  en: >-
+    You or a target you touch experiences a higher level of mental and
+    physical reaction time for about a minute. During that period, all
+    Speed tasks (including Speed defense rolls) are eased. In addition,
+    the target can take one extra action at any time before the
+    ability's duration expires.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 4

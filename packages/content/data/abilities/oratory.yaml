@@ -1,0 +1,20 @@
+id: oratory
+name:
+  en: Oratory
+  pt-BR: Oratória
+description:
+  en: >-
+    When speaking with a group of intelligent creatures that can
+    understand you and aren't hostile, you convince them to take one
+    reasonable action in the next round. A reasonable action should not
+    put the creatures or their allies in obvious danger or be wildly
+    out of character.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 3

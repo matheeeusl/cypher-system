@@ -1,0 +1,17 @@
+id: anticipate-attack
+name:
+  en: Anticipate Attack
+  pt-BR: Antecipar Ataque
+description:
+  en: >-
+    You can sense when and how creatures attacking you will make their
+    attacks. Speed defense rolls are eased for one minute.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 4

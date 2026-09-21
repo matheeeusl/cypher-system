@@ -34,6 +34,12 @@ cost:
   amount: 5
 action_type: action
 sources:
+  - type: type
+    id: explorer
+    tier: 6
+  - type: type
+    id: warrior
+    tier: 6
   - type: focus
     id: wields-two-weapons-at-once
     tier: 6

@@ -128,3 +128,46 @@ tier_abilities:
     - scan
     - shatter
     - ward
+  '2':
+    - adaptation
+    - cutting-light
+    - hover
+    - mind-reading
+    - retrieve-memories
+    - reveal
+    - stasis
+  '3':
+    - adroit-cypher-use
+    - countermeasures
+    - energy-protection
+    - fire-and-ice
+    - force-field-barrier
+    - sensor
+    - targeting-eye
+  '4':
+    - death-touch
+    - exile
+    - invisibility
+    - matter-cloud
+    - mind-control
+    - projection
+    - rapid-processing
+    - regeneration
+    - reshape
+    - wormhole
+  '5':
+    - absorb-energy
+    - concussion
+    - conjuration
+    - create
+    - dust-to-dust
+    - knowing-the-unknown
+    - master-cypher-use
+    - teleportation
+    - true-senses
+  '6':
+    - control-weather
+    - earthquake
+    - move-mountains
+    - traverse-the-worlds
+    - usurp-cypher

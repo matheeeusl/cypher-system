@@ -15,6 +15,9 @@ cost:
   amount: 6
 action_type: action
 sources:
+  - type: type
+    id: speaker
+    tier: 6
   - type: focus
     id: curses-the-world
     tier: 6

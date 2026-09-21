@@ -1,0 +1,17 @@
+---
+// Starlight's `components.Header` override (wired in astro.config.mjs) —
+// renders the same SiteHeader every other page uses, so Starlight-shell
+// pages (Rules, Types, Descriptors, Abilities) match the standalone
+// homepage's header exactly, with real Pagefind search as the one
+// deliberate difference (SiteHeader.astro's doc comment explains why that
+// lives here rather than in the shared component).
+import SiteHeader from './SiteHeader.astro';
+import Search from '@astrojs/starlight/components/Search.astro';
+import type { UrlLocale } from '../lib/locale';
+
+const locale = (Astro.url.pathname.split('/')[1] || 'en') as UrlLocale;
+---
+
+<SiteHeader locale={locale}>
+	<Search slot="search" />
+</SiteHeader>

@@ -1,0 +1,17 @@
+id: reaction
+name:
+  en: Reaction
+  pt-BR: Reação
+description:
+  en: >-
+    If a creature you attacked on your last turn with a melee attack
+    uses its action to move out of immediate range, you gain an action
+    to attack the creature as a parting blow, even if you have already
+    taken a turn in the round.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: warrior
+    tier: 3

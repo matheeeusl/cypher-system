@@ -1,0 +1,18 @@
+id: disincentivize
+name:
+  en: Disincentivize
+  pt-BR: Desestimular
+description:
+  en: >-
+    You hinder all actions attempted by any number of targets within
+    short range who can understand you. You choose which targets are
+    affected. Affected targets' actions are hindered for one round.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: type
+    id: speaker
+    tier: 2

@@ -8,6 +8,12 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 4
+  - type: type
+    id: warrior
+    tier: 4
   - type: focus
     id: fights-dirty
     tier: 4

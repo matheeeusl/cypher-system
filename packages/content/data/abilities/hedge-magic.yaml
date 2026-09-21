@@ -1,0 +1,20 @@
+id: hedge-magic
+name:
+  en: Hedge Magic
+  pt-BR: Magia Popular
+description:
+  en: >-
+    You can perform small tricks: temporarily change the color or basic
+    appearance of a small object, cause small objects to float through
+    the air, clean a small area, mend a broken object, prepare (but not
+    create) food, and so on. You can't use Hedge Magic to harm another
+    creature or object.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 1

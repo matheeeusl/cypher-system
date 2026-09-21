@@ -1,0 +1,19 @@
+id: conjuration
+name:
+  en: Conjuration
+  pt-BR: Conjuração
+description:
+  en: >-
+    You produce, as if from thin air, a level 5 creature of a kind you
+    have previously encountered. The creature remains for one minute
+    and then returns home. While present, the creature acts as you
+    direct, but this requires no action on your part.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 5

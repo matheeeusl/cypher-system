@@ -56,7 +56,13 @@ const additionalEquipmentText = descriptor.additional_equipment
 	: null;
 ---
 
-<StarlightPage frontmatter={{ title: pick(descriptor.name, locale), description: pick(descriptor.description, locale) }}>
+<StarlightPage
+	frontmatter={{
+		title: pick(descriptor.name, locale),
+		description: pick(descriptor.description, locale),
+		tableOfContents: false,
+	}}
+>
 	<p class="mb-4 font-mono text-xs text-text-muted">
 		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
 		<span class="opacity-50"> / </span>

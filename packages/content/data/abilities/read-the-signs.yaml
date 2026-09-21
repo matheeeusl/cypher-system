@@ -17,6 +17,12 @@ cost:
   amount: 4
 action_type: action
 sources:
+  - type: type
+    id: explorer
+    tier: 4
+  - type: type
+    id: speaker
+    tier: 4
   - type: focus
     id: would-rather-be-reading
     tier: 6

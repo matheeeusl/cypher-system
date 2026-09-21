@@ -1,0 +1,16 @@
+id: improved-edge
+name:
+  en: Improved Edge
+  pt-BR: Vantagem Aprimorada
+description:
+  en: Choose one of your Edge stats that is 0. It increases to 1.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 1
+  - type: type
+    id: warrior
+    tier: 1

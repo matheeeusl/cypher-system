@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 3
   - type: focus
     id: has-a-thousand-faces
     tier: 5

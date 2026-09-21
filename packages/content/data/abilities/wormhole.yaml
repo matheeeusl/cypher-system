@@ -1,0 +1,22 @@
+id: wormhole
+name:
+  en: Wormhole
+  pt-BR: Buraco de Minhoca
+description:
+  en: >-
+    You create a doorway through time and space. The shortcut manifests
+    as a hole in reality large enough to accommodate you and creatures
+    of your size or smaller. One side of the doorway appears anywhere
+    within immediate range, and the other side opens at a spot you
+    choose anywhere within long range. Any character or object moving
+    into one side exits from the other. The door remains open for one
+    minute or until you use an action to close it.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: adept
+    tier: 4

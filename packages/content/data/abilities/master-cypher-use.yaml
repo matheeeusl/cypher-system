@@ -1,0 +1,13 @@
+id: master-cypher-use
+name:
+  en: Master Cypher Use
+  pt-BR: Uso Mestre de Cifras
+description:
+  en: You can bear five cyphers at a time.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: adept
+    tier: 5

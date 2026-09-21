@@ -1,0 +1,19 @@
+id: decipher
+name:
+  en: Decipher
+  pt-BR: Decifrar
+description:
+  en: >-
+    If you spend one minute examining a piece of writing or code in a
+    language you do not understand, you can make an Intellect roll of
+    difficulty 3 (or higher, based on the complexity of the language or
+    code) to get the gist of the message.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: explorer
+    tier: 1

@@ -12,6 +12,9 @@ cost:
   amount: 1
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 1
   - type: focus
     id: feigns-no-fear
     tier: 1

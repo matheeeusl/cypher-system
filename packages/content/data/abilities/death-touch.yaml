@@ -1,0 +1,19 @@
+id: death-touch
+name:
+  en: Death Touch
+  pt-BR: Toque da Morte
+description:
+  en: >-
+    You gather disrupting energy in your fingertip and touch a
+    creature. If the target is an NPC or a creature of level 3 or
+    lower, it dies. If the target is a PC of any tier, they move down
+    one step on the damage track.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 4

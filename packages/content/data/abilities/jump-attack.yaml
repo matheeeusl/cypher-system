@@ -23,6 +23,12 @@ cost:
   amount: 5
 action_type: action
 sources:
+  - type: type
+    id: explorer
+    tier: 5
+  - type: type
+    id: warrior
+    tier: 5
   - type: focus
     id: performs-feats-of-strength
     tier: 6

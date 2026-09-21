@@ -1,0 +1,20 @@
+id: inspiring-success
+name:
+  en: Inspiring Success
+  pt-BR: Sucesso Inspirador
+description:
+  en: >-
+    When you succeed on a roll to perform a task related to the stat
+    that you choose upon selecting this ability, and you applied at
+    least one level of Effort, you may choose another character within
+    short range. That character has an asset on the next task they
+    attempt using that stat on their next turn.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 6
+action_type: enabler
+sources:
+  - type: type
+    id: speaker
+    tier: 6

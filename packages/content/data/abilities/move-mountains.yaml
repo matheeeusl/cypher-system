@@ -1,0 +1,19 @@
+id: move-mountains
+name:
+  en: Move Mountains
+  pt-BR: Mover Montanhas
+description:
+  en: >-
+    You exert a tremendous amount of physical force within 250 feet (75
+    m) of you. You can push up to 10 tons (9 t) of material up to 50
+    feet (15 m). This force can collapse buildings, redirect small
+    rivers, or perform other dramatic effects.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 9
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 6

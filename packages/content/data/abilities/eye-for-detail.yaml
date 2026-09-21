@@ -21,6 +21,9 @@ cost:
 action_type: action_to_initiate
 # book say: action to initiate, five minutes to complete
 sources:
+  - type: type
+    id: explorer
+    tier: 2
   - type: focus
     id: works-for-a-living
     tier: 3

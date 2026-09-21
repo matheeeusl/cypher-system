@@ -18,6 +18,9 @@ cost:
   amount: 7
 action_type: action_to_initiate
 sources:
+  - type: type
+    id: adept
+    tier: 6
   - type: focus
     id: speaks-for-the-land
     tier: 6

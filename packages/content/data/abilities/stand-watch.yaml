@@ -1,0 +1,20 @@
+id: stand-watch
+name:
+  en: Stand Watch
+  pt-BR: Montar Guarda
+description:
+  en: >-
+    While standing watch (mostly remaining in place for an extended
+    period of time), you unfailingly remain awake and alert for up to
+    eight hours. During this time, you are trained in perception tasks
+    as well as stealth tasks to conceal yourself from those who might
+    approach.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: explorer
+    tier: 2

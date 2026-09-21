@@ -1,0 +1,17 @@
+id: recruit-deputy
+name:
+  en: Recruit Deputy
+  pt-BR: Recrutar Adjunto
+description:
+  en: >-
+    You gain a level 4 follower. They are not restricted on their
+    modifications. Alternatively, you can choose to advance a level 3
+    follower you already have to level 4 and then gain a new level 3
+    follower.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: speaker
+    tier: 6

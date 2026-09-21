@@ -12,6 +12,12 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 5
+  - type: type
+    id: warrior
+    tier: 5
   - type: focus
     id: throws-with-deadly-accuracy
     tier: 6

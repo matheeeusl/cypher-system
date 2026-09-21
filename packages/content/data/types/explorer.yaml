@@ -121,3 +121,60 @@ tier_abilities:
     - practiced-with-all-weapons
     - surging-confidence
     - trained-without-armor
+  '2':
+    - curious
+    - danger-instinct
+    - enable-others
+    - escape
+    - eye-for-detail
+    - foil-danger
+    - hand-to-eye
+    - investigative-skills
+    - quick-recovery
+    - range-increase
+    - skill-with-defense
+    - stand-watch
+    - travel-skills
+    - wreck
+  '3':
+    - controlled-fall
+    - experienced-in-armor
+    - expert-cypher-use
+    - ignore-the-pain
+    - obstacle-running
+    - resilience
+    - run-and-fight
+    - seize-the-moment
+    - skill-with-attacks
+    - stone-breaker
+    - think-your-way-out
+    - trapfinder
+    - wrest-from-chance
+  '4':
+    - capable-warrior
+    - expert-skill
+    - increased-effects
+    - read-the-signs
+    - runner
+    - subtle-steps
+    - tough-as-nails
+  '5':
+    - adroit-cypher-use
+    - free-to-move
+    - group-friendship
+    - hard-to-kill
+    - jump-attack
+    - mastery-with-defense
+    - parry
+    - physically-gifted
+    - take-command
+    - vigilant
+  '6':
+    - again-and-again
+    - inspire-coordinated-actions
+    - mastery-in-armor
+    - mastery-with-attacks
+    - negate-danger
+    - share-defense
+    - spin-attack
+    - wild-vitality

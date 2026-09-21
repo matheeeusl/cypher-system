@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: speaker
+    tier: 2
   - type: focus
     id: entertains
     tier: 2

@@ -1,0 +1,15 @@
+id: ward
+name:
+  en: Ward
+  pt-BR: Proteção
+description:
+  en: >-
+    You have a shield of energy around you at all times that helps
+    deflect attacks. You gain +1 to Armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: adept
+    tier: 1

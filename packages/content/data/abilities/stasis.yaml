@@ -1,0 +1,20 @@
+id: stasis
+name:
+  en: Stasis
+  pt-BR: Estase
+description:
+  en: >-
+    You surround a foe of your size or smaller with scintillating
+    energy, keeping it from moving or acting for one minute, as if
+    frozen solid. You must be able to see the target, and it must be
+    within short range. While in stasis, the target is impervious to
+    harm, cannot be moved, and is immune to all effects.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: type
+    id: adept
+    tier: 2

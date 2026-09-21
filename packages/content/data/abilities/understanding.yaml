@@ -1,0 +1,17 @@
+id: understanding
+name:
+  en: Understanding
+  pt-BR: Compreensão
+description:
+  en: >-
+    You observe or study a creature or object. Your next interaction
+    with that creature or object gains one asset.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 1

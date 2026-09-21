@@ -20,6 +20,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 4
   - type: focus
     id: works-for-a-living
     tier: 5

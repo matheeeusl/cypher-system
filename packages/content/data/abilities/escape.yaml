@@ -1,0 +1,18 @@
+id: escape
+name:
+  en: Escape
+  pt-BR: Escapar
+description:
+  en: >-
+    You slip your restraints, squeeze through the bars, break the grip
+    of a creature holding you, pull free from sucking quicksand, or
+    otherwise get loose from whatever is holding you in place.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: explorer
+    tier: 2

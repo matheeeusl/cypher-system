@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: action_to_initiate
 sources:
+  - type: type
+    id: adept
+    tier: 6
   - type: focus
     id: codes-magic-apps
     tier: 6

@@ -14,6 +14,9 @@ cost:
   amount: 2
 action_type: enabler
 sources:
+  - type: type
+    id: warrior
+    tier: 2
   - type: focus
     id: sailed-beneath-the-jolly-roger
     tier: 6

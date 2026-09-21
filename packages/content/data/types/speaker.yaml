@@ -128,3 +128,57 @@ tier_abilities:
     - spin-identity
     - terrifying-presence
     - understanding
+  '2':
+    - basic-follower
+    - calm-stranger
+    - disincentivize
+    - gather-intelligence
+    - impart-ideal
+    - inspiring-ease
+    - interaction-skills
+    - practiced-in-armor
+    - skill-with-defense
+    - speedy-recovery
+    - unexpected-betrayal
+  '3':
+    - accelerate
+    - blend-in
+    - discerning-mind
+    - expert-cypher-use
+    - expert-follower
+    - grand-deception
+    - lead-by-inquiry
+    - mind-reading
+    - oratory
+    - perfect-stranger
+    - quick-wits
+    - telling
+  '4':
+    - anticipate-attack
+    - confounding-banter
+    - feint
+    - heightened-skills
+    - psychosis
+    - read-the-signs
+    - spur-effort
+    - strategize
+    - suggestion
+  '5':
+    - adroit-cypher-use
+    - discipline-of-watchfulness
+    - experienced-in-armor
+    - flee
+    - foul-aura
+    - knowing-the-unknown
+    - regeneration
+    - skill-with-attacks
+    - stimulate
+  '6':
+    - assume-control
+    - battle-management
+    - crowd-control
+    - inspiring-success
+    - recruit-deputy
+    - shatter-mind
+    - true-senses
+    - word-of-command

@@ -10,6 +10,12 @@ action_type: enabler
 sources:
   - type: type
     id: adept
+    tier: 1
+  - type: type
+    id: explorer
+    tier: 3
+  - type: type
+    id: speaker
     tier: 3
   - type: type
     id: warrior

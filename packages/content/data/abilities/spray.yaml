@@ -20,6 +20,9 @@ cost:
   amount: 2
 action_type: action
 sources:
+  - type: type
+    id: warrior
+    tier: 3
   - type: focus
     id: is-licensed-to-carry
     tier: 3

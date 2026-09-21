@@ -8,6 +8,15 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 2
+  - type: type
+    id: speaker
+    tier: 2
+  - type: type
+    id: warrior
+    tier: 2
   - type: focus
     id: helps-their-friends
     tier: 6

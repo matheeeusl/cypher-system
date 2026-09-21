@@ -1,0 +1,18 @@
+id: battle-management
+name:
+  en: Battle Management
+  pt-BR: Gestão de Batalha
+description:
+  en: >-
+    As long as you use your action each round giving orders or advice,
+    attack and defense actions taken by your allies within short range
+    are eased.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 6

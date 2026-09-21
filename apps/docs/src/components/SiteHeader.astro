@@ -1,0 +1,113 @@
+---
+// Shared header bar for every page on the site. Used two ways:
+// - Standalone pages (currently just the homepage) import this directly,
+//   since they bypass Starlight's render pipeline entirely.
+// - Starlight-shell pages get it via Header.astro, wired as Starlight's
+//   `components.Header` override in astro.config.mjs (Starlight-shell pages
+//   never import this file directly).
+// Search is the one deliberate difference between the two: Starlight's own
+// <Search> only works inside Starlight's pipeline, so it's passed in as a
+// named slot by whichever caller has access to it, rather than imported
+// here — the homepage passes none.
+import { URL_LOCALES, type UrlLocale } from '../lib/locale';
+
+interface Props {
+	locale: UrlLocale;
+}
+
+const { locale } = Astro.props;
+
+// Every route on this site is locale-prefixed with no exceptions (see this
+// package's CLAUDE.md's i18n section), so the equivalent page in the other
+// locale is always just a first-path-segment swap — this holds for the
+// homepage root and any nested Rules/entity page alike, so it works from
+// both the Starlight-shell Header override and the standalone homepage
+// without depending on Starlight's own routing context.
+const currentPath = Astro.url.pathname;
+const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//, `/${target}/`);
+---
+
+{
+	/* On Starlight-shell pages, this renders inside Starlight's own <header>
+	   element (PageFrame.astro), which reserves its own padding
+	   (--sl-nav-pad-x/y) and background (--sl-color-bg-nav) around the
+	   slotted content — without canceling those out, this bar floats inside
+	   that unstyled frame instead of filling it edge-to-edge, showing a
+	   visible strip of Starlight's default nav background around it. The
+	   negative margin cancels exactly that padding using the SAME live
+	   variables (so it tracks Starlight's own responsive breakpoints
+	   automatically); min-height fills the reserved nav height. On the
+	   standalone homepage neither variable exists, so both fall back to
+	   their explicit 0/auto defaults — a no-op, identical to before. */
+}
+<div
+	class="flex h-full min-h-(--sl-nav-height,auto) items-center justify-between gap-4 border-b border-border bg-panel px-7 py-3.5"
+	style="margin: calc(-1 * var(--sl-nav-pad-y, 0px)) calc(-1 * var(--sl-nav-pad-x, 0px));"
+>
+	<a href={`/${locale}/`} class="flex items-center gap-2.5 text-inherit no-underline">
+		<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
+		<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
+	</a>
+
+	<div class="mx-4 max-w-[420px] flex-1"><slot name="search" /></div>
+
+	<div class="flex items-center gap-2">
+		<div class="flex overflow-hidden rounded border border-border">
+			{
+				URL_LOCALES.map((code, i) => (
+					<a
+						href={localeHref(code)}
+						aria-current={locale === code ? 'page' : undefined}
+						class:list={[
+							'px-2.5 py-1.5 font-mono text-[11px]',
+							i > 0 && 'border-l border-border',
+							locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
+						]}
+					>
+						{code === 'en' ? 'EN' : 'PT-BR'}
+					</a>
+				))
+			}
+		</div>
+		<button
+			id="mode-toggle"
+			type="button"
+			class="flex items-center gap-1.5 rounded border border-border bg-panel px-2.5 py-1.5 font-mono text-[11px] text-text-muted"
+		>
+			<span id="mode-label"></span>
+		</button>
+	</div>
+</div>
+
+<script is:inline>
+	{
+		/* Inlined to avoid a flash of the wrong theme — mirrors Starlight's own ThemeProvider script.
+		   Harmless to re-run on Starlight-shell pages too: Starlight's own <ThemeProvider/> already set
+		   the same dataset attribute from the same storage key, so this just re-confirms the same value. */
+		const stored = localStorage.getItem('starlight-theme');
+		const theme =
+			stored === 'light' || stored === 'dark'
+				? stored
+				: window.matchMedia('(prefers-color-scheme: light)').matches
+					? 'light'
+					: 'dark';
+		document.documentElement.dataset.theme = theme;
+	}
+</script>
+<script is:inline>
+	{
+		const btn = document.getElementById('mode-toggle');
+		const label = document.getElementById('mode-label');
+		function sync() {
+			const theme = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+			label.textContent = theme === 'dark' ? '● DARK' : '○ LIGHT';
+		}
+		sync();
+		btn.addEventListener('click', () => {
+			const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+			document.documentElement.dataset.theme = next;
+			localStorage.setItem('starlight-theme', next);
+			sync();
+		});
+	}
+</script>

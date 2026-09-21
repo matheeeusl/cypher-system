@@ -1,0 +1,18 @@
+id: again-and-again
+name:
+  en: Again and Again
+  pt-BR: De Novo e De Novo
+description:
+  en: You can take an additional action in a round in which you have already acted.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 8
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 6
+  - type: type
+    id: warrior
+    tier: 6

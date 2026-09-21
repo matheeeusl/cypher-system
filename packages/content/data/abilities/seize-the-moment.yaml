@@ -1,0 +1,27 @@
+id: seize-the-moment
+name:
+  en: Seize the Moment
+  pt-BR: Aproveitar o Momento
+description:
+  en: >-
+    If you succeed on a Speed defense roll to resist an attack, you
+    gain an action. You can use the action immediately even if you have
+    already taken a turn in the round. You don't take an action during
+    the next round, unless you apply a level of Effort when you use
+    Seize the Moment.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Speed points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Speed points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: speed
+  amount: 4
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 3
+  - type: type
+    id: warrior
+    tier: 3

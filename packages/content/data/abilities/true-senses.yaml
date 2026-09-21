@@ -12,6 +12,12 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: adept
+    tier: 5
+  - type: type
+    id: speaker
+    tier: 6
   - type: focus
     id: practices-moon-magic
     tier: 6

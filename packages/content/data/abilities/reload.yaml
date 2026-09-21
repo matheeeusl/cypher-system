@@ -15,6 +15,9 @@ cost:
   amount: 1
 action_type: enabler
 sources:
+  - type: type
+    id: warrior
+    tier: 2
   - type: focus
     id: spits-fire-and-lead
     tier: 1

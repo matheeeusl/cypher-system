@@ -1,0 +1,18 @@
+id: slice
+name:
+  en: Slice
+  pt-BR: Corte
+description:
+  en: >-
+    This is a quick attack with a bladed or pointed weapon that is hard
+    to defend against. You are trained in this task. If the attack is
+    successful, it deals 1 less point of damage than normal.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 3

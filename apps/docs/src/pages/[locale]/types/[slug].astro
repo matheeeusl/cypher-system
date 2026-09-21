@@ -91,7 +91,13 @@ const equipmentText = [
 	.join(' · ');
 ---
 
-<StarlightPage frontmatter={{ title: pick(type.name, locale), description: pick(type.tagline, locale) }}>
+<StarlightPage
+	frontmatter={{
+		title: pick(type.name, locale),
+		description: pick(type.tagline, locale),
+		tableOfContents: false,
+	}}
+>
 	<p class="mb-4 font-mono text-xs text-text-muted">
 		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
 		<span class="opacity-50"> / </span>
@@ -180,15 +186,27 @@ const equipmentText = [
 						</div>
 					)}
 					<div class="flex flex-wrap gap-1.5">
-						{/* Not real links yet — Abilities has no entity page of its own until
-						    that category is built. Styled like the design's cross-reference
-						    pills, but as inert spans rather than shipping dead `href="#"`s. */}
+						{/* Abilities now has an entity page, but a Type's tier_abilities id
+						    isn't guaranteed to resolve to one (same defensive gap as
+						    everywhere else these ids get looked up) — link only when it
+						    does, so this never points at a page getStaticPaths didn't
+						    generate. Unresolved ids keep the inert-pill fallback. */}
 						{abilityIds.map((id) => {
 							const ability = getAbilityById(id);
-							return (
+							const label = ability ? pick(ability.name, locale) : id;
+							return ability ? (
+								<a
+									href={`/${locale}/abilities/${id}/`}
+									class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
+								>
+									<span class="opacity-50">[</span>
+									{label}
+									<span class="opacity-50">]</span>
+								</a>
+							) : (
 								<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
 									<span class="opacity-50">[</span>
-									{ability ? pick(ability.name, locale) : id}
+									{label}
 									<span class="opacity-50">]</span>
 								</span>
 							);

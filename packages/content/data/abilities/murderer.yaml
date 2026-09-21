@@ -14,6 +14,9 @@ cost:
   amount: 8
 action_type: action
 sources:
+  - type: type
+    id: warrior
+    tier: 6
   - type: focus
     id: fights-dirty
     tier: 6

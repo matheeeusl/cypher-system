@@ -1,0 +1,18 @@
+id: investigative-skills
+name:
+  en: Investigative Skills
+  pt-BR: Perícias Investigativas
+description:
+  en: >-
+    You are trained in two skills in which you are not already trained.
+    Choose two of the following: perception, identifying, lockpicking,
+    assessing danger, or tinkering with devices. You can select this
+    ability multiple times. Each time you select it, you must choose
+    two different skills.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 2

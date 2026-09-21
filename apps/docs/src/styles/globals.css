@@ -5,6 +5,7 @@
 :root {
   --sl-color-accent: var(--color-accent);
   --sl-color-bg: var(--color-bg);
+  --sl-color-bg-nav: var(--color-panel);
   --sl-color-text: var(--color-text);
   --sl-color-gray-1: var(--color-text-muted);
   --sl-color-hairline: var(--color-border);

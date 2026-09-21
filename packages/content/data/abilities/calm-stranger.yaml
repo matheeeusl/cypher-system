@@ -1,0 +1,26 @@
+id: calm-stranger
+name:
+  en: Calm Stranger
+  pt-BR: Acalmar Desconhecido
+description:
+  en: >-
+    You can cause one intelligent creature to remain calm as you speak.
+    The creature doesn't need to speak your language, but it must be
+    able to see you. It remains calm as long as you focus all your
+    attention on it and it is not attacked or otherwise threatened. In
+    addition to the normal options for using Effort, you can choose to
+    use Effort to calm additional creatures allied with your initial
+    target, one additional creature per level of Effort applied.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Intellect points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 2

@@ -1,0 +1,19 @@
+id: confounding-banter
+name:
+  en: Confounding Banter
+  pt-BR: Palavreado Confuso
+description:
+  en: >-
+    You spew a stream of nonsense to distract a foe within immediate
+    range. On a successful Intellect roll, your defense roll against
+    the creature's next attack before the end of the next round is
+    eased.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 4

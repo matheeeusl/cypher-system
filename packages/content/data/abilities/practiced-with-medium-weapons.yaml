@@ -1,0 +1,15 @@
+id: practiced-with-medium-weapons
+name:
+  en: Practiced With Medium Weapons
+  pt-BR: Praticado com Armas Médias
+description:
+  en: >-
+    You can use light and medium weapons without penalty. If you wield
+    a heavy weapon, attacks with it are hindered.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: speaker
+    tier: 1

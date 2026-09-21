@@ -1,0 +1,19 @@
+id: crushing-blow
+name:
+  en: Crushing Blow
+  pt-BR: Golpe Esmagador
+description:
+  en: >-
+    When you use a bashing or bladed weapon in both hands and apply
+    Effort on the attack, you get a free level of Effort on the damage.
+    (If fighting unarmed, this attack is made with both fists or both
+    feet together.)
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 2

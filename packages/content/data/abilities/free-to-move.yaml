@@ -13,6 +13,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 5
   - type: focus
     id: stretches
     tier: 5

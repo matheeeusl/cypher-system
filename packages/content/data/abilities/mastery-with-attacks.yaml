@@ -12,6 +12,12 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 6
+  - type: type
+    id: warrior
+    tier: 5
   - type: focus
     id: looks-for-trouble
     tier: 5

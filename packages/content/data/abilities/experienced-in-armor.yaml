@@ -10,6 +10,15 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 3
+  - type: type
+    id: speaker
+    tier: 5
+  - type: type
+    id: warrior
+    tier: 3
   - type: focus
     id: masters-defense
     tier: 4

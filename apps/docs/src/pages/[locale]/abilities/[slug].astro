@@ -1,0 +1,198 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllAbilities, getTypeById, getFocusById } from '@cypher/content';
+import type { Ability } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+export function getStaticPaths() {
+	const abilities = getAllAbilities();
+
+	return URL_LOCALES.flatMap((locale) =>
+		abilities.map((ability) => ({
+			params: { locale, slug: ability.id },
+			props: { ability },
+		})),
+	);
+}
+
+interface Props {
+	ability: Ability;
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { ability } = Astro.props as Props;
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// English/Portuguese labels for a cost's stat pool — UI chrome, not
+// rulebook prose, same rationale as the Descriptor page's STAT_LABELS.
+const STAT_LABELS: Record<'might' | 'speed' | 'intellect', [string, string]> = {
+	might: ['Might', 'Força'],
+	speed: ['Speed', 'Velocidade'],
+	intellect: ['Intellect', 'Intelecto'],
+};
+
+// action_type is a fixed 28-value rulebook-derived enum (@cypher/content's
+// AbilitySchema). This Record is keyed by Ability['action_type'] itself, so
+// TS fails this file's typecheck if the enum ever gains a value this table
+// doesn't cover, instead of silently falling back to the raw id at runtime.
+const ACTION_TYPE_LABELS: Record<Ability['action_type'], [string, string]> = {
+	action: ['Action', 'Ação'],
+	enabler: ['Enabler', 'Habilitador'],
+	action_to_initiate: ['Action to initiate', 'Ação para iniciar'],
+	action_to_initiate_or_reinitiate: [
+		'Action to initiate or reinitiate',
+		'Ação para iniciar ou reiniciar',
+	],
+	action_or_enabler: ['Action or enabler', 'Ação ou habilitador'],
+	action_to_establish: ['Action to establish', 'Ação para estabelecer'],
+	action_to_establish_contact: ['Action to establish contact', 'Ação para estabelecer contato'],
+	action_to_animate: ['Action to animate', 'Ação para animar'],
+	action_to_manifest: ['Action to manifest', 'Ação para manifestar'],
+	action_to_teleport: ['Action to teleport', 'Ação para teletransportar'],
+	action_to_change_or_revert: ['Action to change or revert', 'Ação para mudar ou reverter'],
+	action_to_enter_or_exit: ['Action to enter or exit', 'Ação para entrar ou sair'],
+	action_to_split_or_recombine: [
+		'Action to split or recombine',
+		'Ação para dividir ou recombinar',
+	],
+	action_to_create: ['Action to create', 'Ação para criar'],
+	action_to_create_and_check: ['Action to create and check', 'Ação para criar e verificar'],
+	action_to_create_and_direct: ['Action to create and direct', 'Ação para criar e direcionar'],
+	action_to_produce_and_consume: [
+		'Action to produce and consume',
+		'Ação para produzir e consumir',
+	],
+	action_to_initiate_and_complete: [
+		'Action to initiate and complete',
+		'Ação para iniciar e completar',
+	],
+	action_to_initiate_and_animate: [
+		'Action to initiate and animate',
+		'Ação para iniciar e animar',
+	],
+	action_to_initiate_and_concentrate: [
+		'Action to initiate and concentrate',
+		'Ação para iniciar e concentrar',
+	],
+	action_to_initiate_and_direct_per_round: [
+		'Action to initiate, then direct each round',
+		'Ação para iniciar e direcionar a cada rodada',
+	],
+	action_to_enter_and_traverse: ['Action to enter and traverse', 'Ação para entrar e atravessar'],
+	action_to_initiate_and_call: ['Action to initiate and call', 'Ação para iniciar e invocar'],
+	action_to_create_and_modify: ['Action to create and modify', 'Ação para criar e modificar'],
+	action_to_initiate_and_drain: ['Action to initiate and drain', 'Ação para iniciar e drenar'],
+	action_to_change: ['Action to change', 'Ação para mudar'],
+	action_to_change_back: ['Action to change back', 'Ação para reverter'],
+	action_to_activate: ['Action to activate', 'Ação para ativar'],
+};
+
+// English puts the stat before "point(s)" ("4 Intellect points"); Portuguese
+// puts it after, with "de" ("4 pontos de Intelecto") — same reordering the
+// Types page already does for its equipmentText, not composable word-by-word.
+const costText = ability.cost
+	? t(
+			`${ability.cost.amount} ${STAT_LABELS[ability.cost.pool][0]} ${ability.cost.amount === 1 ? 'point' : 'points'}`,
+			`${ability.cost.amount} ${ability.cost.amount === 1 ? 'ponto' : 'pontos'} de ${STAT_LABELS[ability.cost.pool][1]}`,
+		)
+	: t('None', 'Nenhum');
+
+const actionTypeText = t(...ACTION_TYPE_LABELS[ability.action_type]);
+
+// tier lives per-source, not on the Ability itself — the same named
+// ability can be granted by multiple Types/Foci at different tiers (see
+// @cypher/content's AbilitySchema comment on `sources`, confirmed e.g. by
+// Surprise Attack: tier 1/2/3/3/4 across five different Foci). There's no
+// single canonical tier to show as a page-level badge, so each source is
+// listed with its own tier instead of picking one arbitrarily. Both Type
+// and Focus now have entity pages, so a source links to its real page
+// whenever it resolves; an unresolved id (data gap) still falls back to
+// an inert pill rather than a dead link.
+const sourceEntries = ability.sources.map((source) => {
+	const isType = source.type === 'type';
+	const resolved = isType ? getTypeById(source.id) : getFocusById(source.id);
+	return {
+		tier: source.tier,
+		cyberware: source.cyberware ?? false,
+		isType,
+		href: resolved ? `/${locale}/${isType ? 'types' : 'foci'}/${source.id}/` : null,
+		categoryLabel: isType ? t('Type', 'Tipo') : t('Focus', 'Foco'),
+		name: resolved ? pick(resolved.name, locale) : source.id,
+	};
+});
+
+const hasCyberwareSource = ability.sources.some((source) => source.cyberware);
+---
+
+<StarlightPage
+	frontmatter={{
+		title: pick(ability.name, locale),
+		description: pick(ability.description, locale),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-4 font-mono text-xs text-text-muted">
+		<a href={`/${locale}/`} class="text-accent no-underline hover:text-warning">{t('Home', 'Início')}</a>
+		<span class="opacity-50"> / </span>
+		{t('Abilities', 'Habilidades')}
+		<span class="opacity-50"> / </span>
+		<span class="text-text">{pick(ability.name, locale)}</span>
+	</p>
+
+	<div class="mb-2.5 flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase not-prose">
+		<span class="h-[7px] w-[7px] rounded-full bg-accent"></span>
+		{t('Ability', 'Habilidade')}
+	</div>
+
+	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(ability.description, locale)}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<div class="mb-7 rounded border border-border bg-panel px-5 py-4 not-prose">
+		<div class="flex justify-between gap-4 border-b border-border py-1.5 font-mono text-[13px] first:pt-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Cost', 'Custo')}</span>
+			<span class="text-right font-medium text-text">{costText}</span>
+		</div>
+		<div class="flex justify-between gap-4 py-1.5 font-mono text-[13px] last:pb-0">
+			<span class="tracking-[0.04em] text-text-muted uppercase">{t('Action Type', 'Tipo de Ação')}</span>
+			<span class="text-right font-medium text-text">{actionTypeText}</span>
+		</div>
+	</div>
+
+	<h2>{t('Sources', 'Fontes')}</h2>
+	<div class="flex flex-wrap gap-1.5 not-prose">
+		{
+			sourceEntries.map((s) =>
+				s.href ? (
+					<a
+						href={s.href}
+						class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
+					>
+						<span class="opacity-50">[</span>
+						{s.categoryLabel}: {s.name} — {t('Tier', 'Tier')} {s.tier}
+						{s.cyberware && ' ~'}
+						<span class="opacity-50">]</span>
+					</a>
+				) : (
+					<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
+						<span class="opacity-50">[</span>
+						{s.categoryLabel}: {s.name} — {t('Tier', 'Tier')} {s.tier}
+						{s.cyberware && ' ~'}
+						<span class="opacity-50">]</span>
+					</span>
+				),
+			)
+		}
+	</div>
+	{
+		hasCyberwareSource && (
+			<p class="mt-2 font-mono text-[11px] text-text-muted">
+				{t(
+					'~ indicates a cyberware-derived source, per the rulebook.',
+					'~ indica uma fonte derivada de cibernética, conforme o livro de regras.',
+				)}
+			</p>
+		)
+	}
+</StarlightPage>

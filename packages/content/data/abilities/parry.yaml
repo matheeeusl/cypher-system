@@ -1,0 +1,20 @@
+id: parry
+name:
+  en: Parry
+  pt-BR: Aparar
+description:
+  en: >-
+    You can deflect incoming attacks quickly. When you activate this
+    ability, for the next ten rounds you ease all Speed defense rolls.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 5
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 5
+  - type: type
+    id: warrior
+    tier: 5

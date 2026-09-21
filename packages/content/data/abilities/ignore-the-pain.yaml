@@ -8,6 +8,9 @@ description:
 cost: null
 action_type: enabler
 sources:
+  - type: type
+    id: explorer
+    tier: 3
   - type: focus
     id: collects-bounties
     tier: 2

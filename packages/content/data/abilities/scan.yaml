@@ -27,6 +27,9 @@ cost:
   amount: 2
 action_type: action
 sources:
+  - type: type
+    id: adept
+    tier: 1
   - type: focus
     id: knows-everything
     tier: 2

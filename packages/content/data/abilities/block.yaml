@@ -1,0 +1,17 @@
+id: block
+name:
+  en: Block
+  pt-BR: Bloquear
+description:
+  en: >-
+    You automatically block the next melee attack made against you
+    within the next minute.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: explorer
+    tier: 1

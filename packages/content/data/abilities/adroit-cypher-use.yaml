@@ -1,0 +1,22 @@
+id: adroit-cypher-use
+name:
+  en: Adroit Cypher Use
+  pt-BR: Uso Hábil de Cifras
+description:
+  en: You can bear four cyphers at a time.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: adept
+    tier: 3
+  - type: type
+    id: explorer
+    tier: 5
+  - type: type
+    id: speaker
+    tier: 5
+  - type: type
+    id: warrior
+    tier: 5

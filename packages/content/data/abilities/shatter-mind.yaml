@@ -1,0 +1,27 @@
+id: shatter-mind
+name:
+  en: Shatter Mind
+  pt-BR: Estilhaçar a Mente
+description:
+  en: >-
+    Your words reverberate destructively in the brain of an intelligent
+    level 1 target within short range that can hear and understand
+    you. They destroy tissue, memories, and personality, triggering a
+    vegetative state. In addition to the normal options for using
+    Effort, you can choose to use Effort to increase the maximum level
+    of the target. Thus, to shatter the mind of a level 5 target (four
+    levels above the normal limit), you must apply four levels of
+    Effort.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "7+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 7 Intellect points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: intellect
+  amount: 7
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 6

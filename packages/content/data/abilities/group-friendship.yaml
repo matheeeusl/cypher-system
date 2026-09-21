@@ -1,0 +1,18 @@
+id: group-friendship
+name:
+  en: Group Friendship
+  pt-BR: Amizade Grupal
+description:
+  en: >-
+    You convince a sentient creature to regard you (and up to ten
+    creatures that you designate within immediate distance of you)
+    positively, as they would a potential friend.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: type
+    id: explorer
+    tier: 5

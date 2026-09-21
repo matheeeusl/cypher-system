@@ -1,0 +1,17 @@
+id: heightened-skills
+name:
+  en: Heightened Skills
+  pt-BR: Perícias Aprimoradas
+description:
+  en: >-
+    You are trained in two tasks of your choosing (other than attacks
+    or defense). If you choose a task you're already trained in, you
+    instead become specialized in that task. You can't choose a task
+    you're already specialized in.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: speaker
+    tier: 4

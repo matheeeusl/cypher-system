@@ -21,6 +21,9 @@ cost:
   amount: 5
 action_type: action
 sources:
+  - type: type
+    id: adept
+    tier: 4
   - type: focus
     id: focuses-mind-over-matter
     tier: 6

@@ -1,0 +1,17 @@
+id: fury
+name:
+  en: Fury
+  pt-BR: Fúria
+description:
+  en: >-
+    For the next minute, all melee attacks you make inflict 2
+    additional points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: warrior
+    tier: 3

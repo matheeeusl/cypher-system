@@ -1,0 +1,23 @@
+id: feint
+name:
+  en: Feint
+  pt-BR: Finta
+description:
+  en: >-
+    If you use one action creating a misdirection or diversion, in the
+    next round you can take advantage of your opponent's lowered
+    defenses. Make a melee attack roll against that opponent. You gain
+    an asset on this attack. If your attack is successful, it inflicts
+    4 additional points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 4
+  - type: type
+    id: warrior
+    tier: 4

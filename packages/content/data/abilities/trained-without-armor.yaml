@@ -1,0 +1,16 @@
+id: trained-without-armor
+name:
+  en: Trained Without Armor
+  pt-BR: Treinado Sem Armadura
+description:
+  en: You are trained in Speed defense tasks when not wearing armor.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 1
+  - type: type
+    id: warrior
+    tier: 1

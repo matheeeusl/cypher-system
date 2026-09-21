@@ -1,0 +1,26 @@
+id: accelerate
+name:
+  en: Accelerate
+  pt-BR: Acelerar
+description:
+  en: >-
+    Your words imbue the spirit of a character within immediate range
+    who is able to understand you, accelerating them so they gain an
+    asset on initiative tasks and Speed defense rolls for ten minutes.
+    In addition to the normal options for using Effort, you can choose
+    to use Effort to affect more targets; each level of Effort affects
+    one additional target. You must speak to additional targets to
+    accelerate them, one target per round.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "4+ Intellect points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 4 Intellect points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_per_target_to_initiate
+sources:
+  - type: type
+    id: speaker
+    tier: 3

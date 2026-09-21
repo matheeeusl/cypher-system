@@ -12,6 +12,9 @@ cost:
 # trail-sensor.
 action_type: action_to_create_and_check
 sources:
+  - type: type
+    id: adept
+    tier: 3
   - type: focus
     id: sees-beyond
     tier: 3

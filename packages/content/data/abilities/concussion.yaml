@@ -20,6 +20,9 @@ cost:
   amount: 7
 action_type: action
 sources:
+  - type: type
+    id: adept
+    tier: 5
   - type: focus
     id: wields-invisible-force
     tier: 6

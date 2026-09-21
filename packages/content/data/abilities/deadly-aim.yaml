@@ -1,0 +1,17 @@
+id: deadly-aim
+name:
+  en: Deadly Aim
+  pt-BR: Mira Mortal
+description:
+  en: >-
+    For the next minute, all ranged attacks you make inflict 2
+    additional points of damage.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: warrior
+    tier: 3

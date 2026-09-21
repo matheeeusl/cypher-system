@@ -1,0 +1,19 @@
+id: trick-shot
+name:
+  en: Trick Shot
+  pt-BR: Tiro Ardiloso
+description:
+  en: >-
+    As part of the same action, you make a ranged attack against two
+    targets that are within immediate range of each other. Make a
+    separate attack roll against each target. The attack rolls are
+    hindered.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: speed
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 3

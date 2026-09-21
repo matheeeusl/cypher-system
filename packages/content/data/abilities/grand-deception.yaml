@@ -12,6 +12,9 @@ cost:
   amount: 3
 action_type: action
 sources:
+  - type: type
+    id: speaker
+    tier: 3
   - type: focus
     id: raids
     tier: 3

@@ -1,0 +1,21 @@
+id: perfect-stranger
+name:
+  en: Perfect Stranger
+  pt-BR: Estranho Perfeito
+description:
+  en: >-
+    You alter your posture and way of speaking and make a small but
+    real alteration to an outfit (such as putting on or taking off a
+    hat, reversing a cloak, and so on). For the next hour (or as long
+    as you keep up the alteration), even creatures that know you well
+    don't recognize you. All tasks related to hiding your true identity
+    during this period gain one free level of Effort.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: type
+    id: speaker
+    tier: 3

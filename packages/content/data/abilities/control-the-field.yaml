@@ -1,0 +1,18 @@
+id: control-the-field
+name:
+  en: Control the Field
+  pt-BR: Controlar o Campo
+description:
+  en: >-
+    This melee attack inflicts 1 less point of damage than normal, and
+    regardless of whether you hit the target, you maneuver it into a
+    position you desire within immediate range.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: might
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 1

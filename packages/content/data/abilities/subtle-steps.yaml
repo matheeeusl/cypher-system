@@ -1,0 +1,15 @@
+id: subtle-steps
+name:
+  en: Subtle Steps
+  pt-BR: Passos Sutis
+description:
+  en: >-
+    When you move no more than a short distance, you can move without
+    making a sound, regardless of the surface you move across.
+  pt-BR: "Tradução em breve."
+cost: null
+action_type: enabler
+sources:
+  - type: type
+    id: explorer
+    tier: 4

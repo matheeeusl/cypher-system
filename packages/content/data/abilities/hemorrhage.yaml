@@ -1,0 +1,26 @@
+id: hemorrhage
+name:
+  en: Hemorrhage
+  pt-BR: Hemorragia
+description:
+  en: >-
+    You make a powerful and precise strike that inflicts additional
+    damage later. On your next turn, the target of this attack takes an
+    additional 3 points of damage (ignores Armor). The target can
+    prevent this additional damage by making a recovery roll, using any
+    ability that heals it, or using its action to attend to the injury.
+    In addition to the normal options for using Effort, you can choose
+    to use Effort to increase this duration by one round.
+  pt-BR: "Tradução em breve."
+  # Note: source cost is printed as "2+ Might points" — the schema's
+  # cost field can't represent an open-ended "+". Recorded as the
+  # baseline 2 Might points here (same approximation used for
+  # teleportation.yaml).
+cost:
+  pool: might
+  amount: 2
+action_type: action
+sources:
+  - type: type
+    id: warrior
+    tier: 2

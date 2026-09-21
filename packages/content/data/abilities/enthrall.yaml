@@ -1,0 +1,20 @@
+id: enthrall
+name:
+  en: Enthrall
+  pt-BR: Cativar
+description:
+  en: >-
+    While talking, you grab and keep another creature's attention, even
+    if the creature can't understand you. For as long as you do nothing
+    but speak (you can't even move), the other creature takes no
+    actions other than to defend itself, even over multiple rounds. If
+    the creature is attacked, the effect ends.
+  pt-BR: "Tradução em breve."
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: type
+    id: speaker
+    tier: 1
