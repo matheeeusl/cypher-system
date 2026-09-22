@@ -1,0 +1,54 @@
+---
+// "‹ Back" affordance rendered next to the breadcrumb trail (mounted by
+// Breadcrumbs.astro), in place of the Previous/Next footer the design has
+// no equivalent for. It's plain browser history — clicking it from an
+// Ability page reached via a Focus page's AbilityEntry link returns to that
+// Focus page specifically, not to "the previous ability" or any fixed URL.
+//
+// Only offered when the browser actually *has* an on-site page behind this
+// one: no referrer (a fresh tab, a bookmark, a typed URL) or an external one
+// (say, a search engine) means there's nothing of ours to go back to, and
+// `history.back()` would either do nothing or leave the site — neither of
+// which reads as "back" the way it's meant here. SSR can't see
+// document.referrer or history.length, so the button starts `hidden` and an
+// inline script reveals it only once that check passes. It's `is:inline`
+// rather than Astro's own bundled/deferred <script> so it runs before first
+// paint — same reasoning as the section-list script in Sidebar.astro — and
+// the button never appears to pop in after the page has already rendered.
+import { getPageContext } from '../lib/page-context';
+
+const locale = getPageContext(Astro.url.pathname)?.locale ?? 'en';
+const label = locale === 'pt-br' ? 'Voltar' : 'Back';
+---
+
+<span data-back-nav hidden>
+	<button
+		type="button"
+		data-back-button
+		class="cursor-pointer bg-transparent p-0 font-mono text-xs text-accent no-underline hover:text-warning"
+	>
+		&larr; {label}
+	</button>
+	<span class="opacity-50" aria-hidden="true">&nbsp;/&nbsp;</span>
+</span>
+
+<script is:inline>
+	(function () {
+		try {
+			if (!document.referrer || window.history.length < 2) return;
+			if (new URL(document.referrer).origin !== window.location.origin) return;
+
+			var nav = document.querySelector('[data-back-nav]');
+			var button = document.querySelector('[data-back-button]');
+			if (!nav || !button) return;
+
+			nav.hidden = false;
+			button.addEventListener('click', function () {
+				window.history.back();
+			});
+		} catch {
+			// document.referrer/URL parsing failing is the same as no referrer:
+			// leave the button hidden rather than risk a broken click handler.
+		}
+	})();
+</script>

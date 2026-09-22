@@ -1,0 +1,74 @@
+---
+// Starlight `components.Footer` override (wired in astro.config.mjs). The
+// design has no Previous/Next pagination footer — nothing in either mock
+// (Narrative Chapter Page, Entity Reference Page) has one — so this recreates
+// Starlight's own Footer minus its unconditional <Pagination/>. The "Back"
+// affordance that replaces it lives next to the breadcrumb trail instead (see
+// BackButton.astro), not here, since browser-back only makes sense once you're
+// past the first page of a visit and Pagination was a fixed pair of links
+// regardless of how you arrived.
+//
+// EditLink/LastUpdated/credits aren't slotted separately from Pagination in
+// Starlight's own Footer, so there's no piece of it left to wrap — this is a
+// straight recreation of the rest. None of the three currently render
+// anything (`editLink`/`lastUpdated` aren't turned on in astro.config.mjs,
+// and `credits` defaults to false), but they're kept wired for when that
+// changes rather than deleted outright.
+import EditLink from '@astrojs/starlight/components/EditLink.astro';
+import LastUpdated from '@astrojs/starlight/components/LastUpdated.astro';
+import { Icon } from '@astrojs/starlight/components';
+import config from 'virtual:starlight/user-config';
+---
+
+<footer class="sl-flex">
+	<div class="meta sl-flex">
+		<EditLink />
+		<LastUpdated />
+	</div>
+
+	{
+		config.credits && (
+			<a class="kudos sl-flex" href="https://starlight.astro.build">
+				<Icon name={'starlight'} /> {Astro.locals.t('builtWithStarlight.label')}
+			</a>
+		)
+	}
+</footer>
+
+<style>
+	@layer starlight.core {
+		footer {
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+		.meta {
+			gap: 0.75rem 3rem;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin-top: 3rem;
+			font-size: var(--sl-text-sm);
+			color: var(--sl-color-gray-3);
+		}
+		.meta > :global(p:only-child) {
+			margin-inline-start: auto;
+		}
+
+		.kudos {
+			align-items: center;
+			gap: 0.5em;
+			margin: 1.5rem auto;
+			font-size: var(--sl-text-xs);
+			text-decoration: none;
+			color: var(--sl-color-gray-3);
+		}
+		.kudos:hover {
+			color: var(--sl-color-white);
+		}
+	}
+
+	@layer starlight.components {
+		.kudos :global(svg) {
+			color: var(--sl-color-orange);
+		}
+	}
+</style>

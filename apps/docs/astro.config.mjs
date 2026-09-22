@@ -194,12 +194,16 @@ export default defineConfig({
       //
       // Sidebar wraps it too, to list the current page's sections under its
       // menu entry (see Sidebar.astro); the menu's look is CSS in globals.css.
+      //
+      // Footer drops Starlight's own Previous/Next pagination (no mock has
+      // one; see Footer.astro and BackButton.astro).
       components: {
         Head: './src/components/Head.astro',
         Header: './src/components/Header.astro',
         Sidebar: './src/components/Sidebar.astro',
         TwoColumnContent: './src/components/TwoColumnContent.astro',
         PageTitle: './src/components/PageTitle.astro',
+        Footer: './src/components/Footer.astro',
       },
       defaultLocale: 'en',
       locales: {
