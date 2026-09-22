@@ -9,7 +9,7 @@ description:
     task you have succeeded at previously. On an even result, the
     task you're attempting is eased by two steps. On a roll of 1, the
     task is hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

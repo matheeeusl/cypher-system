@@ -14,7 +14,7 @@ description:
     temporal destination, you and the other time travelers are
     stunned for one minute. In order to return to your original time,
     you must use this ability again.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "10+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 10 Intellect points here, flagged for schema review

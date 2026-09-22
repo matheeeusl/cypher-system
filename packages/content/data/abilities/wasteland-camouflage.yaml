@@ -16,7 +16,7 @@ description:
     using an ability, moving a large object, and so on. If this
     occurs, you can regain the remaining invisibility effect by
     taking an action to focus on hiding your position.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is both open-ended and a choice-of-pool, "5+
   # Speed or Intellect points" — the schema's cost field can represent
   # neither. Recorded as the baseline 5 Speed points (first-listed

@@ -8,7 +8,7 @@ description:
     dexterity, such as pickpocketing, lockpicking, games involving
     agility, and so on. Each use lasts up to a minute; a new use (to
     switch tasks) replaces the previous use.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 2

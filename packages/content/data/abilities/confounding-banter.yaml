@@ -8,7 +8,7 @@ description:
     range. On a successful Intellect roll, your defense roll against
     the creature's next attack before the end of the next round is
     eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

@@ -1,8 +1,8 @@
 id: tissue-regeneration
-name: { en: "Tissue regeneration", "pt-BR": "Tradução em breve." }
+name: { en: 'Tissue regeneration', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 399"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 399'
+level_range: '1d6 + 4'
 effect_text:
   en: |-
     For the next hour, the user regains 1 point lost to damage per round, up

@@ -1,8 +1,8 @@
 id: curse-bringer
-name: { en: "Curse bringer", "pt-BR": "Tradução em breve." }
+name: { en: 'Curse bringer', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 386"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 386'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     The cypher can be activated when given to an individual who doesn't realize its significance.
@@ -11,4 +11,3 @@ effect_text:
   pt-BR: >-
     Tradução em breve.
 effect_table: null
-

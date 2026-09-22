@@ -4,7 +4,7 @@ name:
   pt-BR: Perícias de Movimento
 description:
   en: You are trained in climbing and jumping.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

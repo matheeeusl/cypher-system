@@ -9,7 +9,7 @@ description:
     you can fire your weapon at up to three targets (all next to one
     another) at once. Make a separate attack roll against each
     target. Each attack is hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 3

@@ -9,7 +9,7 @@ description:
     exact action, they can do so as an additional action immediately.
     Doing so doesn't interfere with the ally taking a normal action on
     their turn.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

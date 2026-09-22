@@ -15,7 +15,7 @@ description:
     concentration as you audibly explore the surrounding soundscape.
     Given enough time, you could pinpoint every conversation, every
     breathing creature, and every device creating noise within range.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to initiate, up to several rounds to
   # complete, depending on the difficulty of the task." — the
   # duration/timing clause is not modeled by action_type.

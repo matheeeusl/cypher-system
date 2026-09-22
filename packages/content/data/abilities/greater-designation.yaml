@@ -8,7 +8,7 @@ description:
     immediate range when you use Designation. The one label applies to
     all affected creatures. This lasts until you use Greater
     Designation again.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: action
 sources:

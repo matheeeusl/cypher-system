@@ -12,7 +12,7 @@ description:
     range of your target; roll an attack for each separately. Even if
     you miss, you still deal 1 point of damage with fiery lead
     shrapnel.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "1+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Intellect point here, flagged for schema review (same

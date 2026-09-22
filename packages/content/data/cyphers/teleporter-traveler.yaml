@@ -1,8 +1,8 @@
 id: teleporter-traveler
-name: { en: "Teleporter (traveler)", "pt-BR": "Tradução em breve." }
+name: { en: 'Teleporter (traveler)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 398"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 398'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     User teleports up to 100 × the cypher level in miles to a location they

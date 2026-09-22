@@ -33,6 +33,10 @@ const SECTIONS: Record<string, Section> = {
     crumb: { en: 'Abilities', 'pt-br': 'Habilidades' },
     kind: { en: 'Ability', 'pt-br': 'Habilidade' },
   },
+  skills: {
+    crumb: { en: 'Skills', 'pt-br': 'Perícias' },
+    kind: { en: 'Skill', 'pt-br': 'Perícia' },
+  },
   foci: {
     crumb: { en: 'Foci', 'pt-br': 'Focos' },
     kind: { en: 'Focus', 'pt-br': 'Foco' },

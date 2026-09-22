@@ -1,8 +1,8 @@
 id: time-dilation-offensive
-name: { en: "Time dilation (offensive)", "pt-BR": "Tradução em breve." }
+name: { en: 'Time dilation (offensive)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 399"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 399'
+level_range: '1d6'
 effect_text:
   en: >-
     For the next twenty-four hours, when the user makes a melee attack, they

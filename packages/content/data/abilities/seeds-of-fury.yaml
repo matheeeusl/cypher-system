@@ -10,7 +10,7 @@ description:
     catches the target on fire, which inflicts 1 additional point of
     damage per round for up to a minute or until the target uses an
     action to douse the flames.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

@@ -4,7 +4,7 @@ name:
   pt-BR: Escudo Protetor
 description:
   en: You have +1 to Armor while you are using a shield.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

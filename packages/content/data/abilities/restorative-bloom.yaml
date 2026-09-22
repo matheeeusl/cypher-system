@@ -11,7 +11,7 @@ description:
     their maximum values, as if they were fully rested. Eating a
     second food produced by this ability in a day has no effect. If
     the food is not eaten within ten minutes, it spoils.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to produce, action to eat."
 cost:
   pool: might

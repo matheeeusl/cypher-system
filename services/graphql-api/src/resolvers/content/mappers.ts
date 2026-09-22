@@ -120,7 +120,12 @@ export function mapAbility(a: WithVersion<Ability>) {
     description: mapLocalizedString(a.description),
     cost: a.cost ? { pool: a.cost.pool, amount: a.cost.amount } : null,
     actionType: a.action_type,
-    sources: a.sources.map((s) => ({ type: s.type, id: s.id, tier: s.tier, cyberware: s.cyberware ?? false })),
+    sources: a.sources.map((s) => ({
+      type: s.type,
+      id: s.id,
+      tier: s.tier,
+      cyberware: s.cyberware ?? false,
+    })),
     contentVersion: a.content_version,
   }
 }

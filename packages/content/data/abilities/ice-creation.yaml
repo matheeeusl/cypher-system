@@ -15,7 +15,7 @@ description:
     you can choose to use Effort to create objects larger than you.
     For each level of Effort used in this way, you can create an
     object up to twice again as large as you.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 4 Intellect points here, flagged for schema review

@@ -1,8 +1,8 @@
 id: force-cube
-name: { en: "Force cube", "pt-BR": "Tradução em breve." }
+name: { en: 'Force cube', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 389"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 389'
+level_range: '1d6 + 3'
 effect_text:
   en: >-
     Creates an immobile cube composed of six planes of solid force, each 30

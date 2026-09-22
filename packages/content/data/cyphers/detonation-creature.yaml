@@ -1,8 +1,8 @@
 id: detonation-creature
-name: { en: "Detonation (creature)", "pt-BR": "Tradução em breve." }
+name: { en: 'Detonation (creature)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 386"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 386'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     Projects a small physical explosive up to a long distance away that explodes and creates a momentary teleportation gate.

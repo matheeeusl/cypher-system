@@ -1,8 +1,8 @@
 id: magnetic-master
-name: { en: "Magnetic master", "pt-BR": "Tradução em breve." }
+name: { en: 'Magnetic master', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 392"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 392'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Establishes a connection with one metal object within short range that a

@@ -9,7 +9,7 @@ description:
     You reduce the Speed cost for wearing light armor by 1. You start
     the game with a type of light armor available in the area, such
     as a leather jacket.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

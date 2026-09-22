@@ -3,10 +3,10 @@
 # pick up emotions or general concepts of thoughts in another language. It also
 # might vary based on the ability used.
 id: mind-meld
-name: { en: "Mind meld", "pt-BR": "Tradução em breve." }
+name: { en: 'Mind meld', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 393"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 393'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     Lets the user speak telepathically with creatures they can see within

@@ -4,7 +4,7 @@ name:
   pt-BR: Uso Mestre de Cifras
 description:
   en: You can bear five cyphers at a time.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

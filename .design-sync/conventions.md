@@ -7,7 +7,7 @@ Dark-first, teal/graphite, utilitarian TTRPG reference/character-sheet UI. Theme
 No provider or wrapper component is required — components render standalone. Just make sure the page (or its root element) can see the shipped `styles.css`, which pulls in the token variables, fonts, and compiled component styles:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 To render in light mode, set `data-theme="light"` on `<html>` (or any ancestor); omit it for dark.
@@ -21,17 +21,17 @@ This DS compiles CSS with Tailwind v4, but **only the utility classes existing c
 1. **Reuse the exact classes already shipped** (safe because they're proven to exist): `rounded`, `px-4`, `py-2`, `font-mono`, `font-semibold`, `border`, `cursor-pointer`, `transition-colors`, `hover:opacity-90`, plus the color utilities `bg-accent`, `text-bg`, `bg-panel`, `text-text-muted`, `border-border`.
 2. **For anything else — new layout, spacing, or a color utility not in that list — style with the raw CSS variables directly** (these always exist, unconditionally, regardless of what Tailwind compiled):
 
-   | Variable | Dark | Light |
-   |---|---|---|
-   | `--color-bg` | `#14181C` | `#F2F4F4` |
-   | `--color-panel` | `#232B31` | `#F7F8F8` |
-   | `--color-text` | `#D8E3E7` | `#1A2226` |
-   | `--color-text-muted` | `#7C8A90` | `#5B6A70` |
-   | `--color-accent` | `#4FB8B0` | `#0F6E56` |
-   | `--color-warning` | `#C97B4A` | `#A85A2E` |
-   | `--color-border` | `#2B333A` | `#D7DBDC` |
-   | `--font-sans` | `'Inter', ...` (body text) | |
-   | `--font-mono` | `'IBM Plex Mono', ...` (stat blocks, buttons, UI chrome) | |
+   | Variable             | Dark                                                     | Light     |
+   | -------------------- | -------------------------------------------------------- | --------- |
+   | `--color-bg`         | `#14181C`                                                | `#F2F4F4` |
+   | `--color-panel`      | `#232B31`                                                | `#F7F8F8` |
+   | `--color-text`       | `#D8E3E7`                                                | `#1A2226` |
+   | `--color-text-muted` | `#7C8A90`                                                | `#5B6A70` |
+   | `--color-accent`     | `#4FB8B0`                                                | `#0F6E56` |
+   | `--color-warning`    | `#C97B4A`                                                | `#A85A2E` |
+   | `--color-border`     | `#2B333A`                                                | `#D7DBDC` |
+   | `--font-sans`        | `'Inter', ...` (body text)                               |           |
+   | `--font-mono`        | `'IBM Plex Mono', ...` (stat blocks, buttons, UI chrome) |           |
 
    Note: `--font-display` ('Space Grotesk', for headings) is declared in the source design system but isn't present in this shipped CSS yet — no synced component uses it, so Tailwind's build dropped it. It will appear once a component that uses `font-display` (e.g. a Heading) is added and synced. Don't reference it until then.
 

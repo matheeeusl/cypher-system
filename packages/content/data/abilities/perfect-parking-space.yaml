@@ -14,7 +14,7 @@ description:
     retrieving the car happens over one minute as it slowly (and
     visibly) vanishes or reappears; you can reduce this time to just
     one round if you succeed at a level 4 Intellect task.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

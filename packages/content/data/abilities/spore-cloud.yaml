@@ -10,7 +10,7 @@ description:
     additional point of damage per round (ignores Armor) for the next
     minute or until the target uses an action to wash the spores
     away.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

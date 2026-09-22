@@ -8,7 +8,7 @@ description:
     to any task involving perception. While you have this asset and
     you are conscious and able to take actions, other characters gain
     no benefit from surprising you. The effect lasts for one hour.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

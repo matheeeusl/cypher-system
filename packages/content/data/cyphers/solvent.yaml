@@ -1,8 +1,8 @@
 id: solvent
-name: { en: "Solvent", "pt-BR": "Tradução em breve." }
+name: { en: 'Solvent', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 397"
-level_range: "1d10"
+page_ref: 'Cypher System Rulebook, page 397'
+level_range: '1d10'
 effect_text:
   en: >-
     Dissolves 1 cubic foot of material each round. After one round per cypher

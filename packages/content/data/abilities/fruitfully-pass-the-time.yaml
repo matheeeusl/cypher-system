@@ -12,7 +12,7 @@ description:
     within short range who can hear and see you immediately gain a
     one-action recovery roll. You can't use this on someone again
     until you use a one-hour or ten-hour recovery roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to initiate, one minute to complete." —
   # the "one minute to complete" clause is a duration, not modeled by
   # action_type.

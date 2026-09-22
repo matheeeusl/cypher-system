@@ -13,7 +13,7 @@ description:
     object, and so on. If this occurs, you can regain the remaining
     invisibility effect by taking an action to focus on hiding your
     position.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

@@ -4,7 +4,7 @@ name:
   pt-BR: Defensora Experiente
 description:
   en: When wearing armor, you gain +1 to Armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

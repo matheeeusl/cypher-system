@@ -1,8 +1,8 @@
 id: detonation-singularity
-name: { en: "Detonation (singularity)", "pt-BR": "Tradução em breve." }
+name: { en: 'Detonation (singularity)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 387"
-level_range: "10"
+page_ref: 'Cypher System Rulebook, page 387'
+level_range: '10'
 effect_text:
   en: >-
     Projects a small physical explosive up to a long distance away that explodes and creates a momentary singularity

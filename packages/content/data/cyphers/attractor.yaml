@@ -1,11 +1,11 @@
 id: attractor
 name:
-  en: "Attractor"
-  pt-BR: "Atrator"
+  en: 'Attractor'
+  pt-BR: 'Atrator'
 category: manifest
-page_ref: "Cypher System Rulebook, page 384"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 384'
+level_range: '1d6 + 4'
 effect_text:
   en: "One unanchored item the user's size or smaller within long range (very long range if the cypher level is 8 or higher) is drawn immediately to them. This takes one round. The item has no momentum when it arrives."
-  pt-BR: "Um objeto que não esteja ancorado, de tamanho igual ou menor que o do usuário, dentro do alcance longo (alcance muito longo se o nível do cypher for 8 ou mais), é imediatamente atraído até ele. Isso leva uma rodada. O objeto chega sem qualquer impulso."
+  pt-BR: 'Um objeto que não esteja ancorado, de tamanho igual ou menor que o do usuário, dentro do alcance longo (alcance muito longo se o nível do cypher for 8 ou mais), é imediatamente atraído até ele. Isso leva uma rodada. O objeto chega sem qualquer impulso.'
 effect_table: null

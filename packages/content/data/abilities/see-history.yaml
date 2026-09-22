@@ -14,7 +14,7 @@ description:
     your current location is level 1, and obscure knowledge of the
     past is level 7. After you use this ability, you have an asset on
     identifying the object.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

@@ -21,7 +21,7 @@ description:
     applying one level of Effort calls a specific creature of up to
     level 4 or a random creature with a 10 percent chance of being up
     to level 6.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "6+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 6 Intellect points here, flagged for schema review

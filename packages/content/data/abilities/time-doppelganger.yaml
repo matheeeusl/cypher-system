@@ -26,7 +26,7 @@ description:
     minute to the doppelganger's existence. If you also have this
     ability from another source, you may use either ability, the
     doppelganger is 1 level higher, and it has 3 additional health.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "6+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 6 Intellect points here, flagged for schema review

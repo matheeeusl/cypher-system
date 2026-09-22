@@ -1,8 +1,8 @@
 id: skill-boost
-name: { en: "Skill boost", "pt-BR": "Tradução em breve." }
+name: { en: 'Skill boost', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 397"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 397'
+level_range: '1d6'
 effect_text:
   en: >-
     Dramatically but temporarily alters the user's mind and body so they can
@@ -15,34 +15,34 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Skill Boost Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Skill Boost Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–15"
-      text: { en: "Melee attack", "pt-BR": "Tradução em breve." }
-    - range: "16–30"
-      text: { en: "Ranged attack", "pt-BR": "Tradução em breve." }
-    - range: "31–40"
-      text: { en: "Speed defense", "pt-BR": "Tradução em breve." }
-    - range: "41–50"
-      text: { en: "Might defense", "pt-BR": "Tradução em breve." }
-    - range: "51–60"
-      text: { en: "Intellect defense", "pt-BR": "Tradução em breve." }
-    - range: "61–68"
-      text: { en: "Jumping", "pt-BR": "Tradução em breve." }
-    - range: "69–76"
-      text: { en: "Climbing", "pt-BR": "Tradução em breve." }
-    - range: "77–84"
-      text: { en: "Running", "pt-BR": "Tradução em breve." }
-    - range: "85–92"
-      text: { en: "Swimming", "pt-BR": "Tradução em breve." }
-    - range: "93–94"
-      text: { en: "Sneaking", "pt-BR": "Tradução em breve." }
-    - range: "95–96"
-      text: { en: "Balancing", "pt-BR": "Tradução em breve." }
-    - range: "97–98"
-      text: { en: "Perceiving", "pt-BR": "Tradução em breve." }
-    - range: "99"
-      text: { en: "Carrying", "pt-BR": "Tradução em breve." }
-    - range: "00"
-      text: { en: "Escaping", "pt-BR": "Tradução em breve." }
+    - range: '01–15'
+      text: { en: 'Melee attack', 'pt-BR': 'Tradução em breve.' }
+    - range: '16–30'
+      text: { en: 'Ranged attack', 'pt-BR': 'Tradução em breve.' }
+    - range: '31–40'
+      text: { en: 'Speed defense', 'pt-BR': 'Tradução em breve.' }
+    - range: '41–50'
+      text: { en: 'Might defense', 'pt-BR': 'Tradução em breve.' }
+    - range: '51–60'
+      text: { en: 'Intellect defense', 'pt-BR': 'Tradução em breve.' }
+    - range: '61–68'
+      text: { en: 'Jumping', 'pt-BR': 'Tradução em breve.' }
+    - range: '69–76'
+      text: { en: 'Climbing', 'pt-BR': 'Tradução em breve.' }
+    - range: '77–84'
+      text: { en: 'Running', 'pt-BR': 'Tradução em breve.' }
+    - range: '85–92'
+      text: { en: 'Swimming', 'pt-BR': 'Tradução em breve.' }
+    - range: '93–94'
+      text: { en: 'Sneaking', 'pt-BR': 'Tradução em breve.' }
+    - range: '95–96'
+      text: { en: 'Balancing', 'pt-BR': 'Tradução em breve.' }
+    - range: '97–98'
+      text: { en: 'Perceiving', 'pt-BR': 'Tradução em breve.' }
+    - range: '99'
+      text: { en: 'Carrying', 'pt-BR': 'Tradução em breve.' }
+    - range: '00'
+      text: { en: 'Escaping', 'pt-BR': 'Tradução em breve.' }

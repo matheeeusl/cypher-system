@@ -10,7 +10,7 @@ description:
     you deal 2 additional points of damage per level of Effort
     (instead of 3 points); targets in the area take 1 point of damage
     even if you fail the attack roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "5+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 5 Intellect points here, flagged for schema review

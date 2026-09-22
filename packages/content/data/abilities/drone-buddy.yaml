@@ -16,7 +16,7 @@ description:
     you can repair the original with a few days' worth of tinkering,
     or build a new one with a week's worth of half-time labor.
     (Drone buddy: level 2; flies a short distance each round.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

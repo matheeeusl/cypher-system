@@ -8,7 +8,7 @@ description:
     bats, or even birds) and they respond to you in number. Your
     creatures within short range will not harm you or those you
     designate as allies for one hour.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

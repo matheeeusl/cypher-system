@@ -7,7 +7,7 @@ description:
     You inflict 2 additional points of damage with unarmed attacks,
     or 3 points when you are one or more steps down the intoxication
     track.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

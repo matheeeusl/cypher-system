@@ -9,7 +9,7 @@ description:
     fire, lightning, shadow, or thorn) for one hour, or until you cast
     this spell again. Each level of Effort applied increases the
     elemental protection by +2.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

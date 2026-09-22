@@ -10,7 +10,7 @@ description:
     ranged attacks, and your melee and ranged attacks are hindered.
     This effect lasts for as long as you wish, but it ends if no combat
     is taking place within range of your senses.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

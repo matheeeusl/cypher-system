@@ -1,10 +1,10 @@
 id: area-boost
 name:
-  en: "Area boost"
-  pt-BR: "Ampliação de Área"
+  en: 'Area boost'
+  pt-BR: 'Ampliação de Área'
 category: power_boost
-page_ref: "Cypher System Rulebook, page 401"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 401'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     This cypher boosts an ability that affects a single target. The ability

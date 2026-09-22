@@ -22,9 +22,13 @@ characteristics:
       en: You get 4 additional points to divide among your stat Pools.
       pt-BR: Tradução em breve.
 skill_training:
-  - skill_id: intimidation-and-fear
+  - skill_id: intimidation
     choice_count: null
-  - skill_id: disguise-and-stealth
+  - skill_id: fear-based-interactions
+    choice_count: null
+  - skill_id: disguise
+    choice_count: null
+  - skill_id: stealth
     choice_count: null
 inabilities:
   - en: All tasks relating to pleasant social interaction are hindered.

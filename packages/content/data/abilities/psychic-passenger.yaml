@@ -15,7 +15,7 @@ description:
     you and the creature have an asset on any task that involves
     perception. When you take an action, you use the creature's body
     to perform that action if they allow it.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

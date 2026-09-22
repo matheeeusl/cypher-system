@@ -15,7 +15,7 @@ description:
     speed, so in most situations, it's not a means of attack. You
     can't use this ability on your own body. The power lasts for one
     hour or until its Might Pool is depleted, whichever comes first.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

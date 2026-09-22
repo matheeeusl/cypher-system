@@ -3,10 +3,10 @@
 # themselves at a disadvantage when they run out, presenting a great opportunity
 # for GM intrusion.
 id: knowledge-enhancement
-name: { en: "Knowledge enhancement", "pt-BR": "Tradução em breve." }
+name: { en: 'Knowledge enhancement', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 391"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 391'
+level_range: '1d6'
 effect_text:
   en: >-
     For the next day, the character has training in a predetermined skill (or
@@ -17,30 +17,34 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Knowledge Enhancement Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Knowledge Enhancement Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–10"
-      text: { en: "Melee attacks", "pt-BR": "Tradução em breve." }
-    - range: "11–20"
-      text: { en: "Ranged attacks", "pt-BR": "Tradução em breve." }
-    - range: "21–40"
-      text: { en: "One type of academic or esoteric lore (biology, history, magic, and so on)", "pt-BR": "Tradução em breve." }
-    - range: "41–50"
-      text: { en: "Repairing (sometimes specific to one device)", "pt-BR": "Tradução em breve." }
-    - range: "51–60"
-      text: { en: "Crafting (usually specific to one thing)", "pt-BR": "Tradução em breve." }
-    - range: "61–70"
-      text: { en: "Persuasion", "pt-BR": "Tradução em breve." }
-    - range: "71–75"
-      text: { en: "Healing", "pt-BR": "Tradução em breve." }
-    - range: "76–80"
-      text: { en: "Speed defense", "pt-BR": "Tradução em breve." }
-    - range: "81–85"
-      text: { en: "Intellect defense", "pt-BR": "Tradução em breve." }
-    - range: "86–90"
-      text: { en: "Swimming", "pt-BR": "Tradução em breve." }
-    - range: "91–95"
-      text: { en: "Riding", "pt-BR": "Tradução em breve." }
-    - range: "96–00"
-      text: { en: "Sneaking", "pt-BR": "Tradução em breve." }
+    - range: '01–10'
+      text: { en: 'Melee attacks', 'pt-BR': 'Tradução em breve.' }
+    - range: '11–20'
+      text: { en: 'Ranged attacks', 'pt-BR': 'Tradução em breve.' }
+    - range: '21–40'
+      text:
+        {
+          en: 'One type of academic or esoteric lore (biology, history, magic, and so on)',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '41–50'
+      text: { en: 'Repairing (sometimes specific to one device)', 'pt-BR': 'Tradução em breve.' }
+    - range: '51–60'
+      text: { en: 'Crafting (usually specific to one thing)', 'pt-BR': 'Tradução em breve.' }
+    - range: '61–70'
+      text: { en: 'Persuasion', 'pt-BR': 'Tradução em breve.' }
+    - range: '71–75'
+      text: { en: 'Healing', 'pt-BR': 'Tradução em breve.' }
+    - range: '76–80'
+      text: { en: 'Speed defense', 'pt-BR': 'Tradução em breve.' }
+    - range: '81–85'
+      text: { en: 'Intellect defense', 'pt-BR': 'Tradução em breve.' }
+    - range: '86–90'
+      text: { en: 'Swimming', 'pt-BR': 'Tradução em breve.' }
+    - range: '91–95'
+      text: { en: 'Riding', 'pt-BR': 'Tradução em breve.' }
+    - range: '96–00'
+      text: { en: 'Sneaking', 'pt-BR': 'Tradução em breve.' }

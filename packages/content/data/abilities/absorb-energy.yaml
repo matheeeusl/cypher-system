@@ -17,7 +17,7 @@ description:
     round. You can use this ability as a defense action when you're the
     target of an incoming ability. Doing so cancels the incoming
     ability, and you absorb the energy as if it were a device.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 7

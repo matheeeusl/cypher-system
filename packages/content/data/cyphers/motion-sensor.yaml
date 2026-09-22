@@ -1,8 +1,8 @@
 id: motion-sensor
-name: { en: "Motion sensor", "pt-BR": "Tradução em breve." }
+name: { en: 'Motion sensor', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 393"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 393'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     For one hour per cypher level, the user knows when any movement occurs

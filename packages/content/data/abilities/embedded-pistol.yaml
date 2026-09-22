@@ -10,7 +10,7 @@ description:
     and gain training in the new one.) An embedded pistol is a light,
     medium, or heavy firearm with a ten-round capacity. The weapon is
     concealed until you wish to use it.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

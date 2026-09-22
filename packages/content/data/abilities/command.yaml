@@ -16,7 +16,7 @@ description:
     one is made on it. If you possess another ability that allows you
     to command a creature, you can target two creatures at once as
     your base effect if you use either ability.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

@@ -9,7 +9,7 @@ description:
     distance each round (and carry you) for up to ten minutes at a
     time, or to carry an extra cypher for you that doesn't count
     against your cypher limit.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

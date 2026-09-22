@@ -11,7 +11,7 @@ description:
     and you'll probably make rolls for it when it takes noncombat
     actions. The mount acts on your turn. If your mount dies, you can
     hunt in the wild for 3d6 days to find a new one.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

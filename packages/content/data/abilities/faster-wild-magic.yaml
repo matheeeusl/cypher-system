@@ -11,7 +11,7 @@ description:
     You can't use this ability again until after you've taken a
     ten-hour recovery action. You can still use Magical Repertoire to
     fill your cypher slots.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to initiate, ten minutes to complete."
   # — the "ten minutes to complete" clause is a duration, not modeled by
   # action_type.

@@ -1,8 +1,8 @@
 id: spy
-name: { en: "Spy", "pt-BR": "Tradução em breve." }
+name: { en: 'Spy', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 398"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 398'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Produces a tiny spying object that resists detection as a level 8

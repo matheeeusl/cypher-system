@@ -8,7 +8,7 @@ description:
     trained in. You become specialized in that task. (You can instead
     use this ability as Task Training to become trained in a task you
     aren't trained in.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

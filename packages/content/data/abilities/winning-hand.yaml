@@ -8,7 +8,7 @@ description:
     an Intellect defense roll to resist a foe's attack, you gain an
     action. You can use it immediately even if you have already taken
     a turn in the round. You can use this ability once per round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

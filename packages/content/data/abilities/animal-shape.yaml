@@ -33,7 +33,7 @@ description:
     Even if your animal shape has multiple attack types (such as claws and
     bite), you can attack only once per round unless you have some other
     ability that lets you make additional attacks on your turn.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 # Note: source tag is "Action to change or revert." — same tag as
 # mist-form/moon-shape. NOT the same as controlled-change/beast-form

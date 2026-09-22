@@ -4,7 +4,7 @@ name:
   pt-BR: Golpe Brutal
 description:
   en: You deal 4 additional points of damage with all melee attacks until the end of the next round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 4

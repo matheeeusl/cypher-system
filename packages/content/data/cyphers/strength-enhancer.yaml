@@ -1,8 +1,8 @@
 id: strength-enhancer
-name: { en: "Strength enhancer", "pt-BR": "Tradução em breve." }
+name: { en: 'Strength enhancer', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 398"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 398'
+level_range: '1d6'
 effect_text:
   en: >-
     All noncombat tasks involving raw strength—such as breaking down a door,

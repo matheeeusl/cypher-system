@@ -4,7 +4,7 @@ name:
   pt-BR: Mente Perspicaz
 description:
   en: You have +3 Armor against damaging attacks and damaging effects that target your mind and Intellect. Defense rolls you make against attacks that attempt to confuse, persuade, frighten, or otherwise influence you are eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

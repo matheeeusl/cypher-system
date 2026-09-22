@@ -1,8 +1,8 @@
 id: shocker
-name: { en: "Shocker", "pt-BR": "Tradução em breve." }
+name: { en: 'Shocker', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 396"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 396'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     Delivers a powerful burst of electricity that shocks any creature touched,

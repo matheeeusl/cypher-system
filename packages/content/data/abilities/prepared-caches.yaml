@@ -21,7 +21,7 @@ description:
 
     - Firearm cache (six firearms; a mix of light, medium, and heavy
     weapons, each usually found with about ten bullets or shells)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

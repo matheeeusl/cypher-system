@@ -10,7 +10,7 @@ description:
     Unexpected Betrayal on a target, using your abilities or attempting
     simple persuasion on that target is permanently hindered by two
     steps.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

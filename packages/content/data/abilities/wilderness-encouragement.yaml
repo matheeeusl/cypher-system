@@ -9,7 +9,7 @@ description:
     within short range that can understand you 1d6 points to one
     Pool. You can't use this ability on the same creature again until
     they've made a recovery roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

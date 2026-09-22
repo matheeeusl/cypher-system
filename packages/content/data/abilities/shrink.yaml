@@ -21,7 +21,7 @@ description:
     Shrink before your next ten-hour recovery roll, you must apply an
     additional level of Effort (one level of Effort for the second
     use, two levels of Effort for the third use, and so on).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "1+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

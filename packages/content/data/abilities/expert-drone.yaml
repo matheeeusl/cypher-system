@@ -8,7 +8,7 @@ description:
     can either gain (build) a secondary drone, or add +1 Armor to
     your primary drone. (Secondary drone: level 2; flies a short
     distance each round.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

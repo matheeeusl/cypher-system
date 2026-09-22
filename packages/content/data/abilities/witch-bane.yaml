@@ -7,7 +7,7 @@ description:
     You inflict 1 additional point of damage with weapons. When you
     inflict damage to witches (or other intelligent creatures who
     cast spells), you inflict 3 additional points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

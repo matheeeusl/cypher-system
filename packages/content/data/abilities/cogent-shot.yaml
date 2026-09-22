@@ -7,7 +7,7 @@ description:
     You can spend points from either your Speed Pool or your
     Intellect Pool to apply Effort to hit a target with a gun or
     increase the damage inflicted doing so.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source prints this Focus's Type Swap Option as two abilities
   # (Cogent Shot and Reload) under one "TYPE SWAP OPTION" heading, both
   # granted together — see `spits-fire-and-lead`'s `type_swap_option`

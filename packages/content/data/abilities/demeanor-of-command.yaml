@@ -13,7 +13,7 @@ description:
     have them produce their leader or ask that they take you to their
     leader. You gain a free level of Effort that can be applied to one
     persuasion task you attempt during this period.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

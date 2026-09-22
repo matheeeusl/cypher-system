@@ -18,7 +18,7 @@ description:
     life, though it cannot recall minor memories, only big events of
     importance to it. When the effect ends, or if you fail the roll, the
     creature's brain dissolves to mush and cannot be awakened again.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

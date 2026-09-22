@@ -9,7 +9,7 @@ description:
     drone. If a fleet drone is destroyed, you can build a new one (or
     repair the old one from its parts) after a week of half-time
     labor. (Fleet drone: level 3; flies a short distance each round.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

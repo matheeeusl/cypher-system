@@ -1,8 +1,8 @@
 id: sniper-module
-name: { en: "Sniper module", "pt-BR": "Tradução em breve." }
+name: { en: 'Sniper module', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 397"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 397'
+level_range: '1d6'
 effect_text:
   en: >-
     For the next hour per cypher level, the effective range of the user's

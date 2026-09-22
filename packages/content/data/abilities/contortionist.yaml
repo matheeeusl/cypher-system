@@ -8,7 +8,7 @@ description:
     spot. You are trained in escaping. When you use an action to
     escape or move through a tight area, you can immediately use
     another action. You may use this action only to move.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 2

@@ -7,7 +7,7 @@ description:
     This melee attack inflicts 1 less point of damage than normal, and
     regardless of whether you hit the target, you maneuver it into a
     position you desire within immediate range.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 1

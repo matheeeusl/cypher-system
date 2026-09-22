@@ -1,8 +1,8 @@
 id: effect-resistance
-name: { en: "Effect resistance", "pt-BR": "Tradução em breve." }
+name: { en: 'Effect resistance', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 388"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 388'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     Provides a chance for additional resistance to directly damaging effects

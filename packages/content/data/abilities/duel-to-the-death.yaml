@@ -10,7 +10,7 @@ description:
     or +7 damage if the creature is engaging someone else instead of
     you. You can duel only one creature at a time. A duel lasts up to
     one minute, or until you break it off.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 5

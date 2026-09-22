@@ -8,7 +8,7 @@ description:
     hard enough to take damage, you teleport an immediate distance in
     a random direction (not up or down) to help evade the brunt of
     the attack. Your Speed defense rolls are eased for one minute.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

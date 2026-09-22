@@ -10,7 +10,7 @@ description:
     hours equal to 6 minus the difficulty to create it. Thus, if you
     create a set of sturdy manacles (difficulty 5), it would last for
     one hour.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 7

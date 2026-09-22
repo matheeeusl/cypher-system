@@ -10,197 +10,197 @@ animals:
   - id: ape
     name:
       en: Ape
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: hands
   - id: badger
     name:
       en: Badger
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: scent
   - id: bat
     name:
       en: Bat
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: flying
   - id: bear
     name:
       en: Bear
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: scent
   - id: bird
     name:
       en: Bird
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: flying
   - id: boar
     name:
       en: Boar
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Might defense
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: scent
   - id: cat
     name:
       en: Cat
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing or stealth
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: small
   - id: constrictor-snake
     name:
       en: Constrictor snake
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: constrict
   - id: crocodile
     name:
       en: Crocodile
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Stealth or swimming
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: constrict
   - id: deinonychus
     name:
       en: Deinonychus
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: fast
   - id: dolphin
     name:
       en: Dolphin
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception or swimming
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: fast
   - id: fish
     name:
       en: Fish
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Stealth or swimming
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: aquatic
   - id: frog
     name:
       en: Frog
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Jumping or stealth
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: aquatic
   - id: horse
     name:
       en: Horse
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: fast
   - id: leopard
     name:
       en: Leopard
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing or stealth
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: fast
   - id: lizard
     name:
       en: Lizard
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing or stealth
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: small
   - id: octopus
     name:
       en: Octopus
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Stealth
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: aquatic
   - id: shark
     name:
       en: Shark
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Swimming
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: aquatic
   - id: turtle
     name:
       en: Turtle
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Might defense
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: armor
   - id: venomous-snake
     name:
       en: Venomous snake
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Climbing
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: venom
   - id: wolf
     name:
       en: Wolf
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     skill_training:
       en: Perception
-      "pt-BR": "Tradução em breve."
+      'pt-BR': 'Tradução em breve.'
     other_ability: scent
 
 ability_definitions:
   aquatic:
     en: The animal either breathes water instead of air or is able to breathe water in addition to breathing air.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   armor:
     en: The animal has a thick hide or shell, granting +1 to Armor.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   constrict:
     en: The animal can grip its opponent fast after making a melee attack (usually with a bite or claw), easing attack rolls against that foe on later turns until the animal releases the foe.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   fast:
     en: The animal can move a long distance on its turn instead of a short distance.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   flying:
     en: The animal can fly, which (depending on the type of animal) may be up to a short or long distance on its turn.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   hands:
     en: The animal has paws or hands that are nearly as agile as those of a human. Unlike with most animal shapes, the animal's tasks that require hands are not hindered (although the GM may decide that some tasks requiring human agility, such as playing a flute, are still hindered).
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   scent:
     en: The animal has a strong sense of smell, gaining an asset on tracking and dealing with darkness or blindness.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   small:
     en: The animal is considerably smaller than a human, easing its Speed defense tasks but hindering tasks to move heavy things.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'
   venom:
     en: The animal is poisonous (usually through a bite), inflicting 1 additional point of damage.
-    "pt-BR": "Tradução em breve."
+    'pt-BR': 'Tradução em breve.'

@@ -10,7 +10,7 @@ description:
     lesser magic devices within short range inoperable for one minute.
     After the creature uses this ability, it must retreat to its
     object to rest for three hours.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 5

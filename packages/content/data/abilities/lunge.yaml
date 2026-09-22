@@ -7,7 +7,7 @@ description:
     This ability requires you to extend yourself for a powerful stab or
     smash. The awkward lunge hinders the attack roll. If your attack is
     successful, it inflicts 4 additional points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 2

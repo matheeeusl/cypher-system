@@ -8,7 +8,7 @@ description:
     change this freely every round, but you can have only one charge
     at a time. As long as that charge is within immediate range, they
     gain an asset for Speed defense tasks because you have their back.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

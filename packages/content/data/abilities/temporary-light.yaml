@@ -12,7 +12,7 @@ description:
     crude and can have no moving parts, so you can make a sword, a
     shield, a short ladder, and so on. The object has the approximate
     mass of the real object and is level 2.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

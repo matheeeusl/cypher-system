@@ -8,6 +8,7 @@ import {
   getAllDescriptors,
   getAllAbilities,
   getAllFoci,
+  getAllSkills,
   getAllCyphers,
   getAllArtifacts,
 } from '@cypher/content'
@@ -88,6 +89,23 @@ const fociSidebarGroup = {
     label: focus.name.en,
     translations: { 'pt-BR': focus.name['pt-BR'] },
     link: `/foci/${focus.id}/`,
+  })),
+}
+
+// Same manual-group pattern for Skills (src/pages/[locale]/skills/[slug].astro):
+// 51 entries, the same size class as Descriptors/Foci, so alphabetical and
+// left expanded like them.
+const skills = getAllSkills()
+  .slice()
+  .sort((a, b) => a.name.en.localeCompare(b.name.en))
+
+const skillsSidebarGroup = {
+  label: 'Skills',
+  translations: { 'pt-BR': 'Perícias' },
+  items: skills.map((skill) => ({
+    label: skill.name.en,
+    translations: { 'pt-BR': skill.name['pt-BR'] },
+    link: `/skills/${skill.id}/`,
   })),
 }
 
@@ -195,6 +213,7 @@ export default defineConfig({
         },
         typesSidebarGroup,
         descriptorsSidebarGroup,
+        skillsSidebarGroup,
         abilitiesSidebarGroup,
         fociSidebarGroup,
         cyphersSidebarGroup,

@@ -7,7 +7,7 @@ description:
     Ranges for you increase by one step. Immediate becomes short, short
     becomes long, long becomes very long, and very long becomes 1,000
     feet (300 m).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

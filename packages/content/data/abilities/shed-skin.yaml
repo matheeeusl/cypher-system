@@ -20,7 +20,7 @@ description:
     recovery roll. Each additional time you use Shed Skin before your
     next ten-hour recovery roll, you must apply an additional level of
     Effort.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "7+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Speed points here, flagged for schema review (same

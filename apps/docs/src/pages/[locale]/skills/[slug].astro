@@ -1,0 +1,86 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllDescriptors, getAllSkills } from '@cypher/content';
+import type { Descriptor, Skill } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+
+export function getStaticPaths() {
+	const skills = getAllSkills();
+	const descriptors = getAllDescriptors();
+
+	return URL_LOCALES.flatMap((locale) =>
+		skills.map((skill) => ({
+			params: { locale, slug: skill.id },
+			props: {
+				skill,
+				// Reverse lookup: the Descriptors that train this skill. A Skill
+				// entity has no back-reference of its own — the link only exists on
+				// the Descriptor side (skill_training) — so it's derived here.
+				// Only id + name are passed down, not whole Descriptors.
+				grantedBy: descriptors
+					.filter((d) => d.skill_training.some((entry) => entry.skill_id === skill.id))
+					.map((d) => ({ id: d.id, name: d.name }))
+					.sort((a, b) => a.name.en.localeCompare(b.name.en)),
+			},
+		})),
+	);
+}
+
+interface Props {
+	skill: Skill;
+	grantedBy: Pick<Descriptor, 'id' | 'name'>[];
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { skill, grantedBy } = Astro.props as Props;
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+---
+
+<StarlightPage
+	frontmatter={{
+		title: pick(skill.name, locale),
+		description: pick(skill.description, locale),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6 max-w-[40em] text-[15px] leading-[1.55] text-text-muted italic">{pick(skill.description, locale)}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<p>
+		{
+			t(
+				'Being trained in a skill eases related tasks by one step; gaining it a second time makes you specialized, easing them by two.',
+				'Ser treinado em uma perícia facilita as tarefas relacionadas em um degrau; adquiri-la uma segunda vez torna você especializado, facilitando-as em dois.',
+			)
+		}
+	</p>
+
+	<h2>{t('Granted by', 'Concedida por')}</h2>
+	{
+		grantedBy.length > 0 ? (
+			<div class="not-content">
+				<div class="flex flex-wrap gap-1.5 not-prose">
+					{grantedBy.map((descriptor) => (
+						<a
+							href={`/${locale}/descriptors/${descriptor.id}/`}
+							class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
+						>
+							<span class="opacity-50">[</span>
+							{pick(descriptor.name, locale)}
+							<span class="opacity-50">]</span>
+						</a>
+					))}
+				</div>
+			</div>
+		) : (
+			<p>
+				{t(
+					'No Descriptor grants this skill. It can still be gained through a Type, a Focus, or advancement.',
+					'Nenhum Descritor concede esta perícia. Ela ainda pode ser adquirida por um Tipo, um Foco ou pela progressão.',
+				)}
+			</p>
+		)
+	}
+</StarlightPage>

@@ -1,8 +1,8 @@
 id: disrupting
-name: { en: "Disrupting", "pt-BR": "Tradução em breve." }
+name: { en: 'Disrupting', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 388"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 388'
+level_range: '1d6'
 effect_text:
   en: >-
     For the next day, each time the user strikes a solid creature or object,

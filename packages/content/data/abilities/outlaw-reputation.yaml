@@ -11,7 +11,7 @@ description:
     made against you by affected targets within earshot are hindered
     until one or more of them successfully inflicts damage on you or
     one of your allies, at which time their fear abates.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

@@ -11,7 +11,7 @@ description:
     simply by what you can see and hear. When you use this ability,
     you can ask the GM one question about the community and get a
     very short answer.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

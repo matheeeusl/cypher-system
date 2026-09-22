@@ -1,8 +1,8 @@
 id: hunter-seeker
-name: { en: "Hunter/seeker", "pt-BR": "Tradução em breve." }
+name: { en: 'Hunter/seeker', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 390"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 390'
+level_range: '1d6'
 effect_text:
   en: >-
     With long-range movement, this intelligent missile tracks and attacks a
@@ -14,16 +14,32 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Hunter/Seeker Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Hunter/Seeker Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–50"
-      text: { en: "Inflicts 8 points of damage.", "pt-BR": "Tradução em breve." }
-    - range: "51–80"
-      text: { en: "Bears a poisoned needle that inflicts 3 points of damage plus poison.", "pt-BR": "Tradução em breve." }
-    - range: "81–90"
-      text: { en: "Explodes, inflicting 6 points of damage to all within immediate range.", "pt-BR": "Tradução em breve." }
-    - range: "91–95"
-      text: { en: "Shocks for 4 points of electricity damage, and stuns for one round per cypher level.", "pt-BR": "Tradução em breve." }
-    - range: "96–00"
-      text: { en: "Covers target in sticky goo that immediately hardens, holding them fast until they break free with a Might action (difficulty equal to the cypher's level + 2).", "pt-BR": "Tradução em breve." }
+    - range: '01–50'
+      text: { en: 'Inflicts 8 points of damage.', 'pt-BR': 'Tradução em breve.' }
+    - range: '51–80'
+      text:
+        {
+          en: 'Bears a poisoned needle that inflicts 3 points of damage plus poison.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '81–90'
+      text:
+        {
+          en: 'Explodes, inflicting 6 points of damage to all within immediate range.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '91–95'
+      text:
+        {
+          en: 'Shocks for 4 points of electricity damage, and stuns for one round per cypher level.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '96–00'
+      text:
+        {
+          en: "Covers target in sticky goo that immediately hardens, holding them fast until they break free with a Might action (difficulty equal to the cypher's level + 2).",
+          'pt-BR': 'Tradução em breve.',
+        }

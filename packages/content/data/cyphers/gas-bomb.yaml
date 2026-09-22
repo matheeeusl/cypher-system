@@ -1,8 +1,8 @@
 id: gas-bomb
-name: { en: "Gas bomb", "pt-BR": "Tradução em breve." }
+name: { en: 'Gas bomb', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 389"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 389'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Thrown a short distance, this bursts in a poisonous cloud within an
@@ -12,28 +12,69 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Gas Bomb Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Gas Bomb Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–10"
-      text: { en: "Thick smoke: occludes sight while the cloud lasts.", "pt-BR": "Tradução em breve." }
-    - range: "11–20"
-      text: { en: "Choking gas: living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "21–50"
-      text: { en: "Poison gas: living creatures that breathe suffer damage equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "51–60"
-      text: { en: "Corrosive gas: everything suffers damage equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "61–65"
-      text: { en: "Hallucinogenic gas: living creatures that breathe lose their actions to hallucinations and visions for a number of rounds equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "66–70"
-      text: { en: "Nerve gas: living creatures that breathe suffer Speed damage equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "71–80"
-      text: { en: "Mind-numbing gas: living creatures that breathe suffer Intellect damage equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "81–83"
-      text: { en: "Fear gas: living creatures that breathe and think flee in a random direction in fear (or are paralyzed with fear) for a number of rounds equal to the cypher's level.", "pt-BR": "Tradução em breve." }
-    - range: "84–86"
-      text: { en: "Amnesia gas: living creatures that breathe and think permanently lose all memory of the last minute.", "pt-BR": "Tradução em breve." }
-    - range: "87–96"
-      text: { en: "Sleep gas: living creatures that breathe fall asleep for a number of rounds equal to the cypher's level or until awoken by a violent action or an extremely loud noise.", "pt-BR": "Tradução em breve." }
-    - range: "97–00"
-      text: { en: "Rage gas: living creatures that breathe and think make a melee attack on the nearest creature and continue to do so for a number of rounds equal to the cypher's level.", "pt-BR": "Tradução em breve." }
+    - range: '01–10'
+      text:
+        { en: 'Thick smoke: occludes sight while the cloud lasts.', 'pt-BR': 'Tradução em breve.' }
+    - range: '11–20'
+      text:
+        {
+          en: "Choking gas: living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '21–50'
+      text:
+        {
+          en: "Poison gas: living creatures that breathe suffer damage equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '51–60'
+      text:
+        {
+          en: "Corrosive gas: everything suffers damage equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '61–65'
+      text:
+        {
+          en: "Hallucinogenic gas: living creatures that breathe lose their actions to hallucinations and visions for a number of rounds equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '66–70'
+      text:
+        {
+          en: "Nerve gas: living creatures that breathe suffer Speed damage equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '71–80'
+      text:
+        {
+          en: "Mind-numbing gas: living creatures that breathe suffer Intellect damage equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '81–83'
+      text:
+        {
+          en: "Fear gas: living creatures that breathe and think flee in a random direction in fear (or are paralyzed with fear) for a number of rounds equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '84–86'
+      text:
+        {
+          en: 'Amnesia gas: living creatures that breathe and think permanently lose all memory of the last minute.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '87–96'
+      text:
+        {
+          en: "Sleep gas: living creatures that breathe fall asleep for a number of rounds equal to the cypher's level or until awoken by a violent action or an extremely loud noise.",
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '97–00'
+      text:
+        {
+          en: "Rage gas: living creatures that breathe and think make a melee attack on the nearest creature and continue to do so for a number of rounds equal to the cypher's level.",
+          'pt-BR': 'Tradução em breve.',
+        }

@@ -9,7 +9,7 @@ description:
     to affect it. If the GM feels it appropriate to the circumstances,
     you can disintegrate a portion of an object (the total volume of
     which is smaller than you) rather than the entire thing.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 7

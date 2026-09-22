@@ -11,7 +11,7 @@ Everything visual in this monorepo flows through `packages/ui`. Both apps import
 
 Three layers, in this order, and each has one job:
 
-1. **`src/styles/tokens.css`** — raw CSS custom properties. Dark is the `:root` default; light is a full override under `[data-theme="light"]`. This is the *only* place a color's hex value should ever be written.
+1. **`src/styles/tokens.css`** — raw CSS custom properties. Dark is the `:root` default; light is a full override under `[data-theme="light"]`. This is the _only_ place a color's hex value should ever be written.
 2. **`src/styles/globals.css`** — `@import "tailwindcss"` + `@import "./tokens.css"`, then a Tailwind v4 `@theme` block that maps each `--color-*` custom property to a Tailwind theme key (so `bg-bg`, `text-text`, `border-border`, etc. exist as utilities), plus the three `--font-*` mappings.
 3. **Consumers** (apps, and components inside `packages/ui` itself) import `@cypher/ui/styles/globals.css` once, at the root. Never import `tokens.css` directly from a component.
 
@@ -43,7 +43,7 @@ export default meta
 type Story = StoryObj<typeof ComponentName>
 
 export const Default: Story = {
-  args: { /* ... */ },
+  args: {/* ... */},
 }
 ```
 

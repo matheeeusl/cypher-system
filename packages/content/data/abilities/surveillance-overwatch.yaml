@@ -10,7 +10,7 @@ description:
     Likewise, if you use Camera Sight to advise a character of a
     foe's weakness, that character's next attack roll against that
     foe is eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

@@ -13,7 +13,7 @@ description:
     you can automatically inflict 3 points of damage each round on
     the target while you hold it, but you can also keep it protected
     (by taking all attacks otherwise meant for the target).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: action
 sources:

@@ -1,8 +1,8 @@
 id: detonation-matter-disruption
-name: { en: "Detonation (matter disruption)", "pt-BR": "Tradução em breve." }
+name: { en: 'Detonation (matter disruption)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 387"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 387'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     Projects a small physical explosive up to a long distance away that explodes in an immediate radius,

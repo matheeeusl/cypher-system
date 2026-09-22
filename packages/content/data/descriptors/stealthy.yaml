@@ -16,7 +16,7 @@ characteristics: []
 skill_training:
   - skill_id: stealth
     choice_count: null
-  - skill_id: lies-and-trickery
+  - skill_id: deception
     choice_count: null
   - skill_id: illusions-and-trickery
     choice_count: null

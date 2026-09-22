@@ -11,7 +11,7 @@ description:
     a creature in the area still takes 1 point of damage. Your attack
     is eased against targets wearing, carrying, or made of a
     significant amount of metal.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

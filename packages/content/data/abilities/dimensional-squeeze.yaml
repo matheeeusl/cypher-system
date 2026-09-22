@@ -16,7 +16,7 @@ description:
     when you use this ability. (A transitional dimension is a
     dimension where distances are shorter compared to those in other
     dimensions, so travel through it is faster than normal movement.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "2+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Intellect points here, flagged for schema review (same

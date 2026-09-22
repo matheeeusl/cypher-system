@@ -1,8 +1,8 @@
 id: x-ray-viewer
-name: { en: "X-ray viewer", "pt-BR": "Tradução em breve." }
+name: { en: 'X-ray viewer', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 400"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 400'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     Allows the user to see through up to 2 feet (60 cm) of material of a level

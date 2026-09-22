@@ -10,7 +10,7 @@ description:
     anything darker becomes darkness. If you cast this spell on an
     object, the darkness moves with the object, and can be suppressed
     if it is enclosed in a light-proof container or wrapping.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

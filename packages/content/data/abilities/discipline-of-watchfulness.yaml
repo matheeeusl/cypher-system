@@ -14,7 +14,7 @@ description:
     hours, you must spend another 24 hours together to reactivate the
     benefit. You must spend the Intellect point cost each 24 hours you
     wish to keep the benefit active.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 7

@@ -3,10 +3,10 @@
 # own added guess, not primary rulebook text — flag if a more authoritative
 # value surfaces.
 id: phase-changer
-name: { en: "Phase changer", "pt-BR": "Tradução em breve." }
+name: { en: 'Phase changer', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 394"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 394'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     Puts the user out of phase for one minute (two minutes if the cypher is

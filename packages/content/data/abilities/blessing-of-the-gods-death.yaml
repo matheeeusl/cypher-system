@@ -6,7 +6,7 @@ description:
   en: >-
     A target you choose within short range withers, suffering 3
     points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

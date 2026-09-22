@@ -13,7 +13,7 @@ description:
     to all attacks. If you also have the Spin Attack ability, you
     inflict 1 additional point of damage when you use Punish All the
     Guilty.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 3

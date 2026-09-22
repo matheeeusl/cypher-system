@@ -1,11 +1,11 @@
 id: blackout
 name:
-  en: "Blackout"
-  pt-BR: "Apagão"
+  en: 'Blackout'
+  pt-BR: 'Apagão'
 category: manifest
-page_ref: "Cypher System Rulebook, page 384"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 384'
+level_range: '1d6 + 2'
 effect_text:
-  en: "An area within immediate range of the user becomes secure against any effect outside the area that sees, hears, or otherwise senses what occurs inside. To outside observers, the area is a \"blur\" to any sense applied. Taps, scrying sensors, and other direct surveillance methods are also rendered inoperative within the area for a day."
-  pt-BR: "Uma área dentro do alcance imediato do usuário torna-se protegida contra qualquer efeito vindo de fora da área que possa ver, ouvir ou perceber de qualquer outra forma o que acontece em seu interior. Para observadores externos, a área se torna um \"borrão\" para qualquer sentido utilizado. Escutas, sensores de vidência e outros métodos de vigilância direta também ficam inoperantes dentro da área por um dia."
+  en: 'An area within immediate range of the user becomes secure against any effect outside the area that sees, hears, or otherwise senses what occurs inside. To outside observers, the area is a "blur" to any sense applied. Taps, scrying sensors, and other direct surveillance methods are also rendered inoperative within the area for a day.'
+  pt-BR: 'Uma área dentro do alcance imediato do usuário torna-se protegida contra qualquer efeito vindo de fora da área que possa ver, ouvir ou perceber de qualquer outra forma o que acontece em seu interior. Para observadores externos, a área se torna um "borrão" para qualquer sentido utilizado. Escutas, sensores de vidência e outros métodos de vigilância direta também ficam inoperantes dentro da área por um dia.'
 effect_table: null

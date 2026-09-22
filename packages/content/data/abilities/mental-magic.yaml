@@ -8,7 +8,7 @@ description:
     instead roll as if it were an Intellect action. This means that if
     you apply Effort, you spend points from your Intellect Pool and
     use your Intellect Edge.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

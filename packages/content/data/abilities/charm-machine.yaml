@@ -9,7 +9,7 @@ description:
     function would cause you harm. Thus, if a foe attempts to detonate
     a bomb near you controlled by a detonator that likes you, there is
     a 50 percent chance that it won't explode.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

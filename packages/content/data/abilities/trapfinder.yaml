@@ -12,7 +12,7 @@ description:
     can choose to use Effort to increase the level of traps that can be
     found by 2, so using two levels of Effort can find all traps of
     level 8 or below.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here (same approximation used for

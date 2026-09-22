@@ -1,8 +1,8 @@
 id: ray-emitter-numbing
-name: { en: "Ray emitter (numbing)", "pt-BR": "Tradução em breve." }
+name: { en: 'Ray emitter (numbing)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 395"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 395'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Allows the user to project a ray of energy up to long range (very long

@@ -4,7 +4,7 @@ name:
   pt-BR: Bônus de Intelecto Aprimorado
 description:
   en: You gain +1 to your Intellect Edge.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

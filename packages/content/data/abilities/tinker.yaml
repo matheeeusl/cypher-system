@@ -10,7 +10,7 @@ description:
     battery for another device. The effective level of the modified
     device is 1 lower than normal, and the device is rendered unusable
     (for its original purpose) until repaired.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

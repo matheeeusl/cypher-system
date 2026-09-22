@@ -11,7 +11,7 @@ description:
     certain kind of extradimensional energy, you can't protect against
     it. You can select this ability more than once. Each time you
     select it, you must choose a different kind of energy.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

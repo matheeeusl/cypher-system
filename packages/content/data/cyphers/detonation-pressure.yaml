@@ -1,8 +1,8 @@
 id: detonation-pressure
-name: { en: "Detonation (pressure)", "pt-BR": "Tradução em breve." }
+name: { en: 'Detonation (pressure)', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 387"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 387'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Projects a small physical explosive up to a long distance away that explodes in an immediate radius,

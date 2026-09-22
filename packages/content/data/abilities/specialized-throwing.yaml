@@ -4,7 +4,7 @@ name:
   pt-BR: Arremesso Especializado
 description:
   en: You are specialized in attacks with all weapons that you throw.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

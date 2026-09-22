@@ -8,7 +8,7 @@ description:
     (easing Speed defense tasks), you can act as if you are trained
     in Speed defense tasks. However, in any round in which you use
     this benefit, your attacks are hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

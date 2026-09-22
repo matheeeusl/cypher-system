@@ -14,7 +14,7 @@ description:
     duration (one hour per level of Effort), or increase your range
     (another long distance of detection or 10 miles of access per
     level of Effort) in any combination.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

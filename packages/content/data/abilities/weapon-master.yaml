@@ -4,7 +4,7 @@ name:
   pt-BR: Mestre de Arma
 description:
   en: You inflict an additional 1 point of damage with your chosen weapon.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

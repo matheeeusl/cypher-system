@@ -3,10 +3,10 @@
 # assign this cypher a duration of one hour per cypher level; that suggestion is
 # not encoded in level_range/effect_text above.
 id: mind-stabilizer
-name: { en: "Mind stabilizer", "pt-BR": "Tradução em breve." }
+name: { en: 'Mind stabilizer', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 393"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 393'
+level_range: '1d6'
 effect_text:
   en: >-
     The user gains +5 to Armor against Intellect damage.

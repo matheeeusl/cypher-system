@@ -8,7 +8,7 @@ description:
     with Venomous Strike, you deal 9 additional points of damage.
     Once you use this ability, you can't use it again during the
     current conflict.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 5

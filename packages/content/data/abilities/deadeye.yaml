@@ -4,7 +4,7 @@ name:
   pt-BR: Olho Certeiro
 description:
   en: You inflict an additional 6 points of damage with any single-target attack spell cast through a firearm using Spell Bullet. If the attack spell doesn't inflict damage, you instead can modify the spell as if you had applied two levels of Intellect Effort to it. If you have the Iron Eye ability, you can exchange it for Trained Guncasting.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

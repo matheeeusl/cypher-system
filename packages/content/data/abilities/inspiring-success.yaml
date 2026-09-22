@@ -9,7 +9,7 @@ description:
     least one level of Effort, you may choose another character within
     short range. That character has an asset on the next task they
     attempt using that stat on their next turn.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

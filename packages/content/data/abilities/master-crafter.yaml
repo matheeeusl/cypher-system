@@ -4,7 +4,7 @@ name:
   pt-BR: Mestre Artesão
 description:
   en: You are trained in the crafting of two kinds of items, or you are specialized in two kinds of items that you are already trained in.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

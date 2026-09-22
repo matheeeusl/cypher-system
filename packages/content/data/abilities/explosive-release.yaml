@@ -12,7 +12,7 @@ description:
     area, everything in the area (except you) takes 1 point of damage
     per point in your Siphon Pool (or half that if your attack fails
     against them). This drains your Siphon Pool to 0 points.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

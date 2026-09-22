@@ -1,7 +1,6 @@
-
 const ERRORS = {
-    // A PC can apply at most 6 levels of Effort per action (base rules cap).
-    INVALID_LEVELS: 'Effort levels must be between 0 and 6',
+  // A PC can apply at most 6 levels of Effort per action (base rules cap).
+  INVALID_LEVELS: 'Effort levels must be between 0 and 6',
 }
 
 /**
@@ -15,8 +14,7 @@ const ERRORS = {
  *   this task, which raises its Effort cost.
  */
 export function effortCost(levels: number, edge: number, hasWeakness = false): number {
-  if (levels < 0 || levels > 6)
-    throw new RangeError(ERRORS.INVALID_LEVELS)
+  if (levels < 0 || levels > 6) throw new RangeError(ERRORS.INVALID_LEVELS)
 
   // The first level of Effort costs 3 points; every level after that
   // costs 2 more (so 0 levels = free, 1 = 3, 2 = 5, 3 = 7, ...).

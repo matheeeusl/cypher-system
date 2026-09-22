@@ -1,8 +1,8 @@
 id: poison-explosive
-name: { en: "Poison (explosive)", "pt-BR": "Tradução em breve." }
+name: { en: 'Poison (explosive)', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 394"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 394'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     Once this substance enters the bloodstream, it travels to the brain and
@@ -13,20 +13,40 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Poison (Explosive) Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Poison (Explosive) Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–25"
-      text: { en: "The detonator is activated (must be within long range).", "pt-BR": "Tradução em breve." }
-    - range: "26–40"
-      text: { en: "A specified amount of time passes.", "pt-BR": "Tradução em breve." }
-    - range: "41–50"
-      text: { en: "The victim takes a specific action.", "pt-BR": "Tradução em breve." }
-    - range: "51–55"
-      text: { en: "A specific note is sung or played on an instrument within short range.", "pt-BR": "Tradução em breve." }
-    - range: "56–60"
-      text: { en: "The victim smells a specific scent within immediate range.", "pt-BR": "Tradução em breve." }
-    - range: "61–80"
-      text: { en: "The victim comes within long range of the detonator.", "pt-BR": "Tradução em breve." }
-    - range: "81–00"
-      text: { en: "The victim is no longer within long range of the detonator.", "pt-BR": "Tradução em breve." }
+    - range: '01–25'
+      text:
+        {
+          en: 'The detonator is activated (must be within long range).',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '26–40'
+      text: { en: 'A specified amount of time passes.', 'pt-BR': 'Tradução em breve.' }
+    - range: '41–50'
+      text: { en: 'The victim takes a specific action.', 'pt-BR': 'Tradução em breve.' }
+    - range: '51–55'
+      text:
+        {
+          en: 'A specific note is sung or played on an instrument within short range.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '56–60'
+      text:
+        {
+          en: 'The victim smells a specific scent within immediate range.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '61–80'
+      text:
+        {
+          en: 'The victim comes within long range of the detonator.',
+          'pt-BR': 'Tradução em breve.',
+        }
+    - range: '81–00'
+      text:
+        {
+          en: 'The victim is no longer within long range of the detonator.',
+          'pt-BR': 'Tradução em breve.',
+        }

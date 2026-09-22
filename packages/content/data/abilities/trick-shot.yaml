@@ -8,7 +8,7 @@ description:
     targets that are within immediate range of each other. Make a
     separate attack roll against each target. The attack rolls are
     hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 2

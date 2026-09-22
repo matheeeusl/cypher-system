@@ -20,7 +20,7 @@ description:
     level lower than its normal level. However, if the laser is fired by
     you or someone else who has your permission, the laser attacks are
     eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: each of the 4 upgrade options prints its own action_type tag
   # (Cypher Pod: Enabler. / Flight: Enabler. / Force Shield: Action. /
   # Mounted Laser Configuration: "Action to reconfigure; action to return

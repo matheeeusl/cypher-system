@@ -8,7 +8,7 @@ description:
     such warm location, you gain a free ten-minute recovery roll.
     Once you use this ability, you can't use it again until after
     your next ten-hour recovery roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Ten minutes to activate." — no "action" word
   # printed at all, just a duration before the effect triggers; closest
   # existing category is action_to_initiate.

@@ -13,7 +13,7 @@ description:
     can speak and has the general knowledge a creature of its type
     should possess. The creature is receptive to communication and
     helping you (unless shown that it should do otherwise).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

@@ -13,7 +13,7 @@ description:
     immediately check for depletion (items with a depletion of "—" are
     either immune to this ability or have a depletion of 1 in 1d10
     when attacked with this ability).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source adds a clarifying sidebar: "Robots and other living
   # machines are usually treated as creatures, not machines, for the
   # purposes of siphoning power from them." — folded here as context.

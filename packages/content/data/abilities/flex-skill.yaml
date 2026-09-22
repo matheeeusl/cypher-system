@@ -4,7 +4,7 @@ name:
   pt-BR: Perícia Flexível
 description:
   en: At the beginning of each day, choose one task (other than attacks or defense) on which you will concentrate. For the rest of that day, you're trained in that task. You can't use this ability with a skill in which you're already trained to become specialized.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source prints this ability's full text twice at Tier 1, plus an
   # explicit aside confirming it's intentional ("You might be wondering if
   # you get two flex skills at Tier 1. Yes, you do!") — modeled as two

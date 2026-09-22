@@ -4,7 +4,7 @@ name:
   pt-BR: Resiliência
 description:
   en: You have 1 point of Armor against any kind of physical damage, even physical damage that normally ignores Armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

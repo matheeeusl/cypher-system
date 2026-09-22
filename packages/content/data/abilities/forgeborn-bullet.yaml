@@ -10,7 +10,7 @@ description:
     After its task is complete, you dismiss the fiery forgeborn as
     part of another action, or if it is destroyed, it implodes back
     into a smoldering bullet.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source includes brief creature stats for the fiery forgeborn
   # (level 4; anyone who tries to touch or strike it with a melee
   # attack automatically takes 1 fire damage) — no schema field for

@@ -7,7 +7,7 @@ description:
     You've played so many games that you've picked up some real
     knowledge. Choose any two noncombat skills. You are trained in
     those skills.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

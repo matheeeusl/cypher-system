@@ -14,7 +14,7 @@ description:
     destructive resonance in a physical melee weapon for one minute or
     until you let go of it. All attacks made with the target weapon
     inflict 1 additional point of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 2

@@ -1,8 +1,8 @@
 id: energy-boost
-name: { en: "Energy boost", "pt-BR": "Tradução em breve." }
+name: { en: 'Energy boost', 'pt-BR': 'Tradução em breve.' }
 category: power_boost
-page_ref: "Cypher System Rulebook, page 401"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 401'
+level_range: '1d6'
 effect_text:
   en: >-
     This cypher boosts an ability that has a stat Pool cost. The cost is

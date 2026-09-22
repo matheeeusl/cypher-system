@@ -11,7 +11,7 @@ description:
     modifiers to the attack roll, but you can apply Effort for
     accuracy). If the attack hits, the target takes damage from your
     opponent's attack.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 3

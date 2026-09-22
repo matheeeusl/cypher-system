@@ -1,8 +1,8 @@
 id: meditation-aid
-name: { en: "Meditation aid", "pt-BR": "Tradução em breve." }
+name: { en: 'Meditation aid', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 392"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 392'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Restores a number of points equal to the cypher's level to the user's

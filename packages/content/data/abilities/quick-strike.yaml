@@ -8,7 +8,7 @@ description:
     foe to defend against, and it knocks them off balance. Your attack
     is eased by two steps, and the foe, if struck, takes normal damage
     but is dazed so that their tasks are hindered for the next round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 4

@@ -11,7 +11,7 @@ description:
     or when it takes actions. The companion acts on your turn. If
     your companion dies, you can hunt in the wild for 1d6 days to
     find a new one.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

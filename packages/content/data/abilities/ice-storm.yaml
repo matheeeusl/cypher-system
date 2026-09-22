@@ -8,7 +8,7 @@ description:
     Burst attack, and if successful, you blind foes for up to one
     minute with a layer of freezing ice. All tasks of blinded
     creatures are hindered by two steps.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

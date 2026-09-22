@@ -19,7 +19,7 @@ description:
     for one hour. If you did not kill and eat at least one
     substantial creature while in beast form, the penalty increases
     to -2 and affects all your rolls for the next day.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

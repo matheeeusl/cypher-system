@@ -29,7 +29,7 @@ description:
     ability, moving a large object, and so on. If this occurs, you can
     regain the remaining invisibility effect by taking an action to
     focus on hiding your position.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source gives the "Invisible" sub-effect its own trailing
   # "Action to initiate." tag, distinct from the ability's own leading
   # "Action to initiate." — both are the same standard tag here, so no

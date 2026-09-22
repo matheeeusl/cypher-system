@@ -12,7 +12,7 @@ description:
     during the execution of that plan within the next 24 hours. The
     plan of action must be something concrete and executable in order
     to gain this benefit.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to initiate, ten minutes to complete."
 cost:
   pool: intellect

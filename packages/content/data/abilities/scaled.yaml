@@ -7,7 +7,7 @@ description:
     For one hour, your skin grows subtle, supple scales in vulnerable
     places, granting you +1 to Armor if you do not wear physical
     armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "1+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Speed point here, flagged for schema review (same

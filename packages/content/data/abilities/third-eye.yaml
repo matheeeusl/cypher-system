@@ -10,7 +10,7 @@ description:
     eye, you see through your sensor instead of your eyes using your
     normal visual abilities. You may perceive the area around your
     body using your other senses as normal.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

@@ -11,7 +11,7 @@ description:
     to use Effort to affect more targets; each level of Effort affects
     one additional target. You must speak to additional targets to
     accelerate them, one target per round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here (same approximation used for

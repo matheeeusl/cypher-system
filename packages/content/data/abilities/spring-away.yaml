@@ -7,7 +7,7 @@ description:
     Whenever you succeed on a Speed defense roll, you can immediately
     move up to a short distance. You cannot use this ability more
     than once in a given round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 5

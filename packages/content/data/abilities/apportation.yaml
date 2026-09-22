@@ -12,7 +12,7 @@ description:
     being a piece of standard equipment, and a 40 percent chance of
     being a bit of worthless junk. You can't use this ability to take
     an item held by another creature.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

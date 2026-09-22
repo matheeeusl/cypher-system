@@ -4,7 +4,7 @@ name:
   pt-BR: Iluminado
 description:
   en: You are trained in any perception task that involves sight.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

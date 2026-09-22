@@ -11,7 +11,7 @@ description:
     or other ranged weapon that fires physical rounds, you can
     instead "nail" the disarmed weapon to a nearby object or
     structure. Choosing to do either of these hinders your attack.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 3

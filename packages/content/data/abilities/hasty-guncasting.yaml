@@ -4,7 +4,7 @@ name:
   pt-BR: Feitiçaria de Armas Apressada
 description:
   en: You can make two gun attacks as a single action; one is a spell (using Spell Bullet) and the other is a normal gunshot. You can make these attacks in either order, but the second one is hindered by two steps.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

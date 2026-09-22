@@ -11,7 +11,7 @@ description:
     ability) in the same way. You must touch the creature you want to
     heal, unless you have the Drain at a Distance ability, in which
     case they can be up to a short distance away.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

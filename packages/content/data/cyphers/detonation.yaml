@@ -1,8 +1,8 @@
 id: detonation
-name: { en: "Detonation", "pt-BR": "Tradução em breve." }
+name: { en: 'Detonation', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 386"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 386'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Projects a small physical explosive up to a long distance away that explodes in an immediate radius,
@@ -11,17 +11,17 @@ effect_text:
   pt-BR: >-
     Tradução em breve.
 effect_table:
-  label: { en: "Detonation Effects", "pt-BR": "Tradução em breve." }
+  label: { en: 'Detonation Effects', 'pt-BR': 'Tradução em breve.' }
   entries:
-    - range: "01–10"
-      text: { en: "Cell-disrupting (harms only flesh)", "pt-BR": "Tradução em breve." }
-    - range: "11–30"
-      text: { en: "Corrosive", "pt-BR": "Tradução em breve." }
-    - range: "31–40"
-      text: { en: "Electrical discharge", "pt-BR": "Tradução em breve." }
-    - range: "41–50"
-      text: { en: "Heat drain (cold)", "pt-BR": "Tradução em breve." }
-    - range: "51–75"
-      text: { en: "Fire", "pt-BR": "Tradução em breve." }
-    - range: "76–00"
-      text: { en: "Shrapnel", "pt-BR": "Tradução em breve." }
+    - range: '01–10'
+      text: { en: 'Cell-disrupting (harms only flesh)', 'pt-BR': 'Tradução em breve.' }
+    - range: '11–30'
+      text: { en: 'Corrosive', 'pt-BR': 'Tradução em breve.' }
+    - range: '31–40'
+      text: { en: 'Electrical discharge', 'pt-BR': 'Tradução em breve.' }
+    - range: '41–50'
+      text: { en: 'Heat drain (cold)', 'pt-BR': 'Tradução em breve.' }
+    - range: '51–75'
+      text: { en: 'Fire', 'pt-BR': 'Tradução em breve.' }
+    - range: '76–00'
+      text: { en: 'Shrapnel', 'pt-BR': 'Tradução em breve.' }

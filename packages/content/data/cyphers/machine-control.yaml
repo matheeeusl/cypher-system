@@ -1,8 +1,8 @@
 id: machine-control
-name: { en: "Machine control", "pt-BR": "Tradução em breve." }
+name: { en: 'Machine control', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 392"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 392'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Splits into two pieces; one is affixed to a device and the other to a

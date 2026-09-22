@@ -12,7 +12,7 @@ description:
     illumination, or visibility. Further, you inflict 1 additional
     point of damage with the attack. You can remain on overwatch as
     long as you wish, within reason.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

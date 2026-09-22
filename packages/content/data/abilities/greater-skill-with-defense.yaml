@@ -9,7 +9,7 @@ description:
     defense tasks of that type, or specialized if you are already
     trained. You can select this ability up to three times. Each time
     you select it, you must choose a different type of defense task.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

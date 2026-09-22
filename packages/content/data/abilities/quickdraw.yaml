@@ -11,7 +11,7 @@ description:
     allow your allies to act with surprise, only you. You have an
     asset on the attack. On a successful hit, you inflict 2 additional
     points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

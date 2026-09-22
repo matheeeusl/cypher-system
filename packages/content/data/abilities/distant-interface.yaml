@@ -11,7 +11,7 @@ description:
     To use this ability, you must understand the function of the
     machine, it must be your size or smaller, and it can't be
     connected to another intelligence (or be intelligent itself).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

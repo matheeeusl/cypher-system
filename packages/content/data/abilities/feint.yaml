@@ -9,7 +9,7 @@ description:
     defenses. Make a melee attack roll against that opponent. You gain
     an asset on this attack. If your attack is successful, it inflicts
     4 additional points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 2

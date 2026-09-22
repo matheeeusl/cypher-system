@@ -12,7 +12,7 @@ description:
     can instead use Tap Currents to add 3 points to your Siphon Pool.
     (This use of this ability is not limited to one use per ten-hour
     recovery roll.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: action_to_initiate
 sources:

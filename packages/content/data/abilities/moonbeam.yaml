@@ -13,7 +13,7 @@ description:
     spell. You automatically know if the struck creature is a
     shapechanger (such as a werewolf), although this doesn't tell you
     what kind of shapechanger they are or what their true form is.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "1+ Intellect point" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Intellect point here, flagged for schema review (same

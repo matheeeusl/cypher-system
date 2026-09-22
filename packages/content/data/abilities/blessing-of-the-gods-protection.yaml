@@ -9,7 +9,7 @@ description:
     defense rolls for you and all creatures you designate within the
     bubble are eased, and no noise, regardless of its origin, sounds
     louder than a normal speaking voice.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source grants this ability "at the GM's discretion" alongside
   # Blessing of the Gods (Death) at Tier 1 — a conditional second grant
   # rather than an automatic one, which the schema's plain `granted`

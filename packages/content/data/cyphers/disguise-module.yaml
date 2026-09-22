@@ -1,8 +1,8 @@
 id: disguise-module
-name: { en: "Disguise module", "pt-BR": "Tradução em breve." }
+name: { en: 'Disguise module', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 388"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 388'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     For the next ten minutes per cypher level, the user's features become almost identical to those of

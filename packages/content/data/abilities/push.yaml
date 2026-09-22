@@ -10,7 +10,7 @@ description:
     must be within short range. The push is quick, and the force is too
     crude to be manipulated. For example, you can't use this ability to
     pull a lever or close a door.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

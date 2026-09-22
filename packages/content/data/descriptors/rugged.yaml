@@ -13,7 +13,13 @@ description:
 pool_bonus: []
 characteristics: []
 skill_training:
-  - skill_id: climbing-jumping-running-swimming
+  - skill_id: climbing
+    choice_count: null
+  - skill_id: jumping
+    choice_count: null
+  - skill_id: running
+    choice_count: null
+  - skill_id: swimming
     choice_count: null
   - skill_id: handling-animals
     choice_count: null

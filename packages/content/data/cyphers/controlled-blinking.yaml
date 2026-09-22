@@ -1,8 +1,8 @@
 id: controlled-blinking
-name: { en: "Controlled blinking", "pt-BR": "Tradução em breve." }
+name: { en: 'Controlled blinking', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 386"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 386'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     For the next day, each time the user is struck hard enough to inflict damage (but no more than once per round),

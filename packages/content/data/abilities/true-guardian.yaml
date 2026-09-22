@@ -7,7 +7,7 @@ description:
     When you stand guard as your action, allies within immediate
     range of you gain an asset to their defense tasks. This lasts
     until the end of your next turn.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is a choice-of-pool, "2 Might or Intellect
   # points" — the schema's single `pool` field can't represent that.
   # Recorded as Might (first-listed option), same approximation used

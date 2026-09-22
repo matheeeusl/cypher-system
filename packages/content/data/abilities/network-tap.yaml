@@ -10,7 +10,7 @@ description:
     failed roll, feedback or perhaps some defense from the network
     you're accessing inflicts 4 points of Intellect damage on you
     (ignores Armor).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

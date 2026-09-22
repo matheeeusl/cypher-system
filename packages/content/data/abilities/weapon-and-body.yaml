@@ -11,7 +11,7 @@ description:
     remain limited by the amount of Effort you can apply on one action.
     Anything that modifies your attack or damage applies to both
     attacks, unless it is tied specifically to your weapon.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 5

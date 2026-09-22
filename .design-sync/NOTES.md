@@ -10,6 +10,7 @@
 ## Button redesign (this sync, at user's request)
 
 User flagged the existing `Button.tsx` as "outdated" vs. button styles established across mockups in their separate Claude Design project ("Cypher System design system", a `PROJECT_TYPE_PROJECT`, not the design-system-type project this sync targets). Derived the pattern from two concrete examples (Auth.dc.html's submit button, and the mode/lang-toggle buttons repeated across screens):
+
 - Primary: `bg-accent text-bg text-[13px] font-semibold`
 - Ghost/secondary: `border border-border bg-panel text-text-muted text-[11px]`
 - Both: `font-mono` (extends IBM Plex Mono's documented use from "stat blocks" to all buttons/UI chrome — CLAUDE.md updated)

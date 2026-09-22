@@ -12,6 +12,7 @@ Next.js 16, App Router. Depends on `@cypher/ui` for components/tokens and (as th
 ## Supabase (planned)
 
 Supabase (auth + Postgres + RLS) isn't wired up yet. When it lands:
+
 - Use the `@supabase/ssr` package with separate client helpers for Server Components/Actions vs. the browser — never share one client across both.
 - Treat Row Level Security as the actual authorization boundary; don't reimplement ownership checks in application code that RLS should already enforce.
 - Keep Supabase client construction in one place (e.g. `lib/supabase/`) rather than instantiating clients inline in routes/components.

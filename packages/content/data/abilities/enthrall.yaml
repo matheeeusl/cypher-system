@@ -9,7 +9,7 @@ description:
     but speak (you can't even move), the other creature takes no
     actions other than to defend itself, even over multiple rounds. If
     the creature is attacked, the effect ends.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

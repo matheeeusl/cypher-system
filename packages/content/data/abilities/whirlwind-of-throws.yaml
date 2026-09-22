@@ -9,7 +9,7 @@ description:
     attack every creature in an immediate area within short range.
     You must make attack rolls against each target. Each attack is
     hindered. You inflict 3 points of damage on targets you hit.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 5

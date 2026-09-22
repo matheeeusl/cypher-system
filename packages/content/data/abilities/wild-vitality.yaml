@@ -12,7 +12,7 @@ description:
     (including attacks and defenses), +2 to your Might Edge and Speed
     Edge, and 2 additional points of damage on all successful melee
     attacks.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

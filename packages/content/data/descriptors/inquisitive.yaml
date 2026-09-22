@@ -26,7 +26,9 @@ characteristics: []
 skill_training:
   - skill_id: learning-new-things
     choice_count: null
-  - skill_id: geography-and-history
+  - skill_id: geography
+    choice_count: null
+  - skill_id: history
     choice_count: null
 inabilities:
   - en: >-

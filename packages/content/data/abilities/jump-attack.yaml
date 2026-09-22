@@ -13,7 +13,7 @@ description:
     options for using Effort, you can choose to use Effort to enhance
     your jump; each level of Effort used in this way adds +2 feet to
     the height and +1 damage to the attack.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

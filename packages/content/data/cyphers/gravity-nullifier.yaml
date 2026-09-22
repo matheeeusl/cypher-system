@@ -1,8 +1,8 @@
 id: gravity-nullifier
-name: { en: "Gravity nullifier", "pt-BR": "Tradução em breve." }
+name: { en: 'Gravity nullifier', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 390"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 390'
+level_range: '1d6 + 3'
 effect_text:
   en: >-
     For one hour, the user can float into the air, moving vertically up to a

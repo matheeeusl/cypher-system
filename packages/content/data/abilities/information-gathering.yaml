@@ -11,7 +11,7 @@ description:
     the location of a specific creature or individual, and if they
     are within a mile of you, one or more machines will probably
     provide the answer.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 5

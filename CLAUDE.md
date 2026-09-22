@@ -43,7 +43,7 @@ CI (`.github/workflows/ci.yml`) runs lint → typecheck → format check on PRs.
 
 ## Verifying a change to @cypher/content or @cypher/engine
 
-`pnpm --filter <pkg> <script>` only runs the script in that one package — it does **not** rebuild that package's workspace dependencies first. After editing `@cypher/content` or `@cypher/engine`, a bare `pnpm --filter @cypher/graphql-api typecheck` (or `apps/docs`, or `apps/app` once it exists) can pass against a *stale* `dist/` of the upstream package, silently masking a real type error instead of catching it.
+`pnpm --filter <pkg> <script>` only runs the script in that one package — it does **not** rebuild that package's workspace dependencies first. After editing `@cypher/content` or `@cypher/engine`, a bare `pnpm --filter @cypher/graphql-api typecheck` (or `apps/docs`, or `apps/app` once it exists) can pass against a _stale_ `dist/` of the upstream package, silently masking a real type error instead of catching it.
 
 Use the `...` suffix instead — `pnpm --filter "@cypher/graphql-api..." build` (quote it; an unquoted `...` can glob-expand in some shells) — which pulls in that package's workspace dependencies too and runs them in topological order, so `@cypher/content`/`@cypher/engine` are rebuilt before the downstream package is type-checked or tested against them. Do this for any downstream-package verification after a content/engine change, not just a plain `--filter <pkg>`.
 
@@ -58,16 +58,16 @@ Dark-first, teal/graphite, utilitarian.
 
 Fonts: Space Grotesk (headers/display), Inter (body), IBM Plex Mono (stat blocks, buttons/UI chrome).
 
-| Token | Dark | Light |
-|---|---|---|
-| bg | `#14181C` | `#F2F4F4` |
-| panel | `#232B31` | `#F7F8F8` |
-| text | `#D8E3E7` | `#1A2226` |
-| text-muted | `#7C8A90` | `#5B6A70` |
-| accent | `#4FB8B0` | `#0F6E56` |
+| Token       | Dark                    | Light     |
+| ----------- | ----------------------- | --------- |
+| bg          | `#14181C`               | `#F2F4F4` |
+| panel       | `#232B31`               | `#F7F8F8` |
+| text        | `#D8E3E7`               | `#1A2226` |
+| text-muted  | `#7C8A90`               | `#5B6A70` |
+| accent      | `#4FB8B0`               | `#0F6E56` |
 | accent-soft | `rgba(79,184,176,0.12)` | `#DCEEEA` |
-| warning | `#C97B4A` | `#A85A2E` |
-| border | `#2B333A` | `#D7DBDC` |
+| warning     | `#C97B4A`               | `#A85A2E` |
+| border      | `#2B333A`               | `#D7DBDC` |
 
 ## TypeScript
 

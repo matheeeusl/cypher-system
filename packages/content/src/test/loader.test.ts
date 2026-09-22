@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
-import { getAllTypes, getTypeById, getAllAbilities, loadEntities } from '../loader.js'
+import {
+  getAllDescriptors,
+  getAllTypes,
+  getTypeById,
+  getAllAbilities,
+  getSkillById,
+  loadEntities,
+} from '../loader.js'
 import { AbilitySchema } from '../schemas/ability.js'
 
 describe('loader', () => {
@@ -31,6 +38,26 @@ describe('loader', () => {
       speaker: [4, 2, 3, 2, 3, 2],
       warrior: [4, 2, 3, 2, 3, 2],
     })
+  })
+
+  // The loader doesn't cross-check ids between categories, so a typo (or a
+  // Skill that was never added) would otherwise only show up as a raw id on
+  // the docs site. Reporting every dangling reference at once makes a bad
+  // edit obvious in one run. See SKILLS-TRACKING.md for the history.
+  it('resolves every skill id referenced by a Descriptor or Type to a registered Skill', () => {
+    const dangling = [
+      ...getAllDescriptors().flatMap((d) =>
+        d.skill_training
+          .filter((entry) => entry.skill_id !== null && !getSkillById(entry.skill_id))
+          .map((entry) => `descriptor "${d.id}" -> "${entry.skill_id}"`),
+      ),
+      ...getAllTypes().flatMap((t) =>
+        t.starting_skills
+          .filter((id) => !getSkillById(id))
+          .map((id) => `type "${t.id}" -> "${id}"`),
+      ),
+    ]
+    expect(dangling).toEqual([])
   })
 
   it('attaches a non-empty, deterministic content_version to every entity', () => {

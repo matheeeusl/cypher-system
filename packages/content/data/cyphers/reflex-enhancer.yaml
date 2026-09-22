@@ -1,8 +1,8 @@
 id: reflex-enhancer
-name: { en: "Reflex enhancer", "pt-BR": "Tradução em breve." }
+name: { en: 'Reflex enhancer', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 395"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 395'
+level_range: '1d6'
 effect_text:
   en: >-
     All tasks involving manual dexterity—such as pickpocketing, lockpicking,

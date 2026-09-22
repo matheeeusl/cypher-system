@@ -1,8 +1,8 @@
 id: tracer
-name: { en: "Tracer", "pt-BR": "Tradução em breve." }
+name: { en: 'Tracer', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 399"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 399'
+level_range: '1d6'
 effect_text:
   en: >-
     Fires a microscopic tracer that clings to any surface within short range.

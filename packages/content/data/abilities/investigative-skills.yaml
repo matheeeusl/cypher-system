@@ -9,7 +9,7 @@ description:
     assessing danger, or tinkering with devices. You can select this
     ability multiple times. Each time you select it, you must choose
     two different skills.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

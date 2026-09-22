@@ -1,8 +1,8 @@
 id: subdual-field
-name: { en: "Subdual field", "pt-BR": "Tradução em breve." }
+name: { en: 'Subdual field', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 398"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 398'
+level_range: '1d6 + 3'
 effect_text:
   en: >-
     Two rounds after being activated, the device creates an invisible field

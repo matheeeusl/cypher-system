@@ -14,7 +14,7 @@ description:
     whose level is 1 higher. When first restored to life, a creature
     is dazed for at least a day, and all tasks they attempt are
     hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "9+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 9 Intellect points here, flagged for schema review

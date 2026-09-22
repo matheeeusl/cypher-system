@@ -10,7 +10,7 @@ description:
     automatically fill your Siphon Pool to its safe limit. You can't
     refill your Siphon Pool this way again until after your next
     ten-hour recovery roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

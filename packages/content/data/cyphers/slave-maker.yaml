@@ -1,8 +1,8 @@
 id: slave-maker
-name: { en: "Slave maker", "pt-BR": "Tradução em breve." }
+name: { en: 'Slave maker', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 397"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 397'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     To activate the cypher, the user must succeed on a melee attack against a

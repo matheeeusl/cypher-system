@@ -8,7 +8,7 @@ description:
     Effort on the attack, you get a free level of Effort on the damage.
     (If fighting unarmed, this attack is made with both fists or both
     feet together.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 2

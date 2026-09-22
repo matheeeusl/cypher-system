@@ -12,7 +12,7 @@ description:
     harmful effects, if a poison paralyzes its victims for one minute,
     you are paralyzed for thirty seconds. The minimum duration is
     always one round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

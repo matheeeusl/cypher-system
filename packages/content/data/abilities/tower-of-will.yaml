@@ -4,7 +4,7 @@ name:
   pt-BR: Torre de Vontade
 description:
   en: You are trained in Intellect defense tasks and gain +3 points to your Intellect Pool.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

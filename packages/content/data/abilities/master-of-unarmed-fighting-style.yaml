@@ -7,7 +7,7 @@ description:
     You are specialized in unarmed attacks. If you are already
     specialized in unarmed attacks, you instead deal 2 additional
     points of damage with unarmed attacks.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

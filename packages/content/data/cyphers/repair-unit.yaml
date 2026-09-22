@@ -1,8 +1,8 @@
 id: repair-unit
-name: { en: "Repair unit", "pt-BR": "Tradução em breve." }
+name: { en: 'Repair unit', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 396"
-level_range: "1d10"
+page_ref: 'Cypher System Rulebook, page 396'
+level_range: '1d10'
 effect_text:
   en: >-
     The cypher becomes a multiarmed sphere that floats. It repairs one

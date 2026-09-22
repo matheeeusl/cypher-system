@@ -7,7 +7,7 @@ description:
     You are trained in the basics of magic (including the operation of
     magic artifacts and cyphers) and can attempt to understand and
     identify its properties.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

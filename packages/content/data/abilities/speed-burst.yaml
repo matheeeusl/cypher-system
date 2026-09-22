@@ -7,7 +7,7 @@ description:
     You can take two separate actions in this round. In the following
     round, all actions are hindered. You cannot use this ability two
     rounds in a row.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 4

@@ -21,7 +21,7 @@ description:
     gas. In the third, you might suspect that the creature is not
     very intelligent, but scans, like looks, can be deceiving. Many
     materials and energy fields prevent or resist scanning.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

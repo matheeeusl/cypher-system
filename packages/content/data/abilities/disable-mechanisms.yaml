@@ -19,7 +19,7 @@ description:
 
     You must touch the robot or machine to disrupt it (if you are
     making an attack, it inflicts no damage).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 3

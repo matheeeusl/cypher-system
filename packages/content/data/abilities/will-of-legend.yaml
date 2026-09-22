@@ -4,7 +4,7 @@ name:
   pt-BR: Vontade Lendária
 description:
   en: You are immune to attacks that would captivate, mesmerize, charm, or otherwise influence your mind.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

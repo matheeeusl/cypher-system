@@ -1,8 +1,8 @@
 id: repel
-name: { en: "Repel", "pt-BR": "Tradução em breve." }
+name: { en: 'Repel', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 396"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 396'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     One NPC within immediate range who is of a level lower than the cypher

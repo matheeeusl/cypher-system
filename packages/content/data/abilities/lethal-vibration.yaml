@@ -14,7 +14,7 @@ description:
     affect a more powerful target (one level of Effort means a target
     of up to level 3 explodes and a target of level 4 or higher takes
     damage and is stunned, and so on).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: might
   amount: 7

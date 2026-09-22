@@ -9,7 +9,7 @@ description:
     one hour. They crawl over your body or fly around you in a
     cloud. During this time, your Speed defense tasks are eased, and
     you gain +1 to Armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

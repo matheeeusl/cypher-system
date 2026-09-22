@@ -13,7 +13,7 @@ description:
     creatures in the area take 3 points of damage due to debris on
     the wind. Attempts to damage objects or structures with your
     tornado are eased by two steps.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 7

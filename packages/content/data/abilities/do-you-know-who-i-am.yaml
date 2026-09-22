@@ -9,7 +9,7 @@ description:
     so forcefully that it is unable to take any action, including
     making attacks, for one round. Whether you succeed or fail, the
     next action the target takes after your attempt is hindered.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

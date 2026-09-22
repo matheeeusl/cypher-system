@@ -10,7 +10,7 @@ description:
     ability is a difficulty 3 Intellect task. Each additional time you
     use this ability, the task is hindered by an additional step. The
     difficulty returns to 3 after you rest for ten hours.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

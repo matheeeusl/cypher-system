@@ -10,7 +10,7 @@ description:
     have gained resistance over time, you are trained in resisting the
     effects of natural poisons (such as those from plants or living
     creatures). You're also immune to natural diseases.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

@@ -7,7 +7,7 @@ description:
     For the next ten minutes, you gain an asset on tasks that depend
     on brute force, such as moving a heavy object, smashing down a
     door, or hitting someone with a melee weapon.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

@@ -4,7 +4,7 @@ name:
   pt-BR: Fuga em Vez de Luta
 description:
   en: If you use your action only to move, all Speed defense tasks are eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

@@ -23,7 +23,7 @@ description:
 
     - You can shoot a strap holding a backpack, armor, or a similarly
     strapped on item so that it falls off.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: a "menu ability" — the schema's single `action_type` field
   # records the baseline value; all 5 sub-effects here share the same
   # "Enabler" tag, so no per-sub-option variance (unlike drone-upgrade/

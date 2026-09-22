@@ -10,7 +10,7 @@ description:
     the same shot, 2 more points are deducted from the total damage,
     until the wildly ricocheting shot finally hits its target or the
     damage amount goes to 0.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

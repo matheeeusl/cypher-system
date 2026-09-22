@@ -18,7 +18,10 @@ describe('content queries', () => {
           groupRole: LocalizedStringPayload
           societalRole: LocalizedStringPayload
         }
-        playerIntrusions: Array<{ name: LocalizedStringPayload; description: LocalizedStringPayload }>
+        playerIntrusions: Array<{
+          name: LocalizedStringPayload
+          description: LocalizedStringPayload
+        }>
         startingPools: { might: number; speed: number; intellect: number }
         startingEdge: { statChoices: string[]; amount: number }
         weaponProficiency: { practiced: string[]; inability: string[] }
@@ -114,8 +117,8 @@ describe('content queries', () => {
       },
     })
 
-    expect(result.data.type?.tierAbilities).toHaveLength(1)
-    expect(result.data.type?.tierAbilities[0]).toMatchObject({ tier: 1 })
+    // Warrior has ability lists for all 6 tiers, ordered by tier.
+    expect(result.data.type?.tierAbilities.map((t) => t.tier)).toEqual([1, 2, 3, 4, 5, 6])
     for (const abilityId of ['bash', 'overwatch', 'swipe']) {
       expect(result.data.type?.tierAbilities[0]?.abilityIds).toContain(abilityId)
     }
@@ -150,7 +153,10 @@ describe('content queries', () => {
       descriptor: {
         id: string
         poolBonus: Array<{ stat: string; amount: number }>
-        characteristics: Array<{ name: LocalizedStringPayload; description: LocalizedStringPayload }>
+        characteristics: Array<{
+          name: LocalizedStringPayload
+          description: LocalizedStringPayload
+        }>
         skillTraining: Array<{ skillId: string | null; choiceCount: number | null }>
         inabilities: LocalizedStringPayload[]
         additionalEquipment: LocalizedStringPayload | null
@@ -191,7 +197,7 @@ describe('content queries', () => {
       },
       connectionOptions: [
         {
-          en: "Against your better judgment, you joined the other PCs because you saw that they were in danger.",
+          en: 'Against your better judgment, you joined the other PCs because you saw that they were in danger.',
           ptBR: 'Contra seu melhor julgamento, você se juntou aos outros PJs porque viu que estavam em perigo.',
         },
         {
@@ -258,9 +264,7 @@ describe('content queries', () => {
       },
       {
         tier: 3,
-        entries: [
-          { __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'] },
-        ],
+        entries: [{ __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'] }],
       },
       {
         tier: 4,
@@ -521,13 +525,11 @@ describe('content queries', () => {
       name: { en: 'Mind Imager', ptBR: 'Projetor Mental' },
       form: {
         en: 'Handheld device with a plastic panel screen and wires that must be affixed to the head of a creature.',
-        ptBR:
-          'Dispositivo portátil com uma tela de painel plástico e fios que devem ser afixados na cabeça de uma criatura.',
+        ptBR: 'Dispositivo portátil com uma tela de painel plástico e fios que devem ser afixados na cabeça de uma criatura.',
       },
       effectText: {
         en: 'This device shows a visual image of what a creature is thinking. The affected creature need not be conscious.',
-        ptBR:
-          'Este dispositivo mostra uma imagem visual do que uma criatura está pensando. A criatura afetada não precisa estar consciente.',
+        ptBR: 'Este dispositivo mostra uma imagem visual do que uma criatura está pensando. A criatura afetada não precisa estar consciente.',
       },
       effectTable: null,
       flavorQuote: null,

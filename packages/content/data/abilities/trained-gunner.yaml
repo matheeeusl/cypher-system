@@ -13,7 +13,7 @@ description:
     of ammo (or all the ammo in the weapon, if it has less than the
     number rolled). The attack roll is eased. If the attack is
     successful, it deals 1 less point of damage than normal.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Enabler (being trained in using guns) or action
   # (Spray)." — a genuinely dual-mode tag, one mode per sub-benefit.
   # The Spray sub-benefit here duplicates the

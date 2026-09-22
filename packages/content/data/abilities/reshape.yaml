@@ -15,7 +15,7 @@ description:
     repair a chain. With multiple uses of this ability, you could
     bring about large changes, making a bridge, a wall, or a similar
     structure.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 5

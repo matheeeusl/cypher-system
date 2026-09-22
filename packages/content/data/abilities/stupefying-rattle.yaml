@@ -9,7 +9,7 @@ description:
     otherwise hit you if you succeed on a difficulty 2 Speed task.
     When you do, the misdirected attack hits another creature you
     choose within immediate range of both you and the attacking foe.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 4

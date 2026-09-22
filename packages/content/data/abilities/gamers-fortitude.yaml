@@ -11,7 +11,7 @@ description:
     round. For example, you could transfer 3 points of Might to Speed
     and 2 points of Intellect to Speed, which would take a total of
     five rounds.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: action
 sources:

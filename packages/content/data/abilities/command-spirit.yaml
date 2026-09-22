@@ -8,7 +8,7 @@ description:
     5 within short range. If you are successful, the target cannot
     attack you for one minute, during which time it follows your
     verbal commands if it can hear and understand you.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

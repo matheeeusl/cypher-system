@@ -8,7 +8,7 @@ description:
     on that same turn against a new foe within your reach. The second
     attack is part of the same action. You can use this ability with
     melee attacks and ranged attacks.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: speed
   amount: 2

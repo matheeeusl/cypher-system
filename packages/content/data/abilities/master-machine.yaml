@@ -12,7 +12,7 @@ description:
     machine to create the bond, but afterward, there is no range
     limitation. This bond lasts for one week. You can bond with only
     one machine at a time.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 8

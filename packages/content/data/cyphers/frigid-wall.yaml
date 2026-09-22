@@ -1,8 +1,8 @@
 id: frigid-wall
-name: { en: "Frigid wall", "pt-BR": "Tradução em breve." }
+name: { en: 'Frigid wall', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 389"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 389'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Creates a wall of supercooled air up to 30 feet by 30 feet by 1 foot (9 m

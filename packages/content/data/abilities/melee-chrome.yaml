@@ -4,7 +4,7 @@ name:
   pt-BR: Cromado de Combate
 description:
   en: Your machine parts grant you +1 to Armor, +1 to your Might Pool, and +1 to your Speed Pool.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

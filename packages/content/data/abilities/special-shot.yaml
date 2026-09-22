@@ -17,7 +17,7 @@ description:
 
     - You can shoot a strap holding a backpack, armor, or a similarly
     strapped-on item so that it falls off.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

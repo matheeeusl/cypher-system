@@ -1,8 +1,8 @@
 id: effort-enhancer-combat
-name: { en: "Effort enhancer (combat)", "pt-BR": "Tradução em breve." }
+name: { en: 'Effort enhancer (combat)', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 388"
-level_range: "1d6 + 1"
+page_ref: 'Cypher System Rulebook, page 388'
+level_range: '1d6 + 1'
 effect_text:
   en: >-
     For the next hour, the user can apply one free level of Effort to any task

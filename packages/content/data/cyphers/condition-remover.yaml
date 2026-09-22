@@ -1,49 +1,53 @@
 id: condition-remover
-name: { en: "Condition remover", "pt-BR": "Tradução em breve." }
+name: { en: 'Condition remover', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 385"
-level_range: "1d6 + 3"
-effect_text: { en: "Cures one occurrence of one specific health condition of the cypher level or lower. It does not prevent the possibility of future occurrences of the same condition. Roll a d20 to determine what it cures.", "pt-BR": "Tradução em breve." }
+page_ref: 'Cypher System Rulebook, page 385'
+level_range: '1d6 + 3'
+effect_text:
+  {
+    en: 'Cures one occurrence of one specific health condition of the cypher level or lower. It does not prevent the possibility of future occurrences of the same condition. Roll a d20 to determine what it cures.',
+    'pt-BR': 'Tradução em breve.',
+  }
 effect_table:
-  label: { en: "Condition Remover Effects", "pt-BR": "Tradução em breve." }
+  label: { en: 'Condition Remover Effects', 'pt-BR': 'Tradução em breve.' }
   entries:
-  - range: "1"
-    text: { en: "Addiction to one substance", "pt-BR": "Tradução em breve." }
-  - range: "2"
-    text: { en: "Autoimmune disease", "pt-BR": "Tradução em breve." }
-  - range: "3"
-    text: { en: "Bacterial infection", "pt-BR": "Tradução em breve." }
-  - range: "4"
-    text: { en: "Bad breath", "pt-BR": "Tradução em breve." }
-  - range: "5"
-    text: { en: "Blisters", "pt-BR": "Tradução  em breve." }
-  - range: "6"
-    text: { en: "Bloating", "pt-BR": "Tradução em breve." }
-  - range: "7"
-    text: { en: "Cancer", "pt-BR": "Tradução em breve." }
-  - range: "8"
-    text: { en: "Chapped lips", "pt-BR": "Tradução em breve." }
-  - range: "9"
-    text: { en: "Flatus", "pt-BR": "Tradução em breve." }
-  - range: "10"
-    text: { en: "Hangover", "pt-BR": "Tradução em breve." }
-  - range: "11"
-    text: { en: "Heartburn", "pt-BR": "Tradução em breve." }
-  - range: "12"
-    text: { en: "Hiccups", "pt-BR": "Tradução em breve." }
-  - range: "13"
-    text: { en: "Ingrown hairs", "pt-BR": "Tradução em breve." }
-  - range: "14"
-    text: { en: "Insomnia", "pt-BR": "Tradução  em breve." }
-  - range: "15"
-    text: { en: "Joint problem", "pt-BR": "Tradução em breve." }
-  - range: "16"
-    text: { en: "Muscle cramp", "pt-BR": "Tradução em breve." }
-  - range: "17"
-    text: { en: "Pimples", "pt-BR": "Tradução em breve." }
-  - range: "18"
-    text: { en: "Psychosis", "pt-BR": "Tradução em breve." }
-  - range: "19"
-    text: { en: "Stiff neck", "pt-BR": "Tradução em breve." }
-  - range: "20"
-    text: { en: "Viral infection", "pt-BR": "Tradução em breve." }
+    - range: '1'
+      text: { en: 'Addiction to one substance', 'pt-BR': 'Tradução em breve.' }
+    - range: '2'
+      text: { en: 'Autoimmune disease', 'pt-BR': 'Tradução em breve.' }
+    - range: '3'
+      text: { en: 'Bacterial infection', 'pt-BR': 'Tradução em breve.' }
+    - range: '4'
+      text: { en: 'Bad breath', 'pt-BR': 'Tradução em breve.' }
+    - range: '5'
+      text: { en: 'Blisters', 'pt-BR': 'Tradução  em breve.' }
+    - range: '6'
+      text: { en: 'Bloating', 'pt-BR': 'Tradução em breve.' }
+    - range: '7'
+      text: { en: 'Cancer', 'pt-BR': 'Tradução em breve.' }
+    - range: '8'
+      text: { en: 'Chapped lips', 'pt-BR': 'Tradução em breve.' }
+    - range: '9'
+      text: { en: 'Flatus', 'pt-BR': 'Tradução em breve.' }
+    - range: '10'
+      text: { en: 'Hangover', 'pt-BR': 'Tradução em breve.' }
+    - range: '11'
+      text: { en: 'Heartburn', 'pt-BR': 'Tradução em breve.' }
+    - range: '12'
+      text: { en: 'Hiccups', 'pt-BR': 'Tradução em breve.' }
+    - range: '13'
+      text: { en: 'Ingrown hairs', 'pt-BR': 'Tradução em breve.' }
+    - range: '14'
+      text: { en: 'Insomnia', 'pt-BR': 'Tradução  em breve.' }
+    - range: '15'
+      text: { en: 'Joint problem', 'pt-BR': 'Tradução em breve.' }
+    - range: '16'
+      text: { en: 'Muscle cramp', 'pt-BR': 'Tradução em breve.' }
+    - range: '17'
+      text: { en: 'Pimples', 'pt-BR': 'Tradução em breve.' }
+    - range: '18'
+      text: { en: 'Psychosis', 'pt-BR': 'Tradução em breve.' }
+    - range: '19'
+      text: { en: 'Stiff neck', 'pt-BR': 'Tradução em breve.' }
+    - range: '20'
+      text: { en: 'Viral infection', 'pt-BR': 'Tradução em breve.' }

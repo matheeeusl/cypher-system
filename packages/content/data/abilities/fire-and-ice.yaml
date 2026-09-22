@@ -8,7 +8,7 @@ description:
     very cold (your choice). The target suffers 3 points of ambient
     damage (ignores Armor) each round for up to three rounds, although a
     new roll is required each round to continue to affect the target.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 4

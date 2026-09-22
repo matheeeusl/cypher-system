@@ -3,7 +3,7 @@ name:
   en: Precise Cut
   pt-BR: Corte Preciso
 description:
-  en: You inflict 1 additional point of damage with light weapons. 
+  en: You inflict 1 additional point of damage with light weapons.
   pt-BR: Você causa 1 ponto de dano adicional com armas leves.
 cost: null
 action_type: enabler

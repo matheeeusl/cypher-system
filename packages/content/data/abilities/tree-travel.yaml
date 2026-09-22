@@ -15,7 +15,7 @@ description:
     long, two levels raise it to one mile (1.5 km), and each
     additional level of Effort beyond that increases it by an
     additional mile.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "4+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 4 Intellect points here, flagged for schema review

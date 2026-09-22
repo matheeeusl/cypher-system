@@ -12,7 +12,7 @@ description:
     number of 9 and 9 health, and it inflicts 3 points of damage. If
     it's killed or destroyed, it takes you one month to find or
     create a suitable replacement.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

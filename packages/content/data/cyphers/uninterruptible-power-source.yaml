@@ -1,8 +1,8 @@
 id: uninterruptible-power-source
-name: { en: "Uninterruptible power source", "pt-BR": "Tradução em breve." }
+name: { en: 'Uninterruptible power source', 'pt-BR': 'Tradução em breve.' }
 category: manifest
-page_ref: "Cypher System Rulebook, page 399"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 399'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     Provides power to another device for up to a day. The device to be powered

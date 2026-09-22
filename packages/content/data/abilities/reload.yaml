@@ -6,7 +6,7 @@ description:
   en: >-
     When using a weapon that normally requires an action to reload,
     you can reload and fire (or fire and reload) in the same action.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: printed as the second of two abilities under Spits Fire and
   # Lead's single "TYPE SWAP OPTION" heading (alongside Cogent Shot) —
   # both are listed in that Focus's `type_swap_option.ability_ids`.

@@ -1,8 +1,8 @@
 id: inferno-wall
-name: { en: "Inferno wall", "pt-BR": "Tradução em breve." }
+name: { en: 'Inferno wall', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 390"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 390'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Creates a wall of extreme heat up to 30 feet by 30 feet by 1 foot (9 m by

@@ -13,7 +13,7 @@ description:
     eased. If you have a similar sort of knockout ability from
     another source (such as your type), the attack is eased by an
     additional step.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

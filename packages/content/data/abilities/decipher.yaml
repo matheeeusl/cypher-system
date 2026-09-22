@@ -8,7 +8,7 @@ description:
     language you do not understand, you can make an Intellect roll of
     difficulty 3 (or higher, based on the complexity of the language or
     code) to get the gist of the message.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

@@ -12,7 +12,10 @@ import {
   AnimalFormMinorAbilitiesTableSchema,
   type AnimalFormMinorAbilitiesTable,
 } from './schemas/animal-form-minor-abilities-table.js'
-import { ArmorCategoryTableSchema, type ArmorCategoryTable } from './schemas/armor-category-table.js'
+import {
+  ArmorCategoryTableSchema,
+  type ArmorCategoryTable,
+} from './schemas/armor-category-table.js'
 import { ArtifactSchema, type Artifact } from './schemas/artifact.js'
 import { CypherSchema, type Cypher } from './schemas/cypher.js'
 import { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'

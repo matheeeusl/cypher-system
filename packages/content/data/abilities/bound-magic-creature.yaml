@@ -26,7 +26,7 @@ description:
     creature is reduced to 0 health, it dissipates. It reforms in its
     object in 1d6 + 2 days. If you lose the bound object, you retain a
     sense of the direction in which it lies.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action to manifest the magic creature."
 cost: null
 action_type: action_to_manifest

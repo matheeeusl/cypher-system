@@ -85,9 +85,7 @@ export function validateCharacterChoices(
     knownAbilities = [...typeAbilities, ...focusAbilities]
   }
 
-  let skills = attempt(() =>
-    applyDescriptorSkills(descriptor, choices.descriptor_skill_choices),
-  )
+  let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))
 
   // Order-sensitive (training the same skill twice moves it further along
   // practiced -> trained -> specialized), so purchases are applied in

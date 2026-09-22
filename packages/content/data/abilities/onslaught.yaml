@@ -12,7 +12,7 @@ description:
     creature within short range. This mindslice inflicts 2 points of
     Intellect damage (ignores Armor). Some creatures without minds (such
     as robots) might be immune to your mindslice.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

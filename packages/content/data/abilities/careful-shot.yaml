@@ -10,7 +10,7 @@ description:
     successful attack, and if you spend a turn lining up your shot,
     each level of Effort instead adds 5 points of damage to a
     successful attack.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

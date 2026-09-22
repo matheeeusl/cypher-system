@@ -42,7 +42,7 @@ characteristics:
         clumsiness normally (awarding XP).
       pt-BR: Tradução em breve.
 skill_training:
-  - skill_id: breaking-things
+  - skill_id: breaking-inanimate-objects
     choice_count: null
 inabilities:
   - en: >-

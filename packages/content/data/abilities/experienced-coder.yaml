@@ -8,7 +8,7 @@ description:
     higher than normal. If given a week and access to a computer, you
     can tinker with app and programmed cyphers, changing their
     function to that of another cypher you had in the past.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

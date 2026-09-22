@@ -7,7 +7,7 @@ description:
     You select an ally within immediate range. If that character
     applies Effort to a task on their next turn, they can apply a free
     level of Effort on that task.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 5

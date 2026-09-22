@@ -1,8 +1,8 @@
 id: spatial-warp
-name: { en: "Spatial warp", "pt-BR": "Tradução em breve." }
+name: { en: 'Spatial warp', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 397"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 397'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     When affixed to a device that affects a single target at range, that range

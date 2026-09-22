@@ -8,7 +8,7 @@ description:
     short range do as you telepathically command for ten minutes.
     Even common insects (level 0) in large enough numbers can swarm
     about a single creature and hinder its tasks.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 2

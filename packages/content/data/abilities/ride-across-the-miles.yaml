@@ -9,7 +9,7 @@ description:
     of Effort, you can attempt to penetrate covered locations that
     you're aware of as long as a route exists from the open air to the
     area you want to reach.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "6+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Speed points here, flagged for schema review (same

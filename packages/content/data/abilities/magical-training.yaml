@@ -4,7 +4,7 @@ name:
   pt-BR: Treinamento Mágico
 description:
   en: You are trained in all of your spells. As a result, you ease any task involved in the use of your spells.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

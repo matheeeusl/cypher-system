@@ -8,7 +8,7 @@ description:
     creature, you inflict 3 points of damage. Alternatively, you can
     use this ability on a weapon, and for ten minutes, it inflicts 1
     additional point of damage from the cold.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source tag is "Action for touch; enabler for weapon." — a
   # genuinely dual-mode tag, also used verbatim by `shock` (Rides the
   # Lightning).

@@ -7,7 +7,7 @@ description:
     Choose one noncombat skill that would be helpful for surviving
     after the apocalypse, such as hunting, tracking, carpentry, or
     stealth. You are trained in that skill.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

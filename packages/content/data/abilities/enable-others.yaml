@@ -9,7 +9,7 @@ description:
     rules, this doesn't require you to use your action helping the
     other character with the task. This requires no action on your
     part.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

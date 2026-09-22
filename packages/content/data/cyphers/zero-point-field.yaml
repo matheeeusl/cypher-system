@@ -3,8 +3,8 @@ name:
   en: Zero Point Field
   pt-BR: Campo de Ponto Zero
 category: fantastic
-page_ref: "Cypher System Rulebook, page 400"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 400'
+level_range: '1d6 + 3'
 effect_text:
   en: >-
     Renders an inanimate object outside the effects of most energy for one

@@ -16,7 +16,7 @@ description:
     and perceive through their senses. (Swarms don't usually have
     game stats, but if needed, a typical swarm is level 2. Only
     attacks that affect a large area affect the swarm.)
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

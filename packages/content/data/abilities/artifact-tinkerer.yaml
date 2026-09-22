@@ -3,10 +3,10 @@ name:
   en: Artifact Tinkerer
   pt-BR: Adaptador de Artefatos
 description:
-  en: >- 
+  en: >-
     If you spend at least one day tinkering with an artifact in your possession, it functions at one level higher than normal.
     This applies to all artifacts in your possession, but they retain this bonus only for you.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

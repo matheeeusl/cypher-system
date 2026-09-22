@@ -2,10 +2,10 @@
 # this cypher): "Some force walls, shields, and cubes are transparent. Others
 # are translucent. A few are opaque."
 id: force-field
-name: { en: "Force field", "pt-BR": "Tradução em breve." }
+name: { en: 'Force field', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 389"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 389'
+level_range: '1d6'
 effect_text:
   en: >-
     For the next day, the user is surrounded by a powerful force field,

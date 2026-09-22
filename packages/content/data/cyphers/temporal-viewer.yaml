@@ -1,8 +1,8 @@
 id: temporal-viewer
-name: { en: "Temporal viewer", "pt-BR": "Tradução em breve." }
+name: { en: 'Temporal viewer', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 399"
-level_range: "1d6 + 4"
+page_ref: 'Cypher System Rulebook, page 399'
+level_range: '1d6 + 4'
 effect_text:
   en: >-
     Displays moving images and sound, up to ten minutes per cypher level in

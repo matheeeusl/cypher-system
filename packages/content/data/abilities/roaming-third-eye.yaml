@@ -8,7 +8,7 @@ description:
     anywhere within long range. In addition, until that ability ends,
     you can use an action to move the sensor anywhere within short
     range of its starting position.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

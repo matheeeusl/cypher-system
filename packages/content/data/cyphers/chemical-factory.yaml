@@ -1,8 +1,8 @@
 id: chemical-factory
-name: { en: "Chemical factory", "pt-BR": "Tradução em breve." }
+name: { en: 'Chemical factory', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 385"
-level_range: "1d6"
+page_ref: 'Cypher System Rulebook, page 385'
+level_range: '1d6'
 effect_text:
   en: >-
     After one hour, the sweat of the user produces 1d6 doses of a valuable
@@ -15,33 +15,45 @@ effect_table:
     en: Chemical Factory Effects
     pt-BR: Tradução em breve.
   entries:
-    - range: "01–04"
+    - range: '01–04'
       text: { en: Euphoric for 1d6 hours, pt-BR: Tradução em breve. }
-    - range: "05–08"
+    - range: '05–08'
       text: { en: Hallucinogenic for 1d6 hours, pt-BR: Tradução em breve. }
-    - range: "09–12"
+    - range: '09–12'
       text: { en: Stimulant for 1d6 hours, pt-BR: Tradução em breve. }
-    - range: "13–16"
+    - range: '13–16'
       text: { en: Depressant for 1d6 hours, pt-BR: Tradução em breve. }
-    - range: "17–20"
+    - range: '17–20'
       text: { en: Nutrient supplement, pt-BR: Tradução em breve. }
-    - range: "21–25"
+    - range: '21–25'
       text: { en: Antivenom, pt-BR: Tradução em breve. }
-    - range: "26–30"
+    - range: '26–30'
       text: { en: Cures disease, pt-BR: Tradução em breve. }
-    - range: "31–35"
+    - range: '31–35'
       text: { en: See in the dark for one hour, pt-BR: Tradução em breve. }
-    - range: "36–45"
-      text: { en: Restores a number of Might Pool points equal to cypher level, pt-BR: Tradução em breve. }
-    - range: "46–55"
-      text: { en: Restores a number of Speed Pool points equal to cypher level, pt-BR: Tradução em breve. }
-    - range: "56–65"
-      text: { en: Restores a number of Intellect Pool points equal to cypher level, pt-BR: Tradução em breve. }
-    - range: "66–75"
+    - range: '36–45'
+      text:
+        {
+          en: Restores a number of Might Pool points equal to cypher level,
+          pt-BR: Tradução em breve.,
+        }
+    - range: '46–55'
+      text:
+        {
+          en: Restores a number of Speed Pool points equal to cypher level,
+          pt-BR: Tradução em breve.,
+        }
+    - range: '56–65'
+      text:
+        {
+          en: Restores a number of Intellect Pool points equal to cypher level,
+          pt-BR: Tradução em breve.,
+        }
+    - range: '66–75'
       text: { en: Increases Might Edge by 1 for one hour, pt-BR: Tradução em breve. }
-    - range: "76–85"
+    - range: '76–85'
       text: { en: Increases Speed Edge by 1 for one hour, pt-BR: Tradução em breve. }
-    - range: "86–95"
+    - range: '86–95'
       text: { en: Increases Intellect Edge by 1 for one hour, pt-BR: Tradução em breve. }
-    - range: "96–00"
+    - range: '96–00'
       text: { en: Restores all Pools to full, pt-BR: Tradução em breve. }

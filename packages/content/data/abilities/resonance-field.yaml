@@ -12,7 +12,7 @@ description:
     If you do so and you get a minor effect, the creature attacking you
     takes 1 point of damage. If you get a major effect, the creature
     attacking you takes 4 points of damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 1

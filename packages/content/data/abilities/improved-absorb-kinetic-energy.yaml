@@ -4,7 +4,7 @@ name:
   pt-BR: Absorver Energia Cinética Aprimorado
 description:
   en: When you use Absorb Kinetic Energy, instead of being able to absorb 1 point of damage from a physical attack or impact, you can absorb 2 points. You can also store up to 2 points of energy from any source. However, you can still release energy only 1 point at a time.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

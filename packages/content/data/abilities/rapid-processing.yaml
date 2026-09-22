@@ -9,7 +9,7 @@ description:
     Speed tasks (including Speed defense rolls) are eased. In addition,
     the target can take one extra action at any time before the
     ability's duration expires.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 6

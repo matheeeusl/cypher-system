@@ -23,7 +23,7 @@ description:
     to any stat Pool. If you are not damaged, you add the points to
     your chosen Pool's maximum. They remain until you spend them, you
     lose them to damage, or an hour passes.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: this ability is a menu of 4 sub-effects the magic ally can
   # produce, all sharing the same action_to_initiate framing (unlike
   # drone-upgrade/moderate-wish, no per-sub-option action_type variance

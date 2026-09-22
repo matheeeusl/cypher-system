@@ -14,7 +14,7 @@ description:
     otherwise descend the final step on the damage track to death, a
     successful defense roll keeps you at 1 point in one Pool, and you
     remain debilitated.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

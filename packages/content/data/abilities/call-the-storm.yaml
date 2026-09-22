@@ -13,7 +13,7 @@ description:
     the cloud to attack a target you can see directly, inflicting 4
     points of damage (you can spend Effort normally on each
     individual lightning bolt attack).
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "7+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Intellect points here, flagged for schema review (same

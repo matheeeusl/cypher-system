@@ -1,8 +1,8 @@
 id: intellect-booster
-name: { en: "Intellect booster", "pt-BR": "Tradução em breve." }
+name: { en: 'Intellect booster', 'pt-BR': 'Tradução em breve.' }
 category: subtle
-page_ref: "Cypher System Rulebook, page 391"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 391'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     Adds 1 to the user's Intellect Edge for one hour (or 2 if the cypher is

@@ -16,7 +16,7 @@ pool_bonus:
     amount: 2
 characteristics: []
 skill_training:
-  - skill_id: lies-and-trickery
+  - skill_id: deception
     choice_count: null
   - skill_id: intellect-defense
     choice_count: null

@@ -13,7 +13,7 @@ description:
     continue to hold it each round as your subsequent actions,
     automatically inflicting 4 points of damage each round by
     squeezing.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

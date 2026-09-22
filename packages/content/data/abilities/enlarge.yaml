@@ -20,7 +20,7 @@ description:
     must apply an additional level of Effort. Thus, the second time
     you use Enlarge, you must apply one level of Effort; the third
     time you use Enlarge, two levels of Effort; and so on.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "1+ Might point" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

@@ -9,7 +9,7 @@ description:
     roll with a difficulty of 1 for every 20 feet (6 m) you fall. On a
     success, you take half damage from the fall. If you reduce the
     difficulty to 0, you take no damage.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

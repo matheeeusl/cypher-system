@@ -4,7 +4,7 @@ name:
   pt-BR: Drenar à Distância
 description:
   en: Your Drain Machine and Drain Creature abilities work on a target within short range.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

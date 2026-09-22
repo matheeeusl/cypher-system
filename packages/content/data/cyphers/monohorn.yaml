@@ -1,8 +1,8 @@
 id: monohorn
-name: { en: "Monohorn", "pt-BR": "Tradução em breve." }
+name: { en: 'Monohorn', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 393"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 393'
+level_range: '1d6 + 3'
 effect_text:
   en: |-
     The user gains a horn in the center of their forehead. The horn is deadly

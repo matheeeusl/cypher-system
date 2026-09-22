@@ -12,7 +12,7 @@ description:
     damage). If you use your action on a subsequent round to fully
     concentrate on the target, their attempts to throw off the effect
     are hindered and they take 4 points of ambient damage that round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 3

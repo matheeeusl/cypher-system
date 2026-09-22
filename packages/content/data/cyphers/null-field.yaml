@@ -1,8 +1,8 @@
 id: null-field
-name: { en: "Null field", "pt-BR": "Tradução em breve." }
+name: { en: 'Null field', 'pt-BR': 'Tradução em breve.' }
 category: fantastic
-page_ref: "Cypher System Rulebook, page 393"
-level_range: "1d6 + 3"
+page_ref: 'Cypher System Rulebook, page 393'
+level_range: '1d6 + 3'
 effect_text:
   en: >-
     The user and all creatures within immediate range gain +3 to Armor (+5 if
@@ -12,24 +12,24 @@ effect_text:
     Tradução em breve.
 effect_table:
   label:
-    en: "Null Field Effects"
-    pt-BR: "Tradução em breve."
+    en: 'Null Field Effects'
+    pt-BR: 'Tradução em breve.'
   entries:
-    - range: "01–12"
-      text: { en: "Fire", "pt-BR": "Tradução em breve." }
-    - range: "13–27"
-      text: { en: "Cold", "pt-BR": "Tradução em breve." }
-    - range: "28–39"
-      text: { en: "Acid", "pt-BR": "Tradução em breve." }
-    - range: "40–52"
-      text: { en: "Psychic", "pt-BR": "Tradução em breve." }
-    - range: "53–65"
-      text: { en: "Sonic", "pt-BR": "Tradução em breve." }
-    - range: "66–72"
-      text: { en: "Electrical", "pt-BR": "Tradução em breve." }
-    - range: "73–84"
-      text: { en: "Poison", "pt-BR": "Tradução em breve." }
-    - range: "85–95"
-      text: { en: "Blunt force", "pt-BR": "Tradução em breve." }
-    - range: "96–00"
-      text: { en: "Slashing and piercing", "pt-BR": "Tradução em breve." }
+    - range: '01–12'
+      text: { en: 'Fire', 'pt-BR': 'Tradução em breve.' }
+    - range: '13–27'
+      text: { en: 'Cold', 'pt-BR': 'Tradução em breve.' }
+    - range: '28–39'
+      text: { en: 'Acid', 'pt-BR': 'Tradução em breve.' }
+    - range: '40–52'
+      text: { en: 'Psychic', 'pt-BR': 'Tradução em breve.' }
+    - range: '53–65'
+      text: { en: 'Sonic', 'pt-BR': 'Tradução em breve.' }
+    - range: '66–72'
+      text: { en: 'Electrical', 'pt-BR': 'Tradução em breve.' }
+    - range: '73–84'
+      text: { en: 'Poison', 'pt-BR': 'Tradução em breve.' }
+    - range: '85–95'
+      text: { en: 'Blunt force', 'pt-BR': 'Tradução em breve.' }
+    - range: '96–00'
+      text: { en: 'Slashing and piercing', 'pt-BR': 'Tradução em breve.' }

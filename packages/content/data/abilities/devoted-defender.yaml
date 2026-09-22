@@ -4,7 +4,7 @@ name:
   pt-BR: Defensor Devotado
 description:
   en: Choose one character you can see. That character becomes your ward. You are trained in all tasks involving finding, healing, interacting with, and protecting that character. You can have only one ward at a time.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "2 Might or Intellect points" — a
   # choice-of-pool cost the schema's single `pool` field can't represent.
   # Recorded as Might (the first-listed option), flagged for schema

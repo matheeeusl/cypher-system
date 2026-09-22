@@ -4,7 +4,7 @@ name:
   pt-BR: Carne de Pedra
 description:
   en: You have +1 to Armor if you do not wear physical armor.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

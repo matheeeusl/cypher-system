@@ -15,7 +15,7 @@ description:
     than half your size. Make an Intellect roll to instantly destroy
     the object; the task is eased by three steps compared to breaking
     it with brute strength.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 5

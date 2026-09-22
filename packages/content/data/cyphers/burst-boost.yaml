@@ -1,10 +1,10 @@
 id: burst-boost
 name:
-  en: "Burst boost"
-  pt-BR: "Ampliação em Rajada"
+  en: 'Burst boost'
+  pt-BR: 'Ampliação em Rajada'
 category: power_boost
-page_ref: "Cypher System Rulebook, page 401"
-level_range: "1d6 + 2"
+page_ref: 'Cypher System Rulebook, page 401'
+level_range: '1d6 + 2'
 effect_text:
   en: >-
     This cypher boosts an ability that affects a single target at short range

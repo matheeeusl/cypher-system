@@ -10,7 +10,7 @@ description:
     touch you or strike you with a melee attack. While the wraith
     cloak is active, all tasks to evade the perceptions of others are
     eased.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

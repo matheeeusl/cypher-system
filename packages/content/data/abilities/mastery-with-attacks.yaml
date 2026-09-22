@@ -8,7 +8,7 @@ description:
     bashing, light bladed, light ranged, medium bashing, medium
     bladed, medium ranged, heavy bashing, heavy bladed, or heavy
     ranged. You are specialized in attacks using that type of weapon.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

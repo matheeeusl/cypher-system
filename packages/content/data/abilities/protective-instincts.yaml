@@ -16,7 +16,7 @@ description:
     addition to the normal options for using Effort, you can use
     Effort to increase the number of foes you can attack, with one
     additional foe per level of Effort.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is both open-ended and a choice-of-pool, "6+
   # Might, Speed, or Intellect points" — the schema's cost field can
   # represent neither. Recorded as the baseline 6 Might points

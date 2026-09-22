@@ -12,7 +12,7 @@ description:
     reroll using Consequences of Luck and obtain a result that isn't
     in the failure range. Once you use this ability, it is not
     available again until after you make a ten-hour recovery roll.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost: null
 action_type: enabler
 sources:

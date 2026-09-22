@@ -4,7 +4,7 @@ name:
   pt-BR: Copiar Poder
 description:
   en: You can copy someone else's superpower for an hour, performing it as if it were natural for you. Within the past hour you must have touched the creature whose power you want to copy (an attack roll) and must have seen that ability used by them. Choose the power you want to copy, and the GM chooses an appropriate low-tier ability that most closely resembles that power. In addition to the point cost of Copy Power, you must pay the Might, Speed, or Intellect cost (if any) of the equivalent ability that the GM chose. You can copy only one power at a time; copying another one ends any other power you're copying with this ability. Copy Power doesn't copy effects of a power that permanently adds points to your Pools, such as Enhanced Body. In addition to the normal options for using Effort, you can choose to use Effort to copy an ability you saw longer than one hour ago; each level of Effort used in this way extends the time period by one hour.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "2+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Intellect points here, flagged for schema review (same

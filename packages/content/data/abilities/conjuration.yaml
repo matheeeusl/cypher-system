@@ -8,7 +8,7 @@ description:
     have previously encountered. The creature remains for one minute
     and then returns home. While present, the creature acts as you
     direct, but this requires no action on your part.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
 cost:
   pool: intellect
   amount: 7

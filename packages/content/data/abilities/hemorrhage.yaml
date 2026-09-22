@@ -11,7 +11,7 @@ description:
     ability that heals it, or using its action to attend to the injury.
     In addition to the normal options for using Effort, you can choose
     to use Effort to increase this duration by one round.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: source cost is printed as "2+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Might points here (same approximation used for

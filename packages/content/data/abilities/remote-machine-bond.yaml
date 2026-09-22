@@ -10,7 +10,7 @@ description:
     by someone else, or cause an automated turret to fire where you
     direct. Bonding is a process that requires 24 hours of meditation
     in the presence of the machine.
-  pt-BR: "Tradução em breve."
+  pt-BR: 'Tradução em breve.'
   # Note: uses id `remote-machine-bond` rather than `machine-bond`
   # because that id is already taken by a different ability of the
   # same printed name (Hacks the Network Tier 6, "Machine Bond" — the
