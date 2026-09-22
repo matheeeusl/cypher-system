@@ -1,0 +1,57 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllArtifacts } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page (Home /
+// Artifacts), listing every Artifact and linking to its own [slug].astro
+// page. No <CharacterSentence>: an Artifact is equipment found during
+// play, not one of the sentence's three parts — same reasoning as
+// cyphers/index.astro.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// Same order as the Artifacts sidebar group in astro.config.mjs —
+// alphabetical by English name.
+const artifacts = getAllArtifacts()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+const rows = artifacts.map((artifact) => ({
+	href: `/${locale}/artifacts/${artifact.id}/`,
+	name: pick(artifact.name, locale),
+	meta: `${t('Level', 'Nível')} ${artifact.level}`,
+}));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Artifacts', 'Artefatos'),
+		description: t(
+			'What an Artifact is, and every Artifact a character can carry.',
+			'O que é um Artefato, e todos os Artefatos que um personagem pode carregar.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				"Artifacts are rare, powerful devices and effects that — unlike a cypher — usually survive being used. Instead of being consumed outright, most have a depletion die rolled after use, so an artifact can run for a while before it stops working. Like cyphers, they're equipment a character finds during play rather than a choice made at character creation, so they sit outside the character sentence entirely.",
+				'Artefatos são dispositivos e efeitos raros e poderosos que — diferente de uma cifra — costumam sobreviver ao uso. Em vez de serem consumidos de imediato, a maioria tem um dado de esgotamento rolado após o uso, então um artefato pode durar um tempo antes de parar de funcionar. Assim como as cifras, são equipamentos que um personagem encontra durante o jogo, não uma escolha feita na criação de personagem, então ficam totalmente fora da frase do personagem.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{artifacts.length} {t('artifacts', 'artefatos')}
+	</p>
+
+	<EntityIndexList caption={t('Artifacts', 'Artefatos')} rows={rows} />
+</StarlightPage>

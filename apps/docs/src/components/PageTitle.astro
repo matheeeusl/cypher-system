@@ -9,7 +9,14 @@ import BackButton from './BackButton.astro';
 import { getPageContext } from '../lib/page-context';
 
 const ctx = getPageContext(Astro.url.pathname);
-const kind = ctx?.section?.kind?.[ctx.locale];
+// On an entity's own page (isNested), the eyebrow is that entity's singular
+// kind ("Focus"). On a category's index page (not nested, e.g. /en/foci/),
+// there's no single entity to name, so it falls back to the plural crumb
+// ("Foci") instead — only for sections that actually have an index page;
+// Equipment's `kind` ("Reference Table") already reads fine on its one
+// page and has no `hasIndex`, so it's unaffected by this fallback.
+const kind =
+	ctx?.section && (ctx.isNested || !ctx.section.hasIndex) ? ctx.section.kind?.[ctx.locale] : ctx?.section?.crumb[ctx.locale];
 ---
 
 {

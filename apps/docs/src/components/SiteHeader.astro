@@ -77,12 +77,32 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 		<button
 			id="mode-toggle"
 			type="button"
-			class="flex items-center gap-1.5 rounded border border-border bg-panel px-2.5 py-1.5 font-mono text-[11px] text-text-muted"
+			class="mode-toggle flex cursor-pointer items-center gap-1.5 rounded border border-border bg-panel px-2.5 py-1.5 text-text-muted"
 		>
 			<span id="mode-label"></span>
 		</button>
 	</div>
 </div>
+
+<style>
+	/* Starlight's reset.css sets `button { font: inherit }` inside its own
+	   `starlight.reset` CSS layer, which — being layered the same as Tailwind's
+	   own utility classes — can outrank a plain `font-mono text-[11px]` on this
+	   button depending on layer order, making it inherit the ambient body font
+	   (Inter, 16px) instead. Only shows up on Starlight-shell pages, since the
+	   standalone homepage never loads that reset at all. A scoped Astro <style>
+	   compiles unlayered, so it always wins — same fix BackButton.astro already
+	   uses for its own button, for the same reason. */
+	.mode-toggle {
+		font-family: var(--font-mono);
+		font-size: 0.6875rem;
+		/* Same reset also makes this button inherit body's line-height, which
+		   Starlight's own line-height (1.75, vs. the homepage's plain 1.5)
+		   otherwise makes a couple of pixels taller than its EN/PT-BR neighbour
+		   on Starlight-shell pages. */
+		line-height: 1.5;
+	}
+</style>
 
 <script is:inline>
 	{

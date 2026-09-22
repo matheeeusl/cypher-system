@@ -1,0 +1,59 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllSkills } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page (Home /
+// Skills), listing every Skill and linking to its own [slug].astro page.
+// No <CharacterSentence>: a Skill isn't one of the sentence's three parts,
+// same reasoning as abilities/index.astro.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// Same order as the Skills sidebar group in astro.config.mjs — alphabetical
+// by English name, same size class as Descriptors/Foci.
+const skills = getAllSkills()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+// No meta column: unlike Types/Descriptors/Foci, a Skill has only a name
+// and a prose description (no short mechanical fact to show at a glance —
+// see @cypher/content's SkillSchema). The description itself is why the
+// per-skill page exists; it isn't truncated here.
+const rows = skills.map((skill) => ({
+	href: `/${locale}/skills/${skill.id}/`,
+	name: pick(skill.name, locale),
+}));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Skills', 'Perícias'),
+		description: t(
+			'What a Skill is, and every Skill a character can be trained in.',
+			'O que é uma Perícia, e todas as Perícias em que um personagem pode ser treinado.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				"Skills describe the everyday and specialized things your character is good at, from climbing to persuasion to a trade. The rulebook keeps the list illustrative rather than definitive — being trained in a skill eases related tasks by one step, and gaining it a second time makes you specialized, easing them by two. Skills come from your descriptor, your type, or later advancement, not from a dedicated pick of their own.",
+				'Perícias descrevem as coisas cotidianas e especializadas nas quais seu personagem é bom, de escalada a persuasão a um ofício. O livro de regras mantém a lista como ilustrativa, não definitiva — ser treinado em uma perícia facilita as tarefas relacionadas em um degrau, e adquiri-la uma segunda vez torna você especializado, facilitando-as em dois. Perícias vêm do seu descritor, do seu tipo ou de progressões futuras, não de uma escolha própria e dedicada.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{skills.length} {t('skills', 'perícias')}
+	</p>
+
+	<EntityIndexList caption={t('Skills', 'Perícias')} rows={rows} />
+</StarlightPage>

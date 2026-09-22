@@ -1,0 +1,56 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllTypes } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import CharacterSentence from '../../../components/CharacterSentence.astro';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page (Home /
+// Types), listing every Type and linking to its own [slug].astro page.
+// Same shape as foci/index.astro and equipment/index.astro.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// Same order as the Types sidebar group in astro.config.mjs — only 4 Types,
+// so filesystem order (not sorted) is fine and matches it.
+const types = getAllTypes();
+
+const rows = types.map((type) => ({
+	href: `/${locale}/types/${type.id}/`,
+	name: pick(type.name, locale),
+	meta: pick(type.tagline, locale),
+}));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Types', 'Tipos'),
+		description: t(
+			'What a Type is, and every Type available for character creation.',
+			'O que é um Tipo, e todos os Tipos disponíveis para a criação de personagem.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<CharacterSentence locale={locale} highlight="type" />
+
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				"The noun in the character sentence. Your type defines your role in the world and covers a broad set of special abilities you might want your character to have — it's the most mechanically substantial of the three choices, setting your starting stat Pools, Edge, weapon proficiencies, and a wide menu of tier abilities. Types are broad on purpose: two player characters can share a type and still play nothing alike.",
+				'O substantivo da frase do personagem. Seu tipo define seu papel no mundo e abrange um amplo conjunto de habilidades especiais que seu personagem pode ter — é a escolha mecanicamente mais substancial das três, definindo suas Reservas de atributo iniciais, seu Edge, suas proficiências com armas e um amplo menu de habilidades por tier. Tipos são propositalmente amplos: dois personagens podem compartilhar o mesmo tipo e ainda assim jogar de formas completamente diferentes.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{types.length} {t('types', 'tipos')}
+	</p>
+
+	<EntityIndexList caption={t('Types', 'Tipos')} rows={rows} />
+</StarlightPage>

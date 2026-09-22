@@ -1,0 +1,68 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllCyphers } from '@cypher/content';
+import type { Cypher } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page (Home /
+// Cyphers), listing every Cypher and linking to its own [slug].astro page.
+// No <CharacterSentence>: a Cypher is equipment found during play, not one
+// of the sentence's three parts.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// English/Portuguese labels for the 4-value category enum — UI chrome, not
+// rulebook prose, same rationale (and same four labels) as the Cypher
+// entity page's own CATEGORY_LABELS.
+const CATEGORY_LABELS: Record<Cypher['category'], [string, string]> = {
+	manifest: ['Manifest', 'Manifestação'],
+	fantastic: ['Fantastic', 'Fantástico'],
+	subtle: ['Subtle', 'Sutil'],
+	power_boost: ['Power Boost', 'Impulso de Poder'],
+};
+
+// Same order as the Cyphers sidebar group in astro.config.mjs —
+// alphabetical by English name, since at 166 entries directory read order
+// isn't guaranteed to look intentional.
+const cyphers = getAllCyphers()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+const rows = cyphers.map((cypher) => ({
+	href: `/${locale}/cyphers/${cypher.id}/`,
+	name: pick(cypher.name, locale),
+	meta: `${t(...CATEGORY_LABELS[cypher.category])} · ${t('Level', 'Nível')} ${cypher.level_range}`,
+}));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Cyphers', 'Cifras'),
+		description: t(
+			'What a Cypher is, and every Cypher a character can carry.',
+			'O que é uma Cifra, e todas as Cifras que um personagem pode carregar.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				'Cyphers are one-use devices and effects — strange, potent, and consumed the moment they\'re used. A character can only carry so many at once (their cypher limit, set by type and tier); go over it and cyphers start to misbehave. They aren\'t part of the character sentence — a character doesn\'t "have" a cypher the way they have a type or focus, they just find one, use it, and move on.',
+				'Cifras são dispositivos e efeitos de uso único — estranhos, potentes e consumidos no momento em que são usados. Um personagem só pode carregar um certo número por vez (seu limite de cifras, definido pelo tipo e pelo tier); ultrapassar esse limite faz com que as cifras comecem a se comportar mal. Elas não fazem parte da frase do personagem — um personagem não "tem" uma cifra da forma como tem um tipo ou um foco, ele simplesmente encontra uma, usa e segue em frente.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{cyphers.length} {t('cyphers', 'cifras')}
+	</p>
+
+	<EntityIndexList caption={t('Cyphers', 'Cifras')} rows={rows} />
+</StarlightPage>

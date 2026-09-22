@@ -19,13 +19,21 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 						{HOME_LABEL[ctx.locale]}
 					</a>
 				</li>
-				{/* The section (e.g. "Types") has no index page of its own, so it's plain text, not a link. */}
+				{/* Linked when the section has its own index page (Section.hasIndex —
+				    see src/lib/page-context.ts) to browse from; plain text otherwise
+				    (e.g. "Rules", which has no single landing page of its own). */}
 				{ctx.section && ctx.isNested && (
 					<li>
 						<span class="opacity-50" aria-hidden="true">
 							&nbsp;/&nbsp;
 						</span>
-						{ctx.section.crumb[ctx.locale]}
+						{ctx.section.hasIndex ? (
+							<a href={`/${ctx.locale}/${ctx.segment}/`} class="text-accent no-underline hover:text-warning">
+								{ctx.section.crumb[ctx.locale]}
+							</a>
+						) : (
+							ctx.section.crumb[ctx.locale]
+						)}
 					</li>
 				)}
 				<li aria-current="page">

@@ -15,7 +15,16 @@
      the Narrative Chapter mock — Starlight's default is a lighter grey panel. */
   --sl-color-bg-sidebar: var(--color-bg);
   --sl-color-hairline-shade: var(--color-border);
-  --sl-color-text: var(--color-text);
+  /* Starlight's own default splits body text (--sl-color-text, a muted gray)
+     from headings (--sl-color-white, full white) so prose has some contrast
+     hierarchy. Mapping --sl-color-text to the bright --color-text here too
+     (as a previous version of this file did) collapsed that split — every
+     paragraph in a narrative chapter (Rules) rendered as bright as its own
+     heading. Pointing it at --color-text-muted instead restores the split,
+     using this project's own tokens: headings and links stay bright, running
+     prose reads muted, the same contrast the entity pages already hardcode
+     onto their own intro paragraphs (e.g. the Focus page's tagline). */
+  --sl-color-text: var(--color-text-muted);
   --sl-color-gray-1: var(--color-text-muted);
   --sl-color-hairline: var(--color-border);
   --sl-font: var(--font-sans);

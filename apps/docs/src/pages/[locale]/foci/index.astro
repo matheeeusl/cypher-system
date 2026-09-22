@@ -1,0 +1,60 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllFoci } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import CharacterSentence from '../../../components/CharacterSentence.astro';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale, not a per-item [slug] route — this is
+// the category's landing page (Home / Foci), which lists every Focus and
+// links to its own [slug].astro page. Same getStaticPaths shape as
+// equipment/index.astro for the same reason.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// Sorted alphabetically by English name, same as the Foci sidebar group in
+// astro.config.mjs — directory read order isn't guaranteed to look
+// intentional at 50 items.
+const foci = getAllFoci()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+const rows = foci.map((focus) => ({
+	href: `/${locale}/foci/${focus.id}/`,
+	name: pick(focus.name, locale),
+	meta: pick(focus.description, locale),
+}));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Foci', 'Focos'),
+		description: t(
+			'What a Focus is, and every Focus available for character creation.',
+			'O que é um Foco, e todos os Focos disponíveis para a criação de personagem.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<CharacterSentence locale={locale} highlight="focus" />
+
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				"The verb in the character sentence. Your focus is what your character does best — it grants new special abilities at every tier, from tier 1 through tier 6, on top of whatever your type already gives you. It also shapes how you relate to the other player characters: most foci list connection options, and every focus can draw from the shared Focus Connections table.",
+				'O verbo da frase do personagem. Seu foco é aquilo que seu personagem faz de melhor — ele concede novas habilidades especiais a cada tier, do tier 1 ao tier 6, além do que seu tipo já oferece. Ele também molda sua relação com os outros personagens do grupo: a maioria dos focos lista opções de conexão, e todo foco pode recorrer à tabela compartilhada de Conexões de Foco.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{foci.length} {t('foci', 'focos')}
+	</p>
+
+	<EntityIndexList caption={t('Foci', 'Focos')} rows={rows} />
+</StarlightPage>

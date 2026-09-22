@@ -1,0 +1,67 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllAbilities } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import { formatAbilityCost, formatActionType } from '../../../lib/ability-format';
+import EntityIndexList from '../../../components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page (Home /
+// Abilities), listing every Ability and linking to its own [slug].astro
+// page. Same shape as foci/index.astro, but with no <CharacterSentence>:
+// an Ability isn't one of the sentence's three parts — it's what a
+// Descriptor/Type/Focus *grants*, so it's framed relative to those instead.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+// Same order as the Abilities sidebar group in astro.config.mjs —
+// alphabetical by English name, since at 965 entries directory read order
+// isn't guaranteed to look intentional.
+const abilities = getAllAbilities()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+// Cost + action type, not a truncated description: at 965 rows a short,
+// consistently-shaped mechanical fact scans far better than clipped prose,
+// and it's the same pairing the Ability page itself leads with. Reuses
+// src/lib/ability-format.ts rather than re-deriving the labels here.
+const rows = abilities.map((ability) => {
+	const cost = formatAbilityCost(ability.cost, locale);
+	const actionType = formatActionType(ability.action_type, locale);
+	return {
+		href: `/${locale}/abilities/${ability.id}/`,
+		name: pick(ability.name, locale),
+		meta: cost ? `${cost} · ${actionType}` : actionType,
+	};
+});
+---
+
+<StarlightPage
+	frontmatter={{
+		title: t('Abilities', 'Habilidades'),
+		description: t(
+			'What an Ability is, and every Ability granted by a Type or Focus.',
+			'O que é uma Habilidade, e todas as Habilidades concedidas por um Tipo ou Foco.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				"Abilities are the special things your character can do beyond a basic task roll — granted by your type and focus, tier by tier, as your character advances. Each one has a Pool cost (or none, if it's always on) and an action type saying how it's used in play. An ability isn't chosen on its own; it comes bundled with the type or focus that grants it, which is why every entry below links back to its source.",
+				'Habilidades são as coisas especiais que seu personagem pode fazer além de um teste de tarefa básico — concedidas pelo seu tipo e foco, tier a tier, conforme seu personagem avança. Cada uma tem um custo de Reserva (ou nenhum, se estiver sempre ativa) e um tipo de ação que diz como é usada em jogo. Uma habilidade não é escolhida sozinha; ela vem junto do tipo ou foco que a concede, por isso cada entrada abaixo tem um link de volta para sua origem.',
+			)
+		}
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{abilities.length} {t('abilities', 'habilidades')}
+	</p>
+
+	<EntityIndexList caption={t('Abilities', 'Habilidades')} rows={rows} />
+</StarlightPage>

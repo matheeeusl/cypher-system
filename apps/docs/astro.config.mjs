@@ -27,11 +27,17 @@ const types = getAllTypes()
 const typesSidebarGroup = {
   label: 'Types',
   translations: { 'pt-BR': 'Tipos' },
-  items: types.map((type) => ({
-    label: type.name.en,
-    translations: { 'pt-BR': type.name['pt-BR'] },
-    link: `/types/${type.id}/`,
-  })),
+  items: [
+    // Links the group label's own category (src/pages/[locale]/types/index.astro)
+    // — Starlight's manual sidebar has no way to make the group label itself a
+    // link, so this is a plain leading item instead. Same on every group below.
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/types/' },
+    ...types.map((type) => ({
+      label: type.name.en,
+      translations: { 'pt-BR': type.name['pt-BR'] },
+      link: `/types/${type.id}/`,
+    })),
+  ],
 }
 
 // Same manual-group pattern as Types, for the same reason: Descriptor pages
@@ -42,11 +48,14 @@ const descriptors = getAllDescriptors()
 const descriptorsSidebarGroup = {
   label: 'Descriptors',
   translations: { 'pt-BR': 'Descritores' },
-  items: descriptors.map((descriptor) => ({
-    label: descriptor.name.en,
-    translations: { 'pt-BR': descriptor.name['pt-BR'] },
-    link: `/descriptors/${descriptor.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/descriptors/' },
+    ...descriptors.map((descriptor) => ({
+      label: descriptor.name.en,
+      translations: { 'pt-BR': descriptor.name['pt-BR'] },
+      link: `/descriptors/${descriptor.id}/`,
+    })),
+  ],
 }
 
 // Same manual-group pattern again, but at a very different scale: 965
@@ -67,11 +76,14 @@ const abilitiesSidebarGroup = {
   label: 'Abilities',
   translations: { 'pt-BR': 'Habilidades' },
   collapsed: true,
-  items: abilities.map((ability) => ({
-    label: ability.name.en,
-    translations: { 'pt-BR': ability.name['pt-BR'] },
-    link: `/abilities/${ability.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/abilities/' },
+    ...abilities.map((ability) => ({
+      label: ability.name.en,
+      translations: { 'pt-BR': ability.name['pt-BR'] },
+      link: `/abilities/${ability.id}/`,
+    })),
+  ],
 }
 
 // Same manual-group pattern, at a scale between Descriptors' 50 and
@@ -85,11 +97,14 @@ const foci = getAllFoci()
 const fociSidebarGroup = {
   label: 'Foci',
   translations: { 'pt-BR': 'Focos' },
-  items: foci.map((focus) => ({
-    label: focus.name.en,
-    translations: { 'pt-BR': focus.name['pt-BR'] },
-    link: `/foci/${focus.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/foci/' },
+    ...foci.map((focus) => ({
+      label: focus.name.en,
+      translations: { 'pt-BR': focus.name['pt-BR'] },
+      link: `/foci/${focus.id}/`,
+    })),
+  ],
 }
 
 // Same manual-group pattern for Skills (src/pages/[locale]/skills/[slug].astro):
@@ -102,11 +117,14 @@ const skills = getAllSkills()
 const skillsSidebarGroup = {
   label: 'Skills',
   translations: { 'pt-BR': 'Perícias' },
-  items: skills.map((skill) => ({
-    label: skill.name.en,
-    translations: { 'pt-BR': skill.name['pt-BR'] },
-    link: `/skills/${skill.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/skills/' },
+    ...skills.map((skill) => ({
+      label: skill.name.en,
+      translations: { 'pt-BR': skill.name['pt-BR'] },
+      link: `/skills/${skill.id}/`,
+    })),
+  ],
 }
 
 // Same manual-group pattern, at a scale between Descriptors' 50 and
@@ -121,11 +139,14 @@ const cyphersSidebarGroup = {
   label: 'Cyphers',
   translations: { 'pt-BR': 'Cifras' },
   collapsed: true,
-  items: cyphers.map((cypher) => ({
-    label: cypher.name.en,
-    translations: { 'pt-BR': cypher.name['pt-BR'] },
-    link: `/cyphers/${cypher.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/cyphers/' },
+    ...cyphers.map((cypher) => ({
+      label: cypher.name.en,
+      translations: { 'pt-BR': cypher.name['pt-BR'] },
+      link: `/cyphers/${cypher.id}/`,
+    })),
+  ],
 }
 
 // 15 Artifacts — bigger than Types' 4 but the same order of magnitude, so
@@ -139,11 +160,14 @@ const artifacts = getAllArtifacts()
 const artifactsSidebarGroup = {
   label: 'Artifacts',
   translations: { 'pt-BR': 'Artefatos' },
-  items: artifacts.map((artifact) => ({
-    label: artifact.name.en,
-    translations: { 'pt-BR': artifact.name['pt-BR'] },
-    link: `/artifacts/${artifact.id}/`,
-  })),
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/artifacts/' },
+    ...artifacts.map((artifact) => ({
+      label: artifact.name.en,
+      translations: { 'pt-BR': artifact.name['pt-BR'] },
+      link: `/artifacts/${artifact.id}/`,
+    })),
+  ],
 }
 
 // https://astro.build/config

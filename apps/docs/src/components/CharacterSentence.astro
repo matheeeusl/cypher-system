@@ -1,0 +1,46 @@
+---
+// "I am a [descriptor] [type] who [focus]." — the character sentence from
+// the Character Creation chapter (src/content/docs/<locale>/rules/
+// character-creation.mdx), reused here so the Types/Descriptors/Foci index
+// pages can each show the same sentence with their own part highlighted,
+// instead of restating it as plain prose three times. Word order is the
+// same in both locales (descriptor, then type, then focus), only the
+// connecting words differ, so one segment list per locale is enough.
+import { type UrlLocale } from '../lib/locale';
+
+interface Props {
+	locale: UrlLocale;
+	highlight: 'descriptor' | 'type' | 'focus';
+}
+
+const { locale, highlight } = Astro.props;
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+
+const LABELS = {
+	descriptor: t('descriptor', 'descritor'),
+	type: t('type', 'tipo'),
+	focus: t('focus', 'foco'),
+} as const;
+
+const lead = t('I am a', 'Eu sou um(a)');
+const mid = t('who', 'que');
+
+const bracketClass = (word: keyof typeof LABELS) =>
+	word === highlight
+		? 'rounded border border-accent bg-accent-soft px-1.5 py-0.5 font-mono text-accent'
+		: 'font-mono text-text-muted';
+---
+
+<p class="mb-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-1 font-display text-lg text-text">
+	<span>{lead}</span>
+	<span class={bracketClass('descriptor')}>[{LABELS.descriptor}]</span>
+	<span class={bracketClass('type')}>[{LABELS.type}]</span>
+	<span>{mid}</span>
+	<span class={bracketClass('focus')}>[{LABELS.focus}]</span>
+	<span>.</span>
+</p>
+<p class="mb-6 font-mono text-xs text-text-muted">
+	<a href={`/${locale}/rules/character-creation/`} class="text-accent no-underline hover:text-warning">
+		{t('Read the full Character Creation chapter →', 'Leia o capítulo completo de Criação de Personagem →')}
+	</a>
+</p>

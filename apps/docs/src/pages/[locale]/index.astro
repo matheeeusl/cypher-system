@@ -38,9 +38,8 @@ const CHROME = {
 	},
 } as const;
 
-// Hrefs point at each category's intended future route. Only Getting
-// Started resolves today (Types has individual entity pages but no index
-// route yet) — the rest 404 until those sections are built, per plan.
+// Hrefs point at each category's route. Every one of these resolves except
+// Glossary, which isn't built yet.
 const SECTIONS = {
 	en: [
 		{ title: 'Getting Started', desc: 'New to the system? Start here.', href: '/en/rules/introduction/' },

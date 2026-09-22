@@ -1,0 +1,46 @@
+---
+// Full-width, full-row-clickable list used by every category index page
+// (Types, Descriptors, Foci, Abilities, Skills, Cyphers, Artifacts — see
+// src/pages/[locale]/<category>/index.astro). Same bordered-box language as
+// ReferenceTable.astro, but rows are links rather than plain cells, since
+// every item here has its own entity page to jump to. `meta` is one short
+// mechanical fact (a tagline, a cost, a level range, ...) — each index page
+// decides what's most useful for its own entity type.
+interface Row {
+	href: string;
+	name: string;
+	meta?: string;
+}
+
+interface Props {
+	caption: string;
+	rows: Row[];
+}
+
+const { caption, rows } = Astro.props;
+---
+
+<div class="not-content my-4 overflow-hidden rounded-[5px] border border-border">
+	<table class="w-full border-collapse text-left">
+		<caption class="sr-only">{caption}</caption>
+		<tbody>
+			{
+				rows.map((row) => (
+					<tr class="border-b border-border last:border-b-0">
+						<td class="p-0">
+							<a
+								href={row.href}
+								class="flex items-center justify-between gap-4 px-3.5 py-2.5 text-[13px] text-text no-underline hover:bg-panel"
+							>
+								<span class="font-medium">{row.name}</span>
+								{row.meta && (
+									<span class="shrink-0 font-mono text-xs whitespace-nowrap text-text-muted">{row.meta}</span>
+								)}
+							</a>
+						</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</div>
