@@ -1,7 +1,7 @@
 id: radiation-spike
 name: { en: 'Radiation spike', 'pt-BR': 'Pico de radiação' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 395'
+page_ref: 'Cypher System Rulebook, p. 395'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

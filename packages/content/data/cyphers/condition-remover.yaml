@@ -1,7 +1,7 @@
 id: condition-remover
 name: { en: 'Condition remover', 'pt-BR': 'Removedor de condições' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 385'
+page_ref: 'Cypher System Rulebook, p. 385'
 level_range: '1d6 + 3'
 effect_text:
   {

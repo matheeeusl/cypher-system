@@ -1,7 +1,7 @@
 id: gas-bomb
 name: { en: 'Gas bomb', 'pt-BR': 'Bomba de gás' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 389'
+page_ref: 'Cypher System Rulebook, p. 389'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

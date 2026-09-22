@@ -1,7 +1,7 @@
 id: repeater
 name: { en: 'Repeater', 'pt-BR': 'Repetidor' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

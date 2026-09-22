@@ -1,7 +1,7 @@
 id: detonation-sonic
 name: { en: 'Detonation (sonic)', 'pt-BR': 'Detonação (sônica)' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 387'
+page_ref: 'Cypher System Rulebook, p. 387'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

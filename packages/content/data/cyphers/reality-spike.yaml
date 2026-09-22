@@ -1,7 +1,7 @@
 id: reality-spike
 name: { en: 'Reality spike', 'pt-BR': 'Pico de realidade' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 395'
+page_ref: 'Cypher System Rulebook, p. 395'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

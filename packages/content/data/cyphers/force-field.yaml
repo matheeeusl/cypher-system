@@ -4,7 +4,7 @@
 id: force-field
 name: { en: 'Force field', 'pt-BR': 'Campo de força' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 389'
+page_ref: 'Cypher System Rulebook, p. 389'
 level_range: '1d6'
 effect_text:
   en: >-

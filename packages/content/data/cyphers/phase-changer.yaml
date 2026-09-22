@@ -5,7 +5,7 @@
 id: phase-changer
 name: { en: 'Phase changer', 'pt-BR': 'Mudador de fase' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 394'
+page_ref: 'Cypher System Rulebook, p. 394'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

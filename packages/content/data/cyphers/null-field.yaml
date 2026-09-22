@@ -1,7 +1,7 @@
 id: null-field
 name: { en: 'Null field', 'pt-BR': 'Campo nulo' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 393'
+page_ref: 'Cypher System Rulebook, p. 393'
 level_range: '1d6 + 3'
 effect_text:
   en: >-

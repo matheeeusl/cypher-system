@@ -1,7 +1,7 @@
 id: repair-unit
 name: { en: 'Repair unit', 'pt-BR': 'Unidade de reparo' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d10'
 effect_text:
   en: >-

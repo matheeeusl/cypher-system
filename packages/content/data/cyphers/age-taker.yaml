@@ -3,7 +3,7 @@ name:
   en: 'Age taker'
   pt-BR: 'Ladrão de Idade'
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 384'
+page_ref: 'Cypher System Rulebook, p. 384'
 level_range: '1d6 + 4'
 effect_text:
   en: "Begins a process of rejuvenation that removes years from the wearer's physiological age."

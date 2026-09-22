@@ -1,7 +1,7 @@
 id: detonation-spawn
 name: { en: 'Detonation (spawn)', 'pt-BR': 'Detonação (geradora)' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 387'
+page_ref: 'Cypher System Rulebook, p. 387'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

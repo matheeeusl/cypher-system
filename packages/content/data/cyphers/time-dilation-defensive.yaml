@@ -1,7 +1,7 @@
 id: time-dilation-defensive
 name: { en: 'Time dilation (defensive)', 'pt-BR': 'Dilatação temporal (defensiva)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 399'
+page_ref: 'Cypher System Rulebook, p. 399'
 level_range: '1d6'
 effect_text:
   en: >-

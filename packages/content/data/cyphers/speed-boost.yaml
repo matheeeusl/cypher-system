@@ -1,7 +1,7 @@
 id: speed-boost
 name: { en: 'Speed boost', 'pt-BR': 'Impulso de velocidade' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 398'
+page_ref: 'Cypher System Rulebook, p. 398'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

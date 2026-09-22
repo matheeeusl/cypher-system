@@ -3,7 +3,7 @@ name:
   en: 'Attractor'
   pt-BR: 'Atrator'
 category: manifest
-page_ref: 'Cypher System Rulebook, page 384'
+page_ref: 'Cypher System Rulebook, p. 384'
 level_range: '1d6 + 4'
 effect_text:
   en: "One unanchored item the user's size or smaller within long range (very long range if the cypher level is 8 or higher) is drawn immediately to them. This takes one round. The item has no momentum when it arrives."

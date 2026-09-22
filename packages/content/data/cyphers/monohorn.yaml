@@ -1,7 +1,7 @@
 id: monohorn
 name: { en: 'Monohorn', 'pt-BR': 'Monochifre' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 393'
+page_ref: 'Cypher System Rulebook, p. 393'
 level_range: '1d6 + 3'
 effect_text:
   en: |-

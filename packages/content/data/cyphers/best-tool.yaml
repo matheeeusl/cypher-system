@@ -3,7 +3,7 @@ name:
   en: 'Best tool'
   pt-BR: 'Melhor Ferramenta'
 category: subtle
-page_ref: 'Cypher System Rulebook, page 384'
+page_ref: 'Cypher System Rulebook, p. 384'
 level_range: '1d6'
 effect_text:
   en: 'Provides an additional asset for any one task using a tool, even if that means exceeding the normal limit of two assets.'

@@ -1,7 +1,7 @@
 id: curse-bringer
 name: { en: 'Curse bringer', 'pt-BR': 'Portador de Maldição' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 386'
+page_ref: 'Cypher System Rulebook, p. 386'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

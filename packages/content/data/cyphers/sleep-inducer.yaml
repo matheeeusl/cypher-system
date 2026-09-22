@@ -1,7 +1,7 @@
 id: sleep-inducer
 name: { en: 'Sleep inducer', 'pt-BR': 'Indutor de sono' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 397'
+page_ref: 'Cypher System Rulebook, p. 397'
 level_range: '1d6'
 effect_text:
   en: >-

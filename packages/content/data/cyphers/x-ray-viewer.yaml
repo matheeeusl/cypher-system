@@ -1,7 +1,7 @@
 id: x-ray-viewer
 name: { en: 'X-ray viewer', 'pt-BR': 'Visor de raio-X' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 400'
+page_ref: 'Cypher System Rulebook, p. 400'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

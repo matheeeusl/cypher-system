@@ -1,7 +1,7 @@
 id: chemical-factory
 name: { en: 'Chemical factory', 'pt-BR': 'Fábrica química' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 385'
+page_ref: 'Cypher System Rulebook, p. 385'
 level_range: '1d6'
 effect_text:
   en: >-

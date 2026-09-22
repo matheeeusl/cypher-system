@@ -1,7 +1,7 @@
 id: detonation-desiccating
 name: { en: 'Detonation (desiccating)', 'pt-BR': 'Detonação (dessecante)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 386'
+page_ref: 'Cypher System Rulebook, p. 386'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

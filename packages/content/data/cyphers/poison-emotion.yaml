@@ -3,7 +3,7 @@
 id: poison-emotion
 name: { en: 'Poison (emotion)', 'pt-BR': 'Veneno (emoção)' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 394'
+page_ref: 'Cypher System Rulebook, p. 394'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

@@ -1,7 +1,7 @@
 id: mental-scrambler
 name: { en: 'Mental scrambler', 'pt-BR': 'Embaralhador mental' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 392'
+page_ref: 'Cypher System Rulebook, p. 392'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

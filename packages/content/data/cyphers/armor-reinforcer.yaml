@@ -3,7 +3,7 @@ name:
   en: 'Armor reinforcer'
   pt-BR: 'Reforço de Armadura'
 category: manifest
-page_ref: 'Cypher System Rulebook, page 384'
+page_ref: 'Cypher System Rulebook, p. 384'
 level_range: '1d6 + 1'
 effect_text:
   en: "The user's Armor gains an enhancement for twenty-four hours."

@@ -1,7 +1,7 @@
 id: detonation-creature
 name: { en: 'Detonation (creature)', 'pt-BR': 'Detonação (criatura)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 386'
+page_ref: 'Cypher System Rulebook, p. 386'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

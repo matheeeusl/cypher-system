@@ -1,7 +1,7 @@
 id: eagleseye
 name: { en: 'Eagleseye', 'pt-BR': 'Olho de Águia' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6'
 effect_text:
   en: >-

@@ -1,7 +1,7 @@
 id: force-shield-projector
 name: { en: 'Force shield projector', 'pt-BR': 'Projetor de escudo de força' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 389'
+page_ref: 'Cypher System Rulebook, p. 389'
 level_range: '1d6 + 3'
 effect_text:
   en: >-

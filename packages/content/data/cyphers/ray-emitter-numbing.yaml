@@ -1,7 +1,7 @@
 id: ray-emitter-numbing
 name: { en: 'Ray emitter (numbing)', 'pt-BR': 'Emissor de raio (dormência)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 395'
+page_ref: 'Cypher System Rulebook, p. 395'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

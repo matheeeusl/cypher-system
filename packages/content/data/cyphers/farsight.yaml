@@ -1,7 +1,7 @@
 id: farsight
 name: { en: 'Farsight', 'pt-BR': 'Visão à distância' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

@@ -1,7 +1,7 @@
 id: remembering
 name: { en: 'Remembering', 'pt-BR': 'Recordação' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d6'
 effect_text:
   en: >-

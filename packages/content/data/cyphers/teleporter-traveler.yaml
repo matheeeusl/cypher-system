@@ -1,7 +1,7 @@
 id: teleporter-traveler
 name: { en: 'Teleporter (traveler)', 'pt-BR': 'Teletransportador (viajante)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 398'
+page_ref: 'Cypher System Rulebook, p. 398'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

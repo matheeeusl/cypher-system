@@ -1,7 +1,7 @@
 id: matter-transference-ray
 name: { en: 'Matter transference ray', 'pt-BR': 'Raio de transferência de matéria' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 392'
+page_ref: 'Cypher System Rulebook, p. 392'
 level_range: '1d6 + 3'
 effect_text:
   en: >-

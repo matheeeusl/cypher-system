@@ -5,7 +5,7 @@
 id: knowledge-enhancement
 name: { en: 'Knowledge enhancement', 'pt-BR': 'Aprimoramento de conhecimento' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 391'
+page_ref: 'Cypher System Rulebook, p. 391'
 level_range: '1d6'
 effect_text:
   en: >-

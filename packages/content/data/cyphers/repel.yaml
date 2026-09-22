@@ -1,7 +1,7 @@
 id: repel
 name: { en: 'Repel', 'pt-BR': 'Repelir' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

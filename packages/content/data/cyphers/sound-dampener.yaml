@@ -1,7 +1,7 @@
 id: sound-dampener
 name: { en: 'Sound dampener', 'pt-BR': 'Abafador de som' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 397'
+page_ref: 'Cypher System Rulebook, p. 397'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

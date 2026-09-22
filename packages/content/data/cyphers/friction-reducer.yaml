@@ -1,7 +1,7 @@
 id: friction-reducer
 name: { en: 'Friction reducer', 'pt-BR': 'Redutor de atrito' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 389'
+page_ref: 'Cypher System Rulebook, p. 389'
 level_range: '1d6'
 effect_text:
   en: >-

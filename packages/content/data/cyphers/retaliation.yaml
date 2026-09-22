@@ -1,7 +1,7 @@
 id: retaliation
 name: { en: 'Retaliation', 'pt-BR': 'Retaliação' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d6'
 effect_text:
   en: >-

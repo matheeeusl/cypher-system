@@ -1,7 +1,7 @@
 id: perfection
 name: { en: 'Perfection', 'pt-BR': 'Perfeição' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 393'
+page_ref: 'Cypher System Rulebook, p. 393'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

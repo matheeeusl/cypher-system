@@ -1,7 +1,7 @@
 id: efficacy-boost-major
 name: { en: 'Efficacy boost (major)', 'pt-BR': 'Impulso de eficácia (maior)' }
 category: power_boost
-page_ref: 'Cypher System Rulebook, page 401'
+page_ref: 'Cypher System Rulebook, p. 401'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

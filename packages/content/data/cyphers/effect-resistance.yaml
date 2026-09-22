@@ -1,7 +1,7 @@
 id: effect-resistance
 name: { en: 'Effect resistance', 'pt-BR': 'Resistência a efeitos' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

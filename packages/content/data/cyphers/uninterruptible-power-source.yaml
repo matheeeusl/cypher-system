@@ -1,7 +1,7 @@
 id: uninterruptible-power-source
 name: { en: 'Uninterruptible power source', 'pt-BR': 'Fonte de energia ininterrupta' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 399'
+page_ref: 'Cypher System Rulebook, p. 399'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

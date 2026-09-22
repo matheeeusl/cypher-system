@@ -1,7 +1,7 @@
 id: equipment-cache
 name: { en: 'Equipment cache', 'pt-BR': 'Depósito de equipamento' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

@@ -1,7 +1,7 @@
 id: spatial-warp
 name: { en: 'Spatial warp', 'pt-BR': 'Distorção espacial' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 397'
+page_ref: 'Cypher System Rulebook, p. 397'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

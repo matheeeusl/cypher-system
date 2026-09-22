@@ -1,7 +1,7 @@
 id: frigid-wall
 name: { en: 'Frigid wall', 'pt-BR': 'Parede gélida' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 389'
+page_ref: 'Cypher System Rulebook, p. 389'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

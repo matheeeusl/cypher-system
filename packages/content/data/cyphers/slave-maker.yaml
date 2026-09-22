@@ -1,7 +1,7 @@
 id: slave-maker
 name: { en: 'Slave maker', 'pt-BR': 'Escravizador' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 397'
+page_ref: 'Cypher System Rulebook, p. 397'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

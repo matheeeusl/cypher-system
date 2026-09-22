@@ -1,7 +1,7 @@
 id: vanisher
 name: { en: 'Vanisher', 'pt-BR': 'Desaparecedor' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 399'
+page_ref: 'Cypher System Rulebook, p. 399'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

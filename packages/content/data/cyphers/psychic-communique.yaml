@@ -1,7 +1,7 @@
 id: psychic-communique
 name: { en: 'Psychic communique', 'pt-BR': 'Comunicado psíquico' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 395'
+page_ref: 'Cypher System Rulebook, p. 395'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

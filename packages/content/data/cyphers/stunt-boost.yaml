@@ -1,7 +1,7 @@
 id: stunt-boost
 name: { en: 'Stunt boost', 'pt-BR': 'Impulso de Manobra' }
 category: power_boost
-page_ref: 'Claim the Sky, page 158'
+page_ref: 'Claim the Sky, p. 158'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

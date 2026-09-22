@@ -1,7 +1,7 @@
 id: gravity-nullifier
 name: { en: 'Gravity nullifier', 'pt-BR': 'Anulador de gravidade' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 390'
+page_ref: 'Cypher System Rulebook, p. 390'
 level_range: '1d6 + 3'
 effect_text:
   en: >-

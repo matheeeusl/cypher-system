@@ -1,7 +1,7 @@
 id: tissue-regeneration
 name: { en: 'Tissue regeneration', 'pt-BR': 'Regeneração de tecido' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 399'
+page_ref: 'Cypher System Rulebook, p. 399'
 level_range: '1d6 + 4'
 effect_text:
   en: |-

@@ -1,7 +1,7 @@
 id: subdual-field
 name: { en: 'Subdual field', 'pt-BR': 'Campo de subjugação' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 398'
+page_ref: 'Cypher System Rulebook, p. 398'
 level_range: '1d6 + 3'
 effect_text:
   en: >-

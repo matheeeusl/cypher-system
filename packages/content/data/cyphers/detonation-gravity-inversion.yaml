@@ -1,7 +1,7 @@
 id: detonation-gravity-inversion
 name: { en: 'Detonation (gravity inversion)', 'pt-BR': 'Detonação (inversão de gravidade)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 387'
+page_ref: 'Cypher System Rulebook, p. 387'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

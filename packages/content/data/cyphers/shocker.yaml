@@ -1,7 +1,7 @@
 id: shocker
 name: { en: 'Shocker', 'pt-BR': 'Eletrochoque' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 396'
+page_ref: 'Cypher System Rulebook, p. 396'
 level_range: '1d6 + 4'
 effect_text:
   en: >-

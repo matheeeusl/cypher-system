@@ -1,7 +1,7 @@
 id: nutrition-and-hydration
 name: { en: 'Nutrition and hydration', 'pt-BR': 'Nutrição e hidratação' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 393'
+page_ref: 'Cypher System Rulebook, p. 393'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

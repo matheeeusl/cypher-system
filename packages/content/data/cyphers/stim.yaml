@@ -1,7 +1,7 @@
 id: stim
 name: { en: 'Stim', 'pt-BR': 'Estimulante' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 398'
+page_ref: 'Cypher System Rulebook, p. 398'
 level_range: '1d6'
 effect_text:
   en: >-

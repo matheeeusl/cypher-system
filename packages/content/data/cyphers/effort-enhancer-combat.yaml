@@ -1,7 +1,7 @@
 id: effort-enhancer-combat
 name: { en: 'Effort enhancer (combat)', 'pt-BR': 'Intensificador de esforço (combate)' }
 category: subtle
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6 + 1'
 effect_text:
   en: >-

@@ -1,7 +1,7 @@
 id: infiltrator
 name: { en: 'Infiltrator', 'pt-BR': 'Infiltrador' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 390'
+page_ref: 'Cypher System Rulebook, p. 390'
 level_range: '1d6'
 effect_text:
   en: >-

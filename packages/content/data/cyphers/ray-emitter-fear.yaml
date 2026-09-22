@@ -1,7 +1,7 @@
 id: ray-emitter-fear
 name: { en: 'Ray emitter (fear)', 'pt-BR': 'Emissor de raio (medo)' }
 category: fantastic
-page_ref: 'Cypher System Rulebook, page 395'
+page_ref: 'Cypher System Rulebook, p. 395'
 level_range: '1d6 + 2'
 effect_text:
   en: >-

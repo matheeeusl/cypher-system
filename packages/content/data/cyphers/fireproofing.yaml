@@ -1,7 +1,7 @@
 id: fireproofing
 name: { en: 'Fireproofing', 'pt-BR': 'À prova de fogo' }
 category: manifest
-page_ref: 'Cypher System Rulebook, page 388'
+page_ref: 'Cypher System Rulebook, p. 388'
 level_range: '1d6 + 4'
 effect_text:
   en: >-
