@@ -4,7 +4,7 @@ name:
   pt-BR: Recuperação Rápida
 description:
   en: Your second recovery roll (usually requiring ten minutes) is only a single action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sua segunda rolagem de recuperação (que normalmente exige dez minutos) é apenas uma única ação.'
 cost: null
 action_type: enabler
 sources:

@@ -7,7 +7,7 @@ description:
     For as long as you speak, you keep the attention of all level 2 or
     lower NPCs who can hear you. If you also have the Enthrall
     ability, you can similarly captivate all level 3 NPCs.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto você falar, mantém a atenção de todos os PNJs de nível 2 ou inferior que puderem ouvi-lo. Se você também tiver a habilidade Enfeitiçar, pode cativar da mesma forma todos os PNJs de nível 3.'
 cost: null
 action_type: action_to_initiate
 sources:

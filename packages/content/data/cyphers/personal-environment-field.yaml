@@ -1,5 +1,5 @@
 id: personal-environment-field
-name: { en: 'Personal environment field', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Personal environment field', 'pt-BR': 'Campo ambiental pessoal' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 2'
@@ -12,5 +12,11 @@ effect_text:
     ray). A small number of these cyphers (1%) accommodate the preferred
     environment of a nonhuman, nonterrestrial creature.
   pt-BR: >-
-    Tradução em breve.
+    Cria uma aura de temperatura e atmosfera que sustenta um ser humano
+    com segurança por um dia. A aura se estende por 30 centímetros (1
+    pé) ao redor do usuário (o dobro desse raio se a cifra for de nível
+    7 ou superior). Ela não protege contra mudanças bruscas de
+    temperatura (como as causadas por um raio de calor). Uma pequena
+    parcela dessas cifras (1%) acomoda o ambiente preferido de uma
+    criatura não humana e não terrestre.
 effect_table: null

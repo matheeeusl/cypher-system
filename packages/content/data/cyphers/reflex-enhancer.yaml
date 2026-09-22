@@ -1,5 +1,5 @@
 id: reflex-enhancer
-name: { en: 'Reflex enhancer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Reflex enhancer', 'pt-BR': 'Intensificador de reflexos' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6'
@@ -9,5 +9,8 @@ effect_text:
     juggling, operating on a patient, defusing a bomb, and so on—are eased by
     two steps for one hour.
   pt-BR: >-
-    Tradução em breve.
+    Todas as tarefas que envolvem destreza manual — como bater
+    carteira, arrombar fechaduras, fazer malabarismo, operar um
+    paciente, desarmar uma bomba, e assim por diante — são facilitadas
+    em dois níveis por uma hora.
 effect_table: null

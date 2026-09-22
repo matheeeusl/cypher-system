@@ -8,7 +8,7 @@ description:
     range. On a successful Intellect roll, your defense roll against
     the creature's next attack before the end of the next round is
     eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você despeja um fluxo de bobagens para distrair um inimigo dentro de uma distância imediata. Em uma rolagem de Intelecto bem-sucedida, sua rolagem de defesa contra o próximo ataque da criatura antes do fim do próximo round é facilitada.'
 cost:
   pool: intellect
   amount: 4

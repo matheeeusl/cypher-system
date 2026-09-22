@@ -21,7 +21,7 @@ description:
     the ability is 7 Intellect points instead of 10. If you already
     have the Storm Seed ability, you can immediately replace it with a
     new ability of the same tier.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você altera o clima em sua região geral. Se realizada em ambiente fechado, isso cria efeitos menores, como neblina, leves mudanças de temperatura, e assim por diante. Se realizada ao ar livre, você pode criar chuva, neblina, neve, vento ou qualquer outro tipo de clima normal (não excessivamente severo). A mudança dura um período natural de tempo, de forma que uma tempestade pode durar uma hora, neblina duas ou três horas, e neve algumas horas (ou dez minutos se estiver fora de estação). Nos primeiros dez minutos após ativar esta habilidade, você pode criar efeitos mais dramáticos e específicos, como raios, granizo gigante, tornados, ventos de força de furacão, e assim por diante. Esses efeitos devem ocorrer dentro de 300 metros (1.000 pés) da sua localização. Você deve gastar seu turno se concentrando para criar um efeito ou mantê-lo em um novo round. Esses efeitos causam 6 pontos de dano a cada round. Se você tiver esta habilidade de outra fonte, o custo da habilidade é de 7 pontos de Intelecto em vez de 10. Se você já tiver a habilidade Semente de Tempestade, pode substituí-la imediatamente por uma nova habilidade do mesmo grau.'
 cost:
   pool: intellect
   amount: 10

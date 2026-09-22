@@ -1,27 +1,34 @@
 id: fast
 name:
   en: Fast
-  pt-BR: Tradução em breve.
+  pt-BR: Veloz
 description:
   en: >-
     You're fleet of foot. Because you're quick, you can accomplish tasks
     more rapidly than others can. You're not just quick on your feet,
     however—you're quick with your hands, and you think and react
     quickly. You even talk quickly.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem pés ligeiros. Por ser rápido, você consegue realizar tarefas
+    mais depressa do que os outros. No entanto, você não é rápido apenas
+    com os pés — você é rápido com as mãos, e pensa e reage com
+    velocidade. Você até fala rápido.
 pool_bonus:
   - stat: speed
     amount: 2
 characteristics:
   - name:
       en: Fast
-      pt-BR: Tradução em breve.
+      pt-BR: Veloz
     description:
       en: >-
         You can move a short distance and still take another action in
         the same round, or you can move a long distance as your action
         without needing to make any kind of roll.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você pode se mover a uma distância curta e ainda realizar outra
+        ação na mesma rodada, ou pode se mover a uma distância longa
+        como sua ação, sem precisar fazer qualquer tipo de rolagem.
 skill_training:
   - skill_id: running
     choice_count: null
@@ -29,14 +36,18 @@ inabilities:
   - en: >-
       You're a sprinter, not a long-distance runner. You don't have a
       lot of stamina. Might defense rolls are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você é um velocista, não um corredor de longa distância. Você não
+      tem muito fôlego. Rolagens de defesa de Força são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: You jumped in to save one of the other PCs who was in dire need.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você interveio para salvar um dos outros personagens que estava em
+      apuros graves.
   - en: One of the other PCs recruited you for your unique talents.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens o recrutou por seus talentos únicos.
   - en: You're impulsive, and it seemed like a good idea at the time.
-    pt-BR: Tradução em breve.
+    pt-BR: Você é impulsivo, e pareceu uma boa ideia na hora.
   - en: This mission ties in with a personal goal of your own.
-    pt-BR: Tradução em breve.
+    pt-BR: Esta missão está ligada a um objetivo pessoal seu.

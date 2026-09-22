@@ -4,7 +4,7 @@ name:
   pt-BR: Abraçar a Noite
 description:
   en: You fashion a truly horrifying facade of a creature from swirling ribbons of dark matter and launch it at your foes within long range. Each round, you can attack a target within long range using the creation as your weapon. When you attack, the creature inserts hair-fine tendrils of shadow into the target's eyes and brain. The target takes 3 points of Intellect damage (ignores Armor) and is stunned for one round so that it loses its next turn. Alternatively, you can cause the creature to take other actions, as long as you are able to see it and mentally control it as your action. The creature disperses after about a minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você molda uma fachada verdadeiramente aterrorizante de uma criatura a partir de fitas giratórias de matéria escura e a lança contra seus inimigos dentro de uma distância longa. A cada round, você pode atacar um alvo dentro de uma distância longa usando a criação como sua arma. Ao atacar, a criatura insere tentáculos de sombra finos como fios nos olhos e no cérebro do alvo. O alvo sofre 3 pontos de dano de Intelecto (ignora Armadura) e fica atordoado por um round, perdendo seu próximo turno. Alternativamente, você pode fazer a criatura realizar outras ações, desde que consiga vê-la e controlá-la mentalmente como sua ação. A criatura se dissipa depois de cerca de um minuto.'
   # Note: source cost is printed as "7+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Intellect points here, flagged for schema review (same

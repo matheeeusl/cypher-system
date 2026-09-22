@@ -17,7 +17,7 @@ description:
     additional victim. Fooled creatures remain so for up to an hour,
     unless your actions or other circumstances reveal your true
     identity earlier.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você convence todas as criaturas inteligentes que conseguem vê-lo, ouvi-lo e entendê-lo de que você é alguém ou algo diferente do que realmente é. Você não se passa por um indivíduo específico conhecido pela vítima. Em vez disso, convence a vítima de que você é alguém que ela não conhece, pertencente a uma certa categoria de pessoas. "Somos do governo." "Sou apenas um simples fazendeiro da cidade vizinha." "Seu comandante me enviou." Um disfarce não é necessário, mas um bom disfarce quase certamente será um recurso na rolagem envolvida. Se você tentar convencer mais de uma criatura, o custo de Intelecto aumenta em 1 ponto por vítima adicional. Criaturas enganadas permanecem assim por até uma hora, a menos que suas ações ou outras circunstâncias revelem sua verdadeira identidade antes.'
   # Note: source cost is printed as "2+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Intellect points here (same approximation used for

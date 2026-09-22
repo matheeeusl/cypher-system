@@ -7,7 +7,7 @@ description:
     When you use Disrupting Touch, Scratch Existence, or Phase
     Detonation, you inflict an additional 5 points of damage that
     ignores Armor.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Toque Perturbador, Arranhar Existência ou Detonação de Fase, causa 5 pontos adicionais de dano que ignoram Armadura.'
 cost: null
 action_type: enabler
 sources:

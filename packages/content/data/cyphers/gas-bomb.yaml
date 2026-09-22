@@ -1,5 +1,5 @@
 id: gas-bomb
-name: { en: 'Gas bomb', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Gas bomb', 'pt-BR': 'Bomba de gás' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6 + 2'
@@ -9,72 +9,75 @@ effect_text:
     immediate area. The cloud lingers for 1d6 rounds unless conditions dictate
     otherwise. Roll a d100 to determine the effect.
   pt-BR: >-
-    Tradução em breve.
+    Arremessada a uma distância curta, ela explode em uma nuvem venenosa
+    dentro de uma área imediata. A nuvem permanece por 1d6 rodadas, a
+    menos que as condições ditem o contrário. Role 1d100 para determinar
+    o efeito.
 effect_table:
   label:
     en: 'Gas Bomb Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos da Bomba de Gás'
   entries:
     - range: '01–10'
       text:
-        { en: 'Thick smoke: occludes sight while the cloud lasts.', 'pt-BR': 'Tradução em breve.' }
+        { en: 'Thick smoke: occludes sight while the cloud lasts.', 'pt-BR': 'Fumaça densa: obstrui a visão enquanto a nuvem durar.' }
     - range: '11–20'
       text:
         {
           en: "Choking gas: living creatures that breathe lose their actions to choking and coughing for a number of rounds equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás sufocante: criaturas vivas que respiram perdem suas ações engasgando e tossindo por uma quantidade de rodadas igual ao nível da cifra.',
         }
     - range: '21–50'
       text:
         {
           en: "Poison gas: living creatures that breathe suffer damage equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás venenoso: criaturas vivas que respiram sofrem dano igual ao nível da cifra.',
         }
     - range: '51–60'
       text:
         {
           en: "Corrosive gas: everything suffers damage equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás corrosivo: tudo sofre dano igual ao nível da cifra.',
         }
     - range: '61–65'
       text:
         {
           en: "Hallucinogenic gas: living creatures that breathe lose their actions to hallucinations and visions for a number of rounds equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás alucinógeno: criaturas vivas que respiram perdem suas ações devido a alucinações e visões por uma quantidade de rodadas igual ao nível da cifra.',
         }
     - range: '66–70'
       text:
         {
           en: "Nerve gas: living creatures that breathe suffer Speed damage equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás neurotóxico: criaturas vivas que respiram sofrem dano de Velocidade igual ao nível da cifra.',
         }
     - range: '71–80'
       text:
         {
           en: "Mind-numbing gas: living creatures that breathe suffer Intellect damage equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás entorpecente mental: criaturas vivas que respiram sofrem dano de Intelecto igual ao nível da cifra.',
         }
     - range: '81–83'
       text:
         {
           en: "Fear gas: living creatures that breathe and think flee in a random direction in fear (or are paralyzed with fear) for a number of rounds equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás do medo: criaturas vivas que respiram e pensam fogem em uma direção aleatória por medo (ou ficam paralisadas de medo) por uma quantidade de rodadas igual ao nível da cifra.',
         }
     - range: '84–86'
       text:
         {
           en: 'Amnesia gas: living creatures that breathe and think permanently lose all memory of the last minute.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás da amnésia: criaturas vivas que respiram e pensam perdem permanentemente toda a memória do último minuto.',
         }
     - range: '87–96'
       text:
         {
           en: "Sleep gas: living creatures that breathe fall asleep for a number of rounds equal to the cypher's level or until awoken by a violent action or an extremely loud noise.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás do sono: criaturas vivas que respiram adormecem por uma quantidade de rodadas igual ao nível da cifra, ou até serem acordadas por uma ação violenta ou um ruído extremamente alto.',
         }
     - range: '97–00'
       text:
         {
           en: "Rage gas: living creatures that breathe and think make a melee attack on the nearest creature and continue to do so for a number of rounds equal to the cypher's level.",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Gás da fúria: criaturas vivas que respiram e pensam fazem um ataque corpo a corpo contra a criatura mais próxima e continuam fazendo isso por uma quantidade de rodadas igual ao nível da cifra.',
         }

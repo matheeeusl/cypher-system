@@ -4,7 +4,7 @@ name:
   pt-BR: Superar em Astúcia
 description:
   en: When you make a Speed defense roll, you can use your Intellect in place of your Speed.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao fazer uma rolagem de defesa de Velocidade, você pode usar seu Intelecto no lugar da sua Velocidade.'
 cost: null
 action_type: enabler
 sources:

@@ -1,5 +1,5 @@
 id: energy-boost
-name: { en: 'Energy boost', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Energy boost', 'pt-BR': 'Impulso de energia' }
 category: power_boost
 page_ref: 'Cypher System Rulebook, page 401'
 level_range: '1d6'
@@ -8,5 +8,6 @@ effect_text:
     This cypher boosts an ability that has a stat Pool cost. The cost is
     reduced to 0.
   pt-BR: >-
-    Tradução em breve.
+    Esta cifra intensifica uma habilidade que tem um custo em Reserva de
+    atributo. O custo é reduzido a 0.
 effect_table: null

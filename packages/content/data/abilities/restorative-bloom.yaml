@@ -11,7 +11,7 @@ description:
     their maximum values, as if they were fully rested. Eating a
     second food produced by this ability in a day has no effect. If
     the food is not eaten within ten minutes, it spoils.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando Corpo de Madeira ou Grande Árvore está em efeito, você produz uma flor, bolota, fruta ou item comestível semelhante à base de plantas. Uma criatura que comer esse alimento fica nutrida por um dia inteiro e restaura sua Reserva de Força, Reserva de Velocidade e Reserva de Intelecto aos seus valores máximos, como se estivesse completamente descansada. Comer um segundo alimento produzido por esta habilidade em um dia não tem efeito. Se o alimento não for consumido em dez minutos, estraga.'
   # Note: source tag is "Action to produce, action to eat."
 cost:
   pool: might

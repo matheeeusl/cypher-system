@@ -1,5 +1,5 @@
 id: detonation-matter-disruption
-name: { en: 'Detonation (matter disruption)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (matter disruption)', 'pt-BR': 'Detonação (disrupção da matéria)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 387'
 level_range: '1d6 + 4'
@@ -9,5 +9,10 @@ effect_text:
     releasing nanites that rearrange matter in random ways. Inflicts damage equal to the cypher's level.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, liberando nanites que reorganizam a
+    matéria de formas aleatórias. Inflige dano igual ao nível da cifra.
+    (Todas as detonações que causam dano infligem no mínimo 2 pontos de
+    dano a quem estiver no raio de alcance, independentemente das
+    rolagens de ataque ou defesa.)
 effect_table: null

@@ -4,7 +4,7 @@ name:
   pt-BR: Praticado com Armas de Fogo
 description:
   en: You are practiced with guns and suffer no penalty when using one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é praticado com armas de fogo e não sofre nenhuma penalidade ao usar uma.'
 cost: null
 action_type: enabler
 sources:

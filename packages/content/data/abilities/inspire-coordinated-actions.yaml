@@ -9,7 +9,7 @@ description:
     of them). If any of them choose to take that exact action, they can
     do so as an additional action immediately. This doesn't interfere
     with them taking their normal actions on their turns.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se seus aliados conseguem vê-lo e entendê-lo facilmente, você pode instruir cada um deles a realizar uma ação específica (a mesma ação para todos). Se algum deles optar por realizar exatamente essa ação, pode fazê-lo como uma ação adicional imediatamente. Isso não interfere neles realizarem suas ações normais nos seus turnos.'
 cost:
   pool: intellect
   amount: 9

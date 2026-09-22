@@ -1,5 +1,5 @@
 id: equipment-cache
-name: { en: 'Equipment cache', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Equipment cache', 'pt-BR': 'Depósito de equipamento' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 1'
@@ -10,5 +10,9 @@ effect_text:
     level. The piece of equipment persists for up to one day, unless its
     fundamental nature allows only a single use (such as with a grenade).
   pt-BR: >-
-    Tradução em breve.
+    O usuário pode vasculhar e produzir a partir da cifra um item de
+    equipamento desejado (não um artefato) cujo nível não exceda o
+    nível da cifra. O item de equipamento persiste por até um dia, a
+    menos que sua natureza fundamental permita apenas um único uso (como
+    uma granada).
 effect_table: null

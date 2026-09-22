@@ -7,7 +7,7 @@ description:
     You can take two separate actions in this round. In the following
     round, all actions are hindered. You cannot use this ability two
     rounds in a row.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode realizar duas ações separadas neste round. No round seguinte, todas as ações são dificultadas. Você não pode usar esta habilidade em dois rounds seguidos.'
 cost:
   pool: speed
   amount: 4

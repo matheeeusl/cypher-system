@@ -11,7 +11,7 @@ description:
     modifiers to the attack roll, but you can apply Effort for
     accuracy). If the attack hits, the target takes damage from your
     opponent's attack.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando um oponente errar você, pode redirecionar o ataque dele para outro alvo (uma criatura ou objeto) à sua escolha que esteja dentro de uma distância imediata de você. Faça uma rolagem de ataque sem modificadores contra o novo alvo (não use nenhum dos seus modificadores ou do oponente na rolagem de ataque, mas pode aplicar Esforço para precisão). Se o ataque acertar, o alvo sofre o dano do ataque do seu oponente.'
 cost:
   pool: speed
   amount: 3

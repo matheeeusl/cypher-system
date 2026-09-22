@@ -12,7 +12,7 @@ description:
     illumination, or visibility. Further, you inflict 1 additional
     point of damage with the attack. You can remain on overwatch as
     long as you wish, within reason.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você usa uma arma à distância para mirar em uma área limitada (como uma porta, um corredor, ou o lado leste da clareira) e faz um ataque contra o próximo alvo viável que entrar nessa área. Isso funciona como uma ação de espera, mas você também anula qualquer benefício que o alvo teria de cobertura, posição, surpresa, alcance, iluminação ou visibilidade. Além disso, você causa 1 ponto adicional de dano com o ataque. Você pode permanecer em vigília de combate enquanto desejar, dentro do razoável.'
 cost:
   pool: intellect
   amount: 1

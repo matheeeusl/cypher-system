@@ -8,7 +8,7 @@ description:
     part of another action, you can move up to a long distance. As an
     action, you can move up to 200 feet (60 m), or up to 500 feet
     (150 m) as a Speed-based task with a difficulty of 4.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se move muito mais longe do que o normal em um round. Isso significa que, como parte de outra ação, você pode se mover até uma distância longa. Como uma ação, você pode se mover até 60 metros (200 pés), ou até 150 metros (500 pés) como uma tarefa baseada em Velocidade com dificuldade 4.'
 cost: null
 action_type: enabler
 sources:

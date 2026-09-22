@@ -12,7 +12,7 @@ description:
     crude and can have no moving parts, so you can make a sword, a
     shield, a short ladder, and so on. The object has the approximate
     mass of the real object and is level 2.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria um objeto de luz sólida em qualquer forma que consiga imaginar do seu tamanho ou menor, e ele persiste por cerca de um minuto (ou mais, se você se concentrar nele depois desse tempo). O objeto aparece em uma área adjacente a você, mas depois disso você pode movê-lo até uma distância curta a cada round como parte de outra ação. É rústico e não pode ter partes móveis, então você pode fazer uma espada, um escudo, uma escada curta, e assim por diante. O objeto tem aproximadamente a massa do objeto real e é de nível 2.'
 cost:
   pool: intellect
   amount: 2

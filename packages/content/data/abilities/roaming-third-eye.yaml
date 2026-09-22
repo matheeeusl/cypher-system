@@ -8,7 +8,7 @@ description:
     anywhere within long range. In addition, until that ability ends,
     you can use an action to move the sensor anywhere within short
     range of its starting position.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa sua habilidade Terceiro Olho, pode colocar o sensor em qualquer lugar dentro de uma distância longa. Além disso, até essa habilidade terminar, você pode usar uma ação para mover o sensor para qualquer lugar dentro de uma distância curta da sua posição inicial.'
 cost:
   pool: intellect
   amount: 3

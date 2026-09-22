@@ -6,7 +6,7 @@ description:
   en: >-
     You add +1 damage to one type of weapon attack of your choice:
     melee weapon attacks or ranged weapon attacks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você adiciona +1 de dano a um tipo de ataque com arma à sua escolha: ataques com armas corpo a corpo ou ataques com armas de longo alcance.'
 cost: null
 action_type: enabler
 sources:

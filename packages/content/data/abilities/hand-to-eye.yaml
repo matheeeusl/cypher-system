@@ -8,7 +8,7 @@ description:
     dexterity, such as pickpocketing, lockpicking, games involving
     agility, and so on. Each use lasts up to a minute; a new use (to
     switch tasks) replaces the previous use.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Esta habilidade concede um recurso a quaisquer tarefas envolvendo destreza manual, como bater carteira, arrombar fechaduras, jogos envolvendo agilidade, e assim por diante. Cada uso dura até um minuto; um novo uso (para trocar de tarefa) substitui o uso anterior.'
 cost:
   pool: speed
   amount: 2

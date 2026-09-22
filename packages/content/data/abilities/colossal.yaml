@@ -15,7 +15,7 @@ description:
     you apply two levels of Effort, your base height is 80 feet
     (24 m), and you add a total of 17 temporary points to your Might
     Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Aumentar, pode optar por crescer até uma altura base de 18 metros (60 pés). Ao fazer isso, adiciona mais 5 pontos temporários à sua Reserva de Força (além de quaisquer de Gigantesco e Ainda Maior), e causa 2 pontos adicionais de dano com ataques corpo a corpo (além de quaisquer da sua habilidade Enorme). Para cada nível de Esforço que você aplicar para aumentar ainda mais sua altura, sua altura total aumenta em 3 metros (10 pés), e você adiciona mais 1 ponto à sua Reserva de Força. Assim, na primeira vez que você usar Aumentar após uma rolagem de recuperação de dez horas, se aplicar dois níveis de Esforço, sua altura base será 24 metros (80 pés), e você adicionará um total de 17 pontos temporários à sua Reserva de Força.'
 cost: null
 action_type: enabler
 sources:

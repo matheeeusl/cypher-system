@@ -6,7 +6,7 @@ description:
   en: >-
     When you make an unarmed attack (such as a punch or kick), it
     counts as a medium weapon instead of a light weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você faz um ataque desarmado (como um soco ou chute), ele conta como uma arma média em vez de uma arma leve.'
 cost: null
 action_type: enabler
 sources:

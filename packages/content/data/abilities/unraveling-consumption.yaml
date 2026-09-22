@@ -13,7 +13,7 @@ description:
     creature. If the creature takes enough damage to knock it
     unconscious or kill it, it crumbles into ash, dust, or some other
     inert material.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode drenar energia de uma criatura viva tocando-a e se concentrando por um minuto ou mais. Cada minuto que você passa em contato com a criatura e concentrada nela causa 1 ponto de dano a ela (ignora Armadura) e restaura 1 ponto à sua Reserva de Força ou Velocidade. Devido ao contato prolongado exigido por esta habilidade, normalmente você só pode usá-la em uma criatura disposta ou indefesa. Se a criatura sofrer dano suficiente para ficar inconsciente ou morrer, ela se desfaz em cinzas, poeira ou outro material inerte.'
 cost: null
 action_type: action_to_initiate
 sources:

@@ -8,7 +8,7 @@ description:
     jump up, down, or across to anywhere you choose within long range
     if you have a clear and unobstructed path to that location. You
     land safely.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você salta pelo ar e pousa a alguma distância. Você pode pular para cima, para baixo ou através, para qualquer lugar que escolher dentro de uma distância longa, se tiver um caminho claro e desobstruído até esse local. Você pousa em segurança.'
 cost:
   pool: intellect
   amount: 2

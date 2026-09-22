@@ -1,5 +1,5 @@
 id: detonation-pressure
-name: { en: 'Detonation (pressure)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (pressure)', 'pt-BR': 'Detonação (pressão)' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 387'
 level_range: '1d6 + 2'
@@ -9,5 +9,11 @@ effect_text:
     inflicting impact damage equal to the cypher's level. Also moves unattended objects out of the area if they weigh less than 20 pounds (9 kg) per cypher level.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, infligindo dano de impacto igual ao
+    nível da cifra. Também desloca para fora da área objetos sem dono
+    que pesem menos de 9 kg (20 libras) por nível da cifra. (Todas as
+    detonações que causam dano infligem no mínimo 2 pontos de dano a
+    quem estiver no raio de alcance, independentemente das rolagens de
+    ataque ou defesa.)
 effect_table: null

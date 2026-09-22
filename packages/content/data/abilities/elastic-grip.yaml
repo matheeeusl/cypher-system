@@ -13,7 +13,7 @@ description:
     continue to hold it each round as your subsequent actions,
     automatically inflicting 4 points of damage each round by
     squeezing.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu ataque com seus membros ou corpo elásticos é facilitado. Se você acertar, pode agarrar o alvo, impedindo-o de se mover no seu próximo turno. Enquanto você segurar o alvo, os ataques dele ou tentativas de se libertar são dificultados. Se o alvo tentar se libertar em vez de atacar, você deve ter sucesso em uma tarefa baseada em Força para manter seu aperto. Se o alvo não conseguir se libertar, você pode continuar a segurá-lo a cada round como suas ações subsequentes, causando automaticamente 4 pontos de dano a cada round ao espremê-lo.'
 cost: null
 action_type: enabler
 sources:

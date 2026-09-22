@@ -14,7 +14,7 @@ description:
     If you project yourself into the future, you remain there until
     the present catches up to you (to anyone with you in the present,
     you vanish for one hour and reappear in the place you left).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você desaparece e viaja até uma hora para o futuro ou o passado. Enquanto deslocada no tempo, você percebe os eventos conforme acontecem a partir da sua posição usando seus sentidos normais, mas não consegue interagir com nada nem mudar nada. Se você se projetar para o passado, permanece lá por uma hora, momento em que alcança o presente (para qualquer um com você no presente, você apenas parece piscar e desaparecer por um instante). Se você se projetar para o futuro, permanece lá até o presente alcançá-la (para qualquer um com você no presente, você desaparece por uma hora e reaparece no lugar de onde saiu).'
 cost:
   pool: intellect
   amount: 7

@@ -18,7 +18,7 @@ description:
     happened and reacts according to its nature and your relationship
     to it; assuming control might have soured that relationship if it
     was previously a positive one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você controla as ações de outra criatura com quem interagiu ou que estudou por pelo menos um round. Este efeito dura dez minutos. O alvo deve ser de nível 2 ou inferior. Uma vez assumido o controle, o alvo age como se quisesse realizar seu desejo da melhor forma possível, usando livremente seu próprio julgamento, a menos que você use uma ação para dar-lhe uma instrução específica caso a caso. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do alvo. Assim, para tentar comandar um alvo de nível 5 (três níveis acima do limite normal), você deve aplicar três níveis de Esforço. Quando o efeito termina, o alvo se lembra de tudo o que aconteceu e reage de acordo com sua natureza e sua relação com você; assumir o controle pode ter azedado essa relação, se ela era positiva anteriormente.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here (same approximation used for

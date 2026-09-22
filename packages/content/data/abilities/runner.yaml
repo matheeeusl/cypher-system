@@ -4,7 +4,7 @@ name:
   pt-BR: Corredor
 description:
   en: Your standard movement increases from short to long.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu deslocamento padrão aumenta de curto para longo.'
 cost: null
 action_type: enabler
 sources:

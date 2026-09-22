@@ -4,7 +4,7 @@ name:
   pt-BR: Sobrecarregar Energia
 description:
   en: When you use Release Energy, it inflicts an additional 2 points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Liberar Energia, ela causa 2 pontos adicionais de dano.'
 cost: null
 action_type: enabler
 sources:

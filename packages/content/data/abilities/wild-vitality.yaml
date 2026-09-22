@@ -12,7 +12,7 @@ description:
     (including attacks and defenses), +2 to your Might Edge and Speed
     Edge, and 2 additional points of damage on all successful melee
     attacks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se sintoniza com a força vital de uma criatura natural (do seu tamanho ou maior) dentro de uma distância longa que consiga ver. Esta é uma tarefa de Intelecto de nível 2. Se tiver sucesso, a criatura não é prejudicada, mas através da ressonância com sua vitalidade selvagem, você ganha vários benefícios por até um minuto: um recurso em todas as suas tarefas baseadas em Força (incluindo ataques e defesas), +2 na sua Margem de Força e Margem de Velocidade, e 2 pontos adicionais de dano em todos os ataques corpo a corpo bem-sucedidos.'
 cost:
   pool: intellect
   amount: 4

@@ -4,7 +4,7 @@ name:
   pt-BR: Uma Mão no Volante
 description:
   en: As an action, you can cast a one-action spell and attempt a driving task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Como uma ação, você pode conjurar um feitiço de uma ação e tentar uma tarefa de direção.'
 cost: null
 action_type: enabler
 sources:

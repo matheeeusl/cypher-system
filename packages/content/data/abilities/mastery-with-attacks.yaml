@@ -8,7 +8,7 @@ description:
     bashing, light bladed, light ranged, medium bashing, medium
     bladed, medium ranged, heavy bashing, heavy bladed, or heavy
     ranged. You are specialized in attacks using that type of weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um tipo de ataque no qual seja treinada: contundente leve, de lâmina leve, à distância leve, contundente médio, de lâmina médio, à distância médio, contundente pesado, de lâmina pesado, ou à distância pesado. Você fica especializada em ataques usando esse tipo de arma.'
 cost: null
 action_type: enabler
 sources:

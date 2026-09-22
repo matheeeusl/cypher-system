@@ -7,7 +7,7 @@ description:
     You are trained in listening and spotting things. In addition,
     most of the time, the GM should alert you if you're about to walk
     into an ambush or a trap that is lower than level 5.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinado em ouvir e detectar coisas. Além disso, na maioria das vezes, o Mestre deve alertá-lo se você estiver prestes a cair em uma emboscada ou armadilha de nível inferior a 5.'
 cost: null
 action_type: enabler
 sources:

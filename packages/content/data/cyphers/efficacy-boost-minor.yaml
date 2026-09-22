@@ -1,5 +1,5 @@
 id: efficacy-boost-minor
-name: { en: 'Efficacy boost (minor)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Efficacy boost (minor)', 'pt-BR': 'Impulso de eficácia (menor)' }
 category: power_boost
 page_ref: 'Cypher System Rulebook, page 401'
 level_range: '1d6'
@@ -8,5 +8,6 @@ effect_text:
     This cypher boosts an ability that requires a skill roll. The use of the
     ability is eased.
   pt-BR: >-
-    Tradução em breve.
+    Esta cifra intensifica uma habilidade que exige uma rolagem de
+    perícia. O uso da habilidade é facilitado.
 effect_table: null

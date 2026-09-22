@@ -1,5 +1,5 @@
 id: detonation
-name: { en: 'Detonation', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation', 'pt-BR': 'Detonação' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -9,19 +9,24 @@ effect_text:
     inflicting damage equal to the cypher's level. Roll a d100 to determine the type of damage.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, infligindo dano igual ao nível da
+    cifra. Role 1d100 para determinar o tipo de dano. (Todas as
+    detonações que causam dano infligem no mínimo 2 pontos de dano a
+    quem estiver no raio de alcance, independentemente das rolagens de
+    ataque ou defesa.)
 effect_table:
-  label: { en: 'Detonation Effects', 'pt-BR': 'Tradução em breve.' }
+  label: { en: 'Detonation Effects', 'pt-BR': 'Efeitos da Detonação' }
   entries:
     - range: '01–10'
-      text: { en: 'Cell-disrupting (harms only flesh)', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Cell-disrupting (harms only flesh)', 'pt-BR': 'Rompimento celular (prejudica apenas carne)' }
     - range: '11–30'
-      text: { en: 'Corrosive', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Corrosive', 'pt-BR': 'Corrosivo' }
     - range: '31–40'
-      text: { en: 'Electrical discharge', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Electrical discharge', 'pt-BR': 'Descarga elétrica' }
     - range: '41–50'
-      text: { en: 'Heat drain (cold)', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Heat drain (cold)', 'pt-BR': 'Dreno de calor (frio)' }
     - range: '51–75'
-      text: { en: 'Fire', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Fire', 'pt-BR': 'Fogo' }
     - range: '76–00'
-      text: { en: 'Shrapnel', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Shrapnel', 'pt-BR': 'Estilhaços' }

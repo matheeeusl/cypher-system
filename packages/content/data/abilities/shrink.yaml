@@ -21,7 +21,7 @@ description:
     Shrink before your next ten-hour recovery roll, you must apply an
     additional level of Effort (one level of Effort for the second
     use, two levels of Effort for the third use, and so on).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você (e suas roupas ou traje) fica muito menor que seu tamanho normal. Você fica com 15 centímetros (6 polegadas) de altura e permanece assim por cerca de um minuto. Durante esse tempo, você adiciona 4 pontos à sua Reserva de Velocidade e adiciona +2 à sua Margem de Velocidade. Enquanto estiver menor que o normal, suas rolagens de defesa de Velocidade são facilitadas, sua velocidade de movimento é um décimo do normal, e seus ataques causam metade do dano normal (divida o dano total pela metade após todos os bônus, Esforço e outros modificadores de dano). Você pode voltar ao seu tamanho normal como parte de outra ação. Quando os efeitos de Encolher terminam, sua Margem de Velocidade, velocidade de movimento e dano retornam ao normal, e você subtrai da sua Reserva de Velocidade um número de pontos igual ao que ganhou (se isso reduzir a Reserva a 0, subtraia o excedente primeiro da sua Reserva de Força e depois, se necessário, da sua Reserva de Intelecto). Cada vez adicional que você usar Encolher antes da sua próxima rolagem de recuperação de dez horas, deve aplicar um nível adicional de Esforço (um nível de Esforço para o segundo uso, dois níveis de Esforço para o terceiro uso, e assim por diante).'
   # Note: source cost is printed as "1+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

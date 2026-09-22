@@ -13,7 +13,7 @@ description:
     use an action to whip the material so that it abrades everything
     within immediate range, dealing 1 point of damage to each creature
     and object in the area.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pedrinhas, terra, areia e detritos se elevam no ar ao seu redor, formando uma nuvem giratória. A nuvem se estende até uma distância imediata, se move com você, e dura um minuto. Quando termina, todos os materiais caem ao chão ao seu redor. A nuvem dificulta que outras criaturas a ataquem, concedendo-lhe um recurso em rolagens de defesa de Velocidade. Além disso, enquanto a nuvem estiver ao seu redor, você pode usar uma ação para chicotear o material, fazendo-o arranhar tudo dentro de uma distância imediata, causando 1 ponto de dano a cada criatura e objeto na área.'
 cost:
   pool: intellect
   amount: 5

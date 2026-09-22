@@ -15,7 +15,7 @@ description:
     you and the creature have an asset on any task that involves
     perception. When you take an action, you use the creature's body
     to perform that action if they allow it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você coloca sua mente no corpo de uma criatura disposta que escolher dentro de uma distância curta e permanece nesse corpo por até uma hora. Seu próprio corpo cai e fica inconsciente até esta habilidade terminar. Você vê, ouve, cheira, toca e prova usando os sentidos da criatura cujo corpo habita. Quando fala, as palavras vêm do seu corpo indefeso, e a criatura que você habita as ouve em sua mente. A criatura que você habita pode usar sua Margem de Intelecto no lugar da própria. Além disso, você e a criatura têm um recurso em qualquer tarefa envolvendo percepção. Quando realiza uma ação, você usa o corpo da criatura para realizá-la, se ela permitir.'
 cost:
   pool: intellect
   amount: 6

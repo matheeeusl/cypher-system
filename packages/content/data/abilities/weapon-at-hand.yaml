@@ -7,7 +7,7 @@ description:
     You're practiced with all weapons. To gain this benefit with a
     weapon you've never used before, you must spend at least ten
     minutes practicing with it first.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é praticada com todas as armas. Para obter esse benefício com uma arma que nunca usou antes, deve passar pelo menos dez minutos praticando com ela primeiro.'
 cost: null
 action_type: enabler
 sources:

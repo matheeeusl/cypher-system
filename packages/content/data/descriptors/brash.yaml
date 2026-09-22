@@ -1,7 +1,7 @@
 id: brash
 name:
   en: Brash
-  pt-BR: Tradução em breve.
+  pt-BR: Atrevido
 description:
   en: >-
     You're a self-assertive sort, confident in your abilities, energetic,
@@ -11,19 +11,29 @@ description:
     your nature to care what other people think about you, unless those
     people are your friends or family. Even someone as brash as you knows
     that friends sometimes have to come first.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é do tipo autoafirmativo, confiante em suas habilidades, cheio
+    de energia e talvez um pouco irreverente com ideias das quais
+    discorda. Algumas pessoas o chamam de ousado e corajoso, mas aqueles
+    que você já colocou em seu devido lugar podem chamá-lo de arrogante e
+    cheio de si. Tanto faz. Não é da sua natureza se importar com o que
+    os outros pensam de você, a menos que sejam seus amigos ou
+    familiares. Até mesmo alguém tão atrevido quanto você sabe que os
+    amigos às vezes precisam vir em primeiro lugar.
 pool_bonus:
   - stat: speed
     amount: 2
 characteristics:
   - name:
       en: Bold
-      pt-BR: Tradução em breve.
+      pt-BR: Ousado
     description:
       en: >-
         You are trained in all actions that involve overcoming or
         ignoring the effects of fear or intimidation.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você é treinado em todas as ações que envolvem superar ou ignorar
+        os efeitos de medo ou intimidação.
 skill_training:
   - skill_id: initiative
     choice_count: null
@@ -33,16 +43,24 @@ connection_options:
   - en: >-
       You noticed something weird going on, and without much thought, you
       jumped in with both feet.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você percebeu que algo estranho estava acontecendo e, sem pensar
+      muito, mergulhou de cabeça.
   - en: >-
       You showed up when and where you did on a dare because, hey, you
       don't back down from dares.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você apareceu na hora e no lugar certos por causa de um desafio,
+      porque, ei, você nunca recua diante de um desafio.
   - en: >-
       Someone called you out, but instead of walking into a fight, you
       walked into your current situation.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Alguém o desafiou, mas, em vez de partir para uma briga, você
+      acabou na sua situação atual.
   - en: >-
       You told your friend that nothing could scare you, and nothing you
       saw would change your mind. They brought you to your current point.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você disse a um amigo que nada poderia assustá-lo, e que nada do
+      que visse mudaria sua opinião. Ele o trouxe até o seu ponto atual.

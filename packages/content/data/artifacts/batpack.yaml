@@ -1,13 +1,15 @@
 id: batpack
 name:
   en: Batpack
-  pt-BR: Tradução em breve.
+  pt-BR: Mochila-Morcego
 level: '1d6'
 form:
   en: >-
     Stylish leather backpack with tooled glyphed designs and two small
     protruding bat-like wings from the sides
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Mochila de couro estilosa, com desenhos glíficos entalhados e duas
+    pequenas asas em formato de morcego projetando-se das laterais
 effect_text:
   en: >-
     You can use the pack in any of the following three ways: Bat-Senses.
@@ -22,7 +24,21 @@ effect_text:
     remainder of the damage inflicted. You can use the Bat-senses and
     Bat-flight options simultaneously, but must roll twice on the
     depletion table to do so. (Transforms you into a Bat, Level 1.)
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você pode usar a mochila de qualquer uma das três formas a seguir:
+    Sentidos de Morcego. Por 1 hora, você ganha um recurso em tarefas de
+    audição e consegue perceber o ambiente ao seu redor dentro de uma
+    distância curta, independentemente da sua capacidade de enxergar. Você
+    consegue compreender e se comunicar verbalmente com morcegos, e ganha
+    um recurso em tarefas para interagir com eles. Voo de Morcego. Por 10
+    minutos, você pode voar uma distância curta a cada turno, durante 10
+    minutos por nível do artefato. Você não pode carregar outras criaturas
+    com você. Transformação em Morcego. Por 1 hora, você assume a forma de
+    um morcego. Se sua forma de morcego for reduzida a 0 de vida, você
+    reverte imediatamente à sua forma normal, sofrendo o restante do dano
+    infligido. Você pode usar as opções Sentidos de Morcego e Voo de
+    Morcego simultaneamente, mas deve rolar duas vezes na tabela de
+    esgotamento para fazer isso. (Transforma você em um Morcego, Nível 1.)
 effect_table: null
 flavor_quote: null
 depletion_die: '1 in 1d20'

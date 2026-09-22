@@ -12,7 +12,7 @@ description:
     rubble. Each round, creatures in the area take either 3 points of
     damage due to the general shaking, or 6 points of damage if in or
     adjacent to a structure or terrain feature shedding debris.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você direciona sua ressonância destrutiva para o solo e provoca um terremoto centrado em um ponto que consegue ver dentro de uma distância muito longa. O solo dentro de uma distância curta desse ponto se agita e treme por cinco minutos, causando dano a estruturas e terreno na área. Prédios e formações do terreno soltam destroços e entulho. A cada round, criaturas na área sofrem 3 pontos de dano pelo tremor geral, ou 6 pontos de dano se estiverem em ou adjacentes a uma estrutura ou formação de terreno soltando destroços.'
 cost:
   pool: might
   amount: 7

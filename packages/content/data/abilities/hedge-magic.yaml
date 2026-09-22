@@ -9,7 +9,7 @@ description:
     the air, clean a small area, mend a broken object, prepare (but not
     create) food, and so on. You can't use Hedge Magic to harm another
     creature or object.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode realizar pequenos truques: mudar temporariamente a cor ou aparência básica de um objeto pequeno, fazer objetos pequenos flutuarem no ar, limpar uma área pequena, consertar um objeto quebrado, preparar (mas não criar) comida, e assim por diante. Você não pode usar Magia Popular para prejudicar outra criatura ou objeto.'
 cost:
   pool: intellect
   amount: 1

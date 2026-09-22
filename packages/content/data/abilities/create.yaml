@@ -10,7 +10,7 @@ description:
     hours equal to 6 minus the difficulty to create it. Thus, if you
     create a set of sturdy manacles (difficulty 5), it would last for
     one hour.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria algo do nada. Pode criar qualquer item de sua escolha que normalmente teria dificuldade 5 ou menor (usando as regras de fabricação). Uma vez criado, o item dura um número de horas igual a 6 menos a dificuldade para criá-lo. Assim, se você criar um jogo de algemas resistentes (dificuldade 5), ele duraria uma hora.'
 cost:
   pool: intellect
   amount: 7

@@ -7,7 +7,7 @@ description:
     You hinder all actions attempted by any number of targets within
     short range who can understand you. You choose which targets are
     affected. Affected targets' actions are hindered for one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você dificulta todas as ações tentadas por qualquer número de alvos dentro de uma distância curta que consigam entendê-lo. Você escolhe quais alvos são afetados. As ações dos alvos afetados são dificultadas por um round.'
 cost:
   pool: intellect
   amount: 1

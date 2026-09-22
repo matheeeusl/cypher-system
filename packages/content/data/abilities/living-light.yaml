@@ -4,7 +4,7 @@ name:
   pt-BR: Luz Viva
 description:
   en: Your body dissolves into a cloud of photons that instantly travel to a location you choose and then reform. You can choose any open space big enough to contain you that you can see within very long range, or any place you have lit by Illuminating Touch that is still shining. You disappear and almost instantly reappear in the space you chose. It takes until the end of the round for your body to become fully solid, so until the start of the next round, you take a maximum of 1 point of damage from any given attack or source of damage. Each level of Effort you apply allows you to bring along one additional person besides yourself, as long as they are within immediate range when you depart.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu corpo se dissolve em uma nuvem de fótons que viaja instantaneamente até um local que você escolher e então se reforma. Você pode escolher qualquer espaço aberto grande o suficiente para contê-la que consiga ver dentro de uma distância muito longa, ou qualquer lugar que tenha iluminado com Toque Iluminador que ainda esteja brilhando. Você desaparece e quase instantaneamente reaparece no espaço que escolheu. Leva até o fim do round para seu corpo se tornar totalmente sólido, então, até o início do próximo round, você sofre no máximo 1 ponto de dano de qualquer ataque ou fonte de dano. Cada nível de Esforço que você aplicar permite levar consigo uma pessoa adicional além de você mesma, desde que estejam dentro de uma distância imediata quando você partir.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

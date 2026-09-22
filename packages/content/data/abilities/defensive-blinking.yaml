@@ -8,7 +8,7 @@ description:
     hard enough to take damage, you teleport an immediate distance in
     a random direction (not up or down) to help evade the brunt of
     the attack. Your Speed defense rolls are eased for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você entra em um estado reativo intensificado, de forma que, quando for atingido com força suficiente para sofrer dano, se teleporta uma distância imediata em uma direção aleatória (não para cima ou para baixo) para ajudar a evitar o pior do ataque. Suas rolagens de defesa de Velocidade são facilitadas por um minuto.'
 cost:
   pool: intellect
   amount: 4

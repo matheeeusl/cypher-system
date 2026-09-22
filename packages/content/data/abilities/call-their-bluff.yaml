@@ -12,7 +12,7 @@ description:
     damage). If you use your action on a subsequent round to fully
     concentrate on the target, their attempts to throw off the effect
     are hindered and they take 4 points of ambient damage that round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Estão blefando ou conseguem sustentar sua afirmação? Isso não importa muito quando você fixa seu olhar em um alvo dentro de uma distância longa. Se seu ataque de Intelecto for bem-sucedido, o alvo sofre 2 pontos de dano ambiente a cada round por um minuto ou até que consiga se livrar do efeito (alvos PJ sofrem dano de Intelecto). Se você usar sua ação em um round seguinte para se concentrar totalmente no alvo, as tentativas dele de se livrar do efeito são dificultadas e ele sofre 4 pontos de dano ambiente naquele round.'
 cost:
   pool: intellect
   amount: 3

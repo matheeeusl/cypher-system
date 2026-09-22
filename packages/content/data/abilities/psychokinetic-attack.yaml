@@ -15,7 +15,7 @@ description:
     than half your size. Make an Intellect roll to instantly destroy
     the object; the task is eased by three steps compared to breaking
     it with brute strength.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode usar este ataque de uma de duas formas. A primeira é pegar um objeto pesado e arremessá-lo em alguém dentro de uma distância curta. Este ataque é uma ação de Intelecto e, se bem-sucedido, causa 6 pontos de dano ao alvo e ao objeto arremessado (que poderia ser outro inimigo, embora isso exigiria duas rolagens — uma para agarrar o primeiro inimigo e outra para acertar o segundo inimigo com o primeiro). A segunda forma é liberar uma explosão devastadora de poder que funciona apenas contra um objeto inanimado não maior que metade do seu tamanho. Faça uma rolagem de Intelecto para destruir o objeto instantaneamente; a tarefa é facilitada em três níveis em comparação com quebrá-lo à força bruta.'
 cost:
   pool: intellect
   amount: 5

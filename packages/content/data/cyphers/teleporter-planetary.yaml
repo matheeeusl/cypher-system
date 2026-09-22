@@ -1,5 +1,5 @@
 id: teleporter-planetary
-name: { en: 'Teleporter (planetary)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Teleporter (planetary)', 'pt-BR': 'Teletransportador (planetário)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6 + 4'
@@ -9,5 +9,7 @@ effect_text:
     visited or seen. They arrive safely with their possessions but cannot take
     anything else with them.
   pt-BR: >-
-    Tradução em breve.
+    O usuário se teleporta para qualquer lugar do planeta, até um
+    local que já tenha visitado ou visto anteriormente. Ele chega em
+    segurança com seus pertences, mas não pode levar mais nada consigo.
 effect_table: null

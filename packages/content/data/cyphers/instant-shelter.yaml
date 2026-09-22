@@ -1,5 +1,5 @@
 id: instant-shelter
-name: { en: 'Instant shelter', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Instant shelter', 'pt-BR': 'Abrigo instantâneo' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6 + 3'
@@ -12,5 +12,10 @@ effect_text:
     nonflammable material similar to sandstone, and is permanent and immobile
     once created.
   pt-BR: >-
-    Tradução em breve.
+    Com a adição de água e ar, esta cifra se expande em uma estrutura
+    simples de um cômodo, com uma porta e uma janela transparente (dois
+    cômodos com uma porta interna se a cifra for de nível 7 ou
+    superior). A estrutura tem 3 por 3 por 6 metros (10 por 10 por 20
+    pés). É feita de um material durável e não inflamável semelhante a
+    arenito, e é permanente e imóvel uma vez criada.
 effect_table: null

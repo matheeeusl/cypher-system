@@ -15,7 +15,7 @@ description:
     the palace itself, note all the entrances and which are used more
     often than others, and take notice that everyone seems to avoid the
     well in the eastern courtyard for some reason.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao estar em um grupo de pessoas (uma caravana, um palácio, um vilarejo, uma cidade, etc.), você pode fazer perguntas sobre qualquer tópico à sua escolha e sair com informações úteis. Você pode fazer uma pergunta específica, ou pode simplesmente obter fatos gerais. Você também obtém uma boa noção do layout geral do local envolvido, nota a presença de todos os locais principais, e talvez até perceba detalhes obscuros. Por exemplo, não apenas você descobre se alguém no palácio viu o garoto desaparecido, mas também ganha um conhecimento funcional do layout do próprio palácio, nota todas as entradas e quais são usadas mais frequentemente que as outras, e percebe que todos parecem evitar o poço no pátio leste por algum motivo.'
   # Note: source tag is "Action to initiate, about an hour to complete."
 cost:
   pool: intellect

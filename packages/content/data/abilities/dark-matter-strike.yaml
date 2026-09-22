@@ -4,7 +4,7 @@ name:
   pt-BR: Golpe de Matéria Escura
 description:
   en: When you attack a foe within long range, dark matter condenses around your target and entangles its limbs, holding it in place and easing your attack by two steps. The ability works for whatever kind of attack you use (melee, ranged, energy, and so on).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você ataca um inimigo dentro de uma distância longa, matéria escura se condensa ao redor do seu alvo e enreda seus membros, prendendo-o no lugar e facilitando seu ataque em dois níveis. A habilidade funciona para qualquer tipo de ataque que você use (corpo a corpo, à distância, de energia, e assim por diante).'
 cost:
   pool: intellect
   amount: 4

@@ -15,7 +15,7 @@ description:
     concentration as you audibly explore the surrounding soundscape.
     Given enough time, you could pinpoint every conversation, every
     breathing creature, and every device creating noise within range.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Por um minuto, você pode amplificar sons distantes ou pequenos para ouvi-los com clareza, mesmo que seja uma conversa ou o som de um pequeno animal se movendo por uma toca subterrânea a até uma distância muito longa. Você pode tentar perceber o som mesmo que barreiras intervenientes o bloqueiem ou que ele seja muito fraco, embora isso exija alguns rounds adicionais de concentração. Discriminar o som desejado em um ambiente barulhento também pode exigir alguns rounds adicionais de concentração enquanto você explora auditivamente a paisagem sonora ao redor. Com tempo suficiente, você poderia identificar exatamente cada conversa, cada criatura respirando e cada dispositivo produzindo ruído dentro do alcance.'
   # Note: source tag is "Action to initiate, up to several rounds to
   # complete, depending on the difficulty of the task." — the
   # duration/timing clause is not modeled by action_type.

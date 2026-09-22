@@ -1,7 +1,7 @@
 id: hardy
 name:
   en: Hardy
-  pt-BR: Tradução em breve.
+  pt-BR: Robusto
 description:
   en: >-
     Your body was built to take abuse. Whether you're pounding down stiff
@@ -13,20 +13,33 @@ description:
     healthy as you are, the signs of wear show in the myriad scars
     crisscrossing your body, your thrice-broken nose, your cauliflower
     ears, and any number of other disfigurements you wear with pride.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Seu corpo foi feito para aguentar castigo. Seja tomando doses fortes
+    enquanto segura o balcão do seu bar favorito, seja trocando socos com
+    um capanga em um beco escuro, você continua em frente, ignorando
+    ferimentos e lesões que deixariam uma pessoa mais fraca incapacitada
+    ou mais lenta. Nem fome, nem sede, nem carne cortada, nem osso
+    quebrado conseguem detê-lo. Você simplesmente segue em frente através
+    da dor e continua. Por mais em forma e saudável que você seja, as
+    marcas do desgaste aparecem nas inúmeras cicatrizes que cruzam seu
+    corpo, no seu nariz três vezes quebrado, nas suas orelhas em
+    couve-flor e em diversas outras desfigurações que você exibe com
+    orgulho.
 pool_bonus:
   - stat: might
     amount: 4
 characteristics:
   - name:
       en: Fast Healer
-      pt-BR: Tradução em breve.
+      pt-BR: Cura Rápida
     description:
       en: You halve the time it takes to make a recovery roll (minimum one action).
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você reduz pela metade o tempo necessário para fazer uma rolagem
+        de recuperação (mínimo de uma ação).
   - name:
       en: Almost Unstoppable
-      pt-BR: Tradução em breve.
+      pt-BR: Quase Imparável
     description:
       en: >-
         While you are impaired on the damage track, you function as if
@@ -35,15 +48,23 @@ characteristics:
         being impaired until you become debilitated, and you never
         suffer the effects of being debilitated. You still die if all
         your stat Pools are 0.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Enquanto estiver enfraquecido no marcador de dano, você funciona
+        como se estivesse são. Enquanto estiver debilitado, você funciona
+        como se estivesse enfraquecido. Em outras palavras, você não
+        sofre os efeitos de estar enfraquecido até ficar debilitado, e
+        nunca sofre os efeitos de estar debilitado. Você ainda morre se
+        todas as suas Reservas de atributo chegarem a 0.
   - name:
       en: Ponderous
-      pt-BR: Tradução em breve.
+      pt-BR: Vagaroso
     description:
       en: >-
         When you apply Effort when making a Speed roll, you must spend 1
         extra point from your Speed Pool.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Quando você aplica Esforço em uma rolagem de Velocidade, precisa
+        gastar 1 ponto adicional da sua Reserva de Velocidade.
 skill_training:
   - skill_id: might-defense
     choice_count: null
@@ -51,16 +72,24 @@ inabilities:
   - en: >-
       Your big, strong body is slow to react. Any task involving
       initiative is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Seu corpo grande e forte é lento para reagir. Qualquer tarefa
+      envolvendo iniciativa é prejudicada.
 additional_equipment: null
 connection_options:
   - en: The PCs recruited you after learning about your reputation as a survivor.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens o recrutaram depois de saberem da sua
+      reputação como sobrevivente.
   - en: You joined the PCs because you want or need the money.
-    pt-BR: Tradução em breve.
+    pt-BR: Você se juntou aos outros personagens porque quer ou precisa do dinheiro.
   - en: The PCs offered you a challenge equal to your physical power.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens lhe ofereceram um desafio à altura do seu
+      poder físico.
   - en: >-
       You believe the only way the PCs will succeed is if you are along
       to protect them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acredita que a única forma de os outros personagens terem
+      sucesso é se você estiver junto para protegê-los.

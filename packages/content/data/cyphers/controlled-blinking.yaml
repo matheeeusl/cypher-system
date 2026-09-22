@@ -1,5 +1,5 @@
 id: controlled-blinking
-name: { en: 'Controlled blinking', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Controlled blinking', 'pt-BR': 'Piscar controlado' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -9,5 +9,10 @@ effect_text:
     they teleport to a spot they desire within immediate range. Since they are prepared for this effect and their foe
     is not, the user's defenses are eased for one round after they teleport
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, toda vez que o usuário for atingido com força
+    suficiente para sofrer dano (mas no máximo uma vez por rodada), ele
+    se teleporta para um local à sua escolha dentro de uma distância
+    imediata. Como está preparado para esse efeito e seu inimigo não, as
+    defesas do usuário são facilitadas por uma rodada após o
+    teletransporte.
 effect_table: null

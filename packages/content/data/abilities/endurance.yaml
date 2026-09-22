@@ -12,7 +12,7 @@ description:
     harmful effects, if a poison paralyzes its victims for one minute,
     you are paralyzed for thirty seconds. The minimum duration is
     always one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Qualquer duração envolvendo ações físicas é dobrada ou reduzida à metade, o que for melhor para você. Por exemplo, se uma pessoa comum consegue prender a respiração por trinta segundos, você consegue prendê-la por um minuto. Se uma pessoa comum consegue marchar por quatro horas sem parar, você consegue fazer isso por oito horas. Em termos de efeitos nocivos, se um veneno paralisa suas vítimas por um minuto, você fica paralisada por trinta segundos. A duração mínima é sempre um round.'
 cost: null
 action_type: enabler
 sources:

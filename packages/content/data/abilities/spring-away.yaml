@@ -7,7 +7,7 @@ description:
     Whenever you succeed on a Speed defense roll, you can immediately
     move up to a short distance. You cannot use this ability more
     than once in a given round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sempre que você tiver sucesso em uma rolagem de defesa de Velocidade, pode se mover imediatamente até uma distância curta. Você não pode usar esta habilidade mais de uma vez em um determinado round.'
 cost:
   pool: speed
   amount: 5

@@ -4,7 +4,7 @@ name:
   pt-BR: Adaptação Lunar
 description:
   en: You can survive indefinitely in a vacuum environment (such as the moon or space).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue sobreviver indefinidamente em um ambiente de vácuo (como a lua ou o espaço).'
   # Note: source prints no action_type tag at all for this ability (the
   # entry ends and the page moves directly into the Tier 3 ability
   # choice) — inferred as `enabler` by analogy with other passive,

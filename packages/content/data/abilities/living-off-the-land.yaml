@@ -10,7 +10,7 @@ description:
     have gained resistance over time, you are trained in resisting the
     effects of natural poisons (such as those from plants or living
     creatures). You're also immune to natural diseases.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Com cerca de uma hora, você sempre consegue encontrar comida comestível e água potável na natureza selvagem. Você consegue até encontrar o suficiente para um pequeno grupo de pessoas, se necessário. Além disso, já que é tão resistente e ganhou resistência ao longo do tempo, você é treinada em resistir aos efeitos de venenos naturais (como os de plantas ou criaturas vivas). Você também é imune a doenças naturais.'
 cost: null
 action_type: enabler
 sources:

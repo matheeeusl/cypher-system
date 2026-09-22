@@ -7,7 +7,7 @@ description:
     You can fly up to a short distance as your movement this round.
     If all you do is move on your turn, you can fly up to a long
     distance.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode voar até uma distância curta como seu deslocamento neste round. Se tudo que fizer for se mover no seu turno, pode voar até uma distância longa.'
   # Note: source cost is a choice-of-pool, "3 Might or 3 Speed points" —
   # the schema's single `pool` field can't represent that. Recorded as
   # Might (first-listed option), same approximation used for

@@ -4,7 +4,7 @@ name:
   pt-BR: Piscar de Olhos
 description:
   en: You move up to 1,000 feet (300 m) in one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se move até 300 metros (1.000 pés) em um round.'
 cost:
   pool: speed
   amount: 4

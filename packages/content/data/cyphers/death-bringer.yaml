@@ -1,5 +1,5 @@
 id: death-bringer
-name: { en: 'Death bringer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Death bringer', 'pt-BR': 'Portador da Morte' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6'
@@ -13,5 +13,9 @@ effect_text:
     they can choose to make a second attack roll. If the second attack roll is a success,
     the target is killed. If the target is a PC, the character instead moves down one step on the damage track.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo minuto, quando o usuário atingir um PNJ ou criatura de
+    nível igual ou inferior ao da cifra, ele pode optar por fazer uma
+    segunda rolagem de ataque. Se a segunda rolagem de ataque for
+    bem-sucedida, o alvo é morto. Se o alvo for um PJ, o personagem desce
+    um degrau no marcador de dano.
 effect_table: null

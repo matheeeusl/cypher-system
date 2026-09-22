@@ -11,7 +11,7 @@ description:
     You can't use this ability again until after you've taken a
     ten-hour recovery action. You can still use Magical Repertoire to
     fill your cypher slots.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você passar dez minutos preparando sua magia, pode preencher quaisquer de seus espaços de cifra abertos com cifras sutis escolhidas aleatoriamente pelo Mestre (esse tempo pode fazer parte de uma ação de recuperação de dez minutos, uma hora ou dez horas, se você estiver acordada durante todo o período). Você não pode usar esta habilidade novamente até depois de realizar uma ação de recuperação de dez horas. Você ainda pode usar Repertório Mágico para preencher seus espaços de cifra.'
   # Note: source tag is "Action to initiate, ten minutes to complete."
   # — the "ten minutes to complete" clause is a duration, not modeled by
   # action_type.

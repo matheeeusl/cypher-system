@@ -4,7 +4,7 @@ name:
   pt-BR: Sobrecarregar Dispositivo
 description:
   en: You infuse 1 point of energy gained from using Absorb Energy or related ability into a device, such as an artifact, raising its effective level on its next use by three (to a maximum of 10).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você infunde 1 ponto de energia obtido ao usar Absorver Energia ou uma habilidade relacionada em um dispositivo, como um artefato, elevando seu nível efetivo no próximo uso em três (até um máximo de 10).'
 cost: null
 action_type: action
 sources:

@@ -10,7 +10,7 @@ description:
     energy defenses, its Armor is reduced by 2 for one minute. If it
     has no energy-based defenses or Armor, attacks against it are eased
     for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você despedaça as defesas de uma criatura dentro de uma distância longa. Quaisquer defesas baseadas em energia que ela tenha (como um campo de força ou uma habilidade de Proteção) são anuladas por 1d6 + 1 rounds. Se a criatura não tiver defesas de energia, sua Armadura é reduzida em 2 por um minuto. Se não tiver defesas baseadas em energia nem Armadura, os ataques contra ela são facilitados por um minuto.'
 cost:
   pool: intellect
   amount: 4

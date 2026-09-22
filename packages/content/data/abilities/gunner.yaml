@@ -4,7 +4,7 @@ name:
   pt-BR: Atirador
 description:
   en: You inflict 1 additional point of damage with guns.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você causa 1 ponto adicional de dano com armas de fogo.'
 cost: null
 action_type: enabler
 sources:

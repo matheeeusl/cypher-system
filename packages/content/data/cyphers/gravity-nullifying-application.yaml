@@ -1,5 +1,5 @@
 id: gravity-nullifying-application
-name: { en: 'Gravity-nullifying application', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Gravity-nullifying application', 'pt-BR': 'Aplicação anuladora de gravidade' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6 + 2'
@@ -10,5 +10,9 @@ effect_text:
     air permanently and no longer has weight if carried (though it needs to be
     strapped down).
   pt-BR: >-
-    Tradução em breve.
+    Se um objeto inanimado não maior que um ser humano (dois seres
+    humanos se a cifra for de nível 6 ou superior) for revestido por
+    esta cifra, ele flutua permanentemente a 1d20 pés de altura no ar e
+    deixa de ter peso quando carregado (embora precise ser preso com
+    cintas).
 effect_table: null

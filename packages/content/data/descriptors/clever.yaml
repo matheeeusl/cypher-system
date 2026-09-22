@@ -1,7 +1,7 @@
 id: clever
 name:
   en: Clever
-  pt-BR: Tradução em breve.
+  pt-BR: Astuto
 description:
   en: >-
     You're quick-witted, thinking well on your feet. You understand
@@ -10,7 +10,13 @@ description:
     swiftly, size up threats and allies, and assess situations with
     accuracy. Perhaps you're physically attractive, or maybe you use your
     wit to overcome any physical or mental imperfections.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é ágil de raciocínio, pensando bem sob pressão. Você entende as
+    pessoas, então consegue enganá-las, mas raramente é enganado. Como
+    você enxerga as coisas como realmente são com facilidade, avalia
+    rapidamente o terreno, mede ameaças e aliados e analisa situações com
+    precisão. Talvez você seja fisicamente atraente, ou talvez use sua
+    astúcia para superar quaisquer imperfeições físicas ou mentais.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -26,22 +32,30 @@ inabilities:
   - en: >-
       You were never good at studying or retaining trivial knowledge. Any
       task involving lore, knowledge, or understanding is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você nunca foi bom em estudar ou reter conhecimentos triviais.
+      Qualquer tarefa envolvendo conhecimento, saber ou compreensão é
+      prejudicada.
 additional_equipment:
   en: >-
     You see through the schemes of others and occasionally convince them
     to believe you—even when, perhaps, they should not. Thanks to your
     clever behavior, you have an additional expensive item.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você enxerga através dos esquemas alheios e, ocasionalmente, convence
+    os outros a acreditarem em você — mesmo quando, talvez, não
+    devessem. Graças à sua astúcia, você tem um item caro adicional.
 connection_options:
   - en: You convinced one of the other PCs to tell you what they were doing.
-    pt-BR: Tradução em breve.
+    pt-BR: Você convenceu um dos outros personagens a lhe contar o que estava fazendo.
   - en: >-
       From afar, you observed that something interesting was going on.
-    pt-BR: Tradução em breve.
+    pt-BR: De longe, você observou que algo interessante estava acontecendo.
   - en: >-
       You talked your way into the situation because you thought it
       might earn some money.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se meteu na situação com lábia porque achou que poderia ganhar
+      algum dinheiro.
   - en: You suspect that the other PCs won't succeed without you.
-    pt-BR: Tradução em breve.
+    pt-BR: Você suspeita que os outros personagens não terão sucesso sem você.

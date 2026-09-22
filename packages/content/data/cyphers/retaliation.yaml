@@ -1,5 +1,5 @@
 id: retaliation
-name: { en: 'Retaliation', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Retaliation', 'pt-BR': 'Retaliação' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6'
@@ -10,5 +10,8 @@ effect_text:
     level 4 or higher, 3 points if the cypher is level 6 or higher). No action
     or roll is required by the user.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, qualquer um que atingir o usuário recebe uma
+    pequena descarga elétrica que inflige 1 ponto de dano (2 pontos se
+    a cifra for de nível 4 ou superior, 3 pontos se for de nível 6 ou
+    superior). Nenhuma ação ou rolagem é exigida do usuário.
 effect_table: null

@@ -1,5 +1,5 @@
 id: monoblade
-name: { en: 'Monoblade', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Monoblade', 'pt-BR': 'Monolâmina' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     a weapon, it is a light weapon that ignores Armor of a level lower than
     its own. The blade lasts for ten minutes.
   pt-BR: >-
-    Tradução em breve.
+    Produz uma lâmina de 15 centímetros (6 polegadas) do mesmo nível
+    que a cifra. A lâmina corta qualquer material de nível inferior ao
+    seu. Se usada como arma, é uma arma leve que ignora Armadura de
+    nível inferior ao seu. A lâmina dura dez minutos.
 effect_table: null

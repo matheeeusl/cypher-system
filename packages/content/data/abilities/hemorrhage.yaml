@@ -11,7 +11,7 @@ description:
     ability that heals it, or using its action to attend to the injury.
     In addition to the normal options for using Effort, you can choose
     to use Effort to increase this duration by one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você desfere um golpe poderoso e preciso que causa dano adicional posteriormente. No seu próximo turno, o alvo deste ataque sofre 3 pontos adicionais de dano (ignora Armadura). O alvo pode evitar esse dano adicional fazendo uma rolagem de recuperação, usando qualquer habilidade que o cure, ou usando sua ação para cuidar do ferimento. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar essa duração em um round.'
   # Note: source cost is printed as "2+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Might points here (same approximation used for

@@ -8,7 +8,7 @@ description:
     have previously encountered. The creature remains for one minute
     and then returns home. While present, the creature acts as you
     direct, but this requires no action on your part.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você produz, como que do nada, uma criatura de nível 5 de um tipo que já tenha encontrado antes. A criatura permanece por um minuto e então retorna para casa. Enquanto presente, a criatura age conforme você a direciona, mas isso não exige nenhuma ação da sua parte.'
 cost:
   pool: intellect
   amount: 7

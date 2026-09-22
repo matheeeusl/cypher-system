@@ -27,16 +27,22 @@ const mid = t('who', 'que');
 
 const bracketClass = (word: keyof typeof LABELS) =>
 	word === highlight
-		? 'rounded border border-accent bg-accent-soft px-1.5 py-0.5 font-mono text-accent'
-		: 'font-mono text-text-muted';
+		? 'rounded border border-accent bg-accent-soft px-1.5 py-0.5 font-mono text-accent no-underline'
+		: 'font-mono text-text-muted no-underline hover:text-warning';
+
+const HREFS = {
+	descriptor: `/${locale}/descriptors/`,
+	type: `/${locale}/types/`,
+	focus: `/${locale}/foci/`,
+} as const satisfies Record<keyof typeof LABELS, string>;
 ---
 
 <p class="mb-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-1 font-display text-lg text-text">
 	<span>{lead}</span>
-	<span class={bracketClass('descriptor')}>[{LABELS.descriptor}]</span>
-	<span class={bracketClass('type')}>[{LABELS.type}]</span>
+	<a href={HREFS.descriptor} class={bracketClass('descriptor')}>[{LABELS.descriptor}]</a>
+	<a href={HREFS.type} class={bracketClass('type')}>[{LABELS.type}]</a>
 	<span>{mid}</span>
-	<span class={bracketClass('focus')}>[{LABELS.focus}]</span>
+	<a href={HREFS.focus} class={bracketClass('focus')}>[{LABELS.focus}]</a>
 	<span>.</span>
 </p>
 <p class="mb-6 font-mono text-xs text-text-muted">

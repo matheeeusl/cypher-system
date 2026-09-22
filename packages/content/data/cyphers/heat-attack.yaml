@@ -1,5 +1,5 @@
 id: heat-attack
-name: { en: 'Heat attack', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Heat attack', 'pt-BR': 'Ataque de calor' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6'
@@ -9,5 +9,7 @@ effect_text:
     the attack generates a burst of heat that inflicts 2 additional points of
     damage.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, toda vez que o usuário atingir uma criatura ou
+    objeto sólido, o ataque gera uma rajada de calor que inflige 2
+    pontos adicionais de dano.
 effect_table: null

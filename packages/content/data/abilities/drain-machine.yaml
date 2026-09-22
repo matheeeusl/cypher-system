@@ -13,7 +13,7 @@ description:
     immediately check for depletion (items with a depletion of "—" are
     either immune to this ability or have a depletion of 1 in 1d10
     when attacked with this ability).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode drenar o poder de um artefato ou dispositivo energizado que tocar. Se o alvo for um robô, você causa 3 pontos de dano e restaura 3 pontos à sua Reserva de Força ou Velocidade. Se o alvo for um objeto, você restaura pontos à sua Reserva de Força ou Velocidade iguais ao nível do alvo. Se o alvo for uma cifra manifesta, ela é totalmente drenada e inútil. Artefatos e dispositivos semelhantes devem verificar depleção imediatamente (itens com depleção "—" são imunes a esta habilidade ou têm depleção de 1 em 1d10 quando atacados com esta habilidade).'
   # Note: source adds a clarifying sidebar: "Robots and other living
   # machines are usually treated as creatures, not machines, for the
   # purposes of siphoning power from them." — folded here as context.

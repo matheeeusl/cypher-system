@@ -9,7 +9,7 @@ description:
     use this as a defense action to cancel any incoming ability targeted
     at you, or you can cancel any device or the effect of any device for
     1d6 rounds. You must touch the effect or device to cancel it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você encerra imediatamente um efeito contínuo (como um efeito criado por uma habilidade de personagem) dentro de uma distância imediata. Alternativamente, você pode usar isso como uma ação de defesa para cancelar qualquer habilidade recebida direcionada a você, ou pode cancelar qualquer dispositivo ou o efeito de qualquer dispositivo por 1d6 rounds. Você deve tocar o efeito ou dispositivo para cancelá-lo.'
 cost:
   pool: intellect
   amount: 4

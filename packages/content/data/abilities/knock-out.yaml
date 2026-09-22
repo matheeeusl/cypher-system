@@ -9,7 +9,7 @@ description:
     of level 3 or lower is knocked unconscious for one minute. For
     each level of Effort used, you can affect one higher level of
     foe, or you can extend the duration for an additional minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz um ataque corpo a corpo que não causa dano. Em vez disso, se o ataque acertar, faça uma segunda rolagem baseada em Força. Se for bem-sucedida, um inimigo de nível 3 ou inferior é nocauteado por um minuto. Para cada nível de Esforço usado, você pode afetar um inimigo de um nível mais alto, ou pode estender a duração por mais um minuto.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

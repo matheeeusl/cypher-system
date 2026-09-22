@@ -7,7 +7,7 @@ description:
     You perform a feat of strength, speed, or combat, impressing those
     nearby. For the next minute you gain an asset on all interaction
     tasks with people who saw you use this ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você realiza um feito de força, velocidade ou combate, impressionando quem está por perto. Pelo próximo minuto, você ganha um recurso em todas as tarefas de interação com pessoas que a viram usar esta habilidade.'
 cost:
   pool: might
   amount: 2

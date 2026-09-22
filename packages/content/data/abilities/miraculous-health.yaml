@@ -10,7 +10,7 @@ description:
     don't descend the step and you regain 1 point in any Pool that is
     bereft of points. You can't use this ability again until after
     your next ten-hour rest.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você desceria um nível na trilha de dano, pode tentar uma tarefa de Força para resistir, com dificuldade igual ao nível do inimigo ou efeito que a feriu. Se bem-sucedida, você não desce o nível e recupera 1 ponto em qualquer Reserva que esteja zerada. Você não pode usar esta habilidade novamente até depois do seu próximo descanso de dez horas.'
 cost: null
 action_type: enabler
 sources:

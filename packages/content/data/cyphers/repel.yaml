@@ -1,5 +1,5 @@
 id: repel
-name: { en: 'Repel', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Repel', 'pt-BR': 'Repelir' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6 + 1'
@@ -8,5 +8,7 @@ effect_text:
     One NPC within immediate range who is of a level lower than the cypher
     decides to leave, using their next five rounds to move away quickly.
   pt-BR: >-
-    Tradução em breve.
+    Um PNJ dentro de uma distância imediata que seja de nível inferior
+    ao da cifra decide ir embora, usando suas próximas cinco rodadas
+    para se afastar rapidamente.
 effect_table: null

@@ -10,7 +10,7 @@ description:
     frozen in place (if standing on a solid surface) and can't move
     from their location until they use an action to break free. The
     target can still attack and defend.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Toque Gélido, causa 3 pontos adicionais de dano se tocar uma criatura, ou 2 pontos adicionais de dano se infundir uma arma. Além disso, os alvos danificados ficam congelados no lugar (se estiverem em uma superfície sólida) e não conseguem se mover de sua posição até usarem uma ação para se libertar. O alvo ainda pode atacar e se defender.'
   # Note: source tag is "Action for touch; enabler for weapon." — a
   # genuinely dual-mode tag, also used verbatim by `frost-touch`/`shock`.
 cost: null

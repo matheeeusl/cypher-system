@@ -1,5 +1,5 @@
 id: curse-bringer
-name: { en: 'Curse bringer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Curse bringer', 'pt-BR': 'Portador de Maldição' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 1'
@@ -9,5 +9,8 @@ effect_text:
     The next time the victim attempts an important task when the cypher is in their possession,
     the task is hindered by three steps.
   pt-BR: >-
-    Tradução em breve.
+    A cifra pode ser ativada quando entregue a alguém que não percebe sua
+    importância. Na próxima vez que a vítima tentar uma tarefa importante
+    enquanto estiver com a cifra em sua posse, a tarefa é prejudicada em
+    três níveis.
 effect_table: null

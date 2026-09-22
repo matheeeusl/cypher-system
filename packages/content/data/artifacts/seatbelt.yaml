@@ -1,16 +1,18 @@
 id: seatbelt
 name:
   en: Seatbelt
-  pt-BR: Tradução em breve.
+  pt-BR: Cinto de Segurança
 level: '1d6'
 form:
   en: Belt
-  pt-BR: Tradução em breve.
+  pt-BR: Cinto
 effect_text:
   en: >-
     The user can sit down at any time, and a comfortable chair made of
     shimmering force appears to catch and conform to the body.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    O usuário pode se sentar a qualquer momento, e uma cadeira confortável
+    feita de força cintilante surge para amparar e se ajustar ao corpo.
 effect_table: null
 flavor_quote: null
 depletion_die: '—'

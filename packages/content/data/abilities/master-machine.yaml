@@ -12,7 +12,7 @@ description:
     machine to create the bond, but afterward, there is no range
     limitation. This bond lasts for one week. You can bond with only
     one machine at a time.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode controlar as funções de uma máquina com a qual se vinculou usando Vínculo com a Máquina, inteligente ou não. Além disso, se você usar uma ação para se concentrar em uma máquina, fica ciente do que acontece ao seu redor (você vê e ouve como se estivesse ao lado dela, não importa a distância). Você deve tocar a máquina para criar o vínculo, mas depois disso não há limitação de alcance. Esse vínculo dura uma semana. Você só pode se vincular a uma máquina por vez.'
 cost:
   pool: intellect
   amount: 8

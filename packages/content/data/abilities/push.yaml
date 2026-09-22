@@ -10,7 +10,7 @@ description:
     must be within short range. The push is quick, and the force is too
     crude to be manipulated. For example, you can't use this ability to
     pull a lever or close a door.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você empurra telecineticamente uma criatura ou objeto uma distância imediata na direção que desejar. Você deve conseguir ver o alvo, que deve ser do seu tamanho ou menor, não pode estar fixado a nada, e deve estar dentro de uma distância curta. O empurrão é rápido, e a força é grosseira demais para ser manipulada. Por exemplo, você não pode usar esta habilidade para puxar uma alavanca ou fechar uma porta.'
 cost:
   pool: intellect
   amount: 2

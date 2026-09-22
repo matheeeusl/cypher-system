@@ -1,5 +1,5 @@
 id: psychic-communique
-name: { en: 'Psychic communique', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Psychic communique', 'pt-BR': 'Comunicado psíquico' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -8,5 +8,7 @@ effect_text:
     Allows the user to project a one-time, one-way telepathic message of up to
     ten words per cypher level, with an unlimited range, to anyone they know.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete uma mensagem telepática única e
+    unidirecional de até dez palavras por nível da cifra, com alcance
+    ilimitado, para qualquer pessoa que conheça.
 effect_table: null

@@ -7,7 +7,7 @@ description:
     If you have used Designation on a target, you are trained in
     tracking them, spotting them when they are hidden or disguised, or
     otherwise finding them.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você usou Designação em um alvo, é treinada em rastreá-lo, detectá-lo quando estiver escondido ou disfarçado, ou de outra forma encontrá-lo.'
 cost: null
 action_type: enabler
 sources:

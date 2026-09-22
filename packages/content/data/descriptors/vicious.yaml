@@ -1,7 +1,7 @@
 id: vicious
 name:
   en: Vicious
-  pt-BR: Tradução em breve.
+  pt-BR: Feroz
 description:
   en: >-
     You try to hide what's inside, fold it into yourself when everything
@@ -12,20 +12,31 @@ description:
     frantic glee mixed with hate that sometimes leaps out of you when
     you confront a foe. Violence your friends can tolerate, but you
     sometimes worry they will also learn that you are cruel.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tenta esconder o que sente por dentro, recolhendo-se quando
+    tudo dentro de você grita para se soltar, para fazê-los pagar, para
+    machucá-los, para fazê-los sangrar. Às vezes você consegue, pelos
+    seus amigos — sorrindo quando eles sorriem, rindo quando eles riem,
+    e às vezes até tendo outras emoções próprias. Mas aquilo está sempre
+    lá, aquela sensação de euforia frenética misturada com ódio que às
+    vezes explode de dentro de você quando enfrenta um inimigo. Seus
+    amigos toleram a violência, mas às vezes você teme que eles também
+    descubram que você é cruel.
 pool_bonus: []
 characteristics:
   - name:
       en: Bloodthirsty
-      pt-BR: Tradução em breve.
+      pt-BR: Sanguinário
     description:
       en: >-
         Once you begin fighting, you see only red. You inflict 2
         additional points of damage with any attack.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Assim que começa a lutar, você só enxerga vermelho. Você inflige
+        2 pontos adicionais de dano com qualquer ataque.
   - name:
       en: Berserk
-      pt-BR: Tradução em breve.
+      pt-BR: Enlouquecido
     description:
       en: >-
         Once you begin fighting, it's hard for you to stop. In fact,
@@ -33,26 +44,39 @@ characteristics:
         surrenders or you've run out of foes. If the latter occurs and
         you fail to stop, you attack the nearest ally within short
         range.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Assim que começa a lutar, é difícil para você parar. Na verdade,
+        isso exige uma tarefa de Intelecto de dificuldade 2, mesmo que
+        seu inimigo se renda ou você tenha ficado sem inimigos. Se isso
+        ocorrer e você falhar em parar, você ataca o aliado mais próximo
+        dentro de uma distância curta.
 skill_training:
   - skill_id: tracking
     choice_count: null
 inabilities: []
 additional_equipment:
   en: You have a record that you use to list those who've wronged you.
-  pt-BR: Tradução em breve.
+  pt-BR: Você tem um registro que usa para listar aqueles que o prejudicaram.
 connection_options:
   - en: >-
       Another PC saw you take down a mean drunk in a tavern, not
       realizing you were the one who started the fight.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Outro personagem o viu derrubar um bêbado valentão em uma taverna,
+      sem perceber que foi você quem começou a briga.
   - en: You wanted to get away from a bad situation, so you went with the other PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você queria escapar de uma situação ruim, então foi com os outros
+      personagens.
   - en: >-
       You want to change, and you hope that being with the other PCs
       will help you calm yourself.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você quer mudar, e espera que estar com os outros personagens o
+      ajude a se acalmar.
   - en: >-
       One of the other PCs asked you to come along, believing that your
       viciousness could be harnessed for the benefit of the mission.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens pediu que você viesse junto, acreditando
+      que sua ferocidade poderia ser aproveitada em benefício da missão.

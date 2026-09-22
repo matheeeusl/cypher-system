@@ -10,7 +10,7 @@ description:
     Effort affects one additional target. Unless these creatures have
     an ability to change their size, they remain small until the
     one-minute duration of Shrink ends for them.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode usar Encolher em outras criaturas dispostas dentro de uma distância imediata. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para afetar mais alvos; cada nível de Esforço afeta um alvo adicional. A menos que essas criaturas tenham uma habilidade para mudar de tamanho, elas permanecem pequenas até a duração de um minuto de Encolher terminar para elas.'
 cost: null
 action_type: enabler
 sources:

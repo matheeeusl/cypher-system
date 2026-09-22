@@ -4,7 +4,7 @@ name:
   pt-BR: Viajante Castigado pelo Vento
 description:
   en: You condense a wide wing of dark matter that can carry you through the air for a period of up to one hour. For each level of Effort applied, you can add one hour to the duration or carry one additional creature of your size or smaller. You must touch the additional creatures for them to be tucked under your wing. They must remain relatively still while the wing lasts or they will fall. In terms of overland movement, you fly at about 20 miles (32 km) per hour and are not affected by terrain.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você condensa uma ampla asa de matéria escura que consegue carregá-la pelo ar por um período de até uma hora. Para cada nível de Esforço aplicado, você pode adicionar uma hora à duração ou carregar uma criatura adicional do seu tamanho ou menor. Você deve tocar as criaturas adicionais para que fiquem abrigadas sob sua asa. Elas devem permanecer relativamente imóveis enquanto a asa durar, ou cairão. Em termos de deslocamento por terra, você voa a cerca de 32 km (20 milhas) por hora e não é afetada pelo terreno.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

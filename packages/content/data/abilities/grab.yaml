@@ -13,7 +13,7 @@ description:
     you can automatically inflict 3 points of damage each round on
     the target while you hold it, but you can also keep it protected
     (by taking all attacks otherwise meant for the target).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto estiver usando a habilidade Ampliar, você pode atacar tentando envolver suas mãos enormes em torno de um alvo do tamanho de um humano comum ou menor. Enquanto mantiver o aperto como sua ação, você impede o alvo de se mover ou realizar ações físicas (exceto tentativas de escapar). A tentativa de escape do alvo é dificultada em dois níveis devido ao seu tamanho. Se desejar, você pode causar automaticamente 3 pontos de dano a cada round ao alvo enquanto o segurar, mas também pode mantê-lo protegido (recebendo todos os ataques que de outra forma seriam direcionados ao alvo).'
 cost: null
 action_type: action
 sources:

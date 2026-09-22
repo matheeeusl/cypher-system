@@ -1,5 +1,5 @@
 id: enduring-shield
-name: { en: 'Enduring shield', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Enduring shield', 'pt-BR': 'Escudo duradouro' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 4'
@@ -7,5 +7,6 @@ effect_text:
   en: >-
     For the next day, the user has an asset to Speed defense rolls.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, o usuário ganha um recurso em rolagens de defesa de
+    Velocidade.
 effect_table: null

@@ -1,5 +1,5 @@
 id: magnetic-attack-drill
-name: { en: 'Magnetic attack drill', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Magnetic attack drill', 'pt-BR': 'Broca de ataque magnética' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     level. If the target is made of metal or wearing metal (such as armor),
     the attack is eased.
   pt-BR: >-
-    Tradução em breve.
+    O usuário arremessa esta cifra contra um alvo dentro de uma
+    distância curta, e ela perfura o alvo por uma rodada, infligindo
+    dano igual ao nível da cifra. Se o alvo for feito de metal ou
+    estiver usando metal (como armadura), o ataque é facilitado.
 effect_table: null

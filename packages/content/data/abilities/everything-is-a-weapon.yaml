@@ -7,7 +7,7 @@ description:
     You can take any small object—a coin, a pen, a bottle, a stone,
     and so on—and throw it with such force and precision that it
     inflicts damage as a light weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode pegar qualquer objeto pequeno — uma moeda, uma caneta, uma garrafa, uma pedra, e assim por diante — e arremessá-lo com tamanha força e precisão que causa dano como uma arma leve.'
 cost: null
 action_type: enabler
 sources:

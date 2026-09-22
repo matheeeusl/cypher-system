@@ -1,5 +1,5 @@
 id: spatial-warp
-name: { en: 'Spatial warp', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Spatial warp', 'pt-BR': 'Distorção espacial' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d6 + 4'
@@ -11,5 +11,10 @@ effect_text:
     is important to the device's effect, it remains important. The spatial
     warp lasts 10 minutes per cypher level.
   pt-BR: >-
-    Tradução em breve.
+    Quando fixada a um dispositivo que afeta um único alvo à distância,
+    esse alcance aumenta para 1,5 km (1 milha) sem penalidades. O
+    espaço é temporariamente distorcido em termos de enxergar e
+    alcançar o alvo. Se linha de visão direta for importante para o
+    efeito do dispositivo, ela continua sendo importante. A distorção
+    espacial dura 10 minutos por nível da cifra.
 effect_table: null

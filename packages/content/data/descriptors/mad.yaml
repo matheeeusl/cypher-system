@@ -1,7 +1,7 @@
 id: mad
 name:
   en: Mad
-  pt-BR: Tradução em breve.
+  pt-BR: Louco
 description:
   en: >-
     You have delved too deeply into subjects people were not meant to
@@ -9,24 +9,35 @@ description:
     this knowledge has come at a terrible price. You are likely in
     questionable physical shape and occasionally shake with nervous
     tics. You sometimes mutter to yourself without realizing it.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você se aprofundou demais em assuntos que não eram destinados ao
+    conhecimento das pessoas. Você possui saberes que transcendem o alcance
+    da maioria, mas esse conhecimento cobrou um preço terrível. É provável
+    que sua condição física seja precária e que você sofra, ocasionalmente,
+    de tremores e tiques nervosos. Às vezes, você murmura consigo mesmo sem
+    perceber.
 pool_bonus:
   - stat: intellect
     amount: 4
 characteristics:
   - name:
       en: Fits of Insight
-      pt-BR: Tradução em breve.
+      pt-BR: Momentos de Revelação
     description:
       en: >-
         Whenever such knowledge is appropriate, the GM feeds you
         information although there is no clear explanation as to how you
         could know such a thing. This is up to the GM's discretion, but
         it should happen as often as once each session.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Sempre que esse tipo de conhecimento for pertinente,
+        o Mestre lhe fornece informações, mesmo que não haja
+        uma explicação clara de como você poderia saber algo assim.
+        Isso fica a critério do Mestre, mas deve ocorrer com uma frequência
+        de até uma vez por sessão.
   - name:
       en: Erratic Behavior
-      pt-BR: Tradução em breve.
+      pt-BR: Comportamento errático
     description:
       en: >-
         You are prone to acting erratically or irrationally. When you
@@ -40,22 +51,36 @@ characteristics:
         extenuating circumstances. (For example, if a foe suddenly leaps
         out of the darkness, you might spend the first round babbling
         incoherently or screaming the name of your first true love.)
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tem tendência a agir de forma errática ou irracional. Quando
+        estiver diante de uma grande descoberta ou sob forte
+        estresse (como uma ameaça física grave), o Mestre pode introduzir
+        uma intrusão do Mestre que determina sua próxima ação, sem conceder
+        XP. Você ainda pode pagar 1 XP para recusar a intrusão. A influência
+        do Mestre é uma manifestação da sua loucura e, portanto,
+        sempre algo que você provavelmente não faria em condições normais,
+        mas não é direta ou obviamente prejudicial a você, a menos que
+        haja circunstâncias atenuantes. (Por exemplo, se um inimigo surgir
+        repentinamente da escuridão, você pode passar a primeira rodada
+        balbuciando coisas desconexas ou gritando o nome do seu primeiro
+        grande amor.)
 skill_training:
   - skill_id: null
     choice_count: 1
 inabilities:
   - en: Your mind is quite fragile. Tasks to resist mental attacks are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: Sua mente é bastante frágil. Tarefas para resistir a ataques mentais são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: Voices in your head told you to go.
-    pt-BR: Tradução em breve.
+    pt-BR: Vozes na sua cabeça lhe disseram para ir.
   - en: You instigated the whole thing and convinced the others to join you.
-    pt-BR: Tradução em breve.
+    pt-BR: Você instigou tudo isso e convenceu os outros a se juntarem a você.
   - en: >-
       One of the other PCs obtained a book of knowledge for you, and now
       you're repaying that favor by helping them with the task at hand.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens obteve um livro de conhecimento para você e, agora,
+      você está retribuindo esse favor ajudando-os na tarefa em questão.
   - en: You feel compelled by inexplicable intuition.
-    pt-BR: Tradução em breve.
+    pt-BR: Você se sente impelido por uma intuição inexplicável.

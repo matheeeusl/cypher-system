@@ -10,7 +10,7 @@ description:
     attack they receive from anyone who heard your judgment. This
     judgment lasts for up to one minute or until they move at least a
     long distance away from you.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você profere palavras de revelação e julgamento a todos dentro de uma distância próxima. Aqueles que você designou como culpados com sua habilidade Designação sofrem 3 pontos adicionais de dano em qualquer ataque que receberem de alguém que tenha ouvido seu julgamento. Esse julgamento dura até um minuto ou até que se afastem de você por ao menos uma distância longa.'
 cost:
   pool: intellect
   amount: 3

@@ -1,14 +1,17 @@
 id: dapper-duds
 name:
   en: Dapper Duds
-  pt-BR: Tradução em breve.
+  pt-BR: Trajes Elegantes
 level: '1d6'
 form:
   en: >-
     Slacks, a jacket, a shirt, and an array of optional accessories: a
     vest, a tie, a tie clip, a pocket square, a pair of cufflinks, a pair
     of socks, and a pair of shoes
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Calças sociais, um paletó, uma camisa e uma variedade de acessórios
+    opcionais: um colete, uma gravata, um prendedor de gravata, um lenço
+    de bolso, um par de abotoaduras, um par de meias e um par de sapatos
 effect_text:
   en: >-
     While worn without any armor, you gain +1 Armor against Intellect
@@ -21,7 +24,18 @@ effect_text:
     minutes, the garments neatly press, fold, and—if a suitable peg or
     hangar is available—hang themselves. Being dressed for the occasion
     might provide an asset on certain social interactions.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Quando vestidos sem nenhuma armadura, você ganha +1 de Armadura contra
+    Dano de Intelecto. Você pode usar uma ação para alterar a aparência, a
+    textura do tecido ou os detalhes das roupas — por exemplo, adicionando
+    um punho franzido a uma camisa, trocando o paletó de veludo de botão
+    único para linho listrado de botão duplo, ou a gravata de algodão
+    paisley para seda lisa. O processo de reforma leva 1 minuto. Se você
+    tirar as roupas, pode ordenar que elas se limpem e se remendem
+    sozinhas. Após 10 minutos, as peças se passam, se dobram e — se houver
+    um cabide ou gancho adequado disponível — se penduram sozinhas. Estar
+    vestido adequadamente para a ocasião pode conceder um recurso em
+    certas interações sociais.
 effect_table: null
 flavor_quote: null
 depletion_die: '1 in 1d100'

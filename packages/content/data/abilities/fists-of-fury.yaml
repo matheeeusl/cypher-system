@@ -4,7 +4,7 @@ name:
   pt-BR: Punhos da Fúria
 description:
   en: You inflict 2 additional points of damage with unarmed attacks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você causa 2 pontos adicionais de dano com ataques desarmados.'
 cost: null
 action_type: enabler
 sources:

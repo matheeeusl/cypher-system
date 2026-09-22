@@ -9,7 +9,7 @@ description:
     the following round), a related task (such as persuading the
     creature, attacking it, or defending from its attack) is eased.
     If you're in a saloon, the task is eased by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você observa ou estuda uma criatura, objeto ou local por pelo menos um round. Na próxima vez que interagir com ele (possivelmente no round seguinte), uma tarefa relacionada (como persuadir a criatura, atacá-la ou se defender do seu ataque) é facilitada. Se você estiver em um bar, a tarefa é facilitada em dois níveis.'
 cost:
   pool: intellect
   amount: 2

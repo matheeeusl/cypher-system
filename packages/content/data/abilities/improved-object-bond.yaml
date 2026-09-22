@@ -10,7 +10,7 @@ description:
     lesser magic devices within short range inoperable for one minute.
     After the creature uses this ability, it must retreat to its
     object to rest for three hours.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você manifesta a aliada da sua habilidade Criatura Mágica Vinculada, ela agora é uma criatura de nível 4. Além disso, a criatura ganha um ataque de pulso que torna todos os artefatos, máquinas, cifras manifestas e dispositivos mágicos menores dentro de uma distância curta inoperantes por um minuto. Depois que a criatura usa esta habilidade, deve se retirar para seu objeto para descansar por três horas.'
 cost:
   pool: intellect
   amount: 5

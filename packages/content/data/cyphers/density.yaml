@@ -1,5 +1,5 @@
 id: density
-name: { en: 'Density', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Density', 'pt-BR': 'Densidade' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6'
@@ -8,5 +8,8 @@ effect_text:
     For the next day, each time the user strikes a solid creature or object with a weapon,
     the weapon suddenly increases dramatically in weight, causing the blow to inflict 2 additional points of damage.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, toda vez que o usuário atingir uma criatura ou
+    objeto sólido com uma arma, a arma repentinamente aumenta
+    drasticamente de peso, fazendo com que o golpe inflija 2 pontos
+    adicionais de dano.
 effect_table: null

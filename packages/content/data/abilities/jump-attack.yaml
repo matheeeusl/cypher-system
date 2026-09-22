@@ -13,7 +13,7 @@ description:
     options for using Effort, you can choose to use Effort to enhance
     your jump; each level of Effort used in this way adds +2 feet to
     the height and +1 damage to the attack.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tenta uma rolagem de Força de dificuldade 4 para saltar bem alto como parte da sua ação de ataque corpo a corpo. Se tiver sucesso no salto e seu ataque acertar, você causa 3 pontos adicionais de dano e derruba o inimigo. Se falhar no salto, ainda faz sua rolagem de ataque normal, mas não causa o dano extra nem derruba o oponente se acertar. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aprimorar seu salto; cada nível de Esforço usado dessa forma adiciona +60 cm (2 pés) à altura e +1 de dano ao ataque.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

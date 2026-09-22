@@ -20,7 +20,7 @@ description:
     level lower than its normal level. However, if the laser is fired by
     you or someone else who has your permission, the laser attacks are
     eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você modifica seu assistente artificial da habilidade Assistente Robótico com uma nova capacidade. As opções padrão incluem as seguintes. Combine com seu Mestre se preferir uma capacidade diferente. Compartimento de Cifras: O robô pode carregar uma cifra manifesta extra para você. Voo: O robô pode voar uma distância longa a cada round. Ele pode carregá-lo, mas apenas por até uma hora entre cada uma das suas rolagens de recuperação de dez horas. Escudo de Força: O robô pode erguer um campo de força opaco de nível 5 ao seu redor e ao redor de qualquer um dentro de 3 metros (10 pés) dele por um minuto (ou até ser destruído). Ele não pode fazer isso novamente até depois da sua próxima rolagem de recuperação. Configuração de Laser Montado: O robô pode se reconfigurar e se tornar uma arma de laser imóvel em um suporte giratório. Nessa configuração, o robô é uma arma pesada que causa 7 pontos de dano. Se o robô agir como uma torreta autônoma, trate-o como um nível abaixo do seu nível normal. Porém, se o laser for disparado por você ou por outra pessoa com sua permissão, os ataques de laser são facilitados.'
   # Note: each of the 4 upgrade options prints its own action_type tag
   # (Cypher Pod: Enabler. / Flight: Enabler. / Force Shield: Action. /
   # Mounted Laser Configuration: "Action to reconfigure; action to return

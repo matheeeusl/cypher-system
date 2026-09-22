@@ -10,7 +10,7 @@ description:
     anything darker becomes darkness. If you cast this spell on an
     object, the darkness moves with the object, and can be suppressed
     if it is enclosed in a light-proof container or wrapping.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você drena a luz de uma área imediata dentro de uma distância longa. Luz forte (como um dia ensolarado ao ar livre) se torna luz fraca, luz normal (como dentro de uma sala bem iluminada) se torna luz muito fraca, e qualquer coisa mais escura se torna escuridão. Se você conjurar este feitiço em um objeto, a escuridão se move com o objeto, e pode ser suprimida se ele for guardado em um recipiente ou embrulho à prova de luz.'
 cost:
   pool: intellect
   amount: 2

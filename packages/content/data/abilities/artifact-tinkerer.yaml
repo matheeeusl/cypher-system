@@ -6,7 +6,7 @@ description:
   en: >-
     If you spend at least one day tinkering with an artifact in your possession, it functions at one level higher than normal.
     This applies to all artifacts in your possession, but they retain this bonus only for you.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você passar pelo menos um dia mexendo em um artefato em sua posse, ele passa a funcionar em um nível acima do normal. Isso se aplica a todos os artefatos em sua posse, mas eles mantêm esse bônus apenas para você.'
 cost: null
 action_type: enabler
 sources:

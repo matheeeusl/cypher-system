@@ -1,5 +1,5 @@
 id: burst-of-speed
-name: { en: 'Burst of speed', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Burst of speed', 'pt-BR': 'Explosão de velocidade' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 385'
 level_range: '1d6'
@@ -8,5 +8,7 @@ effect_text:
     For one minute, a user who normally can move a short distance as an action can
     move a long distance instead.
   pt-BR: >-
-    Tradução em breve.
+    Por um minuto, um usuário que normalmente pode se mover a uma
+    distância curta como uma ação pode, em vez disso, se mover a uma
+    distância longa.
 effect_table: null

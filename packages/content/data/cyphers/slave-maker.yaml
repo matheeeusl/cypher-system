@@ -1,5 +1,5 @@
 id: slave-maker
-name: { en: 'Slave maker', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Slave maker', 'pt-BR': 'Escravizador' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d6 + 2'
@@ -13,5 +13,12 @@ effect_text:
     hours equal to the cypher's level minus the target's level. (If the result
     is 0, the target is enslaved for only one minute.)
   pt-BR: >-
-    Tradução em breve.
+    Para ativar a cifra, o usuário deve ter sucesso em um ataque corpo
+    a corpo contra uma criatura de tamanho aproximado ao seu e cujo
+    nível não exceda o da cifra. A cifra se vincula ao alvo, que fica
+    imediatamente calmo. O alvo aguarda os comandos do usuário e cumpre
+    todas as ordens da melhor forma possível. O alvo permanece
+    escravizado assim por uma quantidade de horas igual ao nível da
+    cifra menos o nível do alvo. (Se o resultado for 0, o alvo fica
+    escravizado por apenas um minuto.)
 effect_table: null

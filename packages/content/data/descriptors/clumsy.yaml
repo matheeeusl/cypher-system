@@ -1,14 +1,19 @@
 id: clumsy
 name:
   en: Clumsy
-  pt-BR: Tradução em breve.
+  pt-BR: Desajeitado
 description:
   en: >-
     Graceless and awkward, you were told that you'd grow out of it, but
     you never did. You often drop things, trip over your own feet, or
     knock things (or people) over. Some people get frustrated by this
     quality, but most find it funny and even a little charming.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Desajeitado e sem graça, você ouviu dizer que isso passaria com o
+    tempo, mas nunca passou. Você frequentemente deixa cair coisas,
+    tropeça nos próprios pés ou derruba objetos (ou pessoas). Algumas
+    pessoas se irritam com essa característica, mas a maioria acha
+    engraçado e até um pouco charmoso.
 pool_bonus:
   - stat: speed
     amount: -2
@@ -17,16 +22,19 @@ pool_bonus:
 characteristics:
   - name:
       en: Inelegant
-      pt-BR: Tradução em breve.
+      pt-BR: Deselegante
     description:
       en: >-
         You have a certain lovable charm. You are trained in all pleasant
         social interactions when you express a lighthearted,
         self-deprecating manner.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tem um certo charme cativante. Você é treinado em todas as
+        interações sociais agradáveis quando se expressa de forma
+        bem-humorada e autodepreciativa.
   - name:
       en: Dumb Luck
-      pt-BR: Tradução em breve.
+      pt-BR: Sorte Cega
     description:
       en: >-
         The GM can introduce a GM intrusion on you, based on your
@@ -40,7 +48,19 @@ characteristics:
         You and the GM should work together to determine the details. If
         the GM wishes, they can use GM intrusions based on your
         clumsiness normally (awarding XP).
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        O Mestre pode introduzir uma intrusão do Mestre sobre você,
+        baseada na sua falta de jeito, sem lhe conceder XP (como se você
+        tivesse tirado 1 em uma rolagem de d20). No entanto, quando isso
+        acontece, 50% das vezes sua falta de jeito acaba jogando a seu
+        favor. Em vez de prejudicá-lo (muito), ela o ajuda, ou prejudica
+        seus inimigos. Você escorrega, mas bem a tempo de se esquivar de
+        um ataque. Você cai, mas derruba seus inimigos ao se chocar
+        contra as pernas deles. Você se vira rápido demais, mas acaba
+        derrubando a arma da mão do seu inimigo. Você e o Mestre devem
+        trabalhar juntos para definir os detalhes. Se o Mestre desejar,
+        pode usar intrusões do Mestre baseadas na sua falta de jeito
+        normalmente (concedendo XP).
 skill_training:
   - skill_id: breaking-inanimate-objects
     choice_count: null
@@ -48,18 +68,24 @@ inabilities:
   - en: >-
       Any task that involves balance, grace, or hand-to-eye coordination
       is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Qualquer tarefa que envolva equilíbrio, graça ou coordenação motora
+      é prejudicada.
 additional_equipment: null
 connection_options:
   - en: You were in the right place at the right time.
-    pt-BR: Tradução em breve.
+    pt-BR: Você estava no lugar certo, na hora certa.
   - en: >-
       You had a piece of information that the other PCs needed to make
       their plans.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tinha uma informação de que os outros personagens precisavam
+      para fazer seus planos.
   - en: A sibling recommended you to the other PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: Um irmão o recomendou aos outros personagens.
   - en: >-
       You stumbled into the PCs as they were discussing their mission,
       and they took a liking to you.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você deu de cara com os personagens enquanto discutiam sua missão,
+      e eles simpatizaram com você.

@@ -4,7 +4,7 @@ name:
   pt-BR: Dois Protegidos
 description:
   en: You can have two wards from Devoted Defender at a time. Choosing a second ward can be its own action, or you can choose two wards with one action (and only pay the cost once for doing so). The wards must remain within an immediate distance of each other. Benefits provided by Devoted Defender apply to both your wards. If your wards separate, you choose which retains the benefit. If they come back together, both regain the benefit immediately.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode ter dois protegidos de Defensor Devotado ao mesmo tempo. Escolher um segundo protegido pode ser sua própria ação, ou você pode escolher dois protegidos com uma ação (e pagar o custo apenas uma vez ao fazê-lo). Os protegidos devem permanecer dentro de uma distância imediata um do outro. Os benefícios oferecidos por Defensor Devotado se aplicam a ambos os seus protegidos. Se seus protegidos se separarem, você escolhe quem mantém o benefício. Se voltarem a ficar juntos, ambos recuperam o benefício imediatamente.'
 cost: null
 action_type: enabler
 sources:

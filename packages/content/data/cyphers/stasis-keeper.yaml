@@ -1,5 +1,5 @@
 id: stasis-keeper
-name: { en: 'Stasis keeper', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Stasis keeper', 'pt-BR': 'Mantenedor de estase' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6'
@@ -10,5 +10,8 @@ effect_text:
     age and comes out of the stasis alive and in the same condition as it went
     in, with no memory of the period of inactivity.
   pt-BR: >-
-    Tradução em breve.
+    Coloca um alvo em estase por uma quantidade de dias igual ao nível
+    da cifra, ou até ser perturbado violentamente. Um objeto em estase
+    não envelhece e sai da estase vivo e nas mesmas condições em que
+    entrou, sem nenhuma memória do período de inatividade.
 effect_table: null

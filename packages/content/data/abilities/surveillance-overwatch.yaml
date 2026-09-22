@@ -10,7 +10,7 @@ description:
     Likewise, if you use Camera Sight to advise a character of a
     foe's weakness, that character's next attack roll against that
     foe is eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa sua habilidade Visão por Câmeras para avaliar uma situação e avisar outro personagem sobre uma ameaça iminente, a próxima rolagem de defesa desse personagem contra a ameaça que você detectou é facilitada. Da mesma forma, se você usar Visão por Câmeras para avisar um personagem sobre a fraqueza de um inimigo, a próxima rolagem de ataque desse personagem contra esse inimigo é facilitada.'
 cost:
   pool: intellect
   amount: 3

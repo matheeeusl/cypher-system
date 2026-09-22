@@ -8,7 +8,7 @@ description:
     instead roll as if it were an Intellect action. This means that if
     you apply Effort, you spend points from your Intellect Pool and
     use your Intellect Edge.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao tentar uma tarefa mágica de Força ou Velocidade, você pode em vez disso rolar como se fosse uma ação de Intelecto. Isso significa que, se aplicar Esforço, você gasta pontos da sua Reserva de Intelecto e usa sua Margem de Intelecto.'
 cost: null
 action_type: enabler
 sources:

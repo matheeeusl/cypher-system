@@ -4,7 +4,7 @@ name:
   pt-BR: Acalmar a Fera
 description:
   en: You calm a nonhuman beast within 30 feet (9 m). You must speak to it (although it doesn't need to understand your words), and it must see you. It remains calm for one minute or for as long as you focus all your attention on it. The GM has final say over what counts as a nonhuman beast, but unless some kind of deception is at work, you should know whether you can affect a creature before you attempt to use this ability on it. Aliens, extradimensional entities, very intelligent creatures, and robots never count.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você acalma uma fera não humana dentro de 9 metros (30 pés). Você deve falar com ela (embora não precise entender suas palavras), e ela deve vê-la. Ela permanece calma por um minuto ou enquanto você mantiver toda sua atenção nela. O Mestre tem a palavra final sobre o que conta como uma fera não humana, mas, a menos que algum tipo de engano esteja em jogo, você deve saber se consegue afetar uma criatura antes de tentar usar esta habilidade nela. Alienígenas, entidades extradimensionais, criaturas muito inteligentes e robôs nunca contam.'
 cost:
   pool: intellect
   amount: 2

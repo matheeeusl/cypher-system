@@ -10,7 +10,7 @@ description:
     use an action to spend them to restore an equal number of points
     to your Might or Speed Pool. Your Siphon Pool can safely store up
     to 3 points; each point beyond that hinders all of your tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você drena energia com suas habilidades de foco, pode armazenar parte dela para depois em uma Reserva de Captação. Você pode gastar pontos da sua Reserva de Captação como se fossem da sua Reserva de Força ou Velocidade, ou usar uma ação para gastá-los restaurando um número igual de pontos à sua Reserva de Força ou Velocidade. Sua Reserva de Captação pode armazenar com segurança até 3 pontos; cada ponto além disso dificulta todas as suas tarefas.'
 cost: null
 action_type: enabler
 sources:

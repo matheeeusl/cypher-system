@@ -1,7 +1,7 @@
 id: risk-taking
 name:
   en: Risk-Taking
-  pt-BR: Tradução em breve.
+  pt-BR: Arriscado
 description:
   en: >-
     It's part of your nature to question what others think can't or
@@ -12,14 +12,22 @@ description:
     satisfaction and pleasure when you succeed. The more you succeed, the
     more you find yourself looking for that next risky challenge to try
     yourself against.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Faz parte da sua natureza questionar o que os outros pensam que não
+    pode ou não deve ser feito. Você não é louco, é claro — não tentaria
+    saltar por um abismo de um quilômetro e meio de largura só porque foi
+    desafiado. Existe o impossível, e existe o que é apenas quase
+    possível. Você gosta de empurrar esse limite mais do que os outros,
+    porque isso lhe dá uma explosão de satisfação e prazer quando você
+    tem sucesso. Quanto mais você tem sucesso, mais se pega procurando o
+    próximo desafio arriscado para testar a si mesmo.
 pool_bonus:
   - stat: speed
     amount: 4
 characteristics:
   - name:
       en: Pressing Your Luck
-      pt-BR: Tradução em breve.
+      pt-BR: Testando a Sorte
     description:
       en: >-
         You can choose to automatically succeed on one task without
@@ -29,7 +37,14 @@ characteristics:
         success, but it probably qualifies it in some fashion. You can
         do this one time, although the ability renews each time you make
         a ten-hour recovery roll.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você pode optar por ter sucesso automático em uma tarefa sem
+        rolar, desde que a dificuldade da tarefa não seja superior a 6.
+        Quando fizer isso, porém, também desencadeia uma intrusão do
+        Mestre, como se tivesse tirado 1. A intrusão não invalida o
+        sucesso, mas provavelmente o qualifica de alguma forma. Você pode
+        fazer isso uma vez, embora a habilidade se renove a cada vez que
+        você faz uma rolagem de recuperação de dez horas.
 skill_training:
   - skill_id: leveraging-risk
     choice_count: null
@@ -37,22 +52,32 @@ inabilities:
   - en: >-
       You may be nimble, but you're not sneaky. Tasks related to
       sneaking and staying quiet are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você pode ser ágil, mas não é discreto. Tarefas relacionadas a se
+      esgueirar e ficar quieto são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       It seemed like there were equal odds that the other PCs wouldn't
       succeed, which sounded good to you.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Pareceu que havia chances iguais de os outros personagens não
+      terem sucesso, o que soou bem para você.
   - en: >-
       You think the tasks ahead will present you with unique and
       fulfilling challenges.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acha que as tarefas à frente lhe trarão desafios únicos e
+      gratificantes.
   - en: >-
       One of your biggest risks failed to go your way, and you need
       money to help pay that debt.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos seus maiores riscos não deu certo, e você precisa de
+      dinheiro para ajudar a pagar essa dívida.
   - en: >-
       You bragged that you never saw a risk you didn't like, which is
       how you reached your current point.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se gabou de nunca ter visto um risco de que não gostasse, e
+      foi assim que chegou até aqui.

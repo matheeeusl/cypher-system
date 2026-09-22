@@ -9,7 +9,7 @@ description:
     and you regain 1d6 points to one of your Pools (your choice). The
     spirit is stored within you, which means it cannot be questioned,
     raised, or restored to life by any means unless you allow it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você mata uma criatura ou destrói um espírito com um ataque, se escolher, o espírito dela (se desprotegido) o infunde imediatamente, e você recupera 1d6 pontos para uma de suas Reservas (à sua escolha). O espírito fica armazenado dentro de você, o que significa que não pode ser interrogado, erguido ou trazido de volta à vida por nenhum meio, a menos que você permita.'
 cost: null
 action_type: enabler
 sources:

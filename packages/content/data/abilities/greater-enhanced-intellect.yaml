@@ -4,7 +4,7 @@ name:
   pt-BR: Intelecto Aprimorado Superior
 description:
   en: You gain 6 points to your Intellect Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha 6 pontos na sua Reserva de Intelecto.'
 cost: null
 action_type: enabler
 sources:

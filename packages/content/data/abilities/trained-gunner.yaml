@@ -13,7 +13,7 @@ description:
     of ammo (or all the ammo in the weapon, if it has less than the
     number rolled). The attack roll is eased. If the attack is
     successful, it deals 1 less point of damage than normal.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode escolher um de dois benefícios. Ou você fica treinada em usar armas de fogo, ou ganha a habilidade Rajada (que custa 2 pontos de Velocidade): se uma arma tem a capacidade de disparar tiros rápidos sem recarregar (geralmente chamada de arma de tiro rápido, como uma pistola automática), você pode espalhar múltiplos tiros ao redor do seu alvo para aumentar a chance de acerto. Esse movimento usa 1d6 + 1 rounds de munição (ou toda a munição da arma, se tiver menos que o número rolado). A rolagem de ataque é facilitada. Se o ataque for bem-sucedido, causa 1 ponto a menos de dano que o normal.'
   # Note: source tag is "Enabler (being trained in using guns) or action
   # (Spray)." — a genuinely dual-mode tag, one mode per sub-benefit.
   # The Spray sub-benefit here duplicates the

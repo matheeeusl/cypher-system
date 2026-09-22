@@ -18,7 +18,7 @@ description:
     you can use type abilities, other focus abilities, and so on. In
     tree shape, pretending to be a tree and hiding among normal trees
     are eased by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Corpo de Madeira, pode crescer até 4 metros (12 pés) de altura. Nessa forma maior, você adiciona 7 pontos à sua Reserva de Força e +2 à sua Margem de Força. Se você optou por crescer, quando Corpo de Madeira termina, subtrai 7 pontos da sua Reserva de Força (se isso reduzir a Reserva a 0, subtraia o excedente primeiro da sua Reserva de Velocidade e depois, se necessário, da sua Reserva de Intelecto). Quando você usa Corpo de Madeira, quer opte por crescer ou não, em vez de parecer uma versão de madeira de si mesma, pode assumir a aparência completa de uma criatura arbórea humanoide ou uma árvore de fato (incluindo o crescimento de galhos adicionais, folhagem extra, e assim por diante). Isso não afeta nenhuma das suas habilidades — em forma de árvore, você pode usar habilidades de tipo, outras habilidades de foco, e assim por diante. Em forma de árvore, fingir ser uma árvore e se esconder entre árvores comuns são facilitados em dois níveis.'
 cost: null
 action_type: enabler
 sources:

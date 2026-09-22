@@ -8,7 +8,7 @@ description:
     deception, intimidation, research, knowledge in one area, or
     seeing through deception. If you choose a skill in which you're
     already trained, you become specialized in that skill instead.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em duas das seguintes perícias: persuasão, decepção, intimidação, pesquisa, conhecimento em uma área, ou ver através de decepção. Se escolher uma perícia na qual já é treinada, torna-se especializada nela em vez disso.'
 cost: null
 action_type: enabler
 sources:

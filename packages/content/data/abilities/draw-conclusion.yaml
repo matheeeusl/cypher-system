@@ -10,7 +10,7 @@ description:
     ability is a difficulty 3 Intellect task. Each additional time you
     use this ability, the task is hindered by an additional step. The
     difficulty returns to 3 after you rest for ten hours.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Após observação e investigação cuidadosas (questionar um ou mais PNJs sobre um assunto, vasculhar uma área ou arquivo, e assim por diante) durando alguns minutos, você pode descobrir um fato pertinente. Esta habilidade é uma tarefa de Intelecto de dificuldade 3. Cada vez adicional que você usar esta habilidade, a tarefa é dificultada em um nível adicional. A dificuldade volta a 3 depois que você descansar por dez horas.'
 cost:
   pool: intellect
   amount: 3

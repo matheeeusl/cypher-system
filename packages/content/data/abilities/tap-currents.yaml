@@ -12,7 +12,7 @@ description:
     can instead use Tap Currents to add 3 points to your Siphon Pool.
     (This use of this ability is not limited to one use per ten-hour
     recovery roll.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode extrair energia da própria terra para seu corpo. Se você se concentrar e não se mover de onde está por um minuto, restaura 3 pontos à sua Reserva de Força ou Velocidade. Uma vez que você usa esta habilidade, não pode usá-la novamente até ter feito uma rolagem de recuperação de dez horas. Se você tiver a habilidade Armazenar Energia, pode em vez disso usar Captar Correntes para adicionar 3 pontos à sua Reserva de Captação. (Esse uso desta habilidade não está limitado a uma vez por rolagem de recuperação de dez horas.)'
 cost: null
 action_type: action_to_initiate
 sources:

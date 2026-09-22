@@ -1,43 +1,51 @@
 id: tough
 name:
   en: Tough
-  pt-BR: Tradução em breve.
+  pt-BR: Durão
 description:
   en: >-
     You're strong and can take a lot of physical punishment. You might
     have a large frame and a square jaw. Tough characters frequently
     have visible scars.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é forte e consegue aguentar muito castigo físico. Talvez tenha
+    um porte avantajado e um queixo quadrado. Personagens durões costumam
+    ter cicatrizes visíveis.
 pool_bonus: []
 characteristics:
   - name:
       en: Resilient
-      pt-BR: Tradução em breve.
+      pt-BR: Resistente
     description:
       en: +1 to Armor.
-      pt-BR: Tradução em breve.
+      pt-BR: +1 de Armadura.
   - name:
       en: Healthy
-      pt-BR: Tradução em breve.
+      pt-BR: Saudável
     description:
       en: Add 1 to the points you regain when you make a recovery roll.
-      pt-BR: Tradução em breve.
+      pt-BR: Some 1 aos pontos que você recupera ao fazer uma rolagem de recuperação.
 skill_training:
   - skill_id: might-defense
     choice_count: null
 inabilities: []
 additional_equipment:
   en: You have an extra light weapon.
-  pt-BR: Tradução em breve.
+  pt-BR: Você tem uma arma leve adicional.
 connection_options:
   - en: You're acting as a bodyguard for one of the other PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: Você está atuando como guarda-costas de um dos outros personagens.
   - en: One of the PCs is your sibling, and you came along to watch out for them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens é seu irmão ou irmã, e você veio junto
+      para cuidar dele.
   - en: You need money because your family is in debt.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisa de dinheiro porque sua família está endividada.
   - en: >-
       You stepped in to defend one of the PCs when that character was
       threatened. While talking to them afterward, you heard about the
       group's task.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você interveio para defender um dos outros personagens quando ele
+      foi ameaçado. Ao conversar com ele depois, você ouviu falar sobre a
+      missão do grupo.

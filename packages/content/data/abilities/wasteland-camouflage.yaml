@@ -16,7 +16,7 @@ description:
     using an ability, moving a large object, and so on. If this
     occurs, you can regain the remaining invisibility effect by
     taking an action to focus on hiding your position.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao ajeitar suas roupas de um certo jeito e usar vários truques e seu profundo conhecimento do ambiente, você fica invisível por dez minutos em qualquer paisagem que contenha ruínas de antes. (Você também pode tentar isso em um cenário puramente selvagem, mas se o fizer, deve gastar 1 ponto adicional de Velocidade ou Intelecto, qualquer que seja a Reserva com a qual ativou esse poder.) Enquanto estiver invisível, esse recurso facilita suas tarefas de furtividade e defesa de Velocidade em dois níveis. Esse efeito termina se você fizer algo que revele sua presença ou posição — atacar, usar uma habilidade, mover um objeto grande, e assim por diante. Se isso ocorrer, você pode recuperar o efeito de invisibilidade restante usando uma ação para se concentrar em ocultar sua posição.'
   # Note: source cost is both open-ended and a choice-of-pool, "5+
   # Speed or Intellect points" — the schema's cost field can represent
   # neither. Recorded as the baseline 5 Speed points (first-listed

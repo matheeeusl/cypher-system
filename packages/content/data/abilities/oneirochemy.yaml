@@ -4,7 +4,7 @@ name:
   pt-BR: Oneiroquímica
 description:
   en: You are trained in tasks related to sleep and mixing natural elixirs to help creatures fall asleep.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em tarefas relacionadas ao sono e à mistura de elixires naturais para ajudar criaturas a adormecer.'
 cost: null
 action_type: enabler
 sources:

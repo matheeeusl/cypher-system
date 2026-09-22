@@ -6,7 +6,7 @@ description:
   en: >-
     When affected by an attack or effect that would daze or stun you,
     you are not dazed or stunned.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando afetada por um ataque ou efeito que a atordoaria ou deixaria aturdida, você não fica atordoada nem aturdida.'
 cost:
   pool: might
   amount: 5

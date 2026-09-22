@@ -4,7 +4,7 @@ name:
   pt-BR: Chamado da Fera
 description:
   en: You summon a horde of small animals or a single level 4 beast to help you temporarily. These creatures do your bidding for as long as you focus your attention, but you must use your action each turn to direct them. Creatures are native to the area and arrive under their own power, so if you're in an unreachable place, this ability won't work.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você convoca uma horda de pequenos animais ou uma única fera de nível 4 para ajudá-lo temporariamente. Essas criaturas obedecem suas ordens enquanto você mantiver sua atenção focada, mas deve usar sua ação a cada turno para direcioná-las. As criaturas são nativas da área e chegam por seus próprios meios, então, se você estiver em um local inacessível, esta habilidade não funcionará.'
 cost:
   pool: intellect
   amount: 5

@@ -14,7 +14,7 @@ description:
     additional Intellect point when you use this ability, you can
     calm all nonhuman beasts, as the GM determines (aliens, demons,
     animals that can speak, and forgeborn never count).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você acalma uma criatura ofídia dentro de uma distância curta. Você deve falar com ela (embora ela não precise entender suas palavras), e ela deve vê-la. Ela permanece calma por um minuto ou enquanto você mantiver toda sua atenção nela. O Mestre tem a palavra final sobre o que conta como uma criatura semelhante a uma serpente, mas, a menos que algum tipo de engano esteja em jogo, você deve saber se consegue afetá-la antes de tentar usar esta habilidade nela. Se você gastar 1 ponto adicional de Intelecto ao usar esta habilidade, pode acalmar todas as feras não humanas, conforme o Mestre determinar (alienígenas, demônios, animais que falam e seres forjados nunca contam).'
   # Note: source cost is printed as "1+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 1 Intellect point here, flagged for schema review

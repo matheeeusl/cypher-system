@@ -1,5 +1,5 @@
 id: sheen
-name: { en: 'Sheen', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Sheen', 'pt-BR': 'Verniz' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6'
@@ -10,5 +10,10 @@ effect_text:
     higher) and eases Might defense rolls by two steps. However, healing is
     more difficult during this time; all recovery rolls suffer a −1 penalty.
   pt-BR: >-
-    Tradução em breve.
+    Por uma semana, as células do usuário ficam revestidas por um
+    verniz protetor que resiste a dano (+1 de Armadura, ou +2 de
+    Armadura se a cifra for de nível 5 ou superior) e facilita em dois
+    níveis as rolagens de defesa de Força. No entanto, a cura fica mais
+    difícil durante esse período; todas as rolagens de recuperação
+    sofrem uma penalidade de −1.
 effect_table: null

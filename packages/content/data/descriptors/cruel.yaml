@@ -1,7 +1,7 @@
 id: cruel
 name:
   en: Cruel
-  pt-BR: Tradução em breve.
+  pt-BR: Cruel
 description:
   en: >-
     Misfortune and suffering do not move you. When another endures
@@ -20,21 +20,43 @@ description:
     friendly, and even helpful. But when angered or frustrated, your dual
     nature reveals itself, and those who have earned your scorn are
     likely to suffer for it.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    O infortúnio e o sofrimento não o comovem. Quando outra pessoa passa
+    por dificuldades, você tem dificuldade em se importar, e pode até
+    sentir prazer com a dor e as dificuldades que essa pessoa enfrenta,
+    caso ela já tenha lhe feito mal no passado. Sua veia cruel pode vir
+    da amargura causada por suas próprias lutas e decepções. Você pode
+    ser um pragmático implacável, fazendo o que sente que precisa fazer,
+    mesmo que isso prejudique os outros. Ou pode ser um sádico, que se
+    deleita com a dor que inflige. Ser cruel não faz de você
+    necessariamente um vilão. Sua crueldade pode ser reservada para quem
+    o contraria ou para outras pessoas úteis a você. Você pode ter se
+    tornado cruel como resultado de uma experiência intensamente
+    terrível. Abuso e tortura, por exemplo, podem corroer a compaixão por
+    outros seres vivos. Além disso, você não precisa ser cruel em toda
+    situação. Na verdade, os outros podem vê-lo como sociável, amigável e
+    até prestativo. Mas, quando irritado ou frustrado, sua natureza dupla
+    se revela, e aqueles que conquistaram seu desprezo provavelmente
+    sofrerão por isso.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Cruelty
-      pt-BR: Tradução em breve.
+      pt-BR: Crueldade
     description:
       en: >-
         When you use force, you can choose to maim or deliver painful
         injuries to draw out your foe's suffering. Whenever you inflict
         damage, you can choose to inflict 2 fewer points of damage to
         ease your next attack against that foe.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Quando você usa a força, pode optar por mutilar ou infligir
+        ferimentos dolorosos para prolongar o sofrimento do seu inimigo.
+        Sempre que infligir dano, você pode optar por infligir 2 pontos
+        de dano a menos para facilitar seu próximo ataque contra esse
+        inimigo.
 skill_training:
   - skill_id: exploiting-pain
     choice_count: null
@@ -43,26 +65,42 @@ inabilities:
       You have a hard time connecting with others, understanding their
       motives, or sharing their feelings. Any task to ascertain another
       character's motives, feelings, or disposition is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem dificuldade em se conectar com os outros, entender suas
+      motivações ou compartilhar seus sentimentos. Qualquer tarefa para
+      descobrir as motivações, sentimentos ou disposição de outro
+      personagem é prejudicada.
 additional_equipment:
   en: >-
     You have a valuable memento from the last person you destroyed. The
     memento is moderately priced, and you can sell it or trade it for an
     item of equal or lesser value.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem uma lembrança valiosa da última pessoa que destruiu. A
+    lembrança tem preço moderado, e você pode vendê-la ou trocá-la por um
+    item de valor igual ou inferior.
 connection_options:
   - en: >-
       You suspect that you might gain a long-term advantage from helping
       the other PCs and may be able to use that advantage against your
       enemies.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você suspeita que pode obter uma vantagem de longo prazo ao ajudar
+      os outros personagens, e talvez consiga usar essa vantagem contra
+      seus inimigos.
   - en: >-
       By joining the PCs, you see an opportunity to grow your personal
       power and status at the expense of others.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Ao se juntar aos outros personagens, você enxerga uma oportunidade
+      de aumentar seu poder e status pessoal às custas dos outros.
   - en: You hope to make another PC's life more difficult by joining the group.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você espera tornar a vida de outro personagem mais difícil ao se
+      juntar ao grupo.
   - en: >-
       Joining the PCs gives you an opportunity to escape justice for a
       crime you committed.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Juntar-se aos outros personagens lhe dá a oportunidade de escapar
+      da justiça por um crime que cometeu.

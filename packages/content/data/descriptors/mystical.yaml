@@ -1,7 +1,7 @@
 id: mystical
 name:
   en: Mystical
-  pt-BR: Tradução em breve.
+  pt-BR: Místico
 description:
   en: >-
     You think of yourself as mystical, attuned with the mysterious and
@@ -12,24 +12,36 @@ description:
     around you as well). Mystical characters often wear jewelry, such as
     a ring or an amulet, or have tattoos or other marks that show their
     interests.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você se considera místico, sintonizado com o misterioso e o
+    paranormal. Seus verdadeiros talentos estão ligados ao sobrenatural.
+    Você provavelmente tem experiência com saberes antigos e consegue
+    sentir e manipular o sobrenatural — embora se isso significa
+    "magia", "fenômenos psíquicos" ou outra coisa fique a seu critério (e
+    provavelmente também a critério dos que estão ao seu redor).
+    Personagens místicos costumam usar joias, como um anel ou amuleto,
+    ou ter tatuagens ou outras marcas que revelam seus interesses.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Sense Magic
-      pt-BR: Tradução em breve.
+      pt-BR: Sentir Magia
     description:
       en: >-
         You can sense whether the supernatural is active in situations
         where its presence is not obvious. You must study an object or
         location closely for a minute to get a feel for whether a
         mystical touch is at work.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você consegue perceber se o sobrenatural está ativo em situações
+        onde sua presença não é óbvia. Você precisa examinar um objeto ou
+        local de perto por um minuto para sentir se há um toque místico
+        envolvido.
   - name:
       en: Hedge Magic
-      pt-BR: Tradução em breve.
+      pt-BR: Magia Rudimentar
     description:
       en: >-
         You can perform Hedge Magic as a spell when you have a free hand
@@ -39,7 +51,15 @@ characteristics:
         to float through the air, clean a small area, mend a broken
         object, prepare (but not create) food, and so on. You can't use
         Hedge Magic to harm another creature or object. Action.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você pode realizar Magia Rudimentar como um feitiço quando tiver
+        uma mão livre e puder pagar o custo em pontos de Intelecto. Magia
+        Rudimentar (1 ponto de Intelecto): Você pode realizar pequenos
+        truques: mudar temporariamente a cor ou a aparência básica de um
+        pequeno objeto, fazer pequenos objetos flutuarem no ar, limpar
+        uma pequena área, consertar um objeto quebrado, preparar (mas não
+        criar) comida, e assim por diante. Você não pode usar Magia
+        Rudimentar para prejudicar outra criatura ou objeto. Ação.
 skill_training:
   - skill_id: understanding-the-supernatural
     choice_count: null
@@ -47,16 +67,21 @@ inabilities:
   - en: >-
       You have a manner or an aura that others find a bit unnerving. Any
       task involving charm, persuasion, or deception is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem um jeito ou uma aura que os outros acham um tanto
+      perturbadora. Qualquer tarefa envolvendo charme, persuasão ou
+      engano é prejudicada.
 additional_equipment: null
 connection_options:
   - en: A dream guided you to this point.
-    pt-BR: Tradução em breve.
+    pt-BR: Um sonho o guiou até este ponto.
   - en: You need money to fund your studies.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisa de dinheiro para financiar seus estudos.
   - en: >-
       You believed the mission would be a great way to learn more about
       the supernatural.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acreditou que a missão seria uma ótima forma de aprender mais
+      sobre o sobrenatural.
   - en: Various signs and portents led you here.
-    pt-BR: Tradução em breve.
+    pt-BR: Vários sinais e presságios o trouxeram até aqui.

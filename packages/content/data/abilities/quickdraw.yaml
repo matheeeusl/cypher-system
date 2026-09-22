@@ -11,7 +11,7 @@ description:
     allow your allies to act with surprise, only you. You have an
     asset on the attack. On a successful hit, you inflict 2 additional
     points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você agir primeiro e sua arma de fogo estiver embainhada, pode sacar e disparar sua arma com tanta velocidade que ganha uma ação surpresa contra seu inimigo, mesmo que ele já estivesse ciente da sua presença (mas não se o combate já tiver começado). Isso não permite que seus aliados ajam com surpresa, apenas você. Você tem um recurso no ataque. Em um acerto bem-sucedido, causa 2 pontos adicionais de dano.'
 cost: null
 action_type: enabler
 sources:

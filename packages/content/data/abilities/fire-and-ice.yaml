@@ -8,7 +8,7 @@ description:
     very cold (your choice). The target suffers 3 points of ambient
     damage (ignores Armor) each round for up to three rounds, although a
     new roll is required each round to continue to affect the target.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz um alvo dentro de uma distância curta ficar muito quente ou muito frio (à sua escolha). O alvo sofre 3 pontos de dano ambiente (ignora Armadura) a cada round por até três rounds, embora uma nova rolagem seja exigida a cada round para continuar afetando o alvo.'
 cost:
   pool: intellect
   amount: 4

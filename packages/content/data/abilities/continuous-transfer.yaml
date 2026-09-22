@@ -8,7 +8,7 @@ description:
     energy, you can transfer it to another creature within short
     range, restoring points to their Might or Speed Pools (or health
     for an NPC). This occurs seamlessly, as part of the same action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Drenar Criatura ou Captar Correntes para drenar energia, pode transferi-la para outra criatura dentro de uma distância curta, restaurando pontos à Reserva de Força ou Velocidade dela (ou saúde para um PNJ). Isso ocorre de forma contínua, como parte da mesma ação.'
   # Note: source Tier 6 heading reads "Choose either Explosive Release,
   # or both Continuous Transfer and Drain at a Distance" — a choice
   # between one path (Explosive Release alone) and a bundled pair

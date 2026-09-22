@@ -1,13 +1,17 @@
 id: swift
 name:
   en: Swift
-  pt-BR: Tradução em breve.
+  pt-BR: Ágil
 description:
   en: >-
     You move quickly, able to sprint in short bursts and work with your
     hands with dexterity. You're great at crossing distances quickly but
     not always smoothly. You are likely slim and muscular.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você se move rapidamente, capaz de disparar em rajadas curtas e
+    trabalhar com as mãos com destreza. Você é ótimo em cruzar
+    distâncias rapidamente, mas nem sempre com suavidade. Você
+    provavelmente é magro e musculoso.
 pool_bonus:
   - stat: speed
     amount: 4
@@ -19,18 +23,24 @@ skill_training:
     choice_count: null
 inabilities:
   - en: You're fast but not necessarily graceful. Any task involving balance is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você é rápido, mas não necessariamente gracioso. Qualquer tarefa
+      envolvendo equilíbrio é prejudicada.
 additional_equipment: null
 connection_options:
   - en: >-
       Against your better judgment, you joined the other PCs because you
       saw that they were in danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Contrariando seu bom senso, você se juntou aos outros personagens
+      porque viu que estavam em perigo.
   - en: >-
       One of the other PCs convinced you that joining the group would be
       in your best interests.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convenceu de que se juntar ao grupo
+      seria do seu interesse.
   - en: You're afraid of what might happen if the other PCs fail.
-    pt-BR: Tradução em breve.
+    pt-BR: Você teme o que pode acontecer se os outros personagens fracassarem.
   - en: There is reward involved, and you need the money.
-    pt-BR: Tradução em breve.
+    pt-BR: Há uma recompensa envolvida, e você precisa do dinheiro.

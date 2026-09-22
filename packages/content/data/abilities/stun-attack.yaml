@@ -4,7 +4,7 @@ name:
   pt-BR: Ataque Atordoante
 description:
   en: You attempt a difficulty 5 Speed task to stun a creature as part of your melee or ranged attack. If you succeed, your attack inflicts its normal damage and stuns the creature for one round, causing it to lose its next turn. If you fail, you still make your normal attack roll, but you don't stun the opponent if you hit. If you also have this ability from another source (such as having it as a type ability and a focus ability), using this costs you only 3 points instead of 6 points.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tenta uma tarefa de Velocidade de dificuldade 5 para atordoar uma criatura como parte do seu ataque corpo a corpo ou à distância. Se tiver sucesso, seu ataque causa seu dano normal e atordoa a criatura por um round, fazendo-a perder seu próximo turno. Se falhar, ainda assim faz sua rolagem de ataque normal, mas não atordoa o oponente se acertar. Se você também tiver esta habilidade de outra fonte (como tê-la como uma habilidade de tipo e uma habilidade de foco), usá-la custa apenas 3 pontos em vez de 6.'
 cost:
   pool: speed
   amount: 6

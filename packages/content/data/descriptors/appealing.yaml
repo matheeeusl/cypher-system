@@ -1,7 +1,7 @@
 id: appealing
 name:
   en: Appealing
-  pt-BR: Tradução em breve.
+  pt-BR: Atraente
 description:
   en: >-
     You're attractive to others, but perhaps more important, you are
@@ -9,21 +9,31 @@ description:
     draws others to you. You often know just the right thing to say to
     make someone laugh, put them at ease, or spur them to action. People
     like you, want to help you, and want to be your friend.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é atraente aos olhos dos outros, mas, talvez mais importante,
+    é simpático e carismático. Você tem aquele "algo especial" que atrai
+    as pessoas para perto de você. Frequentemente, você sabe exatamente a
+    coisa certa a dizer para fazer alguém rir, deixá-lo à vontade ou
+    incentivá-lo a agir. As pessoas gostam de você, querem ajudá-lo e
+    querem ser seus amigos.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Resistant to Charms
-      pt-BR: Tradução em breve.
+      pt-BR: Resistente a Encantos
     description:
       en: >-
         You're aware of how others can manipulate and charm people, and
         you notice when those tactics are used on you. Because of this
         awareness, you are trained in resisting any kind of persuasion or
         seduction if you wish it.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você está ciente de como os outros podem manipular e encantar as
+        pessoas, e percebe quando essas táticas são usadas contra você.
+        Por causa dessa consciência, você é treinado em resistir a
+        qualquer tipo de persuasão ou sedução, caso deseje.
 skill_training:
   - skill_id: pleasant-social-interactions
     choice_count: null
@@ -33,17 +43,26 @@ connection_options:
   - en: >-
       You met a total stranger (one of the other PCs) and charmed them so
       much that they invited you along.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você conheceu um completo estranho (um dos outros personagens) e o
+      encantou tanto que ele o convidou para se juntar ao grupo.
   - en: >-
       The PCs were looking for someone else, but you convinced them that
       you were perfect instead.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os personagens estavam procurando por outra pessoa, mas você os
+      convenceu de que era perfeito para o papel.
   - en: >-
       Pure happenstance—because you just go along with the flow of things
       and everything usually works out.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Puro acaso — porque você simplesmente segue o fluxo das coisas, e
+      tudo geralmente dá certo.
   - en: >-
       Your charismatic ways helped get one of the PCs out of a difficult
       spot a long time ago, and they always ask you to join them on new
       adventures.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Seu jeito carismático ajudou a tirar um dos personagens de uma
+      situação difícil há muito tempo, e ele sempre pede que você se
+      junte a eles em novas aventuras.

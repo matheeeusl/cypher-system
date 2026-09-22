@@ -11,7 +11,7 @@ description:
     remain limited by the amount of Effort you can apply on one action.
     Anything that modifies your attack or damage applies to both
     attacks, unless it is tied specifically to your weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Depois de fazer um ataque com arma corpo a corpo ou arma à distância, você segue com um soco ou chute como um ataque adicional, tudo como parte da mesma ação em um round. Os dois ataques podem ser direcionados a inimigos diferentes. Faça uma rolagem de ataque separada para cada ataque. Você permanece limitada pela quantidade de Esforço que pode aplicar em uma ação. Qualquer coisa que modifique seu ataque ou dano se aplica a ambos os ataques, a menos que esteja especificamente vinculada à sua arma.'
 cost:
   pool: speed
   amount: 5

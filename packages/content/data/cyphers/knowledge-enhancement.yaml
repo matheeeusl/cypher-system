@@ -3,7 +3,7 @@
 # themselves at a disadvantage when they run out, presenting a great opportunity
 # for GM intrusion.
 id: knowledge-enhancement
-name: { en: 'Knowledge enhancement', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Knowledge enhancement', 'pt-BR': 'Aprimoramento de conhecimento' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6'
@@ -14,37 +14,41 @@ effect_text:
     anything (including something specific to the operation of a particular
     device), or roll a d100 to choose a common skill.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, o personagem fica treinado em uma perícia
+    predeterminada (ou duas perícias se a cifra for de nível 5 ou
+    superior). A perícia pode ser qualquer uma (incluindo algo específico
+    à operação de um dispositivo em particular), ou role 1d100 para
+    escolher uma perícia comum.
 effect_table:
   label:
     en: 'Knowledge Enhancement Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Aprimoramento de Conhecimento'
   entries:
     - range: '01–10'
-      text: { en: 'Melee attacks', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Melee attacks', 'pt-BR': 'Ataques corpo a corpo' }
     - range: '11–20'
-      text: { en: 'Ranged attacks', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Ranged attacks', 'pt-BR': 'Ataques à distância' }
     - range: '21–40'
       text:
         {
           en: 'One type of academic or esoteric lore (biology, history, magic, and so on)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Um tipo de conhecimento acadêmico ou esotérico (biologia, história, magia, e assim por diante)',
         }
     - range: '41–50'
-      text: { en: 'Repairing (sometimes specific to one device)', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Repairing (sometimes specific to one device)', 'pt-BR': 'Reparo (às vezes específico a um dispositivo)' }
     - range: '51–60'
-      text: { en: 'Crafting (usually specific to one thing)', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Crafting (usually specific to one thing)', 'pt-BR': 'Criação de itens (geralmente específica a uma coisa)' }
     - range: '61–70'
-      text: { en: 'Persuasion', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Persuasion', 'pt-BR': 'Persuasão' }
     - range: '71–75'
-      text: { en: 'Healing', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Healing', 'pt-BR': 'Cura' }
     - range: '76–80'
-      text: { en: 'Speed defense', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Speed defense', 'pt-BR': 'Defesa de Velocidade' }
     - range: '81–85'
-      text: { en: 'Intellect defense', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Intellect defense', 'pt-BR': 'Defesa de Intelecto' }
     - range: '86–90'
-      text: { en: 'Swimming', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Swimming', 'pt-BR': 'Natação' }
     - range: '91–95'
-      text: { en: 'Riding', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Riding', 'pt-BR': 'Montaria' }
     - range: '96–00'
-      text: { en: 'Sneaking', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Sneaking', 'pt-BR': 'Esgueirar-se' }

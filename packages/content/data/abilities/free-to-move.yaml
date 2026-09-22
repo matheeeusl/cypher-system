@@ -9,7 +9,7 @@ description:
     fit your head. Tasks involving breaking free of bonds, a
     creature's grip, or any similar impediment gain three free levels
     of Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ignora todas as penalidades e ajustes de movimento devido ao terreno ou outros obstáculos. Você consegue passar por qualquer espaço grande o suficiente para caber sua cabeça. Tarefas envolvendo se libertar de amarras, do aperto de uma criatura, ou de qualquer impedimento semelhante ganham três níveis gratuitos de Esforço.'
 cost: null
 action_type: enabler
 sources:

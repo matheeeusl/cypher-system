@@ -19,7 +19,22 @@ description:
 
     You must touch the robot or machine to disrupt it (if you are
     making an attack, it inflicts no damage).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Com um olhar atento e movimentos rápidos, você perturba algumas
+    funções de um robô ou máquina e lhe inflige um dos seguintes
+    males:
+
+    - Todas as suas tarefas são dificultadas por um minuto.
+
+    - Sua velocidade é reduzida à metade.
+
+    - Ela não pode realizar nenhuma ação por um round.
+
+    - Ela causa 2 pontos a menos de dano (mínimo de 1 ponto) por um
+    minuto.
+
+    Você deve tocar o robô ou máquina para perturbá-lo (se estiver
+    fazendo um ataque, ele não causa dano).
 cost:
   pool: speed
   amount: 3

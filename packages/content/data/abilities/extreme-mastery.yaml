@@ -6,7 +6,7 @@ description:
   en: >-
     When using your chosen weapon, you can reroll any attack roll you
     wish and take the better of the two results.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao usar sua arma escolhida, você pode rolar novamente qualquer rolagem de ataque que desejar e ficar com o melhor dos dois resultados.'
   # Note: source cost is a choice-of-pool, "6 Might or 6 Speed points" —
   # the schema's single `pool` field can't represent that. Recorded as
   # Might (first-listed option), same approximation used for

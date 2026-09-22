@@ -4,7 +4,7 @@ name:
   pt-BR: Equação Preditiva
 description:
   en: You observe or study a creature, object, or location for at least one round. The next time you interact with it (possibly in the following round), a related task (such as persuading the creature, attacking it, or defending from its attack) is eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você observa ou estuda uma criatura, objeto ou local por pelo menos um round. Na próxima vez que interagir com ele (possivelmente no round seguinte), uma tarefa relacionada (como persuadir a criatura, atacá-la ou se defender do seu ataque) é facilitada.'
 cost:
   pool: intellect
   amount: 2

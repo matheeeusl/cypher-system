@@ -1,5 +1,5 @@
 id: solvent
-name: { en: 'Solvent', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Solvent', 'pt-BR': 'Solvente' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d10'
@@ -8,5 +8,6 @@ effect_text:
     Dissolves 1 cubic foot of material each round. After one round per cypher
     level, the cypher becomes inert.
   pt-BR: >-
-    Tradução em breve.
+    Dissolve 0,03 metro cúbico (1 pé cúbico) de material a cada rodada.
+    Após uma rodada por nível da cifra, a cifra se torna inerte.
 effect_table: null

@@ -1,5 +1,5 @@
 id: effect-resistance
-name: { en: 'Effect resistance', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Effect resistance', 'pt-BR': 'Resistência a efeitos' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 1'
@@ -14,5 +14,13 @@ effect_text:
     the user is an NPC, a PC attacking them with this kind of effect must
     succeed on two attack rolls to harm them.)
   pt-BR: >-
-    Tradução em breve.
+    Concede uma chance de resistência adicional a efeitos que causam
+    dano diretamente de todos os tipos, como fogo, eletricidade e afins,
+    por um dia. (Não concede resistência a ataques de concussão, corte
+    ou perfuração.) Se o nível do efeito for igual ou inferior ao nível
+    da cifra, o usuário ganha uma rolagem de defesa adicional para
+    evitá-lo. Em caso de sucesso nessa rolagem de defesa, trate o ataque
+    como se o usuário tivesse tido sucesso em sua rolagem de defesa
+    normal. (Se o usuário for um PNJ, um PJ que o atacar com esse tipo de
+    efeito deve ter sucesso em duas rolagens de ataque para causar dano.)
 effect_table: null

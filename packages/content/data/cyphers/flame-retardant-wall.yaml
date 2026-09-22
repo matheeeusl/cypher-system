@@ -1,5 +1,5 @@
 id: flame-retardant-wall
-name: { en: 'Flame-retardant wall', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Flame-retardant wall', 'pt-BR': 'Parede retardante de chamas' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6'
@@ -9,5 +9,7 @@ effect_text:
     m by 6 m) for one hour per cypher level. The plane conforms to the space
     available. Flames passing through the plane are extinguished.
   pt-BR: >-
-    Tradução em breve.
+    Cria um plano imóvel de energia permeável de até 6 por 6 metros (20
+    por 20 pés) por uma hora por nível da cifra. O plano se adapta ao
+    espaço disponível. Chamas que passam pelo plano são extintas.
 effect_table: null

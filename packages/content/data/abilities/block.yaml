@@ -6,7 +6,7 @@ description:
   en: >-
     You automatically block the next melee attack made against you
     within the next minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você bloqueia automaticamente o próximo ataque corpo a corpo feito contra você dentro do próximo minuto.'
 cost:
   pool: speed
   amount: 3

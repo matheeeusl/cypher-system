@@ -29,7 +29,35 @@ description:
     ability, moving a large object, and so on. If this occurs, you can
     regain the remaining invisibility effect by taking an action to
     focus on hiding your position.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    A seu pedido, a aliada mágica da sua habilidade Criatura Mágica
+    Vinculada pode gastar sua ação conjurando um feitiço moderado em
+    você. Depois disso, ela deve se retirar para seu objeto vinculado
+    para descansar por pelo menos uma hora. Os efeitos que ela pode
+    produzir incluem os seguintes:
+
+    - Armadura Dourada. Você ganha +3 de Armadura por uma hora, vinda
+    de um brilho translúcido de luz dourada.
+
+    - Fúria Dourada. Uma luz dourada arde em seus olhos. Pelos
+    próximos três minutos, se você atacar um alvo, causa 5 pontos
+    adicionais de dano.
+
+    - Toque da Graça Aprimorado. Com o toque da aliada mágica, você
+    adiciona 6 pontos a qualquer Reserva de atributo. Se não estiver
+    ferida, adiciona os pontos ao máximo da Reserva escolhida. Eles
+    permanecem até você gastá-los, perdê-los por dano, ou até passar
+    uma hora.
+
+    - Invisível. Com um toque, a aliada mágica curva a luz que incide
+    sobre você, para que pareça desaparecer. Você fica invisível para
+    outras criaturas por dez minutos. Enquanto invisível, você é
+    especializada em tarefas de furtividade e defesa de Velocidade.
+    Este efeito termina se você fizer algo que revele sua presença ou
+    posição — atacar, usar uma habilidade, mover um objeto grande, e
+    assim por diante. Se isso ocorrer, você pode recuperar o efeito de
+    invisibilidade restante usando uma ação para se concentrar em
+    ocultar sua posição.
   # Note: source gives the "Invisible" sub-effect its own trailing
   # "Action to initiate." tag, distinct from the ability's own leading
   # "Action to initiate." — both are the same standard tag here, so no

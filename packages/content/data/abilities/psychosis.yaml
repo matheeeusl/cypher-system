@@ -4,7 +4,7 @@ name:
   pt-BR: Psicose
 description:
   en: Your words inflict a destructive psychosis in the mind of a target within long range that can understand you, dealing 6 points of Intellect damage (ignores Armor) per round. The psychosis can be dispersed if a target uses an action doing nothing but calming and centering itself.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas palavras infligem uma psicose destrutiva na mente de um alvo dentro de uma distância longa que consiga entendê-lo, causando 6 pontos de dano de Intelecto (ignora Armadura) por round. A psicose pode ser dissipada se o alvo usar uma ação para não fazer nada além de se acalmar e se centrar.'
 cost:
   pool: intellect
   amount: 4

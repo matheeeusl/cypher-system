@@ -1,7 +1,7 @@
 # Most poisons are not considered cyphers, except for a very few that are
 # unique.
 id: poison-emotion
-name: { en: 'Poison (emotion)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Poison (emotion)', 'pt-BR': 'Veneno (emoção)' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 2'
@@ -10,43 +10,44 @@ effect_text:
     The victim feels a specific emotion for one hour. Roll a d100 to determine
     the emotion.
   pt-BR: >-
-    Tradução em breve.
+    A vítima sente uma emoção específica por uma hora. Role 1d100 para
+    determinar a emoção.
 effect_table:
   label:
     en: 'Poison (Emotion) Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Veneno (Emoção)'
   entries:
     - range: '01–20'
       text:
         {
           en: 'Anger: Likely to attack anyone who disagrees with them. Very hard to interact with; all such actions are hindered by two steps.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Raiva: Tende a atacar qualquer um que discorde dela. Muito difícil de interagir; todas as ações desse tipo são prejudicadas em dois níveis.',
         }
     - range: '21–40'
       text:
         {
           en: 'Fear: Flees in terror for one minute when threatened.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Medo: Foge em terror por um minuto quando ameaçada.',
         }
     - range: '41–60'
-      text: { en: 'Lust: Cannot focus on any nonsexual activity.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Lust: Cannot focus on any nonsexual activity.', 'pt-BR': 'Luxúria: Não consegue se concentrar em nenhuma atividade não sexual.' }
     - range: '61–75'
-      text: { en: 'Sadness: All tasks are hindered.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Sadness: All tasks are hindered.', 'pt-BR': 'Tristeza: Todas as tarefas são prejudicadas.' }
     - range: '76–85'
       text:
         {
           en: 'Complacency: Has no motivation. All tasks are hindered by two steps.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Complacência: Não tem motivação. Todas as tarefas são prejudicadas em dois níveis.',
         }
     - range: '86–95'
       text:
         {
           en: 'Joy: Easy to interact with in a pleasant manner; all pleasant interaction tasks are eased.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Alegria: Fácil de interagir de forma agradável; todas as tarefas de interação agradável são facilitadas.',
         }
     - range: '96–00'
       text:
         {
           en: 'Love: Much easier to interact with; all interaction tasks are eased by two steps, but temporary attachment is likely.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Amor: Muito mais fácil de interagir; todas as tarefas de interação são facilitadas em dois níveis, mas um apego temporário é provável.',
         }

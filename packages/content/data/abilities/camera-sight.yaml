@@ -15,7 +15,18 @@ description:
 
     If you activate this ability and apply a level of Effort, you can
     gain the benefit of both options at once.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Esta habilidade tem duas opções diferentes:
+
+    - Uma, você se torna consciente de todas as câmeras de segurança
+    dentro de uma distância longa.
+
+    - Duas, você pode invadir uma câmera de segurança da qual esteja
+    ciente que esteja dentro de 1,5 km (uma milha), permitindo que veja
+    através do ponto de vista da câmera por até 10 minutos.
+
+    Se você ativar esta habilidade e aplicar um nível de Esforço, pode
+    obter o benefício de ambas as opções ao mesmo tempo.
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here, flagged for schema review (same

@@ -11,7 +11,7 @@ description:
     an asset on all tasks until the effect ends. After the effect
     ends, the target is exhausted and disoriented by the experience,
     hindering all tasks for one hour.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ou uma criatura disposta que tocar se move mais rapidamente através do tempo. O efeito dura um minuto. Tudo se move mais devagar para o personagem afetado, enquanto para todos os outros, ele parece se mover em velocidade preternatural. O personagem tem um recurso em todas as tarefas até o efeito terminar. Depois que o efeito termina, o alvo fica exausto e desorientado pela experiência, dificultando todas as tarefas por uma hora.'
 cost:
   pool: intellect
   amount: 5

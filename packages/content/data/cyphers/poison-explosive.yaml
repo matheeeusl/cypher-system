@@ -1,5 +1,5 @@
 id: poison-explosive
-name: { en: 'Poison (explosive)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Poison (explosive)', 'pt-BR': 'Veneno (explosivo)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 1'
@@ -10,43 +10,46 @@ effect_text:
     points of damage (ignores Armor). Roll a d100 to determine what activates
     the poison.
   pt-BR: >-
-    Tradução em breve.
+    Assim que essa substância entra na corrente sanguínea, ela viaja
+    até o cérebro e se reorganiza em um explosivo que detona quando
+    ativado, infligindo 10 pontos de dano (ignora Armadura). Role 1d100
+    para determinar o que ativa o veneno.
 effect_table:
   label:
     en: 'Poison (Explosive) Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Veneno (Explosivo)'
   entries:
     - range: '01–25'
       text:
         {
           en: 'The detonator is activated (must be within long range).',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'O detonador é ativado (deve estar dentro de uma distância longa).',
         }
     - range: '26–40'
-      text: { en: 'A specified amount of time passes.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'A specified amount of time passes.', 'pt-BR': 'Passa-se um período de tempo específico.' }
     - range: '41–50'
-      text: { en: 'The victim takes a specific action.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'The victim takes a specific action.', 'pt-BR': 'A vítima realiza uma ação específica.' }
     - range: '51–55'
       text:
         {
           en: 'A specific note is sung or played on an instrument within short range.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Uma nota específica é cantada ou tocada em um instrumento dentro de uma distância curta.',
         }
     - range: '56–60'
       text:
         {
           en: 'The victim smells a specific scent within immediate range.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'A vítima sente um cheiro específico dentro de uma distância imediata.',
         }
     - range: '61–80'
       text:
         {
           en: 'The victim comes within long range of the detonator.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'A vítima entra dentro de uma distância longa do detonador.',
         }
     - range: '81–00'
       text:
         {
           en: 'The victim is no longer within long range of the detonator.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'A vítima deixa de estar dentro de uma distância longa do detonador.',
         }

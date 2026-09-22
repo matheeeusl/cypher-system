@@ -7,7 +7,7 @@ description:
     You know how to kill quickly. When you hit with a melee or ranged
     attack, you deal 4 additional points of damage. You can't make
     this attack in two consecutive rounds.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você sabe como matar rapidamente. Quando acerta com um ataque corpo a corpo ou à distância, causa 4 pontos adicionais de dano. Você não pode fazer este ataque em dois rounds consecutivos.'
 cost:
   pool: speed
   amount: 2

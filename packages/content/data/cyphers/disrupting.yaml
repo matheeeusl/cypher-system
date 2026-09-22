@@ -1,5 +1,5 @@
 id: disrupting
-name: { en: 'Disrupting', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Disrupting', 'pt-BR': 'Disruptivo' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6'
@@ -10,5 +10,9 @@ effect_text:
     The target takes 1 additional point of damage. If the target's level is less than the cypher's level,
     it loses its next action; otherwise its next action is hindered.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, toda vez que o usuário atingir uma criatura ou
+    objeto sólido, o ataque gera uma rajada de nanites que ataca
+    diretamente suas células orgânicas. O alvo sofre 1 ponto adicional de
+    dano. Se o nível do alvo for inferior ao nível da cifra, ele perde
+    sua próxima ação; caso contrário, sua próxima ação é prejudicada.
 effect_table: null

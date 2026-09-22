@@ -4,7 +4,7 @@ name:
   pt-BR: Câmara dos Sonhos
 description:
   en: You and your allies can step into a chamber of dreams, decorated as you wish, that contains a number of doors. The doors correspond with other locations that you have visited or know reasonably well. Stepping through one of the doors delivers you to the desired location. This is a difficulty 2 Intellect-based task (which could be modified upward by the GM if the location is warded).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você e seus aliados podem entrar em uma câmara dos sonhos, decorada como desejar, que contém uma série de portas. As portas correspondem a outros locais que você visitou ou conhece razoavelmente bem. Atravessar uma das portas o leva ao local desejado. Esta é uma tarefa baseada em Intelecto de dificuldade 2 (que pode ser aumentada pelo Mestre se o local estiver protegido).'
 cost:
   pool: intellect
   amount: 8

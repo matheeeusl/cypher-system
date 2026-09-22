@@ -9,7 +9,7 @@ description:
     attack every creature in an immediate area within short range.
     You must make attack rolls against each target. Each attack is
     hindered. You inflict 3 points of damage on targets you hit.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Com um grande punhado de objetos pequenos — facas minúsculas, shurikens, pedras, pedaços de metal serrilhados, moedas, ou o que estiver à mão — você ataca todas as criaturas em uma área imediata dentro de uma distância curta. Você deve fazer rolagens de ataque contra cada alvo. Cada ataque é dificultado. Você causa 3 pontos de dano nos alvos que acertar.'
 cost:
   pool: speed
   amount: 5

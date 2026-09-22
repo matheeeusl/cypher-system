@@ -7,7 +7,7 @@ description:
     When you apply at least one level of Effort to a noncombat task,
     you get a free level of Effort on that task. When you choose this
     ability, decide if it applies to Might Effort or Speed Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você aplica ao menos um nível de Esforço a uma tarefa que não seja de combate, você ganha um nível gratuito de Esforço nessa tarefa. Ao escolher esta habilidade, decida se ela se aplica ao Esforço de Força ou ao Esforço de Velocidade.'
 cost: null
 action_type: enabler
 sources:

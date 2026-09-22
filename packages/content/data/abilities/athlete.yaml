@@ -4,7 +4,7 @@ name:
   pt-BR: Atleta
 description:
   en: You are trained in carrying, climbing, jumping, and smashing.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em carregar, escalar, saltar e arrombar.'
 cost: null
 action_type: enabler
 sources:

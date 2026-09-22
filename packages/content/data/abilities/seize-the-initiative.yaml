@@ -8,7 +8,7 @@ description:
     ability, you can take one additional, immediate action, which you
     can take out of turn. After using this ability, you can't use it
     again until after your next ten-hour recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Dentro de um minuto após usar sua habilidade Tirar Conclusão com sucesso, você pode realizar uma ação adicional e imediata, que pode fazer fora do seu turno. Depois de usar esta habilidade, não pode usá-la novamente até depois da sua próxima rolagem de recuperação de dez horas.'
 cost:
   pool: intellect
   amount: 5

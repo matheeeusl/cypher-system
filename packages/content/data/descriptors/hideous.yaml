@@ -1,7 +1,7 @@
 id: hideous
 name:
   en: Hideous
-  pt-BR: Tradução em breve.
+  pt-BR: Hediondo
 description:
   en: >-
     You are physically repugnant by almost any human standard. You might
@@ -12,15 +12,26 @@ description:
     yourself. But perhaps most important, being ostracized while others
     socialized, you took the time growing up to develop yourself as you
     saw fit—you grew strong or quick, or you honed your mind.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é fisicamente repugnante segundo quase qualquer padrão humano.
+    Talvez você tenha sofrido um acidente grave, uma mutação nociva ou
+    apenas teve azar genético, mas é inegavelmente feio. No entanto, você
+    compensou sua aparência de outras formas. Por precisar esconder sua
+    aparência, você se destaca em se esgueirar despercebido ou se
+    disfarçar. Mas, talvez o mais importante, tendo sido marginalizado
+    enquanto os outros socializavam, você aproveitou o tempo enquanto
+    crescia para se desenvolver do jeito que quis — ficou forte, ficou
+    rápido ou aprimorou sua mente.
 pool_bonus: []
 characteristics:
   - name:
       en: Versatile
-      pt-BR: Tradução em breve.
+      pt-BR: Versátil
     description:
       en: You get 4 additional points to divide among your stat Pools.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você ganha 4 pontos adicionais para dividir entre suas Reservas
+        de atributo.
 skill_training:
   - skill_id: intimidation
     choice_count: null
@@ -32,18 +43,24 @@ skill_training:
     choice_count: null
 inabilities:
   - en: All tasks relating to pleasant social interaction are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Todas as tarefas relacionadas a interações sociais agradáveis são
+      prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       One of the other PCs approached you while you were in disguise,
       recruiting you while believing you were someone else.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens se aproximou de você enquanto estava
+      disfarçado, recrutando-o por acreditar que você era outra pessoa.
   - en: >-
       While skulking about, you overheard the other PCs' plans and
       realized you wanted in.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Enquanto se esgueirava por aí, você ouviu os planos dos outros
+      personagens e percebeu que queria participar.
   - en: One of the other PCs invited you, but you wonder if it was out of pity.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens o convidou, mas você se pergunta se foi por pena.
   - en: You bullied your way in with intimidation and bluster.
-    pt-BR: Tradução em breve.
+    pt-BR: Você se impôs à força com intimidação e fanfarronice.

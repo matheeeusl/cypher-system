@@ -8,7 +8,7 @@ description:
     poisons. Your poison crafting has given you some immunity to
     poisons; you have +5 Armor that applies specifically to poison
     damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em fabricar, sentir, identificar e resistir a venenos. Sua fabricação de venenos lhe deu certa imunidade a eles; você tem +5 de Armadura que se aplica especificamente a dano de veneno.'
 cost: null
 action_type: enabler
 sources:

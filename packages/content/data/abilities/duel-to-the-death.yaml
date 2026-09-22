@@ -10,7 +10,7 @@ description:
     or +7 damage if the creature is engaging someone else instead of
     you. You can duel only one creature at a time. A duel lasts up to
     one minute, or until you break it off.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um alvo (uma única criatura que você possa ver). Você é treinada em todas as tarefas envolvendo lutar contra essa criatura. Quando você atacar esse alvo com sucesso, causa +5 de dano, ou +7 de dano se a criatura estiver enfrentando outra pessoa em vez de você. Você só pode duelar com uma criatura por vez. Um duelo dura até um minuto, ou até você encerrá-lo.'
 cost:
   pool: speed
   amount: 5

@@ -4,7 +4,7 @@ name:
   pt-BR: Travador de Armas
 description:
   en: You can interfere with a firearm so the next time it is used, it jams or misfires. The weapon must be within short range and you must be able to see it. Make an Intellect-based attack against the weapon or its bearer (whichever level is higher). If you succeed, the next attack with the firearm fails, and the weapon won't fire until someone uses an action to correct the problem. If you activate this ability when it isn't your turn, your attack against the weapon is hindered. In addition to the normal options for using Effort, you can use Effort to affect more firearms; each level of Effort affects one additional target.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode interferir em uma arma de fogo para que, na próxima vez que for usada, ela emperre ou falhe o disparo. A arma deve estar dentro de uma distância curta e você deve conseguir vê-la. Faça um ataque baseado em Intelecto contra a arma ou seu portador (o que tiver o nível mais alto). Se você tiver sucesso, o próximo ataque com a arma de fogo falha, e a arma não disparará até que alguém use uma ação para corrigir o problema. Se você ativar esta habilidade quando não for seu turno, seu ataque contra a arma é dificultado. Além das opções normais de uso de Esforço, você pode usar Esforço para afetar mais armas de fogo; cada nível de Esforço afeta um alvo adicional.'
   # Note: source cost is printed as "2+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Intellect points here, flagged for schema review (same

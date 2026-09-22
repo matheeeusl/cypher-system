@@ -2,7 +2,7 @@
 # this cypher): "Some force walls, shields, and cubes are transparent. Others
 # are translucent. A few are opaque."
 id: force-field
-name: { en: 'Force field', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Force field', 'pt-BR': 'Campo de força' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6'
@@ -13,5 +13,9 @@ effect_text:
     higher).
     (Some force walls, shields, and cubes are transparent. Others are translucent. A few are opaque.)
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo dia, o usuário é envolvido por um poderoso campo de
+    força, concedendo-lhe +1 de Armadura (+2 de Armadura se a cifra for
+    de nível 5 ou superior).
+    (Algumas paredes, escudos e cubos de força são transparentes. Outros
+    são translúcidos. Alguns poucos são opacos.)
 effect_table: null

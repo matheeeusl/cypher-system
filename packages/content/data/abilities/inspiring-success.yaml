@@ -9,7 +9,7 @@ description:
     least one level of Effort, you may choose another character within
     short range. That character has an asset on the next task they
     attempt using that stat on their next turn.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você tem sucesso em uma rolagem para realizar uma tarefa relacionada ao atributo escolhido ao obter esta habilidade, e aplicou pelo menos um nível de Esforço, pode escolher outro personagem dentro de uma distância curta. Esse personagem ganha um recurso na próxima tarefa que tentar usando esse atributo no seu próximo turno.'
 cost:
   pool: intellect
   amount: 6

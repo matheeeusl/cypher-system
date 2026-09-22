@@ -1,5 +1,5 @@
 id: tissue-regeneration
-name: { en: 'Tissue regeneration', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Tissue regeneration', 'pt-BR': 'Regeneração de tecido' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6 + 4'
@@ -16,6 +16,17 @@ effect_text:
     (an arm, a foot, a leg, and so on) or to repair scar tissue from burns and
     other tissue-related disfigurements. If the cypher is used in this
     fashion, it restores only 1d6 points over the hour duration.
-  pt-BR: >-
-    Tradução em breve.
+  pt-BR: |-
+    Pela próxima hora, o usuário recupera 1 ponto perdido por dano a
+    cada rodada, até um total de pontos igual ao dobro do nível da
+    cifra. A cada ponto recuperado, ele escolhe a qual Reserva somá-lo.
+    Se todas as suas Reservas estiverem no máximo, a regeneração pausa
+    até que ele sofra mais dano, momento em que recomeça (se ainda
+    houver tempo restante dentro da hora) até a duração expirar.
+
+    Uma cifra de regeneração de tecido pode ser usada para regenerar um
+    membro perdido (um braço, um pé, uma perna, e assim por diante) ou
+    para reparar tecido cicatricial de queimaduras e outras
+    desfigurações relacionadas a tecidos. Se a cifra for usada dessa
+    forma, ela restaura apenas 1d6 pontos ao longo da hora de duração.
 effect_table: null

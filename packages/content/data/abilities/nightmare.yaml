@@ -26,7 +26,29 @@ description:
     forceful action (such as attacking another creature or moving
     farther than an immediate distance), the pustules burst, dealing
     5 points of damage that ignore Armor.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Você puxa uma criatura aterrorizante do seu pior pesadelo para o
+    mundo desperto e a lança contra seus inimigos. O pesadelo (nível
+    5) persiste a cada round enquanto você usar sua ação se
+    concentrando nele (ou até dispersá-lo ou ele ser destruído). Ele
+    tem uma das seguintes habilidades, que você escolhe ao invocá-lo:
+
+    - Confusão. Em vez de fazer um ataque normal, o ataque do
+    pesadelo confunde o alvo por um round. Na sua próxima ação, o
+    alvo ataca um aliado.
+
+    - Horrorizar. Em vez de fazer um ataque normal, o ataque do
+    pesadelo horroriza o alvo, que cai de joelhos (ou apêndices
+    semelhantes). O alvo sofre 3 pontos de dano que ignoram Armadura
+    e fica atordoado por um round, durante o qual todas as suas
+    tarefas são dificultadas.
+
+    - Erupção de Pústulas. Em vez de fazer um ataque normal, o ataque
+    do pesadelo faz surgir pústulas rançosas e dolorosas por toda a
+    pele do alvo por um minuto. Se o alvo realizar uma ação
+    vigorosa (como atacar outra criatura ou se mover mais do que uma
+    distância imediata), as pústulas estouram, causando 5 pontos de
+    dano que ignoram Armadura.
   # Note: source tag is "Action to initiate, action each round to
   # concentrate." — same tag as Sees Beyond's
   # find-the-hidden/remote-viewing/see-through-time.

@@ -15,7 +15,7 @@ description:
     to become insubstantial as an action for up to a minute at a time.
     The raised spirit is not beholden to you, and it does not need to
     stay near you to remain manifest.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao seu toque, os restos mortais de uma criatura morta há no máximo sete dias surgem como um espírito manifesto (e aparentemente físico), cujo nível é o mesmo que tinha em vida. O espírito erguido persiste por até um dia (ou menos, se realizar algo importante para ele antes disso), após o que se desvanece e não pode retornar novamente. O espírito erguido se lembra de tudo o que sabia em vida e possui a maioria de suas habilidades anteriores (embora não necessariamente seu equipamento). Além disso, ganha a capacidade de se tornar incorpóreo como uma ação por até um minuto de cada vez. O espírito erguido não está subordinado a você e não precisa permanecer perto de você para continuar manifesto.'
 cost:
   pool: intellect
   amount: 6

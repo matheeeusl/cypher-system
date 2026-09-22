@@ -1,5 +1,5 @@
 id: magnetic-shield
-name: { en: 'Magnetic shield', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Magnetic shield', 'pt-BR': 'Escudo magnético' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -9,5 +9,8 @@ effect_text:
     immediate range of the user. Metal items already in the area when the
     device is activated are slowly pushed out.
   pt-BR: >-
-    Tradução em breve.
+    Por dez minutos por nível da cifra, objetos de metal não conseguem
+    se aproximar a uma distância imediata do usuário. Itens de metal já
+    presentes na área quando o dispositivo é ativado são lentamente
+    empurrados para fora.
 effect_table: null

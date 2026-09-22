@@ -8,7 +8,7 @@ description:
     without spending Effort if you help them. You provide this
     advantage to your friend even if you are not trained in the task
     that they're retrying.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se um aliado tentar uma tarefa mágica e falhar, ele pode tentar novamente sem gastar Esforço se você o ajudar. Você concede essa vantagem ao seu amigo mesmo que não seja treinada na tarefa que ele está repetindo.'
 cost: null
 action_type: enabler
 sources:

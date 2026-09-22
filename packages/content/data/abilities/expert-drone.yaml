@@ -8,7 +8,7 @@ description:
     can either gain (build) a secondary drone, or add +1 Armor to
     your primary drone. (Secondary drone: level 2; flies a short
     distance each round.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'O drone da sua habilidade Drone Companheiro avança para o nível 3. Você pode ganhar (construir) um drone secundário, ou adicionar +1 de Armadura ao seu drone principal. (Drone secundário: nível 2; voa uma distância curta a cada round.)'
 cost: null
 action_type: enabler
 sources:

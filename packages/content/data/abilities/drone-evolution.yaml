@@ -9,7 +9,7 @@ description:
     drone. If a fleet drone is destroyed, you can build a new one (or
     repair the old one from its parts) after a week of half-time
     labor. (Fleet drone: level 3; flies a short distance each round.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'O nível do seu drone principal aumenta para 5, e você constrói até quatro drones de frota do mesmo tamanho ou menor que o drone principal. Se um drone de frota for destruído, você pode construir um novo (ou reparar o antigo a partir de suas peças) depois de uma semana de trabalho em meio período. (Drone de frota: nível 3; voa uma distância curta a cada round.)'
 cost: null
 action_type: enabler
 sources:

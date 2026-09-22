@@ -13,7 +13,7 @@ description:
     eased. If you have a similar sort of knockout ability from
     another source (such as your type), the attack is eased by an
     additional step.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz um ataque corpo a corpo que não causa dano. Em vez disso, se o ataque acertar, faça uma segunda rolagem baseada em Força. Se for bem-sucedida, um inimigo de nível 3 ou inferior é nocauteado por um minuto. Para cada nível de Esforço usado, você pode afetar um inimigo de um nível mais alto, ou pode estender a duração por mais um minuto. Se você usar uma garrafa de uísque para fazer o ataque, seu ataque é facilitado. Se você tiver algum tipo semelhante de habilidade de nocaute de outra fonte (como o seu tipo), o ataque é facilitado em um nível adicional.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

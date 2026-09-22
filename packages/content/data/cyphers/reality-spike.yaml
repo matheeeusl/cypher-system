@@ -1,5 +1,5 @@
 id: reality-spike
-name: { en: 'Reality spike', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Reality spike', 'pt-BR': 'Pico de realidade' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 4'
@@ -8,5 +8,7 @@ effect_text:
     Once activated, the cypher does not move—ever—even if activated in midair.
     A Might action will dislodge it, but then it is ruined.
   pt-BR: >-
-    Tradução em breve.
+    Uma vez ativada, a cifra não se move — nunca — mesmo que ativada no
+    ar. Uma ação de Força consegue deslocá-la, mas, então, ela fica
+    destruída.
 effect_table: null

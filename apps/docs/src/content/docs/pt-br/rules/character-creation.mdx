@@ -19,31 +19,40 @@ export const connections = getFocusConnectionTable()
 
 ## A Frase do Personagem
 
-Tradução em breve.
+Para criar seu personagem, você elabora uma frase simples que o descreve. A frase do personagem segue este formato:
+
+> Sou um [descritor] [tipo] que [foco]
+
+Por exemplo: Sou um <EntityLink kind="descriptor" id="mad" />{" "}<EntityLink kind="type" id="explorer" /> que <EntityLink kind="focus" id="walks-the-wild-woods" />.
 
 ## Descritor
 
-Tradução em breve.
+O adjetivo é o seu descritor. Um descritor define como você é, incluindo alguns pontos fortes e fracos.
+Em certos contextos, ele também pode descrever sua espécie ou outros aspectos singulares da sua história pessoal.
+O Mestre pode limitar quais descritores são adequados para o cenário do jogo.
+Existem muitos descritores, por isso é pouco provável que dois personagens dos jogadores em um mesmo grupo precisem usar o mesmo.
 
 ## Tipo
 
 Os quatro tipos: <EntityLink kind="type" id="warrior" />, <EntityLink kind="type" id="adept" />, <EntityLink kind="type" id="explorer" /> e <EntityLink kind="type" id="speaker" />.
 
-Tradução em breve.
+O tipo do seu personagem define o papel dele no mundo e inclui uma ampla variedade de habilidades especiais que você pode querer que ele possua.
+Os tipos são categorias bem abrangentes, portanto, não há problema se dois personagens de jogadores (PCs) tiverem o mesmo tipo — nenhum deles será igual ao outro.
 
 ## Foco
 
-Exemplo: <EntityLink kind="focus" id="walks-the-wild-woods" /> concede <EntityLink kind="ability" id="wilderness-life" /> no tier 1.
+O verbo é o seu foco. O foco é aquilo que seu personagem faz de melhor, concedendo a você novas habilidades especiais a cada nível. Exemplo: <EntityLink kind="focus" id="walks-the-wild-woods" /> concede <EntityLink kind="ability" id="wilderness-life" /> no tier 1.
+Seu foco também ajuda você a entender como se relaciona com os outros personagens dos jogadores em seu grupo. Os focos que você escolher provavelmente dependerão do cenário e do gênero do seu jogo.
 
-Tradução em breve.
+Os Focos são únicos. Não haverá dois personagens (PCs) no grupo com o mesmo Foco.
 
 ## Fazendo Escolhas
 
-Tradução em breve.
+Seu descritor e seu foco são menos flexíveis do que seu tipo; portanto, tente restringir essas opções primeiro. Em seguida, determine qual tipo melhor preenche as lacunas do seu conceito.
 
 ## Escolhendo uma Conexão
 
-Tradução em breve.
+Role um d100 ou escolha uma conexão que combine com o seu foco. Sua escolha afeta o seu relacionamento com um dos outros personagens dos jogadores. Alguns focos também listam suas próprias opções de conexão em suas respectivas páginas.
 
 <ReferenceTable
   caption="Conexões de foco"
@@ -53,6 +62,8 @@ Tradução em breve.
   ]}
   rows={connections.map((connection) => [connection.range, connection.text['pt-BR']])}
 />
+
+Alguns intervalos se sobrepõem em seus limites (por exemplo, 5–6 e 6–8); eles aparecem dessa forma na fonte.
 
 :::note
 Este capítulo ainda está sendo escrito. Arcos de personagem, a definição das Reservas e do Edge, e outras personalizações ainda não estão cobertos.

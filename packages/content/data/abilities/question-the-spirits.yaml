@@ -22,7 +22,7 @@ description:
     children that you were a philanderer" or "I'll destroy this relic
     that belonged to you"). The GM determines what the spirit might
     know, based on the knowledge it possessed in life.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode chamar um espírito até você e pedir que responda a algumas perguntas (geralmente não mais que três antes de o espírito se desvanecer). Primeiro, você deve invocar um espírito. Se for um espírito de um morto, você deve tê-lo conhecido pessoalmente, possuir um objeto que pertenceu à criatura, ou tocar seus restos físicos. Para outros espíritos, você deve saber o nome completo do espírito ou ter uma grande quantidade de um elemento (como fogo ou terra) ao qual o espírito está associado. Se o espírito responder, pode se manifestar como uma sombra incorpórea que responde por si mesma, pode habitar um objeto ou quaisquer restos que você fornecer, ou pode se manifestar como uma presença invisível pela qual você fala. O espírito pode não querer responder suas perguntas, caso em que você deve persuadi-lo a ajudar. Você pode tentar dominar psiquicamente o espírito pela força (uma tarefa de Intelecto), ou pode tentar diplomacia, decepção ou chantagem ("Responda-me, ou contarei aos seus filhos que você era um traidor" ou "Destruirei esta relíquia que pertenceu a você"). O Mestre determina o que o espírito pode saber, com base no conhecimento que possuía em vida.'
 cost:
   pool: intellect
   amount: 2

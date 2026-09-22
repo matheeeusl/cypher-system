@@ -13,7 +13,7 @@ description:
     normal options for using Effort, you can choose to use Effort to
     increase the cypher's level; each level of Effort used in this
     way increases the level by 1.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você medita, talvez tomando uma bebida, talvez em uma boa lembrança que criou em um bar ou local agradável semelhante. Você ganha uma cifra sutil de nível 6 da variedade geral que desejar (embora o Mestre escolha os detalhes) e pode usá-la no próximo round. Se você já estiver no seu limite de cifras ao usar esta habilidade, escolha qual cifra substituir pela nova. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível da cifra; cada nível de Esforço usado dessa forma aumenta o nível em 1.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

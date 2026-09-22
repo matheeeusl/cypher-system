@@ -10,7 +10,7 @@ description:
     After its task is complete, you dismiss the fiery forgeborn as
     part of another action, or if it is destroyed, it implodes back
     into a smoldering bullet.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sua bala disparada floresce em um ser flamejante nascido da forja, com aparência um tanto humanoide, que obedece suas ordens por até dez minutos. (Você não pode invocar um ser nascido da forja e atacar com a mesma bala.) Após concluir sua tarefa, você dispensa o ser flamejante como parte de outra ação, ou, se for destruído, ele implode de volta a uma bala fumegante.'
   # Note: source includes brief creature stats for the fiery forgeborn
   # (level 4; anyone who tries to touch or strike it with a melee
   # attack automatically takes 1 fire damage) — no schema field for

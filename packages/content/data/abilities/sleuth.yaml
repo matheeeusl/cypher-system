@@ -4,7 +4,7 @@ name:
   pt-BR: Detetive
 description:
   en: Finding the clues is the first step in solving a mystery. You are trained in perception.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Encontrar as pistas é o primeiro passo para resolver um mistério. Você é treinada em percepção.'
 cost: null
 action_type: enabler
 sources:

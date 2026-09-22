@@ -1,20 +1,23 @@
 id: doomed
 name:
   en: Doomed
-  pt-BR: Tradução em breve.
+  pt-BR: Condenado
 description:
   en: >-
     You are quite certain that your fate is leading you, inextricably,
     toward a terrible end. This fate might be yours alone, or you might
     be dragging along the people closest to you.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem quase certeza de que o destino o está levando,
+    inevitavelmente, a um fim terrível. Esse destino pode ser só seu, ou
+    você pode estar arrastando junto as pessoas mais próximas de você.
 pool_bonus:
   - stat: speed
     amount: 2
 characteristics:
   - name:
       en: Doom
-      pt-BR: Tradução em breve.
+      pt-BR: Perdição
     description:
       en: >-
         Every other time the GM uses GM intrusion on your character, you
@@ -22,7 +25,13 @@ characteristics:
         to award to another player). This is because you are doomed. The
         universe is a cold, uncaring place, and your efforts are futile
         at best.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        A cada segunda vez que o Mestre usa uma intrusão do Mestre em seu
+        personagem, você não pode recusá-la e não recebe um XP por isso
+        (mas ainda recebe um XP para conceder a outro jogador). Isso
+        acontece porque você está condenado. O universo é um lugar frio e
+        indiferente, e seus esforços são, na melhor das hipóteses,
+        fúteis.
 skill_training:
   - skill_id: perception
     choice_count: null
@@ -36,14 +45,20 @@ connection_options:
   - en: >-
       You attempted to avoid it, but events seemed to conspire to draw
       you to where you are.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tentou evitar isso, mas os acontecimentos pareceram conspirar
+      para trazê-lo até onde está.
   - en: Why not? It doesn't matter. You're doomed no matter what you do.
-    pt-BR: Tradução em breve.
+    pt-BR: Por que não? Não importa. Você está condenado de qualquer forma.
   - en: >-
       One of the other PCs saved your life, and now you're repaying that
       obligation by helping them with the task at hand.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens salvou sua vida, e agora você está
+      retribuindo essa dívida ajudando-o na tarefa em questão.
   - en: >-
       You suspect that the only hope you have of avoiding your fate
       might lie on this path.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você suspeita que a única esperança de escapar do seu destino pode
+      estar neste caminho.

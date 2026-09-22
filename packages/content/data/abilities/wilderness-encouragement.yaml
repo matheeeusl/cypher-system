@@ -9,7 +9,7 @@ description:
     within short range that can understand you 1d6 points to one
     Pool. You can't use this ability on the same creature again until
     they've made a recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto estiver na natureza selvagem, ou ao falar sobre seu tempo na natureza selvagem, suas palavras de encorajamento inspiradoras concedem a um alvo dentro de uma distância curta que consiga entendê-la 1d6 pontos para uma Reserva. Você não pode usar esta habilidade na mesma criatura novamente até ela fazer uma rolagem de recuperação.'
 cost:
   pool: intellect
   amount: 3

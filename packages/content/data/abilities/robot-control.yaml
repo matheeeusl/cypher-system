@@ -16,7 +16,7 @@ description:
     mechanized system or robot. Thus, to affect a level 4 target (two
     levels above the normal limit), you must apply two levels of
     Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você usa seu conhecimento de comando e controle de robôs (e possivelmente dispositivos que transmitem na frequência correta) para afetar qualquer sistema mecanizado ou robô de nível 2 ou inferior dentro de uma distância curta. Você pode tornar vários alvos inativos enquanto mantiver toda sua atenção neles. Se você se concentrar em apenas um alvo, pode tentar assumir o controle ativo dele por um minuto, comandando-o a realizar tarefas simples em seu favor enquanto se concentra. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do sistema mecanizado ou robô. Assim, para afetar um alvo de nível 4 (dois níveis acima do limite normal), você deve aplicar dois níveis de Esforço.'
   # Note: also prints "Robot Control is a hack." as a trailing aside — a
   # rules-category tag rather than mechanical text, dropped.
   # Source cost is printed as "2+ Intellect points" — the schema's cost

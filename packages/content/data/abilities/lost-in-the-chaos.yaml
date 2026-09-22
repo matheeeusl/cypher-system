@@ -9,7 +9,7 @@ description:
     attack you at once in melee, you play one off the other. Speed
     defense rolls or attack rolls (your choice) against them are
     eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao enfrentar vários inimigos ao mesmo tempo, você desenvolveu táticas para usar o número deles contra eles mesmos. Quando dois ou mais inimigos o atacam ao mesmo tempo corpo a corpo, você os coloca uns contra os outros. Rolagens de defesa de Velocidade ou rolagens de ataque (à sua escolha) contra eles são facilitadas.'
 cost: null
 action_type: enabler
 sources:

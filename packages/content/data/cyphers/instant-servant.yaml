@@ -1,5 +1,5 @@
 id: instant-servant
-name: { en: 'Instant servant', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Instant servant', 'pt-BR': 'Servo instantâneo' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6'
@@ -19,6 +19,21 @@ effect_text:
     action. It does only as commanded.
 
     The servant operates for one hour per cypher level.
-  pt-BR: >-
-    Tradução em breve.
+  pt-BR: |-
+    Um pequeno dispositivo se expande em um autômato humanoide com cerca
+    de 60 centímetros (2 pés) de altura. Seu nível é igual ao nível da
+    cifra, e ele consegue entender os comandos verbais do personagem
+    que o ativou. Uma vez ativado, comandar o servo não é uma ação. Ele
+    pode realizar ataques ou executar ações conforme ordenado, dentro do
+    limite de suas habilidades, mas não consegue falar.
+
+    O autômato tem movimento de distância curta, mas nunca se afasta
+    mais do que uma distância longa do personagem que o ativou. A
+    critério do Mestre, o servo pode ter conhecimento especializado,
+    como saber operar um dispositivo específico. Caso contrário, não
+    possui nenhum conhecimento especial. Em qualquer caso, o servo não é
+    artificialmente inteligente nem capaz de tomar iniciativa. Ele só
+    faz o que é ordenado.
+
+    O servo opera por uma hora por nível da cifra.
 effect_table: null

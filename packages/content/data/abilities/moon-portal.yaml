@@ -11,7 +11,7 @@ description:
     for using Effort, you can use Effort to bring other people with
     you; each level of Effort used in this way affects up to three
     additional targets. You must touch any additional targets.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se transmite instantaneamente para qualquer local da Terra, desde que o luar incida sobre você e sobre o local desejado. Alternativamente, pode se transportar instantaneamente da Terra para a lua ou de volta. Além das opções normais de uso de Esforço, você pode usar Esforço para levar outras pessoas com você; cada nível de Esforço usado dessa forma afeta até três alvos adicionais. Você deve tocar quaisquer alvos adicionais.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

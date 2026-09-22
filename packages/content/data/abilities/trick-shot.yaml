@@ -8,7 +8,7 @@ description:
     targets that are within immediate range of each other. Make a
     separate attack roll against each target. The attack rolls are
     hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Como parte da mesma ação, você faz um ataque à distância contra dois alvos que estejam dentro de uma distância imediata um do outro. Faça uma rolagem de ataque separada contra cada alvo. As rolagens de ataque são dificultadas.'
 cost:
   pool: speed
   amount: 2

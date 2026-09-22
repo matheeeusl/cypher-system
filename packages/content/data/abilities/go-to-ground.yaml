@@ -8,7 +8,7 @@ description:
     you gain an asset on the stealth task to blend in, disappear, or
     otherwise escape the senses of everyone previously aware of your
     presence.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se move até uma distância longa e tenta se esconder. Ao fazer isso, ganha um recurso na tarefa de furtividade para se misturar, desaparecer, ou de outra forma escapar dos sentidos de todos que já estavam cientes da sua presença.'
 cost:
   pool: speed
   amount: 4

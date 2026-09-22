@@ -1,5 +1,5 @@
 id: repair-unit
-name: { en: 'Repair unit', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Repair unit', 'pt-BR': 'Unidade de reparo' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d10'
@@ -12,5 +12,11 @@ effect_text:
     repairs the device except for the specialized part). Repair time is 1d100
     + 20 minutes.
   pt-BR: >-
-    Tradução em breve.
+    A cifra se transforma em uma esfera flutuante com vários braços. Ela
+    repara um item designado (de nível igual ou inferior ao seu) que
+    tenha sido danificado, mas não destruído. A unidade de reparo também
+    pode criar peças de reposição, a menos que o Mestre determine que as
+    peças são especializadas ou raras demais (nesse caso, a unidade
+    repara o dispositivo, exceto pela peça especializada). O tempo de
+    reparo é de 1d100 + 20 minutos.
 effect_table: null

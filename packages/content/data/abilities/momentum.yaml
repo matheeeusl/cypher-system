@@ -7,7 +7,7 @@ description:
     If you use an action to move, your next attack made using a melee
     weapon before the end of the next round inflicts 2 additional
     points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você usar uma ação para se mover, seu próximo ataque feito com uma arma corpo a corpo antes do fim do próximo round causa 2 pontos adicionais de dano.'
 cost: null
 action_type: enabler
 sources:

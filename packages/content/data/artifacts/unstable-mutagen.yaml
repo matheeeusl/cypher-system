@@ -1,11 +1,11 @@
 id: unstable-mutagen
 name:
   en: Unstable Mutagen
-  pt-BR: Tradução em breve.
+  pt-BR: Mutágeno Instável
 level: '1d10'
 form:
   en: Injection, topical ooze, or potion
-  pt-BR: Tradução em breve.
+  pt-BR: Injeção, gosma tópica ou poção
 effect_text:
   en: >-
     The user gains a random mutation. Each time you use this artifact,
@@ -13,35 +13,48 @@ effect_text:
     (see the table below). When rolling from the mutation tables, you can
     modify your roll's results by adding or subtracting any amount up to
     the artifact level.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    O usuário ganha uma mutação aleatória. Cada vez que você usa este
+    artefato, role 1d20 para determinar de qual tabela rolar sua mutação
+    (veja a tabela abaixo). Ao rolar nas tabelas de mutação, você pode
+    modificar o resultado da sua rolagem somando ou subtraindo qualquer
+    valor até o nível do artefato.
 effect_table:
   label:
     en: Mutagen Effects
-    pt-BR: Tradução em breve.
+    pt-BR: Efeitos do Mutágeno
   entries:
     - range: '1'
       text:
         en: Permanently gain one Harmful Mutation (RR, 79) and one Cosmetic Mutation (RR, 84)
-        pt-BR: Tradução em breve.
+        pt-BR: Ganhe permanentemente uma Mutação Prejudicial (RR, 79) e uma Mutação Cosmética (RR, 84)
     - range: '2'
-      text: { en: For 24 hours, gain one Harmful Mutation (RR, 79), pt-BR: Tradução em breve. }
+      text:
+        en: For 24 hours, gain one Harmful Mutation (RR, 79)
+        pt-BR: Por 24 horas, ganhe uma Mutação Prejudicial (RR, 79)
     - range: '3–9'
-      text: { en: For 24 hours, gain one Beneficial Mutation (RR, 78), pt-BR: Tradução em breve. }
+      text:
+        en: For 24 hours, gain one Beneficial Mutation (RR, 78)
+        pt-BR: Por 24 horas, ganhe uma Mutação Benéfica (RR, 78)
     - range: '10–13'
-      text: { en: For 24 hours, gain one Distinctive Mutation (RR, 82), pt-BR: Tradução em breve. }
+      text:
+        en: For 24 hours, gain one Distinctive Mutation (RR, 82)
+        pt-BR: Por 24 horas, ganhe uma Mutação Distintiva (RR, 82)
     - range: '14–17'
-      text: { en: For 24 hours, gain one Powerful Mutation (RR, 80), pt-BR: Tradução em breve. }
+      text:
+        en: For 24 hours, gain one Powerful Mutation (RR, 80)
+        pt-BR: Por 24 horas, ganhe uma Mutação Poderosa (RR, 80)
     - range: '18'
       text:
         en: Permanently gain one Beneficial Mutation (RR, 78) and one Cosmetic Mutation (RR, 84)
-        pt-BR: Tradução em breve.
+        pt-BR: Ganhe permanentemente uma Mutação Benéfica (RR, 78) e uma Mutação Cosmética (RR, 84)
     - range: '19'
       text:
         en: Permanently gain one Distinctive Mutation (RR, 82) and one Cosmetic Mutation (RR, 84)
-        pt-BR: Tradução em breve.
+        pt-BR: Ganhe permanentemente uma Mutação Distintiva (RR, 82) e uma Mutação Cosmética (RR, 84)
     - range: '20'
       text:
         en: Permanently gain one Powerful Mutation (RR, 80) and one Cosmetic Mutation (RR, 84)
-        pt-BR: Tradução em breve.
+        pt-BR: Ganhe permanentemente uma Mutação Poderosa (RR, 80) e uma Mutação Cosmética (RR, 84)
 flavor_quote: null
 depletion_die: '5 in 1d20 (Check each use)'

@@ -8,7 +8,7 @@ description:
     trained. Choose two of the following: balancing, climbing, jumping,
     running, or swimming. You can select this ability multiple times.
     Each time you select it, you must choose two different skills.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você fica treinada em duas perícias nas quais ainda não é treinada. Escolha duas das seguintes: equilíbrio, escalada, salto, corrida ou natação. Você pode escolher esta habilidade múltiplas vezes. Cada vez que a escolher, deve escolher duas perícias diferentes.'
 cost: null
 action_type: enabler
 sources:

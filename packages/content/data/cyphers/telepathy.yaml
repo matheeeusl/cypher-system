@@ -1,5 +1,5 @@
 id: telepathy
-name: { en: 'Telepathy', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Telepathy', 'pt-BR': 'Telepatia' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6 + 2'
@@ -8,5 +8,6 @@ effect_text:
     For one hour, the device enables long-range mental communication with
     anyone the user can see.
   pt-BR: >-
-    Tradução em breve.
+    Por uma hora, o dispositivo permite comunicação mental de longo
+    alcance com qualquer pessoa que o usuário consiga ver.
 effect_table: null

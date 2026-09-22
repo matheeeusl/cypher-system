@@ -1,5 +1,5 @@
 id: curative
-name: { en: 'Curative', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Curative', 'pt-BR': 'Curativo' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -7,5 +7,6 @@ effect_text:
   en: >-
     Restores a number of points equal to the cypher's level to the user's Might Pool.
   pt-BR: >-
-    Restaura um número de pontos igual ao nível do cypher ao Pool de Poder do usuário.
+    Restaura à Reserva de Força do usuário uma quantidade de pontos igual
+    ao nível da cifra.
 effect_table: null

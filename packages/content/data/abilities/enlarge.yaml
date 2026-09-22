@@ -20,7 +20,7 @@ description:
     must apply an additional level of Effort. Thus, the second time
     you use Enlarge, you must apply one level of Effort; the third
     time you use Enlarge, two levels of Effort; and so on.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você provoca uma reação enzimática que puxa massa adicional de outra dimensão, e você (e suas roupas ou traje) cresce. Você alcança uma altura de 3 metros (9 pés) e permanece assim por cerca de um minuto. Durante esse tempo, você adiciona 4 pontos à sua Reserva de Força, adiciona +1 à Armadura, e adiciona +2 à sua Margem de Força. Enquanto estiver maior que o normal, suas rolagens de defesa de Velocidade são dificultadas, e você é versada em usar seus punhos como armas pesadas. Quando os efeitos de Ampliar terminam, sua Armadura e Margem de Força retornam ao normal, e você subtrai da sua Reserva de Força um número de pontos igual ao que ganhou (se isso reduzir a Reserva a 0, subtraia o excedente primeiro da sua Reserva de Velocidade e depois, se necessário, da sua Reserva de Intelecto). Cada vez adicional que você usar Ampliar antes da sua próxima rolagem de recuperação de dez horas, deve aplicar um nível adicional de Esforço. Assim, na segunda vez que usar Ampliar, deve aplicar um nível de Esforço; na terceira vez, dois níveis de Esforço; e assim por diante.'
   # Note: source cost is printed as "1+ Might point" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

@@ -15,7 +15,7 @@ description:
     remain invisible during the entire round, which means that if you
     use Scratch Existence or Shred Existence, attacking each target
     along your path is eased by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você fica invisível enquanto usa Corrida de Fase e durante o round seguinte. Enquanto invisível, a furtividade é facilitada em dois níveis e a defesa de Velocidade é facilitada em dois níveis (isso substitui o recurso em tarefas de defesa de Velocidade fornecido por Corrida de Fase). O primeiro ataque que você fizer usando qualquer habilidade de ataque de Rasga as Paredes do Mundo também é facilitado em dois níveis; porém, se você atacar uma criatura, Fase Invisível termina imediatamente em vez de durar um round adicional. Se você tiver a habilidade Invisibilidade, pode permanecer invisível durante o round inteiro, o que significa que, se usar Arranhar Existência ou Rasgar Existência, atacar cada alvo ao longo do seu caminho é facilitado em dois níveis.'
 cost:
   pool: might
   amount: 4

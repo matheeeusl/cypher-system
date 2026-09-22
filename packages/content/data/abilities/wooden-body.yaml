@@ -10,7 +10,7 @@ description:
     one-tenth as much air as a human. Hiding among trees or on a tree
     is eased. However, in your wooden form you move more stiffly than
     a creature of flesh, hindering your Speed defense rolls.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você transforma seu corpo em madeira viva por dez minutos, o que concede vários benefícios. Você ganha +1 de Armadura e fica praticada em usar seus membros como armas médias. Você precisa de cerca de um décimo do ar que um humano precisa. Esconder-se entre árvores ou em uma árvore é facilitado. Porém, na sua forma de madeira, você se move de forma mais rígida que uma criatura de carne, dificultando suas rolagens de defesa de Velocidade.'
   # Note: source cost is printed as "1+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

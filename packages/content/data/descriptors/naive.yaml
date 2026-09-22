@@ -1,7 +1,7 @@
 id: naive
 name:
   en: Naive
-  pt-BR: Tradução em breve.
+  pt-BR: Ingênuo
 description:
   en: >-
     You've lived a sheltered life. Your childhood was safe and secure,
@@ -12,23 +12,34 @@ description:
     interesting things so far. That's probably going to change soon, but
     as you go forward into a larger world, you do so without some of the
     understanding that others possess about how it all works.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você viveu uma vida protegida. Sua infância foi segura e tranquila,
+    então você não teve muita chance de aprender sobre o mundo — e menos
+    chance ainda de vivenciá-lo. Seja porque estava treinando para algo,
+    seja porque tinha o nariz enfiado em livros, seja porque simplesmente
+    estava isolado em algum lugar recluso, você não fez muita coisa, não
+    conheceu muitas pessoas nem viu muitas coisas interessantes até
+    agora. Isso provavelmente vai mudar em breve, mas, ao avançar rumo a
+    um mundo maior, você o faz sem parte da compreensão que os outros
+    têm sobre como tudo funciona.
 pool_bonus: []
 characteristics:
   - name:
       en: Fresh
-      pt-BR: Tradução em breve.
+      pt-BR: Vitalidade
     description:
       en: You add +1 to your recovery rolls.
-      pt-BR: Tradução em breve.
+      pt-BR: Você soma +1 às suas rolagens de recuperação.
   - name:
       en: Incorruptible
-      pt-BR: Tradução em breve.
+      pt-BR: Incorruptível
     description:
       en: >-
         You are trained in Intellect defense tasks and all tasks that
         involve resisting temptation.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você é treinado em tarefas de defesa de Intelecto e em todas as
+        tarefas que envolvem resistir à tentação.
 skill_training:
   - skill_id: perception
     choice_count: null
@@ -36,14 +47,18 @@ inabilities:
   - en: >-
       Any task that involves seeing through deceptions or determining
       someone's secret motive is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Qualquer tarefa que envolva perceber enganos ou determinar a
+      motivação secreta de alguém é prejudicada.
 additional_equipment: null
 connection_options:
   - en: Someone told you that you should get involved.
-    pt-BR: Tradução em breve.
+    pt-BR: Alguém lhe disse que você deveria se envolver.
   - en: You needed money, and this seemed like a good way to earn some.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisava de dinheiro, e isso pareceu uma boa forma de ganhar algum.
   - en: You believed that you could learn a lot by joining the other PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acreditou que poderia aprender muito se juntando aos outros
+      personagens.
   - en: Sounded like fun.
-    pt-BR: Tradução em breve.
+    pt-BR: Pareceu divertido.

@@ -1,7 +1,7 @@
 id: jovial
 name:
   en: Jovial
-  pt-BR: Tradução em breve.
+  pt-BR: Jovial
 description:
   en: >-
     You're cheerful, friendly, and outgoing. You put others at ease with
@@ -12,7 +12,16 @@ description:
     dwell on the bad too long quickly robs the world of joy. You've
     always got a new joke in your back pocket because you collect them
     like some people collect bottles of wine.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é alegre, amigável e extrovertido. Você deixa os outros à
+    vontade com um grande sorriso e uma piada, às vezes às suas próprias
+    custas, embora provocar levemente seus companheiros que aguentam a
+    brincadeira também seja um dos seus passatempos favoritos. Às vezes
+    as pessoas dizem que você nunca leva nada a sério. Isso não é
+    verdade, claro, mas você aprendeu que se demorar demais no que é
+    ruim rapidamente rouba a alegria do mundo. Você sempre tem uma piada
+    nova na manga, porque as coleciona como algumas pessoas colecionam
+    garrafas de vinho.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -28,14 +37,22 @@ connection_options:
   - en: >-
       You solved a riddle before realizing that answering it would
       launch you into the adventure.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você resolveu um enigma antes de perceber que respondê-lo o
+      lançaria nesta aventura.
   - en: The other PCs thought you'd bring some much-needed levity to the team.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens acharam que você traria uma leveza muito
+      necessária para o grupo.
   - en: >-
       You decided that all fun and no work was not the best way to get
       through life, so you joined up with the PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você decidiu que só diversão e nada de trabalho não era a melhor
+      forma de levar a vida, então se juntou aos outros personagens.
   - en: >-
       It was either go with the PCs or face up to a circumstance that
       was anything but jovial.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Era ir com os outros personagens ou enfrentar uma circunstância
+      que não tinha nada de jovial.

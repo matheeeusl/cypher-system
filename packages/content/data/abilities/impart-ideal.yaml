@@ -15,7 +15,7 @@ description:
     usually at least a few hours. The ideal is jeopardized if someone
     friendly to the creature spends a minute or more bringing it back
     to its senses.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Depois de interagir por pelo menos um minuto com uma criatura que consiga ouvi-lo e entendê-lo, você pode tentar transmitir temporariamente um ideal a ela que de outra forma não conseguiria convencê-la a adotar. Um ideal é diferente de uma sugestão ou comando específico; um ideal é um valor abrangente como "Toda vida é sagrada", "Meu partido político é o melhor", "Crianças devem ser vistas, não ouvidas", e assim por diante. Um ideal influencia o comportamento de uma criatura, mas não o controla. O ideal transmitido dura o tempo que a situação exigir, mas geralmente pelo menos algumas horas. O ideal fica em risco se alguém amigável à criatura passar um minuto ou mais tentando trazê-la de volta à razão.'
 cost:
   pool: intellect
   amount: 3

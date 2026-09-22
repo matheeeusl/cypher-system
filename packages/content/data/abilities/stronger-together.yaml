@@ -4,7 +4,7 @@ name:
   pt-BR: Mais Fortes Juntos
 description:
   en: When you and your companion from the Beast Companion ability are within immediate distance of each other, you inflict 2 additional points of damage when you attack and both of you gain an asset to defense actions.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você e seu companheiro da habilidade Companheiro Animal estão dentro de uma distância imediata um do outro, você causa 2 pontos adicionais de dano ao atacar e ambos ganham um recurso em ações de defesa.'
 cost: null
 action_type: enabler
 sources:

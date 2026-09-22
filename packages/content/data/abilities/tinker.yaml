@@ -10,7 +10,7 @@ description:
     battery for another device. The effective level of the modified
     device is 1 lower than normal, and the device is rendered unusable
     (for its original purpose) until repaired.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz um dispositivo fazer algo diferente de seu propósito original. Por exemplo, um disparador se torna uma bomba. Um scanner se torna um amplificador de sinal para um transmissor de rádio. Um tocador de música se torna uma bateria para outro dispositivo. O nível efetivo do dispositivo modificado é 1 abaixo do normal, e o dispositivo fica inutilizável (para seu propósito original) até ser consertado.'
 cost:
   pool: intellect
   amount: 1

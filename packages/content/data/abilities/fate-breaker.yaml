@@ -12,7 +12,7 @@ description:
     reroll using Consequences of Luck and obtain a result that isn't
     in the failure range. Once you use this ability, it is not
     available again until after you make a ten-hour recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Algo além do seu entendimento se interessa por você. Se você falhar em uma tarefa (incluindo um ataque ou uma defesa), pode mudar o resultado do dado para um 20 natural. (Isso ainda pode não ser suficiente para ter sucesso se a dificuldade for maior que 6.) Esta habilidade não funciona se você rolar um 1 natural para uma tarefa tentada, a menos que role novamente usando Consequências da Sorte e obtenha um resultado que não esteja na faixa de falha. Uma vez que você usa esta habilidade, ela não fica disponível novamente até que você faça uma rolagem de recuperação de dez horas.'
 cost: null
 action_type: enabler
 sources:

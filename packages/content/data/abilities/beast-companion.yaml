@@ -4,7 +4,7 @@ name:
   pt-BR: Companheiro Animal
 description:
   en: A level 2 creature of your size or smaller accompanies you and follows your instructions. You and the GM must work out the details of your creature, and you'll probably make rolls for it in combat or when it takes actions. The beast companion acts on your turn. As a level 2 creature, it has a target number of 6 and 6 health and it inflicts 2 points of damage. Its movement is based on its creature type (avian, swimmer, and so on). If your beast companion dies, you can hunt in the wild for 1d6 days to find a new one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Uma criatura de nível 2 do seu tamanho ou menor o acompanha e segue suas instruções. Você e o Mestre devem definir os detalhes dessa criatura, e provavelmente você fará rolagens por ela em combate ou quando ela realizar ações. O companheiro animal age no seu turno. Como uma criatura de nível 2, ele tem um número-alvo de 6 e 6 pontos de saúde, e inflige 2 pontos de dano. Seu deslocamento é baseado em seu tipo de criatura (voador, nadador, e assim por diante). Se seu companheiro animal morrer, você pode caçar na natureza por 1d6 dias para encontrar um novo.'
 cost: null
 action_type: enabler
 sources:

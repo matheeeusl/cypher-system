@@ -16,7 +16,7 @@ description:
     addition to the normal options for using Effort, you can use
     Effort to increase the number of foes you can attack, with one
     additional foe per level of Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao entrar em combate para defender seu covil ou lar, você pode atacar até cinco inimigos diferentes com uma única ação, desde que estejam dentro de uma distância imediata uns dos outros. Todos os ataques devem ser do mesmo tipo (corpo a corpo, à distância ou feitiço), e o custo em pontos desta habilidade é deduzido de qualquer Reserva que o ataque use. Pague os custos (se houver) separadamente para cada ataque, e faça uma rolagem de ataque separada para cada inimigo. Qualquer coisa que modifique seu ataque ou dano se aplica a todos os ataques. Você permanece limitada pela quantidade de Esforço que pode aplicar em uma ação. Além das opções normais de uso de Esforço, você pode usar Esforço para aumentar o número de inimigos que pode atacar, com um inimigo adicional por nível de Esforço.'
   # Note: source cost is both open-ended and a choice-of-pool, "6+
   # Might, Speed, or Intellect points" — the schema's cost field can
   # represent neither. Recorded as the baseline 6 Might points

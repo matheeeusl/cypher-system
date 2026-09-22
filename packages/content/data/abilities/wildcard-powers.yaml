@@ -4,7 +4,7 @@ name:
   pt-BR: Poderes Curinga
 description:
   en: You have a gift with using copied powers in unusual ways. Whenever you try a power stunt and use a level of Effort on the special roll to modify the ability, you get a free level of Effort on that roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tem um dom para usar poderes copiados de formas incomuns. Sempre que tentar uma manobra de poder e usar um nível de Esforço na rolagem especial para modificar a habilidade, ganha um nível gratuito de Esforço nessa rolagem.'
 cost: null
 action_type: enabler
 sources:

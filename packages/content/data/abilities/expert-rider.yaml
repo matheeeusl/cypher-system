@@ -4,7 +4,7 @@ name:
   pt-BR: Cavaleira Especialista
 description:
   en: You are specialized in all tasks related to riding a mount, including those pertinent to the care and healing of your mount.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é especializada em todas as tarefas relacionadas a montar em uma montaria, incluindo as pertinentes ao cuidado e cura da sua montaria.'
 cost: null
 action_type: enabler
 sources:

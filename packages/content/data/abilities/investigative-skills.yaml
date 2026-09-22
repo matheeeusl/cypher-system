@@ -9,7 +9,7 @@ description:
     assessing danger, or tinkering with devices. You can select this
     ability multiple times. Each time you select it, you must choose
     two different skills.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você fica treinada em duas perícias nas quais ainda não é treinada. Escolha duas das seguintes: percepção, identificação, arrombamento de fechaduras, avaliação de perigo, ou mexer em dispositivos. Você pode escolher esta habilidade múltiplas vezes. Cada vez que a escolher, deve escolher duas perícias diferentes.'
 cost: null
 action_type: enabler
 sources:

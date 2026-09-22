@@ -9,7 +9,7 @@ description:
     +1 to your Might Edge and your Speed Edge. This effect lasts as
     long as you wish, but it ends if no combat is taking place within
     range of your senses.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando desejar, durante o combate, você pode entrar em um estado de frenesi. Nesse estado, não pode usar pontos de Intelecto, mas ganha +1 na sua Margem de Força e na sua Margem de Velocidade. Esse efeito dura enquanto você desejar, mas termina se nenhum combate estiver ocorrendo dentro do alcance dos seus sentidos.'
 cost:
   pool: intellect
   amount: 1

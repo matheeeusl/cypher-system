@@ -11,7 +11,7 @@ description:
     a creature in the area still takes 1 point of damage. Your attack
     is eased against targets wearing, carrying, or made of a
     significant amount of metal.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Um raio atinge dentro de uma distância longa, preenchendo uma área imediata e causando 3 pontos de dano a todas as criaturas afetadas. O Esforço aplicado a um ataque conta para todos os ataques contra alvos na área do clarão. Mesmo em um ataque malsucedido, uma criatura na área ainda sofre 1 ponto de dano. Seu ataque é facilitado contra alvos usando, carregando ou feitos de uma quantidade significativa de metal.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

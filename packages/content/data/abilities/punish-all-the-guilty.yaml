@@ -13,7 +13,7 @@ description:
     to all attacks. If you also have the Spin Attack ability, you
     inflict 1 additional point of damage when you use Punish All the
     Guilty.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode atacar até cinco inimigos dentro de uma distância imediata que você designou como culpados com sua habilidade Designação, todos como parte da mesma ação em um round. Faça rolagens de ataque separadas para cada inimigo, mas todos os ataques contam como uma única ação em um único round. Você permanece limitada pela quantidade de Esforço que pode aplicar em uma ação. Qualquer coisa que modifique seu ataque ou dano se aplica a todos os ataques. Se você também tiver a habilidade Ataque Giratório, causa 1 ponto adicional de dano ao usar Punir Todos os Culpados.'
 cost:
   pool: speed
   amount: 3

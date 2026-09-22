@@ -10,7 +10,7 @@ description:
     and gain training in the new one.) An embedded pistol is a light,
     medium, or heavy firearm with a ten-round capacity. The weapon is
     concealed until you wish to use it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha uma pistola cibernética embutida em um dos seus braços. Você é treinada no uso dessa arma. (Se você substituir esta arma embutida por outra, perde o treinamento na arma anterior e ganha treinamento na nova.) Uma pistola embutida é uma arma de fogo leve, média ou pesada com capacidade para dez tiros. A arma fica oculta até que você deseje usá-la.'
 cost: null
 action_type: enabler
 sources:

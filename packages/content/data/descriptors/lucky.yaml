@@ -1,7 +1,7 @@
 id: lucky
 name:
   en: Lucky
-  pt-BR: Tradução em breve.
+  pt-BR: Sortudo
 description:
   en: >-
     You rely on chance and timely good luck to get you through many
@@ -11,12 +11,21 @@ description:
     measure of success. Even when disaster strikes, it's rarely as bad
     as it could be. More often, small things seem to go your way, you
     win contests, and you're often in the right place at the right time.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você conta com o acaso e a boa sorte oportuna para te ajudar em
+    muitas situações. Quando as pessoas dizem que alguém nasceu com uma
+    estrela de sorte, é de você que estão falando. Quando você se
+    arrisca em algo novo, não importa quão desconhecida seja a tarefa,
+    na maioria das vezes você encontra algum grau de sucesso. Mesmo
+    quando o desastre acontece, raramente é tão ruim quanto poderia ser.
+    Na maioria das vezes, as pequenas coisas parecem dar certo para
+    você, você ganha competições e frequentemente está no lugar certo na
+    hora certa.
 pool_bonus: []
 characteristics:
   - name:
       en: Luck Pool
-      pt-BR: Tradução em breve.
+      pt-BR: Reserva de Sorte
     description:
       en: >-
         You have one additional Pool called Luck that begins with 3
@@ -27,15 +36,25 @@ characteristics:
         refreshed by the same number of points. When your Luck Pool is
         at 0 points, it does not count against your damage track.
         Enabler.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tem uma Reserva adicional chamada Sorte, que começa com 3
+        pontos e tem um valor máximo de 3 pontos. Ao gastar pontos de
+        qualquer outra Reserva, você pode tirar um, alguns ou todos os
+        pontos da sua Reserva de Sorte primeiro. Quando você faz uma
+        rolagem de recuperação para recuperar pontos de qualquer outra
+        Reserva, sua Reserva de Sorte também é restaurada na mesma
+        quantidade de pontos. Quando sua Reserva de Sorte está em 0
+        pontos, ela não conta para o seu marcador de dano. Habilitador.
   - name:
       en: Advantage
-      pt-BR: Tradução em breve.
+      pt-BR: Vantagem
     description:
       en: >-
         When you use 1 XP to reroll a d20 for any roll that affects only
         you, add 3 to the reroll.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Quando você usa 1 XP para refazer uma rolagem de d20 que afeta
+        apenas você, some 3 ao novo resultado.
 skill_training: []
 inabilities: []
 additional_equipment: null
@@ -44,16 +63,28 @@ connection_options:
       Knowing that lucky people notice and take active advantage of
       opportunities, you became involved in your first adventure by
       choice.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Sabendo que pessoas sortudas percebem e aproveitam ativamente as
+      oportunidades, você se envolveu na sua primeira aventura por
+      escolha própria.
   - en: You literally bumped into someone else on this adventure through sheer luck.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você literalmente esbarrou em outra pessoa nesta aventura por pura
+      sorte.
   - en: >-
       You found a briefcase lying alongside the road. It was battered,
       but inside you found a lot of strange documents that led you here.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você encontrou uma maleta largada à beira da estrada. Estava
+      amassada, mas dentro você encontrou vários documentos estranhos
+      que o trouxeram até aqui.
   - en: >-
       Your luck saved you when you avoided a speeding vehicle by a
       fortuitous fall through an opening in the ground (a manhole, if in
       a modern setting). Beneath the ground, you found something you
       couldn't ignore.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Sua sorte o salvou quando você escapou de um veículo em alta
+      velocidade ao cair, por acaso, em uma abertura no chão (um bueiro,
+      em um cenário moderno). Debaixo da terra, você encontrou algo que
+      não pôde ignorar.

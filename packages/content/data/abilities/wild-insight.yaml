@@ -15,7 +15,7 @@ description:
     the GM chooses a random cypher that fits that category. You can't
     use this ability again until after you've taken a ten-hour
     recovery action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha uma compreensão perfeita momentânea do fluxo de magia ao seu redor neste momento. Ao preparar sua magia, escolha uma cifra sutil específica e faça uma rolagem de perícia de conhecimento mágico contra nível 6. Se tiver sucesso, obtém essa cifra sutil (o nível da cifra é 6); se falhar, obtém uma cifra sutil aleatória. Se não tiver certeza de qual cifra sutil específica deseja, pode pedir uma categoria ampla, como "cura", "movimento" ou "perícia"; isso facilita a tarefa de conhecimento mágico, e se tiver sucesso, o Mestre escolhe uma cifra aleatória que se encaixe nessa categoria. Você não pode usar esta habilidade novamente até depois de realizar uma ação de recuperação de dez horas.'
 cost: null
 action_type: enabler
 sources:

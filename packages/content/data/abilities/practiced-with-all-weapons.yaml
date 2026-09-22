@@ -4,7 +4,7 @@ name:
   pt-BR: Praticada com Todas as Armas
 description:
   en: You become practiced with light, medium, and heavy weapons and suffer no penalty when using any kind of weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se torna praticada com armas leves, médias e pesadas e não sofre nenhuma penalidade ao usar qualquer tipo de arma.'
 cost: null
 action_type: enabler
 sources:

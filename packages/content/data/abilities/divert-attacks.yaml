@@ -4,7 +4,7 @@ name:
   pt-BR: Desviar Ataques
 description:
   en: For one minute, you automatically deflect or dodge any ranged projectile attacks. However, on your next turn after you're attacked with ranged projectiles, all your other actions are hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Por um minuto, você desvia ou esquiva automaticamente de quaisquer ataques com projéteis à distância. Porém, no seu próximo turno após ser atacado com projéteis à distância, todas as suas outras ações são dificultadas.'
 cost:
   pool: speed
   amount: 4

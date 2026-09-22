@@ -6,7 +6,7 @@ description:
   en: >-
     You are trained in one of the following tasks (choose one):
     breaking things, climbing, jumping, or running.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em uma das seguintes tarefas (escolha uma): arrombar coisas, escalar, saltar ou correr.'
 cost: null
 action_type: enabler
 sources:

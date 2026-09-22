@@ -4,7 +4,7 @@ name:
   pt-BR: Força Aprimorada Superior
 description:
   en: You gain 6 points to your Might Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha 6 pontos na sua Reserva de Força.'
 cost: null
 action_type: enabler
 sources:

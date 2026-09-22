@@ -1,11 +1,11 @@
 id: petrified-acorns
 name:
   en: Petrified Acorns
-  pt-BR: Tradução em breve.
+  pt-BR: Bolotas Petrificadas
 level: '1d6 + 1'
 form:
   en: Linen pouch containing a few more chalky stone acorns
-  pt-BR: Tradução em breve.
+  pt-BR: Bolsa de linho contendo algumas bolotas de pedra calcária
 effect_text:
   en: >-
     You can throw an acorn a short distance at a creature (or use them as
@@ -20,23 +20,35 @@ effect_text:
     number of acorns in the pouch. Next, roll a d6 on the Acorn Level
     table for each individual acorn. You can use the acorns in any order
     you wish.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você pode arremessar uma bolota a uma distância curta contra uma
+    criatura (ou usá-la como projétil para uma funda). Em caso de erro, a
+    bolota se desfaz em pó calcário onde quer que atinja. Se a bolota
+    atingir uma criatura, essa criatura é petrificada e transformada em
+    pedra. Uma criatura petrificada ganha +10 de Armadura contra dano de
+    todos os tipos (incluindo ataques mentais), não pode agir, não
+    envelhece e fica alheia ao que a cerca. A petrificação tem uma duração
+    determinada pelo nível da cifra (veja a tabela Nível da Bolota). Ao
+    encontrar uma bolsa de bolotas petrificadas, role até esgotar o
+    artefato: o número de rolagens que você faz é o número de bolotas na
+    bolsa. Em seguida, role 1d6 na tabela Nível da Bolota para cada bolota
+    individualmente. Você pode usar as bolotas na ordem que preferir.
 effect_table:
   label:
     en: Acorn Level
-    pt-BR: Tradução em breve.
+    pt-BR: Nível da Bolota
   entries:
     - range: '1'
-      text: { en: 1 minute, pt-BR: Tradução em breve. }
+      text: { en: 1 minute, pt-BR: 1 minuto }
     - range: '2'
-      text: { en: 1 hour, pt-BR: Tradução em breve. }
+      text: { en: 1 hour, pt-BR: 1 hora }
     - range: '3'
-      text: { en: 24 hours, pt-BR: Tradução em breve. }
+      text: { en: 24 hours, pt-BR: 24 horas }
     - range: '4'
-      text: { en: 1 week, pt-BR: Tradução em breve. }
+      text: { en: 1 week, pt-BR: 1 semana }
     - range: '5'
-      text: { en: Until the next full moon, pt-BR: Tradução em breve. }
+      text: { en: Until the next full moon, pt-BR: Até a próxima lua cheia }
     - range: '6'
-      text: { en: Until the next solstice, pt-BR: Tradução em breve. }
+      text: { en: Until the next solstice, pt-BR: Até o próximo solstício }
 flavor_quote: null
 depletion_die: '1 in 1d6'

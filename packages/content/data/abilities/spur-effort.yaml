@@ -7,7 +7,7 @@ description:
     You select an ally within immediate range. If that character
     applies Effort to a task on their next turn, they can apply a free
     level of Effort on that task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você seleciona um aliado dentro de uma distância imediata. Se esse personagem aplicar Esforço a uma tarefa no seu próximo turno, pode aplicar um nível gratuito de Esforço a essa tarefa.'
 cost:
   pool: intellect
   amount: 5

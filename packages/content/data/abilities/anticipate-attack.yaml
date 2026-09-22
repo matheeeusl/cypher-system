@@ -6,7 +6,7 @@ description:
   en: >-
     You can sense when and how creatures attacking you will make their
     attacks. Speed defense rolls are eased for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue perceber quando e como as criaturas que o atacam farão seus ataques. Rolagens de defesa de Velocidade são facilitadas por um minuto.'
 cost:
   pool: intellect
   amount: 4

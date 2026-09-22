@@ -4,7 +4,7 @@ name:
   pt-BR: Cópia Múltipla
 description:
   en: When you use Copy Power, you can copy two of the creature's abilities at the same time. In addition to the normal options for using Effort with Copy Power, you can apply levels of Effort to copy additional abilities, each level of Effort copying an additional ability beyond the initial two (three for one level of Effort, four for two levels, and so on).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Copiar Poder, pode copiar duas das habilidades da criatura ao mesmo tempo. Além das opções normais de uso de Esforço com Copiar Poder, você pode aplicar níveis de Esforço para copiar habilidades adicionais, cada nível de Esforço copiando uma habilidade adicional além das duas iniciais (três para um nível de Esforço, quatro para dois níveis, e assim por diante).'
 cost: null
 action_type: enabler
 sources:

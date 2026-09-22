@@ -1,7 +1,7 @@
 id: empathic
 name:
   en: Empathic
-  pt-BR: Tradução em breve.
+  pt-BR: Empático
 description:
   en: >-
     Other people are open books to you. You may have a knack for reading
@@ -17,7 +17,20 @@ description:
     close yourself off and remain inscrutable to others out of a sense of
     self-preservation or an unconscious fear that everyone else might
     learn how you truly feel.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    As outras pessoas são livros abertos para você. Talvez você tenha um
+    talento para ler os sinais sutis de alguém, aqueles pequenos gestos
+    que revelam o humor e a disposição de uma pessoa. Ou talvez você
+    receba essas informações de forma mais direta, sentindo as emoções de
+    alguém como se fossem coisas tangíveis, sensações que roçam de leve
+    sua mente. Seu dom para a empatia o ajuda a navegar situações sociais
+    e controlá-las para evitar mal-entendidos e impedir que conflitos
+    inúteis eclodam. O bombardeio constante de emoções vindas das pessoas
+    ao seu redor provavelmente cobra seu preço. Você pode acompanhar o
+    humor predominante, oscilando entre uma felicidade eufórica e uma
+    tristeza amarga com pouco aviso. Ou pode se fechar e permanecer
+    indecifrável para os outros por um instinto de autopreservação ou um
+    medo inconsciente de que todos descubram o que você realmente sente.
 pool_bonus:
   - stat: intellect
     amount: 4
@@ -32,22 +45,34 @@ inabilities:
       Being so receptive to others' thoughts and moods makes you
       vulnerable to anything that attacks your mind. Intellect defense
       rolls are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Ser tão receptivo aos pensamentos e humores alheios o torna
+      vulnerável a qualquer coisa que ataque sua mente. Rolagens de
+      defesa de Intelecto são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       You sensed the commitment to the task the other PCs have and felt
       moved to help them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você percebeu o comprometimento dos outros personagens com a missão
+      e se sentiu movido a ajudá-los.
   - en: >-
       You established a close bond with another PC and can't bear to be
       parted from them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você estabeleceu um vínculo estreito com outro personagem e não
+      suporta a ideia de se separar dele.
   - en: >-
       You sensed something strange in one of the PCs and decided to join
       the group to see if you can sense it again and uncover the truth.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você percebeu algo estranho em um dos outros personagens e decidiu
+      se juntar ao grupo para ver se conseguiria sentir isso de novo e
+      descobrir a verdade.
   - en: >-
       You joined the PCs to escape an unpleasant relationship or
       negative environment.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se juntou aos outros personagens para escapar de um
+      relacionamento desagradável ou de um ambiente negativo.

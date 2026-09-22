@@ -1,5 +1,5 @@
 id: poison-mind-disrupting
-name: { en: 'Poison (mind disrupting)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Poison (mind disrupting)', 'pt-BR': 'Veneno (disruptor mental)' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 2'
@@ -8,5 +8,7 @@ effect_text:
     The victim suffers Intellect damage equal to the cypher's level and cannot
     take actions for a number of rounds equal to the cypher's level.
   pt-BR: >-
-    Tradução em breve.
+    A vítima sofre dano de Intelecto igual ao nível da cifra e não pode
+    realizar ações por uma quantidade de rodadas igual ao nível da
+    cifra.
 effect_table: null

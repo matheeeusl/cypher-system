@@ -8,7 +8,7 @@ description:
     for one minute. The target rapidly shifts between its normal
     appearance and a blot of darkness. The target has an asset on Speed
     defense rolls until the effect wears off.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você modifica como uma criatura disposta dentro de uma distância curta reflete a luz por um minuto. O alvo alterna rapidamente entre sua aparência normal e uma mancha de escuridão. O alvo tem um recurso em rolagens de defesa de Velocidade até que o efeito passe.'
 cost:
   pool: intellect
   amount: 2

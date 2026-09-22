@@ -1,5 +1,5 @@
 id: ray-emitter-numbing
-name: { en: 'Ray emitter (numbing)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter (numbing)', 'pt-BR': 'Emissor de raio (dormência)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -10,5 +10,9 @@ effect_text:
     target, making it useless for one minute. A small number of these devices
     (5%) induce numbness that lasts for one hour.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio de energia a até uma
+    distância longa (muito longa se a cifra for de nível 6 ou superior)
+    que deixa dormente um membro do alvo, tornando-o inútil por um
+    minuto. Uma pequena parcela desses dispositivos (5%) induz uma
+    dormência que dura uma hora.
 effect_table: null

@@ -8,7 +8,7 @@ description:
     in your favor. When you use Trust to Luck, roll a d6. On any even
     result, the task you're attempting is eased by two steps. On a
     roll of 1, the task is hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Às vezes, você só precisa rolar os dados e torcer para que as coisas se resolvam a seu favor. Ao usar Confiar na Sorte, role 1d6. Em qualquer resultado par, a tarefa que você está tentando é facilitada em dois níveis. Em uma rolagem de 1, a tarefa é dificultada.'
 cost:
   pool: intellect
   amount: 3

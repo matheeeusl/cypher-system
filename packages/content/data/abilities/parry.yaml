@@ -6,7 +6,7 @@ description:
   en: >-
     You can deflect incoming attacks quickly. When you activate this
     ability, for the next ten rounds you ease all Speed defense rolls.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue desviar ataques recebidos rapidamente. Ao ativar esta habilidade, pelos próximos dez rounds você facilita todas as rolagens de defesa de Velocidade.'
 cost:
   pool: speed
   amount: 5

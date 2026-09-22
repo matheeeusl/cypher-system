@@ -9,7 +9,7 @@ description:
     reasonable action in the next round. A reasonable action should not
     put the creatures or their allies in obvious danger or be wildly
     out of character.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao falar com um grupo de criaturas inteligentes que consigam entendê-lo e não sejam hostis, você as convence a realizar uma ação razoável no próximo round. Uma ação razoável não deve colocar as criaturas ou seus aliados em perigo óbvio, nem ser totalmente fora de personagem.'
 cost:
   pool: intellect
   amount: 4

@@ -8,7 +8,7 @@ description:
     games of chance in the style of poker, roleplaying games, and so
     on. You can apply an asset to a task related to playing that
     style of game once between each recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um estilo de jogo, como jogos de estratégia em tempo real, jogos de azar no estilo pôquer, jogos de interpretação, e assim por diante. Você pode aplicar um recurso a uma tarefa relacionada a jogar nesse estilo de jogo uma vez entre cada rolagem de recuperação.'
 cost: null
 action_type: enabler
 sources:

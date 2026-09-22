@@ -1,5 +1,5 @@
 id: phase-disruptor
-name: { en: 'Phase disruptor', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Phase disruptor', 'pt-BR': 'Disruptor de fase' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 2'
@@ -11,5 +11,10 @@ effect_text:
     pass through it as if it were not there, although one cannot see through
     it, and it blocks light.
   pt-BR: >-
-    Tradução em breve.
+    Tira de fase uma parte de uma estrutura física (como uma parede ou
+    piso) por uma hora. Afeta uma área equivalente a um cubo de 1,5
+    metro (5 pés) por nível da cifra. Enquanto a área estiver fora de
+    fase, criaturas e objetos podem atravessá-la como se ela não
+    existisse, embora não seja possível enxergar através dela, e ela
+    bloqueie a luz.
 effect_table: null

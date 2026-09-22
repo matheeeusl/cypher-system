@@ -11,7 +11,7 @@ description:
     GM's choosing if you succeed on a difficulty 6 Intellect task. You
     can use this ability at most once per day, and never within the
     same general area. This costs 6 Intellect points plus 2 XP.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você desenvolveu um sexto sentido para buscar os itens mais valiosos no ermo. Se gastar o tempo necessário para ter sucesso em duas tarefas de vasculhamento, você pode trocar todos os resultados que obteria pela chance de ganhar um artefato à escolha do Mestre, caso tenha sucesso em uma tarefa de Intelecto de dificuldade 6. Você pode usar esta habilidade no máximo uma vez por dia, e nunca na mesma área geral. Isso custa 6 pontos de Intelecto mais 2 XP.'
   # Note: source cost is "6 Intellect points + 2 XP" — an XP-cost
   # addition the schema's pool+amount `cost` field can't represent;
   # baseline Intellect cost recorded, the XP addition folded into

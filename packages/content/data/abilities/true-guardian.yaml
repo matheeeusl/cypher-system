@@ -7,7 +7,7 @@ description:
     When you stand guard as your action, allies within immediate
     range of you gain an asset to their defense tasks. This lasts
     until the end of your next turn.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você monta guarda como sua ação, aliados dentro de uma distância imediata de você ganham um recurso em suas tarefas de defesa. Isso dura até o fim do seu próximo turno.'
   # Note: source cost is a choice-of-pool, "2 Might or Intellect
   # points" — the schema's single `pool` field can't represent that.
   # Recorded as Might (first-listed option), same approximation used

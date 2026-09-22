@@ -1,7 +1,7 @@
 id: inquisitive
 name:
   en: Inquisitive
-  pt-BR: Tradução em breve.
+  pt-BR: Curioso
 description:
   en: >-
     The world is vast and mysterious, with wonders and secrets to keep
@@ -18,7 +18,21 @@ description:
     your time with your nose in a book, learning everything you can
     about the place you're going so you know what to expect when you get
     there.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    O mundo é vasto e misterioso, com maravilhas e segredos capazes de
+    deixá-lo maravilhado por várias vidas. Você sente o chamado no seu
+    coração, o convite para explorar os destroços de civilizações
+    passadas, descobrir novos povos, novos lugares e quaisquer maravilhas
+    bizarras que possa encontrar pelo caminho. No entanto, por mais forte
+    que seja o seu impulso de percorrer o mundo, você sabe que há perigo
+    de sobra, e toma precauções para garantir que está preparado para
+    qualquer eventualidade. Pesquisa, preparação e prontidão o ajudarão a
+    viver o suficiente para ver tudo o que quer ver e fazer tudo o que
+    quer fazer. Você provavelmente carrega uma dúzia de livros e relatos
+    de viagem sobre o mundo com você o tempo todo. Quando não está na
+    estrada olhando ao redor, você passa o tempo com o nariz enfiado em
+    um livro, aprendendo tudo o que pode sobre o lugar para onde está
+    indo, para saber o que esperar ao chegar lá.
 pool_bonus:
   - stat: intellect
     amount: 4
@@ -35,27 +49,42 @@ inabilities:
       You tend to fixate on the details, making you somewhat oblivious
       to what's going on around you. Any task to hear or notice dangers
       around you is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tende a se fixar em detalhes, o que o torna um tanto alheio ao
+      que acontece ao seu redor. Qualquer tarefa para ouvir ou notar
+      perigos ao seu redor é prejudicada.
   - en: >-
       When you see something interesting, you hesitate as you take in
       all the details. Initiative actions (to determine who goes first
       in combat) are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Quando você vê algo interessante, hesita enquanto absorve todos os
+      detalhes. Ações de iniciativa (para determinar quem age primeiro em
+      combate) são prejudicadas.
 additional_equipment:
   en: You have three books on whatever subjects you choose.
-  pt-BR: Tradução em breve.
+  pt-BR: Você tem três livros sobre os assuntos que escolher.
 connection_options:
   - en: >-
       One of the PCs approached you to learn information related to the
       mission, having heard you were an expert.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o procurou para obter informações
+      relacionadas à missão, tendo ouvido dizer que você era um
+      especialista.
   - en: You have always wanted to see the place where the other PCs are going.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você sempre quis conhecer o lugar para onde os outros personagens
+      estão indo.
   - en: >-
       You were interested in what the other PCs were up to and decided
       to go along with them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se interessou pelo que os outros personagens estavam tramando
+      e decidiu acompanhá-los.
   - en: >-
       One of the PCs fascinates you, perhaps due to a special or weird
       ability they have.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o fascina, talvez por causa de uma
+      habilidade especial ou estranha que ele tenha.

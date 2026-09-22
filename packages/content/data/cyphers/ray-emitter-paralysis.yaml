@@ -1,5 +1,5 @@
 id: ray-emitter-paralysis
-name: { en: 'Ray emitter (paralysis)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter (paralysis)', 'pt-BR': 'Emissor de raio (paralisia)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -9,5 +9,8 @@ effect_text:
     paralyzes the target for one minute. A small number of these devices (5%)
     induce paralysis that lasts for one hour.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio de energia a até uma
+    distância muito longa que paralisa o alvo por um minuto. Uma
+    pequena parcela desses dispositivos (5%) induz uma paralisia que
+    dura uma hora.
 effect_table: null

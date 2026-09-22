@@ -1,5 +1,5 @@
 id: weapon-enhancement
-name: { en: 'Weapon enhancement', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Weapon enhancement', 'pt-BR': 'Aprimoramento de arma' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 400'
 level_range: '1d6 + 2'
@@ -8,59 +8,60 @@ effect_text:
     Modifies a weapon's attack in a particular fashion for ten minutes per
     cypher level. Roll a d100 for the modification.
   pt-BR: >-
-    Tradução em breve.
+    Modifica o ataque de uma arma de uma forma específica por dez
+    minutos por nível da cifra. Role 1d100 para a modificação.
 effect_table:
   label:
     en: 'Weapon Enhancement Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Aprimoramento de Arma'
   entries:
     - range: '01–10'
-      text: { en: 'Eases attack by one step', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Eases attack by one step', 'pt-BR': 'Facilita o ataque em um nível' }
     - range: '11–20'
       text:
-        { en: 'Deals bonus electrical damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+        { en: 'Deals bonus electrical damage equal to cypher level', 'pt-BR': 'Causa dano elétrico bônus igual ao nível da cifra' }
     - range: '21–30'
-      text: { en: 'Deals bonus cold damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Deals bonus cold damage equal to cypher level', 'pt-BR': 'Causa dano de frio bônus igual ao nível da cifra' }
     - range: '31–40'
-      text: { en: 'Deals bonus poison damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Deals bonus poison damage equal to cypher level', 'pt-BR': 'Causa dano de veneno bônus igual ao nível da cifra' }
     - range: '41–50'
-      text: { en: 'Deals bonus acid damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Deals bonus acid damage equal to cypher level', 'pt-BR': 'Causa dano de ácido bônus igual ao nível da cifra' }
     - range: '51–60'
-      text: { en: 'Deals bonus fire damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Deals bonus fire damage equal to cypher level', 'pt-BR': 'Causa dano de fogo bônus igual ao nível da cifra' }
     - range: '61–70'
-      text: { en: 'Deals bonus sonic damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Deals bonus sonic damage equal to cypher level', 'pt-BR': 'Causa dano sônico bônus igual ao nível da cifra' }
     - range: '71–80'
       text:
-        { en: 'Deals bonus psychic damage equal to cypher level', 'pt-BR': 'Tradução em breve.' }
+        { en: 'Deals bonus psychic damage equal to cypher level', 'pt-BR': 'Causa dano psíquico bônus igual ao nível da cifra' }
     - range: '81–90'
       text:
         {
           en: 'Knockback (on 18–20 on successful attack roll, target knocked back 30 feet [9 m])',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Repulsão (em 18–20 em uma rolagem de ataque bem-sucedida, o alvo é empurrado 9 metros [30 pés] para trás)',
         }
     - range: '91–95'
       text:
         {
           en: "Holding (on 18–20 on successful attack roll, target can't act on its next turn)",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Imobilização (em 18–20 em uma rolagem de ataque bem-sucedida, o alvo não pode agir no seu próximo turno)',
         }
     - range: '96–97'
-      text: { en: 'Eases attack by two steps', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Eases attack by two steps', 'pt-BR': 'Facilita o ataque em dois níveis' }
     - range: '98'
       text:
         {
           en: 'Banishing (on 18–20 on successful attack roll, target is sent to random location at least 100 miles [160 km] away)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Banimento (em 18–20 em uma rolagem de ataque bem-sucedida, o alvo é enviado para um local aleatório a pelo menos 160 km [100 milhas] de distância)',
         }
     - range: '99'
       text:
         {
           en: 'Explodes, inflicting damage equal to cypher level to all within immediate range',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Explode, infligindo dano igual ao nível da cifra a todos dentro de uma distância imediata',
         }
     - range: '00'
       text:
         {
           en: 'Heart-seeking (on 18–20 on successful attack roll, target is killed)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Busca-corações (em 18–20 em uma rolagem de ataque bem-sucedida, o alvo é morto)',
         }

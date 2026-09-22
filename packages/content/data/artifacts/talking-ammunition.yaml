@@ -1,11 +1,11 @@
 id: talking-ammunition
 name:
   en: Talking Ammunition
-  pt-BR: Tradução em breve.
+  pt-BR: Munição Falante
 level: '1d6 + 1'
 form:
   en: Quiver, case, sack, or crate
-  pt-BR: Tradução em breve.
+  pt-BR: Aljava, estojo, saco ou caixote
 effect_text:
   en: >-
     When found, the artifact contains a number of pieces of ammunition
@@ -16,7 +16,15 @@ effect_text:
     provides an asset to the attack roll, and inflicts 2 additional
     points of damage. The final piece of ammunition provides two assets
     to the attack roll, and inflicts 4 additional points of damage.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Ao ser encontrado, o artefato contém uma quantidade de munições igual
+    ao nível do artefato. Você pode usar uma ação para deixar a munição
+    falante pronta para uso ou para guardá-la. Enquanto ativa, a munição
+    falante conversa animadamente com você e entre si, dificultando suas
+    rolagens de furtividade. Cada munição concede um recurso na rolagem
+    de ataque e inflige 2 pontos adicionais de dano. A última munição
+    concede dois recursos na rolagem de ataque e inflige 4 pontos
+    adicionais de dano.
 effect_table: null
 flavor_quote: null
 depletion_die: 'Automatic (when the final piece of ammunition is fired)'

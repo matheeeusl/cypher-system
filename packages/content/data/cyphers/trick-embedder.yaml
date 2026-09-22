@@ -1,5 +1,5 @@
 id: trick-embedder
-name: { en: 'Trick embedder', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Trick embedder', 'pt-BR': 'Incorporador de truques' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -11,5 +11,10 @@ effect_text:
     long range, and so on). The trick must be designated when the cypher is
     activated.
   pt-BR: >-
-    Tradução em breve.
+    Um animal não inteligente aprende imediata e perfeitamente um
+    truque (dois truques se a cifra for de nível 4 ou superior) que
+    seja capaz de realizar fisicamente (rolar, sentar ao lado, girar,
+    dar a pata, ir até um local indicado dentro de uma distância longa,
+    e assim por diante). O truque deve ser designado no momento em que
+    a cifra é ativada.
 effect_table: null

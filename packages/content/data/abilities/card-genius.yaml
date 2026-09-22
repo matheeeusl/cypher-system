@@ -4,7 +4,7 @@ name:
   pt-BR: Gênio das Cartas
 description:
   en: The more you gamble, the sharper your mind becomes. You gain +5 to your Intellect Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quanto mais você aposta, mais afiada sua mente se torna. Você ganha +5 na sua Reserva de Intelecto.'
 cost: null
 action_type: enabler
 sources:

@@ -12,7 +12,7 @@ description:
     number of 9 and 9 health, and it inflicts 3 points of damage. If
     it's killed or destroyed, it takes you one month to find or
     create a suitable replacement.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha uma criatura companheira de nível 3 que consegue voar na mesma velocidade que você; dependendo de outros aspectos do seu personagem, isso pode ser um pássaro treinado, um drone mecânico, ou uma criatura estranha e prestativa, como um familiar. Essa criatura o acompanha e age conforme você a direciona. Como uma companheira de nível 3, ela tem um número-alvo de 9 e 9 pontos de saúde, e causa 3 pontos de dano. Se for morta ou destruída, leva um mês para você encontrar ou criar uma substituta adequada.'
 cost: null
 action_type: enabler
 sources:

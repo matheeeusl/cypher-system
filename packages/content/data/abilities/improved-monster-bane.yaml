@@ -4,7 +4,7 @@ name:
   pt-BR: Flagelo dos Monstros Aprimorado
 description:
   en: When you inflict damage to creatures more than twice as large or massive as you, you inflict 3 additional points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você causa dano a criaturas com mais do dobro do seu tamanho ou massa, causa 3 pontos adicionais de dano.'
 cost: null
 action_type: enabler
 sources:

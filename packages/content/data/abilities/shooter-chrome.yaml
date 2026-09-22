@@ -4,7 +4,7 @@ name:
   pt-BR: Cromado de Atirador
 description:
   en: Your machine parts grant you +1 to Armor and +2 to your Speed Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas peças mecânicas lhe concedem +1 de Armadura e +2 na sua Reserva de Velocidade.'
 cost: null
 action_type: enabler
 sources:

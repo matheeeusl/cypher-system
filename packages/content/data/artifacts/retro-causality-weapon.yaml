@@ -1,11 +1,11 @@
 id: retro-causality-weapon
 name:
   en: Retro-Causality Weapon
-  pt-BR: Tradução em breve.
+  pt-BR: Arma de Retrocausalidade
 level: '1d6'
 form:
   en: Any weapon
-  pt-BR: Tradução em breve.
+  pt-BR: Qualquer arma
 effect_text:
   en: >-
     This weapon inflicts additional damage equal to the artifact level,
@@ -17,29 +17,44 @@ effect_text:
     the nature of the reality warp, and the extent to which any changes
     in reality are immediately obvious to you. Roll a d6 to determine the
     type of weapon (see the table below).
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Esta arma inflige dano adicional igual ao nível do artefato, e
+    criaturas com nível inferior ao do artefato são mortas instantaneamente
+    ao sofrerem dano causado por ela. Se você matar uma criatura com a
+    arma, a realidade se distorce ao seu redor para justificar a morte, e
+    a arma se torna uma arma comum. Por exemplo, você pode matar uma
+    pessoa apenas para descobrir que ela havia assassinado um dos seus
+    pais. O Mestre determina a natureza dessa distorção da realidade e até
+    que ponto quaisquer mudanças na realidade são imediatamente evidentes
+    para você. Role 1d6 para determinar o tipo de arma (veja a tabela
+    abaixo).
 effect_table:
   label:
     en: Weapon Type
-    pt-BR: Tradução em breve.
+    pt-BR: Tipo de Arma
   entries:
     - range: '1'
-      text: { en: Light melee weapon, pt-BR: Tradução em breve. }
+      text: { en: Light melee weapon, pt-BR: Arma corpo a corpo leve }
     - range: '2'
-      text: { en: Light ranged weapon, pt-BR: Tradução em breve. }
+      text: { en: Light ranged weapon, pt-BR: Arma à distância leve }
     - range: '3'
-      text: { en: Medium melee weapon, pt-BR: Tradução em breve. }
+      text: { en: Medium melee weapon, pt-BR: Arma corpo a corpo média }
     - range: '4'
-      text: { en: Medium ranged weapon, pt-BR: Tradução em breve. }
+      text: { en: Medium ranged weapon, pt-BR: Arma à distância média }
     - range: '5'
-      text: { en: Heavy melee weapon, pt-BR: Tradução em breve. }
+      text: { en: Heavy melee weapon, pt-BR: Arma corpo a corpo pesada }
     - range: '6'
-      text: { en: Heavy ranged weapon, pt-BR: Tradução em breve. }
+      text: { en: Heavy ranged weapon, pt-BR: Arma à distância pesada }
 flavor_quote:
   en: >-
     I don't think I was even married before I shot them. I probably
     shouldn't tell my kids that they're just a metacausal byproduct of
     finding an excuse to shoot someone; that's a hell of an existential
     crisis to inflict on a child. Nobody wants to have that conversation.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Acho que eu nem era casado antes de atirar nele. Provavelmente não
+    devo contar aos meus filhos que eles não passam de um subproduto
+    metacausal de eu ter arranjado uma desculpa pra atirar em alguém;
+    isso é uma baita crise existencial pra impor a uma criança. Ninguém
+    quer ter essa conversa.
 depletion_die: '1–2 in 1d6 (check each time the weapon kills a creature)'

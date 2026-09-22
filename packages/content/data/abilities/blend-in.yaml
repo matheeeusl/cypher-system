@@ -12,7 +12,7 @@ description:
     on. If this occurs, you can regain the remaining period of effect
     by taking an action to focus on seeming innocuous and as if you
     belong.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você se mistura, as criaturas ainda o veem, mas não dão importância à sua presença por cerca de um minuto. Enquanto se mistura, você é especializada em tarefas de furtividade e defesa de Velocidade. Este efeito termina se você fizer algo que revele sua presença ou posição — atacar, usar uma habilidade, mover um objeto grande, e assim por diante. Se isso ocorrer, você pode recuperar o período restante do efeito usando uma ação para se concentrar em parecer inofensiva e como se pertencesse ao lugar.'
 cost:
   pool: intellect
   amount: 4

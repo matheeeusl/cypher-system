@@ -7,7 +7,7 @@ description:
     This ability requires you to extend yourself for a powerful stab or
     smash. The awkward lunge hinders the attack roll. If your attack is
     successful, it inflicts 4 additional points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Esta habilidade exige que você se estenda para uma estocada ou pancada poderosa. A arremetida desajeitada dificulta a rolagem de ataque. Se seu ataque for bem-sucedido, causa 4 pontos adicionais de dano.'
 cost:
   pool: might
   amount: 2

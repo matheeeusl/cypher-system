@@ -1,5 +1,5 @@
 id: memory-switch
-name: { en: 'Memory switch', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Memory switch', 'pt-BR': 'Interruptor de memória' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -10,5 +10,9 @@ effect_text:
     dazed and take no action for a round, and they have no memory of the
     preceding hour.
   pt-BR: >-
-    Tradução em breve.
+    O usuário seleciona um ponto dentro de uma distância longa, e as
+    mentes de todas as criaturas pensantes dentro de uma distância
+    imediata desse ponto são atacadas. As vítimas ficam atordoadas e não
+    realizam nenhuma ação por uma rodada, e não têm nenhuma memória da
+    hora anterior.
 effect_table: null

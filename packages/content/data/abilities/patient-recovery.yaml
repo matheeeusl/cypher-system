@@ -4,7 +4,7 @@ name:
   pt-BR: Recuperação Paciente
 description:
   en: You gain an extra ten-minute recovery roll each day.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha uma rolagem de recuperação de dez minutos extra por dia.'
 cost: null
 action_type: enabler
 sources:

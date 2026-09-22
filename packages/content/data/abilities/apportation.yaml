@@ -12,7 +12,7 @@ description:
     being a piece of standard equipment, and a 40 percent chance of
     being a bit of worthless junk. You can't use this ability to take
     an item held by another creature.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você invoca um objeto físico até você. Pode escolher qualquer item de equipamento comum da lista de equipamentos padrão, ou (no máximo uma vez por dia) permitir que o Mestre determine o objeto aleatoriamente. Se invocar um objeto aleatório, há 10% de chance de ser uma cifra manifesta ou artefato, 50% de chance de ser um item de equipamento padrão, e 40% de chance de ser um refugo sem valor. Você não pode usar esta habilidade para tomar um item segurado por outra criatura.'
 cost:
   pool: intellect
   amount: 4

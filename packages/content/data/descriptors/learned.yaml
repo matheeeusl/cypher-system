@@ -1,7 +1,7 @@
 id: learned
 name:
   en: Learned
-  pt-BR: Tradução em breve.
+  pt-BR: Erudito
 description:
   en: >-
     You have studied, either on your own or with an instructor. You know
@@ -9,7 +9,12 @@ description:
     biology, geography, mythology, nature, or any other area of study.
     Learned characters typically carry a few books around with them and
     spend their spare time reading.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você estudou, seja por conta própria, seja com um instrutor. Você
+    sabe muitas coisas e é especialista em alguns temas, como história,
+    biologia, geografia, mitologia, natureza ou qualquer outra área de
+    estudo. Personagens eruditos normalmente carregam alguns livros
+    consigo e passam o tempo livre lendo.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -21,18 +26,24 @@ inabilities:
   - en: >-
       You have few social graces. Any task involving charm, persuasion,
       or etiquette is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem poucas habilidades sociais. Qualquer tarefa envolvendo
+      charme, persuasão ou etiqueta é prejudicada.
 additional_equipment:
   en: You have two additional books on topics of your choice.
-  pt-BR: Tradução em breve.
+  pt-BR: Você tem dois livros adicionais sobre temas à sua escolha.
 connection_options:
   - en: One of the other PCs asked you to come along because of your knowledge.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens pediu que você viesse junto por causa do
+      seu conhecimento.
   - en: You need money to fund your studies.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisa de dinheiro para financiar seus estudos.
   - en: >-
       You believed that the task might lead to important and interesting
       discoveries.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acreditou que a tarefa poderia levar a descobertas importantes
+      e interessantes.
   - en: A colleague requested that you take part in the mission as a favor.
-    pt-BR: Tradução em breve.
+    pt-BR: Um colega pediu, como favor, que você participasse da missão.

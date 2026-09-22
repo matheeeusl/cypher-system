@@ -4,7 +4,7 @@ name:
   pt-BR: Bem Vestido
 description:
   en: When you wear armor of any kind, you gain an additional +1 to Armor.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa qualquer tipo de armadura, ganha +1 adicional na Armadura.'
 cost: null
 action_type: enabler
 sources:

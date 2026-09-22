@@ -4,7 +4,7 @@ name:
   pt-BR: Salto da Bala
 description:
   en: Every Spell Bullet you fire leaves a faint path of magic that you can see and follow. Choose the path of one Spell Bullet within long range that you fired in the past minute; you instantly teleport to any place you want along its path. Alternatively, you can use Spell Bullet to conjure a standard bullet, fire it at a target within gun range, and jaunt as part of the action of firing the bullet.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Toda Bala de Feitiço que você dispara deixa um rastro tênue de magia que você pode ver e seguir. Escolha o rastro de uma Bala de Feitiço dentro de uma distância longa que você disparou no último minuto; você se teleporta instantaneamente para qualquer ponto que desejar ao longo desse rastro. Alternativamente, você pode usar Bala de Feitiço para conjurar uma bala comum, disparar contra um alvo dentro do alcance de arma de fogo, e se teleportar como parte da ação de disparar a bala.'
 cost:
   pool: intellect
   amount: 5

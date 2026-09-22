@@ -4,7 +4,7 @@ name:
   pt-BR: Pata de Gato
 description:
   en: You gain CatsPaw cybernetics that replace your organic feet, granting you an asset on stealth tasks that use your feet—for example, walking or running. Additionally, you reduce falling damage by 2 points.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha implantes cibernéticos Pata de Gato que substituem seus pés orgânicos, concedendo um recurso em tarefas de furtividade que usam seus pés — por exemplo, caminhar ou correr. Além disso, você reduz o dano de queda em 2 pontos.'
   # Note: source prints its mechanical effect as a separate "CATSPAW"
   # implant sidebar (Implant: Replaces foot and ankle; Value: $5,000;
   # Effect: ...) rather than inline prose. The Effect sentence is folded

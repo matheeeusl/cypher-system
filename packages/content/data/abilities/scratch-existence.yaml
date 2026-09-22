@@ -19,7 +19,7 @@ description:
     damage rather than ease the task, you deal 2 additional points of
     damage per level of Effort (instead of 3 points); the target takes
     1 point of damage even if you fail the attack roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode optar por entrar em fase de forma a "arranhar" a matéria normal em um longo rasgo enquanto corre usando Sprint Fora de Fase. Isso também o rasga um pouco, refletido pelo custo em Força. Ao usar Sprint Fora de Fase, você causa 2 pontos de dano (ignora Armadura) a um alvo que selecionar ao passar dentro de uma distância imediata, sem acionar Toque Perturbador. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o número de alvos ao longo do seu caminho que pode atacar como parte da mesma ação. Faça uma rolagem de ataque separada para cada inimigo. Você permanece limitada pela quantidade de Esforço que pode aplicar em uma ação. Qualquer coisa que modifique seu ataque ou dano se aplica a todos esses ataques. Alternativamente, se aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); o alvo sofre 1 ponto de dano mesmo que você falhe na rolagem de ataque.'
   # Note: source cost is printed as "1+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

@@ -8,7 +8,7 @@ description:
     minutes that gives you +1 to Armor. While the sheen is active,
     you feel no discomfort from normal cold temperatures and have an
     additional +2 to Armor versus cold damage specifically.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando desejar, seu corpo se cobre com uma camada de gelo por dez minutos, que lhe concede +1 de Armadura. Enquanto a camada estiver ativa, você não sente desconforto com temperaturas frias normais e tem +2 adicionais de Armadura especificamente contra dano de frio.'
 cost:
   pool: intellect
   amount: 1

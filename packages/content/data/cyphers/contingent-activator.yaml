@@ -1,5 +1,5 @@
 id: contingent-activator
-name: { en: 'Contingent activator', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Contingent activator', 'pt-BR': 'Ativador contingente' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -12,10 +12,14 @@ effect_text:
     are subject to a particular dangerous circumstance. Until the linked cypher is used, this cypher continues
     to count toward the maximum number of cyphers a PC can carry.
   pt-BR: >-
-    Se o dispositivo for ativado em conjunto com outro cypher, o usuário pode especificar uma condição sob a qual o cypher vinculado será ativado.
-    O cypher vinculado retém o comando contingente até ser usado (de forma normal ou contingente).
-    Por exemplo, quando este cypher é vinculado a um cypher que fornece uma forma de cura ou proteção,
-    o usuário pode especificar que o cypher vinculado será ativado se eles forem danificados a um certo grau ou
-    estiverem sujeitos a uma circunstância perigosa particular. Até que o cypher vinculado seja usado, este cypher continua
-    a contar para o número máximo de cyphers que um PJ pode carregar.
+    Se o dispositivo for ativado em conjunto com outra cifra, o usuário
+    pode especificar uma condição sob a qual a cifra vinculada será
+    ativada. A cifra vinculada mantém o comando contingente até ser usada
+    (seja normalmente, seja de forma contingente). Por exemplo, quando
+    esta cifra é vinculada a uma cifra que oferece algum tipo de cura ou
+    proteção, o usuário pode especificar que a cifra vinculada será
+    ativada se ele sofrer dano até certo ponto ou for submetido a uma
+    circunstância perigosa específica. Até que a cifra vinculada seja
+    usada, esta cifra continua contando para o número máximo de cifras
+    que um PJ pode carregar.
 effect_table: null

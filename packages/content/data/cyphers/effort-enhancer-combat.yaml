@@ -1,5 +1,5 @@
 id: effort-enhancer-combat
-name: { en: 'Effort enhancer (combat)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Effort enhancer (combat)', 'pt-BR': 'Intensificador de esforço (combate)' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 1'
@@ -11,5 +11,10 @@ effect_text:
     amount of Effort a character can normally apply to one task. Once this
     free level of Effort is used, the effect of the cypher ends.
   pt-BR: >-
-    Tradução em breve.
+    Pela próxima hora, o usuário pode aplicar um nível gratuito de
+    Esforço em qualquer tarefa (incluindo uma tarefa de combate) sem
+    gastar pontos de uma Reserva. O nível gratuito de Esforço fornecido
+    por esta cifra não conta para a quantidade máxima de Esforço que um
+    personagem pode normalmente aplicar em uma tarefa. Uma vez usado
+    esse nível gratuito de Esforço, o efeito da cifra termina.
 effect_table: null

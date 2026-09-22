@@ -1,7 +1,7 @@
 id: mechanical
 name:
   en: Mechanical
-  pt-BR: Tradução em breve.
+  pt-BR: Mecânico
 description:
   en: >-
     You have a special talent with machines of all kinds, and you're
@@ -10,7 +10,14 @@ description:
     time. You get called "techie," "tech," "mech," "gear-head,"
     "motor-head," or any of a number of other nicknames. Mechanics
     usually wear practical work clothes and carry around a lot of tools.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem um talento especial com máquinas de todo tipo, e é hábil em
+    entendê-las e, se necessário, consertá-las. Talvez você seja um
+    pouco inventor, criando novas máquinas de vez em quando. Chamam você
+    de "nerd de tecnologia", "engenheiro", "mecânico", "fissurado em
+    engrenagens", "louco por motores" ou qualquer outro apelido do tipo.
+    Mecânicos costumam usar roupas de trabalho práticas e carregar
+    muitas ferramentas.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -23,15 +30,19 @@ skill_training:
 inabilities: []
 additional_equipment:
   en: You start with a variety of machine tools.
-  pt-BR: Tradução em breve.
+  pt-BR: Você começa com uma variedade de ferramentas mecânicas.
 connection_options:
   - en: While repairing a nearby machine, you overheard the other PCs talking.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Enquanto consertava uma máquina por perto, você ouviu os outros
+      personagens conversando.
   - en: You need money to buy tools and parts.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisa de dinheiro para comprar ferramentas e peças.
   - en: >-
       It was clear that the mission couldn't succeed without your skills
       and knowledge.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Ficou claro que a missão não teria sucesso sem suas habilidades e
+      conhecimento.
   - en: Another PC asked you to join them.
-    pt-BR: Tradução em breve.
+    pt-BR: Outro personagem pediu que você se juntasse a eles.

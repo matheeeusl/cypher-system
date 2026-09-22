@@ -1,5 +1,5 @@
 id: mental-scrambler
-name: { en: 'Mental scrambler', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Mental scrambler', 'pt-BR': 'Embaralhador mental' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -13,38 +13,45 @@ effect_text:
     field and after leaving it). Each mental scrambler is keyed to a specific
     effect. Roll a d100 to determine the effect.
   pt-BR: >-
-    Tradução em breve.
+    Duas rodadas após ser ativado, o dispositivo cria um campo invisível
+    que preenche uma área dentro de uma distância curta e dura um
+    minuto. O campo embaralha os processos mentais de todas as criaturas
+    pensantes. O efeito dura enquanto elas permanecerem no campo e por
+    1d6 rodadas depois, embora seja permitida uma rolagem de defesa de
+    Intelecto a cada rodada para agir normalmente (tanto dentro do campo
+    quanto após sair dele). Cada embaralhador mental é vinculado a um
+    efeito específico. Role 1d100 para determinar o efeito.
 effect_table:
   label:
     en: 'Mental Scrambler Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Embaralhador Mental'
   entries:
     - range: '01–30'
-      text: { en: 'Victims cannot act.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims cannot act.', 'pt-BR': 'As vítimas não conseguem agir.' }
     - range: '31–40'
-      text: { en: 'Victims cannot speak.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims cannot speak.', 'pt-BR': 'As vítimas não conseguem falar.' }
     - range: '41–50'
       text:
-        { en: 'Victims move slowly (immediate range) and clumsily.', 'pt-BR': 'Tradução em breve.' }
+        { en: 'Victims move slowly (immediate range) and clumsily.', 'pt-BR': 'As vítimas se movem devagar (distância imediata) e de forma desajeitada.' }
     - range: '51–60'
-      text: { en: 'Victims cannot see or hear.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims cannot see or hear.', 'pt-BR': 'As vítimas não conseguem ver nem ouvir.' }
     - range: '61–70'
       text:
         {
           en: 'Victims lose all sense of direction, depth, and proportion.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'As vítimas perdem todo o senso de direção, profundidade e proporção.',
         }
     - range: '71–80'
-      text: { en: 'Victims do not recognize anyone they know.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims do not recognize anyone they know.', 'pt-BR': 'As vítimas não reconhecem ninguém que conheçam.' }
     - range: '81–88'
-      text: { en: 'Victims suffer partial amnesia.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims suffer partial amnesia.', 'pt-BR': 'As vítimas sofrem amnésia parcial.' }
     - range: '89–94'
-      text: { en: 'Victims suffer total amnesia.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Victims suffer total amnesia.', 'pt-BR': 'As vítimas sofrem amnésia total.' }
     - range: '95–98'
       text:
         {
           en: 'Victims lose all inhibitions, revealing secrets and performing surprising actions.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'As vítimas perdem todas as inibições, revelando segredos e realizando ações surpreendentes.',
         }
     - range: '99–00'
-      text: { en: "Victims' ethics are inverted.", 'pt-BR': 'Tradução em breve.' }
+      text: { en: "Victims' ethics are inverted.", 'pt-BR': 'A ética das vítimas se inverte.' }

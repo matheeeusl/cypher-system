@@ -9,7 +9,7 @@ description:
     defense rolls for you and all creatures you designate within the
     bubble are eased, and no noise, regardless of its origin, sounds
     louder than a normal speaking voice.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria uma bolha silenciosa de proteção ao seu redor com um raio imediato por um minuto. A bolha se move com você. Todas as rolagens de defesa para você e para todas as criaturas que você designar dentro da bolha são facilitadas, e nenhum ruído, independentemente de sua origem, soa mais alto do que uma voz falando normalmente.'
   # Note: source grants this ability "at the GM's discretion" alongside
   # Blessing of the Gods (Death) at Tier 1 — a conditional second grant
   # rather than an automatic one, which the schema's plain `granted`

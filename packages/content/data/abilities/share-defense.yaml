@@ -7,7 +7,7 @@ description:
     If your training in a defense task is greater than that of an ally
     within short range, your advice and insight allow them to
     substitute your training for that defense task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se seu treinamento em uma tarefa de defesa for maior que o de um aliado dentro de uma distância curta, seu conselho e discernimento permitem que ele substitua seu treinamento por essa tarefa de defesa.'
 cost: null
 action_type: enabler
 sources:

@@ -12,7 +12,7 @@ description:
     choose. Your dream objects are as strong as iron, but if you do
     not remain within long range of them, they function for only one
     minute before fading away.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria um objeto onírico de qualquer forma que consiga imaginar, do seu tamanho ou menor, que assume substância e peso aparentes. O objeto é rústico e não pode ter partes móveis, então você pode fazer uma espada, um escudo, uma escada curta, e assim por diante. O objeto onírico tem aproximadamente a massa do objeto real, se você escolher. Seus objetos oníricos são resistentes como ferro, mas se você não permanecer dentro de uma distância longa deles, eles funcionam por apenas um minuto antes de desaparecer.'
 cost:
   pool: intellect
   amount: 4

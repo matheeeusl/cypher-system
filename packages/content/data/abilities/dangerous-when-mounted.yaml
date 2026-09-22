@@ -4,7 +4,7 @@ name:
   pt-BR: Perigosa Quando Montada
 description:
   en: When you attack from your saddle, you inflict 3 additional points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você ataca da sua sela, causa 3 pontos adicionais de dano.'
 cost: null
 action_type: enabler
 sources:

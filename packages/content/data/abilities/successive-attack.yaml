@@ -8,7 +8,7 @@ description:
     on that same turn against a new foe within your reach. The second
     attack is part of the same action. You can use this ability with
     melee attacks and ranged attacks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você derrubar um inimigo, pode fazer imediatamente outro ataque no mesmo turno contra um novo inimigo ao seu alcance. O segundo ataque faz parte da mesma ação. Você pode usar esta habilidade com ataques corpo a corpo e ataques à distância.'
 cost:
   pool: speed
   amount: 2

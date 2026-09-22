@@ -12,7 +12,7 @@ description:
     range of your target; roll an attack for each separately. Even if
     you miss, you still deal 1 point of damage with fiery lead
     shrapnel.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto Arma em Brasa estiver ativa, você inflige 3 pontos adicionais de dano com a arma escolhida (+4 pontos de dano no total). Além das opções normais de uso de Esforço, aplicar um nível de Esforço pode fazer a bala explodir ao impacto, potencialmente causando dano a todas as criaturas dentro de uma distância imediata do seu alvo; role um ataque separadamente para cada uma. Mesmo se você errar, ainda assim causa 1 ponto de dano com estilhaços de chumbo em brasa.'
   # Note: source cost is printed as "1+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Intellect point here, flagged for schema review (same

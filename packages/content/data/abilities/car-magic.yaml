@@ -15,7 +15,7 @@ description:
     options for using Effort, you can use Effort to affect other
     creatures within the car; each level of Effort used in this way
     affects up to two additional creatures in the car.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode alterar uma habilidade mágica que conjura para que também afete o veículo que estiver dirigindo, como se ele fosse parte de você. Por exemplo, se você estiver dirigindo e conjurar Flutuar em si mesma, você e o carro começam a flutuar; se conjurar Invisibilidade em si mesma, você e o carro ficam invisíveis. Feitiços lançados sobre um carro dessa forma tendem a durar apenas alguns rounds antes de expirar (embora o feitiço ainda dure sua duração completa em você). O custo de Magia Automotiva é somado ao custo do feitiço que está sendo lançado. Além das opções normais de uso de Esforço, você pode usar Esforço para afetar outras criaturas dentro do carro; cada nível de Esforço usado dessa forma afeta até duas criaturas adicionais no carro.'
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here, flagged for schema review (same

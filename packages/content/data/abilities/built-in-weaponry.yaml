@@ -4,7 +4,7 @@ name:
   pt-BR: Armamento Embutido
 description:
   en: Biomechanical implants, a magical jewel fused to your forehead, or something just as wild now provides you with inherent weaponry. This allows you to fire a blast of energy up to long range that inflicts 5 points of damage. There is no cost for you to use this ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Implantes biomecânicos, uma joia mágica fundida à sua testa, ou algo igualmente extravagante agora lhe fornece armamento inerente. Isso permite que você dispare uma rajada de energia a até uma distância longa, causando 5 pontos de dano. Não há custo para você usar esta habilidade.'
 cost: null
 action_type: action
 sources:

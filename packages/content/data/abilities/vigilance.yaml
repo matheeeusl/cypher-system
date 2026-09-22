@@ -10,7 +10,7 @@ description:
     ranged attacks, and your melee and ranged attacks are hindered.
     This effect lasts for as long as you wish, but it ends if no combat
     is taking place within range of your senses.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você adota uma abordagem cautelosa no combate, concentrando-se mais em se proteger do que em ferir seus oponentes. Enquanto esta habilidade estiver ativa, você ganha um recurso em rolagens de defesa de Velocidade contra ataques corpo a corpo e à distância, e seus ataques corpo a corpo e à distância são dificultados. Esse efeito dura enquanto você desejar, mas termina se nenhum combate estiver ocorrendo dentro do alcance dos seus sentidos.'
 cost:
   pool: intellect
   amount: 2

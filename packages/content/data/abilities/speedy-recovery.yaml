@@ -8,7 +8,7 @@ description:
     within short range who is able to understand you. When they make a
     recovery roll, they must spend only half the normal amount of time
     required to do so (minimum one action).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas palavras aprimoram a capacidade regenerativa normal de um personagem dentro de uma distância curta capaz de entendê-lo. Quando ele fizer uma rolagem de recuperação, precisa gastar apenas metade do tempo normal exigido para isso (mínimo de uma ação).'
 cost:
   pool: intellect
   amount: 3

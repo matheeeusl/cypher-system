@@ -1,5 +1,5 @@
 id: sound-dampener
-name: { en: 'Sound dampener', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Sound dampener', 'pt-BR': 'Abafador de som' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d6 + 2'
@@ -8,5 +8,7 @@ effect_text:
     Dampens all sound within immediate range for one minute per cypher level,
     providing an asset on stealth actions by all creatures in the area.
   pt-BR: >-
-    Tradução em breve.
+    Abafa todo o som dentro de uma distância imediata por um minuto por
+    nível da cifra, concedendo um recurso em ações de furtividade para
+    todas as criaturas na área.
 effect_table: null

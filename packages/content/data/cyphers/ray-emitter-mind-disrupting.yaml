@@ -1,5 +1,5 @@
 id: ray-emitter-mind-disrupting
-name: { en: 'Ray emitter (mind disrupting)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter (mind disrupting)', 'pt-BR': 'Emissor de raio (disruptor mental)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     the victim cannot take actions for a number of rounds equal to the
     cypher's level.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio de energia destrutiva a até
+    uma distância muito longa que inflige dano de Intelecto igual ao
+    nível da cifra. Além disso, a vítima não pode realizar ações por
+    uma quantidade de rodadas igual ao nível da cifra.
 effect_table: null

@@ -1,5 +1,5 @@
 id: time-dilation-defensive
-name: { en: 'Time dilation (defensive)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Time dilation (defensive)', 'pt-BR': 'Dilatação temporal (defensiva)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -10,5 +10,9 @@ effect_text:
     is an asset that modifies the user's defense rolls by two steps (three
     steps if the cypher is level 6 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Pelas próximas vinte e quatro horas, quando o usuário for atacado,
+    ele se move em saltos rápidos e aparentemente aleatórios, alguns
+    centímetros para um lado ou outro. Isso é um recurso que modifica
+    as rolagens de defesa do usuário em dois níveis (três níveis se a
+    cifra for de nível 6 ou superior).
 effect_table: null

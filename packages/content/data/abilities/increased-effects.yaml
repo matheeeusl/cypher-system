@@ -8,7 +8,7 @@ description:
     Might actions or Speed actions (your choice when you gain this
     ability). This allows you to gain a major effect on a natural 19 or
     20.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você trata rolagens de 19 natural como rolagens de 20 natural para ações de Força ou ações de Velocidade (sua escolha ao obter esta habilidade). Isso permite que você obtenha um efeito maior em um 19 ou 20 natural.'
 cost: null
 action_type: enabler
 sources:

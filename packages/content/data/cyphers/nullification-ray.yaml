@@ -1,5 +1,5 @@
 id: nullification-ray
-name: { en: 'Nullification ray', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Nullification ray', 'pt-BR': 'Raio de anulação' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 3'
@@ -8,5 +8,7 @@ effect_text:
     The user can immediately end one ongoing effect within long range that is
     produced by an artifact, cypher, or special ability.
   pt-BR: >-
-    Tradução em breve.
+    O usuário pode encerrar imediatamente um efeito em andamento dentro
+    de uma distância longa que seja produzido por um artefato, uma
+    cifra ou uma habilidade especial.
 effect_table: null

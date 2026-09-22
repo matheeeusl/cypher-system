@@ -4,7 +4,7 @@ name:
   pt-BR: Inventor
 description:
   en: You can create new artifacts in half the time, as if they were two levels lower, by spending half the normal XP.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode criar novos artefatos na metade do tempo, como se tivessem dois níveis a menos, gastando metade do XP normal.'
 cost: null
 action_type: enabler
 sources:

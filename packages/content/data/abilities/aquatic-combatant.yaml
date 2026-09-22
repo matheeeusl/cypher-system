@@ -4,7 +4,7 @@ name:
   pt-BR: Combatente Aquática
 description:
   en: You ignore penalties for any action (including fighting) in underwater environments.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ignora penalidades para qualquer ação (incluindo lutar) em ambientes subaquáticos.'
 cost: null
 action_type: enabler
 sources:

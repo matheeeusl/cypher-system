@@ -1,16 +1,18 @@
 id: love-magnet
 name:
   en: Love Magnet
-  pt-BR: Tradução em breve.
+  pt-BR: Ímã do Amor
 level: '1d6 + 4'
 form:
   en: Horseshoe-shaped lump of brown iron
-  pt-BR: Tradução em breve.
+  pt-BR: Pedaço de ferro marrom em formato de ferradura
 effect_text:
   en: >-
     Activate this trinket as part of any pleasant social interaction to
     gain two assets to the task.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Ative esta bugiganga como parte de qualquer interação social agradável
+    para ganhar dois recursos na tarefa.
 effect_table: null
 flavor_quote: null
 depletion_die: '1 in 1d10'

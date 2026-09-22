@@ -13,7 +13,7 @@ description:
     animated state. In addition to the normal options for using
     Effort, you can choose to use Effort to affect more trees; each
     level of Effort used affects one additional tree.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você anima uma árvore de tamanho aproximado ao seu ou menor, criando uma criatura de nível 3 com 1 de Armadura. A árvore segue seus comandos verbais por uma hora, após o que reverte a uma árvore normal (e se enraíza onde estiver). A menos que a árvore seja morta por dano, você pode animá-la novamente quando a duração da habilidade expirar, mas qualquer dano que tiver se mantém no seu novo estado animado. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para afetar mais árvores; cada nível de Esforço usado afeta uma árvore adicional.'
   # Note: source cost is printed as "5+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 5 Intellect points here, flagged for schema review

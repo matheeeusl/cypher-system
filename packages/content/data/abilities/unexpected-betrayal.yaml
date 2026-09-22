@@ -10,7 +10,7 @@ description:
     Unexpected Betrayal on a target, using your abilities or attempting
     simple persuasion on that target is permanently hindered by two
     steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Dentro de um ou dois rounds após usar Cativar, Conversa Rápida, ou uma habilidade semelhante com sucesso em um alvo dentro de uma distância curta, o primeiro ataque que você fizer contra esse alvo é facilitado em dois níveis. Uma vez que você usa Traição Inesperada em um alvo, usar suas habilidades ou tentar persuasão simples nesse alvo fica permanentemente dificultado em dois níveis.'
 cost: null
 action_type: enabler
 sources:

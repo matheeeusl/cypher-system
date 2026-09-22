@@ -4,7 +4,7 @@ name:
   pt-BR: Evasão
 description:
   en: You're hard to affect when you don't want to be affected. You are trained in all defense tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é difícil de afetar quando não quer ser afetada. Você é treinada em todas as tarefas de defesa.'
 cost: null
 action_type: enabler
 sources:

@@ -10,7 +10,7 @@ description:
     for one minute. Each additional time you attempt this ability
     against the same target, you must apply one more level of Effort
     than you applied on the previous attempt.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você intimida qualquer oponente dentro de uma distância longa que entenda a fala (mesmo que não seja seu idioma) a tal ponto que ele perde sua próxima ação e todas as suas ações restantes são dificultadas por um minuto. Cada vez adicional que você tentar usar esta habilidade contra o mesmo alvo, deve aplicar um nível a mais de Esforço do que aplicou na tentativa anterior.'
 cost:
   pool: intellect
   amount: 4

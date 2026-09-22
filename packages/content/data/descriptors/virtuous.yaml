@@ -1,7 +1,7 @@
 id: virtuous
 name:
   en: Virtuous
-  pt-BR: Tradução em breve.
+  pt-BR: Virtuoso
 description:
   en: >-
     Doing the right thing is a way of life. You live by a code, and that
@@ -11,7 +11,14 @@ description:
     cleanliness, and other characteristics that most people would agree
     are virtues, while you eschew their opposites: sloth, greed,
     gluttony, and so on.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Fazer a coisa certa é um estilo de vida. Você vive de acordo com um
+    código, e esse código é algo que você segue todos os dias. Sempre
+    que você falha, se repreende pela fraqueza e volta imediatamente ao
+    caminho certo. Seu código provavelmente inclui moderação, respeito
+    pelos outros, limpeza e outras características que a maioria das
+    pessoas concordaria serem virtudes, enquanto você evita seus
+    opostos: preguiça, ganância, gula e assim por diante.
 pool_bonus:
   - stat: might
     amount: 2
@@ -25,16 +32,26 @@ inabilities: []
 additional_equipment: null
 connection_options:
   - en: The PCs are doing something virtuous, and you're all about that.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens estão fazendo algo virtuoso, e isso é
+      exatamente a sua praia.
   - en: >-
       The PCs are on the road to perdition, and you see it as your task
       to set them on the proper moral route.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens estão no caminho da perdição, e você
+      considera sua missão colocá-los na rota moral correta.
   - en: One of the other PCs invited you, hearing of your virtuous ways.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convidou, ao ouvir falar do seu
+      comportamento virtuoso.
   - en: >-
       You put virtue before sense and defended someone's honor in the
       face of an organization or power far greater than you. You joined
       the PCs because they offered aid and friendship when, out of fear
       of reprisals, no one else would.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você colocou a virtude acima do bom senso e defendeu a honra de
+      alguém diante de uma organização ou poder muito maior que você.
+      Você se juntou aos outros personagens porque eles ofereceram ajuda
+      e amizade quando, por medo de represálias, mais ninguém o faria.

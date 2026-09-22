@@ -1,5 +1,5 @@
 id: gravity-nullifier
-name: { en: 'Gravity nullifier', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Gravity nullifier', 'pt-BR': 'Anulador de gravidade' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6 + 3'
@@ -10,5 +10,9 @@ effect_text:
     action, such as pushing along the ceiling). The user must weigh less than
     50 pounds (23 kg) per level of the cypher.
   pt-BR: >-
-    Tradução em breve.
+    Por uma hora, o usuário pode flutuar no ar, movendo-se verticalmente
+    até uma distância curta por rodada (mas não horizontalmente, a menos
+    que realize alguma outra ação, como se impulsionar ao longo do
+    teto). O usuário deve pesar menos de 23 kg (50 libras) por nível da
+    cifra.
 effect_table: null

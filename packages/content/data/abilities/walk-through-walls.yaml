@@ -9,7 +9,7 @@ description:
     barrier). You can't act (other than moving) or perceive anything
     until you pass entirely through the barrier. You can't pass
     through energy barriers.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue atravessar lentamente barreiras físicas a uma taxa de 2,5 centímetros (1 polegada) por round (mínimo de um round para atravessar qualquer barreira). Você não pode agir (além de se mover) nem perceber nada até atravessar completamente a barreira. Você não pode atravessar barreiras de energia.'
 cost:
   pool: intellect
   amount: 2

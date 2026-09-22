@@ -10,26 +10,214 @@ sidebar:
 tableOfContents: false
 ---
 
+import EntityLink from '@components/EntityLink.astro'
+import ReferenceTable from '@components/ReferenceTable.astro'
+
 ## Atacando
 
-Tradução em breve.
+Um ataque é qualquer ação realizada contra um personagem que ele não deseja que ocorra — golpear com uma arma, atingir com um raio, envolver o alvo em metal controlado magneticamente ou tentar influenciar sua mente são exemplos de ataques. Atacar exige a realização de uma tarefa para determinar se você acerta ou afeta o alvo.
+
+**Alcance:** Os alcances para ataques são idênticos aos de movimento. Ataques corpo a corpo exigem que você esteja a uma distância imediata do alvo.
+
+**Habilidades Especiais:** Ao ativar habilidades especiais como ataques, a tarefa geralmente utiliza o mesmo atributo associado ao custo da habilidade; no entanto, se for necessário tocar o alvo, trata-se de um ataque corpo a corpo.
+
+**Modificadores de Ataque:** Cobertura, posição, surpresa, alcance, iluminação, visibilidade, água e alvos em movimento podem facilitar ou dificultar ataques. Você também pode facilitar um ataque utilizando Perícia e aplicando Esforço.
+
+### Tipos de Ataque
+
+<ReferenceTable
+  caption="Tipos de ataque"
+  columns={[
+    { label: 'Ataque', kind: 'name', width: '9rem' },
+    { label: 'Status da tarefa', kind: 'prose' },
+  ]}
+  rows={[
+    ['Corpo a corpo', 'Força ou Velocidade — sua escolha'],
+    ['À distância', 'Velocidade — alcances variam'],
+    ['Explosivo', 'Velocidade — arremessa a curta distância ou usa um lançador para maior alcance; cria ataques em área'],
+    ['Habilidade especial',"o atributo usado para o custo da habilidade — a menos que especificado nos detalhes da habilidade ou pelo Mestre",],
+    ['Cifra', 'Intelecto — a menos que especificado nos detalhes da cifra ou pelo Mestre'],
+  ]}
+/>
 
 ## Causando Dano e Armas
 
-Tradução em breve.
+Em um ataque bem-sucedido, a quantidade de dano que você causa — ou "inflige" — é determinada pela arma ou habilidade especial utilizada. Testes especiais e o uso de Esforço podem aumentar o dano causado por um ataque bem-sucedido.
+
+### Armas
+
+<ReferenceTable
+  caption="Armas"
+  columns={[
+    { label: 'Arma', kind: 'name' },
+    { label: 'Dano', kind: 'value' },
+    { label: 'Notas', kind: 'prose' },
+  ]}
+  rows={[
+    ['Leve', '2 pontos', 'ataques facilitados em um passo'],
+    ['Médio', '4 pontos', '—'],
+    ['Pesado', '6 pontos', 'duas mãos necessárias para atacar'],
+  ]}
+/>
+
+O Mestre determina os alcances das armas ou outras propriedades.
+
+### Dano de Rolagens Especiais
+
+<ReferenceTable
+  caption="Damage from special rolls"
+  columns={[
+    { label: 'd20', kind: 'key', width: '5rem' },
+    { label: 'Efeitos', kind: 'prose' },
+  ]}
+  rows={[
+   ['17', '+1 de dano'],
+    ['18', '+2 de dano'],
+    [
+    '19',
+    '+3 de dano ou efeito menor — ignorar armadura, atingir parte específica do corpo, repelir, mover-se, distrair',
+    ],
+    [
+    '20',
+    '+4 de dano ou um efeito maior — derrubar, desarmar, atordoar, incapacitar — os pontos de reserva gastos na ação são reembolsados',
+    ],
+  ]}
+/>
+
+### Dano usando Esforço
+
+<ReferenceTable
+  caption="Dano usando Esforço"
+  columns={[
+    { label: 'Esforço utilizado', kind: 'name' },
+    { label: 'Custo em pontos da reserva', kind: 'value' },
+    { label: 'Dano de ataque', kind: 'value' },
+    { label: 'Dano de ataque em área', kind: 'value' },
+  ]}
+  rows={[
+    ['1 nível', '3', '+3', '+2'],
+    ['2 níveis', '5', '+6', '+4'],
+    ['3 níveis', '7', '+9', '+6'],
+    ['4 níveis', '9', '+12', '+8'],
+    ['5 níveis', '11', '+15', '+10'],
+    ['6 níveis', '13', '+18', '+12'],
+  ]}
+/>
+
+Sempre subtraia sua Margem do custo total de uma ação!
+
+Exemplos de habilidades: <EntityLink kind="ability" id="burning-light" />, <EntityLink kind="ability" id="combat-prowess" />
 
 ## Defendendo
 
-Tradução em breve.
+Quando você é atacado, o Mestre lhe atribui uma tarefa de defesa. Embora essa nunca seja uma ação que você decide realizar, ela ainda conta como uma ação; portanto, isso não o impede de aplicar Esforço nela, nem de realizar sua própria ação durante o seu turno.
+
+Na maioria das vezes, ao falhar em um teste de defesa, você sofre dano, subtraindo pontos de uma Reserva de atributo — geralmente a sua Reserva de Vigor.
+
+Se você estiver usando armadura ou possuir outras defesas especiais contra o ataque ou o dano causado por ele, poderá reduzir a quantidade de dano sofrido.
+
+### Tarefas de Defesa
+
+**Defesa de Força:** Resistir a venenos e doenças, ou a ser esmagado por pesos elevados
+
+**Defesa de Velocidade:** Esquivar-se de ataques e escapar de perigos — a forma mais comum de defesa
+
+**Defesa de Intelecto:** Resistir a ataques mentais ou a qualquer coisa que afete ou influencie a mente
+
+Exemplos de habilidades: <EntityLink kind="ability" id="countermeasures" />, <EntityLink kind="ability" id="robot-fighter" />
+
+**Combate entre Personagens:** Se um personagem atacar outro, ambos rolam um d20 e somam seus modificadores ao resultado: +3 para cada nível de facilitação e −3 para cada nível de dificuldade. Se o total do atacante for igual ou superior ao total do defensor, o ataque é bem-sucedido. O Mestre arbitra quaisquer efeitos especiais.
 
 ## Sofrendo Dano e Recuperação
 
-Tradução em breve.
+Os pontos da sua Reserva são reduzidos temporariamente ao sofrer dano, ativar habilidades especiais e usar Esforço. Se uma Reserva chegar a 0, qualquer dano restante — ou adicional — é aplicado a outra Reserva de atributo na seguinte ordem: Vigor, Agilidade e, por fim, Intelecto. A quantidade de dano que você sofre não muda; sua Armadura e as habilidades especiais que o protegem continuam valendo.
+
+### Rolagens de recuperação
+
+Você recupera pontos de Reserva perdidos realizando uma rolagem de recuperação — role um d6, adicione o seu nível e, em seguida, distribua o resultado entre as suas Reservas de atributos como desejar. Você pode realizar quatro rolagens de recuperação por dia:
+
+- **Primeira rolagem de recuperação:** Uma ação
+- **Segunda rolagem de recuperação:** Dez minutos
+- **Terceira rolagem de recuperação:** Uma hora
+- **Quarta rolagem de recuperação:** Dez horas
+
+As rolagens de recuperação podem ser aprimoradas por meio de habilidades especiais ou [evolução do personagem](/en/rules/experience-and-advancement/).
+
+### Trilha de Dano
+
+**Íntegro:** Seu estado normal e saudável.
+
+**Prejudicado:** Se uma Reserva de atributo chegar a 0, você fica prejudicado. O custo para usar cada nível de Esforço aumenta em 1. Você ignora efeitos menores e maiores ao rolar o dado, causando apenas até +1 de dano em uma rolagem especial de 17 a 20.
+
+**Debilitado:** Se duas Reservas de atributo chegarem a 0, você fica debilitado. Você não pode realizar ações, exceto mover-se — provavelmente rastejando — por uma distância imediata. Se sua Reserva de Velocidade for 0, você não pode se mover.
+
+**Morto:** Se todas as três Reservas de atributo chegarem a 0, você morre. Morto é morto.
+
+Ataques poderosos podem fazer você descer na trilha de danos, independentemente dos pontos nas Reservas. O Mestre determina como você pode se recuperar de tais ferimentos. Algumas habilidades especiais permitem ignorar certos efeitos da trilha de danos.
 
 ## Armadura
 
-Tradução em breve.
+Sempre que você sofrer dano, subtraia seu valor de Armadura do dano antes de reduzir sua Reserva de atributo. Se você for atingido por um tiro que cause 4 pontos de dano e tiver 2 de Armadura, sofrerá apenas 2 pontos de dano em sua Reserva de Vigor. Se for arranhado por um felino de grande porte que cause 2 de dano, sua Armadura de 2 pontos anulará o dano completamente.
+
+Armaduras físicas, habilidades especiais, cifras e artefatos podem contribuir para sua Armadura de forma cumulativa — se você tiver 2 de Armadura por usar uma armadura média e possuir a habilidade Proteção, terá um total de 3 de Armadura. Certifique-se de registrar individualmente cada fonte de sua Armadura, pois alguns ataques ignoram certos tipos.
+
+Quando o termo "Armadura" aparecer com inicial maiúscula, ele se refere à sua característica de Armadura; já "armadura" (em minúsculas) refere-se à armadura física.
+
+Exemplo de habilidade: <EntityLink kind="ability" id="ward" />
+
+### Escudos
+
+Um escudo — ou qualquer coisa usada como tal — é uma vantagem em testes de defesa de Velocidade. Usá-lo exige uma mão livre.
+
+Ativar habilidades de Adepto também exige uma mão livre, a menos que o Mestre determine o contrário.
+
+### Vestindo Armadura
+
+Qualquer pessoa pode usar armadura, mas o custo de aplicar um nível de Esforço em tarefas de Velocidade aumenta. Certas habilidades especiais reduzem o custo de Esforço em Velocidade ao usar armadura — se você as possuir, utilize a coluna correspondente na tabela de Custo de Esforço em Velocidade abaixo. Caso contrário, utilize a coluna "Sem Experiência".
+
+Você também pode reduzir o custo de Esforço em Velocidade por meio da evolução do personagem. Habilidades especiais também podem aprimorar suas defesas sem o uso de armadura.
+
+Exemplos de habilidades: <EntityLink kind="ability" id="practiced-in-armor" />, <EntityLink kind="ability" id="experienced-in-armor" />, <EntityLink kind="ability" id="mastery-in-armor" />, <EntityLink kind="ability" id="trained-without-armor" />
+
+### Velocidade, Esforço e Custo por Nível de Esforço Empregado
+
+Esta tabela lista os tipos de armadura — leve, média e pesada —, seus bônus para a sua característica de Armadura e o custo adicional da sua Reserva que você paga por cada nível de Esforço utilizado em tarefas de Velocidade ao usá-las.
+
+<ReferenceTable
+  caption="Velocidade, Esforço e Custo por Nível de Esforço Empregado"
+  columns={[
+    { label: 'Armadura física', kind: 'name' },
+    { label: 'Bônus de armadura', kind: 'value' },
+    { label: 'Sem experiência', kind: 'value' },
+    { label: 'Com prática', kind: 'value' },
+    { label: 'Com experiência', kind: 'value' },
+    { label: 'Maestria', kind: 'value' },
+  ]}
+  rows={[
+    ['Armadura leve', '+1 Armadura', '+2', '+1', '—', '—'],
+    ['Armadura média', '+2 Armadura', '+3', '+2', '+1', '—'],
+    ['Armadura pesada', '+3 Armadura', '+4', '+3', '+2', '—'],
+  ]}
+/>
+
+Em outras partes das regras e habilidades especiais, os termos "custo de Esforço de Velocidade", "custo de Velocidade", "sobrecarregante" e "sobrecarrega" são usados ​​de forma intercambiável para se referir ao conteúdo desta tabela. Em alguns cenários, o Mestre pode reduzir em 1 os custos de Esforço de Velocidade listados.
 
 ## Cooperando
 
-Tradução em breve.
+Existem muitas maneiras de colaborar com outros personagens dos jogadores (PJs). Essas opções não podem ser usadas simultaneamente pelos mesmos personagens.
+
+**Ajudar:** Se você usar sua ação para ajudar alguém, você fornece um recurso para a tarefa. Se usar sua ação para ajudar alguém em uma tarefa na qual você é treinado ou especializado, você fornece dois recursos. Você não pode ajudar se tiver uma inaptidão na tarefa em questão.
+
+**Curar:** Você pode curar uma criatura uma vez por dia. Essa cura restaura pontos a uma Reserva de atributo de sua escolha. Primeiro, decida quantos pontos da Reserva deseja curar; depois, use uma ação para realizar um teste de Intelecto com dificuldade igual a esse número.
+
+**Distrair:** Se você distrair um oponente com sucesso, os ataques dele ficarão prejudicados por uma rodada. Você pode descrever sua ação como gritar um desafio, disparar um tiro de advertência ou realizar uma atividade semelhante que não cause dano ao oponente.
+
+**Guardar:** Se você ficar de guarda, não poderá realizar ataques, mas todas as suas tarefas de defesa serão facilitadas. Se um PNJ tentar passar por você ou realizar uma ação contra a qual você está guardando, você pode tentar uma ação de Velocidade facilitada. O sucesso significa que o PNJ é impedido de realizar a ação.
+
+**Atrair o Ataque:** Quando um PNJ ataca um personagem, você pode se expor, gritar provocações e se mover para tentar fazer com que o oponente ataque você em vez do outro. Na maioria dos casos, essa ação é bem-sucedida sem necessidade de rolagem. Em outros casos, como contra oponentes inteligentes ou determinados, você deve ter sucesso em uma ação de Intelecto para atrair o ataque. Se essa ação de Intelecto for bem-sucedida, o oponente ataca você, e suas defesas ficam prejudicadas em dois graus. Dois personagens tentando atrair um ataque ao mesmo tempo anulam os esforços um do outro.
+
+**Receber o Ataque:** Você pode usar sua ação para se colocar na frente de um ataque bem-sucedido de um oponente para salvar um aliado. O ataque é bem-sucedido automaticamente e causa 1 ponto de dano adicional. Você não pode receber voluntariamente mais de um ataque por rodada dessa maneira.
+
+Se você adora ajudar, experimente o foco <EntityLink kind="focus" id="helps-their-friends" />!
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — Capítulo 1, pp. 14–17._

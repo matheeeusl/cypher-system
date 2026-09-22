@@ -1,5 +1,5 @@
 id: ray-emitter-command
-name: { en: 'Ray emitter (command)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter (command)', 'pt-BR': 'Emissor de raio (comando)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -9,5 +9,8 @@ effect_text:
     cypher is level 6 or higher) that forces a target to obey the next verbal
     command given (if it is understood) for one round per cypher level.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio a até uma distância longa
+    (muito longa se a cifra for de nível 6 ou superior) que força um
+    alvo a obedecer ao próximo comando verbal dado (se for compreendido)
+    por uma rodada por nível da cifra.
 effect_table: null

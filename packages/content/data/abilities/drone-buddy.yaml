@@ -16,7 +16,7 @@ description:
     you can repair the original with a few days' worth of tinkering,
     or build a new one with a week's worth of half-time labor.
     (Drone buddy: level 2; flies a short distance each round.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Um drone robótico do tamanho aproximado de um cão pequeno (construído por você) o acompanha e segue suas instruções. Quando dentro de uma distância longa, você pode se comunicar e controlar o drone sem fio, e ele pode transmitir o que vê e ouve para você. Você e o Mestre devem definir os detalhes físicos do seu drone. Você provavelmente fará rolagens por ele quando realizar ações. Um drone em combate geralmente não faz ataques separados, mas ajuda nos seus. Na sua ação, se o drone estiver ao seu lado, ele serve de recurso para um ataque que você fizer no seu turno. Se o drone for destruído, você pode reparar o original com alguns dias de trabalho manual, ou construir um novo com uma semana de trabalho em meio período. (Drone companheiro: nível 2; voa uma distância curta a cada round.)'
 cost: null
 action_type: enabler
 sources:

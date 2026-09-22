@@ -8,7 +8,7 @@ description:
     foe to defend against, and it knocks them off balance. Your attack
     is eased by two steps, and the foe, if struck, takes normal damage
     but is dazed so that their tasks are hindered for the next round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz um ataque corpo a corpo com tanta velocidade que é difícil para o inimigo se defender, e o desequilibra. Seu ataque é facilitado em dois níveis, e o inimigo, se atingido, sofre dano normal, mas fica atordoado, de forma que suas tarefas são dificultadas no round seguinte.'
 cost:
   pool: speed
   amount: 4

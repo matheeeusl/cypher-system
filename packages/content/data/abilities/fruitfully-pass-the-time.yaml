@@ -12,7 +12,7 @@ description:
     within short range who can hear and see you immediately gain a
     one-action recovery roll. You can't use this on someone again
     until you use a one-hour or ten-hour recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em uma perícia de performance, como cantar; tocar violino, gaita ou outro instrumento; ou algo mais que outros gostariam de ver ou ouvir você fazer. Quando você se apresenta com a perícia obtida através desta habilidade por um minuto e tem sucesso em uma rolagem de performance de dificuldade 3, você e todos os aliados dentro de uma distância curta que conseguirem ouvi-la e vê-la ganham imediatamente uma rolagem de recuperação de uma ação. Você não pode usar isso em alguém novamente até usar uma rolagem de recuperação de uma hora ou de dez horas.'
   # Note: source tag is "Action to initiate, one minute to complete." —
   # the "one minute to complete" clause is a duration, not modeled by
   # action_type.

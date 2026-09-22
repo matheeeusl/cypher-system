@@ -1,5 +1,5 @@
 id: detonation-web
-name: { en: 'Detonation (web)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (web)', 'pt-BR': 'Detonação (teia)' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 387'
 level_range: '1d6 + 2'
@@ -10,5 +10,12 @@ effect_text:
     NPCs break free if their level is higher than the cypher level.
     (Rather than strands of sticky goo, some web detonations fill the area with a mass of quick-hardening foam that has the same result.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato e cria fios pegajosos de gosma. PJs
+    presos na área devem usar uma ação baseada em Força para se libertar,
+    com a dificuldade determinada pelo nível da cifra. PNJs se libertam
+    se o nível deles for superior ao nível da cifra. (Em vez de fios de
+    gosma pegajosa, algumas detonações de teia preenchem a área com uma
+    massa de espuma de endurecimento rápido que produz o mesmo
+    resultado.)
 effect_table: null

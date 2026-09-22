@@ -4,7 +4,7 @@ name:
   pt-BR: Evolução Robótica
 description:
   en: Your first artificial assistant from the Robot Assistant ability increases to level 5, and each of your level 2 robots from Robot Fleet increases to level 3. Instead of choosing this option, you may instead choose one upgrade from the Robot Upgrade ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu primeiro assistente artificial da habilidade Assistente Robótico aumenta para nível 5, e cada um dos seus robôs de nível 2 de Frota de Robôs aumenta para nível 3. Em vez de escolher esta opção, você pode escolher um aprimoramento da habilidade Aprimoramento Robótico.'
 cost: null
 action_type: enabler
 sources:

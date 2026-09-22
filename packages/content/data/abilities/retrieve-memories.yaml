@@ -18,7 +18,7 @@ description:
     life, though it cannot recall minor memories, only big events of
     importance to it. When the effect ends, or if you fail the roll, the
     creature's brain dissolves to mush and cannot be awakened again.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você toca os restos de uma criatura recém-morta e faz uma rolagem baseada em Intelecto para restaurar sua mente à vida tempo suficiente para aprender informações dela. O Mestre define a dificuldade com base no tempo que passou desde que a criatura morreu. Uma criatura que está morta há apenas alguns minutos é uma tarefa de dificuldade 2, uma que está morta há uma hora é uma tarefa de dificuldade 4, e uma que está morta há alguns dias é uma tarefa de dificuldade 9. Se você tiver sucesso, desperta o cadáver, fazendo sua cabeça se animar e perceber as coisas como se estivesse viva. Isso permite comunicação por cerca de um minuto, tempo que a criatura leva para perceber que está morta. A criatura fica limitada ao que sabia em vida, embora não consiga se lembrar de memórias menores, apenas de grandes eventos importantes para ela. Quando o efeito termina, ou se você falhar na rolagem, o cérebro da criatura se dissolve em papa e não pode ser despertado novamente.'
 cost:
   pool: intellect
   amount: 3

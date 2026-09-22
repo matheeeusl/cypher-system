@@ -1,5 +1,5 @@
 id: mind-restricting-wall
-name: { en: 'Mind-restricting wall', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Mind-restricting wall', 'pt-BR': 'Parede restritora da mente' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     Intelligent creatures passing through the plane fall unconscious for up to
     one hour, or until slapped awake or damaged.
   pt-BR: >-
-    Tradução em breve.
+    Cria um plano imóvel de energia permeável de até 6 por 6 metros (20
+    por 20 pés) por uma hora. O plano se adapta ao espaço disponível.
+    Criaturas inteligentes que passam pelo plano caem inconscientes por
+    até uma hora, ou até serem acordadas com um tapa ou sofrerem dano.
 effect_table: null

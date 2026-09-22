@@ -6,7 +6,7 @@ description:
   en: >-
     If you do nothing on your turn but defend, you are specialized in
     all defense tasks for one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você não fizer nada além de se defender no seu turno, fica especializada em todas as tarefas de defesa por um round.'
 cost: null
 action_type: action
 sources:

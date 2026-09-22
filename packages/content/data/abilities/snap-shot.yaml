@@ -4,7 +4,7 @@ name:
   pt-BR: Tiro Rápido
 description:
   en: You can make two gun attacks as a single action, but the second attack is hindered by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode fazer dois ataques com arma de fogo como uma única ação, mas o segundo ataque é dificultado em dois níveis.'
 cost: null
 action_type: enabler
 sources:

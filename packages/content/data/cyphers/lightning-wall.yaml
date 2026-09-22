@@ -1,5 +1,5 @@
 id: lightning-wall
-name: { en: 'Lightning wall', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Lightning wall', 'pt-BR': 'Parede de raios' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     anything that passes through it. The wall conforms to the space available.
     It lasts for ten minutes.
   pt-BR: >-
-    Tradução em breve.
+    Cria uma parede de raios elétricos de até 9 por 9 metros por 30
+    centímetros (30 por 30 por 1 pé) que inflige dano igual ao nível da
+    cifra em qualquer coisa que passe por ela. A parede se adapta ao
+    espaço disponível. Ela dura dez minutos.
 effect_table: null

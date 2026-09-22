@@ -1,5 +1,5 @@
 id: subdual-field
-name: { en: 'Subdual field', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Subdual field', 'pt-BR': 'Campo de subjugação' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6 + 3'
@@ -13,5 +13,12 @@ effect_text:
     rounds after, although an Intellect defense roll is allowed each round to
     act normally (both in the field and after leaving it).
   pt-BR: >-
-    Tradução em breve.
+    Duas rodadas após ser ativado, o dispositivo cria um campo invisível
+    que preenche uma área específica (como um cubo com uma distância
+    curta de lado) dentro de uma distância longa. O campo dura um
+    minuto. Ele afeta as mentes de seres pensantes dentro do campo,
+    impedindo-os de realizar ações hostis. O efeito dura enquanto eles
+    permanecerem no campo e por 1d6 rodadas depois, embora seja
+    permitida uma rolagem de defesa de Intelecto a cada rodada para agir
+    normalmente (tanto dentro do campo quanto após sair dele).
 effect_table: null

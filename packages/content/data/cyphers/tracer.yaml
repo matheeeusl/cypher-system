@@ -1,5 +1,5 @@
 id: tracer
-name: { en: 'Tracer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Tracer', 'pt-BR': 'Rastreador' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -11,5 +11,10 @@ effect_text:
     cypher is level 3 or higher, in the same dimension if the cypher is level
     6 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Dispara um rastreador microscópico que se prende a qualquer
+    superfície dentro de uma distância curta. Pelas próximas vinte e
+    quatro horas, o lançador mostra a distância e a direção até o
+    rastreador, desde que ele esteja dentro de 1,6 km (160 km se a
+    cifra for de nível 3 ou superior, na mesma dimensão se a cifra for
+    de nível 6 ou superior).
 effect_table: null

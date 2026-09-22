@@ -18,7 +18,7 @@ description:
     above the normal duration), you must apply three levels of
     Effort. When the duration ends, the creature doesn't remember
     being controlled or anything it did while under your influence.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você usa trapaça, mentiras bem articuladas e substâncias que afetam a mente (ou outros meios, como magia ou alta tecnologia) para fazer os outros temporariamente fazerem o que você quer. Você controla as ações de outra criatura que tocar. Este efeito dura um minuto. O alvo deve ser de nível 3 ou inferior. Você pode permitir que ela aja livremente ou anular seu controle caso a caso, desde que consiga vê-la. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do alvo ou aumentar a duração em um minuto. Assim, para controlar a mente de um alvo de nível 6 (três níveis acima do limite normal) ou controlar um alvo por quatro minutos (três minutos acima da duração normal), você deve aplicar três níveis de Esforço. Quando a duração termina, a criatura não se lembra de ter sido controlada nem de nada que fez sob sua influência.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

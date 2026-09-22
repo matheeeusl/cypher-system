@@ -4,7 +4,7 @@
 # turns flesh to dead, stonelike material. Editor's Notes — Chapter 15: Science
 # Fiction's Artifact Weapons include some unique "emitter" options too.
 id: ray-emitter
-name: { en: 'Ray emitter', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter', 'pt-BR': 'Emissor de raio' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -14,21 +14,23 @@ effect_text:
     range that inflicts damage equal to the cypher's level. Roll a d100 to
     determine the type of energy.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio de energia destrutiva a até
+    uma distância muito longa que inflige dano igual ao nível da cifra.
+    Role 1d100 para determinar o tipo de energia.
 effect_table:
   label:
     en: 'Ray Emitter Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Emissor de Raio'
   entries:
     - range: '01–50'
-      text: { en: 'Heat/concentrated light', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Heat/concentrated light', 'pt-BR': 'Calor/luz concentrada' }
     - range: '51–60'
-      text: { en: 'Cell-disrupting radiation', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Cell-disrupting radiation', 'pt-BR': 'Radiação de rompimento celular' }
     - range: '61–80'
-      text: { en: 'Force', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Force', 'pt-BR': 'Energia cinética' }
     - range: '81–87'
-      text: { en: 'Magnetic wave', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Magnetic wave', 'pt-BR': 'Onda magnética' }
     - range: '88–93'
-      text: { en: 'Molecular bond disruption', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Molecular bond disruption', 'pt-BR': 'Rompimento de ligações moleculares' }
     - range: '94–00'
-      text: { en: 'Concentrated cold', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Concentrated cold', 'pt-BR': 'Frio concentrado' }

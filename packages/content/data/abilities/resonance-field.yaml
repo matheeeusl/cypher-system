@@ -12,7 +12,7 @@ description:
     If you do so and you get a minor effect, the creature attacking you
     takes 1 point of damage. If you get a major effect, the creature
     attacking you takes 4 points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Linhas tênues em uma cor à sua escolha formam um padrão sobre todo o seu corpo e emitem uma luz fraca. O efeito dura um minuto. Sempre que uma criatura dentro de uma distância imediata fizer um ataque contra você, o padrão se energiza para bloquear o ataque. Você pode fazer uma rolagem de defesa de Intelecto no lugar da rolagem de defesa que normalmente faria. Se fizer isso e obtiver um efeito menor, a criatura que o atacou sofre 1 ponto de dano. Se obtiver um efeito maior, a criatura que o atacou sofre 4 pontos de dano.'
 cost:
   pool: intellect
   amount: 1

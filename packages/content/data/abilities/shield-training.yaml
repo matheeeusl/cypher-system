@@ -4,7 +4,7 @@ name:
   pt-BR: Treinamento com Escudo
 description:
   en: If you use a shield, Speed defense tasks are eased by two steps instead of one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você usar um escudo, as tarefas de defesa de Velocidade são facilitadas em dois níveis em vez de um.'
 cost: null
 action_type: enabler
 sources:

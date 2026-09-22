@@ -15,7 +15,7 @@ description:
     long, two levels raise it to one mile (1.5 km), and each
     additional level of Effort beyond that increases it by an
     additional mile.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você entra em uma árvore e emerge instantânea e seguramente de outra dentro de uma distância longa. Você não precisa especificar de qual árvore está saindo (se souber que há árvores naquela direção, pode decidir a que distância ir e sairá de uma árvore naquela área). Se o tronco da árvore de entrada não for tão grande quanto seu corpo, você deve aplicar um nível de Esforço para entrar nela. Você pode optar por usar Esforço para aumentar a distância que percorre; um nível de Esforço usado dessa forma aumenta o alcance para muito longo, dois níveis o elevam para 1,5 km (1 milha), e cada nível adicional de Esforço além disso o aumenta em mais uma milha.'
   # Note: source cost is printed as "4+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 4 Intellect points here, flagged for schema review

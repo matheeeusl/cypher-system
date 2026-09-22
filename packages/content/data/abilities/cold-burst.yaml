@@ -10,7 +10,7 @@ description:
     you deal 2 additional points of damage per level of Effort
     (instead of 3 points); targets in the area take 1 point of damage
     even if you fail the attack roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você emite uma explosão de frio em todas as direções, até uma distância curta. Todos dentro da explosão (exceto você) sofrem 5 pontos de dano. Se você aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); alvos na área sofrem 1 ponto de dano mesmo que você falhe na rolagem de ataque.'
   # Note: source cost is printed as "5+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 5 Intellect points here, flagged for schema review

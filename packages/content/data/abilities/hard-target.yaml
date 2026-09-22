@@ -4,7 +4,7 @@ name:
   pt-BR: Alvo Difícil
 description:
   en: If you move a short distance or farther on your turn, all Speed defense rolls are eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você se mover uma distância curta ou mais no seu turno, todas as rolagens de defesa de Velocidade são facilitadas.'
 cost: null
 action_type: enabler
 sources:

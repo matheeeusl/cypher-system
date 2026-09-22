@@ -15,7 +15,7 @@ description:
     and holds your foe. You can also use this ability to clear an
     area of entangling growth in the immediate radius, such as an
     area of tall grass, thick brush, impenetrable vines, and so on.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Raízes, galhos, grama ou outra folhagem natural na área prende e segura um inimigo que você designar dentro de uma distância curta por até um minuto. Um inimigo preso na folhagem agarrante não consegue se mover de sua posição, e todas as tarefas físicas, ataques e defesas são dificultados, incluindo tentativas de se libertar. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para causar dano com o ataque inicial. Cada nível aplicado causa 2 pontos adicionais de dano quando a Folhagem Agarrante prende seu inimigo pela primeira vez. Você também pode usar esta habilidade para limpar uma área de vegetação emaranhada no raio imediato, como uma área de grama alta, arbustos densos, trepadeiras impenetráveis, e assim por diante.'
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here, flagged for schema review (same

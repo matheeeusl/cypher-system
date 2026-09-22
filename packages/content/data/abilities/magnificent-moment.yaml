@@ -6,7 +6,7 @@ description:
   en: >-
     If you make an attack or attempt a task with the immediate action
     you gain by using Seize the Moment, the attack or task is eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você fizer um ataque ou tentar uma tarefa com a ação imediata que ganha ao usar Aproveitar o Momento, o ataque ou tarefa é facilitado.'
 cost: null
 action_type: enabler
 sources:

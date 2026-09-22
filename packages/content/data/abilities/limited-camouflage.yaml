@@ -4,7 +4,7 @@ name:
   pt-BR: Camuflagem Limitada
 description:
   en: You activate camouflage software that alters your appearance to match an adjacent large object such as a wall, cabinet, or vehicle. If you succeed at a stealth task, everyone who was observing you completely loses track of you. Although you're not invisible, you can't be seen until you reveal yourself again by making an attack or moving away from the object.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ativa um software de camuflagem que altera sua aparência para combinar com um grande objeto adjacente, como uma parede, armário ou veículo. Se você tiver sucesso em uma tarefa de furtividade, todos que a observavam perdem completamente seu rastro. Embora você não esteja invisível, não pode ser vista até se revelar novamente, fazendo um ataque ou se afastando do objeto.'
 cost:
   pool: speed
   amount: 3

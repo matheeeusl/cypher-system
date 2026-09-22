@@ -8,7 +8,7 @@ description:
     spot. You are trained in escaping. When you use an action to
     escape or move through a tight area, you can immediately use
     another action. You may use this action only to move.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue se libertar de amarras ou se espremer por um espaço apertado. Você é treinada em fuga. Quando usa uma ação para escapar ou se mover por uma área apertada, pode usar imediatamente outra ação. Você só pode usar essa ação para se mover.'
 cost:
   pool: speed
   amount: 2

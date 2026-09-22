@@ -10,7 +10,7 @@ description:
     Your attack must be the same type (melee weapon, ranged weapon, or
     unarmed) as the attack you defend against. If you don't have an
     appropriate type of weapon ready, you can't use this ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Toda vez que você tiver sucesso em uma tarefa de defesa de Velocidade, pode fazer um ataque imediato contra seu inimigo. (Se você tiver Esquivar e Responder, pode trocar essa habilidade por Esquivar e Resistir.) Seu ataque deve ser do mesmo tipo (arma corpo a corpo, arma à distância, ou desarmado) que o ataque contra o qual você se defendeu. Se você não tiver o tipo apropriado de arma pronta, não pode usar esta habilidade.'
 cost: null
 action_type: enabler
 sources:

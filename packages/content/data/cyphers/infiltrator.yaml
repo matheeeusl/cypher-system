@@ -1,5 +1,5 @@
 id: infiltrator
-name: { en: 'Infiltrator', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Infiltrator', 'pt-BR': 'Infiltrador' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6'
@@ -13,5 +13,12 @@ effect_text:
     to the user to show what it saw. Its movement is blocked by any physical
     or energy barrier.
   pt-BR: >-
-    Tradução em breve.
+    Uma pequena cápsula é lançada e se move em alta velocidade,
+    mapeando e escaneando uma área desconhecida. Ela se move 150 metros
+    (500 pés) por nível, escaneando uma área de até 15 metros (50 pés)
+    por nível de distância dela. Ela identifica o layout básico,
+    criaturas e principais fontes de energia, e transmite essa
+    informação de volta ao usuário (talvez por telepatia ou sinal
+    eletrônico) ou retorna ao usuário para mostrar o que viu. Seu
+    movimento é bloqueado por qualquer barreira física ou de energia.
 effect_table: null

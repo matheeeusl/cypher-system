@@ -14,7 +14,7 @@ description:
     If you apply Effort to increase the size of the object, each
     level applied increases the size by an additional 10-foot (3 m)
     cube.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria um objeto de luz sólida em qualquer forma que consiga imaginar, cujo tamanho base caiba em um cubo de 3 metros (10 pés). O objeto aparece em uma área adjacente a você ou flutuando livremente no espaço a até uma distância longa, e o objeto dura alguns dias. O objeto é rústico e não pode ter partes móveis, então você pode fazer um segmento de parede, um bloco, uma caixa, escadas, e assim por diante. O objeto esculpido tem aproximadamente a massa do objeto real e é de nível 6. Se você aplicar Esforço para aumentar o tamanho do objeto, cada nível aplicado aumenta o tamanho em um cubo adicional de 3 metros (10 pés).'
   # Note: source cost is printed as "7+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Intellect points here, flagged for schema review (same

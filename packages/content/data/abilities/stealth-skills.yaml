@@ -4,7 +4,7 @@ name:
   pt-BR: Perícias de Furtividade
 description:
   en: 'You are trained in your choice of two of the following skills: disguise, deception, lockpicking, pickpocketing, seeing through deception, sleight of hand, or stealth. You can choose this ability multiple times, but you must select different skills each time.'
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada, à sua escolha, em duas das seguintes perícias: disfarce, decepção, arrombamento de fechaduras, bater carteira, ver através de decepção, prestidigitação ou furtividade. Você pode escolher esta habilidade múltiplas vezes, mas deve escolher perícias diferentes a cada vez.'
 cost: null
 action_type: enabler
 sources:

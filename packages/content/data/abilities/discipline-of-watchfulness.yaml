@@ -14,7 +14,7 @@ description:
     hours, you must spend another 24 hours together to reactivate the
     benefit. You must spend the Intellect point cost each 24 hours you
     wish to keep the benefit active.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você mantém seus aliados alertas com perguntas ocasionais, piadas e até exercícios simulados para aqueles que quiserem participar. Depois de passar 24 horas com você, seus aliados podem aplicar um nível gratuito de Esforço a quaisquer tarefas de iniciativa que tentarem. Esse benefício é contínuo enquanto você permanecer na companhia dos aliados. Ele termina se você for embora, mas retorna se você voltar à companhia dos aliados dentro de 24 horas. Se você ficar longe da companhia dos aliados por mais de 24 horas, deve passar mais 24 horas juntos para reativar o benefício. Você deve gastar o custo em pontos de Intelecto a cada 24 horas em que quiser manter o benefício ativo.'
 cost:
   pool: intellect
   amount: 7

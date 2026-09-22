@@ -10,7 +10,7 @@ description:
     and you don't wish it, you make an automatic attack against them.
     If you hit, not only do you inflict damage, but they must also
     stop their movement.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você especifica uma área confinada — como uma porta aberta, um corredor, ou um espaço entre duas árvores — onde permanece. Pelos próximos dez minutos, se alguém tentar entrar ou passar por essa área e você não desejar, você faz um ataque automático contra ele. Se acertar, além de causar dano, ele também deve interromper seu movimento.'
 cost:
   pool: might
   amount: 3

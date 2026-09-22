@@ -4,7 +4,7 @@ name:
   pt-BR: Lições de Vida
 description:
   en: Choose any two noncombat skills. You are trained in those skills.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha quaisquer duas perícias que não sejam de combate. Você fica treinada nessas perícias.'
   # Note: source prints this ability's full text twice, at Tier 1 and
   # Tier 4 — modeled as two `sources[]` entries, both pointing here
   # (same-focus, two-tier reuse — same pattern as robot-upgrade).

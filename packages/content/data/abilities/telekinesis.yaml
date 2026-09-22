@@ -15,7 +15,7 @@ description:
     speed, so in most situations, it's not a means of attack. You
     can't use this ability on your own body. The power lasts for one
     hour or until its Might Pool is depleted, whichever comes first.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode exercer força sobre objetos dentro de uma distância curta. Uma vez ativado, seu poder tem uma Reserva de Força efetiva de 10, uma Margem de Força de 1, e um Esforço de 2 (aproximadamente igual à força de um humano adulto capaz e em forma), e você pode usá-lo para mover objetos, empurrar objetos, e assim por diante. Por exemplo, você poderia levantar e puxar um objeto leve de qualquer lugar dentro do alcance até você, ou mover um objeto pesado (como um móvel) cerca de 3 metros (10 pés). Esse poder carece do controle fino para empunhar uma arma ou mover objetos com muita velocidade, então na maioria das situações não é um meio de ataque. Você não pode usar esta habilidade em seu próprio corpo. O poder dura uma hora ou até sua Reserva de Força se esgotar, o que ocorrer primeiro.'
 cost:
   pool: intellect
   amount: 2

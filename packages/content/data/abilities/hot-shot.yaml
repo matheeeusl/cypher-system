@@ -23,7 +23,28 @@ description:
 
     - You can shoot a strap holding a backpack, armor, or a similarly
     strapped on item so that it falls off.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Quando você acerta um alvo com um ataque de arma de fogo enquanto
+    Arma em Brasa estiver ativa, pode optar por reduzir o dano em 1
+    ponto, mas ganhar um efeito adicional relacionado e/ou atingir um
+    alvo em um ponto preciso. Efeitos possíveis incluem (mas não se
+    limitam a) os seguintes:
+
+    - Você pode incendiar uma estrutura (se tiver sucesso em uma
+    tarefa baseada em Intelecto contra seu nível).
+
+    - Você pode criar uma mensagem flamejante no céu, composta por
+    algumas palavras, que dura até um minuto.
+
+    - Você pode atirar em um objeto para tirá-lo da mão de alguém.
+
+    - Você pode atirar na perna, asa ou outro membro que o alvo usa
+    para se mover, reduzindo sua velocidade máxima de movimento para
+    imediata por alguns dias ou até receber atendimento médico
+    especializado.
+
+    - Você pode atirar em uma alça que segura uma mochila, armadura,
+    ou item preso de forma semelhante, fazendo com que caia.
   # Note: a "menu ability" — the schema's single `action_type` field
   # records the baseline value; all 5 sub-effects here share the same
   # "Enabler" tag, so no per-sub-option variance (unlike drone-upgrade/

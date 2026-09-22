@@ -11,7 +11,7 @@ description:
     If it is an embedded weapon, it can't be damaged or destroyed
     unless you allow it or you deliberately attempt to do so (such as
     sticking it in molten steel).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha uma de suas armas. Se você rolar um 1 natural ao atacar com essa arma, pode ignorar ou anular a Intrusão do Mestre para essa rolagem. Se não for uma arma embutida, você nunca pode ser desarmada dela, nem a derrubará acidentalmente. Se for uma arma embutida, ela não pode ser danificada ou destruída, a menos que você permita ou tente deliberadamente fazê-lo (como colocá-la em aço derretido).'
 cost: null
 action_type: enabler
 sources:

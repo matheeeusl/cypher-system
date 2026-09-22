@@ -4,7 +4,7 @@ name:
   pt-BR: Energizar Criatura
 description:
   en: You extend your Absorb Kinetic Energy ability to one creature within immediate range so that they also can absorb energy from physical attacks and impacts for one hour. That creature, however, cannot release excess energy as a blast. For each level of Effort you apply, you can increase the number of targets you affect by one. If you have Absorb Pure Energy or Improved Absorb Kinetic Energy, those abilities are also duplicated in your target when you use Energize Creature.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você estende sua habilidade Absorver Energia Cinética a uma criatura dentro de uma distância imediata, para que ela também consiga absorver energia de ataques físicos e impactos por uma hora. Essa criatura, porém, não pode liberar o excesso de energia como uma explosão. Para cada nível de Esforço que você aplicar, pode aumentar em um o número de alvos afetados. Se você tiver Absorver Energia Pura ou Absorver Energia Cinética Aprimorado, essas habilidades também são duplicadas no seu alvo ao usar Energizar Criatura.'
   # Note: source cost is printed as "6+ Might points" — the schema's cost
   # field can't represent an open-ended "+". Recorded as the baseline 6
   # Might points here, flagged for schema review (same approximation used

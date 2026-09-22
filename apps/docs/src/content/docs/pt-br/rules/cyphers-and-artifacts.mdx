@@ -1,8 +1,8 @@
 ---
-# STUB (pt-BR): headings only. The rulebook prose is deliberately left as
-# "Tradução em breve." — this project does not machine-translate rulebook text
-# (see @cypher/content's CLAUDE.md, "Content accuracy"). English source and its
-# verification notes: ../../en/rules/cyphers-and-artifacts.mdx
+# Translated from the English source (../../en/rules/cyphers-and-artifacts.mdx),
+# which is adapted from the OG-CSPG (rulebook/cypherrules.pdf, gitignored),
+# Chapter 1, pp. 17-19. See that file's own maintenance notes for sourcing
+# details (stat-block/ability-box handling) — they apply here too.
 title: Cifras e Artefatos
 description: O que são cifras e artefatos, como usá-los, níveis e limites de cifras, e esgotamento.
 sidebar:
@@ -10,18 +10,66 @@ sidebar:
 tableOfContents: false
 ---
 
+import EntityLink from '@components/EntityLink.astro'
+
 ## Cifras e Artefatos
 
-Tradução em breve.
+Cifras são habilidades de uso único que você obtém ao longo do jogo. Elas possuem poderes interessantes capazes de curar, realizar ataques, reduzir a dificuldade de tarefas ou produzir efeitos como anular a gravidade ou tornar algo invisível. Existem dois tipos principais de cifras: sutis e manifestas.
+
+### Cifras Sutis
+
+Cifras sutis não possuem forma física; portanto, podem ser representadas como boa sorte, conceitos alienígenas, bênçãos, transmissões misteriosas ou feitiços.
+
+Exemplo: <EntityLink kind="cypher" id="disarm" />
+
+### Cifras Manifestas
+
+Cifras manifestas possuem uma forma física. Elas podem ser encontradas com um inimigo derrotado, em uma sala secreta ou entre os destroços de uma nave estelar acidentada. Podem ser dadas como presente, trocadas ou compradas.
+
+### Cifras Fantásticas
+
+Efeitos de cifra fantásticos são usados em jogos nos quais magia, tecnologia ou outros fatores extrapolam a definição de "impossível". Cifras fantásticas podem ser manifestas ou sutis.
+
+Exemplo: <EntityLink kind="cypher" id="zero-point-field" />
 
 ## Usando Cifras
 
-Tradução em breve.
+A maioria das cifras exige uma ação para ser ativada, e quaisquer tarefas que uma cifra demande baseiam-se em Intelecto, a menos que indicado de outra forma ou que o Mestre permita — por exemplo, arremessar um explosivo físico pode ser uma tarefa de Velocidade. Tentar afetar outra criatura de maneira indesejada com uma cifra conta como um ataque.
+
+**Cifras Não Identificadas:** Identificar o efeito de uma cifra manifesta exige uma tarefa de Intelecto bem-sucedida e algum tempo. Você pode usar uma cifra não identificada se obtiver sucesso em uma tarefa de Intelecto com dificuldade igual ao nível da cifra.
+
+### Níveis e efeitos das cifras
+
+Toda cifra possui um nível e um efeito. O campo Nível costuma ser uma rolagem de dado, às vezes com um modificador — por exemplo, "1d6" ou "1d6 + 4". O Mestre rola o nível de uma cifra, ou permite que você role ao recebê-la.
+
+Uma cifra com nível inferior ao do alvo não significa que ela seja ineficaz. Prender um troll de nível 5 junto com vários lobos de estimação dele de nível 3, usando uma cifra de <EntityLink kind="cypher" id="detonation-web" /> de nível 4, é uma questão de obter sucesso em uma rolagem de ataque contra o número-alvo do troll. Se o ataque for bem-sucedido, o troll ainda precisa gastar pelo menos uma ação no seu turno para se libertar da teia.
+
+### Duração das Cifras
+
+A duração de uma cifra pode ser temporária ou permanente. Neste exemplo, os lobos provavelmente vão se debater por um bom tempo — a menos que o troll os liberte ao longo de mais três rodadas —, talvez antes, se forem espertos o suficiente para trabalhar juntos. De qualquer forma, o uso inteligente das suas cifras às vezes pode resolver um encontro rapidamente.
+
+Exemplo de habilidade: <EntityLink kind="ability" id="cyphersmith" />
 
 ## Limites de Cifras
 
-Tradução em breve.
+Você tem um número máximo de cifras que pode portar ao mesmo tempo, determinado pelo seu tipo ou por habilidades especiais. A maioria dos PJs de grau 1 pode portar duas cifras por vez. Adeptos ganham a habilidade Uso Perito de Cifras no grau 1 e, por isso, podem portar três.
+
+**Use Suas Cifras:** O Mestre fornece novas cifras regularmente, então o melhor momento para usar uma é a primeira oportunidade em que você conseguir pensar em um bom uso para ela!
+
+**Excedendo os Limites:** O Mestre pode permitir que você exceda o limite de cifras a algum custo — por exemplo, aumentando sua taxa de intrusão do Mestre de "rolar 1" para "rolar 1–2".
+
+**Perdendo Cifras:** Você pode usar uma ação para perder uma cifra. Cifras sutis perdidas somem para sempre, e cifras manifestas podem ser encontradas ou usadas por outras pessoas.
+
+Exemplos de habilidades: <EntityLink kind="ability" id="expert-cypher-use" />, <EntityLink kind="ability" id="adroit-cypher-use" />, <EntityLink kind="ability" id="master-cypher-use" />, <EntityLink kind="ability" id="usurp-cypher" />
 
 ## Artefatos
 
-Tradução em breve.
+Artefatos são equipamentos poderosos que não podem ser simplesmente comprados. Ao ativar um artefato, role o dado de esgotamento (1d6, 1d10, 1d20 ou 1d100). Se o dado mostrar um número de esgotamento, o artefato funciona, mas se esgota em seguida. Um valor de esgotamento "—" significa que o artefato nunca se esgota, e um esgotamento "Automático" significa que o artefato só pode ser usado uma vez — assim como uma cifra.
+
+Exemplos: <EntityLink kind="artifact" id="mind-imager" />, <EntityLink kind="artifact" id="serum-x" />
+
+### Recarregando Cifras e Artefatos Esgotados
+
+Por meio de habilidades especiais, criação de itens, gasto de XP ou conclusão de objetivos adequados determinados pelo Mestre, um artefato ou uma cifra manifesta esgotados podem ser recarregados.
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — Capítulo 1, pp. 17–19._

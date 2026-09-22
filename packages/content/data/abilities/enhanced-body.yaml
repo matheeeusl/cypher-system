@@ -13,7 +13,7 @@ description:
     For example, if you start with a full Might Pool of 10 and take 8
     points of damage, you can use recovery rolls to restore 3 points,
     but the remaining 5 points must be restored with repair tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas peças mecânicas lhe concedem +1 de Armadura, +3 na sua Reserva de Força e +3 na sua Reserva de Velocidade. Habilidades de cura tradicionais, remédios e técnicas funcionam apenas pela metade em você. Toda vez que você começa com saúde plena, os primeiros 5 pontos de dano que sofrer nunca podem ser curados dessas formas nem recuperados normalmente. Em vez disso, você deve usar perícias e habilidades de reparo para restaurar esses pontos. Por exemplo, se você começar com uma Reserva de Força plena de 10 e sofrer 8 pontos de dano, pode usar rolagens de recuperação para restaurar 3 pontos, mas os 5 pontos restantes devem ser restaurados com tarefas de reparo.'
 cost: null
 action_type: enabler
 sources:

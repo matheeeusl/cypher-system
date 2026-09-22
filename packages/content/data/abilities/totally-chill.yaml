@@ -4,7 +4,7 @@ name:
   pt-BR: Totalmente Tranquilo
 description:
   en: Your ten-minute recovery roll takes you only one round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sua rolagem de recuperação de dez minutos leva apenas um round.'
 cost: null
 action_type: enabler
 sources:

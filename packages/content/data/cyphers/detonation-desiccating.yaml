@@ -1,5 +1,5 @@
 id: detonation-desiccating
-name: { en: 'Detonation (desiccating)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (desiccating)', 'pt-BR': 'Detonação (dessecante)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -10,5 +10,10 @@ effect_text:
     Water in the area is vaporized.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, drenando a umidade de tudo o que
+    estiver dentro dele. Criaturas vivas sofrem dano igual ao nível da
+    cifra. A água na área é vaporizada. (Todas as detonações que causam
+    dano infligem no mínimo 2 pontos de dano a quem estiver no raio de
+    alcance, independentemente das rolagens de ataque ou defesa.)
 effect_table: null

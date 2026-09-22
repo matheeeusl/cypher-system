@@ -1,7 +1,7 @@
 id: weird
 name:
   en: Weird
-  pt-BR: Tradução em breve.
+  pt-BR: Estranho
 description:
   en: >-
     You aren't like anyone else, and that's fine with you. People don't
@@ -16,14 +16,27 @@ description:
     might discover about yourself. Weird characters might be mutants or
     people born with strange qualities, but sometimes they started out
     "normal" and adopted the weird by choice.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você não é como ninguém mais, e isso não é problema para você. As
+    pessoas parecem não entendê-lo — chegam até a se incomodar com você
+    —, mas quem se importa? Você entende o mundo melhor do que elas,
+    porque você é estranho, assim como o mundo em que vive. O conceito
+    do "estranho" lhe é bem familiar. Dispositivos estranhos, locais
+    antigos, criaturas bizarras, tempestades capazes de transformá-lo,
+    campos de energia vivos, conspirações, alienígenas e coisas que a
+    maioria das pessoas nem consegue nomear povoam o mundo, e você
+    prospera em meio a elas. Você tem um apego especial a tudo isso, e
+    quanto mais descobre sobre a estranheza do mundo, mais pode
+    descobrir sobre si mesmo. Personagens estranhos podem ser mutantes
+    ou pessoas nascidas com qualidades peculiares, mas às vezes
+    começaram "normais" e adotaram o estranho por escolha própria.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Distinctive Physical Quirk
-      pt-BR: Tradução em breve.
+      pt-BR: Peculiaridade Física Marcante
     description:
       en: >-
         You have a unique physical aspect that is, well, bizarre.
@@ -35,10 +48,20 @@ characteristics:
         quirk might be a mutation, a supernatural trait (a blessing or
         curse), a feature with no explanation, or just a really wild
         tattoo that draws a lot of attention.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tem um aspecto físico único que é, bem, bizarro. Dependendo
+        do cenário, isso pode variar bastante. Talvez você tenha cabelo
+        roxo ou espinhos de metal na cabeça. Talvez suas mãos não
+        estejam conectadas aos seus braços, embora se movam como se
+        estivessem. Talvez um terceiro olho olhe pela lateral da sua
+        cabeça, ou tentáculos supérfluos cresçam das suas costas. Seja lá
+        o que for, sua peculiaridade pode ser uma mutação, um traço
+        sobrenatural (uma bênção ou maldição), uma característica sem
+        explicação, ou apenas uma tatuagem realmente ousada que chama
+        muita atenção.
   - name:
       en: A Sense for the Weird
-      pt-BR: Tradução em breve.
+      pt-BR: Um Faro para o Estranho
     description:
       en: >-
         Sometimes—at the GM's discretion—weird things relating to the
@@ -46,7 +69,12 @@ characteristics:
         you. You can sense them from afar, and if you get within long
         range of such a thing, you can sense whether it is overtly
         dangerous or not.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Às vezes — a critério do Mestre — coisas estranhas relacionadas
+        ao sobrenatural ou aos seus efeitos sobre o mundo parecem chamar
+        por você. Você consegue senti-las à distância, e se chegar a um
+        alcance longo de algo assim, consegue perceber se é
+        manifestamente perigoso ou não.
 skill_training:
   - skill_id: supernatural-knowledge
     choice_count: null
@@ -54,16 +82,24 @@ inabilities:
   - en: >-
       People find you unnerving. All tasks relating to pleasant social
       interaction are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      As pessoas o acham perturbador. Todas as tarefas relacionadas a
+      interações sociais agradáveis são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: It seemed weird, so why not?
-    pt-BR: Tradução em breve.
+    pt-BR: Pareceu estranho, então por que não?
   - en: >-
       Whether the other PCs realize it or not, their mission has to do
       with something weird that you know about, so you got involved.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Quer os outros personagens percebam ou não, a missão deles tem a
+      ver com algo estranho que você conhece, então você se envolveu.
   - en: As an expert in the weird, you were specifically recruited by the other PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Como especialista no estranho, você foi especificamente recrutado
+      pelos outros personagens.
   - en: You felt drawn to join the other PCs, but you don't know why.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se sentiu atraído a se juntar aos outros personagens, mas não
+      sabe por quê.

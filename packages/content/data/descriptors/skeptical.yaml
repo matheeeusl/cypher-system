@@ -1,7 +1,7 @@
 id: skeptical
 name:
   en: Skeptical
-  pt-BR: Tradução em breve.
+  pt-BR: Cético
 description:
   en: >-
     You possess a questioning attitude regarding claims that are often
@@ -10,7 +10,13 @@ description:
     personal experience), but you've often benefited from questioning
     the statements, opinions, and received knowledge presented to you by
     others.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem uma postura questionadora em relação a afirmações que os
+    outros costumam aceitar sem questionar. Você não é necessariamente
+    um "Tomé incrédulo" (um cético que se recusa a acreditar em qualquer
+    coisa sem experiência pessoal direta), mas frequentemente se
+    beneficiou de questionar as afirmações, opiniões e conhecimentos
+    transmitidos que os outros lhe apresentam.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -27,14 +33,22 @@ connection_options:
       You overheard other PCs holding forth on a topic with an opinion
       you were quite skeptical about, so you decided to approach the
       group and ask for proof.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você ouviu outros personagens discorrendo sobre um assunto com uma
+      opinião da qual você era bastante cético, então decidiu se
+      aproximar do grupo e pedir provas.
   - en: >-
       You were following one of the other PCs because you were
       suspicious of him, which brought you into the action.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você estava seguindo um dos outros personagens porque desconfiava
+      dele, o que o levou a se envolver na ação.
   - en: >-
       Your theory about the nonexistence of the supernatural can be
       invalidated only by your own senses, so you came along.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Sua teoria sobre a inexistência do sobrenatural só pode ser
+      invalidada pelos seus próprios sentidos, então você resolveu
+      acompanhá-los.
   - en: You need money to fund your research.
-    pt-BR: Tradução em breve.
+    pt-BR: Você precisa de dinheiro para financiar sua pesquisa.

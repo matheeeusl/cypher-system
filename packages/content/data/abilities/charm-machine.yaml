@@ -9,7 +9,7 @@ description:
     function would cause you harm. Thus, if a foe attempts to detonate
     a bomb near you controlled by a detonator that likes you, there is
     a 50 percent chance that it won't explode.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você convence uma máquina sem inteligência a "gostar" de você. Uma máquina que gosta de você tem 50% menos chance de funcionar se essa função lhe causar dano. Assim, se um inimigo tentar detonar uma bomba perto de você controlada por um detonador que gosta de você, há 50% de chance de que ela não explodirá.'
 cost:
   pool: intellect
   amount: 2

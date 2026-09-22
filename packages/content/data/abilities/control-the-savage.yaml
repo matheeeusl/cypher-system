@@ -4,7 +4,7 @@ name:
   pt-BR: Controlar a Fera
 description:
   en: You can control a calm nonhuman beast within 30 feet (9 m). You control it for as long as you focus all your attention on it, using your turn each round. The GM has final say over what counts as a nonhuman beast, but unless some kind of deception is at work, you should know whether you can affect a creature before you attempt to use this ability on it. Aliens, extradimensional entities, very intelligent creatures, and robots never count.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode controlar uma fera não humana calma dentro de 9 metros (30 pés). Você a controla enquanto mantiver toda sua atenção nela, usando seu turno a cada round. O Mestre tem a palavra final sobre o que conta como uma fera não humana, mas, a menos que algum tipo de engano esteja em jogo, você deve saber se consegue afetar uma criatura antes de tentar usar esta habilidade nela. Alienígenas, entidades extradimensionais, criaturas muito inteligentes e robôs nunca contam.'
 cost:
   pool: intellect
   amount: 6

@@ -8,7 +8,7 @@ description:
     track, or disadvantaged in some other way, your attacks against
     that foe are eased beyond any other modifications due to the
     disadvantage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando seu inimigo está enfraquecido, atordoado, aturdido, rebaixado na trilha de dano, ou em desvantagem de alguma outra forma, seus ataques contra esse inimigo são facilitados além de quaisquer outras modificações devido à desvantagem.'
 cost: null
 action_type: enabler
 sources:

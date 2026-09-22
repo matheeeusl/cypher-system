@@ -4,7 +4,7 @@ name:
   pt-BR: Velocidade Borrada
 description:
   en: You move so quickly that until your next turn, you look like a blur. While you are blurred, if you apply Effort to a melee attack task or Speed defense task, you get a free level of Effort on that task; you can move a short distance as part of another action or a long distance as your entire action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se move tão rapidamente que, até o seu próximo turno, parece um borrão. Enquanto estiver borrada, se aplicar Esforço a uma tarefa de ataque corpo a corpo ou de defesa de Velocidade, você ganha um nível gratuito de Esforço nessa tarefa; você pode se mover uma distância curta como parte de outra ação, ou uma distância longa como sua ação inteira.'
 cost:
   pool: speed
   amount: 7

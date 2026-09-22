@@ -13,7 +13,7 @@ description:
     mundane action (such as an attack with a weapon or claw), so that
     the action isn't made this round. Make your roll against the level
     of the attack, danger, or creature.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você neutraliza uma fonte de perigo potencial relacionada a uma criatura ou objeto do qual esteja ciente dentro de uma distância imediata por um round. Isso pode ser uma arma ou dispositivo segurado por alguém, uma armadilha ativada por uma placa de pressão, ou a habilidade natural de uma criatura (algo especial, inato e perigoso, como o sopro flamejante de um dragão ou o veneno de uma cobra gigante). Você também pode tentar frustrar a ação comum de um inimigo (como um ataque com uma arma ou garra), de forma que a ação não seja realizada neste round. Faça sua rolagem contra o nível do ataque, perigo ou criatura.'
 cost:
   pool: intellect
   amount: 2

@@ -9,7 +9,7 @@ description:
     so forcefully that it is unable to take any action, including
     making attacks, for one round. Whether you succeed or fail, the
     next action the target takes after your attempt is hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Agindo apenas como alguém famoso e acostumado a privilégios consegue, você repreende verbalmente um inimigo vivo que possa ouvi-lo e entendê-lo com tanta força que ele fica incapaz de realizar qualquer ação, incluindo ataques, por um round. Tendo sucesso ou falhando, a próxima ação que o alvo realizar após sua tentativa é dificultada.'
 cost:
   pool: intellect
   amount: 3

@@ -1,5 +1,5 @@
 id: strength-enhancer
-name: { en: 'Strength enhancer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Strength enhancer', 'pt-BR': 'Intensificador de força' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6'
@@ -9,5 +9,9 @@ effect_text:
     lifting a heavy boulder, forcing open elevator doors, competing in a
     weightlifting competition, and so on—are eased by two steps for one hour.
   pt-BR: >-
-    Tradução em breve.
+    Todas as tarefas fora de combate que envolvem força bruta — como
+    arrombar uma porta, erguer uma pedra pesada, forçar a abertura de
+    portas de elevador, competir em uma competição de levantamento de
+    peso, e assim por diante — são facilitadas em dois níveis por uma
+    hora.
 effect_table: null

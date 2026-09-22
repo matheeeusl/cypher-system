@@ -7,7 +7,7 @@ description:
     You can take two separate actions this round, as long as one of
     them is to hide or to move in a direction that is not toward a
     foe.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode realizar duas ações separadas neste round, desde que uma delas seja se esconder ou se mover em uma direção que não seja em direção a um inimigo.'
 cost:
   pool: speed
   amount: 5

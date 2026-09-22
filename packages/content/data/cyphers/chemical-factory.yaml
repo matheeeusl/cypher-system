@@ -1,5 +1,5 @@
 id: chemical-factory
-name: { en: 'Chemical factory', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Chemical factory', 'pt-BR': 'Fábrica química' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 385'
 level_range: '1d6'
@@ -9,51 +9,53 @@ effect_text:
     liquid (these doses are not considered cyphers). They must be used
     within one week. Roll a d100 to determine the effect.
   pt-BR: >-
-    Tradução em breve.
+    Após uma hora, o suor do usuário produz 1d6 doses de um líquido
+    valioso (essas doses não são consideradas cifras). Elas devem ser
+    usadas dentro de uma semana. Role 1d100 para determinar o efeito.
 effect_table:
   label:
     en: Chemical Factory Effects
-    pt-BR: Tradução em breve.
+    pt-BR: Efeitos da Fábrica Química
   entries:
     - range: '01–04'
-      text: { en: Euphoric for 1d6 hours, pt-BR: Tradução em breve. }
+      text: { en: Euphoric for 1d6 hours, pt-BR: Eufórico por 1d6 horas }
     - range: '05–08'
-      text: { en: Hallucinogenic for 1d6 hours, pt-BR: Tradução em breve. }
+      text: { en: Hallucinogenic for 1d6 hours, pt-BR: Alucinógeno por 1d6 horas }
     - range: '09–12'
-      text: { en: Stimulant for 1d6 hours, pt-BR: Tradução em breve. }
+      text: { en: Stimulant for 1d6 hours, pt-BR: Estimulante por 1d6 horas }
     - range: '13–16'
-      text: { en: Depressant for 1d6 hours, pt-BR: Tradução em breve. }
+      text: { en: Depressant for 1d6 hours, pt-BR: Depressor por 1d6 horas }
     - range: '17–20'
-      text: { en: Nutrient supplement, pt-BR: Tradução em breve. }
+      text: { en: Nutrient supplement, pt-BR: Suplemento nutricional }
     - range: '21–25'
-      text: { en: Antivenom, pt-BR: Tradução em breve. }
+      text: { en: Antivenom, pt-BR: Antiveneno }
     - range: '26–30'
-      text: { en: Cures disease, pt-BR: Tradução em breve. }
+      text: { en: Cures disease, pt-BR: Cura doenças }
     - range: '31–35'
-      text: { en: See in the dark for one hour, pt-BR: Tradução em breve. }
+      text: { en: See in the dark for one hour, pt-BR: Enxerga no escuro por uma hora }
     - range: '36–45'
       text:
         {
           en: Restores a number of Might Pool points equal to cypher level,
-          pt-BR: Tradução em breve.,
+          pt-BR: Restaura uma quantidade de pontos da Reserva de Força igual ao nível da cifra,
         }
     - range: '46–55'
       text:
         {
           en: Restores a number of Speed Pool points equal to cypher level,
-          pt-BR: Tradução em breve.,
+          pt-BR: Restaura uma quantidade de pontos da Reserva de Velocidade igual ao nível da cifra,
         }
     - range: '56–65'
       text:
         {
           en: Restores a number of Intellect Pool points equal to cypher level,
-          pt-BR: Tradução em breve.,
+          pt-BR: Restaura uma quantidade de pontos da Reserva de Intelecto igual ao nível da cifra,
         }
     - range: '66–75'
-      text: { en: Increases Might Edge by 1 for one hour, pt-BR: Tradução em breve. }
+      text: { en: Increases Might Edge by 1 for one hour, pt-BR: Aumenta a Margem de Força em 1 por uma hora }
     - range: '76–85'
-      text: { en: Increases Speed Edge by 1 for one hour, pt-BR: Tradução em breve. }
+      text: { en: Increases Speed Edge by 1 for one hour, pt-BR: Aumenta a Margem de Velocidade em 1 por uma hora }
     - range: '86–95'
-      text: { en: Increases Intellect Edge by 1 for one hour, pt-BR: Tradução em breve. }
+      text: { en: Increases Intellect Edge by 1 for one hour, pt-BR: Aumenta a Margem de Intelecto em 1 por uma hora }
     - range: '96–00'
-      text: { en: Restores all Pools to full, pt-BR: Tradução em breve. }
+      text: { en: Restores all Pools to full, pt-BR: Restaura todas as Reservas ao máximo }

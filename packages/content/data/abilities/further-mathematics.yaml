@@ -4,7 +4,7 @@ name:
   pt-BR: Matemática Avançada Superior
 description:
   en: You are specialized in higher mathematics. If you are already specialized, choose some other sphere of knowledge to become trained in.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é especializada em matemática avançada. Se já for especializada, escolha alguma outra esfera de conhecimento para se tornar treinada.'
 cost: null
 action_type: enabler
 sources:

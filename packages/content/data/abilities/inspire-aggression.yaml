@@ -8,7 +8,7 @@ description:
     is able to understand you, unlocking their more primitive
     instincts. As a result, they gain an asset on their Might-based
     attack rolls for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas palavras distorcem a mente de um personagem dentro de uma distância curta capaz de entendê-lo, destravando seus instintos mais primitivos. Como resultado, ele ganha um recurso em suas rolagens de ataque baseadas em Força por um minuto.'
 cost:
   pool: intellect
   amount: 2

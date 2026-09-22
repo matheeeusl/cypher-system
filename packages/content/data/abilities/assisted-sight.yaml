@@ -8,7 +8,7 @@ description:
     and boons in your environment. When you trigger this ability, you
     gain an asset on one attack or defense roll of any type, due to
     your knowledge about the situation.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode ativar uma sobreposição visual que ajuda a analisar ameaças e vantagens em seu ambiente. Ao acionar esta habilidade, você ganha um recurso em uma rolagem de ataque ou defesa de qualquer tipo, devido ao seu conhecimento sobre a situação.'
 cost:
   pool: intellect
   amount: 3

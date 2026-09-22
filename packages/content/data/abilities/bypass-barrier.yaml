@@ -17,7 +17,7 @@ description:
     again. In addition to the normal options for using Effort, you can
     choose to use Effort to increase the maximum thickness of the
     barrier, each level adding 3 feet (1 m).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue passar por uma porta, campo de força ou outra barreira de até 1 metro (3 pés) de espessura que esteja bloqueando seu caminho. Dependendo da barreira, isso pode envolver encontrar um ponto fraco pelo qual empurrar, apertar o botão certo por sorte, simplesmente arrombar, ou até explicações mais estranhas, como tocar um ponto tênue entre dimensões ou uma interação inesperada com seu equipamento. A dificuldade da tarefa é o nível da barreira. Esta habilidade permite que apenas você passe, e não mais ninguém, e a passagem se fecha no fim do seu turno (o que pode significar que você fica preso do outro lado). Você tem um recurso em qualquer nova tentativa de atravessá-la. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar a espessura máxima da barreira, cada nível adicionando 1 metro (3 pés).'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

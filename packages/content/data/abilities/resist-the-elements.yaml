@@ -7,7 +7,7 @@ description:
     You resist heat, cold, and similar extremes. You have a special
     +2 to Armor against ambient damage or other damage that would
     normally ignore Armor.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você resiste a calor, frio e extremos semelhantes. Você tem um +2 especial na Armadura contra dano ambiente ou outro dano que normalmente ignoraria Armadura.'
 cost: null
 action_type: enabler
 sources:

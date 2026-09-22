@@ -14,7 +14,7 @@ description:
     retrieving the car happens over one minute as it slowly (and
     visibly) vanishes or reappears; you can reduce this time to just
     one round if you succeed at a level 4 Intellect task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode enviar seu carro para uma dimensão de bolso que se move com você e é grande o suficiente para contê-lo. Ninguém além de você consegue perceber ou acessar esse espaço, a menos que tenha a capacidade de interagir com áreas transdimensionais. O espaço é parte de você, então não pode usá-lo para guardar o carro se você e o carro tiverem mais cifras do que o seu limite, uma cifra de detonação ativada dentro do carro enquanto ele está no espaço o prejudica, e assim por diante. Guardar ou recuperar o carro acontece ao longo de um minuto, enquanto ele lentamente (e visivelmente) desaparece ou reaparece; você pode reduzir esse tempo a apenas um round se tiver sucesso em uma tarefa de Intelecto de nível 4.'
 cost:
   pool: intellect
   amount: 3

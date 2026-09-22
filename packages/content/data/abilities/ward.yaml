@@ -6,7 +6,7 @@ description:
   en: >-
     You have a shield of energy around you at all times that helps
     deflect attacks. You gain +1 to Armor.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tem um escudo de energia ao seu redor o tempo todo, que ajuda a desviar ataques. Você ganha +1 de Armadura.'
 cost: null
 action_type: enabler
 sources:

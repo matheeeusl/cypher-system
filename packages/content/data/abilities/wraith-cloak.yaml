@@ -10,7 +10,7 @@ description:
     touch you or strike you with a melee attack. While the wraith
     cloak is active, all tasks to evade the perceptions of others are
     eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'A seu comando, o espírito da sua habilidade Cúmplice Espiritual se envolve ao seu redor por até dez minutos. O espírito causa automaticamente 4 pontos de dano a qualquer um que tentar tocá-la ou atingi-la com um ataque corpo a corpo. Enquanto o manto espectral estiver ativo, todas as tarefas para evadir a percepção de outros são facilitadas.'
 cost: null
 action_type: enabler
 sources:

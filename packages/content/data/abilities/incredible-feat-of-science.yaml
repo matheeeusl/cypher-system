@@ -4,7 +4,7 @@ name:
   pt-BR: Feito Incrível da Ciência
 description:
   en: "You do something amazing in the lab. This takes parts and materials equivalent to three expensive items. Possible incredible feats include: reanimate and command a dead body for one hour; create an engine that runs on perpetual motion; create a teleportation gate that remains open for one minute; transmute one substance into another substance; cure one person with an incurable disease or condition; create a weapon designed to hurt something that can't otherwise be hurt; create a defense designed to protect against something that can't otherwise be stopped."
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz algo incrível no laboratório. Isso exige peças e materiais equivalentes a três itens caros. Feitos incríveis possíveis incluem: reanimar e comandar um cadáver por uma hora; criar um motor que funciona por movimento perpétuo; criar um portal de teleporte que permanece aberto por um minuto; transmutar uma substância em outra; curar uma pessoa com uma doença ou condição incurável; criar uma arma projetada para ferir algo que de outra forma não pode ser ferido; criar uma defesa projetada para proteger contra algo que de outra forma não pode ser impedido.'
 cost:
   pool: intellect
   amount: 12

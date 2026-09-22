@@ -1,5 +1,5 @@
 id: detonation-flash
-name: { en: 'Detonation (flash)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (flash)', 'pt-BR': 'Detonação (clarão)' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 2'
@@ -8,5 +8,7 @@ effect_text:
     Projects a small physical explosive up to a long distance away that bursts in an immediate radius,
     blinding all within it for one minute (ten minutes if the cypher is level 4 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, cegando todos que estiverem dentro dele
+    por um minuto (dez minutos se a cifra for de nível 4 ou superior).
 effect_table: null

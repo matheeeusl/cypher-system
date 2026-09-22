@@ -7,7 +7,7 @@ description:
     While taking any action (including fighting) in the wild, you
     ignore any penalties due to natural causes such as tall grass,
     thick brush, rugged terrain, weather, and so on.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao realizar qualquer ação (incluindo lutar) na natureza selvagem, você ignora quaisquer penalidades devido a causas naturais, como grama alta, arbustos densos, terreno acidentado, clima, e assim por diante.'
 cost: null
 action_type: enabler
 sources:

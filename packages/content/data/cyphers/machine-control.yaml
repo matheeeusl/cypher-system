@@ -1,5 +1,5 @@
 id: machine-control
-name: { en: 'Machine control', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Machine control', 'pt-BR': 'Controle de máquina' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -12,5 +12,11 @@ effect_text:
     control lasts for ten minutes per cypher level, and once the device is
     chosen, it cannot be changed.
   pt-BR: >-
-    Tradução em breve.
+    Divide-se em duas partes; uma é fixada a um dispositivo, e a outra,
+    a um personagem. O personagem pode então usar sua mente para
+    controlar o dispositivo a uma distância longa, ordenando que ele
+    faça qualquer coisa que normalmente poderia fazer. Assim, um
+    dispositivo pode ser ativado ou desativado, e um veículo pode ser
+    pilotado. O controle dura dez minutos por nível da cifra, e, uma vez
+    escolhido o dispositivo, não pode ser trocado.
 effect_table: null

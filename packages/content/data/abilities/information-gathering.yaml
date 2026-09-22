@@ -11,7 +11,7 @@ description:
     the location of a specific creature or individual, and if they
     are within a mile of you, one or more machines will probably
     provide the answer.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você fala telepaticamente com qualquer ou todas as máquinas dentro de 1,5 km (1 milha). Você pode fazer uma pergunta básica sobre elas ou sobre algo acontecendo perto delas e receber uma resposta simples. Por exemplo, em uma área com muitas máquinas, você poderia perguntar sobre a localização de uma criatura ou indivíduo específico, e se estiverem dentro de uma milha de você, uma ou mais máquinas provavelmente fornecerão a resposta.'
 cost:
   pool: intellect
   amount: 5

@@ -1,5 +1,5 @@
 id: nutrition-and-hydration
-name: { en: 'Nutrition and hydration', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Nutrition and hydration', 'pt-BR': 'Nutrição e hidratação' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 1'
@@ -8,5 +8,6 @@ effect_text:
     The user can go without food and water for a number of days equal to the
     cypher's level without ill effect.
   pt-BR: >-
-    Tradução em breve.
+    O usuário pode ficar sem comida e água por uma quantidade de dias
+    igual ao nível da cifra, sem efeitos adversos.
 effect_table: null

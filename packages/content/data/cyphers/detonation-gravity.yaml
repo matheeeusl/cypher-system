@@ -1,5 +1,5 @@
 id: detonation-gravity
-name: { en: 'Detonation (gravity)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (gravity)', 'pt-BR': 'Detonação (gravidade)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 387'
 level_range: '1d6 + 2'
@@ -10,5 +10,11 @@ effect_text:
     All creatures in the area are crushed to the ground for one round and cannot take physical actions.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode em um raio imediato, infligindo dano igual ao nível da cifra
+    ao aumentar tremendamente a gravidade por um segundo. Todas as
+    criaturas na área são esmagadas contra o chão por uma rodada e não
+    podem realizar ações físicas. (Todas as detonações que causam dano
+    infligem no mínimo 2 pontos de dano a quem estiver no raio de
+    alcance, independentemente das rolagens de ataque ou defesa.)
 effect_table: null

@@ -4,7 +4,7 @@ name:
   pt-BR: Olho Certeiro
 description:
   en: You inflict an additional 6 points of damage with any single-target attack spell cast through a firearm using Spell Bullet. If the attack spell doesn't inflict damage, you instead can modify the spell as if you had applied two levels of Intellect Effort to it. If you have the Iron Eye ability, you can exchange it for Trained Guncasting.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você causa 6 pontos adicionais de dano com qualquer feitiço de ataque de alvo único conjurado através de uma arma de fogo usando Bala de Feitiço. Se o feitiço de ataque não causar dano, você pode em vez disso modificá-lo como se tivesse aplicado dois níveis de Esforço de Intelecto a ele. Se você tiver a habilidade Olho de Ferro, pode trocá-la por Conjuração com Arma Treinada.'
 cost: null
 action_type: enabler
 sources:

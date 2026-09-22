@@ -8,7 +8,7 @@ description:
     table, you get two results instead of one. If the GM is using
     some other method to generate rewards for finding valuables, you
     should gain double the result you would otherwise obtain.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sempre que o Mestre obtiver um resultado para você na tabela de Coisas Úteis, você recebe dois resultados em vez de um. Se o Mestre estiver usando outro método para gerar recompensas ao encontrar itens valiosos, você deve receber o dobro do resultado que obteria normalmente.'
 cost: null
 action_type: enabler
 sources:

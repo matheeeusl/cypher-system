@@ -4,7 +4,7 @@ name:
   pt-BR: Apagar Memórias
 description:
   en: You reach into the mind of a creature within immediate range and make an Intellect roll. On a success, you erase up to the last five minutes of its memory.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você alcança a mente de uma criatura dentro de uma distância imediata e faz uma rolagem de Intelecto. Em um sucesso, você apaga até os últimos cinco minutos de sua memória.'
 cost:
   pool: intellect
   amount: 3

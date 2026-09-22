@@ -1,53 +1,53 @@
 id: condition-remover
-name: { en: 'Condition remover', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Condition remover', 'pt-BR': 'Removedor de condições' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 385'
 level_range: '1d6 + 3'
 effect_text:
   {
     en: 'Cures one occurrence of one specific health condition of the cypher level or lower. It does not prevent the possibility of future occurrences of the same condition. Roll a d20 to determine what it cures.',
-    'pt-BR': 'Tradução em breve.',
+    'pt-BR': 'Cura uma ocorrência de uma condição de saúde específica de nível igual ou inferior ao da cifra. Isso não impede a possibilidade de ocorrências futuras da mesma condição. Role 1d20 para determinar o que ela cura.',
   }
 effect_table:
-  label: { en: 'Condition Remover Effects', 'pt-BR': 'Tradução em breve.' }
+  label: { en: 'Condition Remover Effects', 'pt-BR': 'Efeitos do Removedor de Condições' }
   entries:
     - range: '1'
-      text: { en: 'Addiction to one substance', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Addiction to one substance', 'pt-BR': 'Vício em uma substância' }
     - range: '2'
-      text: { en: 'Autoimmune disease', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Autoimmune disease', 'pt-BR': 'Doença autoimune' }
     - range: '3'
-      text: { en: 'Bacterial infection', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Bacterial infection', 'pt-BR': 'Infecção bacteriana' }
     - range: '4'
-      text: { en: 'Bad breath', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Bad breath', 'pt-BR': 'Mau hálito' }
     - range: '5'
-      text: { en: 'Blisters', 'pt-BR': 'Tradução  em breve.' }
+      text: { en: 'Blisters', 'pt-BR': 'Bolhas' }
     - range: '6'
-      text: { en: 'Bloating', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Bloating', 'pt-BR': 'Inchaço abdominal' }
     - range: '7'
-      text: { en: 'Cancer', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Cancer', 'pt-BR': 'Câncer' }
     - range: '8'
-      text: { en: 'Chapped lips', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Chapped lips', 'pt-BR': 'Lábios rachados' }
     - range: '9'
-      text: { en: 'Flatus', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Flatus', 'pt-BR': 'Flatulência' }
     - range: '10'
-      text: { en: 'Hangover', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Hangover', 'pt-BR': 'Ressaca' }
     - range: '11'
-      text: { en: 'Heartburn', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Heartburn', 'pt-BR': 'Azia' }
     - range: '12'
-      text: { en: 'Hiccups', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Hiccups', 'pt-BR': 'Soluços' }
     - range: '13'
-      text: { en: 'Ingrown hairs', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Ingrown hairs', 'pt-BR': 'Pelos encravados' }
     - range: '14'
-      text: { en: 'Insomnia', 'pt-BR': 'Tradução  em breve.' }
+      text: { en: 'Insomnia', 'pt-BR': 'Insônia' }
     - range: '15'
-      text: { en: 'Joint problem', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Joint problem', 'pt-BR': 'Problema articular' }
     - range: '16'
-      text: { en: 'Muscle cramp', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Muscle cramp', 'pt-BR': 'Câimbra muscular' }
     - range: '17'
-      text: { en: 'Pimples', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Pimples', 'pt-BR': 'Espinhas' }
     - range: '18'
-      text: { en: 'Psychosis', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Psychosis', 'pt-BR': 'Psicose' }
     - range: '19'
-      text: { en: 'Stiff neck', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Stiff neck', 'pt-BR': 'Torcicolo' }
     - range: '20'
-      text: { en: 'Viral infection', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Viral infection', 'pt-BR': 'Infecção viral' }

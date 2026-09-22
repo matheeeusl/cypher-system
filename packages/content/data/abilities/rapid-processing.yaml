@@ -9,7 +9,7 @@ description:
     Speed tasks (including Speed defense rolls) are eased. In addition,
     the target can take one extra action at any time before the
     ability's duration expires.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ou um alvo que tocar experimenta um nível maior de tempo de reação mental e física por cerca de um minuto. Durante esse período, todas as tarefas de Velocidade (incluindo rolagens de defesa de Velocidade) são facilitadas. Além disso, o alvo pode realizar uma ação extra a qualquer momento antes que a duração da habilidade expire.'
 cost:
   pool: intellect
   amount: 6

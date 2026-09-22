@@ -4,7 +4,7 @@ name:
   pt-BR: Causador de Dano
 description:
   en: You inflict an additional 3 points of damage with your chosen weapon.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você inflige 3 pontos adicionais de dano com a arma escolhida.'
 cost: null
 action_type: enabler
 sources:

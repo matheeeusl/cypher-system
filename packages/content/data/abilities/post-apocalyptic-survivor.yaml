@@ -4,7 +4,7 @@ name:
   pt-BR: Sobrevivente Pós-Apocalíptica
 description:
   en: You are trained in stealth and Might defense tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em tarefas de furtividade e defesa de Força.'
 cost: null
 action_type: enabler
 sources:

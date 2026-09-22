@@ -1,5 +1,5 @@
 id: temporal-viewer
-name: { en: 'Temporal viewer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Temporal viewer', 'pt-BR': 'Visor temporal' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6 + 4'
@@ -9,5 +9,8 @@ effect_text:
     length, depicting events that occurred at the current location up to one
     year prior. The user specifies the time period shown by the viewer.
   pt-BR: >-
-    Tradução em breve.
+    Exibe imagens em movimento e som, com duração de até dez minutos por
+    nível da cifra, retratando eventos que ocorreram no local atual em
+    até um ano antes. O usuário especifica o período de tempo exibido
+    pelo visor.
 effect_table: null

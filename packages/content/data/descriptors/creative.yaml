@@ -1,7 +1,7 @@
 id: creative
 name:
   en: Creative
-  pt-BR: Tradução em breve.
+  pt-BR: Criativo
 description:
   en: >-
     Maybe you have a notebook where you write down ideas so you can
@@ -12,21 +12,33 @@ description:
     works, you're creative—you code, write, compose, sculpt, design,
     direct, or otherwise create narratives that enthrall other people
     with your vision.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Talvez você tenha um caderno onde anota ideias para desenvolvê-las
+    depois. Talvez envie e-mails para si mesmo com ideias que surgem do
+    nada, para organizá-las depois em um documento eletrônico. Ou talvez
+    você simplesmente se sente, encare a tela e, por pura força de
+    vontade indomável, produza algo a partir do nada. Seja qual for a
+    forma como o seu dom funciona, você é criativo — você programa,
+    escreve, compõe, esculpe, projeta, dirige ou de alguma outra forma
+    cria narrativas que encantam as pessoas com sua visão.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Original
-      pt-BR: Tradução em breve.
+      pt-BR: Original
     description:
       en: >-
         You're always coming up with something new. You're trained in
         any task related to creating a narrative (such as a story, play,
         or scenario). This includes deception, if the deception involves
         a narrative you're able to tell.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você está sempre criando algo novo. Você é treinado em qualquer
+        tarefa relacionada à criação de uma narrativa (como uma história,
+        peça ou cenário). Isso inclui enganação, se o engano envolver uma
+        narrativa que você seja capaz de contar.
 skill_training:
   - skill_id: null
     choice_count: 1
@@ -38,18 +50,27 @@ inabilities:
   - en: >-
       You're inventive but not charming. All tasks related to pleasant
       social interaction are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você é inventivo, mas não charmoso. Todas as tarefas relacionadas a
+      interações sociais agradáveis são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       You were doing research for a project and convinced the PCs to
       bring you along.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você estava fazendo pesquisas para um projeto e convenceu os outros
+      personagens a levá-lo com eles.
   - en: You're looking for new markets for the results of your creative output.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você está em busca de novos mercados para os resultados da sua
+      produção criativa.
   - en: You fell in with the wrong crowd, but they grew on you.
-    pt-BR: Tradução em breve.
+    pt-BR: Você se envolveu com a turma errada, mas acabou gostando deles.
   - en: >-
       A creative life is often one beset with financial hurdles. You
       joined the PCs because you hoped it would be profitable.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Uma vida criativa costuma ser cheia de dificuldades financeiras.
+      Você se juntou aos outros personagens na esperança de que isso
+      fosse lucrativo.

@@ -7,7 +7,7 @@ description:
     When you're running a con, picking a pocket, fooling or tricking a
     dupe, sneaking something by a guard, and so on, you gain an asset
     on the task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao aplicar um golpe, bater carteira, enganar ou trapacear uma vítima, passar algo por um guarda, e assim por diante, você ganha um recurso na tarefa.'
 cost:
   pool: intellect
   amount: 3

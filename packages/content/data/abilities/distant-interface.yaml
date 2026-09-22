@@ -11,7 +11,7 @@ description:
     To use this ability, you must understand the function of the
     machine, it must be your size or smaller, and it can't be
     connected to another intelligence (or be intelligent itself).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode ativar, desativar ou controlar uma máquina a uma distância longa como se estivesse ao lado dela, mesmo que normalmente precisasse tocá-la ou operá-la manualmente. Se você nunca interagiu com aquela máquina específica antes, a tarefa é dificultada em dois níveis. Para usar esta habilidade, você deve entender a função da máquina, ela deve ser do seu tamanho ou menor, e não pode estar conectada a outra inteligência (nem ser inteligente por si só).'
 cost:
   pool: intellect
   amount: 2

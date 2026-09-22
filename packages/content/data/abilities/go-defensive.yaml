@@ -11,7 +11,7 @@ description:
     lasts as long as you wish or until you attack a foe or no combat
     is taking place within range of your senses. Once the effect of
     this ability ends, you can't enter it again for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando desejar, durante o combate, você pode entrar em um estado de consciência intensificada de ameaças. Nesse estado, não pode usar pontos da sua Reserva de Intelecto, mas ganha +1 na sua Margem de Velocidade e ganha dois recursos em tarefas de defesa de Velocidade. Esse efeito dura enquanto você desejar ou até atacar um inimigo ou nenhum combate estiver ocorrendo dentro do alcance dos seus sentidos. Uma vez que o efeito desta habilidade termina, você não pode entrar nela novamente por um minuto.'
 cost:
   pool: intellect
   amount: 1

@@ -16,7 +16,7 @@ description:
     one is made on it. If you possess another ability that allows you
     to command a creature, you can target two creatures at once as
     your base effect if you use either ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Através de pura força de vontade, você pode dar uma ordem simples e imperativa a uma única criatura viva, que então tenta cumprir seu comando como sua próxima ação. A criatura deve estar dentro de uma distância curta e conseguir compreendê-lo. O comando não pode infligir dano direto à criatura ou a seus aliados, então "Cometa suicídio" não funcionaria, mas "Fuja" poderia. Além disso, o comando só pode exigir que a criatura realize uma única ação, então "Destranque a porta" poderia funcionar, mas "Destranque a porta e passe correndo por ela" não. Uma criatura comandada ainda pode se defender normalmente e revidar um ataque, se sofrer um. Se você possuir outra habilidade que permita comandar uma criatura, pode ter como alvo duas criaturas ao mesmo tempo como seu efeito base ao usar qualquer uma das habilidades.'
 cost:
   pool: intellect
   amount: 3

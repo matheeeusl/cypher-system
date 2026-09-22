@@ -11,7 +11,7 @@ description:
     or when it takes actions. The companion acts on your turn. If
     your companion dies, you can hunt in the wild for 1d6 days to
     find a new one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ganha um espécime especial como companheiro constante. Ele é de nível 4, provavelmente do tamanho de um cão pequeno, e obedece seus comandos telepáticos. Você e o Mestre devem definir os detalhes da sua criatura, e você provavelmente fará rolagens por ela em combate ou quando realizar ações. O companheiro age no seu turno. Se seu companheiro morrer, você pode caçar na natureza por 1d6 dias para encontrar um novo.'
 cost: null
 action_type: enabler
 sources:

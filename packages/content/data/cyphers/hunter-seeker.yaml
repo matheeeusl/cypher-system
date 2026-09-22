@@ -1,5 +1,5 @@
 id: hunter-seeker
-name: { en: 'Hunter/seeker', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Hunter/seeker', 'pt-BR': 'Caçador/rastreador' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6'
@@ -11,35 +11,40 @@ effect_text:
     it hits. For example, a level 4 hunter/seeker will attack a maximum of
     five times. Roll a d100 to determine the type of attack.
   pt-BR: >-
-    Tradução em breve.
+    Com movimento de longo alcance, este míssil inteligente rastreia e
+    ataca um alvo específico (o alvo deve estar à vista no momento da
+    seleção). Se errar, continua atacando mais uma vez por nível da
+    cifra até acertar. Por exemplo, um caçador/rastreador de nível 4
+    atacará no máximo cinco vezes. Role 1d100 para determinar o tipo de
+    ataque.
 effect_table:
   label:
     en: 'Hunter/Seeker Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Caçador/Rastreador'
   entries:
     - range: '01–50'
-      text: { en: 'Inflicts 8 points of damage.', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Inflicts 8 points of damage.', 'pt-BR': 'Inflige 8 pontos de dano.' }
     - range: '51–80'
       text:
         {
           en: 'Bears a poisoned needle that inflicts 3 points of damage plus poison.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Carrega uma agulha envenenada que inflige 3 pontos de dano, mais veneno.',
         }
     - range: '81–90'
       text:
         {
           en: 'Explodes, inflicting 6 points of damage to all within immediate range.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Explode, infligindo 6 pontos de dano a todos dentro de uma distância imediata.',
         }
     - range: '91–95'
       text:
         {
           en: 'Shocks for 4 points of electricity damage, and stuns for one round per cypher level.',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Choca, causando 4 pontos de dano elétrico, e atordoa por uma rodada por nível da cifra.',
         }
     - range: '96–00'
       text:
         {
           en: "Covers target in sticky goo that immediately hardens, holding them fast until they break free with a Might action (difficulty equal to the cypher's level + 2).",
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Cobre o alvo com uma gosma pegajosa que endurece imediatamente, prendendo-o até que se liberte com uma ação de Força (dificuldade igual ao nível da cifra + 2).',
         }

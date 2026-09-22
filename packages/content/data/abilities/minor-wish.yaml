@@ -23,7 +23,27 @@ description:
     to any stat Pool. If you are not damaged, you add the points to
     your chosen Pool's maximum. They remain until you spend them, you
     lose them to damage, or an hour passes.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    A seu pedido, a aliada mágica da sua habilidade Criatura Mágica
+    Vinculada pode usar sua ação para conjurar um feitiço menor em
+    você. Depois disso, ela deve se retirar para seu objeto vinculado
+    para descansar por uma hora. Os efeitos que ela pode produzir
+    incluem os seguintes:
+
+    - Ira Dourada. Uma luz dourada toca seus olhos. Pelos próximos
+    vários minutos, se você atacar um alvo, causa 2 pontos adicionais
+    de dano.
+
+    - Guarda Dourada. Você ganha +1 de Armadura por uma hora, vinda de
+    um brilho translúcido de luz dourada.
+
+    - Luz da Verdade. Sempre que você tentar discernir uma falsidade
+    durante a próxima hora, a tarefa é facilitada em dois níveis.
+
+    - Toque da Graça. Com o toque da aliada mágica, você adiciona 3
+    pontos a qualquer Reserva de atributo. Se não estiver ferida,
+    adiciona os pontos ao máximo da Reserva escolhida. Eles permanecem
+    até você gastá-los, perdê-los por dano, ou até passar uma hora.
   # Note: this ability is a menu of 4 sub-effects the magic ally can
   # produce, all sharing the same action_to_initiate framing (unlike
   # drone-upgrade/moderate-wish, no per-sub-option action_type variance

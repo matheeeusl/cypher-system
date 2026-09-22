@@ -1,5 +1,5 @@
 id: remembering
-name: { en: 'Remembering', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Remembering', 'pt-BR': 'Recordação' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6'
@@ -10,5 +10,8 @@ effect_text:
     recall is perfect, so (for example) if they saw someone dial a phone, they
     will remember the number.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário recorde qualquer experiência que já tenha
+    vivido. A experiência não pode durar mais que um minuto por nível
+    da cifra, mas a lembrança é perfeita, então (por exemplo) se ele viu
+    alguém discar um telefone, vai se lembrar do número.
 effect_table: null

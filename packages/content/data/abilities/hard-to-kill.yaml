@@ -4,7 +4,7 @@ name:
   pt-BR: Difícil de Matar
 description:
   en: You can choose to reroll any defense task you make but never more than once per round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode optar por rolar novamente qualquer tarefa de defesa que fizer, mas nunca mais de uma vez por round.'
 cost: null
 action_type: enabler
 sources:

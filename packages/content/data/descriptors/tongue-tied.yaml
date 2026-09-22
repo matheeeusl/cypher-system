@@ -1,7 +1,7 @@
 id: tongue-tied
 name:
   en: Tongue-Tied
-  pt-BR: Tradução em breve.
+  pt-BR: Calado
 description:
   en: >-
     You've never been much of a talker. When forced to interact with
@@ -11,7 +11,15 @@ description:
     of the time, you just keep mum. This makes you a listener instead—a
     careful observer. It also means that you're better at doing things
     than talking about them. You're quick to take action.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você nunca foi muito de falar. Quando forçado a interagir com os
+    outros, você nunca pensa na coisa certa a dizer — as palavras
+    simplesmente falham, ou saem completamente erradas. Você
+    frequentemente acaba dizendo exatamente a coisa errada e ofende
+    alguém sem querer. Na maior parte do tempo, você simplesmente fica
+    calado. Isso faz de você um ouvinte, em vez disso — um observador
+    cuidadoso. Também significa que você é melhor em fazer as coisas do
+    que em falar sobre elas. Você é rápido para agir.
 pool_bonus:
   - stat: might
     amount: 2
@@ -25,20 +33,26 @@ skill_training:
     choice_count: null
 inabilities:
   - en: All tasks relating to social interaction are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: Todas as tarefas relacionadas a interação social são prejudicadas.
   - en: >-
       All tasks involving verbal communication or relaying information
       are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Todas as tarefas envolvendo comunicação verbal ou transmissão de
+      informações são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: You just tagged along and no one told you to leave.
-    pt-BR: Tradução em breve.
+    pt-BR: Você simplesmente foi junto, e ninguém mandou você ir embora.
   - en: >-
       You saw something important the other PCs did not and (with some
       effort) managed to relate it to them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você viu algo importante que os outros personagens não viram e
+      (com algum esforço) conseguiu contar a eles.
   - en: You intervened to save one of the other PCs when they were in danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você interveio para salvar um dos outros personagens quando ele
+      estava em perigo.
   - en: One of the other PCs recruited you for your talents.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens o recrutou por seus talentos.

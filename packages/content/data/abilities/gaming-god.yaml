@@ -10,7 +10,13 @@ description:
     - Free level of Effort
 
     - Automatic minor effect
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Toda vez que você usar Esforço em uma ação de Intelecto, adicione
+    um dos seguintes aprimoramentos à ação (à sua escolha):
+
+    - Nível gratuito de Esforço
+
+    - Efeito menor automático
 cost: null
 action_type: enabler
 sources:

@@ -1,5 +1,5 @@
 id: vocal-translator
-name: { en: 'Vocal translator', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Vocal translator', 'pt-BR': 'Tradutor vocal' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -8,5 +8,6 @@ effect_text:
     For twenty-four hours per cypher level, translates everything said by the
     user into a language that anyone can understand.
   pt-BR: >-
-    Tradução em breve.
+    Por vinte e quatro horas por nível da cifra, traduz tudo o que o
+    usuário disser para um idioma que qualquer um consiga entender.
 effect_table: null

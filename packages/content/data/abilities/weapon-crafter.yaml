@@ -9,7 +9,7 @@ description:
     tasks related to crafting bows and fletching arrows; if your
     weapon is a sword, you are trained in tasks for forging swords
     and sharpening blades; and so on.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em tarefas de fabricação associadas à sua arma escolhida. Por exemplo, se sua arma for um arco, você é treinada em tarefas relacionadas a fabricar arcos e emplumar flechas; se sua arma for uma espada, é treinada em tarefas para forjar espadas e afiar lâminas; e assim por diante.'
 cost: null
 action_type: enabler
 sources:

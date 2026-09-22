@@ -11,7 +11,7 @@ description:
     within short range. All tasks related to resisting persuasion,
     intimidation, and fear are hindered by two steps for affected
     targets.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Por um minuto ou até você usar alguma outra habilidade de manipulação sonora, você emite um ronco subsônico que a maioria das criaturas vivas não consegue ouvir, mas que ainda assim tem efeito sobre elas. O efeito dura um minuto e afeta todas as criaturas que você selecionar dentro de uma distância curta. Todas as tarefas relacionadas a resistir a persuasão, intimidação e medo são dificultadas em dois níveis para os alvos afetados.'
 cost:
   pool: intellect
   amount: 2

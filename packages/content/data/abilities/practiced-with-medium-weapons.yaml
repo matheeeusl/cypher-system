@@ -6,7 +6,7 @@ description:
   en: >-
     You can use light and medium weapons without penalty. If you wield
     a heavy weapon, attacks with it are hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue usar armas leves e médias sem penalidade. Se empunhar uma arma pesada, os ataques com ela são dificultados.'
 cost: null
 action_type: enabler
 sources:

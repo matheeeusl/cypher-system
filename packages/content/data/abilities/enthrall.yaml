@@ -9,7 +9,7 @@ description:
     but speak (you can't even move), the other creature takes no
     actions other than to defend itself, even over multiple rounds. If
     the creature is attacked, the effect ends.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto fala, você prende e mantém a atenção de outra criatura, mesmo que ela não consiga entendê-lo. Enquanto você não fizer nada além de falar (você nem consegue se mover), a outra criatura não realiza ações além de se defender, mesmo ao longo de múltiplos rounds. Se a criatura for atacada, o efeito termina.'
 cost:
   pool: intellect
   amount: 1

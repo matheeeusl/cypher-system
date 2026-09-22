@@ -4,7 +4,7 @@ name:
   pt-BR: Frota de Robôs
 description:
   en: 'You build up to four level 2 robot assistants, each no larger than yourself. (They are in addition to the assistant you built at first tier with Robot Assistant, which may have seen a few upgrades since then.) You and the GM must work out the details of these additional robots. If a robot is destroyed, you can build a new one (or repair the old one from its parts) after a week of half-time labor. Instead of this ability, you can select one of the following abilities: Expert Follower, Robot Control, or Robot Upgrade.'
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você constrói até quatro assistentes robóticos de nível 2, cada um não maior que você. (Eles se somam ao assistente que construiu no primeiro grau com Assistente Robótico, que pode ter recebido alguns aprimoramentos desde então.) Você e o Mestre devem definir os detalhes desses robôs adicionais. Se um robô for destruído, você pode construir um novo (ou reparar o antigo a partir de suas peças) depois de uma semana de trabalho em meio período. Em vez desta habilidade, você pode escolher uma das seguintes: Seguidor Especialista, Controle de Robôs, ou Aprimoramento Robótico.'
 cost: null
 action_type: enabler
 sources:

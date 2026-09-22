@@ -8,7 +8,7 @@ description:
     Effort on the attack, you get a free level of Effort on the damage.
     (If fighting unarmed, this attack is made with both fists or both
     feet together.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa uma arma contundente ou de lâmina com as duas mãos e aplica Esforço no ataque, ganha um nível gratuito de Esforço no dano. (Se estiver lutando desarmada, este ataque é feito com os dois punhos ou os dois pés juntos.)'
 cost:
   pool: might
   amount: 2

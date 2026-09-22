@@ -9,7 +9,7 @@ description:
     same device or making attacks against the same foe). Once you
     move on to a new task, the familiarity with the old task
     fades—unless you start doing it again.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você aprende com ações repetitivas. Ganha um bônus de +1 em rolagens para tarefas semelhantes após a primeira vez (como operar o mesmo dispositivo ou fazer ataques contra o mesmo inimigo). Assim que você passa para uma nova tarefa, a familiaridade com a antiga se desvanece — a menos que volte a fazê-la.'
 cost: null
 action_type: enabler
 sources:

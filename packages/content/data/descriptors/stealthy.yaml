@@ -1,14 +1,19 @@
 id: stealthy
 name:
   en: Stealthy
-  pt-BR: Tradução em breve.
+  pt-BR: Furtivo
 description:
   en: >-
     You're sneaky, slippery, and fast. These talents help you hide, move
     quietly, and pull off tricks that require sleight of hand. Most
     likely, you're wiry and small. However, you're not much of a
     sprinter—you're more dexterous than fleet of foot.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é ardiloso, escorregadio e rápido. Esses talentos o ajudam a se
+    esconder, se mover em silêncio e realizar truques que exigem
+    destreza manual. Muito provavelmente, você é magro e franzino. No
+    entanto, você não é muito bom em corridas — é mais ágil de mãos do
+    que de pés.
 pool_bonus:
   - stat: speed
     amount: 2
@@ -22,20 +27,26 @@ skill_training:
     choice_count: null
 inabilities:
   - en: You're sneaky but not fast. All movement-related tasks are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: Você é ardiloso, mas não é rápido. Todas as tarefas relacionadas a movimento são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       You attempted to steal from one of the other PCs. That character
       caught you and forced you to come along with them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tentou roubar um dos outros personagens. Esse personagem o
+      pegou e o forçou a acompanhá-lo.
   - en: >-
       You were tailing one of the other PCs for reasons of your own,
       which brought you into the action.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você estava seguindo um dos outros personagens por motivos
+      próprios, o que o levou a se envolver na ação.
   - en: An NPC employer secretly paid you to get involved.
-    pt-BR: Tradução em breve.
+    pt-BR: Um empregador PNJ o pagou secretamente para se envolver.
   - en: >-
       You overheard the other PCs talking about a topic that interested
       you, so you decided to approach the group.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você ouviu os outros personagens falando sobre um assunto que lhe
+      interessou, então decidiu se aproximar do grupo.

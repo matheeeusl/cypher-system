@@ -8,7 +8,7 @@ description:
     higher than normal. If given a week and access to a computer, you
     can tinker with app and programmed cyphers, changing their
     function to that of another cypher you had in the past.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Todas as cifras de aplicativo e cifras programadas funcionam em um nível acima do normal. Se tiver uma semana e acesso a um computador, você pode mexer em cifras de aplicativo e programadas, mudando sua função para a de outra cifra que teve no passado.'
 cost: null
 action_type: enabler
 sources:

@@ -14,7 +14,7 @@ description:
     temporal destination, you and the other time travelers are
     stunned for one minute. In order to return to your original time,
     you must use this ability again.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você e até três personagens dispostos que escolher dentro de uma distância imediata viajam para um ponto no tempo que você especificar ao usar esta habilidade. O ponto no tempo deve estar dentro de dez anos do presente. Para cada nível de Esforço aplicado, você pode viajar mais dez anos ou levar mais três criaturas com você. Ao aparecer no novo momento no tempo, você o faz na mesma posição em que estava ao usar esta habilidade. Ao chegar ao seu destino temporal, você e os outros viajantes do tempo ficam atordoados por um minuto. Para retornar ao seu tempo original, você deve usar esta habilidade novamente.'
   # Note: source cost is printed as "10+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 10 Intellect points here, flagged for schema review

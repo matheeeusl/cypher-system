@@ -10,38 +10,130 @@ sidebar:
 tableOfContents: false
 ---
 
+import ReferenceTable from '@components/ReferenceTable.astro'
+
+
 ## Tente Qualquer Coisa!
 
-Tradução em breve.
+O Mestre define a dificuldade. Se você tentar novamente, use 1 nível de Esforço.
 
 ## Modificando a Dificuldade
 
-Tradução em breve.
+<ReferenceTable
+  caption="Habilidades e seu efeito na dificuldade"
+  columns={[
+    { label: 'Habilidades (2 etapas)', kind: 'name' },
+    { label: 'Dificuldade', kind: 'value' },
+  ]}
+  rows={[
+    ['Incapacidade', '+1'],
+    ['Praticado (padrão)', '—'],
+    ['Treinado', '−1'],
+    ['Especializado', '−2'],
+  ]}
+/>
+
+**Recursos (2 passos):** Um item útil, uma ajuda ou uma circunstância favorável.
+
+**Esforço (6 passos):** Custa 3 pontos de Reserva + 2 pontos por nível adicional.
+
 
 ## Rolagens Especiais
 
-Tradução em breve.
+<ReferenceTable
+  caption="Rolagens especiais"
+  columns={[
+    { label: 'd20', kind: 'key', width: '5rem' },
+    { label: 'Efeitos', kind: 'prose' },
+  ]}
+  rows={[
+    ['1', 'Intrusão do GM, sem XP'],
+    ['17', '+1 de dano'],
+    ['18', '+2 de dano'],
+    ['19', 'Efeito menor ou +3 de dano'],
+    ['20', 'Efeito maior ou +4 de dano, Reserva gasta reembolsada'],
+  ]}
+/>
 
 ## Pagando Custos
 
-Tradução em breve.
+Custo total da reserva, subtraia a margem.
 
 ## Movimento
 
-Tradução em breve.
+**Imediata:** realizar uma ação
+
+**Curta:** ação; tarefa de Velocidade (dificuldade 4) para outra ação
+
+**Longa:** tarefa de Velocidade (dificuldade 4)
 
 ## Gastando XP
 
-Tradução em breve.
+<ReferenceTable
+  caption="Gastando XP"
+  columns={[
+    { label: 'XP', kind: 'key', width: '5rem' },
+    { label: 'Efeito', kind: 'prose' },
+  ]}
+  rows={[
+    ['1 XP', 'rolar novamente, evitar interferência do mestre, criar interferência do jogador'],
+    ['2 XP', 'habilidade ou capacidade temporária'],
+    ['3 XP', 'emprego, título, riqueza, lar'],
+    ['4 XP', 'progressão do personagem — aumentar Reserva, Esforço ou Margem'],
+  ]}
+/>
 
 ## Alcance e Distância
 
-Tradução em breve.
+<ReferenceTable
+  caption="Alcance e Distância"
+  columns={[
+    { label: 'Distância', kind: 'name' },
+    { label: 'Alcance', kind: 'value' },
+  ]}
+  rows={[
+    ['Imediato', '10 pés (3 m)'],
+    ['Curto', '50 pés (15 m)'],
+    ['Longo', '100 pés (30 m)'],
+    ['Muito longo', '500 pés (150 m)'],
+  ]}
+/>
 
 ## Cifras
 
-Tradução em breve.
+Use cifras, você encontrará mais!
 
 ## Combate
 
-Tradução em breve.
+<ReferenceTable
+  caption="Armas"
+  columns={[
+    { label: 'Arma', kind: 'name' },
+    { label: 'Dano', kind: 'value' },
+    { label: 'Ataque', kind: 'value' },
+  ]}
+  rows={[
+    ['Leve', '2', 'facilitado'],
+    ['Média', '4', '—'],
+    ['Pesada', '6', 'duas mãos  '],
+  ]}
+/>
+
+**Dano por Esforço:** +3 por nível
+
+<ReferenceTable
+  caption="Armadura"
+  columns={[
+    { label: 'Armadura', kind: 'name' },
+    { label: 'Bônus de armadura', kind: 'value' },
+    { label: 'Custo de velocidade', kind: 'value' },
+  ]}
+  rows={[
+    ['Leve', '+1', '+2'],
+    ['Média', '+2', '+3'],
+    ['Pesada', '+3', '+4'],
+  ]}
+/>
+
+O restante do Capítulo 1 encontra-se nestas páginas: [Mecânicas Básicas](/en/rules/core-mechanics/), [Combate](/en/rules/combat/), [Cifras e Artefatos](/en/rules/cyphers-and-artifacts/) e [Experiência e Evolução](/en/rules/experience-and-advancement/). Os preços e as tabelas completas de equipamentos estão na página [Equipamentos](/en/equipment/).
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Quick Reference" (p. 10)._

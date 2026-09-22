@@ -4,7 +4,7 @@ name:
   pt-BR: Quebrar a Mente
 description:
   en: Using your clever words and knowledge of others, and given a couple of rounds of conversation to gain a few specific pieces of context regarding your target, you can utter a sentence designed to cause your target immediate psychological distress. If the target can hear and understand you, it suffers 6 points of Intellect damage (ignores Armor) and forgets the last day of its life, which might mean it forgets you and how it came to be where it currently is. In addition to the normal options for using Effort, you can choose to use Effort to attempt to break the mind of one additional target who can hear and understand you.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Usando suas palavras astutas e seu conhecimento sobre os outros, e após alguns rounds de conversa para obter algumas informações específicas sobre seu alvo, você pode proferir uma frase projetada para causar sofrimento psicológico imediato ao seu alvo. Se o alvo puder ouvi-la e compreendê-la, ele sofre 6 pontos de dano de Intelecto (ignora Armadura) e esquece o último dia de sua vida, o que pode significar que se esquece de você e de como chegou onde está agora. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para tentar quebrar a mente de um alvo adicional que possa ouvi-la e compreendê-la.'
   # Note: source cost is printed as "7+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Intellect points here, flagged for schema review (same

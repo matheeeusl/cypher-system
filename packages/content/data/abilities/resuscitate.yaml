@@ -4,7 +4,7 @@ name:
   pt-BR: Ressuscitar
 description:
   en: You can resuscitate a character who is up to two steps down on the damage track as your action. The target ascends one step on the damage track. If a character has dropped all three steps on the damage track (dead) but is otherwise in one piece and less than a minute has passed since they descended to the third step, you can resuscitate them if you succeed at a level 6 healing task. If you use this ability on an NPC who has no health but has been dead for less than a minute and is otherwise in one piece, the NPC is resuscitated with 1 health.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode ressuscitar um personagem que esteja até dois níveis abaixo na trilha de dano como sua ação. O alvo sobe um nível na trilha de dano. Se um personagem tiver descido todos os três níveis na trilha de dano (morto), mas estiver de resto inteiro e menos de um minuto tiver passado desde que desceu ao terceiro nível, você pode ressuscitá-lo se tiver sucesso em uma tarefa de cura de nível 6. Se você usar esta habilidade em um PNJ que não tenha saúde, mas tenha morrido há menos de um minuto e esteja de resto inteiro, o PNJ é ressuscitado com 1 de saúde.'
 cost:
   pool: intellect
   amount: 6

@@ -4,7 +4,7 @@ name:
   pt-BR: De Novo e De Novo
 description:
   en: You can take an additional action in a round in which you have already acted.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode realizar uma ação adicional em um round no qual já tenha agido.'
 cost:
   pool: speed
   amount: 8

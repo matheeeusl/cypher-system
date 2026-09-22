@@ -11,7 +11,7 @@ description:
     damage from the more injured drone to the primary drone's health.
     If one of the two drones is destroyed, you can repair the primary
     drone as described in Drone Buddy.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu drone principal pode se dividir em dois drones idênticos com todas as habilidades do drone principal. Os drones divididos ficam cada um um nível abaixo do drone principal (então um drone principal de nível 4 se torna dois drones de nível 3). Quando se recombinam, aplique o dano do drone mais ferido à saúde do drone principal. Se um dos dois drones for destruído, você pode reparar o drone principal conforme descrito em Drone Companheiro.'
   # Note: source tag is "Action to split or recombine."
 cost: null
 action_type: action_to_split_or_recombine

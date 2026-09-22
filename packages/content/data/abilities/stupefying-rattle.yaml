@@ -9,7 +9,7 @@ description:
     otherwise hit you if you succeed on a difficulty 2 Speed task.
     When you do, the misdirected attack hits another creature you
     choose within immediate range of both you and the attacking foe.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Com um floreio serpenteante e um chocalho fantasmagórico ecoando de alguma fonte de outro mundo, você redireciona um ataque corpo a corpo que de outra forma a atingiria, se tiver sucesso em uma tarefa de Velocidade de dificuldade 2. Ao fazer isso, o ataque desviado atinge outra criatura que você escolher dentro de uma distância imediata tanto de você quanto do inimigo atacante.'
 cost:
   pool: speed
   amount: 4

@@ -16,7 +16,20 @@ description:
     - You know what people are probably thinking and what they will
     say before they say it. For the next ten minutes, you gain an
     asset to tasks involving interaction and deception.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Com base em todas as variáveis que você percebe, você pode prever
+    os próximos minutos. Isso tem os seguintes efeitos:
+
+    - Pelos próximos dez minutos, suas rolagens de defesa ganham um
+    recurso.
+
+    - Você tem uma espécie de senso de perigo. Pelos próximos dez
+    minutos, ganha um recurso em ver através de decepções e tentativas
+    de traição, assim como em evitar armadilhas e emboscadas.
+
+    - Você sabe o que as pessoas provavelmente estão pensando e o que
+    dirão antes de dizerem. Pelos próximos dez minutos, ganha um
+    recurso em tarefas envolvendo interação e decepção.
 cost:
   pool: intellect
   amount: 6

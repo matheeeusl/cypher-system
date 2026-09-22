@@ -11,7 +11,7 @@ description:
     instead of a free recovery roll. If you also have the Inspiration
     ability, the target who gains a free action also gains an asset on
     it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você profere palavras de encorajamento e inspiração a todos dentro de uma distância imediata que você designou como inocentes com sua habilidade Designação. Eles ganham imediatamente uma rolagem de recuperação gratuita. Uma pessoa que você escolher pode ganhar uma ação gratuita imediata em vez de uma rolagem de recuperação gratuita. Se você também tiver a habilidade Inspiração, o alvo que ganha uma ação gratuita também ganha um recurso nela.'
 cost:
   pool: intellect
   amount: 3

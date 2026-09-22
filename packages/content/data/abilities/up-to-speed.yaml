@@ -9,7 +9,7 @@ description:
     each round) for up to ten minutes (about 35 miles), after which
     you must stop and make a recovery roll. (Move up to 322 kph
     [about 600 m each round] for up to ten minutes [about 56 km].)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você não fizer nada além de se mover por três ações seguidas, acelera enormemente e pode se mover a até 322 km/h (cerca de 600 metros a cada round) por até dez minutos (cerca de 56 km), após o que deve parar e fazer uma rolagem de recuperação.'
 cost: null
 action_type: enabler
 sources:

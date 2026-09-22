@@ -1,5 +1,5 @@
 id: visual-displacement-device
-name: { en: 'Visual displacement device', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Visual displacement device', 'pt-BR': 'Dispositivo de deslocamento visual' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -9,5 +9,7 @@ effect_text:
     appear around the user, giving them an asset to Speed defense actions for
     ten minutes per cypher level.
   pt-BR: >-
-    Tradução em breve.
+    Projeta imagens holográficas do usuário para confundir atacantes. As
+    imagens surgem ao redor do usuário, concedendo-lhe um recurso em
+    ações de defesa de Velocidade por dez minutos por nível da cifra.
 effect_table: null

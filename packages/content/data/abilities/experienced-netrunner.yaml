@@ -9,7 +9,7 @@ description:
     task you have succeeded at previously. On an even result, the
     task you're attempting is eased by two steps. On a roll of 1, the
     task is hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quanto mais você pratica netrunning, mais proficiente se torna. Para ostentar sua experiência, role 1d6 ao completar uma tarefa de netrunning na qual já teve sucesso anteriormente. Em um resultado par, a tarefa que está tentando é facilitada em dois níveis. Em uma rolagem de 1, a tarefa é dificultada.'
 cost:
   pool: intellect
   amount: 3

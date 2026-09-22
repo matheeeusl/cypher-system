@@ -1,5 +1,5 @@
 id: visage-changer
-name: { en: 'Visage changer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Visage changer', 'pt-BR': 'Mudador de aparência' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -10,5 +10,8 @@ effect_text:
     higher). The change takes ten minutes to apply and lasts for twenty-four
     hours.
   pt-BR: >-
-    Tradução em breve.
+    Muda a aparência de uma criatura do tamanho de um humano, concedendo
+    um recurso em tarefas de disfarce (facilitando-as em dois níveis se
+    a cifra for de nível 5 ou superior). A mudança leva dez minutos para
+    ser aplicada e dura vinte e quatro horas.
 effect_table: null

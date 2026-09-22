@@ -16,7 +16,7 @@ description:
     damage rather than to ease the task, you deal 2 additional points
     of damage per level of Effort (instead of 3 points); targets in
     the area take 1 point of damage even if you fail the attack roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você invoca dezenas de raios de luar em uma área curta adjacente. Todos dentro da área sofrem 4 pontos de dano de frio místico e brilham com um luar fraco equivalente a uma vela por um minuto (uma criatura pode encerrar esse brilho antecipadamente como uma ação ou entrando em uma área que o luar não consiga penetrar, como uma caverna profunda ou um cômodo sem janelas). Você automaticamente sabe se alguma criatura na área é uma metamorfa (como um lobisomem), embora isso não lhe diga que tipo de metamorfa ela é ou qual é sua verdadeira forma. Se você aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); alvos na área sofrem 1 ponto de dano mesmo que você falhe na rolagem de ataque.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

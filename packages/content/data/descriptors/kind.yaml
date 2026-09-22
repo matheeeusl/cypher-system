@@ -1,7 +1,7 @@
 id: kind
 name:
   en: Kind
-  pt-BR: Tradução em breve.
+  pt-BR: Gentil
 description:
   en: >-
     It's always been easy for you to see things from the point of view
@@ -14,14 +14,25 @@ description:
     kindness—true sadists, narcissists, and similar folk will only waste
     your energy. So you deal with them swiftly, saving your kindness for
     those who deserve it and can benefit from your attention.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Sempre foi fácil para você ver as coisas do ponto de vista de outras
+    pessoas. Essa habilidade fez de você alguém sensível ao que elas
+    realmente querem ou precisam. Da sua perspectiva, você só está
+    aplicando o velho provérbio de que "é mais fácil pegar moscas com mel
+    do que com vinagre", mas os outros simplesmente veem seu
+    comportamento como bondade. É claro que ser gentil exige tempo, e o
+    seu é limitado. Você aprendeu que uma pequena parcela das pessoas não
+    merece seu tempo ou sua gentileza — verdadeiros sádicos, narcisistas
+    e gente do tipo só vão desperdiçar sua energia. Então você lida com
+    elas rapidamente, guardando sua bondade para quem a merece e pode se
+    beneficiar da sua atenção.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Karma
-      pt-BR: Tradução em breve.
+      pt-BR: Carma
     description:
       en: >-
         Sometimes, strangers just help you out. To gain the aid of a
@@ -33,7 +44,16 @@ characteristics:
         opportunities. For example, if you are captured, a guard
         loosens your bonds slightly, brings you water, or delivers a
         message.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Às vezes, estranhos simplesmente o ajudam. Para obter a ajuda de
+        um estranho, você deve usar uma rolagem de recuperação de uma
+        ação, dez minutos ou uma hora (sem obter seu benefício de cura),
+        e o Mestre determina a natureza da ajuda que você recebe.
+        Normalmente, o ato de bondade não é suficiente para reverter
+        completamente uma situação ruim, mas pode atenuá-la e levar a
+        novas oportunidades. Por exemplo, se você for capturado, um
+        guarda pode afrouxar levemente suas amarras, trazer água ou
+        entregar uma mensagem.
 skill_training:
   - skill_id: pleasant-social-interactions
     choice_count: null
@@ -41,20 +61,32 @@ inabilities:
   - en: >-
       Being kind comes with a few risks. All tasks related to detecting
       falsehoods are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Ser gentil traz alguns riscos. Todas as tarefas relacionadas a
+      detectar mentiras são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: A PC needed your help, and you agreed to come along as a kindness.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens precisava da sua ajuda, e você concordou
+      em acompanhá-lo por gentileza.
   - en: >-
       You gave the wrong person access to your money, and now you need
       to make some back.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você deu à pessoa errada acesso ao seu dinheiro, e agora precisa
+      recuperar parte dele.
   - en: >-
       You're ready to take your benevolence on the road and help more
       people than you could if you didn't join the PCs.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você está pronto para levar sua bondade pelo mundo e ajudar mais
+      pessoas do que conseguiria se não se juntasse aos outros
+      personagens.
   - en: >-
       Your job, which seemed like it would be personally rewarding, is
       the opposite. You join the PCs to escape the drudgery.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Seu trabalho, que parecia que seria pessoalmente gratificante, é o
+      oposto disso. Você se junta aos outros personagens para escapar da
+      rotina cansativa.

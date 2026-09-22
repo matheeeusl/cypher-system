@@ -9,7 +9,7 @@ description:
     to affect it. If the GM feels it appropriate to the circumstances,
     you can disintegrate a portion of an object (the total volume of
     which is smaller than you) rather than the entire thing.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você desintegra um objeto menor que você cujo nível seja igual ou inferior ao seu grau. Você deve tocar o objeto para afetá-lo. Se o Mestre considerar apropriado às circunstâncias, você pode desintegrar uma parte de um objeto (cujo volume total seja menor que você) em vez do objeto inteiro.'
 cost:
   pool: intellect
   amount: 7

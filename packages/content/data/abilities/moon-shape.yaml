@@ -19,7 +19,7 @@ description:
     for one hour. If you did not kill and eat at least one
     substantial creature while in beast form, the penalty increases
     to -2 and affects all your rolls for the next day.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se transforma em uma fera natural monstruosa, como um lobo, urso ou outra criatura terrestre, por até uma hora. Se tentar se transformar durante o dia quando não está no subsolo profundo (ou de outra forma longe da luz do dia), deve aplicar um nível de Esforço. Na sua nova forma, você adiciona 8 pontos à sua Reserva de Força, ganha +2 na sua Margem de Força, adiciona 2 pontos à sua Reserva de Velocidade, e ganha +2 na sua Margem de Velocidade. Reverter à sua forma normal é uma tarefa de dificuldade 2. Na forma bestial, você fica propensa a acessos de fúria (desencadeados por Intrusão do Mestre), durante os quais ataca toda criatura viva dentro de uma distância curta, e a única forma de encerrar a fúria é reverter à sua forma normal. De qualquer forma, depois de reverter à sua forma normal, você sofre uma penalidade de -1 em todas as rolagens por uma hora. Se não matou e comeu pelo menos uma criatura substancial na forma bestial, a penalidade aumenta para -2 e afeta todas as suas rolagens pelo dia seguinte.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

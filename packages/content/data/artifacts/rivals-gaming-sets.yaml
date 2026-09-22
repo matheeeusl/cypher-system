@@ -1,11 +1,11 @@
 id: rivals-gaming-sets
 name:
   en: Rival's Gaming Sets
-  pt-BR: Tradução em breve.
+  pt-BR: Conjunto de Jogo do Rival
 level: '1d6'
 form:
   en: Gaming set
-  pt-BR: Tradução em breve.
+  pt-BR: Conjunto de jogo
 effect_text:
   en: >-
     This pair of identical gaming sets includes two of each of everything
@@ -18,7 +18,18 @@ effect_text:
     later. Either side can also cause the gaming set to begin a new game.
     When discovered, a PC might only find one of the rival's gaming sets,
     and there may already be a game in progress waiting to be resumed.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Este par de conjuntos de jogo idênticos inclui duas unidades de cada
+    peça necessária para jogar. Os conjuntos podem ser sincronizados,
+    permitindo que os donos joguem a qualquer distância, mesmo através dos
+    planos de existência (embora a dilatação do tempo possa interferir no
+    ritmo da partida). Enquanto sincronizados, mover qualquer peça em um
+    dos conjuntos move a peça correspondente no outro. O conjunto pode ser
+    dessincronizado, permitindo que o dono o guarde, o transporte e
+    continue o jogo depois. Qualquer um dos lados também pode fazer o
+    conjunto começar uma nova partida. Ao ser descoberto, um PJ pode
+    encontrar apenas um dos conjuntos de jogo do rival, e pode já haver
+    uma partida em andamento esperando para ser retomada.
 effect_table: null
 flavor_quote: null
 depletion_die: '—'

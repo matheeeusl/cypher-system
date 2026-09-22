@@ -14,7 +14,7 @@ description:
     destructive resonance in a physical melee weapon for one minute or
     until you let go of it. All attacks made with the target weapon
     inflict 1 additional point of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você direciona um feixe de som concentrado a um alvo dentro de uma distância longa, causando 2 pontos de dano e induzindo uma onda destrutiva ressonante no corpo dele. A cada round após este ataque inicial, você pode fazer outra rolagem para a onda destrutiva causar 1 ponto adicional de dano ao alvo. Se você falhar nessa rolagem, a onda destrutiva termina. Diferente do ataque inicial, a onda destrutiva ignora Armadura. Alternativamente, você pode estabelecer uma ressonância destrutiva em uma arma corpo a corpo física por um minuto ou até soltá-la. Todos os ataques feitos com a arma-alvo causam 1 ponto adicional de dano.'
 cost:
   pool: might
   amount: 2

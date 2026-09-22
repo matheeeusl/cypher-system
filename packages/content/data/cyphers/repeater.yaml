@@ -1,5 +1,5 @@
 id: repeater
-name: { en: 'Repeater', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Repeater', 'pt-BR': 'Repetidor' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6 + 1'
@@ -9,5 +9,8 @@ effect_text:
     with ammo fabricated by the cypher. The weapon wielder can aim the free
     shot at the same target, or at a different target next to the first one.
   pt-BR: >-
-    Tradução em breve.
+    Pelo próximo minuto, a arma à distância do usuário dispara uma vez
+    adicional com munição fabricada pela cifra. Quem empunha a arma pode
+    mirar o disparo gratuito no mesmo alvo, ou em um alvo diferente ao
+    lado do primeiro.
 effect_table: null

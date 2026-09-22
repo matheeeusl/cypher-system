@@ -1,5 +1,5 @@
 id: stunt-boost
-name: { en: 'Stunt boost', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Stunt boost', 'pt-BR': 'Impulso de Manobra' }
 category: power_boost
 page_ref: 'Claim the Sky, page 158'
 level_range: '1d6 + 2'
@@ -10,5 +10,9 @@ effect_text:
     7 or higher). It has no effect on power stunts that don't require a
     successful power stunt task.
   pt-BR: >-
-    Tradução em breve.
+    Esta cifra facilita em quatro níveis a próxima tarefa de manobra de
+    poder difícil, formidável ou impossível do usuário (facilitada em
+    cinco níveis se a cifra for de nível 7 ou superior). Ela não tem
+    efeito sobre manobras de poder que não exigem uma tarefa de manobra
+    de poder bem-sucedida.
 effect_table: null

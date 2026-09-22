@@ -9,7 +9,7 @@ description:
     defense tasks of that type, or specialized if you are already
     trained. You can select this ability up to three times. Each time
     you select it, you must choose a different type of defense task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um tipo de tarefa de defesa, mesmo uma na qual já seja treinada: Força, Velocidade ou Intelecto. Você fica treinada em tarefas de defesa desse tipo, ou especializada se já for treinada. Você pode escolher esta habilidade até três vezes. Cada vez que a escolher, deve escolher um tipo diferente de tarefa de defesa.'
 cost: null
 action_type: enabler
 sources:

@@ -1,5 +1,5 @@
 id: shocker
-name: { en: 'Shocker', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Shocker', 'pt-BR': 'Eletrochoque' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6 + 4'
@@ -8,5 +8,6 @@ effect_text:
     Delivers a powerful burst of electricity that shocks any creature touched,
     inflicting damage equal to the cypher's level.
   pt-BR: >-
-    Tradução em breve.
+    Emite uma poderosa descarga elétrica que choca qualquer criatura
+    tocada, infligindo dano igual ao nível da cifra.
 effect_table: null

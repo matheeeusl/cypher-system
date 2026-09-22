@@ -1,7 +1,7 @@
 id: dishonorable
 name:
   en: Dishonorable
-  pt-BR: Tradução em breve.
+  pt-BR: Desonrado
 description:
   en: >-
     There is no honor among thieves—or betrayers, backstabbers, liars, or
@@ -10,19 +10,28 @@ description:
     Regardless, you are willing to do whatever it takes to get your own
     way. Honor, ethics, and principles are merely words. In your
     estimation, they have no place in the real world.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Não há honra entre ladrões — nem entre traidores, trapaceiros,
+    mentirosos ou vigaristas. Você é tudo isso, e ou não perde o sono por
+    causa disso, ou nega a verdade para os outros ou para si mesmo. De
+    qualquer forma, você está disposto a fazer o que for preciso para
+    conseguir o que quer. Honra, ética e princípios são apenas palavras.
+    Na sua avaliação, eles não têm lugar no mundo real.
 pool_bonus:
   - stat: speed
     amount: 4
 characteristics:
   - name:
       en: Just Desserts
-      pt-BR: Tradução em breve.
+      pt-BR: Bem Merecido
     description:
       en: >-
         When the GM gives another player an experience point to award to
         someone for a GM intrusion, that player cannot give it to you.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Quando o Mestre dá a outro jogador um ponto de experiência para
+        conceder a alguém por uma intrusão do Mestre, esse jogador não
+        pode concedê-lo a você.
 skill_training:
   - skill_id: deception
     choice_count: null
@@ -32,20 +41,28 @@ skill_training:
     choice_count: null
 inabilities:
   - en: People don't like or trust you. Pleasant social interactions are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      As pessoas não gostam de você nem confiam em você. Interações
+      sociais agradáveis são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       You are interested in what the PCs are doing, so you lied to them
       to get into their group.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você está interessado no que os outros personagens estão fazendo,
+      então mentiu para eles para entrar no grupo.
   - en: >-
       While skulking about, you overheard the PCs' plans and realized
       that you wanted in.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Enquanto se esgueirava por aí, você ouviu os planos dos outros
+      personagens e percebeu que queria participar.
   - en: >-
       One of the other PCs invited you, having no idea of what you're
       truly like.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convidou, sem fazer ideia de como você
+      realmente é.
   - en: You bullied your way in with intimidation and bluster.
-    pt-BR: Tradução em breve.
+    pt-BR: Você se impôs à força com intimidação e fanfarronice.

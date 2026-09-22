@@ -4,7 +4,7 @@ name:
   pt-BR: Casca de Matéria Escura
 description:
   en: For the next minute, you cover yourself with a shell of dark matter. Your appearance becomes a dark silhouette, and you gain an asset to sneaking tasks and gain +1 to your Armor. The dark matter shell works seamlessly with your desires, and if you apply a level of Effort to any physical task while the shell persists, you can apply an additional free level of Effort to that same task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelo próximo minuto, você se cobre com uma casca de matéria escura. Sua aparência se torna uma silhueta escura, e você ganha um recurso em tarefas de furtividade e +1 na sua Armadura. A casca de matéria escura funciona perfeitamente com seus desejos, e se você aplicar um nível de Esforço a qualquer tarefa física enquanto a casca persistir, pode aplicar um nível gratuito adicional de Esforço a essa mesma tarefa.'
 cost:
   pool: intellect
   amount: 5

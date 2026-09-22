@@ -10,7 +10,7 @@ description:
     level to 8. You can have only one maximized subtle cypher at a
     time. You can't use this ability again until after you've taken a
     ten-hour recovery action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha uma cifra sutil que você carrega. Seu nível se torna o máximo possível para essa cifra. Por exemplo, um auxiliar de meditação tem uma faixa de nível de 1d6 + 2, então maximizar essa cifra muda seu nível para 8. Você só pode ter uma cifra sutil maximizada por vez. Você não pode usar esta habilidade novamente até depois de realizar uma ação de recuperação de dez horas.'
 cost: null
 action_type: enabler
 sources:

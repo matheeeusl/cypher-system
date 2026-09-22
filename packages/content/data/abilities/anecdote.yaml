@@ -9,7 +9,7 @@ description:
     anecdote. For the next hour, those who pay attention to your story
     are trained in a task you choose that's related to the anecdote, as
     long as it's not an attack or defense task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode levantar o ânimo de um grupo de criaturas e ajudá-las a se unir, entretendo-as com uma anedota inspiradora ou perspicaz. Pela próxima hora, aqueles que prestarem atenção à sua história ficam treinados em uma tarefa à sua escolha relacionada à anedota, desde que não seja uma tarefa de ataque ou defesa.'
   # Note: source tag is "Action to initiate, one minute to complete."
 cost:
   pool: intellect

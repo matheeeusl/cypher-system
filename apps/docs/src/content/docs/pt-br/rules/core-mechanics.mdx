@@ -11,33 +11,173 @@ tableOfContents: false
 ---
 
 import DifficultyWheel from '@components/DifficultyWheel.astro'
+import EntityLink from '@components/EntityLink.astro'
+import ReferenceTable from '@components/ReferenceTable.astro'
 
 ## Dificuldade da Tarefa
 
 <DifficultyWheel alt="Roda de dificuldade das tarefas: da dificuldade 0 (Rotineira) à 10 (Impossível) ao redor de um d20, cada uma com seu número alvo e chance de sucesso. Os mesmos valores estão na tabela abaixo." />
 
-Tradução em breve.
+<ReferenceTable
+  caption="Dificuldade da Tarefa"
+  columns={[
+    { label: 'Dificuldade da Tarefa', kind: 'key' },
+    { label: 'Número alvo', kind: 'value' },
+    { label: 'Taxa de sucesso da tarefa', kind: 'value' },
+    { label: 'Descrição', kind: 'name' },
+    { label: 'Orientação', kind: 'prose' },
+  ]}
+  rows={[
+    ['0', '0', '100%', 'Rotineira', 'Qualquer um consegue fazer isso praticamente sempre.'],
+    ['1', '3', '90%', 'Simples', 'A maioria das pessoas consegue fazer isso na maior parte das vezes.'],
+    ['2', '6', '75%', 'Padrão', 'Exige atenção, mas a maioria das pessoas geralmente consegue fazer isso.'],
+    ['3', '9', '60%', 'Exigente', 'Exige foco; a maioria das pessoas tem uma boa chance de sucesso.'],
+    ['4', '12', '45%', 'Difícil', 'Pessoas treinadas têm uma boa chance de sucesso.'],
+    ['5', '15', '30%', 'Desafiadora', 'Pessoas treinadas frequentemente falham.'],
+    ['6', '18', '15%', 'Intimidante', 'Pessoas comuns quase nunca conseguem.'],
+    ['7', '21', '—', 'Formidável', 'Impossível sem habilidades ou grande esforço.'],
+    ['8', '24', '−15%', 'Heroica', 'Uma tarefa digna de contos narrados por anos a fio.'],
+    ['9', '27', '−30%', 'Imortal', 'Uma tarefa digna de lendas que perduram por toda a vida.'],
+    [
+    '10',
+    '30',
+    '−45%',
+    'Impossível',
+    "Uma tarefa que humanos comuns nem cogitariam (mas que não viola as leis da física).",
+    ],
+  ]}
+/>
 
 ## Modificando a Dificuldade
 
-Tradução em breve.
+Tudo tem um nível. O nível de uma criatura determina a dificuldade de acertá-la, de evitá-la e de persuadi-la. O nível de uma porta indica a dificuldade de arrombá-la. O nível de uma fechadura indica a dificuldade de abri-la.
+
+Reduzir a dificuldade significa facilitar a tarefa, enquanto aumentá-la significa dificultá-la. Perícias podem facilitar uma tarefa em até dois níveis. Existem quatro níveis diferentes de treinamento em perícias. Você é considerado "Praticante", a menos que seja indicado o contrário.
+
+- **Inaptidão:** Dificultada em um nível.
+- **Praticante:** Nenhuma alteração na dificuldade da tarefa.
+- **Treinado:** Facilitada em um nível.
+- **Especializado:** Facilitada em dois níveis.
+
+**Recursos** podem facilitar uma tarefa em até dois níveis. Qualquer coisa que auxilie na realização de uma tarefa é um recurso. Um pé de cabra é um recurso ao forçar a abertura de uma porta; o mesmo vale para a cooperação de outro personagem jogador (PJ) ou de um seguidor competente.
+
+O **Esforço** pode facilitar uma tarefa em até seis níveis. Você facilita uma tarefa em um nível para cada nível de Esforço utilizado, gastando pontos da Reserva (*Pool*) do atributo que o Mestre associar à tarefa — 3 pontos pelo primeiro nível, mais 2 pontos por cada nível adicional, até um limite de níveis igual à sua pontuação de Esforço.
+
+Algumas habilidades especiais podem conceder a você um nível de Esforço gratuito.
 
 ## Rolando o Dado
 
-Tradução em breve.
+O número-alvo é o valor que você deve obter no d20 para ter sucesso. O número-alvo equivale a três vezes a dificuldade da tarefa — após aplicar todas as modificações.
+
+**Tentando novamente uma tarefa após uma falha:** Você deve aplicar pelo menos um nível de Esforço na nova ação. Nem sempre é possível tentar realizar uma tarefa novamente (isso não se aplica a situações dinâmicas, como atacar em combate).
 
 ## Rolagens Especiais
 
-Tradução em breve.
+Ao rolar o dado, certos resultados no d20 podem desencadear efeitos especiais, como dano aumentado. Você pode sugerir seus próprios efeitos menores ou maiores ao Mestre.
+
+<ReferenceTable
+  caption="Rolagens Especiais"
+  columns={[
+    { label: 'd20', kind: 'key', width: '5rem' },
+    { label: 'Efeitos', kind: 'prose' },
+  ]}
+  rows={[
+    ['1', 'Intrusão do Mestre, nenhum XP concedido'],
+    ['17', 'Em combate, causa +1 de dano'],
+    ['18', 'Em combate, causa +2 de dano'],
+    ['19', 'Efeito menor (ou causa +3 de dano)'],
+    ['20', 'Efeito maior (ou causa +4 de dano), pontos de Reserva gastos na ação são devolvidos'],
+  ]}
+/>
 
 ## Encontros, Rodadas, Iniciativa e Contagem de Tempo
 
-Tradução em breve.
+Um encontro pode ser qualquer coisa: um combate contra um inimigo, a travessia dramática de um rio caudaloso ou uma negociação tensa com uma autoridade importante. Um encontro é composto por uma ou mais rodadas.
 
-## Equipamento e Moeda
+### Contagem de Tempo
 
-Tradução em breve.
+**Iniciativa:** Quando muitos personagens — incluindo NPCs — querem realizar uma ação ao mesmo tempo, o Mestre pede uma rolagem de iniciativa para determinar quem age primeiro. Uma rolagem de iniciativa é uma tarefa de Velocidade.
+
+**Rodadas:** Uma rodada dura de cinco a dez segundos. A duração é variável — uma rodada pode ser um pouco mais longa que a seguinte. Em média, há cerca de dez rodadas em um minuto. Em cada rodada, você — e cada um dos outros personagens — tem uma vez para agir.
+
+**Ação:** Na sua vez, você escolhe qual ação realizar. Ações geralmente envolvem uma tarefa, mas algumas podem exigir mais de uma. Como é sempre o jogador quem rola os dados, você realiza ações e tarefas em resposta às ações de outros personagens. Defender-se de um ataque inimigo é uma ação; é apenas uma ação que você não escolheu realizar, pois não é a sua vez.
+
+**Tarefa:** Um teste de um dos seus atributos — Vigor, Velocidade ou Intelecto — cuja dificuldade é determinada pelo Mestre.
+
+### Duração
+
+Em um encontro, uma duração de um minuto geralmente se estende pelo restante do encontro. Da mesma forma, uma habilidade com duração de dez minutos pode ser considerada, com segurança, equivalente ao tempo de uma conversa detalhada, ao tempo necessário para explorar rapidamente uma área pequena ou ao tempo de descanso após uma atividade extenuante.
+
+Além de determinar a dificuldade, o Mestre pode definir um tempo mínimo necessário para realizar uma tarefa — minutos, horas ou até mesmo dias, semanas, meses e anos.
+
+### Equipamento e Moeda
+
+Além de armas, armaduras e cifras ou artefatos manifestos, o equipamento desempenha apenas um papel secundário no jogo. É mais importante focar no que você pode fazer do que no que você possui, embora o equipamento adequado possa oferecer uma vantagem em uma tarefa relacionada.
+
+O Mestre determina quais equipamentos, mercadorias e serviços estão disponíveis, suas propriedades e como os custos e as categorias de preço são utilizados e contabilizados.
 
 ## Agindo
 
-Tradução em breve.
+Qualquer ação significativa que você realize — atacar um inimigo, resistir à hipnose, saltar sobre um abismo, intimidar um prisioneiro, negociar com um comerciante, ajudar um aliado ou ativar uma habilidade especial ou um *cypher* — conta como uma ação.
+
+Você pode tentar qualquer coisa. Perícias, recursos e Esforço não são obrigatórios, mas ajudam a alcançar o sucesso e também a descrever como você está realizando a ação.
+
+O Mestre determina como os NPCs reagem aos seus sucessos ou fracassos.
+
+### Ações Adicionais
+
+Além das ações abordadas em detalhes neste capítulo, ações comuns incluem:
+
+- Fabricar, Construir e Reparar
+- Interagir com Criaturas
+- Observar ou Escutar
+- Mover um Objeto Pesado
+- Operar ou Desativar um Dispositivo ou Veículo
+- Montar ou Pilotar
+- Mover-se Furtivamente
+- Nadar
+- Compreender, Identificar ou Recordar
+
+### Esperando
+
+Você pode esperar para reagir à ação de outro personagem. Você decide qual ação desencadeará a sua; se essa ação ocorrer, você realiza a sua primeiro (a menos que agir primeiro não faça sentido, como atacar um inimigo antes que ele surja no seu campo de visão).
+
+Esperar é uma boa estratégia para lidar com um atacante à distância que sai de trás de uma cobertura, desfere um ataque e volta a se esconder. Você pode dizer: "Vou esperar ele aparecer de trás da cobertura para então atirar nele".
+
+### Custo Inicial
+
+Usar habilidades especiais ou Esforço implica gastar pontos de Reserva de atributos. O Mestre também pode atribuir um custo inicial a uma tarefa particularmente desgastante, apenas pela tentativa de realizá-la. Some todos os custos em pontos de Reserva e, em seguida, subtraia sua Margem.
+
+### Movimento
+
+Em combate, você geralmente está a uma distância imediata da maioria dos outros combatentes, a menos que o Mestre decida o contrário.
+
+**Mover-se a uma Distância Imediata:** Você pode ajustar sua posição e ainda realizar qualquer outra ação — recuar alguns passos para usar uma habilidade, deslocar-se para ajudar um aliado ou avançar por uma porta que acabou de derrubar. Você pode se mover antes ou depois de realizar sua ação.
+
+**Mover-se a uma Distância Curta:** Você pode se mover a uma distância curta como uma ação de rotina. Se obtiver sucesso em uma tarefa de Velocidade de dificuldade 4, você pode realizar um movimento curto e executar outra ação física (relativamente simples), como um ataque.
+
+**Mover-se a uma Distância Longa:** Você pode usar sua ação para se mover a uma distância longa como uma tarefa de Velocidade de dificuldade 4.
+
+**Modificadores de Movimento:** Perícias de movimento — como escalar, saltar ou manobrar em gravidade zero — facilitam tarefas de movimento relacionadas. Obstáculos, terrenos difíceis e fortes correntes de vento ou água podem dificultá-las.
+
+Antes de se mover e realizar outra ação, é uma boa ideia perguntar ao Mestre se o que você deseja fazer é possível.
+
+Exemplo de habilidade: <EntityLink kind="ability" id="fleet-of-foot" />
+
+### Alcance e Distância
+
+<ReferenceTable
+  caption="Alcance e Distância"
+  columns={[
+    { label: 'Distância', kind: 'name' },
+    { label: 'Alcance', kind: 'value' },
+  ]}
+  rows={[
+    ['Distância imediata', 'Até 3 metros (10 pés)'],
+    ['Distância curta', 'Até 15 metros (50 pés)'],
+    ['Distância longa', 'Até 30 metros (100 pés)'],
+    ['Distância muito longa', 'Até 150 metros (500 pés)'],
+  ]}
+/>
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — Capítulo 1, pp. 11–13._

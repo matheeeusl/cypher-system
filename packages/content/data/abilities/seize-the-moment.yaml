@@ -9,7 +9,7 @@ description:
     already taken a turn in the round. You don't take an action during
     the next round, unless you apply a level of Effort when you use
     Seize the Moment.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você tiver sucesso em uma rolagem de defesa de Velocidade para resistir a um ataque, ganha uma ação. Você pode usar a ação imediatamente, mesmo que já tenha tido seu turno no round. Você não realiza uma ação no round seguinte, a menos que aplique um nível de Esforço ao usar Aproveitar o Momento.'
   # Note: source cost is printed as "4+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Speed points here (same approximation used for

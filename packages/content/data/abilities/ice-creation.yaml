@@ -15,7 +15,7 @@ description:
     you can choose to use Effort to create objects larger than you.
     For each level of Effort used in this way, you can create an
     object up to twice again as large as you.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria um objeto sólido de gelo do seu tamanho ou menor. O objeto é rústico e não pode ter partes móveis, então você pode fazer uma espada, um escudo, uma escada curta, e assim por diante. Seus objetos de gelo são resistentes como ferro, mas se você não estiver em contato constante com eles, funcionam por apenas 1d6 + 6 rounds antes de quebrar ou derreter. Por exemplo, você pode fazer e empunhar uma espada de gelo, mas se der a outro personagem, a espada não durará tanto para esse personagem. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para criar objetos maiores que você. Para cada nível de Esforço usado dessa forma, você pode criar um objeto até duas vezes maior que você.'
   # Note: source cost is printed as "4+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 4 Intellect points here, flagged for schema review

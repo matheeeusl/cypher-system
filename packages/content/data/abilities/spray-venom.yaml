@@ -15,7 +15,7 @@ description:
     use, even on a miss, you inflict 1 point of damage. However,
     spinning as you spray venom is dizzying, leaving you dazed for a
     round afterward, during which time all your tasks are hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você sibila e libera um jato de veneno ardente e dissolvente de carne em um alvo dentro de uma distância curta, causando 5 pontos de dano. Mesmo em um erro, você causa 1 ponto de dano. Se aplicar um nível de Esforço ao fazer um ataque com esta habilidade (para aumentar as chances de acerto ou para aumentar o dano), pode também optar por girar enquanto espirra veneno, atacando todas as criaturas que escolher dentro de uma distância curta, e a chance melhorada de acertar ou causar dano se aplica a cada ataque. Como no uso base, mesmo em um erro, você causa 1 ponto de dano. Porém, girar enquanto espirra veneno é vertiginoso, deixando-a atordoada por um round depois, durante o qual todas as suas tarefas são dificultadas.'
   # Note: source cost is printed as "5+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Speed points here, flagged for schema review (same

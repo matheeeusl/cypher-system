@@ -6,7 +6,7 @@ description:
   en: >-
     Your attacks against objects inflict 4 additional points of damage
     when you use a melee weapon that you wield in two hands.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seus ataques contra objetos causam 4 pontos adicionais de dano quando você usa uma arma corpo a corpo empunhada com as duas mãos.'
 cost: null
 action_type: enabler
 sources:

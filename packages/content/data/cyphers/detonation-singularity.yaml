@@ -1,5 +1,5 @@
 id: detonation-singularity
-name: { en: 'Detonation (singularity)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (singularity)', 'pt-BR': 'Detonação (singularidade)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 387'
 level_range: '10'
@@ -12,5 +12,15 @@ effect_text:
     (The singularity detonation is a greatly feared device, sought by those interested in truly horrific destruction.)
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode e cria uma singularidade momentânea que rasga o tecido do
+    universo. Inflige 20 pontos de dano a todos dentro de uma distância
+    curta, puxando-os (ou seus restos) para uma distância imediata (se
+    possível). Personagens jogadores dentro do raio de alcance que
+    falharem em uma rolagem de defesa de Força descem um degrau no
+    marcador de dano. (A detonação de singularidade é um dispositivo
+    extremamente temido, cobiçado por quem busca uma destruição
+    verdadeiramente horrenda.) (Todas as detonações que causam dano
+    infligem no mínimo 2 pontos de dano a quem estiver no raio de
+    alcance, independentemente das rolagens de ataque ou defesa.)
 effect_table: null

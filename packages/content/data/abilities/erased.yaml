@@ -11,7 +11,7 @@ description:
     you, upon checking their records they're told that you're not who
     you seem to be, but rather someone unimportant, which you can use
     as an asset in any related persuasion or deception interaction.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se infiltrou tão completamente nas redes que câmeras conectadas não conseguem identificá-lo. Se seu rosto aparecer em dispositivos automáticos de gravação, vulnerabilidades que você já explorou o impedem de ser reconhecido. Quando agentes de segurança o reconhecem, ao verificar seus registros são informados de que você não é quem parece ser, mas sim alguém sem importância, o que você pode usar como um recurso em qualquer interação relacionada de persuasão ou decepção.'
 cost: null
 action_type: enabler
 sources:

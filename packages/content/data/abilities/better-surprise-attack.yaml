@@ -4,7 +4,7 @@ name:
   pt-BR: Ataque Surpresa Aprimorado
 description:
   en: If attacking from a hidden vantage, with surprise, or before an opponent has acted, you get an asset on the attack (if you have Surprise Attack, this is in addition to the asset from that ability). On a successful hit with this surprise attack, you inflict 2 additional points of damage (for a total of 4 additional points of damage if you have Surprise Attack).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se atacar a partir de um ponto escondido, com surpresa, ou antes que um oponente tenha agido, você ganha um recurso no ataque (se você tiver Ataque Surpresa, isso se soma ao recurso dessa habilidade). Em um acerto bem-sucedido com este ataque surpresa, você inflige 2 pontos adicionais de dano (totalizando 4 pontos adicionais de dano se você tiver Ataque Surpresa).'
 cost: null
 action_type: enabler
 sources:

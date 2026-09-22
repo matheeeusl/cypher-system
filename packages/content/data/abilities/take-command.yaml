@@ -9,7 +9,7 @@ description:
     turn is eased, and a hit deals 3 additional points of damage. If
     your command is to perform a task other than an attack, the task is
     eased as if it benefited from a free level of Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você emite um comando específico a outro personagem. Se esse personagem escolher obedecer, qualquer ataque que tentar no seu próximo turno é facilitado, e um acerto causa 3 pontos adicionais de dano. Se seu comando for para realizar uma tarefa que não seja um ataque, a tarefa é facilitada como se se beneficiasse de um nível gratuito de Esforço.'
 cost:
   pool: intellect
   amount: 3

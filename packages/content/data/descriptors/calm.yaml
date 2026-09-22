@@ -1,7 +1,7 @@
 id: calm
 name:
   en: Calm
-  pt-BR: Tradução em breve.
+  pt-BR: Calmo
 description:
   en: >-
     You've spent most of your life in sedentary pursuits—books, movies,
@@ -10,14 +10,20 @@ description:
     physical. You're not weak or feeble, necessarily (although this is a
     good descriptor for characters who are elderly), but you have no
     experience in more physical activities.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você passou a maior parte da vida em atividades sedentárias — livros,
+    filmes, hobbies e afins — em vez de atividades ativas. Você é versado
+    em toda sorte de estudos acadêmicos ou outras atividades
+    intelectuais, mas nada físico. Você não é necessariamente fraco ou
+    débil (embora este seja um bom descritor para personagens idosos),
+    mas não tem experiência em atividades mais físicas.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Trivia
-      pt-BR: Tradução em breve.
+      pt-BR: Curiosidade
     description:
       en: >-
         You can come up with a random fact pertinent to the current
@@ -26,28 +32,42 @@ characteristics:
         logically read or seen in the past. You can do this one time,
         although the ability is renewed each time you make a recovery
         roll.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você pode se lembrar de um fato aleatório pertinente à situação
+        atual sempre que quiser. Isso é sempre uma questão de fato, não
+        conjectura ou suposição, e deve ser algo que você poderia
+        logicamente ter lido ou visto no passado. Você pode fazer isso
+        uma vez, embora a habilidade seja renovada a cada vez que você
+        faz uma rolagem de recuperação.
 skill_training:
   - skill_id: null
     choice_count: 4
 inabilities:
   - en: You're just not a fighter. All physical attacks are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você simplesmente não é um lutador. Todos os ataques físicos são
+      prejudicados.
   - en: >-
       You're not the outdoorsy type. All climbing, running, jumping, and
       swimming tasks are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você não é do tipo aventureiro ao ar livre. Todas as tarefas de
+      escalada, corrida, salto e natação são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       You read about the current situation somewhere and decided to
       check it out for yourself.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você leu sobre a situação atual em algum lugar e decidiu conferir
+      por conta própria.
   - en: You were in the right (wrong?) place at the right (wrong?) time.
-    pt-BR: Tradução em breve.
+    pt-BR: Você estava no lugar certo (errado?) na hora certa (errada?).
   - en: >-
       While avoiding an entirely different situation, you walked into
       your current situation.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Enquanto evitava uma situação completamente diferente, você acabou
+      na sua situação atual.
   - en: One of the other PCs dragged you into it.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens o arrastou para isso.

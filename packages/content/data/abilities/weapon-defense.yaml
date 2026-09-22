@@ -4,7 +4,7 @@ name:
   pt-BR: Defesa com Arma
 description:
   en: While your chosen weapon is in your hand(s), you are trained in Speed defense rolls.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto sua arma escolhida estiver em sua(s) mão(s), você é treinada em rolagens de defesa de Velocidade.'
 cost: null
 action_type: enabler
 sources:

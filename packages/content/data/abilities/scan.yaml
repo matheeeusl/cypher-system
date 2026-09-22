@@ -21,7 +21,7 @@ description:
     gas. In the third, you might suspect that the creature is not
     very intelligent, but scans, like looks, can be deceiving. Many
     materials and energy fields prevent or resist scanning.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você faz uma varredura em uma área do tamanho de um cubo de 3 metros (10 pés), incluindo todos os objetos ou criaturas dentro dessa área. A área deve estar dentro de uma distância curta. Fazer a varredura de uma criatura ou objeto sempre revela seu nível. Você também descobre quaisquer fatos que o Mestre considere pertinentes sobre a matéria e energia naquela área. Por exemplo, você pode descobrir que a caixa de madeira contém um dispositivo de metal e plástico. Pode descobrir que o cilindro de vidro está cheio de gás venenoso, e que seu suporte metálico tem um campo elétrico percorrendo-o que se conecta a uma malha metálica no chão. Pode descobrir que a criatura à sua frente é um mamífero com um cérebro pequeno. Porém, esta habilidade não lhe diz o que a informação significa. Assim, no primeiro exemplo, você não sabe o que o dispositivo de metal e plástico faz. No segundo, não sabe se pisar no chão faz o cilindro liberar o gás. No terceiro, você pode suspeitar que a criatura não é muito inteligente, mas varreduras, como aparências, podem enganar. Muitos materiais e campos de energia impedem ou resistem à varredura.'
 cost:
   pool: intellect
   amount: 2

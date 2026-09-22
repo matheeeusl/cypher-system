@@ -11,7 +11,7 @@ description:
     They can swarm about and hinder any or all opponents' tasks.
     While the creatures are in long range, you can speak to them
     telepathically and perceive through their senses.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você estiver em um local onde seja possível que as criaturas da sua habilidade Influenciar Enxame venham até você, você convoca um enxame delas por uma hora. Durante essa hora, elas fazem o que você comanda telepaticamente, desde que estejam dentro de uma distância longa. Elas podem se aglomerar e dificultar quaisquer tarefas de oponentes. Enquanto as criaturas estiverem dentro da distância longa, você pode falar com elas telepaticamente e perceber através de seus sentidos.'
 cost:
   pool: intellect
   amount: 4

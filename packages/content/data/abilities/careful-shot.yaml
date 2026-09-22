@@ -10,7 +10,7 @@ description:
     successful attack, and if you spend a turn lining up your shot,
     each level of Effort instead adds 5 points of damage to a
     successful attack.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode gastar pontos da sua Reserva de Velocidade ou da sua Reserva de Intelecto para aplicar níveis de Esforço e aumentar o dano da sua arma de fogo. Cada nível de Esforço adiciona 3 pontos de dano a um ataque bem-sucedido, e se você gastar um turno mirando com cuidado, cada nível de Esforço adiciona 5 pontos de dano a um ataque bem-sucedido.'
 cost: null
 action_type: enabler
 sources:

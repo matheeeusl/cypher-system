@@ -16,7 +16,7 @@ description:
     Intellect points. (If the target number you roll is below the
     failure range, you might succeed on the task, but the forced
     rerolling continues.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Antes era mais fácil ter sorte o tempo todo. Agora, isso tem um preço. Quando você rolar um 1, pode rolar novamente. Se rolar novamente e obtiver 1, 2 ou 3, deve rolar mais uma vez, desta vez gastando um nível de Esforço mais o custo base da Reserva para ativar esta habilidade (5 pontos de Intelecto). Se rolar entre 1 e 5 na segunda nova rolagem, deve rolar novamente, gastando um nível de Esforço e pagando o custo base outra vez (5 pontos de Intelecto). Essa progressão de novas rolagens forçadas, junto com uma faixa de falha crescente, continua até que você role acima da faixa de falha ou fique sem pontos de Intelecto. (Se o número-alvo que você rolar estiver abaixo da faixa de falha, você pode ter sucesso na tarefa, mas a nova rolagem forçada continua.)'
   # Note: source cost is printed as "5+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Intellect points here, flagged for schema review (same

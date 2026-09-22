@@ -8,7 +8,7 @@ description:
     5 within short range. If you are successful, the target cannot
     attack you for one minute, during which time it follows your
     verbal commands if it can hear and understand you.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode comandar um espírito ou morto-vivo animado de até nível 5 dentro de uma distância curta. Se for bem-sucedido, o alvo não pode atacá-lo por um minuto, durante o qual segue suas ordens verbais se puder ouvi-lo e compreendê-lo.'
 cost:
   pool: intellect
   amount: 3

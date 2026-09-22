@@ -1,7 +1,7 @@
 id: foolish
 name:
   en: Foolish
-  pt-BR: Tradução em breve.
+  pt-BR: Tolo
 description:
   en: >-
     Not everyone can be brilliant. Oh, you don't think of yourself as
@@ -11,46 +11,68 @@ description:
     so why bother? You take things at face value and don't fret about
     what tomorrow might bring. People call you "idiot" or "numbskull,"
     but it doesn't faze you much.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Nem todo mundo pode ser brilhante. Ah, você não se considera
+    estúpido, e não é. É só que os outros talvez tenham um pouco mais
+    de… sabedoria. Percepção. Você prefere atravessar a vida de cabeça
+    erguida e deixar que os outros se preocupem com as coisas.
+    Preocupar-se nunca ajudou você, então por que se incomodar? Você
+    aceita as coisas pelo que parecem ser e não se aflige com o que o
+    amanhã pode trazer. As pessoas o chamam de "idiota" ou "cabeça-dura",
+    mas isso não o abala muito.
 pool_bonus:
   - stat: intellect
     amount: -4
 characteristics:
   - name:
       en: Carefree
-      pt-BR: Tradução em breve.
+      pt-BR: Despreocupado
     description:
       en: >-
         You succeed more on luck than anything. Every time you roll for
         a task, roll twice and take the higher result.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tem sucesso mais por sorte do que por qualquer outra coisa.
+        Toda vez que fizer uma rolagem para uma tarefa, role duas vezes e
+        use o resultado mais alto.
   - name:
       en: Intellect Weakness
-      pt-BR: Tradução em breve.
+      pt-BR: Fraqueza de Intelecto
     description:
       en: >-
         Any time you spend points from your Intellect Pool, it costs you
         1 more point than usual.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Sempre que você gastar pontos da sua Reserva de Intelecto, isso
+        custa 1 ponto a mais do que o normal.
 skill_training: []
 inabilities:
   - en: Any Intellect defense task is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: Qualquer tarefa de defesa de Intelecto é prejudicada.
   - en: >-
       Any task that involves seeing through a deception, an illusion, or
       a trap is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Qualquer tarefa que envolva perceber um engano, uma ilusão ou uma
+      armadilha é prejudicada.
 additional_equipment: null
 connection_options:
   - en: Who knows? Seemed like a good idea at the time.
-    pt-BR: Tradução em breve.
+    pt-BR: Quem sabe? Pareceu uma boa ideia na hora.
   - en: >-
       Someone asked you to join up with the other PCs. They told you not
       to ask too many questions, and that seemed fine to you.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Alguém pediu para você se juntar aos outros personagens. Disseram
+      para você não fazer muitas perguntas, e isso pareceu razoável.
   - en: >-
       Your parent (or a parental/mentor figure) got you involved to give
       you something to do and maybe "teach you some sense."
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Seu pai ou sua mãe (ou uma figura parental/mentora) o envolveu
+      nisso para lhe dar algo para fazer e, talvez, "lhe ensinar algum
+      juízo".
   - en: The other PCs needed some muscle who wouldn't overthink things.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens precisavam de músculo que não ficasse
+      pensando demais nas coisas.

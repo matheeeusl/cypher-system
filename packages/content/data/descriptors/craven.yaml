@@ -1,7 +1,7 @@
 id: craven
 name:
   en: Craven
-  pt-BR: Tradução em breve.
+  pt-BR: Covarde
 description:
   en: >-
     Courage fails you at every turn. You lack the willpower and resolve
@@ -15,7 +15,19 @@ description:
     risks. Others may have suffered in your place, and you might be the
     first to admit this fact, but secretly you feel intense relief from
     having avoided an unthinkable and terrible fate.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    A coragem falha com você a cada momento. Falta-lhe a força de vontade
+    e a determinação para se manter firme diante do perigo. O medo corrói
+    seu coração, consumindo sua mente, levando-o à distração até que você
+    não aguente mais. Na maioria das vezes, você recua diante de
+    confrontos. Você foge de ameaças e vacila diante de decisões
+    difíceis. Ainda assim, por mais que o medo o persiga e possivelmente
+    o envergonhe, sua natureza covarde se mostra uma aliada útil de
+    tempos em tempos. Ouvir seus medos já o ajudou a escapar do perigo e
+    evitar riscos desnecessários. Outros podem ter sofrido em seu lugar,
+    e você talvez seja o primeiro a admitir esse fato, mas, secretamente,
+    sente um alívio intenso por ter evitado um destino terrível e
+    impensável.
 pool_bonus:
   - stat: speed
     amount: 2
@@ -31,25 +43,37 @@ inabilities:
   - en: >-
       You do not willingly enter dangerous situations. Any initiative
       actions (to determine who goes first in combat) are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você não entra voluntariamente em situações perigosas. Quaisquer
+      ações de iniciativa (para determinar quem age primeiro em combate)
+      são prejudicadas.
   - en: >-
       You fall to pieces when you have to undertake a potentially
       dangerous task alone. Any such task (such as attacking a creature
       by yourself) is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você desmorona quando precisa realizar sozinho uma tarefa
+      potencialmente perigosa. Qualquer tarefa desse tipo (como atacar
+      uma criatura sozinho) é prejudicada.
 additional_equipment:
   en: You have a good luck charm or protective device to keep you out of harm's way.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem um amuleto da sorte ou um dispositivo de proteção para
+    mantê-lo fora de perigo.
 connection_options:
   - en: >-
       You believe that you're being hunted, and you have hired one of
       the other PCs as your protector.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acredita que está sendo caçado e contratou um dos outros
+      personagens como seu protetor.
   - en: >-
       You seek to escape your shame and take up with capable individuals
       in the hopes of repairing your reputation.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você busca escapar da sua vergonha e se juntar a pessoas capazes na
+      esperança de reparar sua reputação.
   - en: One of the other PCs bullied you into coming along.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens o intimidou até você concordar em ir junto.
   - en: The group answered your cries for help when you were in trouble.
-    pt-BR: Tradução em breve.
+    pt-BR: O grupo atendeu aos seus pedidos de ajuda quando você estava em apuros.

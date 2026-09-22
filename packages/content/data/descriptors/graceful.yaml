@@ -1,7 +1,7 @@
 id: graceful
 name:
   en: Graceful
-  pt-BR: Tradução em breve.
+  pt-BR: Gracioso
 description:
   en: >-
     You have a perfect sense of balance, moving and speaking with grace
@@ -9,7 +9,12 @@ description:
     is perfectly suited to dance, and you use that advantage in combat to
     dodge blows. You might wear garments that enhance your agile movement
     and sense of style.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem um senso de equilíbrio perfeito, movendo-se e falando com
+    graça e beleza. Você é rápido, ágil, flexível e destro. Seu corpo é
+    perfeitamente adequado para a dança, e você usa essa vantagem em
+    combate para esquivar de golpes. Você pode usar roupas que realcem
+    seus movimentos ágeis e seu senso de estilo.
 pool_bonus:
   - stat: speed
     amount: 2
@@ -27,12 +32,16 @@ connection_options:
   - en: >-
       Against your better judgment, you joined the other PCs because you
       saw that they were in danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Contrariando seu bom senso, você se juntou aos outros personagens
+      porque viu que estavam em perigo.
   - en: >-
       One of the other PCs convinced you that joining the group would be
       in your best interests.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convenceu de que se juntar ao grupo
+      seria do seu interesse.
   - en: You're afraid of what might happen if the other PCs fail.
-    pt-BR: Tradução em breve.
+    pt-BR: Você teme o que pode acontecer se os outros personagens fracassarem.
   - en: There is reward involved, and you need the money.
-    pt-BR: Tradução em breve.
+    pt-BR: Há uma recompensa envolvida, e você precisa do dinheiro.

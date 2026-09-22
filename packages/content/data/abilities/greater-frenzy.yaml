@@ -10,7 +10,7 @@ description:
     long as you wish, but it ends if no combat is taking place within
     range of your senses. If you have the Frenzy ability, you can use
     it or this ability, but you can't use both at the same time.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando desejar, durante o combate, você pode entrar em um estado de frenesi. Nesse estado, não pode usar pontos de Intelecto, mas ganha +2 na sua Margem de Força e na sua Margem de Velocidade. Esse efeito dura enquanto você desejar, mas termina se nenhum combate estiver ocorrendo dentro do alcance dos seus sentidos. Se você tiver a habilidade Frenesi, pode usá-la ou esta habilidade, mas não pode usar ambas ao mesmo tempo.'
 cost:
   pool: intellect
   amount: 4

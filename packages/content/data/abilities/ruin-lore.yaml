@@ -7,7 +7,7 @@ description:
     You are trained in scavenging, which means you're more likely to
     find useful things, and junk that can potentially be turned into
     useful things in the ruins of what came before.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em vasculhar, o que significa que tem mais chances de encontrar coisas úteis, e sucata que pode potencialmente ser transformada em coisas úteis, nas ruínas do que veio antes.'
 cost: null
 action_type: enabler
 sources:

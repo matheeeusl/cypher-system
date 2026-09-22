@@ -8,7 +8,7 @@ description:
     an Intellect defense roll to resist a foe's attack, you gain an
     action. You can use it immediately even if you have already taken
     a turn in the round. You can use this ability once per round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você ganhar uma mão de cartas ou outra aposta, ou se tiver sucesso em uma rolagem de defesa de Intelecto para resistir ao ataque de um inimigo, ganha uma ação. Você pode usá-la imediatamente, mesmo que já tenha tido seu turno no round. Você pode usar esta habilidade uma vez por round.'
 cost:
   pool: intellect
   amount: 4

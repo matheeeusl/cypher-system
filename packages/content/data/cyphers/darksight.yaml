@@ -1,5 +1,5 @@
 id: darksight
-name: { en: 'Darksight', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Darksight', 'pt-BR': 'Visão no escuro' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6'
@@ -8,5 +8,7 @@ effect_text:
     Grants the ability to see in the dark for five hours per cypher level.
     (For a more realistic game, this cypher could instead make the user specialized in low-light spotting.)
   pt-BR: >-
-    Tradução em breve.
+    Concede a capacidade de enxergar no escuro por cinco horas por nível
+    da cifra. (Para um jogo mais realista, esta cifra pode, em vez disso,
+    tornar o usuário especializado em percepção em pouca luz.)
 effect_table: null

@@ -7,7 +7,7 @@ description:
     For the next ten minutes, if you attack someone you have
     designated as guilty with your Designation ability, you inflict 2
     additional points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelos próximos dez minutos, se você atacar alguém que designou como culpado com sua habilidade Designação, causa 2 pontos adicionais de dano.'
 cost:
   pool: might
   amount: 2

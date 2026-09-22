@@ -4,7 +4,7 @@ name:
   pt-BR: Ofensiva Cognizante
 description:
   en: During combat, your brain shifts into a sort of battle mode where all potential attacks you could make are plotted on vector graphs in your mind's eye, which always provides the best option. Your attacks are eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Durante o combate, seu cérebro muda para uma espécie de modo de batalha em que todos os ataques potenciais que você poderia fazer são plotados em gráficos vetoriais na sua mente, o que sempre oferece a melhor opção. Seus ataques são facilitados.'
 cost: null
 action_type: enabler
 sources:

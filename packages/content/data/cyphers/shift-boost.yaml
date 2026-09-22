@@ -1,5 +1,5 @@
 id: shift-boost
-name: { en: 'Shift boost', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Shift boost', 'pt-BR': 'Impulso de Mudança' }
 category: power_boost
 page_ref: 'Claim the Sky, page 158'
 level_range: '1d6 + 2'
@@ -12,5 +12,11 @@ effect_text:
     user has more than one kind of power shift (such as dexterity and
     strength), they choose which kind of power shift to boost.
   pt-BR: >-
-    Tradução em breve.
+    Esta cifra intensifica uma mudança de poder que o usuário já possui,
+    concedendo-lhe uma mudança de poder adicional naquela categoria, que
+    dura uma rodada. Por exemplo, se o usuário tem uma mudança em
+    resiliência, pode usar esta cifra para ganhar uma mudança adicional
+    em resiliência por uma rodada. Se o usuário tem mais de um tipo de
+    mudança de poder (como destreza e força), ele escolhe qual tipo de
+    mudança de poder intensificar.
 effect_table: null

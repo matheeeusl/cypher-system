@@ -3,7 +3,7 @@
 # pick up emotions or general concepts of thoughts in another language. It also
 # might vary based on the ability used.
 id: mind-meld
-name: { en: 'Mind meld', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Mind meld', 'pt-BR': 'Fusão mental' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 1'
@@ -13,5 +13,8 @@ effect_text:
     short range for up to one hour. The user can't read a target's thoughts,
     except those that are specifically "transmitted."
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário fale telepaticamente com criaturas que
+    consiga ver dentro de uma distância curta por até uma hora. O
+    usuário não consegue ler os pensamentos de um alvo, exceto aqueles
+    que forem especificamente "transmitidos".
 effect_table: null

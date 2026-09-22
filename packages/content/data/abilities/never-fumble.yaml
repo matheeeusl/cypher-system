@@ -8,7 +8,7 @@ description:
     you can ignore or countermand the GM intrusion for that roll. You
     can never be disarmed of your chosen weapon, nor will you ever
     drop it accidentally.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você rolar um 1 natural ao atacar com a arma escolhida, pode ignorar ou anular a Intrusão do Mestre para essa rolagem. Você nunca pode ser desarmada da sua arma escolhida, nem a derrubará acidentalmente.'
 cost: null
 action_type: enabler
 sources:

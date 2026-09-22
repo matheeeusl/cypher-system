@@ -7,7 +7,7 @@ description:
     You rapidly teleport multiple times in an immediate area,
     confusing your opponents and allowing you to make an additional
     melee attack this round. You can use this ability once per round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se teleporta rapidamente várias vezes em uma área imediata, confundindo seus oponentes e permitindo que faça um ataque corpo a corpo adicional neste round. Você pode usar esta habilidade uma vez por round.'
 cost:
   pool: intellect
   amount: 3

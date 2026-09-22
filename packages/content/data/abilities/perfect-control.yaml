@@ -8,7 +8,7 @@ description:
     your normal form. You can change back and forth as your action.
     When you return to your normal form, you no longer take a penalty
     to your rolls.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você não precisa mais fazer uma rolagem para usar Forma Bestial ou voltar à sua forma normal. Pode se transformar de um lado para o outro como sua ação. Ao retornar à sua forma normal, você não sofre mais penalidade em suas rolagens.'
 cost: null
 action_type: enabler
 sources:

@@ -14,7 +14,7 @@ description:
     the swarm to move heavy objects through collective effort, eat
     through wooden walls, and perform other actions suitable for a
     supernatural swarm.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você convoca um enxame de insetos em um local onde é possível que insetos apareçam. Eles permanecem por um minuto, e durante esse tempo, obedecem seu comando enquanto estiverem dentro de uma distância longa. Eles podem se aglomerar e dificultar quaisquer tarefas de qualquer criatura, ou você pode concentrar o enxame e atacar todos os alvos dentro de uma distância imediata uns dos outros (todos dentro de uma distância longa de você). O enxame atacante causa 2 pontos de dano por round. Você também pode comandar o enxame para mover objetos pesados através de esforço coletivo, comer através de paredes de madeira, e realizar outras ações adequadas a um enxame sobrenatural.'
 cost:
   pool: intellect
   amount: 6

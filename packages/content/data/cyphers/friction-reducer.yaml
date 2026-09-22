@@ -1,5 +1,5 @@
 id: friction-reducer
-name: { en: 'Friction reducer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Friction reducer', 'pt-BR': 'Redutor de atrito' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6'
@@ -9,5 +9,8 @@ effect_text:
     extremely slippery. For one hour per cypher level, movement tasks in the
     area are hindered by three steps.
   pt-BR: >-
-    Tradução em breve.
+    Espalhado por uma área de até 3 metros (10 pés) quadrados, isso
+    torna as coisas extremamente escorregadias. Por uma hora por nível
+    da cifra, tarefas de movimento na área são prejudicadas em três
+    níveis.
 effect_table: null

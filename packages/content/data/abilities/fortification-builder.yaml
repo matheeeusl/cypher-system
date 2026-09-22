@@ -4,7 +4,7 @@ name:
   pt-BR: Construtor de Fortificações
 description:
   en: Whenever you attempt a crafting task—or help in the crafting task—to build a wall or other fortification, you ease the crafting difficulty by two steps, to a minimum of difficulty 1.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sempre que você tentar uma tarefa de fabricação — ou ajudar em uma tarefa de fabricação — para construir uma muralha ou outra fortificação, você facilita a dificuldade de fabricação em dois níveis, até um mínimo de dificuldade 1.'
 cost: null
 action_type: enabler
 sources:

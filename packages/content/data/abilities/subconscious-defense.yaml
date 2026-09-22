@@ -4,7 +4,7 @@ name:
   pt-BR: Defesa Subconsciente
 description:
   en: Your subconscious constantly runs predictive models for avoiding danger. You gain an asset on your Speed defense tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu subconsciente executa constantemente modelos preditivos para evitar perigo. Você ganha um recurso em suas tarefas de defesa de Velocidade.'
 cost: null
 action_type: enabler
 sources:

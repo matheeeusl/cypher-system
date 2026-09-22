@@ -4,7 +4,7 @@ name:
   pt-BR: Queda Segura
 description:
   en: You reduce the damage from a fall by 5 points.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você reduz o dano de uma queda em 5 pontos.'
 cost: null
 action_type: enabler
 sources:

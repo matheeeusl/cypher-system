@@ -11,7 +11,7 @@ description:
     ten-hour recovery action if you are awake for the entire time). As
     part of this preparation process, you may discard any number of
     subtle cyphers you carry to make room for more subtle cyphers.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'O número de cifras sutis que você consegue carregar ao mesmo tempo aumenta em duas. Se você passar uma hora preparando sua magia, pode preencher quaisquer de seus espaços de cifra abertos com cifras sutis escolhidas aleatoriamente pelo Mestre (essa hora pode fazer parte de uma ação de recuperação de uma hora ou de dez horas, se você estiver acordada durante todo o período). Como parte desse processo de preparação, você pode descartar qualquer número de cifras sutis que carrega para abrir espaço para mais cifras sutis.'
 cost: null
 action_type: enabler
 sources:

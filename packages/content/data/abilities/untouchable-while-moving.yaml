@@ -11,7 +11,7 @@ description:
     phased, only mental attacks and special transdimensional
     energies, devices, or abilities can affect you, but likewise you
     can't attack, touch, or otherwise affect anything.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você muda seu estado de fase pelo próximo minuto, de forma que não consiga afetar nem ser afetada por matéria ou energia normal, desde que se mova pelo menos uma distância imediata a cada round enquanto estiver fora de fase. Se você não se mover no seu turno, o efeito termina. Enquanto estiver fora de fase, apenas ataques mentais e energias, dispositivos ou habilidades transdimensionais especiais podem afetá-la, mas da mesma forma você não pode atacar, tocar ou de outra forma afetar nada.'
 cost:
   pool: intellect
   amount: 4

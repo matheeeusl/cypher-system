@@ -16,7 +16,7 @@ description:
     rather than ease the task, you deal 2 additional points of damage
     per level of Effort (instead of 3 points); targets in the area
     take 1 point of damage even if you fail the attack roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu grito concentrado provoca uma ressonância destrutiva em uma criatura ou objeto dentro de uma distância longa. Nada acontece no round em que você atinge seu alvo, além de um zumbido ou som ameaçador emitido por ele. Mas no seu próximo turno, a ressonância estilhaça objetos inanimados discretos, causa dano severo a estruturas, ou causa 4 pontos de dano a uma criatura (ignora Armadura). Se você estilhaçar um objeto discreto, ele se estilhaça explosivamente, causando 1 ponto de dano a todas as criaturas e objetos dentro de uma distância imediata dele. Se você aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); alvos na área sofrem 1 ponto de dano mesmo que você falhe na rolagem de ataque.'
   # Note: source cost is printed as "5+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Might points here, flagged for schema review (same

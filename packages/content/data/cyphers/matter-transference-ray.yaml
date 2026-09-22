@@ -1,5 +1,5 @@
 id: matter-transference-ray
-name: { en: 'Matter transference ray', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Matter transference ray', 'pt-BR': 'Raio de transferência de matéria' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 3'
@@ -11,5 +11,11 @@ effect_text:
     feels it appropriate to the circumstances, only a portion of an object is
     transferred (a portion whose volume is no more than the user's).
   pt-BR: >-
-    Tradução em breve.
+    O usuário pode mirar em um objeto inanimado dentro de uma distância
+    longa que seja do seu tamanho ou menor e de nível igual ou inferior
+    ao da cifra. O objeto é transferido diretamente para um local
+    aleatório a pelo menos 160 km (100 milhas) de distância. Se o Mestre
+    considerar apropriado às circunstâncias, apenas uma parte do objeto
+    é transferida (uma parte cujo volume não seja maior que o do
+    usuário).
 effect_table: null

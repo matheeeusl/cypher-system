@@ -4,7 +4,7 @@ name:
   pt-BR: Cavaleira
 description:
   en: You are trained in riding any kind of creature that commonly serves as a mount in the setting.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em cavalgar qualquer tipo de criatura que comumente sirva como montaria no cenário.'
 cost: null
 action_type: enabler
 sources:

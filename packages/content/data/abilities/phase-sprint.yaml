@@ -16,7 +16,7 @@ description:
     Invisible Phasing, and Phase Detonation. These abilities are
     additive enablers, requiring the user to spend points for both
     abilities, and sometimes from two different Pools.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode correr até uma distância longa, desde que não realize outras ações. Durante sua ação e até o início do seu próximo turno, você fica parcialmente fora de fase, e alguns ataques passam por você inofensivamente. Enquanto fora de fase, você ganha um recurso em suas tarefas de defesa de Velocidade, mas perde qualquer benefício da armadura que estiver usando. Você não precisa correr em uma única linha reta longa ao usar Sprint Fora de Fase, podendo em vez disso zigue-zaguear, curvar, ou até retornar ao ponto de partida. Outras habilidades podem ser usadas com Sprint Fora de Fase para desbloquear efeitos adicionais, incluindo Toque Perturbador, Arranhar Existência, Fase Invisível e Detonação de Fase. Essas habilidades são habilitadoras aditivas, exigindo que a usuária gaste pontos para ambas as habilidades, e às vezes de duas Reservas diferentes.'
   # Note: source cost is printed as "1+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Speed point here, flagged for schema review (same

@@ -10,7 +10,7 @@ description:
     you are hindered until one or more of them successfully inflicts
     damage on you or one of your allies, at which time their fear
     abates.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você e aqueles com quem viaja ganharam uma reputação temível em algumas partes. Se seus inimigos já ouviram falar de você, os alvos afetados dentro do alcance auditivo ficam com medo, e todos os ataques que fizerem contra você são dificultados até que um ou mais deles cause dano com sucesso em você ou em um de seus aliados, momento em que o medo se dissipa.'
 cost:
   pool: intellect
   amount: 3

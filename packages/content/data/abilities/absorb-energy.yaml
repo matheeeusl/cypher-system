@@ -17,7 +17,7 @@ description:
     round. You can use this ability as a defense action when you're the
     target of an incoming ability. Doing so cancels the incoming
     ability, and you absorb the energy as if it were a device.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você toca um objeto e absorve sua energia. Se tocar uma cifra manifesta, você a torna inútil. Se tocar um artefato, role para verificar sua depleção. Se tocar outro tipo de máquina ou dispositivo energizado, o Mestre determina se sua energia é totalmente drenada. Em qualquer caso, você absorve energia do objeto tocado e recupera 1d10 pontos de Intelecto. Se isso lhe desse mais Intelecto do que o máximo da sua Reserva, os pontos excedentes são perdidos, e você deve fazer uma rolagem de defesa de Força. A dificuldade da rolagem é igual ao número de pontos que você absorveu acima do seu máximo. Se falhar na rolagem, você sofre 5 pontos de dano e fica incapaz de agir por um round. Você pode usar esta habilidade como uma ação de defesa quando for o alvo de uma habilidade recebida. Fazer isso cancela a habilidade recebida, e você absorve a energia como se fosse um dispositivo.'
 cost:
   pool: intellect
   amount: 7

@@ -6,7 +6,7 @@ description:
   en: >-
     You can cast any of your subtle cyphers on another creature
     instead of yourself. You must touch the creature to affect it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode conjurar qualquer uma de suas cifras sutis em outra criatura em vez de em si mesma. Você deve tocar a criatura para afetá-la.'
 cost: null
 action_type: enabler
 sources:

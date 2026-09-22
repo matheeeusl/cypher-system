@@ -8,7 +8,7 @@ description:
     Burst attack, and if successful, you blind foes for up to one
     minute with a layer of freezing ice. All tasks of blinded
     creatures are hindered by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tenta uma tarefa de Intelecto adicional como parte do seu ataque Explosão de Frio e, se bem-sucedida, cega inimigos por até um minuto com uma camada de gelo congelante. Todas as tarefas das criaturas cegas são dificultadas em dois níveis.'
 cost: null
 action_type: enabler
 sources:

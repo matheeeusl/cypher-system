@@ -1,5 +1,5 @@
 id: time-dilation-offensive
-name: { en: 'Time dilation (offensive)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Time dilation (offensive)', 'pt-BR': 'Dilatação temporal (ofensiva)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6'
@@ -9,5 +9,8 @@ effect_text:
     move at almost instantaneous speed, easing their attacks by two steps
     (three steps if the cypher is level 6 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Pelas próximas vinte e quatro horas, quando o usuário fizer um
+    ataque corpo a corpo, ele se move em uma velocidade quase
+    instantânea, facilitando seus ataques em dois níveis (três níveis se
+    a cifra for de nível 6 ou superior).
 effect_table: null

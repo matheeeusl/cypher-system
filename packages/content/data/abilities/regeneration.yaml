@@ -11,7 +11,7 @@ description:
     point each round. You must remain within immediate range of the
     target the whole time, either touching them or conversing with
     them. In no case can this raise a Pool higher than its maximum.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você restaura pontos à Reserva de Força ou Velocidade de um alvo de uma de duas formas: ou a Reserva escolhida recupera até 6 pontos, ou é restaurada a um valor total de 12. Você toma essa decisão ao iniciar esta habilidade. Os pontos são regenerados a uma taxa de 1 ponto por round. Você deve permanecer dentro de uma distância imediata do alvo o tempo todo, tocando-o ou conversando com ele. Em nenhum caso isso pode elevar uma Reserva acima do seu máximo.'
 cost:
   pool: intellect
   amount: 6

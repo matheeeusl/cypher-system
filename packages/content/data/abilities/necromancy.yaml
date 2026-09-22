@@ -14,7 +14,7 @@ description:
     state. If you have access to multiple bodies, you can create an
     additional undead creature for each additional Intellect point you
     spend when you activate the ability.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você anima o corpo de uma criatura morta de tamanho aproximado ao seu ou menor, criando uma criatura de nível 1. Ela não tem nenhuma da inteligência, memórias ou habilidades especiais que tinha em vida. A criatura segue seus comandos verbais por uma hora, após o que se torna um cadáver inerte. A menos que a criatura seja morta por dano, você pode reanimá-la novamente quando seu tempo expirar, mas qualquer dano que tinha ao ficar inerte se aplica ao seu estado recém-reanimado. Se tiver acesso a múltiplos corpos, você pode criar uma criatura morta-viva adicional para cada ponto de Intelecto adicional que gastar ao ativar a habilidade.'
   # Note: source tag is "Action to animate." Also used (verbatim) by
   # greater-necromancy and true-necromancy in this same Focus.
   # Cost is printed as "3+ Intellect points" — the schema's cost field

@@ -1,5 +1,5 @@
 id: force-screen-projector
-name: { en: 'Force screen projector', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Force screen projector', 'pt-BR': 'Projetor de anteparo de força' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6 + 3'
@@ -8,5 +8,6 @@ effect_text:
     Creates an immobile plane of solid force up to 20 feet by 20 feet (6 m by
     6 m) for one hour. The plane conforms to the space available.
   pt-BR: >-
-    Tradução em breve.
+    Cria um plano imóvel de força sólida de até 6 por 6 metros (20 por
+    20 pés) por uma hora. O plano se adapta ao espaço disponível.
 effect_table: null

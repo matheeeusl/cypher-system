@@ -17,7 +17,7 @@ description:
     you must apply two levels of Effort. When the Crowd Control ability
     ends, the creatures remember your commands but don't remember being
     controlled—your commands seemed reasonable at the time.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você controla as ações de até cinco criaturas dentro de uma distância curta. Este efeito dura um minuto. Todos os alvos devem ser de nível 2 ou inferior. Seu controle é limitado a comandos verbais simples como "Pare", "Fuja", "Siga aquele guarda", "Olhe para lá" ou "Saia do meu caminho". Todas as criaturas afetadas respondem ao comando, a menos que você as comande especificamente de outra forma. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo dos alvos ou afetar cinco pessoas adicionais. Assim, para controlar um grupo que tenha um alvo de nível 4 (dois níveis acima do limite normal) ou um grupo de quinze pessoas, você deve aplicar dois níveis de Esforço. Quando a habilidade Controle de Multidão termina, as criaturas se lembram dos seus comandos, mas não se lembram de terem sido controladas — seus comandos pareceram razoáveis na hora.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here (same approximation used for

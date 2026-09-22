@@ -7,7 +7,7 @@ description:
     You touch a creature and lines of poison crawl through their
     skin. They take 3 points of Speed damage (ignores Armor) and are
     hindered on their next turn.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você toca uma criatura e linhas de veneno se espalham pela sua pele. Ela sofre 3 pontos de dano de Velocidade (ignora Armadura) e fica dificultada no seu próximo turno.'
 cost:
   pool: intellect
   amount: 2

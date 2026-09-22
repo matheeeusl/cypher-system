@@ -11,7 +11,7 @@ description:
     made against you by affected targets within earshot are hindered
     until one or more of them successfully inflicts damage on you or
     one of your allies, at which time their fear abates.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'As pessoas conhecem seus feitos notórios, que foram contados e recontados tantas vezes que pouco se assemelham à realidade. Mas as pessoas temem seu nome quando a reconhecem (ou você se declara). Elas ficam tão amedrontadas que todos os ataques feitos contra você por alvos afetados dentro do alcance auditivo são dificultados até que um ou mais deles cause dano com sucesso em você ou em um de seus aliados, momento em que o medo se dissipa.'
 cost:
   pool: intellect
   amount: 3

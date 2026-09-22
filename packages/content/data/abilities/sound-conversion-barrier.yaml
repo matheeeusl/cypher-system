@@ -9,7 +9,7 @@ description:
     converted to surges of harmless noise similar to the sound of a
     wave crashing to shore. This ability grants you +1 Armor against
     all attacks and an additional +2 Armor against energy attacks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ataques que a atingem — especialmente ataques de energia como luz concentrada, calor, radiação e energia transdimensional — são parcialmente convertidos em surtos de ruído inofensivo semelhante ao som de uma onda quebrando na praia. Esta habilidade concede +1 de Armadura contra todos os ataques e um adicional de +2 de Armadura contra ataques de energia.'
 cost: null
 action_type: enabler
 sources:

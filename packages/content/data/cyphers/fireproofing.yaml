@@ -1,5 +1,5 @@
 id: fireproofing
-name: { en: 'Fireproofing', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Fireproofing', 'pt-BR': 'À prova de fogo' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 4'
@@ -8,5 +8,6 @@ effect_text:
     A nonliving object treated by this cypher has Armor against fire damage
     equal to the cypher's level for one day.
   pt-BR: >-
-    Tradução em breve.
+    Um objeto inanimado tratado por esta cifra ganha Armadura contra
+    dano de fogo igual ao nível da cifra por um dia.
 effect_table: null

@@ -11,7 +11,7 @@ description:
     round. For example, you could transfer 3 points of Might to Speed
     and 2 points of Intellect to Speed, which would take a total of
     five rounds.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sentar e jogar por doze horas seguidas não é algo que a maioria das pessoas consegue fazer, mas você descobriu como. Uma vez após cada rolagem de recuperação de dez horas, você pode transferir até 5 pontos entre suas Reservas em qualquer combinação, a uma taxa de 1 ponto por round. Por exemplo, você poderia transferir 3 pontos de Força para Velocidade e 2 pontos de Intelecto para Velocidade, o que levaria um total de cinco rounds.'
 cost: null
 action_type: action
 sources:

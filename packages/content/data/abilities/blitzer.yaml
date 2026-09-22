@@ -7,7 +7,7 @@ description:
     You inflict 2 additional points of damage with unarmed attacks,
     or 3 points when you are one or more steps down the intoxication
     track.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você inflige 2 pontos adicionais de dano com ataques desarmados, ou 3 pontos quando estiver um ou mais níveis abaixo na trilha de intoxicação.'
 cost: null
 action_type: enabler
 sources:

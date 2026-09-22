@@ -17,7 +17,7 @@ description:
     Effort. When the effects of the ability end, the creature remembers
     following the suggestion but can be persuaded to believe that it
     chose to do so willingly.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você sugere uma ação a uma criatura dentro de uma distância imediata. Se a ação for algo que o alvo normalmente faria de qualquer forma, ele segue sua sugestão. Se a sugestão for algo fora da natureza ou dever expresso do alvo (como pedir a um guarda que deixe um intruso passar), a sugestão falha. A criatura deve ser de nível 2 ou inferior. O efeito da sua sugestão dura até um minuto. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar em 1 o nível máximo do alvo que pode afetar. Assim, para afetar um alvo de nível 5 (três níveis acima do limite normal), você deve aplicar três níveis de Esforço. Quando os efeitos da habilidade terminam, a criatura se lembra de ter seguido a sugestão, mas pode ser persuadida a acreditar que escolheu fazê-lo por vontade própria.'
   # Note: source cost is printed as "5+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Intellect points here (same approximation used for

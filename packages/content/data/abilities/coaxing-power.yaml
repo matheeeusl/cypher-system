@@ -4,7 +4,7 @@ name:
   pt-BR: Persuadir Energia
 description:
   en: You boost the power or function of a machine so that it operates at one level higher than normal for one hour.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você intensifica o poder ou a função de uma máquina para que opere em um nível acima do normal por uma hora.'
 cost:
   pool: intellect
   amount: 2

@@ -15,7 +15,7 @@ description:
     of Effort are counted separately, so teleporting an additional
     short distance away to a location you can't see with one
     passenger costs a total of three levels of Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se teleporta instantaneamente para qualquer local dentro de uma distância curta que consiga ver. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar seu alcance, teleportar-se para um local que não consegue ver, ou levar outras pessoas com você. Cada distância curta adicional custa um nível de Esforço. Teleportar-se para um destino que não consegue ver custa um nível de Esforço. Cada alvo adicional levado com você custa um nível de Esforço (você deve tocar quaisquer alvos adicionais). Esses níveis de Esforço são contados separadamente, então teleportar-se uma distância curta adicional para um local que não consegue ver com um passageiro custa um total de três níveis de Esforço.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

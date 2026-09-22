@@ -1,11 +1,11 @@
 id: eavesdrops
 name:
   en: Eavesdrops
-  pt-BR: Tradução em breve.
+  pt-BR: Escuta-Gotas
 level: '1d6'
 form:
   en: Medicine dropper
-  pt-BR: Tradução em breve.
+  pt-BR: Conta-gotas
 effect_text:
   en: >-
     By placing one droplet in each ear, you heighten your ability to hear
@@ -15,7 +15,15 @@ effect_text:
     your own surroundings, and hear as if you were in the sensor's space
     out to a 3-foot (1 m) radius. On your turn, you can move the sensor,
     or abandon the sensor and create a new one.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Ao pingar uma gota em cada ouvido, você aprimora sua capacidade de
+    ouvir a grandes distâncias através de ambientes cheios de obstáculos.
+    Pelos próximos 10 minutos, você pode usar sua ação para criar um
+    sensor invisível dentro do alcance longo, em qualquer lugar que
+    consiga ver. Enquanto fizer isso, você fica surdo ao que acontece ao
+    seu redor e ouve como se estivesse no espaço do sensor, num raio de 1
+    metro (3 pés). Em seu turno, você pode mover o sensor ou abandoná-lo e
+    criar um novo.
 effect_table: null
 flavor_quote: null
 depletion_die: '1 in 1d6'

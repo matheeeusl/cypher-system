@@ -11,7 +11,7 @@ description:
     choose anywhere within long range. Any character or object moving
     into one side exits from the other. The door remains open for one
     minute or until you use an action to close it.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você cria uma passagem através do tempo e do espaço. O atalho se manifesta como um buraco na realidade grande o suficiente para acomodar você e criaturas do seu tamanho ou menores. Um lado da passagem aparece em qualquer lugar dentro de uma distância imediata, e o outro lado se abre em um ponto que você escolher dentro de uma distância longa. Qualquer personagem ou objeto que entrar em um lado sai pelo outro. A porta permanece aberta por um minuto ou até você usar uma ação para fechá-la.'
 cost:
   pool: intellect
   amount: 6

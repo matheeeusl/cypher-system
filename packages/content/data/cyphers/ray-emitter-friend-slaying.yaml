@@ -1,5 +1,5 @@
 id: ray-emitter-friend-slaying
-name: { en: 'Ray emitter (friend slaying)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Ray emitter (friend slaying)', 'pt-BR': 'Emissor de raio (matador de amigos)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 395'
 level_range: '1d6 + 2'
@@ -9,5 +9,7 @@ effect_text:
     cypher is level 6 or higher) that causes the target to attack its nearest
     ally for one round.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário projete um raio a até uma distância longa
+    (muito longa se a cifra for de nível 6 ou superior) que faz o alvo
+    atacar seu aliado mais próximo por uma rodada.
 effect_table: null

@@ -14,7 +14,7 @@ description:
     otherwise descend the final step on the damage track to death, a
     successful defense roll keeps you at 1 point in one Pool, and you
     remain debilitated.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Talvez a Sorte esteja zelando por você e mantendo-o longe do perigo, ou talvez você simplesmente tenha muita sorte. Quando você desceria um nível na trilha de dano, faça uma rolagem de defesa de Intelecto contra o nível do inimigo ou efeito. Se for bem-sucedido, você não desce esse nível. Se o nível fosse porque você caiu a 0 pontos em uma Reserva, você ainda está em 0 pontos; apenas não sofre os efeitos negativos de estar enfraquecido ou debilitado. Se você desceria o último nível na trilha de dano até a morte, uma rolagem de defesa bem-sucedida o mantém em 1 ponto em uma Reserva, e você permanece debilitado.'
 cost: null
 action_type: enabler
 sources:

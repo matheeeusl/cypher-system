@@ -13,7 +13,7 @@ description:
     have them produce their leader or ask that they take you to their
     leader. You gain a free level of Effort that can be applied to one
     persuasion task you attempt during this period.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você projeta confiança, conhecimento e carisma para todos que o veem pela próxima hora. Sua postura é tal que aqueles que o veem entendem automaticamente que você é alguém importante, realizado e com autoridade. Quando você fala, estranhos que ainda não estão atacando lhe dão ao menos um round para se manifestar. Se estiver falando a um grupo que consiga entendê-lo, você pode tentar fazer com que apresentem seu líder ou peçam que o levem até ele. Você ganha um nível gratuito de Esforço que pode ser aplicado a uma tarefa de persuasão que tentar durante esse período.'
 cost:
   pool: intellect
   amount: 2

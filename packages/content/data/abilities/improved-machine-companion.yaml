@@ -9,7 +9,7 @@ description:
     distance each round (and carry you) for up to ten minutes at a
     time, or to carry an extra cypher for you that doesn't count
     against your cypher limit.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'A máquina da sua habilidade Companheiro Mecânico melhora, tornando-se uma criatura de nível 5 com a capacidade de voar uma distância longa a cada round (e carregá-lo) por até dez minutos de cada vez, ou de carregar uma cifra extra para você que não conta contra o seu limite de cifras.'
 cost: null
 action_type: enabler
 sources:

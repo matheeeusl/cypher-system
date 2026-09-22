@@ -1,5 +1,5 @@
 id: perfect-memory
-name: { en: 'Perfect memory', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Perfect memory', 'pt-BR': 'Memória perfeita' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6'
@@ -10,5 +10,9 @@ effect_text:
     memory. This cypher is useful for watching someone pick a specific lock,
     enter a complex code, or do something else that happens quickly.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário grave mentalmente tudo o que vê por trinta
+    segundos por nível da cifra e armazene essa gravação permanentemente
+    em sua memória de longo prazo. Esta cifra é útil para observar
+    alguém arrombando uma fechadura específica, digitando um código
+    complexo ou fazendo algo que aconteça rapidamente.
 effect_table: null

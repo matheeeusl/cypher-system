@@ -1,7 +1,7 @@
 # Sonic holes are much-loved by thieves everywhere but can also be used for less
 # nefarious purposes, such as hunting prey and sneaking past enemies.
 id: sonic-hole
-name: { en: 'Sonic hole', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Sonic hole', 'pt-BR': 'Buraco sônico' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d6 + 2'
@@ -10,5 +10,7 @@ effect_text:
     Draws all sound within long range into the device for one round per cypher
     level. Within the affected area, no sound can be heard.
   pt-BR: >-
-    Tradução em breve.
+    Atrai todo o som dentro de uma distância longa para o dispositivo,
+    por uma rodada por nível da cifra. Dentro da área afetada, nenhum
+    som pode ser ouvido.
 effect_table: null

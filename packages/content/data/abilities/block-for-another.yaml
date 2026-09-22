@@ -8,7 +8,7 @@ description:
     against an ally near you. Choose one creature within immediate
     range. You provide an asset to that creature's Speed defense
     tasks. You can't use Quick Block while using Block for Another.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você usar uma arma leve ou média, pode bloquear ataques feitos contra um aliado próximo a você. Escolha uma criatura dentro de uma distância imediata. Você concede um recurso às tarefas de defesa de Velocidade dessa criatura. Você não pode usar Bloqueio Rápido enquanto usa Bloquear pelo Outro.'
 cost: null
 action_type: enabler
 sources:

@@ -9,7 +9,7 @@ description:
     you can fire your weapon at up to three targets (all next to one
     another) at once. Make a separate attack roll against each
     target. Each attack is hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se uma arma tem a capacidade de disparar tiros rápidos sem recarregar (geralmente chamada de arma de tiro rápido, como uma besta de manivela), você pode disparar sua arma contra até três alvos (todos adjacentes entre si) de uma vez. Faça uma rolagem de ataque separada contra cada alvo. Cada ataque é dificultado.'
 cost:
   pool: speed
   amount: 3

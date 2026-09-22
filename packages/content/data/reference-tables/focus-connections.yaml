@@ -6,206 +6,205 @@
 # faithfully as printed, not a transcription error. "99–00" is standard d100
 # notation for the 100th result.
 #
-# All pt-BR values are placeholders ("Tradução em breve."), consistent with
-# every other not-yet-translated field across this project.
+# All pt-BR values are translated — see .claude/skills/cypher-pt-br-translation.
 
 - range: '1–2'
   text:
     en: 'Pick one other PC. For reasons unknown to you, that character is completely immune to your focus abilities, whether you use them for help or for harm.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Por motivos desconhecidos para você, esse personagem é totalmente imune às suas habilidades de foco, quer você as utilize para ajudar ou para prejudicar.'
 - range: '3–4'
   text:
     en: "Pick one other PC. You knew of that character years ago, but you don't think they knew you."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você conhecia esse personagem anos atrás, mas não acha que ele sabia quem você era.'
 - range: '5–6'
   text:
     en: "Pick one other PC. You're always trying to impress them, but you're not sure why."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você sempre tenta impressioná-lo, mas não tem certeza do porquê.'
 - range: '6–8'
   text:
     en: "Pick one other PC. That character has a habit that annoys you, but you're otherwise quite impressed with their abilities."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem tem um hábito que o irrita, mas, fora isso, você está bastante impressionado com as habilidades dele.'
 - range: '9–10'
   text:
     en: "Pick one other PC. That character shows potential in appreciating your particular paradigm, fighting style, or other focus-provided attribute. You would like to train them, but you're not necessarily qualified to teach (that's up to you), and they might not be interested (that's up to them)."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem demonstra potencial para compreender seu paradigma específico, estilo de luta ou outro atributo derivado de seu foco. Você gostaria de treiná-lo, mas não está necessariamente qualificado para ensinar (isso fica a seu critério), e ele pode não estar interessado (isso cabe a ele).'
 - range: '11–12'
   text:
     en: "Pick one other PC. If they are within immediate range when you're in a fight, sometimes they provide an asset, and sometimes they accidentally hinder your attack rolls (50% chance either way, determined per fight)."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Se ele estiver a alcance imediato durante um combate, às vezes fornecerá um recurso e, outras vezes, atrapalhará acidentalmente suas jogadas de ataque (50% de chance para cada caso, definido a cada combate).'
 - range: '13–14'
   text:
     en: "Pick one other PC. You once saved their life, and they clearly feel indebted to you. You wish they didn't; it's just part of the job."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você salvou a vida dele uma vez, e ele claramente se sente em dívida com você. Você preferiria que não fosse assim; é apenas parte do trabalho.'
 - range: '15–16'
   text:
     en: 'Pick one other PC. That character recently mocked you in some fashion that really hurt your feelings. How you deal with this (if at all) is up to you.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem zombou de você recentemente de uma maneira que realmente feriu seus sentimentos. A forma como você lida com isso (se é que vai lidar) cabe a você.'
 - range: '16–18'
   text:
     en: 'Pick one other PC. That character knows you have suffered at the hands of robotic entities in the past. Whether you hate robots now is up to you, which may affect your relationship with the character if they are friendly with robots or have robotic parts.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem sabe que você sofreu nas mãos de entidades robóticas no passado. Cabe a você decidir se odeia robôs agora — o que pode afetar sua relação com esse personagem, caso ele seja amigável com robôs ou possua partes robóticas.'
 - range: '19–20'
   text:
     en: 'Pick one other PC. That character comes from the same place you do, and you knew each other as children.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem de jogador. Esse personagem vem do mesmo lugar que você, e vocês se conheciam desde a infância.'
 - range: '21–22'
   text:
     en: 'Pick one other PC. In the past, they taught you a few tricks to use in a fight.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. No passado, ele lhe ensinou alguns truques para usar em uma luta.'
 - range: '23–24'
   text:
     en: "Pick one other PC. That character doesn't seem to approve of your methods."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem não parece aprovar os seus métodos.'
 - range: '25–26'
   text:
     en: 'Pick one other PC. Long ago, the two of you were on opposite sides of a fight. You won, though you "cheated" in their eyes (but from your perspective, all''s fair in a fight). They may be ready for a rematch, though that''s up to them.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Há muito tempo, vocês dois estiveram em lados opostos de um combate. Você venceu, embora tenha "trapaceado" na visão do outro (mas, da sua perspectiva, vale tudo numa luta). Essa pessoa pode estar pronta para uma revanche, embora isso dependa dela.'
 - range: '26–28'
   text:
     en: "Pick one other PC. You are always trying to impress that character with your skill, wit, appearance, or bravado. Perhaps they are a rival, perhaps you need their respect, or perhaps you're romantically interested in them."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você está sempre tentando impressionar esse personagem com sua habilidade, sagacidade, aparência ou audácia. Talvez ele seja um rival, talvez você precise do respeito dele ou talvez você tenha interesse romântico nele.'
 - range: '29–30'
   text:
     en: 'Pick one other PC. You fear that character is jealous of your abilities and worry that it might lead to problems.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você teme que esse personagem tenha inveja de suas habilidades e preocupa-se que isso possa levar a problemas.'
 - range: '31–32'
   text:
     en: 'Pick one other PC. You accidentally caught them in a trap you set, and they had to get free on their own.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você o pegou acidentalmente em uma armadilha que preparou, e ele teve de se libertar por conta própria.'
 - range: '33–34'
   text:
     en: 'Pick one other PC. You were once hired to track down someone who was close to that character.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você já foi contratado para localizar alguém próximo a esse personagem.'
 - range: '35–36'
   text:
     en: 'Pick two PCs (preferably ones who are likely to get in the way of your attacks). When you miss with an attack and the GM rules that you struck someone other than your target, you hit one of these two characters.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha dois personagens dos jogadores (preferencialmente aqueles com maior probabilidade de ficar no caminho dos seus ataques). Quando você errar um ataque e o Mestre determinar que atingiu alguém além do seu alvo, você acerta um desses dois personagens.'
 - range: '36–38'
   text:
     en: "Pick one other PC. You're not sure how or from where, but that character has a line on bottles of rare alcohol and can get them for you for half price."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você não sabe como nem de onde, mas esse personagem tem uma fonte de bebidas alcoólicas raras e consegue consegui-las para você pela metade do preço.'
 - range: '39–40'
   text:
     en: "Pick one other PC. You recently had a possession go missing, and you're becoming convinced that they took it. Whether or not they did is up to them."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Um pertence seu sumiu recentemente, e você está se convencendo de que foi ele quem o pegou. Se foi ele ou não, cabe a ele decidir.'
 - range: '41–42'
   text:
     en: 'Pick one other PC. They always seem to know where you are, or at least in what direction you are in relation to them.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Eles sempre parecem saber onde você está, ou pelo menos em que direção você se encontra em relação a eles.'
 - range: '43–44'
   text:
     en: 'Pick one other PC. Seeing you use your focus abilities seems to trigger an unpleasant memory in that character. That memory is up to the other PC, although they may not be able to consciously recall it.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ver você usar suas habilidades de foco parece despertar uma memória desagradável nesse personagem. A natureza dessa memória fica a critério do outro jogador, embora ele talvez não consiga recordá-la conscientemente.'
 - range: '45–46'
   text:
     en: 'Pick one other PC. Something about them interferes with your abilities. When they stand next to you, your focus abilities cost 1 additional point.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Algo nele interfere em suas habilidades. Quando ele está ao seu lado, suas habilidades de foco custam 1 ponto adicional.'
 - range: '46–48'
   text:
     en: 'Pick one other PC. Something about them complements your abilities. When they stand next to you, the first focus ability you use in any 24-hour period costs 2 fewer points.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Algo nele complementa suas habilidades. Quando ele estiver ao seu lado, a primeira habilidade de foco que você usar em um período de 24 horas custará 2 pontos a menos.'
 - range: '49–50'
   text:
     en: 'Pick one other PC. You have known that character for a while, and they helped you gain control of your focus-related abilities.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você conhece esse personagem há algum tempo, e ele o ajudou a obter controle sobre suas habilidades relacionadas ao foco.'
 - range: '51–52'
   text:
     en: "Pick one other PC. Sometime in that character's past, they had a devastating experience while attempting something that you do as a matter of course thanks to your focus. Whether they choose to tell you about it is up to them."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Em algum momento do passado desse personagem, ele teve uma experiência devastadora ao tentar fazer algo que, graças ao seu foco, você faz naturalmente. Cabe a ele decidir se quer ou não contar isso a você.'
 - range: '53–54'
   text:
     en: 'Pick one other PC. Their occasional clumsiness and loud behavior irritate you.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. A falta de jeito ocasional e o comportamento espalhafatoso dele irritam você.'
 - range: '55–56'
   text:
     en: 'Pick one other PC. In the recent past, while practicing, you accidentally hit them with an attack, wounding them badly. It is up to them to decide whether they resent or forgive you.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Recentemente, enquanto praticava, você acidentalmente o atingiu com um ataque, ferindo-o gravemente. Cabe a ele decidir se guarda ressentimento de você ou se o perdoa.'
 - range: '56–58'
   text:
     en: 'Pick one other PC. They owe you a significant amount of money.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele deve uma quantia significativa de dinheiro a você.'
 - range: '59–60'
   text:
     en: 'Pick one other PC. In the recent past, while escaping a threat, you accidentally left that character to fend for themselves. They survived, but just barely. It is up to the player of that character to decide whether they resent you or have decided to forgive you.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Recentemente, enquanto fugia de uma ameaça, você acidentalmente deixou esse personagem para se virar sozinho. Ele sobreviveu, mas por pouco. Cabe ao jogador desse personagem decidir se guarda ressentimento de você ou se decidiu perdoá-lo.'
 - range: '61–62'
   text:
     en: "Pick one other PC. Recently, they accidentally (or perhaps intentionally) put you in a position of danger. You're fine now, but you're wary around them."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Recentemente, ele colocou você em uma situação de perigo, acidentalmente (ou talvez de propósito). Você está bem agora, mas fica cauteloso quando está perto dele.'
 - range: '63–64'
   text:
     en: 'Pick one other PC. From your perspective, they seem nervous around a specific idea, person, or situation. You would like to teach them how to be more comfortable with their fears (if they will let you).'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Na sua perspectiva, ele parece nervoso diante de uma ideia, pessoa ou situação específica. Você gostaria de ensiná-lo a se sentir mais à vontade com seus medos (se ele permitir).'
 - range: '65–66'
   text:
     en: 'Pick one other PC. They called you a coward once.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Certa vez, ele chamou você de covarde.'
 - range: '66–68'
   text:
     en: "Pick one other PC. That character always recognizes you or your handiwork, whether you're in disguise or are long gone when they arrive on the scene."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem sempre reconhece você ou algo feito por você, esteja você disfarçado ou já tenha partido há muito tempo quando ele chega ao local.'
 - range: '69–70'
   text:
     en: "Pick one other PC. You inadvertently caused an accident that put them into a sleep so deep they didn't wake for three days. Whether they forgive you or not is up to them."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você inadvertidamente causou um acidente que o deixou em um sono tão profundo que ele não acordou por três dias. Cabe a ele decidir se o perdoa ou não.'
 - range: '71–72'
   text:
     en: 'Pick one other PC. You are pretty sure you are related in some fashion.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você tem quase certeza de que vocês têm algum grau de parentesco.'
 - range: '73–74'
   text:
     en: 'Pick one other PC. You accidentally learned something they were trying to keep a secret.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Você descobriu acidentalmente algo que ele estava tentando manter em segredo.'
 - range: '75–76'
   text:
     en: 'Pick one other PC. They are especially sensitive to the use of your flashier focus abilities, and occasionally they become dazzled for a few rounds, which hinders their actions.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele é especialmente sensível ao uso das suas habilidades de foco mais chamativas e, ocasionalmente, fica ofuscado por algumas rodadas, o que prejudica suas ações.'
 - range: '76–78'
   text:
     en: 'Pick one other PC. They appear to have a treasured item that was once yours, but that you lost in a game of chance years ago.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele parece possuir um item valioso que um dia foi seu, mas que você perdeu em um jogo de azar anos atrás.'
 - range: '79–80'
   text:
     en: "Pick one other PC. If it wasn't for you, that character would have failed a past test of mental achievement."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Se não fosse por você, esse personagem teria fracassado em um teste de realização mental no passado.'
 - range: '81–82'
   text:
     en: "Pick one other PC. Based on a couple of comments you've overheard, you suspect that they don't hold your area of training or favorite hobby in the highest regard."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Com base em alguns comentários que você ouviu por acaso, suspeita que ele não tenha a sua área de treinamento ou seu passatempo favorito em alta consideração.'
 - range: '83–84'
   text:
     en: 'Pick one other PC whose focus intertwines with yours. This odd connection affects them in some way. For example, if the character uses a weapon, your focus ability sometimes improves their attack in some fashion.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador cujo foco se entrelaça com o seu. Essa conexão incomum afeta o personagem de alguma maneira. Por exemplo, se o personagem usa uma arma, uma de suas habilidades de foco às vezes melhora o ataque dele de alguma forma.'
 - range: '85–86'
   text:
     en: 'Pick one other PC. They are deathly afraid of heights. You would like to teach them how to be more comfortable with their feet off the ground. They must decide whether or not to take you up on your offer.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele tem um medo mortal de altura. Você gostaria de ensiná-lo a se sentir mais à vontade com os pés fora do chão. Cabe a ele decidir se aceita ou não sua oferta.'
 - range: '86–88'
   text:
     en: 'Pick one other PC. They are skeptical of your claims about something momentous that happened in your past. They might even attempt to discredit you or discover the "secret" behind your story, though that''s up to them.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele é cético em relação às suas afirmações sobre algo grandioso que aconteceu no seu passado. Ele pode até tentar desacreditá-lo ou descobrir o "segredo" por trás da sua história, mas isso fica a critério dele.'
 - range: '89–90'
   text:
     en: 'Pick one other PC. They have a knack for being able to recognize where your plans or schemes have a weak spot.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele tem um talento especial para identificar os pontos fracos dos seus planos ou esquemas.'
 - range: '91–92'
   text:
     en: "Pick one other PC. That character's face is so intriguing to you in a way you don't understand that you sometimes find yourself sketching their likeness in the dirt or using some other medium you have access to."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. O rosto desse personagem desperta em você uma curiosidade que não consegue compreender, a ponto de às vezes se pegar desenhando seu retrato na terra ou usando algum outro meio que esteja à sua disposição.'
 - range: '93–94'
   text:
     en: 'Pick one other PC. That character has an extra item of regular equipment you gave them, either something you made or an item you just wanted to give them. (They choose the item.)'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Esse personagem possui um item adicional de equipamento comum que você deu a ele, seja algo que você fez ou um item que simplesmente quis lhe dar. (Ele escolhe o item.)'
 - range: '95–96'
   text:
     en: "Pick one other PC. They commissioned you to do a job for them. You've already been paid but haven't yet completed the job."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Ele contratou você para realizar um trabalho. Você já recebeu pelo serviço, mas ainda não o concluiu.'
 - range: '96–98'
   text:
     en: 'Pick one other PC. You worked together in the past, and the job ended badly.'
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Vocês trabalharam juntos no passado, e o trabalho terminou mal.'
 - range: '99–00'
   text:
     en: "Pick one other PC. While they stand next to you and use their action to concentrate on helping you, one of your focus ability's ranges is doubled."
-    'pt-BR': 'Tradução em breve.'
+    'pt-BR': 'Escolha outro personagem jogador. Enquanto ele estiver ao seu lado e usar sua ação para se concentrar em ajudá-lo, o alcance de uma de suas habilidades de foco é dobrado.'

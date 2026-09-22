@@ -8,7 +8,7 @@ description:
     creature or object within immediate distance. This could be a
     weapon or device held by someone, a creature's natural ability, or
     a trap triggered by a pressure plate.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você anula permanentemente uma fonte de perigo potencial relacionada a uma criatura ou objeto dentro de uma distância imediata. Isso pode ser uma arma ou dispositivo segurado por alguém, a habilidade natural de uma criatura, ou uma armadilha ativada por uma placa de pressão.'
 cost:
   pool: intellect
   amount: 7

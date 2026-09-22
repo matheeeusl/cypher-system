@@ -1,7 +1,7 @@
 id: intelligent
 name:
   en: Intelligent
-  pt-BR: Tradução em breve.
+  pt-BR: Inteligente
 description:
   en: >-
     You're quite smart. Your memory is sharp, and you easily grasp
@@ -9,7 +9,13 @@ description:
     necessarily mean that you've had years of formal education, but you
     have learned a great deal in your life, primarily because you pick
     things up quickly and retain so much.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é bastante inteligente. Sua memória é afiada, e você compreende
+    com facilidade conceitos que outros talvez tenham dificuldade em
+    entender. Essa aptidão não significa necessariamente que você teve
+    anos de educação formal, mas você aprendeu muito ao longo da vida,
+    principalmente porque assimila as coisas rapidamente e retém muito
+    conhecimento.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -25,12 +31,17 @@ connection_options:
   - en: >-
       One of the other PCs asked your opinion of the mission, knowing
       that if you thought it was a good idea, it probably was.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens pediu sua opinião sobre a missão,
+      sabendo que, se você achasse uma boa ideia, provavelmente era
+      mesmo.
   - en: You saw value in what the other PCs were doing.
-    pt-BR: Tradução em breve.
+    pt-BR: Você viu valor no que os outros personagens estavam fazendo.
   - en: >-
       You believed that the task might lead to important and interesting
       discoveries.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acreditou que a tarefa poderia levar a descobertas importantes
+      e interessantes.
   - en: A colleague requested that you take part in the mission as a favor.
-    pt-BR: Tradução em breve.
+    pt-BR: Um colega pediu, como favor, que você participasse da missão.

@@ -1,5 +1,5 @@
 id: information-sensor
-name: { en: 'Information sensor', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Information sensor', 'pt-BR': 'Sensor de informações' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6 + 2'
@@ -11,5 +11,10 @@ effect_text:
     origin, species, name, and possibly other facts (such as an individual's
     credit score, home address, phone number, and related information).
   pt-BR: >-
-    Tradução em breve.
+    Ao longo de um dia, o usuário pode ativar a cifra um número total de
+    vezes igual ao seu nível. A cada vez, pode selecionar uma criatura
+    viva dentro de uma distância longa e descobrir o seguinte sobre ela:
+    nível, origem, espécie, nome e possivelmente outros fatos (como
+    pontuação de crédito, endereço residencial, número de telefone e
+    informações relacionadas de um indivíduo).
 effect_table: null

@@ -4,7 +4,7 @@ name:
   pt-BR: Inovador
 description:
   en: You can modify any artifact to give it different or better abilities as if that artifact were one level lower than normal, and the modification takes half the normal time.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode modificar qualquer artefato para lhe dar habilidades diferentes ou melhores como se esse artefato fosse um nível abaixo do normal, e a modificação leva metade do tempo normal.'
 cost: null
 action_type: enabler
 sources:

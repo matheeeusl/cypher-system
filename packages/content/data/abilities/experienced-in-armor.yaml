@@ -6,7 +6,7 @@ description:
   en: >-
     The cost reduction from your Practiced in Armor ability improves.
     You now reduce the Speed cost by 2.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'A redução de custo da sua habilidade Praticado com Armaduras melhora. Agora você reduz o custo de Velocidade em 2.'
 cost: null
 action_type: enabler
 sources:

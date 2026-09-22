@@ -17,7 +17,21 @@ description:
 
     - You can shoot a strap holding a backpack, armor, or a similarly
     strapped-on item so that it falls off.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Quando você acerta um alvo com um ataque de arma de fogo, pode
+    optar por reduzir o dano em 1 ponto, mas atingir o alvo em um
+    ponto preciso. Alguns dos efeitos possíveis incluem (mas não se
+    limitam a) os seguintes:
+
+    - Você pode atirar em um objeto para tirá-lo da mão de alguém.
+
+    - Você pode atirar na perna, asa ou outro membro que o alvo usa
+    para se mover, reduzindo sua velocidade máxima de movimento para
+    imediata por alguns dias ou até receber atendimento médico
+    especializado.
+
+    - Você pode atirar em uma alça que segura uma mochila, armadura,
+    ou item preso de forma semelhante, fazendo com que caia.
 cost: null
 action_type: enabler
 sources:

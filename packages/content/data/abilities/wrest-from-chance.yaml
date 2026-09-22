@@ -8,7 +8,7 @@ description:
     reroll, you avoid a GM intrusion—unless you roll a second 1—and
     might succeed on your task. Once you use this ability, it is not
     available again until after you make a ten-hour recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você rolar um 1 natural em 1d20, pode rolar o dado novamente. Se rolar novamente, evita uma Intrusão do Mestre — a menos que role outro 1 — e pode ter sucesso na sua tarefa. Uma vez que você usa esta habilidade, ela não fica disponível novamente até que você faça uma rolagem de recuperação de dez horas.'
 cost: null
 action_type: enabler
 sources:

@@ -4,7 +4,7 @@ name:
   pt-BR: Matadora Treinada
 description:
   en: You are trained in using swords.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em usar espadas.'
 cost: null
 action_type: enabler
 sources:

@@ -1,7 +1,7 @@
 id: exiled
 name:
   en: Exiled
-  pt-BR: Tradução em breve.
+  pt-BR: Exilado
 description:
   en: >-
     You have walked a long and lonely road, leaving your home and your
@@ -13,19 +13,31 @@ description:
     or a friend, or you embarrassed yourself in front of your peers, an
     authority, or someone you respect. Whatever the reason, you have left
     your old life behind and now strive to make a new one.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você percorreu uma estrada longa e solitária, deixando para trás seu
+    lar e sua vida. Talvez tenha cometido um crime hediondo, algo tão
+    terrível que seu povo o expulsou, e se ousar voltar, enfrentará a
+    morte. Talvez tenha sido acusado de um crime que não cometeu e agora
+    precise pagar pelo ato perverso de outra pessoa. Seu exílio pode ser
+    resultado de uma gafe social — talvez você tenha envergonhado sua
+    família ou um amigo, ou se constrangido diante de seus pares, uma
+    autoridade ou alguém que respeita. Seja qual for o motivo, você
+    deixou sua antiga vida para trás e agora se esforça para construir
+    uma nova.
 pool_bonus:
   - stat: might
     amount: 2
 characteristics:
   - name:
       en: Loner
-      pt-BR: Tradução em breve.
+      pt-BR: Solitário
     description:
       en: >-
         You gain no benefit when you get help with a task from another
         character who is trained or specialized in that task.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você não recebe nenhum benefício quando obtém ajuda em uma tarefa
+        de outro personagem treinado ou especializado nessa tarefa.
 skill_training:
   - skill_id: sneaking
     choice_count: null
@@ -36,28 +48,43 @@ inabilities:
       Living on your own for as long as you have makes you slow to trust
       others and awkward in social situations. Any task involving social
       interaction is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Viver por conta própria por tanto tempo faz com que você demore a
+      confiar nos outros e se sinta estranho em situações sociais.
+      Qualquer tarefa que envolva interação social é prejudicada.
 additional_equipment:
   en: >-
     You have a memento from your past—an old picture, a locket with a
     few strands of hair inside, or a lighter given to you by someone
     important. You keep the object close at hand and pull it out to help
     you remember better times.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem uma lembrança do seu passado — uma foto antiga, um medalhão
+    com alguns fios de cabelo dentro ou um isqueiro dado por alguém
+    importante. Você mantém o objeto sempre por perto e o pega para se
+    lembrar de tempos melhores.
 connection_options:
   - en: >-
       The other PCs earned your trust by helping you when you needed it.
       You accompany them to repay them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Os outros personagens conquistaram sua confiança ao ajudá-lo quando
+      você precisou. Você os acompanha para retribuir.
   - en: >-
       While exploring on your own, you discovered something strange.
       When you traveled to a settlement, the PCs were the only ones who
       believed you, and they have accompanied you to help you deal with
       the problem.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Enquanto explorava sozinho, você descobriu algo estranho. Quando
+      viajou até um povoado, os outros personagens foram os únicos que
+      acreditaram em você, e passaram a acompanhá-lo para ajudar a lidar
+      com o problema.
   - en: One of the other PCs reminds you of someone you used to know.
-    pt-BR: Tradução em breve.
+    pt-BR: Um dos outros personagens lhe lembra alguém que você conheceu no passado.
   - en: >-
       You have grown weary of your isolation. Joining the other PCs
       gives you a chance to belong.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você se cansou do seu isolamento. Juntar-se aos outros personagens
+      lhe dá a chance de pertencer a algo.

@@ -6,7 +6,7 @@ description:
   en: >-
     For the next minute, all ranged attacks you make inflict 2
     additional points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelo próximo minuto, todos os ataques à distância que você fizer causam 2 pontos adicionais de dano.'
 cost:
   pool: speed
   amount: 3

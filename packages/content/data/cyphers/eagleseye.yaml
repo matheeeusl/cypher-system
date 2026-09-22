@@ -1,5 +1,5 @@
 id: eagleseye
-name: { en: 'Eagleseye', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Eagleseye', 'pt-BR': 'Olho de Águia' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6'
@@ -10,5 +10,8 @@ effect_text:
     instead give the user two assets on tasks involving seeing to long
     distances.)
   pt-BR: >-
-    Tradução em breve.
+    Concede a capacidade de enxergar dez vezes mais longe que o normal
+    por uma hora por nível da cifra. (Para um jogo mais realista, a
+    cifra olho de águia pode, em vez disso, conceder ao usuário dois
+    recursos em tarefas envolvendo enxergar a longas distâncias.)
 effect_table: null

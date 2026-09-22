@@ -8,7 +8,7 @@ description:
     creature to be innocent or guilty, which means up to two creatures
     at a time may be innocent, or two guilty, or one innocent and one
     guilty.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Designação, pode designar uma criatura adicional como inocente ou culpada, o que significa que até duas criaturas por vez podem ser inocentes, ou duas culpadas, ou uma inocente e uma culpada.'
 cost: null
 action_type: enabler
 sources:

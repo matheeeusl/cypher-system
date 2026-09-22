@@ -8,7 +8,7 @@ description:
     (easing Speed defense tasks), you can act as if you are trained
     in Speed defense tasks. However, in any round in which you use
     this benefit, your attacks are hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa um escudo, além do recurso que ele lhe concede (facilitando tarefas de defesa de Velocidade), você pode agir como se fosse treinada em tarefas de defesa de Velocidade. Porém, em qualquer round no qual você use esse benefício, seus ataques são dificultados.'
 cost: null
 action_type: enabler
 sources:

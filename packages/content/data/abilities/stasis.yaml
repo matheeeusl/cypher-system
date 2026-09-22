@@ -9,7 +9,7 @@ description:
     frozen solid. You must be able to see the target, and it must be
     within short range. While in stasis, the target is impervious to
     harm, cannot be moved, and is immune to all effects.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você envolve um inimigo do seu tamanho ou menor com energia cintilante, impedindo-o de se mover ou agir por um minuto, como se estivesse congelado. Você deve conseguir ver o alvo, e ele deve estar dentro de uma distância curta. Enquanto em estase, o alvo é impermeável a danos, não pode ser movido e é imune a todos os efeitos.'
 cost:
   pool: intellect
   amount: 3

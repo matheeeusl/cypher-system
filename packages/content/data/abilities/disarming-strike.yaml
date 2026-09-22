@@ -11,7 +11,7 @@ description:
     or other ranged weapon that fires physical rounds, you can
     instead "nail" the disarmed weapon to a nearby object or
     structure. Choosing to do either of these hinders your attack.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seu ataque causa 1 ponto a menos de dano e desarma seu inimigo, de forma que sua arma fica agora a 3 metros (10 pés) de distância no chão. (Se sua arma escolhida for um chicote, você pode em vez disso depositar a arma desarmada em suas mãos; se sua arma escolhida for um arco ou outra arma à distância que dispara projéteis físicos, você pode em vez disso "pregar" a arma desarmada em um objeto ou estrutura próxima. Escolher fazer qualquer uma dessas coisas dificulta seu ataque.)'
 cost:
   pool: speed
   amount: 3

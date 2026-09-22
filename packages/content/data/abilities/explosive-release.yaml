@@ -12,7 +12,7 @@ description:
     area, everything in the area (except you) takes 1 point of damage
     per point in your Siphon Pool (or half that if your attack fails
     against them). This drains your Siphon Pool to 0 points.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode amplificar a energia armazenada na sua Reserva de Captação (da sua habilidade Armazenar Energia) e liberá-la em uma explosão massiva que afeta um único alvo dentro de uma distância curta ou tudo dentro de uma distância imediata. Se você escolher um único alvo, ele sofre 2 pontos de dano para cada ponto na sua Reserva de Captação. Se você escolher uma área, tudo na área (exceto você) sofre 1 ponto de dano por ponto na sua Reserva de Captação (ou metade disso se seu ataque falhar contra eles). Isso drena sua Reserva de Captação a 0 pontos.'
 cost:
   pool: intellect
   amount: 6

@@ -4,7 +4,7 @@ name:
   pt-BR: Construtor de Robôs
 description:
   en: You are trained in tasks related to building and repairing robots. For the purposes of repair, you can use this skill to heal robots and repair cybernetics that use similar technology.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em tarefas relacionadas a construir e reparar robôs. Para fins de reparo, você pode usar essa perícia para curar robôs e reparar cibernética que use tecnologia semelhante.'
   # Note: source text differs slightly between printings — Builds Robots
   # omits "and repair cybernetics" (present under Has a Custom Drone).
   # Used the fuller wording here since it's a strict superset.

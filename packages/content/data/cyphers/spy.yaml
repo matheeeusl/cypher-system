@@ -1,5 +1,5 @@
 id: spy
-name: { en: 'Spy', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Spy', 'pt-BR': 'Espião' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6 + 2'
@@ -17,5 +17,18 @@ effect_text:
     electrical damage, half shrapnel damage) to all creatures and objects in
     short range.
   pt-BR: >-
-    Tradução em breve.
+    Produz um pequeno objeto espião que resiste à detecção como uma
+    criatura de nível 8. O objeto se move em alta velocidade, mapeando e
+    escaneando uma área desconhecida. Ele se move 150 metros (500 pés)
+    por nível, escaneando uma área de até 15 metros (50 pés) de
+    distância dele. Ele identifica o layout básico, criaturas e
+    principais fontes de energia. Seu movimento é bloqueado por
+    qualquer barreira física ou de energia. Ao final de seu percurso de
+    mapeamento, ele retorna ao usuário e relata o que encontrou. Se
+    descobrir um alvo predefinido durante o percurso (como "uma
+    criatura de nível 5 ou superior", "uma porta trancada", "uma fonte
+    de energia importante", e assim por diante), ele detona em vez
+    disso, causando dano igual ao nível da cifra (metade dano elétrico,
+    metade dano de estilhaços) a todas as criaturas e objetos dentro de
+    uma distância curta.
 effect_table: null

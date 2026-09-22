@@ -12,7 +12,7 @@ description:
     on one target at a time. You can apply Effort to increase damage
     during the first round, and for any one round in which you apply
     Effort and use another action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Aqueles que se opõem a você o fazem por sua conta e risco, e eventualmente encolhem em sua presença. Quando você se concentra em um inimigo específico dentro de uma distância longa, o alvo sofre 2 pontos de dano de Intelecto (ignora Armadura) a cada round por um minuto ou até conseguir se livrar do efeito. Esta habilidade só pode estar ativa em um alvo por vez. Você pode aplicar Esforço para aumentar o dano durante o primeiro round, e em qualquer round no qual aplicar Esforço e usar outra ação.'
   # Note: source cost is printed as "3+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 3 Intellect points here, flagged for schema review

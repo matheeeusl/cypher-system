@@ -1,5 +1,5 @@
 id: force-cube
-name: { en: 'Force cube', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Force cube', 'pt-BR': 'Cubo de força' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6 + 3'
@@ -11,5 +11,9 @@ effect_text:
     is likely enough air within for trapped creatures to breathe for the hour
     it lasts.)
   pt-BR: >-
-    Tradução em breve.
+    Cria um cubo imóvel composto por seis planos de força sólida, cada
+    um com 9 metros (30 pés) de lado, por uma hora. Os planos se adaptam
+    ao espaço disponível. (Embora as paredes de um cubo de força não
+    sejam permeáveis a gases, provavelmente há ar suficiente dentro dele
+    para que criaturas presas respirem durante a hora em que dura.)
 effect_table: null

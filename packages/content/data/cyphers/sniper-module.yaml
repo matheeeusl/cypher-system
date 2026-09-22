@@ -1,5 +1,5 @@
 id: sniper-module
-name: { en: 'Sniper module', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Sniper module', 'pt-BR': 'Módulo de atirador de elite' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 397'
 level_range: '1d6'
@@ -10,5 +10,9 @@ effect_text:
     long, long to very long, very long to 1,000 feet [300 m]). A weapon with a
     range greater than very long has its range doubled.
   pt-BR: >-
-    Tradução em breve.
+    Pela próxima hora por nível da cifra, o alcance efetivo da arma à
+    distância do usuário aumenta em uma categoria (de imediato para
+    curto, de curto para longo, de longo para muito longo, de muito
+    longo para 300 metros [1.000 pés]). Uma arma com alcance superior a
+    muito longo tem seu alcance dobrado.
 effect_table: null

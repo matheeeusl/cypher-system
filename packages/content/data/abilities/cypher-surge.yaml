@@ -8,7 +8,7 @@ description:
     can expend one other subtle cypher. Instead of the second
     cypher's normal effect, you add one free level of Effort to the
     first cypher spell.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa um feitiço de cifra sutil, como parte dessa ação pode gastar outra cifra sutil. Em vez do efeito normal da segunda cifra, você adiciona um nível gratuito de Esforço ao primeiro feitiço de cifra.'
 cost: null
 action_type: enabler
 sources:

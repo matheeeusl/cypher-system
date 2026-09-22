@@ -14,7 +14,7 @@ description:
     riding task. (Your mount can usually reach you even if you are
     deep underground, high in the air, or in another dimension,
     because your connection to your mount transcends the natural.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode usar esta habilidade de duas formas. Se estiver na sua montaria, pode se mover uma distância longa de um local para outro quase instantaneamente, carregada pela criatura que monta. Você deve conseguir ver o novo local, e não pode haver barreiras intervenientes. Alternativamente, pode usar esta habilidade para invocar sua montaria de onde quer que ela esteja, saltar para a sela, e usar Cavaleira Acrobática para fazer um ataque ou tentar uma tarefa de montaria. (Sua montaria geralmente consegue alcançá-la mesmo que você esteja no subsolo profundo, no alto do ar, ou em outra dimensão, porque sua conexão com ela transcende o natural.)'
 cost:
   pool: speed
   amount: 4

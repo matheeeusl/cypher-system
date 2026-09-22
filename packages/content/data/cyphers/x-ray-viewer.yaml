@@ -1,5 +1,5 @@
 id: x-ray-viewer
-name: { en: 'X-ray viewer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'X-ray viewer', 'pt-BR': 'Visor de raio-X' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 400'
 level_range: '1d6 + 4'
@@ -8,5 +8,7 @@ effect_text:
     Allows the user to see through up to 2 feet (60 cm) of material of a level
     lower than the cypher. The effect lasts for one minute per cypher level.
   pt-BR: >-
-    Tradução em breve.
+    Permite que o usuário enxergue através de até 60 centímetros (2
+    pés) de material de nível inferior ao da cifra. O efeito dura um
+    minuto por nível da cifra.
 effect_table: null

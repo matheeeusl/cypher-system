@@ -7,7 +7,7 @@ description:
     You can pass on what you've learned. When you give another
     character a suggestion involving their next action that is not an
     attack, their action is eased for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue transmitir o que aprendeu. Quando dá a outro personagem uma sugestão envolvendo sua próxima ação que não seja um ataque, a ação dele é facilitada por um minuto.'
 cost:
   pool: intellect
   amount: 3

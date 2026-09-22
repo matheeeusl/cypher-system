@@ -4,7 +4,7 @@ name:
   pt-BR: Aura Repugnante
 description:
   en: Your words, gestures, and touch invest an object no larger than yourself with an aura of doom, fear, and doubt for one day. Creatures that can hear and understand you feel an urge to move at least a short distance away from the object. If a creature does not move away, all tasks, attacks, and defenses it attempts while within the aura are hindered. The duration of the aura is extended by one day per level of Effort applied. The aura is temporarily blocked while the object is covered or contained.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas palavras, gestos e toque investem um objeto não maior que você com uma aura de perdição, medo e dúvida por um dia. Criaturas que conseguem ouvi-lo e entendê-lo sentem o impulso de se afastar ao menos uma distância curta do objeto. Se uma criatura não se afastar, todas as tarefas, ataques e defesas que tentar enquanto estiver dentro da aura são dificultados. A duração da aura é estendida em um dia por nível de Esforço aplicado. A aura é temporariamente bloqueada enquanto o objeto estiver coberto ou contido.'
   # Note: source cost is printed as "5+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 5 Intellect points here, flagged for schema review (same

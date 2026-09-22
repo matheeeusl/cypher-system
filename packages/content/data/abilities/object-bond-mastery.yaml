@@ -17,7 +17,7 @@ description:
     foes. In this form, it can fly a long distance each round, and the
     first time each day it returns to flesh (as an action), it regains
     25 points of health.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você manifesta a aliada mágica da sua habilidade Criatura Mágica Vinculada, ela agora é uma criatura de nível 7. Ela só pode permanecer manifesta por três minutos, após o que deve retornar ao seu objeto e descansar por três dias antes que você possa manifestá-la novamente. A aliada mágica pode fazer seus próprios ataques mágicos de toque (quando o faz, você rola por ela). Se usar seu ataque de pulso de Vínculo com o Objeto Aprimorado, em vez de desativar itens, pode assumir o controle de um item dentro de uma distância curta por um minuto, se aplicável. Por fim, a aliada mágica pode se transformar em fumaça e chamas como sua ação, ganhando +10 de Armadura, mas ficando incapaz de atacar inimigos. Nessa forma, pode voar uma distância longa a cada round, e na primeira vez em cada dia que retorna à carne (como uma ação), recupera 25 pontos de saúde.'
 cost:
   pool: intellect
   amount: 7

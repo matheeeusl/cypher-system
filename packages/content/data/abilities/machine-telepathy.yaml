@@ -11,7 +11,7 @@ description:
     out of range, the connection is broken. If you have the Mind
     Reading ability, when you apply Effort to Machine Telepathy, you
     gain a free level of Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode ler os pensamentos superficiais de uma máquina dentro de uma distância curta, mesmo que ela não queira. Você deve conseguir ver a máquina. Uma vez estabelecido o contato, pode ler os pensamentos do alvo por até um minuto. Se você ou o alvo saírem do alcance, a conexão se rompe. Se você tiver a habilidade Leitura Mental, ao aplicar Esforço a Telepatia com Máquinas, ganha um nível gratuito de Esforço.'
 cost:
   pool: intellect
   amount: 3

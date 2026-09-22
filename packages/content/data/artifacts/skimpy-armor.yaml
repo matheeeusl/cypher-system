@@ -1,20 +1,27 @@
 id: skimpy-armor
 name:
   en: Skimpy Armor
-  pt-BR: Tradução em breve.
+  pt-BR: Armadura Sumária
 level: '1d6 + 2'
 form:
   en: >-
     Little more than a loincloth, fine gold chain, and one fully armored
     accoutrement—for example, a pauldron, kneeguard, gauntlet, or nipple
     shield
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Pouco mais que uma tanga, uma fina corrente de ouro e um acessório
+    totalmente blindado — por exemplo, uma ombreira, uma joelheira, uma
+    manopla ou um protetor de mamilo
 effect_text:
   en: >-
     If you wear this skimpy armor and nothing else, you gain a bonus to
     Armor equal to the artifact level. Skimpy armor doesn't encumber a
     PC, imposing no Speed Effort cost for wearing armor.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Se você vestir esta armadura sumária e nada mais, ganha um bônus de
+    Armadura igual ao nível do artefato. A armadura sumária não
+    sobrecarrega um PJ, não impondo nenhum custo de Esforço de Velocidade
+    por usar armadura.
 effect_table: null
 flavor_quote: null
 depletion_die: >-

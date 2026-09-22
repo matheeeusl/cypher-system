@@ -8,7 +8,7 @@ description:
     bats, or even birds) and they respond to you in number. Your
     creatures within short range will not harm you or those you
     designate as allies for one hour.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você domina um tipo de criatura pequena (como insetos, ratos, morcegos ou até pássaros) e eles respondem a você em número. Suas criaturas dentro de uma distância curta não o prejudicarão nem prejudicarão aqueles que você designar como aliados por uma hora.'
 cost:
   pool: intellect
   amount: 1

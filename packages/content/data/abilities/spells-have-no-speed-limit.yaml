@@ -17,7 +17,7 @@ description:
     with this ability, your driving tasks and extreme tricks with the
     car (such as jumping a ravine or other vehicle, spinning in the
     air, landing safely on another vehicle, and so on) are eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Qualquer carro que você tenha dirigido por pelo menos um minuto responde a você como um robô bem treinado, permitindo que dê ordens mentalmente a ele de longe. Esse controle inclui qualquer aspecto de dirigir o carro (como direção, aceleração e frenagem) e quaisquer partes móveis do carro (como abrir ou fechar as portas, o capô ou o porta-malas). O carro realiza ações no seu turno, e você faz rolagens por ele em combate ou quando realiza ações. Você só pode controlar um carro por vez com esta habilidade (embora possa dirigir um carro manualmente e controlar outro magicamente ao mesmo tempo). Se você estiver dirigindo o carro que está controlando com esta habilidade, suas tarefas de direção e manobras extremas com o carro (como pular um desfiladeiro ou outro veículo, girar no ar, pousar com segurança em outro veículo, e assim por diante) são facilitadas.'
 cost: null
 action_type: enabler
 sources:

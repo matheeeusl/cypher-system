@@ -10,7 +10,7 @@ description:
     dangerous, metallic, glass, or textile), you have the materials
     you need to craft a new item in one of your areas of training
     (unless the GM deems otherwise).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em fabricar dois tipos de itens usando sucata vasculhada. Se você vasculhou (ou de outra forma obteve) pelo menos duas peças de sucata em categorias diferentes (eletrônica, plástica, perigosa, metálica, vidro ou têxtil), você tem os materiais necessários para fabricar um novo item em uma das suas áreas de treinamento (a menos que o Mestre julgue o contrário).'
 cost:
   pool: intellect
   amount: 2

@@ -2,7 +2,7 @@
 # Cypher System Rulebook's efficacy boost (major)/(minor) split — see efficacy-
 # boost-major.yaml and efficacy-boost-minor.yaml for those.
 id: efficacy-boost
-name: { en: 'Efficacy boost', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Efficacy boost', 'pt-BR': 'Impulso de eficácia' }
 category: power_boost
 page_ref: 'Claim the Sky, page 157'
 level_range: '1d6 + 1'
@@ -11,5 +11,7 @@ effect_text:
     This cypher boosts an ability that requires a skill roll. The use of the
     ability is eased (eased by two steps if the cypher is level 5 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Esta cifra intensifica uma habilidade que exige uma rolagem de
+    perícia. O uso da habilidade é facilitado (facilitado em dois níveis
+    se a cifra for de nível 5 ou superior).
 effect_table: null

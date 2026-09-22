@@ -4,7 +4,7 @@ name:
   pt-BR: Mestre Artesão
 description:
   en: You are trained in the crafting of two kinds of items, or you are specialized in two kinds of items that you are already trained in.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada na fabricação de dois tipos de itens, ou é especializada em dois tipos de itens nos quais já é treinada.'
 cost: null
 action_type: enabler
 sources:

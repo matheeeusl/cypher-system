@@ -8,7 +8,7 @@ description:
     uses its action to move out of immediate range, you gain an action
     to attack the creature as a parting blow, even if you have already
     taken a turn in the round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se uma criatura que você atacou no seu último turno com um ataque corpo a corpo usar sua ação para sair de uma distância imediata, você ganha uma ação para atacá-la como um golpe de despedida, mesmo que já tenha tido seu turno no round.'
 cost: null
 action_type: enabler
 sources:

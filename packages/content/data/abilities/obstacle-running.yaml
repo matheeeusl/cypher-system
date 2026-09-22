@@ -13,7 +13,7 @@ description:
     normally require a Might or Speed task to overcome, such as
     swinging on a rope, balancing on a rope, or jumping over a hole,
     you are trained in that task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelo próximo minuto, você pode ignorar obstáculos que retardam seu movimento, permitindo viajar à velocidade normal por áreas com entulho, cercas, mesas e objetos semelhantes que precisaria escalar ou contornar. Esse movimento pode incluir deslizar em um corrimão, correr brevemente ao longo de uma parede, ou até pisar em uma criatura para se impulsionar sobre algo. Se um obstáculo normalmente exigisse uma tarefa de Força ou Velocidade para superar, como balançar em uma corda, equilibrar-se em uma corda, ou pular sobre um buraco, você fica treinada nessa tarefa.'
 cost:
   pool: speed
   amount: 3

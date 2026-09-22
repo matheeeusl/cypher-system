@@ -1,5 +1,5 @@
 id: warmth
-name: { en: 'Warmth', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Warmth', 'pt-BR': 'Aquecimento' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 400'
 level_range: '1d6'
@@ -9,5 +9,8 @@ effect_text:
     temperatures, for twenty-four hours. During this time, the user has Armor
     equal to the cypher's level that protects against cold damage.
   pt-BR: >-
-    Tradução em breve.
+    Mantém o usuário aquecido e confortável, mesmo nas temperaturas mais
+    frias, por vinte e quatro horas. Durante esse período, o usuário
+    tem Armadura igual ao nível da cifra que protege contra dano de
+    frio.
 effect_table: null

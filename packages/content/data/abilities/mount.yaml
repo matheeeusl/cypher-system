@@ -11,7 +11,7 @@ description:
     and you'll probably make rolls for it when it takes noncombat
     actions. The mount acts on your turn. If your mount dies, you can
     hunt in the wild for 3d6 days to find a new one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Uma criatura de nível 3 serve como sua montaria e segue suas instruções. Enquanto estiver montada nela, a criatura pode se mover e você pode atacar no seu turno, o que fornece um recurso ao seu ataque. Você e o Mestre devem definir os detalhes da criatura, e você provavelmente fará rolagens por ela quando realizar ações fora de combate. A montaria age no seu turno. Se sua montaria morrer, você pode caçar na natureza por 3d6 dias para encontrar uma nova.'
 cost: null
 action_type: enabler
 sources:

@@ -6,7 +6,7 @@ description:
   en: >-
     You observe or study a creature or object. Your next interaction
     with that creature or object gains one asset.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você observa ou estuda uma criatura ou objeto. Sua próxima interação com essa criatura ou objeto ganha um recurso.'
 cost:
   pool: intellect
   amount: 1

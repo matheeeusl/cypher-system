@@ -13,7 +13,7 @@ description:
     can speak and has the general knowledge a creature of its type
     should possess. The creature is receptive to communication and
     helping you (unless shown that it should do otherwise).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você invoca uma criatura de até nível 3, que aparece ao seu lado. Você pode escolher uma criatura que já tenha encontrado antes, ou (no máximo uma vez por dia) permitir que o Mestre determine a criatura aleatoriamente. Se invocar uma criatura aleatória, há 10% de chance de ser uma criatura de até nível 5. A criatura não tem memória de nada antes de ser invocada por você, embora consiga falar e tenha o conhecimento geral que uma criatura do seu tipo deveria possuir. A criatura é receptiva à comunicação e disposta a ajudá-lo (a menos que lhe mostrem que deveria agir de outra forma).'
 cost:
   pool: intellect
   amount: 6

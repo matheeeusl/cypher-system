@@ -9,7 +9,7 @@ description:
     roll with a difficulty of 1 for every 20 feet (6 m) you fall. On a
     success, you take half damage from the fall. If you reduce the
     difficulty to 0, you take no damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você cai enquanto consegue usar ações e está ao alcance de uma superfície vertical, pode tentar desacelerar sua queda. Faça uma rolagem de Velocidade com dificuldade 1 para cada 6 metros (20 pés) que cair. Em um sucesso, você sofre metade do dano da queda. Se reduzir a dificuldade a 0, não sofre nenhum dano.'
 cost: null
 action_type: enabler
 sources:

@@ -4,7 +4,7 @@ name:
   pt-BR: Golpe Noturno
 description:
   en: When you attack a foe in dim light or darkness, you get a free level of Effort on the attack.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você ataca um inimigo em pouca luz ou escuridão, ganha um nível gratuito de Esforço no ataque.'
 cost: null
 action_type: enabler
 sources:

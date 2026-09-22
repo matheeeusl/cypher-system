@@ -10,7 +10,7 @@ description:
     you make. If you have another special ability that allows you to
     move and take an action, when you use Break the Ranks, you gain
     an asset to attacking these foes.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se move até uma distância curta e ataca até quatro inimigos diferentes como uma única ação, desde que todos estejam ao longo do seu caminho. Quaisquer modificadores que se apliquem a um ataque se aplicam a todos os ataques que você faz. Se você tiver outra habilidade especial que permita se mover e realizar uma ação, ao usar Romper as Fileiras você ganha um recurso ao atacar esses inimigos.'
 cost:
   pool: speed
   amount: 6

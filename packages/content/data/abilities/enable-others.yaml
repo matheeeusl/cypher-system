@@ -9,7 +9,7 @@ description:
     rules, this doesn't require you to use your action helping the
     other character with the task. This requires no action on your
     part.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode usar as regras de ajuda para conceder um benefício a outro personagem tentando uma tarefa física. Diferente das regras normais de ajuda, isso não exige que você use sua ação ajudando o outro personagem na tarefa. Isso não exige nenhuma ação da sua parte.'
 cost: null
 action_type: enabler
 sources:

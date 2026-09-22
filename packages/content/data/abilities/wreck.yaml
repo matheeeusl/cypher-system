@@ -10,7 +10,7 @@ description:
     penalty to the attack roll, and you inflict 3 additional points of
     damage. When attempting to damage an object or barrier, you are
     trained in the task.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Usando as duas mãos, você empunha uma arma ou ferramenta com um golpe poderoso. (Se estiver lutando desarmada, este ataque é feito com os dois punhos ou os dois pés juntos.) Ao usar isso como um ataque, você sofre uma penalidade de -1 na rolagem de ataque, e causa 3 pontos adicionais de dano. Ao tentar danificar um objeto ou barreira, você é treinada na tarefa.'
 cost: null
 action_type: action
 sources:

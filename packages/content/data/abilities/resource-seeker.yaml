@@ -15,7 +15,7 @@ description:
     attempt to find an object of one higher expense category, but the
     base difficulty of the Intellect roll also increases by 1 per
     higher expense category.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você está procurando um item barato específico que gostaria de vasculhar em ruínas próximas, como uma vela, uma aspirina, ou uma lata de chili conservado, pode concentrar sua atenção nele para ter mais chances de encontrá-lo. Pelos próximos dez minutos, se o que você procura estiver dentro de uma distância longa, você o encontra se tiver sucesso em uma rolagem de Intelecto de dificuldade 2. Cada vez que você usar esta habilidade novamente na mesma área, a dificuldade é dificultada em mais um nível. Para cada nível de Esforço que você aplicar, pode tentar encontrar um objeto de uma categoria de custo mais alta, mas a dificuldade base da rolagem de Intelecto também aumenta em 1 por categoria de custo mais alta.'
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here, flagged for schema review (same

@@ -8,7 +8,7 @@ description:
     one. The next task you attempt is eased by three steps. You can't
     use this ability again until after you've taken a one-hour or a
     ten-hour recovery action.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você realiza algo que prova que é de fato o escolhido. A próxima tarefa que você tentar é facilitada em três níveis. Você não pode usar esta habilidade novamente até realizar uma ação de recuperação de uma hora ou de dez horas.'
 cost: null
 action_type: action
 sources:

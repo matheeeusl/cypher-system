@@ -4,7 +4,7 @@ name:
   pt-BR: Toque Iluminador
 description:
   en: You touch an object, and that object sheds light to illuminate everything in short range. The light remains until you use an action to touch the object again, or until you've illuminated more objects than you have tiers, in which case the oldest objects you illuminated go dark first.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você toca um objeto, e esse objeto emite luz para iluminar tudo dentro de uma distância curta. A luz permanece até você usar uma ação para tocar o objeto novamente, ou até ter iluminado mais objetos do que graus possui, caso em que os objetos mais antigos iluminados escurecem primeiro.'
 cost:
   pool: intellect
   amount: 1

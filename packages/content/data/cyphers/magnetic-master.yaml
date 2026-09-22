@@ -1,5 +1,5 @@
 id: magnetic-master
-name: { en: 'Magnetic master', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Magnetic master', 'pt-BR': 'Mestre magnético' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -12,5 +12,11 @@ effect_text:
     a foe's head to and fro. The connection lasts for ten rounds per cypher
     level.
   pt-BR: >-
-    Tradução em breve.
+    Estabelece uma conexão com um objeto de metal dentro de uma
+    distância curta que um humano conseguiria segurar com uma mão. O
+    usuário pode então mover ou manipular o objeto para qualquer lugar
+    dentro de uma distância curta (cada movimento ou manipulação é uma
+    ação). Por exemplo, poderia empunhar uma arma ou arrastar um elmo
+    preso à cabeça de um inimigo de um lado para o outro. A conexão dura
+    dez rodadas por nível da cifra.
 effect_table: null

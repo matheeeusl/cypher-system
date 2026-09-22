@@ -4,7 +4,7 @@ name:
   pt-BR: Controlar Máquina
 description:
   en: You can attempt to control the functions of any machine, intelligent or otherwise, within short range for ten minutes.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode tentar controlar as funções de qualquer máquina, inteligente ou não, dentro de uma distância curta por dez minutos.'
 cost:
   pool: intellect
   amount: 6

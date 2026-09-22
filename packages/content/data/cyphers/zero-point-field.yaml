@@ -11,5 +11,8 @@ effect_text:
     minute. This means the object cannot be harmed, moved, or manipulated in
     any way. It remains in place (even in midair).
   pt-BR: >-
-    Tradução em breve.
+    Torna um objeto inanimado imune aos efeitos da maioria das formas
+    de energia por um minuto. Isso significa que o objeto não pode ser
+    danificado, movido ou manipulado de forma alguma. Ele permanece no
+    lugar (mesmo que esteja no ar).
 effect_table: null

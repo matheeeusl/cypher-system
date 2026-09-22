@@ -12,7 +12,7 @@ description:
     of the target. Thus, to shatter the mind of a level 5 target (four
     levels above the normal limit), you must apply four levels of
     Effort.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas palavras reverberam destrutivamente no cérebro de um alvo inteligente de nível 1 dentro de uma distância curta que consiga ouvi-lo e entendê-lo. Elas destroem tecidos, memórias e personalidade, provocando um estado vegetativo. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do alvo. Assim, para estilhaçar a mente de um alvo de nível 5 (quatro níveis acima do limite normal), você deve aplicar quatro níveis de Esforço.'
   # Note: source cost is printed as "7+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 7 Intellect points here (same approximation used for

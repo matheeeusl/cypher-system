@@ -15,7 +15,7 @@ description:
     to protect more targets; each level of Effort used in this way
     affects up to two additional targets. You must touch additional
     targets to protect them.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um tipo específico de energia com o qual tenha experiência (como calor, som, eletricidade, e assim por diante). Você ganha +10 de Armadura contra dano desse tipo de energia por dez minutos. Alternativamente, ganha +1 de Armadura contra dano dessa energia por 24 horas. Você deve estar familiarizada com o tipo de energia; por exemplo, se não tiver experiência com um certo tipo de energia extradimensional, não pode se proteger contra ela. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para proteger mais alvos; cada nível de Esforço usado dessa forma afeta até dois alvos adicionais. Você deve tocar os alvos adicionais para protegê-los.'
   # Note: source cost is printed as "3+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Intellect points here (same approximation used for

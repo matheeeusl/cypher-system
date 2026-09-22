@@ -16,7 +16,7 @@ description:
     when you use this ability. (A transitional dimension is a
     dimension where distances are shorter compared to those in other
     dimensions, so travel through it is faster than normal movement.)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se espreme em uma dimensão transicional, permitindo que apareça instantaneamente em qualquer lugar que escolher dentro de uma distância curta, se tiver um caminho claro e desobstruído até esse local. Você pode passar por uma barreira intermediária se ela tiver um espaço aberto pelo qual conseguiria facilmente passar a cabeça — cerca de 900 cm² (30 cm por 30 cm). Além das opções normais de uso de Esforço, você pode optar por usar Esforço para passar por uma abertura menor em uma barreira; cada nível de Esforço usado dessa forma reduz o tamanho mínimo da abertura em um quarto. Você aterrissa em segurança ao usar esta habilidade. (Uma dimensão transicional é uma dimensão onde as distâncias são mais curtas em comparação com outras dimensões, então viajar por ela é mais rápido que o deslocamento normal.)'
   # Note: source cost is printed as "2+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 2 Intellect points here, flagged for schema review (same

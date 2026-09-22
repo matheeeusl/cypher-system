@@ -7,7 +7,7 @@ description:
     You have an asset on any attack roll you make against a creature
     that has already been attacked at some point during the round and
     is within immediate range.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você tem um recurso em qualquer rolagem de ataque que fizer contra uma criatura que já tenha sido atacada em algum momento durante o round e esteja dentro de uma distância imediata.'
 cost: null
 action_type: enabler
 sources:

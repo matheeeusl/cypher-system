@@ -14,7 +14,7 @@ description:
     your current location is level 1, and obscure knowledge of the
     past is level 7. After you use this ability, you have an asset on
     identifying the object.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você toca um objeto, lê os ecos sutis de sua existência através do tempo, faz ao Mestre uma pergunta sobre o passado do objeto, e obtém uma resposta geral. As respostas geralmente vêm na forma de imagens ou sensações breves, em vez de respostas específicas em um idioma que você conhece. O Mestre atribui um nível à pergunta, então quanto mais obscura a resposta, mais difícil a tarefa. Em geral, um conhecimento que você poderia encontrar procurando em outro lugar que não sua localização atual é nível 1, e um conhecimento obscuro do passado é nível 7. Depois de usar esta habilidade, você tem um recurso ao identificar o objeto.'
 cost:
   pool: intellect
   amount: 4

@@ -1,11 +1,11 @@
 id: ozalid-folio
 name:
   en: Ozalid Folio
-  pt-BR: Tradução em breve.
+  pt-BR: Fólio Ozalid
 level: '1d6 + 4'
 form:
   en: Tome of translucent pages
-  pt-BR: Tradução em breve.
+  pt-BR: Tomo de páginas translúcidas
 effect_text:
   en: >-
     You can spend 10 minutes to draw a mundane object—no more than 10 feet
@@ -23,83 +23,100 @@ effect_text:
     transcribed from the folio must rest on a solid surface that can
     support them. When the ozalid folio is depleted, all items held
     within its pages are lost.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você pode gastar 10 minutos para desenhar um objeto comum — não maior
+    que 3 metros (10 pés) em qualquer dimensão, e que não pese mais de
+    450 kg (1.000 libras) — para dentro do fólio. Ao concluir, a
+    substância do objeto se dissipa, sendo armazenada como uma série de
+    16 ilustrações de página inteira dentro do livro, cada uma retratando
+    o objeto de um ângulo diferente, com notação matemática precisa sobre
+    a construção do objeto, anotações sobre os materiais usados e
+    detalhes minuciosos, como, por exemplo, um arranhão profundo deixado
+    na perna de uma mesa. O fólio pode inscrever uma quantidade de itens
+    igual ao nível do artefato. Você pode recuperar um objeto realizando
+    uma transferência semelhante de 10 minutos, liberando essas páginas
+    no fólio. Quando encontrado, metade de suas páginas (arredondado para
+    cima) já estão inscritas com itens da tabela Conteúdo do Fólio
+    Ozalid. Itens inscritos no ou transcritos do fólio devem repousar
+    sobre uma superfície sólida capaz de sustentá-los. Quando o fólio
+    ozalid se esgota, todos os itens guardados em suas páginas são
+    perdidos.
 effect_table:
   label:
     en: Ozalid Folio Contents
-    pt-BR: Tradução em breve.
+    pt-BR: Conteúdo do Fólio Ozalid
   entries:
     - range: '1–3'
-      text: { en: A fine porcelain tea kettle, pt-BR: Tradução em breve. }
+      text: { en: A fine porcelain tea kettle, pt-BR: Uma fina chaleira de porcelana }
     - range: '4–6'
-      text: { en: A stylish fur coat, pt-BR: Tradução em breve. }
+      text: { en: A stylish fur coat, pt-BR: Um casaco de pele estiloso }
     - range: '7–9'
-      text: { en: A teddy bear, pt-BR: Tradução em breve. }
+      text: { en: A teddy bear, pt-BR: Um ursinho de pelúcia }
     - range: '10–12'
-      text: { en: A crystal skull, pt-BR: Tradução em breve. }
+      text: { en: A crystal skull, pt-BR: Uma caveira de cristal }
     - range: '13–15'
-      text: { en: An 8-foot candelabra, pt-BR: Tradução em breve. }
+      text: { en: An 8-foot candelabra, pt-BR: Um candelabro de 2,4 metros (8 pés) }
     - range: '16–18'
-      text: { en: An armoire, pt-BR: Tradução em breve. }
+      text: { en: An armoire, pt-BR: Um guarda-roupa }
     - range: '19–21'
-      text: { en: A mounted taxidermy trophy, pt-BR: Tradução em breve. }
+      text: { en: A mounted taxidermy trophy, pt-BR: Um troféu de taxidermia montado }
     - range: '22–24'
-      text: { en: A harpsichord, pt-BR: Tradução em breve. }
+      text: { en: A harpsichord, pt-BR: Um cravo }
     - range: '25–27'
-      text: { en: A typewriter in a random language, pt-BR: Tradução em breve. }
+      text: { en: A typewriter in a random language, pt-BR: Uma máquina de escrever em um idioma aleatório }
     - range: '28–30'
-      text: { en: A set of light tools, pt-BR: Tradução em breve. }
+      text: { en: A set of light tools, pt-BR: Um conjunto de ferramentas leves }
     - range: '31–33'
-      text: { en: A minecart, pt-BR: Tradução em breve. }
+      text: { en: A minecart, pt-BR: Um vagonete de mina }
     - range: '34–36'
-      text: { en: A stack of 12 banana crème pies, pt-BR: Tradução em breve. }
+      text: { en: A stack of 12 banana crème pies, pt-BR: Uma pilha de 12 tortas de creme de banana }
     - range: '37–39'
-      text: { en: A rowboat, pt-BR: Tradução em breve. }
+      text: { en: A rowboat, pt-BR: Um barco a remo }
     - range: '40–42'
-      text: { en: A jar of honey, pt-BR: Tradução em breve. }
+      text: { en: A jar of honey, pt-BR: Um pote de mel }
     - range: '43–45'
       text:
         en: A set of 8 brightly colored sticks of chalk, each a different color
-        pt-BR: Tradução em breve.
+        pt-BR: Um conjunto de 8 bastões de giz em cores vivas, cada um de uma cor diferente
     - range: '46–48'
-      text: { en: A snowman, pt-BR: Tradução em breve. }
+      text: { en: A snowman, pt-BR: Um boneco de neve }
     - range: '49–51'
-      text: { en: A roaring campfire, pt-BR: Tradução em breve. }
+      text: { en: A roaring campfire, pt-BR: Uma fogueira crepitante }
     - range: '52–54'
       text:
         en: A cannon (with 1 cannonball and enough black powder for one shot)
-        pt-BR: Tradução em breve.
+        pt-BR: Um canhão (com 1 bala de canhão e pólvora negra suficiente para um disparo)
     - range: '55–57'
-      text: { en: A sack of flour (1 lb.), pt-BR: Tradução em breve. }
+      text: { en: A sack of flour (1 lb.), pt-BR: Um saco de farinha (0,45 kg / 1 lb.) }
     - range: '58–60'
-      text: { en: A dozen eggs, pt-BR: Tradução em breve. }
+      text: { en: A dozen eggs, pt-BR: Uma dúzia de ovos }
     - range: '61–63'
-      text: { en: A spool of copper wire (100 feet), pt-BR: Tradução em breve. }
+      text: { en: A spool of copper wire (100 feet), pt-BR: Um carretel de fio de cobre (30 metros / 100 pés) }
     - range: '64–66'
-      text: { en: A barrel of rum, pt-BR: Tradução em breve. }
+      text: { en: A barrel of rum, pt-BR: Um barril de rum }
     - range: '67–69'
-      text: { en: A sack of quicklime (5 lb.), pt-BR: Tradução em breve. }
+      text: { en: A sack of quicklime (5 lb.), pt-BR: Um saco de cal virgem (2,3 kg / 5 lb.) }
     - range: '70–72'
-      text: { en: A flawed diamond, pt-BR: Tradução em breve. }
+      text: { en: A flawed diamond, pt-BR: Um diamante com imperfeições }
     - range: '73–75'
-      text: { en: A lavishly furnished four-poster bed, pt-BR: Tradução em breve. }
+      text: { en: A lavishly furnished four-poster bed, pt-BR: Uma cama com dossel luxuosamente decorada }
     - range: '76–78'
-      text: { en: A treasure map, pt-BR: Tradução em breve. }
+      text: { en: A treasure map, pt-BR: Um mapa do tesouro }
     - range: '79–81'
-      text: { en: A silver bell, pt-BR: Tradução em breve. }
+      text: { en: A silver bell, pt-BR: Um sino de prata }
     - range: '82–84'
-      text: { en: A book of useful phrases in an exotic language, pt-BR: Tradução em breve. }
+      text: { en: A book of useful phrases in an exotic language, pt-BR: Um livro de frases úteis em um idioma exótico }
     - range: '85–87'
-      text: { en: A cauldron, pt-BR: Tradução em breve. }
+      text: { en: A cauldron, pt-BR: Um caldeirão }
     - range: '88–90'
-      text: { en: A book of erotic imagery, pt-BR: Tradução em breve. }
+      text: { en: A book of erotic imagery, pt-BR: Um livro de imagens eróticas }
     - range: '91–93'
-      text: { en: A clockwork astrolabe, pt-BR: Tradução em breve. }
+      text: { en: A clockwork astrolabe, pt-BR: Um astrolábio de mecanismo de relojoaria }
     - range: '94–96'
-      text: { en: A large block of ice, pt-BR: Tradução em breve. }
+      text: { en: A large block of ice, pt-BR: Um grande bloco de gelo }
     - range: '97–99'
-      text: { en: Twelve dozen wheels of various cheeses, pt-BR: Tradução em breve. }
+      text: { en: Twelve dozen wheels of various cheeses, pt-BR: Doze dúzias de rodas de queijos variados }
     - range: '100'
-      text: { en: An old boot, pt-BR: Tradução em breve. }
+      text: { en: An old boot, pt-BR: Uma bota velha }
 flavor_quote: null
 depletion_die: '1 in 1d20'

@@ -1,5 +1,5 @@
 id: remote-viewer
-name: { en: 'Remote viewer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Remote viewer', 'pt-BR': 'Visor remoto' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 396'
 level_range: '1d6'
@@ -8,5 +8,7 @@ effect_text:
     For one hour per cypher level, the user can see everything going on in the
     vicinity of the cypher, regardless of the distance between them.
   pt-BR: >-
-    Tradução em breve.
+    Por uma hora por nível da cifra, o usuário consegue ver tudo o que
+    acontece nas proximidades da cifra, independentemente da distância
+    entre eles.
 effect_table: null

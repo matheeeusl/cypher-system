@@ -1,5 +1,5 @@
 id: speed-boost
-name: { en: 'Speed boost', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Speed boost', 'pt-BR': 'Impulso de velocidade' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 398'
 level_range: '1d6 + 2'
@@ -8,5 +8,6 @@ effect_text:
     Adds 1 to the user's Speed Edge for one hour (adds 2 if the cypher is
     level 5 or higher).
   pt-BR: >-
-    Tradução em breve.
+    Soma 1 à Margem de Velocidade do usuário por uma hora (soma 2 se a
+    cifra for de nível 5 ou superior).
 effect_table: null

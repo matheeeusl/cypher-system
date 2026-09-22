@@ -13,7 +13,7 @@ description:
     creatures in the area take 3 points of damage due to debris on
     the wind. Attempts to damage objects or structures with your
     tornado are eased by two steps.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Os cascos relampejantes da sua montaria revolvem um pequeno tornado, levantando você e sua montaria uma distância longa até o olho da tempestade sobrenatural. O tornado se move conforme você o direciona, até uma distância curta a cada round, por até cinco minutos ou até você dispensá-lo. Os ventos giratórios danificam criaturas, objetos e estruturas dentro de uma distância curta do olho do tornado. A cada round, as criaturas na área sofrem 3 pontos de dano por detritos no vento. Tentativas de danificar objetos ou estruturas com seu tornado são facilitadas em dois níveis.'
 cost:
   pool: speed
   amount: 7

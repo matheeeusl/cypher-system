@@ -9,7 +9,7 @@ description:
     exact action, they can do so as an additional action immediately.
     Doing so doesn't interfere with the ally taking a normal action on
     their turn.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se um aliado consegue vê-lo e entendê-lo facilmente, você pode instruí-lo a realizar uma ação. Se o aliado optar por realizar exatamente essa ação, pode fazê-lo como uma ação adicional imediatamente. Fazer isso não interfere no aliado realizar uma ação normal no seu turno.'
 cost:
   pool: intellect
   amount: 4

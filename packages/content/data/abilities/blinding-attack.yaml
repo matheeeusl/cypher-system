@@ -7,7 +7,7 @@ description:
     If you have a source of light, you can use it to make a melee
     attack against a target. If successful, the attack deals no
     damage, but the target is blinded for one minute.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você tiver uma fonte de luz, pode usá-la para fazer um ataque corpo a corpo contra um alvo. Se for bem-sucedido, o ataque não causa dano, mas o alvo fica cego por um minuto.'
 cost:
   pool: speed
   amount: 3

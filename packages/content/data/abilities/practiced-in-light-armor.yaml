@@ -9,7 +9,7 @@ description:
     You reduce the Speed cost for wearing light armor by 1. You start
     the game with a type of light armor available in the area, such
     as a leather jacket.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você consegue usar armadura leve por longos períodos sem se cansar e consegue compensar as reações mais lentas causadas por ela. Você reduz o custo de Velocidade para usar armadura leve em 1. Você começa o jogo com um tipo de armadura leve disponível na região, como uma jaqueta de couro.'
 cost: null
 action_type: enabler
 sources:

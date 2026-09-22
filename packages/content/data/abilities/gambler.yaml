@@ -8,7 +8,7 @@ description:
     trained. Choose from the following: poker, twenty one, farro,
     craps, blackjack, roulette, baccarat, or another game where
     gambling on the outcome is part of play.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em um jogo de mesa no qual ainda não é treinada. Escolha entre: pôquer, vinte e um, farro, craps, blackjack, roleta, bacará, ou outro jogo em que apostar no resultado faça parte da partida.'
 cost: null
 action_type: enabler
 sources:

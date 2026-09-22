@@ -4,7 +4,7 @@ name:
   pt-BR: Mente por Força
 description:
   en: When performing a task that would normally require spending points from your Intellect Pool, you can spend points from your Might Pool instead, and vice versa.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ao realizar uma tarefa que normalmente exigiria gastar pontos da sua Reserva de Intelecto, você pode em vez disso gastar pontos da sua Reserva de Força, e vice-versa.'
 cost: null
 action_type: enabler
 sources:

@@ -12,7 +12,7 @@ description:
     and so on. In addition, Speed defense rolls made by the innocent
     creature gain an asset. You can protect only one innocent creature
     at a time.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelos próximos dez minutos, se alguém que você designou como inocente com a habilidade Designação estiver ao seu lado, essa criatura compartilha quaisquer vantagens defensivas que você possa ter, exceto armadura comum. Essas vantagens incluem a defesa de Velocidade do seu escudo, a Armadura oferecida por um campo de força, e assim por diante. Além disso, as rolagens de defesa de Velocidade feitas pela criatura inocente ganham um recurso. Você só pode proteger uma criatura inocente por vez.'
   # Note: printed identically at both Tier 2 (granted) and Tier 3
   # (choice option) of this same Focus — same-focus multi-tier reuse
   # pattern, modeled as two `sources[]` entries at different tiers.

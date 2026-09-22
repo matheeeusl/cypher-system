@@ -10,7 +10,7 @@ description:
     catches the target on fire, which inflicts 1 additional point of
     damage per round for up to a minute or until the target uses an
     action to douse the flames.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você arremessa um punhado de sementes no ar que se inflamam e disparam em direção a um alvo dentro de uma distância longa, riscando o ar com trilhas de fumaça retorcidas. O ataque causa 3 pontos de dano e incendeia o alvo, o que causa 1 ponto adicional de dano por round por até um minuto ou até o alvo usar uma ação para apagar as chamas.'
 cost:
   pool: intellect
   amount: 1

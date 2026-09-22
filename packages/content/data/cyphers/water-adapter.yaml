@@ -1,5 +1,5 @@
 id: water-adapter
-name: { en: 'Water adapter', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Water adapter', 'pt-BR': 'Adaptador aquático' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 400'
 level_range: '1d6'
@@ -11,5 +11,10 @@ effect_text:
     allowing the user to ignore ill effects from very low or very high
     atmospheric pressure. The cypher does not protect against vacuum.
   pt-BR: >-
-    Tradução em breve.
+    O usuário consegue respirar debaixo d'água e operar em qualquer
+    profundidade (sem sofrer as consequências debilitantes das
+    mudanças de pressão) por quatro horas por nível da cifra. Esta
+    cifra também pode ser usada na atmosfera normal, permitindo que o
+    usuário ignore os efeitos nocivos de pressão atmosférica muito
+    baixa ou muito alta. A cifra não protege contra vácuo.
 effect_table: null

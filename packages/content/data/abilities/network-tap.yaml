@@ -10,7 +10,7 @@ description:
     failed roll, feedback or perhaps some defense from the network
     you're accessing inflicts 4 points of Intellect damage on you
     (ignores Armor).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode fazer uma pergunta ao Mestre e obter uma resposta muito breve se tiver sucesso em uma rolagem de Intelecto contra uma dificuldade atribuída pelo Mestre. Quanto mais obscura a resposta, mais difícil a tarefa. Em uma rolagem malsucedida, uma reação ou talvez alguma defesa da rede que você está acessando causa 4 pontos de dano de Intelecto em você (ignora Armadura).'
 cost:
   pool: intellect
   amount: 4

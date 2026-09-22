@@ -9,7 +9,7 @@ description:
     fire, lightning, shadow, or thorn) for one hour, or until you cast
     this spell again. Each level of Effort applied increases the
     elemental protection by +2.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você e todo alvo que designar dentro de uma distância imediata ganham +5 de Armadura contra um tipo direto de dano elemental (como fogo, relâmpago, sombra ou espinho) por uma hora, ou até você conjurar este feitiço novamente. Cada nível de Esforço aplicado aumenta a proteção elemental em +2.'
   # Note: source cost is printed as "4+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Intellect points here, flagged for schema review (same

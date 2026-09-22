@@ -12,7 +12,7 @@ description:
     creature within short range. This mindslice inflicts 2 points of
     Intellect damage (ignores Armor). Some creatures without minds (such
     as robots) might be immune to your mindslice.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você ataca um inimigo usando energias que atingem sua forma física ou sua mente. Em ambos os casos, você deve conseguir ver seu alvo. Se o ataque for físico, você emite um raio de força de curto alcance que causa 4 pontos de dano. Se o ataque for mental, você concentra sua energia mental para atingir os processos de pensamento de outra criatura dentro de uma distância curta. Esse corte mental causa 2 pontos de dano de Intelecto (ignora Armadura). Algumas criaturas sem mente (como robôs) podem ser imunes ao seu corte mental.'
 cost:
   pool: intellect
   amount: 1

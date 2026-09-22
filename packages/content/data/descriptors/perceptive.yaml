@@ -1,7 +1,7 @@
 id: perceptive
 name:
   en: Perceptive
-  pt-BR: Tradução em breve.
+  pt-BR: Perceptivo
 description:
   en: >-
     You miss little. You pick out the small details in the world around
@@ -13,7 +13,17 @@ description:
     can make the people around you. You tend to dismiss others as being
     intellectual dwarfs compared to you, which avails you little when
     you need a favor.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Pouca coisa passa despercebida por você. Você identifica os pequenos
+    detalhes no mundo ao seu redor e é habilidoso em tirar conclusões a
+    partir das informações que encontra. Seus talentos fazem de você um
+    detetive excepcional, um cientista formidável ou um batedor
+    talentoso. Por mais habilidoso que seja em encontrar pistas, você
+    não tem nenhuma habilidade em perceber sinais sociais. Você ignora a
+    ofensa que suas deduções podem causar ou o quanto seu escrutínio
+    pode deixar as pessoas ao seu redor desconfortáveis. Você tende a
+    descartar os outros como anões intelectuais em comparação a você, o
+    que de pouco lhe serve quando precisa de um favor.
 pool_bonus:
   - stat: intellect
     amount: 2
@@ -29,24 +39,34 @@ inabilities:
   - en: >-
       Your confidence comes off as arrogance to people who don't know
       you. Any task involving positive social interactions is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Sua confiança soa como arrogância para quem não o conhece. Qualquer
+      tarefa envolvendo interações sociais positivas é prejudicada.
 additional_equipment:
   en: You have a bag of light tools.
-  pt-BR: Tradução em breve.
+  pt-BR: Você tem uma bolsa de ferramentas leves.
 connection_options:
   - en: >-
       You overheard the other PCs discussing their mission and
       volunteered your services.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você ouviu os outros personagens discutindo sua missão e se
+      ofereceu para ajudar.
   - en: >-
       One of the PCs asked you to come along, believing that your
       talents would be invaluable to the mission.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens pediu que você viesse junto, acreditando
+      que seus talentos seriam inestimáveis para a missão.
   - en: >-
       You believe that the PCs' mission is somehow related to one of
       your investigations.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você acredita que a missão dos outros personagens está de alguma
+      forma relacionada a uma das suas investigações.
   - en: >-
       A third party recruited you to follow the PCs and see what they
       were up to.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um terceiro o recrutou para seguir os outros personagens e
+      descobrir o que estavam tramando.

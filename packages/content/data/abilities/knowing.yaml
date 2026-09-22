@@ -4,7 +4,7 @@ name:
   pt-BR: Sabedoria
 description:
   en: You are trained in one area of knowledge of your choice.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em uma área de conhecimento à sua escolha.'
 cost: null
 action_type: enabler
 sources:

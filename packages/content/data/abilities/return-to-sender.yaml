@@ -7,7 +7,7 @@ description:
     If you succeed at a Speed defense task against a melee attack, you
     can make an immediate melee attack against your foe. You can use
     this ability only once per round.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você tiver sucesso em uma tarefa de defesa de Velocidade contra um ataque corpo a corpo, pode fazer um ataque corpo a corpo imediato contra seu inimigo. Você só pode usar esta habilidade uma vez por round.'
 cost:
   pool: speed
   amount: 3

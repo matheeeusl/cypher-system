@@ -1,7 +1,7 @@
 id: mysterious
 name:
   en: Mysterious
-  pt-BR: Tradução em breve.
+  pt-BR: Misterioso
 description:
   en: >-
     The dark figure lurking silently in the corner? That's you. No one
@@ -10,12 +10,18 @@ description:
     others, but that doesn't make you a poor friend or ally. You're just
     good at keeping things to yourself, moving about unseen, and
     concealing your presence and identity.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Aquela figura sombria espreitando em silêncio no canto? É você.
+    Ninguém realmente sabe de onde você veio ou quais são suas
+    motivações — você mantém tudo bem guardado. Seu jeito de ser intriga
+    e confunde os outros, mas isso não faz de você um amigo ou aliado
+    ruim. Você só é bom em guardar segredos, se mover sem ser visto e
+    esconder sua presença e identidade.
 pool_bonus: []
 characteristics:
   - name:
       en: Confounding
-      pt-BR: Tradução em breve.
+      pt-BR: Desconcertante
     description:
       en: >-
         You pull talents and abilities seemingly out of nowhere. You can
@@ -24,7 +30,14 @@ characteristics:
         specialized, or gain a free level of Effort with a task that you
         are specialized in. This ability refreshes every time you make a
         recovery roll, but the uses never accumulate.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você tira talentos e habilidades aparentemente do nada. Você pode
+        tentar uma tarefa na qual não tem nenhum treinamento como se
+        fosse treinado, tentar uma tarefa na qual é treinado como se
+        fosse especializado, ou ganhar um nível gratuito de Esforço em
+        uma tarefa na qual é especializado. Essa habilidade se renova a
+        cada vez que você faz uma rolagem de recuperação, mas os usos
+        nunca se acumulam.
 skill_training:
   - skill_id: stealth
     choice_count: null
@@ -34,18 +47,26 @@ inabilities:
   - en: >-
       People never know where they stand with you. Any task involving
       getting people to believe or trust you is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      As pessoas nunca sabem onde estão com você. Qualquer tarefa
+      envolvendo fazer alguém acreditar ou confiar em você é prejudicada.
 additional_equipment: null
 connection_options:
   - en: You just showed up one day.
-    pt-BR: Tradução em breve.
+    pt-BR: Você simplesmente apareceu um dia.
   - en: You convinced one of the other PCs that you had invaluable skills.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você convenceu um dos outros personagens de que tinha habilidades
+      inestimáveis.
   - en: >-
       Some equally mysterious figure told you where to be and when (but
       not why) to join the group.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Uma figura igualmente misteriosa lhe disse onde e quando (mas não
+      por quê) se juntar ao grupo.
   - en: >-
       Something—a feeling, a dream—told you where to be and when to
       join the group.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Algo — um pressentimento, um sonho — lhe disse onde e quando se
+      juntar ao grupo.

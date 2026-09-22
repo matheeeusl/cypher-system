@@ -1,7 +1,7 @@
 id: chaotic
 name:
   en: Chaotic
-  pt-BR: Tradução em breve.
+  pt-BR: Caótico
 description:
   en: >-
     Danger doesn't mean much to you, mainly because you don't think much
@@ -10,21 +10,31 @@ description:
     are. Sometimes you are particularly manic, and for the sake of your
     companions, you restrain yourself from taking actions that you know
     will lead to disaster.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    O perigo não significa muito para você, principalmente porque você
+    não pensa muito nas repercussões. Na verdade, você gosta de semear
+    surpresas, só para ver o que vai acontecer. Quanto mais inesperado o
+    resultado, mais feliz você fica. Às vezes você fica particularmente
+    eufórico e, pelo bem de seus companheiros, se contém de tomar
+    atitudes que sabe que levarão ao desastre.
 pool_bonus:
   - stat: speed
     amount: 4
 characteristics:
   - name:
       en: Chaotic
-      pt-BR: Tradução em breve.
+      pt-BR: Caótico
     description:
       en: >-
         Once after each ten-hour recovery roll, if you don't like the
         first result, you can reroll a die roll of your choice. If you
         do, and regardless of the outcome, the GM presents you with a GM
         intrusion.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Uma vez após cada rolagem de recuperação de dez horas, se você
+        não gostar do primeiro resultado, pode refazer uma rolagem de
+        dado à sua escolha. Se fizer isso, independentemente do
+        resultado, o Mestre lhe apresenta uma intrusão do Mestre.
 skill_training:
   - skill_id: intellect-defense
     choice_count: null
@@ -32,22 +42,33 @@ inabilities:
   - en: >-
       Your body is a bit worn from occasional excesses. Might defense
       tasks are hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Seu corpo está um pouco desgastado por excessos ocasionais. Tarefas
+      de defesa de Força são prejudicadas.
 additional_equipment: null
 connection_options:
   - en: >-
       Another PC recruited you while you were on your best behavior,
       before realizing how chaotic you were.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Outro personagem o recrutou enquanto você estava em seu melhor
+      comportamento, antes de perceber o quão caótico você era.
   - en: >-
       You have reason to believe that being with the other PCs will help
       you gain control over your erratic behavior.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem motivos para acreditar que estar com os outros personagens
+      vai ajudá-lo a controlar seu comportamento errático.
   - en: >-
       Another PC released you from captivity, and to thank them, you
       volunteered to help.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Outro personagem o libertou do cativeiro e, para agradecê-lo, você
+      se ofereceu para ajudar.
   - en: >-
       You have no idea how you joined the PCs. You're just going along
       with it for now until answers present themselves.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você não faz ideia de como se juntou aos outros personagens. Por
+      enquanto, você só está seguindo o fluxo até que as respostas
+      apareçam.

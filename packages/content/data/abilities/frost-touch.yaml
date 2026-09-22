@@ -8,7 +8,7 @@ description:
     creature, you inflict 3 points of damage. Alternatively, you can
     use this ability on a weapon, and for ten minutes, it inflicts 1
     additional point of damage from the cold.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas mãos ficam tão frias que, na próxima vez que tocar uma criatura, você causa 3 pontos de dano. Alternativamente, pode usar esta habilidade em uma arma, e por dez minutos, ela causa 1 ponto adicional de dano pelo frio.'
   # Note: source tag is "Action for touch; enabler for weapon." — a
   # genuinely dual-mode tag, also used verbatim by `shock` (Rides the
   # Lightning).

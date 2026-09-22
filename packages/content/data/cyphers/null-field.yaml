@@ -1,5 +1,5 @@
 id: null-field
-name: { en: 'Null field', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Null field', 'pt-BR': 'Campo nulo' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 3'
@@ -9,27 +9,30 @@ effect_text:
     the cypher is level 8 or higher) against damage of a specified kind for
     one hour. Roll a d100 to determine the effect.
   pt-BR: >-
-    Tradução em breve.
+    O usuário e todas as criaturas dentro de uma distância imediata
+    ganham +3 de Armadura (+5 se a cifra for de nível 8 ou superior)
+    contra dano de um tipo específico por uma hora. Role 1d100 para
+    determinar o efeito.
 effect_table:
   label:
     en: 'Null Field Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Campo Nulo'
   entries:
     - range: '01–12'
-      text: { en: 'Fire', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Fire', 'pt-BR': 'Fogo' }
     - range: '13–27'
-      text: { en: 'Cold', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Cold', 'pt-BR': 'Frio' }
     - range: '28–39'
-      text: { en: 'Acid', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Acid', 'pt-BR': 'Ácido' }
     - range: '40–52'
-      text: { en: 'Psychic', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Psychic', 'pt-BR': 'Psíquico' }
     - range: '53–65'
-      text: { en: 'Sonic', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Sonic', 'pt-BR': 'Sônico' }
     - range: '66–72'
-      text: { en: 'Electrical', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Electrical', 'pt-BR': 'Elétrico' }
     - range: '73–84'
-      text: { en: 'Poison', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Poison', 'pt-BR': 'Veneno' }
     - range: '85–95'
-      text: { en: 'Blunt force', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Blunt force', 'pt-BR': 'Concussão' }
     - range: '96–00'
-      text: { en: 'Slashing and piercing', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Slashing and piercing', 'pt-BR': 'Corte e perfuração' }

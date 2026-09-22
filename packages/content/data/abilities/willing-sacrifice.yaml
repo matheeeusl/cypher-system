@@ -4,7 +4,7 @@ name:
   pt-BR: Sacrifício Voluntário
 description:
   en: When you take an attack meant for another character, you know how to take the attack in a way that minimizes its effect. The attack automatically strikes you, but instead of taking 1 additional point of damage, you take 1 less point of damage (to a minimum of 1 point). Additionally, you can take more than one attack in a given round provided that all the attacks were originally meant for one target.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você sofre um ataque destinado a outro personagem, você sabe como recebê-lo de forma a minimizar seu efeito. O ataque a atinge automaticamente, mas em vez de sofrer 1 ponto adicional de dano, você sofre 1 ponto a menos de dano (até um mínimo de 1 ponto). Além disso, você pode sofrer mais de um ataque em um determinado round, desde que todos os ataques fossem originalmente destinados a um único alvo.'
 cost: null
 action_type: enabler
 sources:

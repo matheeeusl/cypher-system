@@ -1,7 +1,7 @@
 id: intuitive
 name:
   en: Intuitive
-  pt-BR: Tradução em breve.
+  pt-BR: Intuitivo
 description:
   en: >-
     You are often tickled by a sense of knowing what someone will say,
@@ -11,21 +11,33 @@ description:
     situation. Whatever the case, many who look into your eyes
     immediately glance away, as if afraid of what you might see in their
     expression.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você frequentemente sente, de forma instigante, que sabe o que alguém
+    vai dizer, como vai reagir ou como os acontecimentos podem se
+    desenrolar. Talvez você tenha um sentido mutante, talvez consiga ver
+    apenas alguns instantes à frente no tempo, ou talvez seja apenas bom
+    em ler as pessoas e extrapolar uma situação. Seja qual for o caso,
+    muitos que olham nos seus olhos desviam o olhar imediatamente, como
+    se temessem o que você pudesse ver em sua expressão.
 pool_bonus:
   - stat: intellect
     amount: 2
 characteristics:
   - name:
       en: Know What to Do
-      pt-BR: Tradução em breve.
+      pt-BR: Saber o Que Fazer
     description:
       en: >-
         You can act immediately, even if it's not your turn. Afterward,
         on your next regular turn, any action you take is hindered. You
         can do this one time, although the ability is renewed each time
         you make a recovery roll.
-      pt-BR: Tradução em breve.
+      pt-BR: >-
+        Você pode agir imediatamente, mesmo que não seja o seu turno.
+        Depois disso, no seu próximo turno regular, qualquer ação que
+        você realizar é prejudicada. Você pode fazer isso uma vez, embora
+        a habilidade seja renovada a cada vez que você faz uma rolagem de
+        recuperação.
 skill_training:
   - skill_id: perception
     choice_count: null
@@ -33,12 +45,16 @@ inabilities: []
 additional_equipment: null
 connection_options:
   - en: You just knew you had to come along.
-    pt-BR: Tradução em breve.
+    pt-BR: Você simplesmente sabia que precisava vir junto.
   - en: You convinced one of the other PCs that your intuition is invaluable.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você convenceu um dos outros personagens de que sua intuição é
+      inestimável.
   - en: You felt that something terrible would happen if you didn't go.
-    pt-BR: Tradução em breve.
+    pt-BR: Você sentiu que algo terrível aconteceria se você não fosse.
   - en: >-
       You're confident the reason you arrived at this point will soon
       become clear.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você tem confiança de que o motivo de ter chegado a este ponto logo
+      ficará claro.

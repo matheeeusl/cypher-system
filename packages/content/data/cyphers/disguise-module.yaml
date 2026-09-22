@@ -1,5 +1,5 @@
 id: disguise-module
-name: { en: 'Disguise module', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Disguise module', 'pt-BR': 'Módulo de disfarce' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 388'
 level_range: '1d6 + 2'
@@ -10,5 +10,11 @@ effect_text:
     Once designated, the user cannot shift the effect to look like another person,
     though they can remove the module to look like themselves again before the end of the duration.
   pt-BR: >-
-    Tradução em breve.
+    Pelos próximos dez minutos por nível da cifra, as feições do usuário
+    se tornam quase idênticas às de uma pessoa designada com quem ele já
+    interagiu anteriormente, facilitando em dois níveis as tentativas de
+    disfarçar o usuário como essa pessoa. Uma vez designada, o usuário
+    não pode mudar o efeito para se parecer com outra pessoa, embora
+    possa remover o módulo para voltar a se parecer consigo mesmo antes
+    do fim da duração.
 effect_table: null

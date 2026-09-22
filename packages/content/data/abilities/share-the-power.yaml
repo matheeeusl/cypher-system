@@ -11,7 +11,7 @@ description:
     ability) in the same way. You must touch the creature you want to
     heal, unless you have the Drain at a Distance ability, in which
     case they can be up to a short distance away.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Drenar Criatura ou Drenar Máquina para drenar energia, pode transferi-la para outra criatura, restaurando pontos à Reserva de Força ou Velocidade dela (ou saúde para um PNJ) em vez de para si mesma. Você pode gastar pontos da sua Reserva de Captação (da habilidade Armazenar Energia) da mesma forma. Você deve tocar a criatura que deseja curar, a menos que tenha a habilidade Drenar à Distância, caso em que ela pode estar a até uma distância curta.'
 cost: null
 action_type: enabler
 sources:

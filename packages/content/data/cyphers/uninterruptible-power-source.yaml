@@ -1,5 +1,5 @@
 id: uninterruptible-power-source
-name: { en: 'Uninterruptible power source', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Uninterruptible power source', 'pt-BR': 'Fonte de energia ininterrupta' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6 + 4'
@@ -11,5 +11,11 @@ effect_text:
     desk lamp is a level 1 power requirement, a car engine is a level 5 power
     requirement, and a starship is a level 10 power requirement.
   pt-BR: >-
-    Tradução em breve.
+    Fornece energia a outro dispositivo por até um dia. O dispositivo a
+    ser alimentado pode ser tão simples quanto uma fonte de luz ou tão
+    complexo quanto uma pequena nave estelar, desde que o nível da
+    cifra seja igual ao requisito de energia do item. Uma luminária de
+    mesa tem requisito de energia de nível 1, um motor de carro tem
+    requisito de energia de nível 5, e uma nave estelar tem requisito
+    de energia de nível 10.
 effect_table: null

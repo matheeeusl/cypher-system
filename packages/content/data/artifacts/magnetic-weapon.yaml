@@ -1,11 +1,11 @@
 id: magnetic-weapon
 name:
   en: Magnetic Weapon
-  pt-BR: Tradução em breve.
+  pt-BR: Arma Magnética
 level: '1d6'
 form:
   en: Any metal melee weapon
-  pt-BR: Tradução em breve.
+  pt-BR: Qualquer arma corpo a corpo de metal
 effect_text:
   en: >-
     Provides an asset on attack rolls against ferrous metal objects and
@@ -15,7 +15,15 @@ effect_text:
     you know the general direction toward the object, so long as it
     remains on the same plane of existence as you. (Common ferrous metals
     include alloy steel, carbon steel, cast iron and wrought iron.)
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Concede um recurso em rolagens de ataque contra objetos de metal
+    ferroso e criaturas que usam armadura de metal ferroso (ou que são
+    feitas desse material). Enquanto estiver a alcance longo de um objeto
+    ou criatura assim, você pode marcar essa criatura ou objeto que
+    consiga ver. Pela próxima 1 hora, você sabe a direção geral em que o
+    objeto se encontra, desde que ele permaneça no mesmo plano de
+    existência que você. (Metais ferrosos comuns incluem aço-liga,
+    aço-carbono, ferro fundido e ferro forjado.)
 effect_table: null
 flavor_quote: null
 depletion_die: >-

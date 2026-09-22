@@ -21,7 +21,27 @@ description:
 
     - Firearm cache (six firearms; a mix of light, medium, and heavy
     weapons, each usually found with about ten bullets or shells)
-  pt-BR: 'Tradução em breve.'
+  pt-BR: >-
+    Você tem um esconderijo secreto preparado com abrigo e suprimentos
+    básicos capazes de sustentá-la por um ano ou mais, ou até seis
+    pessoas por cerca de três meses. Além disso, você tem conhecimento
+    de três reservas secretas de suprimentos diferentes que montou e
+    escondeu antes de tudo desmoronar, escolhidas entre as seguintes.
+    As reservas estão localizadas a não menos de cerca de 8 km (5
+    milhas) uma da outra.
+
+    - Reserva de comida (comida suficiente para seis pessoas por doze
+    semanas)
+
+    - Reserva de água (água limpa suficiente para seis pessoas por
+    doze semanas)
+
+    - Reserva de munição (400 cartuchos ou balas para quatro armas
+    diferentes)
+
+    - Reserva de armas de fogo (seis armas de fogo; uma mistura de
+    armas leves, médias e pesadas, cada uma geralmente encontrada com
+    cerca de dez balas ou cartuchos)
 cost: null
 action_type: enabler
 sources:

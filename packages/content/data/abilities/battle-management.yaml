@@ -7,7 +7,7 @@ description:
     As long as you use your action each round giving orders or advice,
     attack and defense actions taken by your allies within short range
     are eased.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Enquanto você usar sua ação a cada round dando ordens ou conselhos, as ações de ataque e defesa realizadas por seus aliados dentro de uma distância curta são facilitadas.'
 cost:
   pool: intellect
   amount: 4

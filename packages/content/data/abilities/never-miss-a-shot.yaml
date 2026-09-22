@@ -10,7 +10,7 @@ description:
     the same shot, 2 more points are deducted from the total damage,
     until the wildly ricocheting shot finally hits its target or the
     damage amount goes to 0.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você atirar em um alvo e errar, role novamente. Se acertar, é porque seu tiro ricocheteou em uma superfície próxima e de fato acertou, causando 2 pontos a menos de dano. Cada vez que rolar novamente o mesmo tiro, mais 2 pontos são deduzidos do dano total, até que o tiro ricocheteando descontroladamente finalmente acerte seu alvo ou a quantidade de dano chegue a 0.'
 cost: null
 action_type: enabler
 sources:

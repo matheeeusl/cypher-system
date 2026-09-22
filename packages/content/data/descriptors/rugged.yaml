@@ -1,7 +1,7 @@
 id: rugged
 name:
   en: Rugged
-  pt-BR: Tradução em breve.
+  pt-BR: Rústico
 description:
   en: >-
     You're a nature lover accustomed to living rough, pitting your wits
@@ -9,7 +9,14 @@ description:
     gatherer, or naturalist. Years of living in the wild have left their
     mark with a worn countenance, wild hair, or scars. Your clothing is
     probably much less refined than the garments worn by city dwellers.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é um amante da natureza, acostumado a viver de forma rude,
+    colocando sua astúcia à prova contra os elementos. Muito
+    provavelmente, você é um caçador, coletor ou naturalista habilidoso.
+    Anos vivendo na natureza selvagem deixaram suas marcas, seja em um
+    semblante desgastado, em cabelos selvagens ou em cicatrizes. Suas
+    roupas provavelmente são muito menos refinadas do que as vestimentas
+    usadas por quem vive na cidade.
 pool_bonus: []
 characteristics: []
 skill_training:
@@ -29,22 +36,32 @@ inabilities:
   - en: >-
       You have no social graces and prefer animals to people. Any task
       involving charm, persuasion, etiquette, or deception is hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você não tem nenhuma habilidade social e prefere animais a
+      pessoas. Qualquer tarefa envolvendo charme, persuasão, etiqueta ou
+      engano é prejudicada.
 additional_equipment:
   en: >-
     You carry an explorer's pack with rope, two days' rations, a
     bedroll, and other tools needed for outdoor survival.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você carrega uma mochila de explorador com corda, rações para dois
+    dias, um saco de dormir e outras ferramentas necessárias para
+    sobrevivência ao ar livre.
 connection_options:
   - en: >-
       Against your better judgment, you joined the other PCs because you
       saw that they were in danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Contrariando seu bom senso, você se juntou aos outros personagens
+      porque viu que estavam em perigo.
   - en: >-
       One of the other PCs convinced you that joining the group would be
       in your best interests.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convenceu de que se juntar ao grupo
+      seria do seu interesse.
   - en: You're afraid of what might happen if the other PCs fail.
-    pt-BR: Tradução em breve.
+    pt-BR: Você teme o que pode acontecer se os outros personagens fracassarem.
   - en: There is reward involved, and you need the money.
-    pt-BR: Tradução em breve.
+    pt-BR: Há uma recompensa envolvida, e você precisa do dinheiro.

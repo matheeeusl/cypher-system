@@ -12,7 +12,7 @@ description:
     during the execution of that plan within the next 24 hours. The
     plan of action must be something concrete and executable in order
     to gain this benefit.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Ter um plano de ação estabelecido antes de enfrentar um desafio melhora as chances de sucesso, mesmo que esse plano seja eventualmente mudado ou descartado assim que colocado em prática. Se você e seus aliados passarem pelo menos dez minutos revisando um plano de ação, todos vocês ganham um nível gratuito de Esforço que pode ser aplicado a uma tarefa que tentarem durante a execução desse plano nas próximas 24 horas. O plano de ação deve ser algo concreto e executável para obter esse benefício.'
   # Note: source tag is "Action to initiate, ten minutes to complete."
 cost:
   pool: intellect

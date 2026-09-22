@@ -7,7 +7,7 @@ description:
     If you spend an action lining up your shot while Smoldering Gun
     is active, each level of Effort adds 5 points of damage to a
     successful attack instead of 3.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você gastar uma ação mirando com cuidado enquanto Arma em Brasa estiver ativa, cada nível de Esforço adiciona 5 pontos de dano a um ataque bem-sucedido, em vez de 3.'
 cost: null
 action_type: enabler
 sources:

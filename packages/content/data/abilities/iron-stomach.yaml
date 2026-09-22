@@ -6,7 +6,7 @@ description:
   en: >-
     The more you imbibe, the greater your tolerance grows (at least,
     so far…). You gain +5 to your Might Pool.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quanto mais você bebe, maior fica sua tolerância (pelo menos, até agora…). Você ganha +5 na sua Reserva de Força.'
 cost: null
 action_type: enabler
 sources:

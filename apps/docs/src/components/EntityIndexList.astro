@@ -30,12 +30,10 @@ const { caption, rows } = Astro.props;
 						<td class="p-0">
 							<a
 								href={row.href}
-								class="flex items-center justify-between gap-4 px-3.5 py-2.5 text-[13px] text-text no-underline hover:bg-panel"
+								class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 px-3.5 py-2.5 text-[13px] text-text no-underline hover:bg-panel"
 							>
 								<span class="font-medium">{row.name}</span>
-								{row.meta && (
-									<span class="shrink-0 font-mono text-xs whitespace-nowrap text-text-muted">{row.meta}</span>
-								)}
+								{row.meta && <span class="font-mono text-xs text-text-muted">{row.meta}</span>}
 							</a>
 						</td>
 					</tr>

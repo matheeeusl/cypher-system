@@ -4,7 +4,7 @@ name:
   pt-BR: Feitiçaria de Armas Treinada
 description:
   en: You are trained in using guns (whether firing normal bullets or Spell Bullets).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em usar armas de fogo (seja disparando balas normais ou Balas de Feitiço).'
 cost: null
 action_type: enabler
 sources:

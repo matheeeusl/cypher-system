@@ -4,7 +4,7 @@ name:
   pt-BR: Rápida em Fugir
 description:
   en: You are trained in stealth and movement tasks.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em tarefas de furtividade e movimento.'
 cost: null
 action_type: enabler
 sources:

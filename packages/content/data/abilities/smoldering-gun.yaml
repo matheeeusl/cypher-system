@@ -14,7 +14,7 @@ description:
     damage from fire from another source. If you'd prefer another
     element or energy source, such as ice or necrotic energy, work
     with your GM to adjust this and related abilities.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sua arma de fogo arde em chamas por dez minutos, brilhando em vermelho e liberando uma fina fumaça pelo cano. As chamas não a queimam, mas você causa 1 ponto adicional de dano com a arma enquanto ela arde. Enquanto a arma arde, ela dispara automaticamente sempre que alguém tenta tocá-la ou atingi-la com um ataque corpo a corpo, causando 2 pontos de dano a essa pessoa. Chamas de outra fonte ainda podem machucá-la. Enquanto sua arma arde, você ganha +1 de Armadura contra dano de fogo de outra fonte. Se preferir outro elemento ou fonte de energia, como gelo ou energia necrótica, combine com seu Mestre para ajustar esta habilidade e as relacionadas.'
 cost:
   pool: intellect
   amount: 1

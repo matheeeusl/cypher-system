@@ -8,7 +8,7 @@ description:
     addition to inflicting damage. The target must be your size or
     smaller. You can knock down a target larger than you if you apply
     a level of Effort to do so (rather than to ease the attack).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você atacar um alvo com sucesso, derruba-o além de causar dano. O alvo deve ser do seu tamanho ou menor. Você pode derrubar um alvo maior que você se aplicar um nível de Esforço para isso (em vez de para facilitar o ataque).'
   # Note: source cost is printed as "3+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 3 Might points here, flagged for schema review (same

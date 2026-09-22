@@ -1,5 +1,5 @@
 id: intelligence-enhancement
-name: { en: 'Intelligence enhancement', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Intelligence enhancement', 'pt-BR': 'Aprimoramento de inteligência' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 391'
 level_range: '1d6'
@@ -11,5 +11,9 @@ effect_text:
     for one hour. In the subsequent hour, the strain hinders the same tasks by
     two steps.
   pt-BR: >-
-    Tradução em breve.
+    Todas as tarefas do usuário que envolvem dedução inteligente — como
+    jogar xadrez, inferir uma conexão entre pistas, resolver um problema
+    matemático, encontrar um bug em um código de computador, e assim por
+    diante — são facilitadas em dois níveis por uma hora. Na hora
+    seguinte, o esforço prejudica as mesmas tarefas em dois níveis.
 effect_table: null

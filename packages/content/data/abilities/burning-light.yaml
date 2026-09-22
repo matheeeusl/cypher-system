@@ -4,7 +4,7 @@ name:
   pt-BR: Luz Ardente
 description:
   en: You send a beam of light at a creature within long range and then tighten the beam until it burns, inflicting 5 points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você envia um feixe de luz a uma criatura dentro de uma distância longa e então concentra o feixe até que ele queime, causando 5 pontos de dano.'
 cost:
   pool: intellect
   amount: 3

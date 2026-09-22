@@ -11,7 +11,7 @@ description:
     regain 1 Might point and avoid dying. Each time you attempt to save
     yourself with this ability before your next ten-hour recovery roll,
     the task is hindered.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você está enfraquecida ou debilitada na trilha de dano, as tarefas baseadas em Força e rolagens de defesa que tentar são facilitadas. Se você também tiver Ignorar a Dor, faça uma rolagem de defesa de Força de dificuldade 1 ao chegar a 0 pontos em todas as suas três Reservas para recuperar imediatamente 1 ponto de Força e evitar a morte. Cada vez que você tentar se salvar com esta habilidade antes da sua próxima rolagem de recuperação de dez horas, a tarefa é dificultada.'
 cost: null
 action_type: enabler
 sources:

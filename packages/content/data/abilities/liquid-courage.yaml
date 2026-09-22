@@ -6,7 +6,7 @@ description:
   en: >-
     Your defense rolls against fear are eased. They are eased by two
     steps when you are one or more steps down the intoxication track.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Suas rolagens de defesa contra medo são facilitadas. Elas são facilitadas em dois níveis quando você está um ou mais níveis abaixo na trilha de intoxicação.'
 cost: null
 action_type: enabler
 sources:

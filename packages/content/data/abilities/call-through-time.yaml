@@ -21,7 +21,7 @@ description:
     applying one level of Effort calls a specific creature of up to
     level 4 or a random creature with a 10 percent chance of being up
     to level 6.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você invoca uma criatura ou pessoa de até nível 3 de um passado recente, e ela aparece ao seu lado. Você pode escolher uma criatura que já tenha encontrado antes (mesmo que agora esteja morta), ou (no máximo uma vez por dia) pode permitir que o Mestre determine a criatura aleatoriamente. Se invocar uma criatura aleatória, há 10% de chance de ser uma criatura de até nível 5. A criatura não tem memória de nada antes de ser invocada por você, embora consiga falar e tenha o conhecimento geral que uma criatura do seu tipo deveria possuir. A criatura deslocada no tempo obedece suas ordens enquanto você se concentrar nela, mas você deve usar sua ação a cada turno para direcioná-la; caso contrário, ela retorna ao passado. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para invocar uma criatura mais poderosa; cada nível de Esforço usado dessa forma aumenta o nível da criatura em 1. Por exemplo, aplicar um nível de Esforço invoca uma criatura específica de até nível 4 ou uma criatura aleatória com 10% de chance de ser de até nível 6.'
   # Note: source cost is printed as "6+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 6 Intellect points here, flagged for schema review

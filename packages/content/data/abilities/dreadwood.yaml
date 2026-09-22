@@ -13,7 +13,7 @@ description:
     are frozen in fear, not moving or taking actions for one minute
     or until they are attacked. Some creatures without minds might be
     immune to this fear.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você manipula vento, névoa e sombras para incorporar o medo primordial dos bosques misteriosos. Pelo próximo minuto, você ganha um recurso em tarefas de intimidação. Criaturas dentro de uma distância curta podem ficar apavoradas; faça uma rolagem de ataque de Intelecto separada para cada criatura (se você estiver maior que o normal por usar Árvore Grande ou outra fonte, essas rolagens são facilitadas). O sucesso significa que elas ficam paralisadas de medo, sem se mover ou realizar ações por um minuto ou até serem atacadas. Algumas criaturas sem mente podem ser imunes a esse medo.'
 cost:
   pool: intellect
   amount: 6

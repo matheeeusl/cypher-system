@@ -1,5 +1,5 @@
 id: motion-sensor
-name: { en: 'Motion sensor', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Motion sensor', 'pt-BR': 'Sensor de movimento' }
 category: subtle
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 2'
@@ -10,5 +10,9 @@ effect_text:
     range (the cypher distinguishes between the two). It also indicates the
     number and size of the creatures or objects in motion.
   pt-BR: >-
-    Tradução em breve.
+    Por uma hora por nível da cifra, o usuário sabe quando qualquer
+    movimento ocorre dentro de uma distância curta, e quando criaturas
+    ou objetos grandes se movem dentro de uma distância longa (a cifra
+    distingue entre os dois casos). Também indica o número e o tamanho
+    das criaturas ou objetos em movimento.
 effect_table: null

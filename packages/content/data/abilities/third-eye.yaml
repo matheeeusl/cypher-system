@@ -10,7 +10,7 @@ description:
     eye, you see through your sensor instead of your eyes using your
     normal visual abilities. You may perceive the area around your
     body using your other senses as normal.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você visualiza um local dentro de uma distância curta e projeta sua mente até lá, criando um sensor imóvel e invisível por um minuto ou até você optar por encerrar esta habilidade. Enquanto usa seu terceiro olho, você vê através do seu sensor em vez de seus olhos usando suas habilidades visuais normais. Você pode perceber a área ao redor do seu corpo usando seus outros sentidos normalmente.'
 cost:
   pool: intellect
   amount: 1

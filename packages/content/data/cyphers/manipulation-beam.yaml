@@ -1,5 +1,5 @@
 id: manipulation-beam
-name: { en: 'Manipulation beam', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Manipulation beam', 'pt-BR': 'Feixe de manipulação' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 392'
 level_range: '1d6 + 2'
@@ -16,5 +16,15 @@ effect_text:
     computer at a distance, which would make some infiltration and hacking
     jobs easier.)
   pt-BR: >-
-    Tradução em breve.
+    Ao longo de um dia, o usuário pode ativar a cifra um número total
+    de vezes igual ao seu nível. A cada vez, pode afetar um objeto que
+    consiga ver dentro de uma distância longa e que não seja pesado
+    demais para afetar fisicamente. O efeito deve ocorrer ao longo de
+    uma rodada e pode incluir fechar ou abrir uma porta, digitar um
+    número em um teclado, transferir um objeto por uma distância curta,
+    arrancar um objeto das mãos de outra criatura (com sucesso em uma
+    rolagem baseada em Força) ou empurrar uma criatura por uma distância
+    imediata. (Um feixe de manipulação pode ser usado para operar um
+    computador à distância, o que facilitaria alguns trabalhos de
+    infiltração e invasão.)
 effect_table: null

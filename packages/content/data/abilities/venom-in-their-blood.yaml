@@ -8,7 +8,7 @@ description:
     with Venomous Strike, you deal 9 additional points of damage.
     Once you use this ability, you can't use it again during the
     current conflict.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você atacar com sucesso uma criatura que já tenha danificado anteriormente com Golpe Venenoso, causa 9 pontos adicionais de dano. Uma vez que você usa esta habilidade, não pode usá-la novamente durante o conflito atual.'
 cost:
   pool: speed
   amount: 5

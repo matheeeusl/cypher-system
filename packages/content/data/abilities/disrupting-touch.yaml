@@ -13,7 +13,7 @@ description:
     damage rather than to ease the task, you deal 2 additional points
     of damage per level of Effort (instead of 3 points); the target
     takes 1 point of damage even if you fail the attack roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode transformar sua Corrida de Fase em um ataque corpo a corpo, roçando propositalmente outra criatura enquanto corre. Ao fazer isso, o toque libera uma explosão violenta de energia que causa 2 pontos de dano ao alvo (ignora Armadura). Acerte ou erre, seu movimento (e turno) termina imediatamente, o que o coloca dentro de uma distância imediata do seu alvo. Se você aplicar Esforço para aumentar o dano em vez de facilitar a tarefa, causa 2 pontos adicionais de dano por nível de Esforço (em vez de 3 pontos); o alvo sofre 1 ponto de dano mesmo que você falhe na rolagem de ataque.'
   # Note: source cost is printed as "1+ Might points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 1 Might point here, flagged for schema review (same

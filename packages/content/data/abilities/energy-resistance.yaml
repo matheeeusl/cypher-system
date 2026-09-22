@@ -11,7 +11,7 @@ description:
     certain kind of extradimensional energy, you can't protect against
     it. You can select this ability more than once. Each time you
     select it, you must choose a different kind of energy.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Escolha um tipo específico de energia com o qual tenha experiência (como calor, som, eletricidade, e assim por diante). Você ganha +5 de Armadura contra dano desse tipo de energia. Você deve estar familiarizada com o tipo de energia; por exemplo, se não tiver experiência com um certo tipo de energia extradimensional, não pode se proteger contra ela. Você pode escolher esta habilidade mais de uma vez. Cada vez que a escolher, deve escolher um tipo diferente de energia.'
 cost: null
 action_type: enabler
 sources:

@@ -4,7 +4,7 @@ name:
   pt-BR: Desaparecer
 description:
   en: You bend light that falls on you so you seem to disappear. You are invisible to other creatures for ten minutes. While invisible, you are specialized in stealth and Speed defense tasks. This effect ends if you do something to reveal your presence or position—attacking, using an ability, moving a large object, and so on. If this occurs, you can regain the remaining invisibility effect by taking an action to focus on hiding your position.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você curva a luz que incide sobre você para parecer que desaparece. Você fica invisível para outras criaturas por dez minutos. Enquanto invisível, você é especializada em tarefas de furtividade e defesa de Velocidade. Este efeito termina se você fizer algo que revele sua presença ou posição — atacar, usar uma habilidade, mover um objeto grande, e assim por diante. Se isso ocorrer, você pode recuperar o efeito de invisibilidade restante usando uma ação para se concentrar em ocultar sua posição.'
 cost:
   pool: intellect
   amount: 4

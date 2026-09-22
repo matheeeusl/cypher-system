@@ -4,7 +4,7 @@ name:
   pt-BR: Forma Animal Maior
 description:
   en: When you use Animal Shape, your animal form grows to about twice its normal size. Being so large, your beast form gains the following additional bonuses; +1 to Armor, +5 to your Might Pool, and you are trained in using your animal form's natural attacks as heavy weapons (if you weren't already). However, your Speed defense tasks are hindered. While bigger, you also gain an asset to tasks that are easier for a larger creature to perform, like climbing, intimidating, wading rivers, and so on.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você usa Forma Animal, sua forma animal cresce para cerca do dobro do seu tamanho normal. Por ser tão grande, sua forma bestial ganha os seguintes bônus adicionais: +1 de Armadura, +5 na sua Reserva de Força, e você fica treinada em usar os ataques naturais da sua forma animal como armas pesadas (se ainda não estivesse). Porém, suas tarefas de defesa de Velocidade são dificultadas. Enquanto maior, você também ganha um recurso em tarefas que são mais fáceis para uma criatura grande realizar, como escalar, intimidar, atravessar rios a vau, e assim por diante.'
 cost: null
 action_type: enabler
 sources:

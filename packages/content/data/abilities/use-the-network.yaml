@@ -14,7 +14,7 @@ description:
     specific creature or individual, and if they are within the range
     of this ability, you'll learn about it from a still-functioning
     camera feed, satellite feed, or AI interaction.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Com alguns minutos olhando ao redor e se preparando, você pode acessar remanescentes da internet e da rede de satélites de antes (ou uma rede ativa onde residem IAs que não sejam imediatamente perigosas). O Mestre pode decidir que não há tal conexão na área, mas se houver, você pode fazer uma pergunta básica sobre qualquer coisa acontecendo dentro de 16 km (10 milhas) e receber uma resposta simples. Por exemplo, você poderia perguntar sobre a localização de uma criatura ou indivíduo específico, e se estiverem dentro do alcance desta habilidade, você descobrirá através de uma transmissão de câmera ainda funcional, transmissão de satélite, ou interação com IA.'
 cost:
   pool: intellect
   amount: 5

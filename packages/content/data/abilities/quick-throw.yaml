@@ -7,7 +7,7 @@ description:
     After using a thrown light weapon, you draw another light weapon
     and make another thrown attack against the same target or a
     different one.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Depois de usar uma arma leve de arremesso, você saca outra arma leve e faz outro ataque de arremesso contra o mesmo alvo ou um diferente.'
 cost:
   pool: speed
   amount: 2

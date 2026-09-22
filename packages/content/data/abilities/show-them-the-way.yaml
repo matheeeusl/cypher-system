@@ -16,7 +16,7 @@ description:
     above the normal limit), you must apply two levels of Effort.
     When the effect ends, the creature vaguely remembers doing your
     will, but it's as blurry as a dream.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sua presença domina uma criatura que você toca e pede para ajudá-la. Essencialmente, se a criatura falhar em se defender contra sua presença, você controla suas ações por até dez minutos. O alvo deve ser de nível 3 ou inferior. Uma vez estabelecido o controle, você o mantém através de instrução verbal. Você pode permitir que o alvo aja livremente ou anular o controle caso a caso. Além das opções normais de uso de Esforço, você pode optar por usar Esforço para aumentar o nível máximo do alvo. Assim, para afetar um alvo de nível 5 (dois níveis acima do limite normal), você deve aplicar dois níveis de Esforço. Quando o efeito termina, a criatura se lembra vagamente de ter feito sua vontade, mas é tão nebuloso quanto um sonho.'
   # Note: source cost is printed as "6+ Intellect points" — the
   # schema's cost field can't represent an open-ended "+". Recorded as
   # the baseline 6 Intellect points here, flagged for schema review

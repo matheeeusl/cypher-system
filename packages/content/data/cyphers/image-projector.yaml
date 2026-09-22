@@ -1,7 +1,7 @@
 # Editor's Notes — The words "immediate" and "close" can be used interchangeably
 # to talk about distance.
 id: image-projector
-name: { en: 'Image projector', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Image projector', 'pt-BR': 'Projetor de imagens' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 390'
 level_range: '1d6'
@@ -13,41 +13,45 @@ effect_text:
     cypher level is 6 or higher). Scenes include movement, sound, and smell.
     Roll a d100 to determine the image.
   pt-BR: >-
-    Tradução em breve.
+    Projeta uma das seguintes imagens imóveis na área descrita por uma
+    hora. A imagem aparece a até uma distância imediata do usuário
+    (distância longa se a cifra for de nível 4 ou superior, distância
+    muito longa se for de nível 6 ou superior). As cenas incluem
+    movimento, som e cheiro. Role 1d100 para determinar a imagem.
 effect_table:
   label:
     en: 'Image Projector Effects'
-    pt-BR: 'Tradução em breve.'
+    pt-BR: 'Efeitos do Projetor de Imagens'
   entries:
     - range: '01–20'
       text:
         {
           en: 'Terrifying creature of an unknown species, perhaps no longer alive in the world (10-foot [3 m] cube)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Criatura aterrorizante de espécie desconhecida, talvez já extinta no mundo (cubo de 3 metros [10 pés])',
         }
     - range: '21–40'
       text:
         {
           en: 'Huge machine that obscures sight (30-foot [9 m] cube)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Máquina enorme que obstrui a visão (cubo de 9 metros [30 pés])',
         }
     - range: '41–50'
-      text: { en: 'Beautiful pastoral scene (50-foot [15 m] cube)', 'pt-BR': 'Tradução em breve.' }
+      text: { en: 'Beautiful pastoral scene (50-foot [15 m] cube)', 'pt-BR': 'Bela cena pastoral (cubo de 15 metros [50 pés])' }
     - range: '51–60'
       text:
         {
           en: 'Food that looks delicious but may not be familiar (10-foot [3 m] cube)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Comida com aparência deliciosa, mas talvez desconhecida (cubo de 3 metros [10 pés])',
         }
     - range: '61–80'
       text:
         {
           en: 'Solid color that obscures sight (50-foot [15 m] cube)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Cor sólida que obstrui a visão (cubo de 15 metros [50 pés])',
         }
     - range: '81–00'
       text:
         {
           en: 'Incomprehensible scene that is disorienting and strange (20-foot [6 m] cube)',
-          'pt-BR': 'Tradução em breve.',
+          'pt-BR': 'Cena incompreensível, desorientadora e estranha (cubo de 6 metros [20 pés])',
         }

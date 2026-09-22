@@ -4,7 +4,7 @@ name:
   pt-BR: Punho de Ferro
 description:
   en: Your unarmed attacks deal 4 points of damage.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Seus ataques desarmados causam 4 pontos de dano.'
 cost: null
 action_type: enabler
 sources:

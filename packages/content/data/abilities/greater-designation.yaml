@@ -8,7 +8,7 @@ description:
     immediate range when you use Designation. The one label applies to
     all affected creatures. This lasts until you use Greater
     Designation again.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode atribuir um rótulo de inocente ou culpado a todas as criaturas dentro de uma distância imediata ao usar Designação. O rótulo único se aplica a todas as criaturas afetadas. Isso dura até você usar Designação Maior novamente.'
 cost: null
 action_type: action
 sources:

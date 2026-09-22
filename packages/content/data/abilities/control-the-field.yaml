@@ -7,7 +7,7 @@ description:
     This melee attack inflicts 1 less point of damage than normal, and
     regardless of whether you hit the target, you maneuver it into a
     position you desire within immediate range.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Este ataque corpo a corpo causa 1 ponto de dano a menos que o normal, e independentemente de você acertar o alvo, você o manobra para uma posição que desejar dentro de uma distância imediata.'
 cost:
   pool: might
   amount: 1

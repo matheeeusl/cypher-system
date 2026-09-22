@@ -10,7 +10,7 @@ description:
     additional point of damage per round (ignores Armor) for the next
     minute or until the target uses an action to wash the spores
     away.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você arremessa um punhado de cogumelos que disparam em direção a um alvo dentro de uma distância longa. O ataque causa 3 pontos de dano e envolve o alvo em uma névoa de esporos tóxicos, o que causa 1 ponto adicional de dano por round (ignora Armadura) pelo próximo minuto ou até o alvo usar uma ação para lavar os esporos.'
 cost:
   pool: intellect
   amount: 1

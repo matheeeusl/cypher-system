@@ -14,7 +14,7 @@ description:
     duration (one hour per level of Effort), or increase your range
     (another long distance of detection or 10 miles of access per
     level of Effort) in any combination.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você se torna consciente de todas as câmeras de segurança, smartphones, computadores e outros pequenos dispositivos de vigilância dentro de uma distância longa. Você pode invadir imediatamente um desses dispositivos, seja um que acabou de detectar ou um que já conheça dentro de 16 km (10 milhas), permitindo que veja do ponto de vista dessa câmera por uma hora. Além das opções normais de aplicação de Esforço, você pode usar Esforço para afetar câmeras adicionais (uma por nível de Esforço), aumentar a duração (uma hora por nível de Esforço), ou aumentar seu alcance (mais uma distância longa de detecção ou 16 km de acesso por nível de Esforço) em qualquer combinação.'
   # Note: source cost is printed as "6+ Intellect points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 6 Intellect points here, flagged for schema review (same

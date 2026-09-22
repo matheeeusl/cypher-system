@@ -1,5 +1,5 @@
 id: force-shield-projector
-name: { en: 'Force shield projector', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Force shield projector', 'pt-BR': 'Projetor de escudo de força' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 389'
 level_range: '1d6 + 3'
@@ -9,5 +9,7 @@ effect_text:
     which time they gain +3 to Armor (or +4 to Armor if the cypher is level 5
     or higher).
   pt-BR: >-
-    Tradução em breve.
+    Cria um escudo de energia cintilante ao redor do usuário por uma
+    hora, durante a qual ele ganha +3 de Armadura (ou +4 de Armadura se
+    a cifra for de nível 5 ou superior).
 effect_table: null

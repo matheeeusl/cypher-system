@@ -4,7 +4,7 @@ name:
   pt-BR: Cópia Aprimorada
 description:
   en: You can use Copy Power to copy more powerful abilities. In addition to the normal options for using Effort with Copy Power, if you apply one level of Effort, the GM chooses a mid-tier ability that most closely resembles that power (instead of a low-tier ability).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você pode usar Copiar Poder para copiar habilidades mais poderosas. Além das opções normais de uso de Esforço com Copiar Poder, se aplicar um nível de Esforço, o Mestre escolhe uma habilidade de grau médio que mais se assemelhe a esse poder (em vez de uma habilidade de grau baixo).'
 cost: null
 action_type: enabler
 sources:

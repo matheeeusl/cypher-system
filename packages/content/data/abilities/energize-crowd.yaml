@@ -4,7 +4,7 @@ name:
   pt-BR: Energizar Multidão
 description:
   en: You extend your Absorb Kinetic Energy ability to up to thirty creatures within short range so that they also can absorb energy from physical attacks and impacts for one hour. If you have Absorb Pure Energy or Improved Absorb Kinetic Energy, these creatures can use those abilities as well. The creatures, however, cannot release excess energy as a blast.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você estende sua habilidade Absorver Energia Cinética a até trinta criaturas dentro de uma distância curta, para que elas também consigam absorver energia de ataques físicos e impactos por uma hora. Se você tiver Absorver Energia Pura ou Absorver Energia Cinética Aprimorado, essas criaturas também podem usar essas habilidades. As criaturas, porém, não podem liberar o excesso de energia como uma explosão.'
 cost:
   pool: might
   amount: 9

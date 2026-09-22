@@ -4,7 +4,7 @@ name:
   pt-BR: Posição Fortificada
 description:
   en: For the next minute, you gain +1 Armor and an asset to your Might defense tasks, as long as you haven't moved more than an immediate distance since your last turn.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Pelo próximo minuto, você ganha +1 de Armadura e um recurso em suas tarefas de defesa de Força, desde que não tenha se movido mais do que uma distância imediata desde seu último turno.'
 cost:
   pool: might
   amount: 2

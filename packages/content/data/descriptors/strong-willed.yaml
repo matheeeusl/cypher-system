@@ -1,7 +1,7 @@
 id: strong-willed
 name:
   en: Strong-Willed
-  pt-BR: Tradução em breve.
+  pt-BR: De Vontade Forte
 description:
   en: >-
     You're tough-minded, willful, and independent. No one can talk you
@@ -9,7 +9,13 @@ description:
     This quality doesn't necessarily make you smart, but it does make
     you a bastion of willpower and resolve. You likely dress and act
     with unique style and flair, not caring what others think.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você tem a mente firme, é obstinado e independente. Ninguém consegue
+    convencê-lo de nada nem mudar sua opinião quando você não quer que
+    ela mude. Essa qualidade não o torna necessariamente inteligente,
+    mas faz de você um baluarte de força de vontade e determinação. Você
+    provavelmente se veste e age com estilo e personalidade únicos, sem
+    se importar com o que os outros pensam.
 pool_bonus:
   - stat: intellect
     amount: 4
@@ -24,18 +30,25 @@ inabilities:
       Willful doesn't mean brilliant. Any task that involves figuring
       out puzzles or problems, memorizing things, or using lore is
       hindered.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Obstinação não significa brilhantismo. Qualquer tarefa que envolva
+      resolver quebra-cabeças ou problemas, memorizar coisas ou usar
+      conhecimento é prejudicada.
 additional_equipment: null
 connection_options:
   - en: >-
       Against your better judgment, you joined the other PCs because you
       saw that they were in danger.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Contrariando seu bom senso, você se juntou aos outros personagens
+      porque viu que estavam em perigo.
   - en: >-
       One of the other PCs convinced you that joining the group would be
       in your best interests.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convenceu de que se juntar ao grupo
+      seria do seu interesse.
   - en: You're afraid of what might happen if the other PCs fail.
-    pt-BR: Tradução em breve.
+    pt-BR: Você teme o que pode acontecer se os outros personagens fracassarem.
   - en: There is reward involved, and you need the money.
-    pt-BR: Tradução em breve.
+    pt-BR: Há uma recompensa envolvida, e você precisa do dinheiro.

@@ -8,7 +8,7 @@ description:
     ability or comes from a device. For example, you are trained when
     using an Onslaught force blast because it's a physical attack, but
     not when using an Onslaught mindslice because it's a mental attack.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você é treinada em qualquer ataque físico à distância que seja uma habilidade de personagem ou venha de um dispositivo. Por exemplo, você é treinada ao usar uma explosão de força de Investida, porque é um ataque físico, mas não ao usar um corte mental de Investida, porque é um ataque mental.'
 cost: null
 action_type: enabler
 sources:

@@ -1,5 +1,5 @@
 id: detonation-creature
-name: { en: 'Detonation (creature)', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Detonation (creature)', 'pt-BR': 'Detonação (criatura)' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 386'
 level_range: '1d6 + 1'
@@ -10,5 +10,11 @@ effect_text:
     After about one minute, the creature vanishes.
     (All damaging detonations inflict a minimum of 2 points of damage to those in the radius, regardless of attack or defense rolls.)
   pt-BR: >-
-    Tradução em breve.
+    Projeta um pequeno explosivo físico a até uma distância longa, que
+    explode e cria um portal de teletransporte momentâneo. Uma criatura
+    aleatória de nível igual ou inferior ao da cifra surge através do
+    portal e ataca o alvo mais próximo. Após cerca de um minuto, a
+    criatura desaparece. (Todas as detonações que causam dano infligem
+    no mínimo 2 pontos de dano a quem estiver no raio de alcance,
+    independentemente das rolagens de ataque ou defesa.)
 effect_table: null

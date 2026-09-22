@@ -1,7 +1,7 @@
 id: honorable
 name:
   en: Honorable
-  pt-BR: Tradução em breve.
+  pt-BR: Honrado
 description:
   en: >-
     You are trustworthy, fair, and forthright. You try to do what is
@@ -15,7 +15,18 @@ description:
     isn't honorable varies with different schools of thought, but in
     broad strokes, honorable people can agree on most aspects of what
     honor means.
-  pt-BR: Tradução em breve.
+  pt-BR: >-
+    Você é confiável, justo e franco. Você tenta fazer o que é certo,
+    ajudar os outros e tratá-los bem. Mentir e trapacear não são formas
+    de progredir — essas coisas são para os fracos, os preguiçosos ou os
+    desprezíveis. Você provavelmente passa muito tempo pensando na sua
+    honra pessoal, em como melhor mantê-la e como defendê-la se for
+    desafiada. Em combate, você é direto e oferece clemência a qualquer
+    inimigo. Provavelmente lhe incutiram esse senso de honra um pai, uma
+    mãe ou um mentor. Às vezes, a distinção entre o que é e o que não é
+    honrado varia conforme diferentes escolas de pensamento, mas, de modo
+    geral, pessoas honradas conseguem concordar sobre a maior parte do
+    que a honra significa.
 pool_bonus:
   - stat: might
     amount: 2
@@ -29,12 +40,18 @@ inabilities: []
 additional_equipment: null
 connection_options:
   - en: The PCs' goals appear to be honorable and commendable.
-    pt-BR: Tradução em breve.
+    pt-BR: Os objetivos dos outros personagens parecem ser honrados e louváveis.
   - en: >-
       You see that what the other PCs are about to do is dangerous, and
       you'd like to help protect them.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você percebe que o que os outros personagens estão prestes a fazer
+      é perigoso e gostaria de ajudar a protegê-los.
   - en: One of the other PCs invited you, hearing of your trustworthiness.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Um dos outros personagens o convidou, ao ouvir falar da sua
+      confiabilidade.
   - en: You asked politely if you could join the other PCs in their mission.
-    pt-BR: Tradução em breve.
+    pt-BR: >-
+      Você perguntou educadamente se poderia se juntar aos outros
+      personagens em sua missão.

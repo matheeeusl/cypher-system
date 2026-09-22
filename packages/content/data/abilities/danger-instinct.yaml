@@ -11,7 +11,7 @@ description:
     potentially affect you—if the attacking creature can move to keep
     pace, if the attack fills an area too big to escape, etc.—the
     ability offers no benefit.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você for atacado de surpresa, seja por uma criatura, um dispositivo, ou simplesmente um perigo ambiental (uma árvore caindo sobre você), pode se mover uma distância imediata antes que o ataque ocorra. Se mover-se impedir o ataque, você fica em segurança. Se o ataque ainda puder afetá-lo potencialmente — se a criatura atacante puder se mover para acompanhá-lo, se o ataque preencher uma área grande demais para escapar, etc. — a habilidade não oferece nenhum benefício.'
 cost:
   pool: speed
   amount: 3

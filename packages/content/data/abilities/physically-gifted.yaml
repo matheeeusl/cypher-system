@@ -7,7 +7,7 @@ description:
     Any time you spend points from your Might Pool or Speed Pool on an
     action for any reason, if you roll a 1 on the associated die, you
     reroll, always taking the second result (even if it's another 1).
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Sempre que você gastar pontos da sua Reserva de Força ou Reserva de Velocidade em uma ação por qualquer motivo, se rolar 1 no dado associado, role novamente, sempre ficando com o segundo resultado (mesmo que seja outro 1).'
 cost: null
 action_type: enabler
 sources:

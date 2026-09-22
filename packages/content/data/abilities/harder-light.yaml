@@ -4,7 +4,7 @@ name:
   pt-BR: Luz Mais Dura
 description:
   en: When you create an object out of hard light, the object is one level higher than normal.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Quando você cria um objeto de luz sólida, o objeto tem um nível acima do normal.'
 cost: null
 action_type: enabler
 sources:

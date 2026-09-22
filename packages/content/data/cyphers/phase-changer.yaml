@@ -3,7 +3,7 @@
 # own added guess, not primary rulebook text — flag if a more authoritative
 # value surfaces.
 id: phase-changer
-name: { en: 'Phase changer', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Phase changer', 'pt-BR': 'Mudador de fase' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 394'
 level_range: '1d6 + 1'
@@ -15,5 +15,11 @@ effect_text:
     physical attacks or be physically attacked.
     (The phase changer cypher doesn't include a level formula. The 1d6 + 1 listed here is an addition by the editor.)
   pt-BR: >-
-    Tradução em breve.
+    Tira o usuário de fase por um minuto (dois minutos se a cifra for de
+    nível 6 ou superior). Durante esse tempo, ele pode atravessar
+    objetos sólidos como se fosse completamente imaterial, como um
+    fantasma. Ele não pode realizar ataques físicos nem ser atacado
+    fisicamente.
+    (A cifra mudador de fase não inclui uma fórmula de nível. O "1d6 +
+    1" listado aqui é um acréscimo do editor.)
 effect_table: null

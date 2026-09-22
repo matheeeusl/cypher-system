@@ -8,7 +8,7 @@ description:
     such warm location, you gain a free ten-minute recovery roll.
     Once you use this ability, you can't use it again until after
     your next ten-hour recovery roll.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Depois de passar dez minutos ao sol, em uma fonte termal, ou outro local quente semelhante, você ganha uma rolagem de recuperação de dez minutos gratuita. Uma vez que você usa esta habilidade, não pode usá-la novamente até depois da sua próxima rolagem de recuperação de dez horas.'
   # Note: source tag is "Ten minutes to activate." — no "action" word
   # printed at all, just a duration before the effect triggers; closest
   # existing category is action_to_initiate.

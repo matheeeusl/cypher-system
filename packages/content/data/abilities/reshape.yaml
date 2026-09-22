@@ -15,7 +15,7 @@ description:
     repair a chain. With multiple uses of this ability, you could
     bring about large changes, making a bridge, a wall, or a similar
     structure.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você remodela matéria dentro de uma distância curta em uma área não maior que um cubo de 1,5 metro (5 pés). Se você usar apenas uma ação nesta habilidade, as mudanças que fizer serão, na melhor das hipóteses, grosseiras. Se gastar pelo menos dez minutos e tiver sucesso em uma tarefa de fabricação apropriada dificultada, pode fazer mudanças complexas no material. Você não pode mudar a natureza do material, apenas sua forma. Assim, pode fazer um buraco em uma parede ou piso, ou pode selar um. Pode fabricar uma espada rudimentar a partir de um grande pedaço de ferro. Pode quebrar ou consertar uma corrente. Com múltiplos usos desta habilidade, você poderia provocar grandes mudanças, fazendo uma ponte, uma parede, ou uma estrutura semelhante.'
 cost:
   pool: intellect
   amount: 5

@@ -9,7 +9,7 @@ description:
     Effort you apply, you can increase the duration of the effect by
     one minute or carry one ally of about your size with you that
     will also fit on your mount.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Você guia sua montaria para o ar e voa por um minuto a uma taxa de até uma distância longa a cada round. Para cada nível de Esforço que você aplicar, pode aumentar a duração do efeito em um minuto ou carregar um aliado de tamanho aproximado ao seu que também caiba na sua montaria.'
   # Note: source cost is printed as "4+ Speed points" — the schema's
   # cost field can't represent an open-ended "+". Recorded as the
   # baseline 4 Speed points here, flagged for schema review (same

@@ -1,5 +1,5 @@
 id: metal-death
-name: { en: 'Metal death', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Metal death', 'pt-BR': 'Morte do metal' }
 category: manifest
 page_ref: 'Cypher System Rulebook, page 393'
 level_range: '1d6 + 2'
@@ -10,5 +10,8 @@ effect_text:
     brittle as thin glass. The foam affects metal to a depth of about 6 inches
     (15 cm).
   pt-BR: >-
-    Tradução em breve.
+    Produz um jato de espuma que cobre uma área de cerca de 1 por 1
+    metro (3 por 3 pés), transformando qualquer metal que ela toca em
+    uma substância tão quebradiça quanto vidro fino. A espuma afeta o
+    metal até uma profundidade de cerca de 15 centímetros (6 polegadas).
 effect_table: null

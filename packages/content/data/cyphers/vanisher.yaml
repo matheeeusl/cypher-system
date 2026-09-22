@@ -1,5 +1,5 @@
 id: vanisher
-name: { en: 'Vanisher', 'pt-BR': 'Tradução em breve.' }
+name: { en: 'Vanisher', 'pt-BR': 'Desaparecedor' }
 category: fantastic
 page_ref: 'Cypher System Rulebook, page 399'
 level_range: '1d6 + 2'
@@ -12,5 +12,11 @@ effect_text:
     can regain the remaining invisibility effect by taking an action to focus
     on hiding their position.
   pt-BR: >-
-    Tradução em breve.
+    O usuário fica invisível por cinco minutos por nível da cifra,
+    período durante o qual é especializado em tarefas de furtividade e
+    defesa de Velocidade. Esse efeito termina se ele fizer algo que
+    revele sua presença ou posição — atacar, usar uma habilidade, mover
+    um objeto grande, e assim por diante. Se isso ocorrer, ele pode
+    recuperar o efeito de invisibilidade restante usando uma ação para
+    se concentrar em esconder sua posição.
 effect_table: null

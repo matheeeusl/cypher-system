@@ -13,7 +13,7 @@ description:
     a small distraction, you could put together something to make a
     loud bang and flash; and so on. The asset lasts for a maximum of
     one minute, or until used for the intended purpose.
-  pt-BR: 'Tradução em breve.'
+  pt-BR: 'Se você tiver tempo e liberdade para vasculhar materiais do dia a dia no seu ambiente, pode fabricar um recurso temporário que a ajudará uma vez a realizar uma tarefa específica. Por exemplo, se precisar escalar uma parede, poderia criar algum tipo de dispositivo de auxílio à escalada; se precisar sair de uma cela, pode encontrar algo para usar como gazua; se precisar criar uma pequena distração, poderia montar algo para fazer um estrondo alto e um clarão; e assim por diante. O recurso dura no máximo um minuto, ou até ser usado para o propósito pretendido.'
   # Note: source tag is "One minute to assemble materials; action to
   # create asset." — the "one minute to assemble" clause is a duration,
   # not modeled by action_type (preserved here in this comment); the
