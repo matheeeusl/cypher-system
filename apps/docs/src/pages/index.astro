@@ -1,0 +1,20 @@
+---
+// Root `/` has no content of its own — locales are keyed `en`/`pt-br`
+// (src/pages/[locale]/), not a root locale, so Starlight won't redirect here
+// automatically.
+//
+// This site builds statically (no SSR adapter), so there's no request to
+// read an Accept-Language header from at build time — the browser's
+// language preference only exists once the page is running client-side.
+// Redirect from inline script instead of Astro.redirect(), checking
+// navigator.languages for a Portuguese tag and falling back to `en`.
+---
+
+<script is:inline>
+  const prefersPortuguese = (navigator.languages ?? [navigator.language])
+    .some((tag) => tag.toLowerCase().startsWith('pt'))
+  window.location.replace(prefersPortuguese ? '/pt-br/' : '/en/')
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=/en/" />
+</noscript>
