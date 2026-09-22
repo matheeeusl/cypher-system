@@ -2,8 +2,8 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllAbilities, getTypeById, getFocusById } from '@cypher/content';
 import type { Ability } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
-import { formatAbilityCost, formatActionType } from '../../../lib/ability-format';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import { formatAbilityCost, formatActionType } from '@lib/ability-format';
 
 export function getStaticPaths() {
 	const abilities = getAllAbilities();

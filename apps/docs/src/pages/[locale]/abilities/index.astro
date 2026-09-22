@@ -1,9 +1,9 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllAbilities } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
-import { formatAbilityCost, formatActionType } from '../../../lib/ability-format';
-import EntityIndexList from '../../../components/EntityIndexList.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import { formatAbilityCost, formatActionType } from '@lib/ability-format';
+import EntityIndexList from '@components/EntityIndexList.astro';
 
 // One fixed index page per locale — the category's landing page (Home /
 // Abilities), listing every Ability and linking to its own [slug].astro

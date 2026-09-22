@@ -1,9 +1,9 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllFoci } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
-import CharacterSentence from '../../../components/CharacterSentence.astro';
-import EntityIndexList from '../../../components/EntityIndexList.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import CharacterSentence from '@components/CharacterSentence.astro';
+import EntityIndexList from '@components/EntityIndexList.astro';
 
 // One fixed index page per locale, not a per-item [slug] route — this is
 // the category's landing page (Home / Foci), which lists every Focus and

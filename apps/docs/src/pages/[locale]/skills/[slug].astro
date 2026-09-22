@@ -2,7 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllDescriptors, getAllSkills } from '@cypher/content';
 import type { Descriptor, Skill } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
 
 export function getStaticPaths() {
 	const skills = getAllSkills();

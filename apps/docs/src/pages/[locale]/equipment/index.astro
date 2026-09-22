@@ -2,8 +2,8 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAmmunition, getArmorCategoryTable, getPriceTierTable, getWeaponCategoryTable } from '@cypher/content';
 import type { PriceTierTable } from '@cypher/content';
-import ReferenceTable from '../../../components/ReferenceTable.astro';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import ReferenceTable from '@components/ReferenceTable.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
 
 // One fixed page per locale — not a per-item [slug] route, because the rulebook
 // has no named-item equipment catalog (see @cypher/content's CLAUDE.md); this is

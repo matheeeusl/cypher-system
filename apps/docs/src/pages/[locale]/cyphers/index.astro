@@ -2,8 +2,8 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllCyphers } from '@cypher/content';
 import type { Cypher } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
-import EntityIndexList from '../../../components/EntityIndexList.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import EntityIndexList from '@components/EntityIndexList.astro';
 
 // One fixed index page per locale — the category's landing page (Home /
 // Cyphers), listing every Cypher and linking to its own [slug].astro page.

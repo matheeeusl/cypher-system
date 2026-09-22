@@ -1,8 +1,8 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllSkills } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
-import EntityIndexList from '../../../components/EntityIndexList.astro';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import EntityIndexList from '@components/EntityIndexList.astro';
 
 // One fixed index page per locale — the category's landing page (Home /
 // Skills), listing every Skill and linking to its own [slug].astro page.

@@ -2,7 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllCyphers } from '@cypher/content';
 import type { Cypher } from '@cypher/content';
-import { URL_LOCALES, pick, type UrlLocale } from '../../../lib/locale';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
 
 export function getStaticPaths() {
 	const cyphers = getAllCyphers();

@@ -10,9 +10,9 @@
 // wired into the Starlight integration's own render pipeline) — tokens are
 // imported directly below instead.
 import '../../styles/globals.css';
-import SiteHeader from '../../components/SiteHeader.astro';
-import FontLinks from '../../components/FontLinks.astro';
-import { URL_LOCALES, type UrlLocale } from '../../lib/locale';
+import SiteHeader from '@components/SiteHeader.astro';
+import FontLinks from '@components/FontLinks.astro';
+import { URL_LOCALES, type UrlLocale } from '@lib/locale';
 
 export function getStaticPaths() {
 	return URL_LOCALES.map((locale) => ({ params: { locale } }));
