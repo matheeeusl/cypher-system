@@ -4,7 +4,6 @@
 // src/lib/page-context.ts — so no page has to pass anything in. Width and
 // centring are set in src/styles/globals.css alongside the box itself, so the
 // trail's left edge always lines up with the box's.
-import BackButton from './BackButton.astro';
 import { HOME_LABEL, getPageContext } from '../lib/page-context';
 
 const ctx = getPageContext(Astro.url.pathname);
@@ -13,11 +12,7 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 
 {
 	ctx && (
-		<nav
-			class="breadcrumbs flex flex-wrap items-center"
-			aria-label={ctx.locale === 'pt-br' ? 'Trilha de navegação' : 'Breadcrumb'}
-		>
-			<BackButton />
+		<nav class="breadcrumbs" aria-label={ctx.locale === 'pt-br' ? 'Trilha de navegação' : 'Breadcrumb'}>
 			<ol class="flex flex-wrap items-center font-mono text-xs text-text-muted">
 				<li>
 					<a href={`/${ctx.locale}/`} class="text-accent no-underline hover:text-warning">

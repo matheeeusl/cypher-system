@@ -1,9 +1,15 @@
 ---
-// "‹ Back" affordance rendered next to the breadcrumb trail (mounted by
-// Breadcrumbs.astro), in place of the Previous/Next footer the design has
-// no equivalent for. It's plain browser history — clicking it from an
-// Ability page reached via a Focus page's AbilityEntry link returns to that
-// Focus page specifically, not to "the previous ability" or any fixed URL.
+// "‹ Back" affordance mounted by PageTitle.astro, on the eyebrow row above
+// the title (next to "● FOCUS"/"● TYPE"/etc — entity pages only, since that's
+// where the eyebrow lives) rather than by the breadcrumb, in place of the
+// Previous/Next footer the design has no equivalent for. It's plain browser
+// history — clicking it from an Ability page reached via a Focus page's
+// AbilityEntry link returns to that Focus page specifically, not to "the
+// previous ability" or any fixed URL.
+//
+// Styled after the sidebar's own current-page row (soft accent fill, a 2px
+// accent edge — the `[aria-current='page']` rule in globals.css) so it reads
+// as a real control next to the eyebrow, not more eyebrow text.
 //
 // Only offered when the browser actually *has* an on-site page behind this
 // one: no referrer (a fresh tab, a bookmark, a typed URL) or an external one
@@ -21,16 +27,47 @@ const locale = getPageContext(Astro.url.pathname)?.locale ?? 'en';
 const label = locale === 'pt-br' ? 'Voltar' : 'Back';
 ---
 
-<span data-back-nav hidden>
-	<button
-		type="button"
-		data-back-button
-		class="cursor-pointer bg-transparent p-0 font-mono text-xs text-accent no-underline hover:text-warning"
-	>
-		&larr; {label}
+<div data-back-nav hidden>
+	<button type="button" data-back-button class="back-button">
+		<svg
+			width="10"
+			height="10"
+			viewBox="0 0 10 10"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.5"
+			aria-hidden="true"
+		>
+			<path d="M6.5 1.5 2 5l4.5 3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+		{label}
 	</button>
-	<span class="opacity-50" aria-hidden="true">&nbsp;/&nbsp;</span>
-</span>
+</div>
+
+<style>
+	/* Deliberately plain CSS + logical properties here, not Tailwind utilities —
+	   matches how the sidebar's own current-item look (globals.css) is written,
+	   since this is meant to read as the same "chip". */
+	.back-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+		cursor: pointer;
+		border-inline-start: 2px solid var(--color-accent);
+		border-radius: 0.25rem;
+		background-color: var(--color-accent-soft);
+		padding: 0.3125rem 0.75rem;
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+		color: var(--color-accent);
+	}
+
+	.back-button:hover,
+	.back-button:focus-visible {
+		border-inline-start-color: var(--color-warning);
+		color: var(--color-warning);
+	}
+</style>
 
 <script is:inline>
 	(function () {

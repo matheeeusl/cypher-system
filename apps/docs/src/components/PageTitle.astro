@@ -5,6 +5,7 @@
 // chapters have none, so they render exactly Starlight's default title).
 // Wraps the default component rather than copying its markup/styles.
 import Default from '@astrojs/starlight/components/PageTitle.astro';
+import BackButton from './BackButton.astro';
 import { getPageContext } from '../lib/page-context';
 
 const ctx = getPageContext(Astro.url.pathname);
@@ -13,9 +14,12 @@ const kind = ctx?.section?.kind?.[ctx.locale];
 
 {
 	kind && (
-		<div class="page-eyebrow flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase">
-			<span class="h-[7px] w-[7px] rounded-full bg-accent" />
-			{kind}
+		<div class="page-eyebrow flex items-center justify-between">
+			<div class="flex items-center gap-2 font-mono text-xs tracking-[0.08em] text-accent uppercase">
+				<span class="h-[7px] w-[7px] rounded-full bg-accent" />
+				{kind}
+			</div>
+			<BackButton />
 		</div>
 	)
 }
