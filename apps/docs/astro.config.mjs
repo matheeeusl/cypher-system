@@ -229,6 +229,13 @@ export default defineConfig({
         PageTitle: './src/components/PageTitle.astro',
         Footer: './src/components/Footer.astro',
       },
+      // src/pages/404.astro is a standalone page (own header, no sidebar —
+      // same pattern as the homepage) that replaces Starlight's own default
+      // 404 route entirely; leaving Starlight's enabled too collides with
+      // ours on the same "/404" pattern (Astro currently resolves in favor
+      // of ours, but warns the collision becomes a hard error in a future
+      // version).
+      disable404Route: true,
       defaultLocale: 'en',
       locales: {
         en: { label: 'English', lang: 'en' },
@@ -237,6 +244,7 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Rules',
+          translations: { 'pt-BR': 'Regras' },
           items: [{ autogenerate: { directory: 'rules' } }],
         },
         typesSidebarGroup,
@@ -252,6 +260,15 @@ export default defineConfig({
           label: 'Equipment',
           translations: { 'pt-BR': 'Equipamento' },
           link: '/equipment/',
+        },
+        // A single content-collection page (src/content/docs/<locale>/glossary.md),
+        // not under rules/ (so it can't join the Rules autogenerate group) and
+        // not a generated entity category — one manual link, same pattern as
+        // Equipment above.
+        {
+          label: 'Glossary',
+          translations: { 'pt-BR': 'Glossário' },
+          link: '/glossary/',
         },
       ],
     }),

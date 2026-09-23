@@ -4,7 +4,7 @@ name:
   pt-BR: Reparar Carne
 description:
   en: When you touch an impaired or debilitated character, you can move them up one step on the damage track (for example, a debilitated PC becomes impaired, and an impaired one becomes hale). Alternatively, if you use this ability on a PC during a rest, you grant them a +2 bonus to their recovery roll.
-  pt-BR: 'Quando você toca um personagem enfraquecido ou debilitado, pode movê-lo um nível para cima na trilha de dano (por exemplo, um personagem debilitado fica enfraquecido, e um enfraquecido fica saudável). Alternativamente, se usar esta habilidade em um personagem durante um descanso, concede a ele um bônus de +2 na rolagem de recuperação.'
+  pt-BR: 'Quando você toca um personagem enfraquecido ou debilitado, pode movê-lo um nível para cima no marcador de dano (por exemplo, um personagem debilitado fica enfraquecido, e um enfraquecido fica saudável). Alternativamente, se usar esta habilidade em um personagem durante um descanso, concede a ele um bônus de +2 na rolagem de recuperação.'
 cost:
   pool: intellect
   amount: 3

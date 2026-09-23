@@ -84,7 +84,7 @@ player_intrusions:
         track.
       pt-BR: >-
         A arma do seu oponente possui um ponto fraco. Durante o combate,
-        ela sofre danos rapidamente e avança duas etapas na trilha de dano
+        ela sofre danos rapidamente e avança duas etapas no marcador de dano
         de objetos.
 starting_pools:
   might: 10

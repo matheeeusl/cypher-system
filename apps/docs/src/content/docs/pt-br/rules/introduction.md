@@ -13,7 +13,7 @@ tableOfContents: false
 ## Como Jogar
 
 1. Você diz ao Mestre qual ação deseja realizar e como planeja fazê-lo. Inclua qualquer fala que queira dizer enquanto executa a ação.
-2. Muitas vezes, suas ações são rotineiras — afastar-se alguns passos, conversar com outro personagem ou girar uma maçaneta —; você simplesmente realiza a ação e obtém sucesso automaticamente. Se houver chance de falha, o Mestre lhe atribui uma tarefa, informa qual de seus atributos será testado — Vigor, Velocidade ou Intelecto — e determina a dificuldade em uma escala de 1 (simples) a 10 (impossível).
+2. Muitas vezes, suas ações são rotineiras — afastar-se alguns passos, conversar com outro personagem ou girar uma maçaneta —; você simplesmente realiza a ação e obtém sucesso automaticamente. Se houver chance de falha, o Mestre lhe atribui uma tarefa, informa qual de seus atributos será testado — Força, Velocidade ou Intelecto — e determina a dificuldade em uma escala de 1 (simples) a 10 (impossível).
 3. Você e o Mestre determinam se alguma característica do seu personagem deve modificar a dificuldade em um ou mais níveis. Ter treinamento em perícias relevantes, possuir recursos úteis e usar Esforço facilitam a tarefa, reduzindo a dificuldade. Ter uma inaptidão ou enfrentar circunstâncias externas adversas dificulta a tarefa, aumentando a dificuldade.
 4. Se você reduzir a dificuldade para 0 (rotineira), terá sucesso automaticamente. Se a tarefa ainda não for rotineira, o Mestre usa a dificuldade modificada para determinar um número-alvo. O Mestre não precisa revelar o número-alvo, mas pode lhe dar uma dica.
 5. Você rola o dado — um d20. Se o resultado for igual ou superior ao número-alvo, você obtém sucesso na tarefa.

@@ -11,12 +11,12 @@ description:
     your Might Edge or Speed Edge instead of your Intellect
     Edge, as appropriate).
   pt-BR: >-
-    Escolha entre a sua Reserva de Vigor ou a sua
+    Escolha entre a sua Reserva de Força ou a sua
     Reserva de Velocidade. Ao gastar pontos para ativar suas
     habilidades de foco, você pode gastar pontos dessa Reserva
     em vez da sua Reserva de Intelecto (caso em que você usa
-    sua Vantagem de Força ou Vantagem de Velocidade em vez da
-    sua Vantagem de Intelecto, conforme apropriado).
+    sua Margem de Força ou Margem de Velocidade em vez da
+    sua Margem de Intelecto, conforme apropriado).
 cost: null
 action_type: enabler
 sources:

@@ -14,17 +14,24 @@
 import { URL_LOCALES, type UrlLocale } from '../lib/locale';
 
 interface Props {
-	locale: UrlLocale;
+	// Optional: every locale-prefixed route passes its own locale so the
+	// EN/PT-BR toggle can highlight the current one and swap the path's
+	// first segment. The one page with no locale of its own — 404.astro,
+	// which is Astro's global fallback for any unmatched route and can't
+	// know which locale the visitor was in — omits it instead of guessing;
+	// that hides the toggle entirely (see below) rather than rendering a
+	// pair of buttons neither of which is actually "current".
+	locale?: UrlLocale;
 }
 
 const { locale } = Astro.props;
 
-// Every route on this site is locale-prefixed with no exceptions (see this
-// package's CLAUDE.md's i18n section), so the equivalent page in the other
-// locale is always just a first-path-segment swap — this holds for the
-// homepage root and any nested Rules/entity page alike, so it works from
-// both the Starlight-shell Header override and the standalone homepage
-// without depending on Starlight's own routing context.
+// Every locale-prefixed route on this site follows the same pattern (see
+// this package's CLAUDE.md's i18n section), so the equivalent page in the
+// other locale is always just a first-path-segment swap — this holds for
+// the homepage root and any nested Rules/entity page alike, so it works
+// from both the Starlight-shell Header override and the standalone
+// homepage without depending on Starlight's own routing context.
 const currentPath = Astro.url.pathname;
 const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//, `/${target}/`);
 ---
@@ -48,7 +55,7 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 >
 	<div class="flex items-center gap-3">
 		<slot name="leading" />
-		<a href={`/${locale}/`} class="flex items-center gap-2.5 text-inherit no-underline">
+		<a href={locale ? `/${locale}/` : '/'} class="flex items-center gap-2.5 text-inherit no-underline">
 			<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
 			<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
 		</a>
@@ -57,27 +64,29 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 	<div class="mx-4 max-w-[420px] flex-1"><slot name="search" /></div>
 
 	<div class="flex items-center gap-2">
-		<div class="flex overflow-hidden rounded border border-border">
-			{
-				URL_LOCALES.map((code, i) => (
-					<a
-						href={localeHref(code)}
-						aria-current={locale === code ? 'page' : undefined}
-						class:list={[
-							'px-2.5 py-1.5 font-mono text-[11px]',
-							i > 0 && 'border-l border-border',
-							locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
-						]}
-					>
-						{code === 'en' ? 'EN' : 'PT-BR'}
-					</a>
-				))
-			}
-		</div>
+		{
+			locale && (
+				<div class="flex overflow-hidden rounded border border-border">
+					{URL_LOCALES.map((code, i) => (
+						<a
+							href={localeHref(code)}
+							aria-current={locale === code ? 'page' : undefined}
+							class:list={[
+								'px-2.5 py-1.5 font-mono text-[11px]',
+								i > 0 && 'border-l border-border',
+								locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
+							]}
+						>
+							{code === 'en' ? 'EN' : 'PT-BR'}
+						</a>
+					))}
+				</div>
+			)
+		}
 		<button
 			id="mode-toggle"
 			type="button"
-			data-locale={locale}
+			data-locale={locale ?? 'en'}
 			class="mode-toggle flex cursor-pointer items-center gap-1.5 rounded border border-border bg-panel px-2.5 py-1.5 text-text-muted"
 		>
 			<span id="mode-label"></span>

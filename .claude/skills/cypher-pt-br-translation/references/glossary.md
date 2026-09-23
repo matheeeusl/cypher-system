@@ -13,7 +13,7 @@ Sources for the "confirmed" table: official pt-BR Cypher System Rulebook text an
 | Effort | Esforço | |
 | Edge | Margem | Confirmed by Matheus, 2026-09-22 |
 | Pool | Reserva | Confirmed by Matheus, 2026-09-22 |
-| Might | Força | Pool/stat name — confirmed by Matheus, 2026-09-22 (overrides earlier informal-source guess of "Potência" — do not use "Potência" for Might) |
+| Might | Força | Pool/stat name — confirmed by Matheus, 2026-09-22 (overrides earlier informal-source guess of "Potência" — do not use "Potência" for Might). "Vigor" had also drifted in as a second, uncanonical rendering across several already-shipped chapters/abilities before this was re-confirmed 2026-09-22; swept and fixed — don't use "Vigor" for Might either (ordinary-word uses of "vigor"/"vigorosa", unrelated to the stat, were left alone) |
 | Speed | Velocidade | Pool/stat name |
 | Intellect | Intelecto | Pool/stat name |
 | Tier | Grau | Checked against Level below for conflict, 2026-09-22 — kept as Grau precisely because Level already owns "Nível" (105+ existing occurrences: creature level, cypher/artifact level, "nível de Esforço", etc.) and the two concepts co-occur in the same sentences often enough that merging them would be ambiguous |
@@ -28,7 +28,7 @@ Sources for the "confirmed" table: official pt-BR Cypher System Rulebook text an
 | GM Intrusion | Intrusão do Mestre | Confirmed by Matheus, 2026-09-22 — already in use this way in apps/docs |
 | Flavor (Chapter 7 system) | Perfil | Confirmed by Matheus, 2026-09-22 |
 | Action (action-type label) | Ação | Confirmed by Matheus, 2026-09-22 |
-| Damage track | Marcador de Dano | |
+| Damage track | Marcador de Dano | Confirmed by Matheus, 2026-09-22 — "Trilha de Dano" had already spread into shipped pt-br content (apps/docs and several @cypher/content abilities) before this was pinned down; swept and fixed |
 | Impaired | Enfraquecido | Damage track state |
 | Debilitated | Debilitado | Damage track state |
 | Recovery roll | Rolagem de Recuperação | |

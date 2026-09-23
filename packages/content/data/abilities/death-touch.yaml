@@ -8,7 +8,7 @@ description:
     creature. If the target is an NPC or a creature of level 3 or
     lower, it dies. If the target is a PC of any tier, they move down
     one step on the damage track.
-  pt-BR: 'Você reúne energia disruptiva na ponta do dedo e toca uma criatura. Se o alvo for um PNJ ou uma criatura de nível 3 ou inferior, ele morre. Se o alvo for um personagem de qualquer grau, ele desce um nível na trilha de dano.'
+  pt-BR: 'Você reúne energia disruptiva na ponta do dedo e toca uma criatura. Se o alvo for um PNJ ou uma criatura de nível 3 ou inferior, ele morre. Se o alvo for um personagem de qualquer grau, ele desce um nível no marcador de dano.'
 cost:
   pool: intellect
   amount: 6

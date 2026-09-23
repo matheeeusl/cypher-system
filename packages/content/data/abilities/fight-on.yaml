@@ -8,7 +8,7 @@ description:
     damage track. If debilitated, instead of suffering the normal
     penalty of being unable to take most actions, you can continue to
     act; however, all tasks are hindered.
-  pt-BR: 'Você não sofre as penalidades normais por estar enfraquecido na trilha de dano. Se debilitada, em vez de sofrer a penalidade normal de não conseguir realizar a maioria das ações, você pode continuar a agir; porém, todas as tarefas são dificultadas.'
+  pt-BR: 'Você não sofre as penalidades normais por estar enfraquecido no marcador de dano. Se debilitada, em vez de sofrer a penalidade normal de não conseguir realizar a maioria das ações, você pode continuar a agir; porém, todas as tarefas são dificultadas.'
 cost: null
 action_type: enabler
 sources:

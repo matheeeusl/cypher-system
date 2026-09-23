@@ -14,8 +14,8 @@ description:
     fazer a rolagem (e gastar pontos) como se fosse uma ação de Intelecto.
     Se aplicar Esforço a essa tarefa, você pode gastar pontos da sua
     Reserva de Intelecto em vez da sua Reserva de Velocidade (caso em que
-    também utiliza sua Vantagem em Intelecto em vez da sua
-    Vantagem em Velocidade).
+    também utiliza sua Margem de Intelecto em vez da sua
+    Margem de Velocidade).
 cost: null
 action_type: enabler
 sources:

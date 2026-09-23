@@ -27,7 +27,7 @@ description:
     suspensa e deve sair para comer, beber, dormir e assim por diante, como de costume (respirar
     não é um problema). Se o cristal for destruído ou sofrer dano grave enquanto você estiver
     dentro dele, você sai imediatamente, fica incapaz de agir por três rodadas e
-    avança dois passos na trilha de dano.
+    avança dois passos no marcador de dano.
 cost:
   pool: intellect
   amount: 4

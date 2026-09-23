@@ -38,8 +38,8 @@ const CHROME = {
 	},
 } as const;
 
-// Hrefs point at each category's route. Every one of these resolves except
-// Glossary, which isn't built yet.
+// Hrefs point at each category's route. All of these resolve now that
+// Glossary (src/content/docs/<locale>/glossary.md) has landed.
 const SECTIONS = {
 	en: [
 		{ title: 'Getting Started', desc: 'New to the system? Start here.', href: '/en/rules/introduction/' },
@@ -54,7 +54,7 @@ const SECTIONS = {
 		{ title: 'Criação de Personagem', desc: 'Tipos, descritores e focos.', href: '/pt-br/types/' },
 		{
 			title: 'Mecânicas Principais',
-			desc: 'Resolução de tarefas, Esforço e Vantagem.',
+			desc: 'Resolução de tarefas, Esforço e Margem.',
 			href: '/pt-br/rules/core-mechanics/',
 		},
 		{ title: 'Combate', desc: 'Iniciativa, dano e recuperação.', href: '/pt-br/rules/combat/' },

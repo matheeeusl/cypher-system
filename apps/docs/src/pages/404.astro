@@ -1,0 +1,96 @@
+---
+// Astro's special top-level filename: this is the automatic fallback for
+// any unmatched route across the whole site, so it can't live under
+// src/pages/[locale]/ (a dynamic segment there only matches routes Astro
+// generated, not arbitrary unknown ones) and can't know which locale the
+// visitor meant to reach — same static-build constraint src/pages/index.astro
+// already documents (no SSR adapter, so no request to inspect, and the
+// locale a visitor was in isn't recoverable from a single prerendered file
+// the way it is on every other, locale-prefixed page).
+//
+// Rather than guess (and risk showing the wrong language, or a dead locale
+// toggle that can't tell which locale is "current"), this page shows both
+// languages at once and drops the toggle entirely — SiteHeader renders
+// without a `locale` prop, which hides that toggle (see SiteHeader.astro).
+//
+// Standalone page like the homepage — outside the Starlight shell, so
+// SiteHeader is imported directly with no `search` slot filled (Starlight's
+// <Search> only works inside Starlight's own render pipeline, which this
+// page bypasses entirely).
+import '../styles/globals.css';
+import SiteHeader from '@components/SiteHeader.astro';
+import FontLinks from '@components/FontLinks.astro';
+
+const COPY = [
+	{
+		lang: 'en',
+		heading: "This page doesn't exist in the archive.",
+		body: "The entry you're looking for may have been moved, renamed, or never existed. Check the link, or head back to the reference home.",
+		cta: '← Back to Home',
+		href: '/en/',
+	},
+	{
+		lang: 'pt-BR',
+		heading: 'Esta página não existe no arquivo.',
+		body: 'O link que você procura pode ter sido movido, renomeado ou nunca existiu. Confira o link ou volte para o início da referência.',
+		cta: '← Voltar ao Início',
+		href: '/pt-br/',
+	},
+] as const;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Page Not Found / Página Não Encontrada — Cypher System Reference</title>
+		<meta
+			name="description"
+			content="The page you're looking for doesn't exist. / A página que você procura não existe."
+		/>
+		<FontLinks />
+	</head>
+	<body class="m-0 flex min-h-screen flex-col bg-bg font-sans text-text">
+		<SiteHeader />
+
+		<div class="flex flex-1 items-center justify-center px-7 py-14">
+			<div class="max-w-[460px] text-center">
+				<div
+					class="mb-[18px] inline-flex items-center gap-2 font-mono text-[13px] tracking-[0.08em] text-text-muted"
+				>
+					<span class="h-[7px] w-[7px] rounded-full bg-warning"></span>SIGNAL LOST · SINAL PERDIDO
+				</div>
+				<div class="mb-7 font-display text-[96px] leading-none font-bold tracking-[-0.02em] text-accent">
+					404
+				</div>
+				<div class="flex flex-col gap-7">
+					{
+						COPY.map((c, i) => {
+							// The English block keeps the page's one real <h1> (matching
+							// the site's defaultLocale); the Portuguese block repeats it
+							// at the same size as an <h2> rather than a second <h1> — both
+							// language versions read identically, but the page still has
+							// exactly one top-level heading for assistive tech.
+							const Heading = i === 0 ? 'h1' : 'h2';
+							return (
+								<div lang={c.lang} class:list={[i > 0 && 'border-t border-border pt-7']}>
+									<Heading class="m-0 mb-2.5 font-display text-xl font-semibold text-text">
+										{c.heading}
+									</Heading>
+									<p class="mx-auto mb-5 text-sm leading-[1.6] text-text-muted">{c.body}</p>
+									<a
+										href={c.href}
+										class="inline-block rounded border border-accent bg-accent-soft px-5 py-2.5 font-mono text-[13px] font-semibold text-accent no-underline"
+									>
+										{c.cta}
+									</a>
+								</div>
+							);
+						})
+					}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
