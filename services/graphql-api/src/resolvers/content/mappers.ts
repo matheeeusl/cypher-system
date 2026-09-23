@@ -40,7 +40,14 @@ export function mapFocusTierAbilities(record: Focus['tier_abilities']) {
     entries: items.map((entry) =>
       entry.kind === 'granted'
         ? { __typename: 'GrantedAbility' as const, abilityId: entry.ability_id }
-        : { __typename: 'ChoiceAbility' as const, options: entry.options, count: entry.count },
+        : {
+            __typename: 'ChoiceAbility' as const,
+            // Normalize each option to a list: a plain ability_id string
+            // becomes a 1-element list, an already-bundled pair stays as
+            // its (2+-element) list — see schema.graphql's ChoiceAbility.
+            options: entry.options.map((option) => (Array.isArray(option) ? option : [option])),
+            count: entry.count,
+          },
     ),
   }))
 }

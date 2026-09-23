@@ -120,7 +120,11 @@ type GrantedAbility {
   abilityId: ID!
 }
 type ChoiceAbility {
-  options: [ID!]!
+  # Each entry is usually a single ability id, but a few Foci offer a
+  # "choose either X, or both Y and Z" bundled-pair option — that bundle is
+  # a 2-element list; an ordinary single-ability option is a 1-element
+  # list. See @cypher/content's FocusSchema for the source shape.
+  options: [[ID!]!]!
   count: Int!
 }
 union FocusTierAbilityEntry = GrantedAbility | ChoiceAbility

@@ -193,7 +193,7 @@ describe('content queries', () => {
       inabilities: [],
       additionalEquipment: {
         en: 'You have an extra medium weapon or heavy weapon.',
-        ptBR: 'Tradução em breve.',
+        ptBR: 'Você tem uma arma média ou uma arma pesada adicional.',
       },
       connectionOptions: [
         {
@@ -222,7 +222,7 @@ describe('content queries', () => {
         id: string
         tierAbilities: Array<{
           tier: number
-          entries: Array<{ __typename: string; abilityId?: string; options?: string[] }>
+          entries: Array<{ __typename: string; abilityId?: string; options?: string[][] }>
         }>
         typeSwapOption: { abilityIds: string[] } | null
       } | null
@@ -264,7 +264,9 @@ describe('content queries', () => {
       },
       {
         tier: 3,
-        entries: [{ __typename: 'ChoiceAbility', options: ['dual-medium-wield', 'precise-cut'] }],
+        entries: [
+          { __typename: 'ChoiceAbility', options: [['dual-medium-wield'], ['precise-cut']] },
+        ],
       },
       {
         tier: 4,
@@ -276,7 +278,9 @@ describe('content queries', () => {
       },
       {
         tier: 6,
-        entries: [{ __typename: 'ChoiceAbility', options: ['disarming-attack', 'spin-attack'] }],
+        entries: [
+          { __typename: 'ChoiceAbility', options: [['disarming-attack'], ['spin-attack']] },
+        ],
       },
     ])
   })
@@ -369,13 +373,13 @@ describe('content queries', () => {
     // nested optional effect table actually resolves end-to-end, not just
     // that the common (null) case passes through.
     expect(result.data.cypher?.category).toBe('FANTASTIC')
-    expect(result.data.cypher?.pageRef).toBe('Cypher System Rulebook, page 385')
+    expect(result.data.cypher?.pageRef).toBe('Cypher System Rulebook, p. 385')
     expect(result.data.cypher?.levelRange).toBe('1d6')
     expect(result.data.cypher?.effectTable).not.toBeNull()
     expect(result.data.cypher?.effectTable?.entries).toHaveLength(15)
     expect(result.data.cypher?.effectTable?.entries[0]).toEqual({
       range: '01–04',
-      text: { en: 'Euphoric for 1d6 hours', ptBR: 'Tradução em breve.' },
+      text: { en: 'Euphoric for 1d6 hours', ptBR: 'Eufórico por 1d6 horas' },
     })
   })
 
@@ -454,11 +458,11 @@ describe('content queries', () => {
     expect(result.data.artifact?.effectTable?.entries).toHaveLength(34)
     expect(result.data.artifact?.effectTable?.entries[0]).toEqual({
       range: '1–3',
-      text: { en: 'A fine porcelain tea kettle', ptBR: 'Tradução em breve.' },
+      text: { en: 'A fine porcelain tea kettle', ptBR: 'Uma fina chaleira de porcelana' },
     })
     expect(result.data.artifact?.effectTable?.entries[33]).toEqual({
       range: '100',
-      text: { en: 'An old boot', ptBR: 'Tradução em breve.' },
+      text: { en: 'An old boot', ptBR: 'Uma bota velha' },
     })
   })
 
@@ -487,7 +491,9 @@ describe('content queries', () => {
     expect(result.data.artifact?.flavorQuote?.en).toBe(
       "I don't think I was even married before I shot them. I probably shouldn't tell my kids that they're just a metacausal byproduct of finding an excuse to shoot someone; that's a hell of an existential crisis to inflict on a child. Nobody wants to have that conversation.",
     )
-    expect(result.data.artifact?.flavorQuote?.ptBR).toBe('Tradução em breve.')
+    expect(result.data.artifact?.flavorQuote?.ptBR).toBe(
+      'Acho que eu nem era casado antes de atirar nele. Provavelmente não devo contar aos meus filhos que eles não passam de um subproduto metacausal de eu ter arranjado uma desculpa pra atirar em alguém; isso é uma baita crise existencial pra impor a uma criança. Ninguém quer ter essa conversa.',
+    )
   })
 
   it('resolves an Artifact with real pt-BR translations and no effect table or flavor quote (Mind Imager)', async () => {

@@ -10,6 +10,7 @@
   "scripts": {
     "dev:docs": "pnpm --filter @cypher/docs dev",
     "dev:app": "pnpm --filter @cypher/app dev",
+    "dev:api": "pnpm --filter @cypher/graphql-api dev",
     "storybook": "pnpm --filter @cypher/ui storybook",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
