@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: plays-too-many-games
     tier: 1
+skill_grant:
+  count: 2
+  options: any

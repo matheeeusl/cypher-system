@@ -16,3 +16,11 @@ sources:
   - type: type
     id: explorer
     tier: 2
+skill_grant:
+  count: 2
+  options:
+    - perception
+    - identifying
+    - lockpicking
+    - sensing-danger
+    - tinkering-with-devices

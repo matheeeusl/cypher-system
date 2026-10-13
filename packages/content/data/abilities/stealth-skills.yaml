@@ -20,3 +20,13 @@ sources:
   - type: focus
     id: works-the-back-alleys
     tier: 1
+skill_grant:
+  count: 2
+  options:
+    - disguise
+    - deception
+    - lockpicking
+    - pickpocketing
+    - seeing-through-tricks
+    - sleight-of-hand
+    - stealth

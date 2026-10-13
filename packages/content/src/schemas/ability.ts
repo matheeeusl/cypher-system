@@ -60,6 +60,20 @@ export const AbilitySchema = z.object({
     'action_to_activate',
     'action_per_target_to_initiate',
   ]),
+  // Present only on abilities that train the character in `count` skills
+  // the player picks themselves ("You are trained in two skills in which
+  // you are not already trained. Choose two of the following..."). The
+  // description stays the human-readable source of truth; this is the
+  // structured form the engine validates and the app renders a picker
+  // from. `options` is either an explicit list of skill ids, or 'any' for
+  // "any skill / any noncombat skill / an area of knowledge" — the skill
+  // catalog has no combat/noncombat flag, so 'any' means any catalog skill.
+  skill_grant: z
+    .object({
+      count: z.number().int().min(1),
+      options: z.union([z.array(z.string()).min(1), z.literal('any')]),
+    })
+    .optional(),
   // tier lives per-source, not on the ability itself: the same named
   // ability is sometimes printed under more than one Type/Focus at
   // different tiers (confirmed — e.g. "Surprise Attack" is tier 3 under

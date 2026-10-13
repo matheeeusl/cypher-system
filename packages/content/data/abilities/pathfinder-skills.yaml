@@ -11,3 +11,12 @@ sources:
   - type: focus
     id: blazes-paths
     tier: 1
+skill_grant:
+  count: 2
+  options:
+    - blazing
+    - navigation
+    - perception
+    - initiative
+    - sensing-danger
+    - tracking

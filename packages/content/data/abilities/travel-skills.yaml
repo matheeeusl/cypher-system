@@ -15,3 +15,11 @@ sources:
   - type: type
     id: explorer
     tier: 2
+skill_grant:
+  count: 2
+  options:
+    - navigation
+    - riding
+    - running
+    - piloting
+    - vehicle-driving

@@ -25,3 +25,6 @@ sources:
   - type: focus
     id: would-rather-be-reading
     tier: 6
+skill_grant:
+  count: 2
+  options: any

@@ -23,3 +23,11 @@ sources:
   - type: focus
     id: was-foretold
     tier: 1
+skill_grant:
+  count: 2
+  options:
+    - deception
+    - persuasion
+    - public-speaking
+    - seeing-through-tricks
+    - intimidation

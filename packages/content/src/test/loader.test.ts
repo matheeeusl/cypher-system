@@ -44,7 +44,7 @@ describe('loader', () => {
   // Skill that was never added) would otherwise only show up as a raw id on
   // the docs site. Reporting every dangling reference at once makes a bad
   // edit obvious in one run. See SKILLS-TRACKING.md for the history.
-  it('resolves every skill id referenced by a Descriptor or Type to a registered Skill', () => {
+  it('resolves every skill id referenced by a Descriptor, Type or ability skill_grant to a registered Skill', () => {
     const dangling = [
       ...getAllDescriptors().flatMap((d) =>
         d.skill_training
@@ -55,6 +55,13 @@ describe('loader', () => {
         t.starting_skills
           .filter((id) => !getSkillById(id))
           .map((id) => `type "${t.id}" -> "${id}"`),
+      ),
+      ...getAllAbilities().flatMap((a) =>
+        a.skill_grant && a.skill_grant.options !== 'any'
+          ? a.skill_grant.options
+              .filter((id) => !getSkillById(id))
+              .map((id) => `ability "${a.id}" skill_grant -> "${id}"`)
+          : [],
       ),
     ]
     expect(dangling).toEqual([])
