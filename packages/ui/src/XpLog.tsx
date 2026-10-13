@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { Alert } from './Alert'
+import { Pagination } from './Pagination'
 
 export interface XpLogEntry {
   id: number
@@ -33,7 +34,7 @@ interface XpLogProps {
   onAdd: (entry: { kind: 'gain' | 'spend'; amount: number; reason: string }) => void
   onRemove: (id: number) => void
   errorMessage?: string | undefined
-  /** Entries per page (the list is shown in the order given). */
+  /** Entries per page (default 5; the list is shown in the order given). */
   pageSize?: number | undefined
 }
 
@@ -43,7 +44,7 @@ export function XpLog({
   onAdd,
   onRemove,
   errorMessage,
-  pageSize = 10,
+  pageSize = 5,
 }: XpLogProps) {
   const [reason, setReason] = useState('')
   const [amount, setAmount] = useState('1')
@@ -165,32 +166,13 @@ export function XpLog({
         </ul>
       )}
 
-      {pageCount > 1 && (
-        <nav
-          aria-label={labels.title}
-          className="mt-3 flex items-center justify-between font-mono text-[11px]"
-        >
-          <button
-            type="button"
-            disabled={current === 0}
-            onClick={() => setPage(current - 1)}
-            className="border-border text-text rounded border px-3 py-1.5 enabled:cursor-pointer enabled:hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            {labels.previous}
-          </button>
-          <span className="text-text-muted" aria-live="polite">
-            {labels.page(current + 1, pageCount)}
-          </span>
-          <button
-            type="button"
-            disabled={current >= pageCount - 1}
-            onClick={() => setPage(current + 1)}
-            className="border-border text-text rounded border px-3 py-1.5 enabled:cursor-pointer enabled:hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            {labels.next}
-          </button>
-        </nav>
-      )}
+      <Pagination
+        page={current}
+        pageCount={pageCount}
+        ariaLabel={labels.title}
+        labels={labels}
+        onChange={setPage}
+      />
     </section>
   )
 }

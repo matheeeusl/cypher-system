@@ -12,6 +12,7 @@ import {
   ConditionBanner,
   ConfirmDialog,
   CypherPicker,
+  Pagination,
   InventoryList,
   NotesField,
   PoolMeter,
@@ -54,6 +55,9 @@ import type { PlayView } from '@/lib/play-view'
 type TabKey = 'status' | 'skills' | 'inventory' | 'log'
 type NotesStatus = 'idle' | 'saving' | 'saved'
 
+/** Entries per page in the XP log and the advancement history. */
+const PAGE_SIZE = 5
+
 const STEP_ORDER: AdvancementKey[] = ['pools', 'edge', 'effort', 'skills']
 const NEXT_LEVEL: Record<SkillLevel, SkillLevel> = {
   INABILITY: 'PRACTICED',
@@ -80,6 +84,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   // The purchase being confirmed for undoing (an index into view.purchases).
   const [undoIndex, setUndoIndex] = useState<number | null>(null)
   const [undoBusy, setUndoBusy] = useState(false)
+  const [historyPage, setHistoryPage] = useState(0)
   const [undoError, setUndoError] = useState<string | undefined>(undefined)
   // The skill whose description is open in the Skills tab (by name).
   const [openSkill, setOpenSkill] = useState<string | null>(null)
@@ -363,6 +368,15 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     }
     setBusy(false)
   }
+
+  // The advancement history, newest first, paged like the XP log.
+  const historyAll = [...view.purchases].reverse()
+  const historyPages = Math.max(1, Math.ceil(historyAll.length / PAGE_SIZE))
+  const historyCurrent = Math.min(historyPage, historyPages - 1)
+  const historyShown = historyAll.slice(
+    historyCurrent * PAGE_SIZE,
+    (historyCurrent + 1) * PAGE_SIZE,
+  )
 
   async function undoPurchase() {
     if (undoIndex === null) return
@@ -780,8 +794,8 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
       {tab === 'log' && (
         <div className="flex flex-col gap-7">
           <XpLog
-            // Newest first, 10 to a page: the log can grow without bound.
-            pageSize={10}
+            // Newest first, 5 to a page: the log can grow without bound.
+            pageSize={PAGE_SIZE}
             entries={[...xp].reverse().map((e) => ({
               id: e.id,
               reason: e.reason,
@@ -816,7 +830,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               </p>
             ) : (
               <ul className="flex flex-col gap-1.5">
-                {[...view.purchases].reverse().map((p) => (
+                {historyShown.map((p) => (
                   <li
                     key={p.index}
                     className="border-border bg-panel flex items-center justify-between gap-3 rounded border px-3.5 py-2"
@@ -843,6 +857,17 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
                 ))}
               </ul>
             )}
+            <Pagination
+              page={historyCurrent}
+              pageCount={historyPages}
+              ariaLabel={copy.log.history.title}
+              labels={{
+                previous: copy.log.previous,
+                next: copy.log.next,
+                page: copy.log.page,
+              }}
+              onChange={setHistoryPage}
+            />
             <ConfirmDialog
               open={undoIndex !== null}
               title={copy.log.history.confirmTitle}

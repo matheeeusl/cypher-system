@@ -59,7 +59,7 @@ export const WithError: Story = {
 
 export const Paginated: Story = {
   args: {
-    pageSize: 10,
+    pageSize: 5,
     entries: Array.from({ length: 23 }, (_, i) => ({
       id: i + 1,
       reason: `Milestone ${23 - i}`,

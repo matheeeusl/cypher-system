@@ -315,7 +315,7 @@ test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ 
   await expect(page.getByText('Aumentando Capacidades')).toBeVisible()
 })
 
-test('XP log: paginates ten entries to a page, newest first', async ({ page }) => {
+test('XP log: paginates five entries to a page, newest first', async ({ page }) => {
   await page.goto(playUrl)
   await tab(page, 'Log & Notes').click()
 
@@ -379,6 +379,15 @@ test('Log: the newest advancement can be undone and its XP comes back', async ({
   await expect(undo.first()).toBeEnabled()
   expect(await undo.count()).toBeGreaterThan(1)
   await expect(undo.last()).toBeDisabled()
+
+  // Five to a page: the older purchases are on the next one, all locked
+  const nav = page.getByRole('navigation', { name: 'Advancement history' })
+  await expect(nav.getByText(/^Page 1 of \d+$/)).toBeVisible()
+  await expect(undo).toHaveCount(5)
+  await nav.getByRole('button', { name: 'Older →' }).click()
+  await expect(nav.getByText(/^Page 2 of \d+$/)).toBeVisible()
+  for (const button of await undo.all()) await expect(button).toBeDisabled()
+  await nav.getByRole('button', { name: '← Newer' }).click()
 
   const before = await page.getByText(/^XP Log · \d+ XP$/).textContent()
   await undo.first().click()
