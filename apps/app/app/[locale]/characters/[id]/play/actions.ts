@@ -33,7 +33,8 @@ import {
   removeItem,
   removeXp,
   revertAdvancement,
-  setNotes,
+  addNote,
+  removeNote,
   setPoolMax,
   setTierPicks,
   type InventoryItem,
@@ -124,17 +125,41 @@ export async function adjustPoolAction(
 
 // ---- notes ----
 
-export async function setNotesAction(
+export async function addNoteAction(
   characterId: unknown,
-  notes: unknown,
+  body: unknown,
+): Promise<{ ok: true; note: { id: number; body: string; createdAt: string } } | Fail<'limit'>> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !isText(body, LIMITS.noteLength)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+  try {
+    const result = await addNote(uid, characterId, body.trim())
+    if (!result.ok) return { ok: false, reason: result.reason }
+    const { id, body: saved, createdAt } = result.note
+    return { ok: true, note: { id, body: saved, createdAt: createdAt.toISOString() } }
+  } catch (err) {
+    console.error('[play] addNote failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+export async function removeNoteAction(
+  characterId: unknown,
+  noteId: unknown,
 ): Promise<{ ok: boolean }> {
   const uid = await userId()
   if (!uid || typeof characterId !== 'string' || !UUID.test(characterId)) return { ok: false }
-  if (typeof notes !== 'string' || notes.length > LIMITS.notes) return { ok: false }
+  if (!isInt(noteId, 1, Number.MAX_SAFE_INTEGER)) return { ok: false }
   try {
-    return { ok: await setNotes(uid, characterId, notes) }
+    return { ok: await removeNote(uid, characterId, noteId) }
   } catch (err) {
-    console.error('[play] setNotes failed:', err)
+    console.error('[play] removeNote failed:', err)
     return { ok: false }
   }
 }

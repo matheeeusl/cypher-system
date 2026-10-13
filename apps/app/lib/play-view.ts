@@ -62,7 +62,7 @@ export interface PlayView {
   xp: Array<{ id: number; kind: 'gain' | 'spend'; amount: number; reason: string; locked: boolean }>
   inventory: InventoryItem[]
   cypherLimit: number
-  notes: string
+  notes: Array<{ id: number; body: string; createdAt: string }>
 }
 
 const POOLS: Array<{ key: PoolKey; stat: 'MIGHT' | 'SPEED' | 'INTELLECT' }> = [
@@ -146,7 +146,11 @@ export async function buildPlayView(
     })),
     inventory: play.inventory,
     cypherLimit: type.cypherLimit,
-    notes: play.notes,
+    notes: play.notes.map((n) => ({
+      id: n.id,
+      body: n.body,
+      createdAt: n.createdAt.toISOString(),
+    })),
   }
 }
 

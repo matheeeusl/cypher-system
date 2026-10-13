@@ -32,9 +32,15 @@ export interface XpEntry {
   createdAt: Date
 }
 
+export interface NoteEntry {
+  id: number
+  body: string
+  createdAt: Date
+}
+
 export interface PlayData {
   spent: PoolPoints
-  notes: string
+  notes: NoteEntry[]
   inventory: InventoryItem[]
   xp: XpEntry[]
 }
@@ -48,7 +54,8 @@ export const LIMITS = {
   itemName: 80,
   itemMeta: 80,
   itemQty: 999,
-  notes: 20000,
+  notes: 200,
+  noteLength: 500,
 } as const
 
 const NO_SPENT: PoolPoints = { might: 0, speed: 0, intellect: 0 }
@@ -68,6 +75,18 @@ const toXp = (r: XpRow): XpEntry => ({
   amount: r.amount,
   reason: r.reason,
   locked: r.locked,
+  createdAt: r.created_at,
+})
+
+interface NoteRow {
+  id: string
+  body: string
+  created_at: Date
+}
+
+const toNote = (r: NoteRow): NoteEntry => ({
+  id: Number(r.id),
+  body: r.body,
   createdAt: r.created_at,
 })
 
@@ -104,9 +123,8 @@ async function lockPlay(client: PoolClient, characterId: string) {
   )
   const { rows } = await client.query<{
     spent: PoolPoints
-    notes: string
     inventory: InventoryItem[]
-  }>('select spent, notes, inventory from character_play where character_id = $1 for update', [
+  }>('select spent, inventory from character_play where character_id = $1 for update', [
     characterId,
   ])
   return rows[0]!
@@ -120,9 +138,13 @@ export async function getPlayData(userId: string, characterId: string): Promise<
       'select id, kind, amount, reason, locked, created_at from character_xp_entry where character_id = $1 order by id',
       [characterId],
     )
+    const { rows: noteRows } = await client.query<NoteRow>(
+      'select id, body, created_at from character_note where character_id = $1 order by id',
+      [characterId],
+    )
     return {
       spent: { ...NO_SPENT, ...play.spent },
-      notes: play.notes,
+      notes: noteRows.map(toNote),
       inventory: play.inventory,
       xp: rows.map(toXp),
     }
@@ -177,19 +199,41 @@ export async function adjustPool(
 
 // ---- notes ----
 
-export async function setNotes(
+export async function addNote(
   userId: string,
   characterId: string,
-  notes: string,
+  body: string,
+): Promise<{ ok: true; note: NoteEntry } | { ok: false; reason: 'not_found' | 'limit' }> {
+  return tx(async (client) => {
+    if (!(await owns(client, userId, characterId))) return { ok: false, reason: 'not_found' }
+    // Serialize concurrent note writes for this character.
+    await lockPlay(client, characterId)
+    const { rows: count } = await client.query<{ n: string }>(
+      'select count(*) as n from character_note where character_id = $1',
+      [characterId],
+    )
+    if (Number(count[0]?.n ?? 0) >= LIMITS.notes) return { ok: false, reason: 'limit' }
+    const { rows } = await client.query<NoteRow>(
+      `insert into character_note (character_id, body) values ($1, $2)
+       returning id, body, created_at`,
+      [characterId, body],
+    )
+    return { ok: true, note: toNote(rows[0]!) }
+  })
+}
+
+export async function removeNote(
+  userId: string,
+  characterId: string,
+  noteId: number,
 ): Promise<boolean> {
   return tx(async (client) => {
     if (!(await owns(client, userId, characterId))) return false
-    await lockPlay(client, characterId)
-    await client.query(
-      'update character_play set notes = $2, updated_at = now() where character_id = $1',
-      [characterId, notes],
+    const { rowCount } = await client.query(
+      'delete from character_note where id = $1 and character_id = $2',
+      [noteId, characterId],
     )
-    return true
+    return (rowCount ?? 0) > 0
   })
 }
 

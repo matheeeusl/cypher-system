@@ -87,8 +87,11 @@ export interface PlayCopy {
     page: (current: number, total: number) => string
     notes: string
     notesPlaceholder: string
-    saving: string
-    saved: string
+    notesAdd: string
+    notesEmpty: string
+    notesRemove: string
+    notesCount: (used: number, max: number) => string
+    notesErrors: { limit: string; generic: string }
     history: {
       title: string
       empty: string
@@ -254,9 +257,15 @@ const en: PlayCopy = {
     next: 'Older →',
     page: (current, total) => `Page ${current} of ${total}`,
     notes: 'Notes',
-    notesPlaceholder: 'Session notes, reminders, loose threads…',
-    saving: 'Saving…',
-    saved: 'Saved',
+    notesPlaceholder: 'A note: a clue, a name, a loose thread…',
+    notesAdd: 'Add note',
+    notesEmpty: 'No notes yet.',
+    notesRemove: 'Remove note',
+    notesCount: (used, max) => `${used} / ${max}`,
+    notesErrors: {
+      limit: 'This character has reached the note limit. Remove one to add another.',
+      generic: 'Could not save the note. Try again.',
+    },
     history: {
       title: 'Advancement history',
       empty: 'No advancements purchased yet.',
@@ -434,9 +443,15 @@ const ptBr: PlayCopy = {
     next: 'Mais antigos →',
     page: (current, total) => `Página ${current} de ${total}`,
     notes: 'Anotações',
-    notesPlaceholder: 'Notas da sessão, lembretes, pontas soltas…',
-    saving: 'Salvando…',
-    saved: 'Salvo',
+    notesPlaceholder: 'Uma nota: uma pista, um nome, uma ponta solta…',
+    notesAdd: 'Adicionar nota',
+    notesEmpty: 'Nenhuma nota ainda.',
+    notesRemove: 'Remover nota',
+    notesCount: (used, max) => `${used} / ${max}`,
+    notesErrors: {
+      limit: 'Este personagem atingiu o limite de notas. Remova uma para adicionar outra.',
+      generic: 'Não foi possível salvar a nota. Tente novamente.',
+    },
     history: {
       title: 'Histórico de avanços',
       empty: 'Nenhum avanço comprado ainda.',

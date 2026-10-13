@@ -301,14 +301,42 @@ test('inventory: items, quantities, the cypher catalog and the cypher limit warn
   await expect(inventoryNav.getByRole('button', { name: 'Next →' })).toBeDisabled()
 })
 
-test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ page }) => {
+test('notes: a log of short entries; the sheet shows live pools and XP; pt-br works', async ({
+  page,
+}) => {
   await page.goto(playUrl)
   await tab(page, 'Notes').click()
-  await page.getByLabel('Notes').fill('Ask the GM about the Sunken Archive.')
-  await expect(page.getByText('Saved', { exact: true })).toBeVisible()
+  const field = page.getByLabel(/^A note:/)
+  const add = page.getByRole('button', { name: 'Add note' })
+  await expect(add).toBeDisabled()
+  await field.fill('Ask the GM about the Sunken Archive.')
+  await expect(page.getByText('36 / 500')).toBeVisible()
+  await add.click()
+  await expect(page.getByText('Ask the GM about the Sunken Archive.')).toBeVisible()
+  await expect(field).toHaveValue('')
+
+  // Capped at 500 characters
+  await field.fill('x'.repeat(600))
+  await expect(page.getByText('500 / 500')).toBeVisible()
+  await field.fill('')
+
+  // Persisted; six notes make a second page, newest first
+  for (let i = 1; i <= 5; i++) {
+    await field.fill(`Clue ${i}`)
+    await add.click()
+    await expect(page.getByText(`Clue ${i}`)).toBeVisible()
+  }
   await page.reload()
   await tab(page, 'Notes').click()
-  await expect(page.getByLabel('Notes')).toHaveValue('Ask the GM about the Sunken Archive.')
+  const nav = page.getByRole('navigation', { name: 'Notes' })
+  await expect(nav.getByText('Page 1 of 2')).toBeVisible()
+  await expect(page.getByText('Clue 5')).toBeVisible()
+  await expect(page.getByText('Ask the GM about the Sunken Archive.')).toHaveCount(0)
+  await nav.getByRole('button', { name: 'Older →' }).click()
+  await expect(page.getByText('Ask the GM about the Sunken Archive.')).toBeVisible()
+  await page.getByRole('button', { name: 'Remove note' }).click()
+  await expect(page.getByText('Ask the GM about the Sunken Archive.')).toHaveCount(0)
+  await expect(nav).toHaveCount(0)
 
   // Spend a point, then check the printable sheet reflects it
   await tab(page, 'Status').click()

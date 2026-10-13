@@ -14,7 +14,7 @@ import {
   CypherPicker,
   Pagination,
   InventoryList,
-  NotesField,
+  NotesLog,
   PoolMeter,
   Tabs,
   XpLog,
@@ -33,7 +33,8 @@ import {
   removeItemAction,
   removeXpAction,
   revertAdvancementAction,
-  setNotesAction,
+  addNoteAction,
+  removeNoteAction,
 } from '@/app/[locale]/characters/[id]/play/actions'
 import { POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
 import { customSkillText, toCustomSkill } from '@/lib/custom-skill'
@@ -53,10 +54,12 @@ import type { InventoryItem, PoolKey, PoolPoints } from '@/lib/play'
 import type { PlayView } from '@/lib/play-view'
 
 type TabKey = 'status' | 'skills' | 'inventory' | 'log' | 'notes'
-type NotesStatus = 'idle' | 'saving' | 'saved'
 
 /** Entries per page in the XP log and the advancement history. */
 const PAGE_SIZE = 5
+// Longest note, in characters (mirrors LIMITS.noteLength in lib/play.ts, which
+// is server-only).
+const NOTE_MAX_LENGTH = 500
 
 const STEP_ORDER: AdvancementKey[] = ['pools', 'edge', 'effort', 'skills']
 const NEXT_LEVEL: Record<SkillLevel, SkillLevel> = {
@@ -65,7 +68,6 @@ const NEXT_LEVEL: Record<SkillLevel, SkillLevel> = {
   TRAINED: 'SPECIALIZED',
   SPECIALIZED: 'SPECIALIZED',
 }
-const NOTES_DEBOUNCE_MS = 800
 
 interface PlayScreenProps {
   locale: Locale
@@ -90,7 +92,6 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [openSkill, setOpenSkill] = useState<string | null>(null)
   const [inventory, setInventory] = useState<InventoryItem[]>(initial.inventory)
   const [notes, setNotes] = useState(initial.notes)
-  const [notesStatus, setNotesStatus] = useState<NotesStatus>('idle')
   const [picker, setPicker] = useState<'pools' | 'edge' | 'skills' | 'abilities' | null>(null)
   const [tierUp, setTierUp] = useState<number | null>(null)
   const [busy, setBusy] = useState(false)
@@ -98,6 +99,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     advancement?: string
     picks?: string
     xp?: string
+    notes?: string
     inventory?: string
     general?: string
   }>({})
@@ -156,36 +158,27 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     })
   }
 
-  // ---- notes (debounced autosave) ----------------------------------------
+  // ---- notes ----------------------------------------------------------------
 
-  const notesTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
-  const latestNotes = useRef(initial.notes)
   const characterId = view.characterId
 
-  function onNotesChange(value: string) {
-    setNotes(value)
-    latestNotes.current = value
-    setNotesStatus('saving')
-    clearTimeout(notesTimer.current)
-    notesTimer.current = setTimeout(() => {
-      notesTimer.current = undefined
-      void enqueue(() => setNotesAction(characterId, value)).then((res) => {
-        if (res.ok) setNotesStatus('saved')
-        else setError('general', copy.saveFailed)
-      })
-    }, NOTES_DEBOUNCE_MS)
+  async function addNote(body: string) {
+    setError('notes')
+    const res = await enqueue(() => addNoteAction(characterId, body))
+    if (res.ok) setNotes((prev) => [...prev, res.note])
+    else
+      setError(
+        'notes',
+        res.reason === 'limit' ? copy.log.notesErrors.limit : copy.log.notesErrors.generic,
+      )
   }
 
-  // Leaving the screen mid-debounce must not drop the last keystrokes.
-  useEffect(
-    () => () => {
-      if (notesTimer.current) {
-        clearTimeout(notesTimer.current)
-        void setNotesAction(characterId, latestNotes.current)
-      }
-    },
-    [characterId],
-  )
+  async function removeNote(id: number) {
+    setError('notes')
+    const res = await enqueue(() => removeNoteAction(characterId, id))
+    if (res.ok) setNotes((prev) => prev.filter((n) => n.id !== id))
+    else setError('notes', copy.log.notesErrors.generic)
+  }
 
   // ---- XP -----------------------------------------------------------------
 
@@ -897,18 +890,32 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
 
       {tab === 'notes' && (
         <div className="flex flex-col gap-7">
-          <NotesField
-            label={copy.log.notes}
-            value={notes}
-            placeholder={copy.log.notesPlaceholder}
-            onChange={onNotesChange}
-            status={
-              notesStatus === 'saving'
-                ? copy.log.saving
-                : notesStatus === 'saved'
-                  ? copy.log.saved
-                  : undefined
-            }
+          <NotesLog
+            // Newest first, 5 to a page, like the XP log.
+            pageSize={PAGE_SIZE}
+            maxLength={NOTE_MAX_LENGTH}
+            entries={[...notes].reverse().map((n) => ({
+              id: n.id,
+              body: n.body,
+              dateLabel: new Date(n.createdAt).toLocaleString(locale, {
+                dateStyle: 'medium',
+                timeStyle: 'short',
+              }),
+            }))}
+            labels={{
+              title: copy.log.notes,
+              placeholder: copy.log.notesPlaceholder,
+              add: copy.log.notesAdd,
+              empty: copy.log.notesEmpty,
+              remove: copy.log.notesRemove,
+              previous: copy.log.previous,
+              next: copy.log.next,
+              page: copy.log.page,
+              count: copy.log.notesCount,
+            }}
+            errorMessage={errors.notes}
+            onAdd={(body) => void addNote(body)}
+            onRemove={(id) => void removeNote(id)}
           />
         </div>
       )}
