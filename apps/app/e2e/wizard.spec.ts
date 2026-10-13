@@ -2,9 +2,7 @@ import { expect, test } from '@playwright/test'
 
 // Requires graphql-api running separately (pnpm dev:api) — see
 // playwright.config.ts and apps/app/CLAUDE.md.
-test('walks Type -> Descriptor -> Focus -> Pools -> Abilities with live validation numbers updating', async ({
-  page,
-}) => {
+test('walks the whole wizard, saves the character, reopens it and deletes it', async ({ page }) => {
   await page.goto('/en/characters/new')
 
   // Type
@@ -60,4 +58,28 @@ test('walks Type -> Descriptor -> Focus -> Pools -> Abilities with live validati
   // show real derived numbers instead of an error.
   await expect(page.getByText(/Effort \d/)).toBeVisible()
   await expect(page.getByText(/Might \d/)).toBeVisible()
+
+  // Equipment is fixed by the Type; Background needs a name
+  await page.getByRole('button', { name: 'Next →' }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+  await page.getByPlaceholder('e.g. Kessa Verne').fill('E2E Hero')
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  // Review -> Save lands on My Characters with the new card
+  await expect(page.getByRole('heading', { name: 'Review Your Character' })).toBeVisible()
+  await page.getByRole('button', { name: 'Save Character' }).click()
+  await expect(page).toHaveURL(/\/en$/)
+  const card = page.getByRole('link', { name: /E2E Hero/ })
+  await expect(card).toBeVisible()
+  await expect(card).toContainText('Brash Warrior')
+
+  // Opening it goes back to the wizard on its Review step
+  await card.click()
+  await expect(page.getByRole('heading', { name: 'Review Your Character' })).toBeVisible()
+  await page.getByRole('link', { name: '← My Characters' }).click()
+
+  // Delete (confirm dialog) returns to the empty state
+  page.once('dialog', (dialog) => void dialog.accept())
+  await page.getByRole('button', { name: 'Delete' }).click()
+  await expect(page.getByText('No characters yet.')).toBeVisible()
 })

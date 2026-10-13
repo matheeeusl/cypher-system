@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { Button } from '@cypher/ui'
 
@@ -33,6 +34,7 @@ import { EquipmentStep } from './EquipmentStep'
 import { ErrorBanner } from './ErrorBanner'
 import { FocusStep } from './FocusStep'
 import { UserMenu } from '@/components/auth/UserMenu'
+import { saveCharacter, type SaveResult } from '@/app/[locale]/characters/actions'
 import { PoolsStep } from './PoolsStep'
 import { ReviewStep } from './ReviewStep'
 import { SentenceBanner } from './SentenceBanner'
@@ -72,9 +74,31 @@ function useEntityList<T>(fetcher: () => Promise<T[]>, needed: boolean): Content
   return state
 }
 
-export function Wizard({ userName, backHref }: { userName: string; backHref: string }) {
-  const [stepIndex, setStepIndex] = useState(0)
-  const [choices, setChoices] = useState<WizardChoices>(INITIAL_CHOICES)
+const SAVE_ERRORS: Record<Exclude<SaveResult, { ok: true }>['reason'], string> = {
+  unauthorized: 'Your session expired. Please log in again.',
+  invalid: 'Some choices are incomplete or no longer valid. Review the steps and try again.',
+  limit: 'You have reached the character limit for your plan.',
+  unavailable: 'Could not save right now. Please try again.',
+}
+
+interface WizardProps {
+  userName: string
+  /** Where "My Characters" lives (and where we go after saving). */
+  backHref: string
+  /** Set when editing a saved character; omitted for a new one. */
+  characterId?: string
+  /** Saved choices to start from. Reopens straight on the Review step. */
+  initialChoices?: WizardChoices
+}
+
+export function Wizard({ userName, backHref, characterId, initialChoices }: WizardProps) {
+  const router = useRouter()
+  const [stepIndex, setStepIndex] = useState(
+    initialChoices ? STEPS.findIndex((s) => s.id === 'review') : 0,
+  )
+  const [choices, setChoices] = useState<WizardChoices>(initialChoices ?? INITIAL_CHOICES)
+  const [saving, setSaving] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const [attemptedNext, setAttemptedNext] = useState(false)
   const [validation, setValidation] = useState<ValidationResult | null>(null)
   const [validating, setValidating] = useState(false)
@@ -162,6 +186,23 @@ export function Wizard({ userName, backHref }: { userName: string; backHref: str
       return
     }
     if (stepIndex < STEPS.length - 1) goTo(stepIndex + 1)
+  }
+
+  async function onSave() {
+    setSaving(true)
+    setSaveError(null)
+    try {
+      const result = await saveCharacter(choices, characterId)
+      if (result.ok) {
+        router.push(backHref)
+        router.refresh()
+        return
+      }
+      setSaveError(SAVE_ERRORS[result.reason])
+    } catch {
+      setSaveError(SAVE_ERRORS.unavailable)
+    }
+    setSaving(false)
   }
 
   function goBack() {
@@ -359,19 +400,17 @@ export function Wizard({ userName, backHref }: { userName: string; backHref: str
           validation={hasCoreChoices ? validation : null}
           validating={hasCoreChoices && validating}
         />
+        {saveError && <ErrorBanner message={saveError} />}
         {showLocalError && <ErrorBanner message={stepErrorMessage(step.id, choices, content)} />}
 
         <div className="mt-5 flex justify-between">
           <Button label="← Back" variant="ghost" onClick={goBack} />
           {step.id === 'review' ? (
-            <button
-              type="button"
-              disabled
-              title="Saving needs an account — not built yet"
-              className="bg-border text-text-muted cursor-not-allowed rounded px-5 py-2.5 font-mono text-[13px] font-semibold"
-            >
-              Save Character (coming soon)
-            </button>
+            <Button
+              label={saving ? 'Saving…' : characterId ? 'Save Changes' : 'Save Character'}
+              disabled={saving}
+              onClick={() => void onSave()}
+            />
           ) : (
             <Button label="Next →" onClick={goNext} />
           )}
