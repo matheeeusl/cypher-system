@@ -6,6 +6,7 @@ import { AppShell } from '@/components/AppShell'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { PrintButton } from '@/components/PrintButton'
 import { getCharacter } from '@/lib/characters'
+import { getPlayData, type PlayData } from '@/lib/play'
 import { buildCharacterSheet } from '@/lib/character-sheet'
 import { fetchContentVersions, isStale, type ContentVersions } from '@/lib/graphql/versions'
 import { isLocale } from '@/lib/i18n/auth'
@@ -32,11 +33,13 @@ export default async function CharacterSheetPage({
   const editHref = `/${locale}/characters/${character.id}/edit`
 
   let sheet: CharacterSheetData | null = null
+  let play: PlayData | null = null
   let versions: ContentVersions = new Map()
   let unavailable = false
   try {
+    play = await getPlayData(session.user.id, character.id)
     ;[sheet, versions] = await Promise.all([
-      buildCharacterSheet(character, locale),
+      buildCharacterSheet(character, locale, play),
       fetchContentVersions(),
     ])
   } catch (err) {
@@ -72,6 +75,7 @@ export default async function CharacterSheetPage({
             printDate={`${copy.printed} ${new Date().toLocaleDateString(locale)}`}
             actions={
               <>
+                <LinkButton href={`/${locale}/characters/${character.id}/play`} label={copy.play} />
                 <LinkButton href={editHref} label={copy.edit} variant="ghost" />
                 <PrintButton label={copy.exportPdf} />
               </>

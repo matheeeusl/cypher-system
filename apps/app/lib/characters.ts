@@ -1,6 +1,7 @@
 import { characterLimit } from '@/lib/entitlements'
 import { pool } from '@/lib/db'
-import type { LocalizedString } from '@/lib/graphql/queries'
+import type { AdvancementPurchaseInput, LocalizedString } from '@/lib/graphql/queries'
+import type { PoolPoints } from '@/lib/play'
 import type { WizardChoices } from '@/components/wizard/state'
 
 export interface CharacterSummaryData {
@@ -16,6 +17,10 @@ export interface SavedCharacter {
   choices: WizardChoices
   summary: CharacterSummaryData
   contentVersions: Record<string, string>
+  /** Advancement purchases (play mode), in purchase order. */
+  advancement: AdvancementPurchaseInput[]
+  /** Cached derived pool maximums; null until first derived. */
+  poolMax: PoolPoints | null
   createdAt: Date
   updatedAt: Date
 }
@@ -26,6 +31,8 @@ interface Row {
   choices: WizardChoices
   summary: CharacterSummaryData
   content_versions: Record<string, string>
+  advancement: AdvancementPurchaseInput[]
+  pool_max: PoolPoints | null
   created_at: Date
   updated_at: Date
 }
@@ -37,12 +44,15 @@ function fromRow(r: Row): SavedCharacter {
     choices: r.choices,
     summary: r.summary,
     contentVersions: r.content_versions,
+    advancement: r.advancement,
+    poolMax: r.pool_max,
     createdAt: r.created_at,
     updatedAt: r.updated_at,
   }
 }
 
-const COLUMNS = 'id, name, choices, summary, content_versions, created_at, updated_at'
+const COLUMNS =
+  'id, name, choices, summary, content_versions, advancement, pool_max, created_at, updated_at'
 
 // Authorization lives here (no RLS): every query is scoped to `userId`, which
 // callers must take from the verified session — never from client input.
@@ -63,7 +73,10 @@ export async function getCharacter(userId: string, id: string): Promise<SavedCha
   return rows[0] ? fromRow(rows[0]) : null
 }
 
-export type CharacterData = Pick<SavedCharacter, 'name' | 'choices' | 'summary' | 'contentVersions'>
+export type CharacterData = Pick<
+  SavedCharacter,
+  'name' | 'choices' | 'summary' | 'contentVersions'
+> & { poolMax: PoolPoints }
 
 export class CharacterLimitError extends Error {}
 
@@ -78,9 +91,9 @@ export async function createCharacter(userId: string, data: CharacterData): Prom
   }
 
   const { rows } = await pool.query<{ id: string }>(
-    `insert into character (user_id, name, choices, summary, content_versions)
-     values ($1, $2, $3, $4, $5) returning id`,
-    [userId, data.name, data.choices, data.summary, data.contentVersions],
+    `insert into character (user_id, name, choices, summary, content_versions, pool_max)
+     values ($1, $2, $3, $4, $5, $6) returning id`,
+    [userId, data.name, data.choices, data.summary, data.contentVersions, data.poolMax],
   )
   return rows[0]!.id
 }
@@ -93,9 +106,10 @@ export async function updateCharacter(
 ): Promise<boolean> {
   const { rowCount } = await pool.query(
     `update character
-        set name = $3, choices = $4, summary = $5, content_versions = $6, updated_at = now()
+        set name = $3, choices = $4, summary = $5, content_versions = $6, pool_max = $7,
+            updated_at = now()
       where id = $1 and user_id = $2`,
-    [id, userId, data.name, data.choices, data.summary, data.contentVersions],
+    [id, userId, data.name, data.choices, data.summary, data.contentVersions, data.poolMax],
   )
   return (rowCount ?? 0) > 0
 }

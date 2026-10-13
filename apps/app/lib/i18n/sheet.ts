@@ -14,6 +14,7 @@ export interface SheetCopy {
   fromFocus: string
   exportPdf: string
   edit: string
+  play: string
   staleBanner: string
   invalidTitle: string
   invalidBody: string
@@ -40,6 +41,7 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     fromFocus: 'Focus',
     exportPdf: 'Export as PDF',
     edit: 'Edit',
+    play: 'Play',
     staleBanner: 'The rules reference has been updated since this character was created.',
     invalidTitle: 'This character needs attention',
     invalidBody:
@@ -65,6 +67,7 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     fromFocus: 'Foco',
     exportPdf: 'Exportar como PDF',
     edit: 'Editar',
+    play: 'Jogar',
     staleBanner: 'A referência de regras foi atualizada desde a criação deste personagem.',
     invalidTitle: 'Este personagem precisa de atenção',
     invalidBody:

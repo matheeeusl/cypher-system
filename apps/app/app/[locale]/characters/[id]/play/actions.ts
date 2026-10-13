@@ -1,0 +1,431 @@
+'use server'
+
+import { revalidatePath } from 'next/cache'
+
+import { boughtAtTier, parseChoice, toPurchase, wouldReachBlockedTier } from '@/lib/advancement'
+import { loadDerived } from '@/lib/character-derived'
+import { getCharacter } from '@/lib/characters'
+import { buildCharacterChoicesInput } from '@/components/wizard/derive'
+import { fetchCypher } from '@/lib/graphql/cyphers'
+import { fetchAdvancementRules, validateCharacterChoices, type Stat } from '@/lib/graphql/queries'
+import { isLocale, type Locale } from '@/lib/i18n/auth'
+import { loc } from '@/lib/i18n/localized'
+import { playCopy } from '@/lib/i18n/play'
+import { terms } from '@/lib/i18n/terms'
+import {
+  LIMITS,
+  POOL_KEYS,
+  addItem,
+  addXp,
+  adjustPool,
+  applyAdvancement,
+  changeItemQty,
+  getPlayData,
+  removeItem,
+  removeXp,
+  setNotes,
+  setPoolMax,
+  type InventoryItem,
+  type PoolChange,
+  type PoolKey,
+  type PoolPoints,
+} from '@/lib/play'
+import { buildPlayView, type PlayView } from '@/lib/play-view'
+import { getSession } from '@/lib/session'
+
+// Every action: verify the session, validate every argument (they arrive from
+// the browser), and let lib/play.ts scope the query to the session user.
+
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const isInt = (v: unknown, min: number, max: number): v is number =>
+  Number.isInteger(v) && (v as number) >= min && (v as number) <= max
+const isText = (v: unknown, max: number): v is string =>
+  typeof v === 'string' && v.trim().length > 0 && v.trim().length <= max
+
+type Fail<R extends string = 'invalid'> = {
+  ok: false
+  reason: R | 'unauthorized' | 'not_found' | 'invalid' | 'unavailable'
+}
+
+async function userId(): Promise<string | null> {
+  return (await getSession())?.user.id ?? null
+}
+
+function touch(characterId: string) {
+  revalidatePath('/[locale]/characters/[id]', 'page')
+  void characterId
+}
+
+// ---- pools ----
+
+export async function adjustPoolAction(
+  characterId: unknown,
+  stat: unknown,
+  change: unknown,
+): Promise<{ ok: true; spent: PoolPoints } | Fail> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (typeof characterId !== 'string' || !UUID.test(characterId))
+    return { ok: false, reason: 'invalid' }
+  if (typeof stat !== 'string' || !POOL_KEYS.includes(stat as PoolKey))
+    return { ok: false, reason: 'invalid' }
+
+  const c = change as { kind?: unknown; amount?: unknown } | null
+  let parsed: PoolChange
+  if (c?.kind === 'spend' && isInt(c.amount, 1, 100)) parsed = { kind: 'spend', amount: c.amount }
+  else if (c?.kind === 'recover' && (c.amount === 'all' || isInt(c.amount, 1, 100)))
+    parsed = { kind: 'recover', amount: c.amount as number | 'all' }
+  else return { ok: false, reason: 'invalid' }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+
+    // The cached maximum is filled on save/advancement; characters saved before
+    // play mode existed get it lazily here.
+    let poolMax = character.poolMax
+    if (!poolMax) {
+      const bundle = await loadDerived(character)
+      if (!bundle) return { ok: false, reason: 'invalid' }
+      poolMax = {
+        might: bundle.derived.pools.might.max,
+        speed: bundle.derived.pools.speed.max,
+        intellect: bundle.derived.pools.intellect.max,
+      }
+      await setPoolMax(uid, characterId, poolMax)
+    }
+
+    const spent = await adjustPool(
+      uid,
+      characterId,
+      stat as PoolKey,
+      parsed,
+      poolMax[stat as PoolKey],
+    )
+    return spent ? { ok: true, spent } : { ok: false, reason: 'not_found' }
+  } catch (err) {
+    console.error('[play] adjustPool failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+// ---- notes ----
+
+export async function setNotesAction(
+  characterId: unknown,
+  notes: unknown,
+): Promise<{ ok: boolean }> {
+  const uid = await userId()
+  if (!uid || typeof characterId !== 'string' || !UUID.test(characterId)) return { ok: false }
+  if (typeof notes !== 'string' || notes.length > LIMITS.notes) return { ok: false }
+  try {
+    return { ok: await setNotes(uid, characterId, notes) }
+  } catch (err) {
+    console.error('[play] setNotes failed:', err)
+    return { ok: false }
+  }
+}
+
+// ---- XP ----
+
+export async function addXpAction(
+  characterId: unknown,
+  input: unknown,
+): Promise<
+  | {
+      ok: true
+      entry: { id: number; kind: 'gain' | 'spend'; amount: number; reason: string; locked: boolean }
+    }
+  | Fail<'insufficient' | 'limit'>
+> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  const i = input as { kind?: unknown; amount?: unknown; reason?: unknown } | null
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    (i?.kind !== 'gain' && i?.kind !== 'spend') ||
+    !isInt(i.amount, 1, LIMITS.xpAmount) ||
+    !isText(i.reason, LIMITS.reason)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+  try {
+    const result = await addXp(uid, characterId, i.kind, i.amount, i.reason.trim())
+    if (!result.ok) return { ok: false, reason: result.reason }
+    const { id, kind, amount, reason, locked } = result.entry
+    return { ok: true, entry: { id, kind, amount, reason, locked } }
+  } catch (err) {
+    console.error('[play] addXp failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+export async function removeXpAction(
+  characterId: unknown,
+  entryId: unknown,
+): Promise<
+  | { ok: true }
+  | {
+      ok: false
+      reason:
+        'locked' | 'would_go_negative' | 'not_found' | 'invalid' | 'unauthorized' | 'unavailable'
+    }
+> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !isInt(entryId, 1, Number.MAX_SAFE_INTEGER)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+  try {
+    const result = await removeXp(uid, characterId, entryId)
+    return result === 'ok' ? { ok: true } : { ok: false, reason: result }
+  } catch (err) {
+    console.error('[play] removeXp failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+// ---- inventory ----
+
+type InventoryOutcome = { ok: true; inventory: InventoryItem[] } | Fail<'limit'>
+
+async function inventoryOp(
+  characterId: unknown,
+  run: (uid: string, id: string) => ReturnType<typeof addItem>,
+): Promise<InventoryOutcome> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (typeof characterId !== 'string' || !UUID.test(characterId))
+    return { ok: false, reason: 'invalid' }
+  try {
+    const result = await run(uid, characterId)
+    return result.ok
+      ? { ok: true, inventory: result.inventory }
+      : { ok: false, reason: result.reason }
+  } catch (err) {
+    console.error('[play] inventory failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+export async function addItemAction(
+  characterId: unknown,
+  input: unknown,
+): Promise<InventoryOutcome> {
+  const i = input as { name?: unknown; meta?: unknown; defaultMeta?: unknown } | null
+  if (!isText(i?.name, LIMITS.itemName)) return { ok: false, reason: 'invalid' }
+  const meta = typeof i?.meta === 'string' ? i.meta.trim() : ''
+  const fallback = isText(i?.defaultMeta, LIMITS.itemMeta) ? i.defaultMeta.trim() : 'Gear'
+  if (meta.length > LIMITS.itemMeta) return { ok: false, reason: 'invalid' }
+  const item: InventoryItem = {
+    id: crypto.randomUUID(),
+    kind: 'item',
+    name: i.name.trim(),
+    meta: meta || fallback,
+    qty: 1,
+  }
+  return inventoryOp(characterId, (uid, id) => addItem(uid, id, item))
+}
+
+export async function addCypherAction(
+  characterId: unknown,
+  cypherId: unknown,
+): Promise<InventoryOutcome> {
+  if (typeof cypherId !== 'string' || cypherId.length === 0 || cypherId.length > 100) {
+    return { ok: false, reason: 'invalid' }
+  }
+  // The name/level come from the rules API, never from the browser.
+  let cypher
+  try {
+    cypher = await fetchCypher(cypherId)
+  } catch {
+    return { ok: false, reason: 'unavailable' }
+  }
+  if (!cypher) return { ok: false, reason: 'invalid' }
+  const item: InventoryItem = {
+    id: crypto.randomUUID(),
+    kind: 'cypher',
+    cypherId: cypher.id,
+    name: cypher.name,
+    category: cypher.category,
+    level: cypher.levelRange,
+    qty: 1,
+  }
+  return inventoryOp(characterId, (uid, id) => addItem(uid, id, item))
+}
+
+export async function changeItemQtyAction(
+  characterId: unknown,
+  itemId: unknown,
+  delta: unknown,
+): Promise<InventoryOutcome> {
+  if (typeof itemId !== 'string' || !UUID.test(itemId) || (delta !== 1 && delta !== -1)) {
+    return { ok: false, reason: 'invalid' }
+  }
+  return inventoryOp(characterId, (uid, id) => changeItemQty(uid, id, itemId, delta))
+}
+
+export async function removeItemAction(
+  characterId: unknown,
+  itemId: unknown,
+): Promise<InventoryOutcome> {
+  if (typeof itemId !== 'string' || !UUID.test(itemId)) return { ok: false, reason: 'invalid' }
+  return inventoryOp(characterId, (uid, id) => removeItem(uid, id, itemId))
+}
+
+// ---- advancement ----
+
+export type PurchaseResult =
+  | { ok: true; tier: number; tierUp: boolean; view: PlayView | null }
+  | {
+      ok: false
+      reason:
+        | 'unauthorized'
+        | 'invalid'
+        | 'not_found'
+        | 'insufficient'
+        | 'conflict'
+        | 'capped'
+        | 'unavailable'
+    }
+
+/**
+ * Buys one advancement. The browser only says *which* option and its choice;
+ * the server works out the tier, checks the once-per-tier and XP rules, asks the
+ * engine (through graphql-api) whether the resulting build is valid, and then
+ * records the purchase and its locked XP entry in one transaction.
+ */
+export async function purchaseAdvancementAction(
+  characterId: unknown,
+  rawChoice: unknown,
+  locale: unknown,
+): Promise<PurchaseResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  const choice = parseChoice(rawChoice)
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !choice ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+
+    const [rules, bundle] = await Promise.all([fetchAdvancementRules(), loadDerived(character)])
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    const tier = bundle.derived.tier
+    // Purchases are tagged with the tier they lead to.
+    const target = tier + 1
+    const bought = boughtAtTier(character.advancement, target)
+    if (bought.has(choice.key)) return { ok: false, reason: 'invalid' }
+    if (wouldReachBlockedTier(tier, bought.size, rules.perTier))
+      return { ok: false, reason: 'capped' }
+    if (choice.key === 'skills' && !bundle.skills.some((s) => s.id === choice.skillId)) {
+      return { ok: false, reason: 'invalid' }
+    }
+
+    const next = [...character.advancement, toPurchase(choice, target)]
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      { type: bundle.type, descriptor: bundle.descriptor, focus: bundle.focus },
+      next,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'invalid' }
+
+    const reason = advancementReason(locale, choice, bundle)
+    const applied = await applyAdvancement(uid, characterId, {
+      expected: character.advancement,
+      next,
+      poolMax: {
+        might: result.character.pools.might.max,
+        speed: result.character.pools.speed.max,
+        intellect: result.character.pools.intellect.max,
+      },
+      tier: result.character.tier,
+      costXp: rules.costXp,
+      reason,
+    })
+    if (!applied.ok) return { ok: false, reason: applied.reason }
+
+    touch(characterId)
+    // Hand the screen its fresh derived data (new Pool maximums, Effort, skills,
+    // XP entry…) so it doesn't depend on re-fetching the page.
+    return {
+      ok: true,
+      tier: result.character.tier,
+      tierUp: result.character.tier > tier,
+      view: await freshView(uid, characterId, locale),
+    }
+  } catch (err) {
+    console.error('[play] purchaseAdvancement failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+async function freshView(
+  uid: string,
+  characterId: string,
+  locale: Locale,
+): Promise<PlayView | null> {
+  try {
+    const [character, play] = await Promise.all([
+      getCharacter(uid, characterId),
+      getPlayData(uid, characterId),
+    ])
+    if (!character || !play) return null
+    const bundle = await loadDerived(character)
+    return bundle ? await buildPlayView(character, bundle, play, locale) : null
+  } catch {
+    return null
+  }
+}
+
+/** The XP-log line for a purchase, in the buyer's language. */
+function advancementReason(
+  locale: Locale,
+  choice: NonNullable<ReturnType<typeof parseChoice>>,
+  bundle: NonNullable<Awaited<ReturnType<typeof loadDerived>>>,
+): string {
+  const copy = playCopy[locale]
+  const t = terms[locale]
+  const name = copy.advancement.steps[choice.key].split(' — ')[0]
+  const stat = (s: Stat) => t.stats[s]
+  let detail: string
+  switch (choice.key) {
+    case 'pools':
+      detail = (['MIGHT', 'SPEED', 'INTELLECT'] as const)
+        .filter((st) => choice.allocation[st.toLowerCase() as keyof typeof choice.allocation] > 0)
+        .map(
+          (st) =>
+            `+${choice.allocation[st.toLowerCase() as keyof typeof choice.allocation]} ${stat(st)}`,
+        )
+        .join(', ')
+      break
+    case 'edge':
+      detail = `+1 ${copy.pools.edge} ${stat(choice.stat)}`
+      break
+    case 'effort':
+      detail = `+1 ${copy.pools.effort}`
+      break
+    case 'skills': {
+      const skill = bundle.skills.find((s) => s.id === choice.skillId)
+      detail = skill ? loc(skill.name, locale) : choice.skillId
+      break
+    }
+  }
+  return `${copy.advancement.title} — ${name} (${detail})`.slice(0, LIMITS.reason)
+}

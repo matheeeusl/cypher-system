@@ -25,6 +25,7 @@ export interface WizardType {
   tagline: LocalizedString
   startingPools: { might: number; speed: number; intellect: number }
   startingEdge: { statChoices: Stat[]; amount: number }
+  cypherLimit: number
   tierAbilities: Array<{ tier: number; abilityIds: string[] }>
   startingEquipment: {
     clothing: boolean
@@ -41,6 +42,7 @@ const TYPES_QUERY = `
       tagline { en ptBR }
       startingPools { might speed intellect }
       startingEdge { statChoices amount }
+      cypherLimit
       tierAbilities { tier abilityIds }
       startingEquipment {
         clothing
@@ -198,10 +200,16 @@ export interface CharacterChoicesInput {
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: Array<{ tier: number; abilityId: string }>
   descriptorSkillChoices: string[]
-  // Always empty at character creation — advancement purchases don't apply
-  // until a character exists to advance.
-  advancementPurchases: []
+  // Empty at character creation; play mode adds one entry per purchase, in order.
+  advancementPurchases: AdvancementPurchaseInput[]
 }
+
+/** Mirrors schema.graphql's @oneOf AdvancementPurchaseInput. `tier` is the tier the purchase was made at. */
+export type AdvancementPurchaseInput =
+  | { increasingCapabilities: { tier: number; statPoolAllocation: StatAllocationInput } }
+  | { movingTowardPerfection: { tier: number; edgeStat: Stat } }
+  | { extraEffort: { tier: number } }
+  | { skills: { tier: number; target: { skillId: string } | { abilityId: string } } }
 
 export interface DerivedCharacter {
   tier: number
@@ -266,4 +274,18 @@ export async function validateCharacterChoices(
     { input: CharacterChoicesInput }
   >(VALIDATE_CHARACTER_CHOICES_QUERY, { input })
   return result
+}
+
+// ---- advancement rules ----
+
+export interface AdvancementRules {
+  costXp: number
+  perTier: number
+}
+
+export async function fetchAdvancementRules(): Promise<AdvancementRules> {
+  const { advancementRules } = await gqlRequest<{ advancementRules: AdvancementRules }>(
+    'query AdvancementRules { advancementRules { costXp perTier } }',
+  )
+  return advancementRules
 }

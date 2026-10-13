@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache'
 import {
   CharacterLimitError,
   createCharacter,
+  getCharacter,
   deleteCharacter as removeCharacter,
   updateCharacter,
 } from '@/lib/characters'
@@ -25,7 +26,11 @@ export async function saveCharacter(rawChoices: unknown, id?: string): Promise<S
   if (!session) return { ok: false, reason: 'unauthorized' }
 
   try {
-    const prepared = await prepareCharacterData(rawChoices)
+    // Editing the build keeps the advancement already purchased, so the new
+    // choices are validated together with it.
+    const existing = id ? await getCharacter(session.user.id, id) : null
+    if (id && !existing) return { ok: false, reason: 'invalid' }
+    const prepared = await prepareCharacterData(rawChoices, existing?.advancement ?? [])
     if (!prepared.ok) return { ok: false, reason: 'invalid' }
     const { data } = prepared
 

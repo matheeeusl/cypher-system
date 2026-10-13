@@ -1,55 +1,72 @@
 import type { CharacterSheetData } from '@cypher/ui'
 
-import { buildCharacterChoicesInput } from '@/components/wizard/derive'
+import { loadDerived, type DerivedBundle } from '@/lib/character-derived'
 import type { SavedCharacter } from '@/lib/characters'
-import {
-  fetchAbilities,
-  fetchDescriptors,
-  fetchFoci,
-  fetchSkills,
-  fetchTypes,
-  validateCharacterChoices,
-  type Stat,
-} from '@/lib/graphql/queries'
+import type { Stat } from '@/lib/graphql/queries'
 import type { Locale } from '@/lib/i18n/auth'
 import { loc } from '@/lib/i18n/localized'
 import { sheetCopy } from '@/lib/i18n/sheet'
 import { terms } from '@/lib/i18n/terms'
+import { describeItem } from '@/lib/inventory-display'
+import type { PlayData } from '@/lib/play'
 
 const STAT_ORDER: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
 
+/** Trained skills with their level label, for the sheet and for play mode. */
+export function sheetSkills(bundle: DerivedBundle, locale: Locale) {
+  const t = terms[locale]
+  return bundle.derived.skills.map((s) => ({
+    name: loc(
+      bundle.skills.find((k) => k.id === s.skillId)?.name ?? { en: s.skillId, ptBR: s.skillId },
+      locale,
+    ),
+    level: t.skillLevels[s.level],
+  }))
+}
+
+/** Known abilities with their cost/source line, for the sheet and for play mode. */
+export function sheetAbilities(bundle: DerivedBundle, locale: Locale) {
+  const copy = sheetCopy[locale]
+  const t = terms[locale]
+  return bundle.derived.knownAbilities.flatMap((known) => {
+    const ability = bundle.abilities.find((a) => a.id === known.abilityId)
+    if (!ability) return []
+    const source = known.source.__typename === 'TypeAbilitySource' ? copy.fromType : copy.fromFocus
+    return [
+      {
+        name: loc(ability.name, locale),
+        meta: [ability.cost ? t.cost(ability.cost.amount, ability.cost.pool) : null, source]
+          .filter(Boolean)
+          .join(' · '),
+        description: loc(ability.description, locale),
+      },
+    ]
+  })
+}
+
 /**
  * Derives the printable sheet for a saved character by re-running its choices
- * through graphql-api. Returns null when those choices are no longer valid
- * under the current rules. Throws if the rules API is unreachable.
+ * (and advancement) through graphql-api. Returns null when those are no longer
+ * valid under the current rules. Throws if the rules API is unreachable.
+ * `play` supplies the live values (current pools, XP); without it the sheet
+ * shows full pools and 0 XP.
  */
 export async function buildCharacterSheet(
   character: SavedCharacter,
   locale: Locale,
+  play?: PlayData | null,
 ): Promise<CharacterSheetData | null> {
   const copy = sheetCopy[locale]
   const t = terms[locale]
-  const [types, descriptors, foci, skills, abilities] = await Promise.all([
-    fetchTypes(),
-    fetchDescriptors(),
-    fetchFoci(),
-    fetchSkills(),
-    fetchAbilities(),
-  ])
-
-  const { choices } = character
-  const type = types.find((t) => t.id === choices.typeId)
-  const descriptor = descriptors.find((d) => d.id === choices.descriptorId)
-  const focus = foci.find((f) => f.id === choices.focusId)
-  if (!type || !descriptor || !focus) return null
-
-  const input = buildCharacterChoicesInput(choices, { type, descriptor, focus })
-  if (!input) return null
-  const result = await validateCharacterChoices(input)
-  if (result.__typename !== 'ValidCharacterResult') return null
-  const derived = result.character
+  const bundle = await loadDerived(character)
+  if (!bundle) return null
+  const { type, descriptor, focus, derived } = bundle
 
   const poolKey = { MIGHT: 'might', SPEED: 'speed', INTELLECT: 'intellect' } as const
+  const xpTotal = (play?.xp ?? []).reduce(
+    (sum, e) => sum + (e.kind === 'gain' ? e.amount : -e.amount),
+    0,
+  )
   const equipment = type.startingEquipment
 
   return {
@@ -62,38 +79,20 @@ export async function buildCharacterSheet(
     quickStats: [
       { label: copy.tier, value: String(derived.tier) },
       { label: copy.effort, value: String(derived.effort) },
-      // Experience isn't tracked yet, so every character starts at 0.
-      { label: copy.xp, value: '0' },
+      { label: copy.xp, value: String(xpTotal) },
     ],
-    // Current = max: there is no in-play state (damage, spent points) yet.
-    pools: STAT_ORDER.map((stat) => ({
-      name: t.stats[stat],
-      edge: derived.edge[poolKey[stat]],
-      current: derived.pools[poolKey[stat]].max,
-      max: derived.pools[poolKey[stat]].max,
-    })),
-    skills: derived.skills.map((s) => ({
-      name: loc(
-        skills.find((k) => k.id === s.skillId)?.name ?? { en: s.skillId, ptBR: s.skillId },
-        locale,
-      ),
-      level: t.skillLevels[s.level],
-    })),
-    abilities: derived.knownAbilities.flatMap((known) => {
-      const ability = abilities.find((a) => a.id === known.abilityId)
-      if (!ability) return []
-      const source =
-        known.source.__typename === 'TypeAbilitySource' ? copy.fromType : copy.fromFocus
-      return [
-        {
-          name: loc(ability.name, locale),
-          meta: [ability.cost ? t.cost(ability.cost.amount, ability.cost.pool) : null, source]
-            .filter(Boolean)
-            .join(' · '),
-          description: loc(ability.description, locale),
-        },
-      ]
+    pools: STAT_ORDER.map((stat) => {
+      const max = derived.pools[poolKey[stat]].max
+      const spent = play?.spent[poolKey[stat]] ?? 0
+      return {
+        name: t.stats[stat],
+        edge: derived.edge[poolKey[stat]],
+        current: Math.max(0, max - spent),
+        max,
+      }
     }),
+    skills: sheetSkills(bundle, locale),
+    abilities: sheetAbilities(bundle, locale),
     inventory: [
       ...(equipment.weapon ? [{ name: loc(equipment.weapon, locale), meta: t.weapon }] : []),
       ...(equipment.clothing ? [{ name: t.clothingItem, meta: t.clothing }] : []),
@@ -101,7 +100,12 @@ export async function buildCharacterSheet(
         name: t.items(item.count, item.exact, item.priceTier),
         meta: t.gear,
       })),
+      // Carried cyphers and gear tracked in play mode.
+      ...(play?.inventory ?? []).map((item) => {
+        const { name, meta } = describeItem(item, locale)
+        return { name, meta: `${meta} · ×${item.qty}` }
+      }),
     ],
-    background: choices.background,
+    background: character.choices.background,
   }
 }

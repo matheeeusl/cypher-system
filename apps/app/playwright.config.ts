@@ -13,7 +13,10 @@ export default defineConfig({
   testDir: './e2e',
   globalSetup: './e2e/global-setup.ts',
   timeout: 30_000,
-  fullyParallel: true,
+  // One shared test user (see e2e/global-setup.ts) owns every character the
+  // specs create, so specs must not run side by side.
+  fullyParallel: false,
+  workers: 1,
   retries: process.env.CI ? 2 : 0,
   reporter: 'list',
   use: {

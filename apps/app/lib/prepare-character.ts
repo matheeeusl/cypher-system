@@ -7,6 +7,7 @@ import {
   fetchFoci,
   fetchTypes,
   validateCharacterChoices,
+  type AdvancementPurchaseInput,
 } from '@/lib/graphql/queries'
 import { fetchContentVersions } from '@/lib/graphql/versions'
 
@@ -17,6 +18,7 @@ import { fetchContentVersions } from '@/lib/graphql/versions'
  */
 export async function prepareCharacterData(
   rawChoices: unknown,
+  advancement: AdvancementPurchaseInput[] = [],
 ): Promise<{ ok: true; data: CharacterData } | { ok: false }> {
   const choices = parseChoices(rawChoices)
   if (!choices) return { ok: false }
@@ -35,7 +37,7 @@ export async function prepareCharacterData(
   if (!type || !descriptor || !focus) return { ok: false }
   if (!STEPS.every((step) => isStepValid(step.id, choices, content))) return { ok: false }
 
-  const input = buildCharacterChoicesInput(choices, content)
+  const input = buildCharacterChoicesInput(choices, content, advancement)
   if (!input) return { ok: false }
   const result = await validateCharacterChoices(input)
   if (result.__typename !== 'ValidCharacterResult') return { ok: false }
@@ -45,6 +47,11 @@ export async function prepareCharacterData(
     data: {
       name: choices.name,
       choices,
+      poolMax: {
+        might: result.character.pools.might.max,
+        speed: result.character.pools.speed.max,
+        intellect: result.character.pools.intellect.max,
+      },
       summary: {
         typeName: type.name,
         descriptorName: descriptor.name,

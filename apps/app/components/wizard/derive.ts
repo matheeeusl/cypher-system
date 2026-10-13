@@ -1,4 +1,5 @@
 import type {
+  AdvancementPurchaseInput,
   CharacterChoicesInput,
   FocusTierAbilityEntry,
   WizardDescriptor,
@@ -161,6 +162,7 @@ export function stepErrorMessage(
 export function buildCharacterChoicesInput(
   choices: WizardChoices,
   content: WizardContent,
+  advancementPurchases: AdvancementPurchaseInput[] = [],
 ): CharacterChoicesInput | null {
   const { type, descriptor, focus } = content
   if (
@@ -204,6 +206,6 @@ export function buildCharacterChoicesInput(
       ),
     ),
     descriptorSkillChoices: choices.descriptorSkillChoices,
-    advancementPurchases: [],
+    advancementPurchases,
   }
 }

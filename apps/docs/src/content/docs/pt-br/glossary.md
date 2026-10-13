@@ -22,7 +22,7 @@ tableOfContents: false
 
 **[Cifra](/pt-br/cyphers/)** — Um dispositivo de uso único e temporário — sutil, manifesto ou fantástico — que um personagem carrega em número limitado por vez e consome ao usar.
 
-**[Marcador de Dano](/pt-br/rules/recovery-and-healing/#marcador-de-dano)** — A escala de Íntegro, passando por Prejudicado e Debilitado, até Morto, que registra o quão ferido está um personagem, independente de quais Reservas de atributo específicas estão zeradas.
+**[Marcador de Dano](/pt-br/rules/recovery-and-healing/#marcador-de-dano)** — A escala de Íntegro, passando por Enfraquecido e Debilitado, até Morto, que registra o quão ferido está um personagem, independente de quais Reservas de atributo específicas estão zeradas.
 
 **[Descritor](/pt-br/descriptors/)** — O adjetivo da frase do personagem ("Eu sou um(a) _astuto(a)_ ...") — quem o personagem é, concedendo perícias e outras características independentemente do Tipo ou Foco.
 
