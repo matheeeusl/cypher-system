@@ -6,6 +6,9 @@ const labels: NotesLogLabels = {
   placeholder: 'A note: a clue, a name, a loose thread…',
   add: 'Add note',
   empty: 'No notes yet.',
+  edit: 'Edit note',
+  save: 'Save',
+  cancel: 'Cancel',
   remove: 'Remove note',
   previous: '← Newer',
   next: 'Older →',
@@ -16,7 +19,7 @@ const labels: NotesLogLabels = {
 const meta: Meta<typeof NotesLog> = {
   component: NotesLog,
   tags: ['autodocs'],
-  args: { labels, maxLength: 500, onAdd: () => {}, onRemove: () => {} },
+  args: { labels, maxLength: 500, onAdd: () => {}, onEdit: () => {}, onRemove: () => {} },
 }
 
 export default meta

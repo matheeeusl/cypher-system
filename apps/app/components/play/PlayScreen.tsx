@@ -35,6 +35,7 @@ import {
   revertAdvancementAction,
   addNoteAction,
   removeNoteAction,
+  updateNoteAction,
 } from '@/app/[locale]/characters/[id]/play/actions'
 import { POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
 import { customSkillText, toCustomSkill } from '@/lib/custom-skill'
@@ -171,6 +172,13 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
         'notes',
         res.reason === 'limit' ? copy.log.notesErrors.limit : copy.log.notesErrors.generic,
       )
+  }
+
+  async function editNote(id: number, body: string) {
+    setError('notes')
+    const res = await enqueue(() => updateNoteAction(characterId, id, body))
+    if (res.ok) setNotes((prev) => prev.map((n) => (n.id === id ? { ...n, body } : n)))
+    else setError('notes', copy.log.notesErrors.generic)
   }
 
   async function removeNote(id: number) {
@@ -907,6 +915,9 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               placeholder: copy.log.notesPlaceholder,
               add: copy.log.notesAdd,
               empty: copy.log.notesEmpty,
+              edit: copy.log.notesEdit,
+              save: copy.log.notesSave,
+              cancel: copy.log.notesCancel,
               remove: copy.log.notesRemove,
               previous: copy.log.previous,
               next: copy.log.next,
@@ -915,6 +926,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             }}
             errorMessage={errors.notes}
             onAdd={(body) => void addNote(body)}
+            onEdit={(id, body) => void editNote(id, body)}
             onRemove={(id) => void removeNote(id)}
           />
         </div>

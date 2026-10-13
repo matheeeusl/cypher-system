@@ -35,6 +35,7 @@ import {
   revertAdvancement,
   addNote,
   removeNote,
+  updateNote,
   setPoolMax,
   setTierPicks,
   type InventoryItem,
@@ -146,6 +147,24 @@ export async function addNoteAction(
   } catch (err) {
     console.error('[play] addNote failed:', err)
     return { ok: false, reason: 'unavailable' }
+  }
+}
+
+export async function updateNoteAction(
+  characterId: unknown,
+  noteId: unknown,
+  body: unknown,
+): Promise<{ ok: boolean }> {
+  const uid = await userId()
+  if (!uid || typeof characterId !== 'string' || !UUID.test(characterId)) return { ok: false }
+  if (!isInt(noteId, 1, Number.MAX_SAFE_INTEGER) || !isText(body, LIMITS.noteLength)) {
+    return { ok: false }
+  }
+  try {
+    return { ok: await updateNote(uid, characterId, noteId, body.trim()) }
+  } catch (err) {
+    console.error('[play] updateNote failed:', err)
+    return { ok: false }
   }
 }
 

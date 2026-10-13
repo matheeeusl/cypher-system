@@ -89,6 +89,9 @@ export interface PlayCopy {
     notesPlaceholder: string
     notesAdd: string
     notesEmpty: string
+    notesEdit: string
+    notesSave: string
+    notesCancel: string
     notesRemove: string
     notesCount: (used: number, max: number) => string
     notesErrors: { limit: string; generic: string }
@@ -260,6 +263,9 @@ const en: PlayCopy = {
     notesPlaceholder: 'A note: a clue, a name, a loose thread…',
     notesAdd: 'Add note',
     notesEmpty: 'No notes yet.',
+    notesEdit: 'Edit note',
+    notesSave: 'Save',
+    notesCancel: 'Cancel',
     notesRemove: 'Remove note',
     notesCount: (used, max) => `${used} / ${max}`,
     notesErrors: {
@@ -446,6 +452,9 @@ const ptBr: PlayCopy = {
     notesPlaceholder: 'Uma nota: uma pista, um nome, uma ponta solta…',
     notesAdd: 'Adicionar nota',
     notesEmpty: 'Nenhuma nota ainda.',
+    notesEdit: 'Editar nota',
+    notesSave: 'Salvar',
+    notesCancel: 'Cancelar',
     notesRemove: 'Remover nota',
     notesCount: (used, max) => `${used} / ${max}`,
     notesErrors: {

@@ -17,6 +17,9 @@ export interface NotesLogLabels {
   placeholder: string
   add: string
   empty: string
+  edit: string
+  save: string
+  cancel: string
   remove: string
   previous: string
   next: string
@@ -30,6 +33,7 @@ interface NotesLogProps {
   entries: NotesLogEntry[]
   labels: NotesLogLabels
   onAdd: (body: string) => void
+  onEdit: (id: number, body: string) => void
   onRemove: (id: number) => void
   /** Longest note, in characters. */
   maxLength: number
@@ -42,6 +46,7 @@ export function NotesLog({
   entries,
   labels,
   onAdd,
+  onEdit,
   onRemove,
   maxLength,
   errorMessage,
@@ -49,6 +54,8 @@ export function NotesLog({
 }: NotesLogProps) {
   const [body, setBody] = useState('')
   const [page, setPage] = useState(0)
+  const [editingId, setEditingId] = useState<number | null>(null)
+  const [draft, setDraft] = useState('')
 
   const pageCount = Math.max(1, Math.ceil(entries.length / pageSize))
   const current = Math.min(page, pageCount - 1)
@@ -68,6 +75,13 @@ export function NotesLog({
     if (!trimmed) return
     onAdd(trimmed)
     setBody('')
+  }
+
+  function saveEdit(id: number) {
+    const text = draft.trim()
+    if (!text) return
+    onEdit(id, text)
+    setEditingId(null)
   }
 
   return (
@@ -114,27 +128,79 @@ export function NotesLog({
         </p>
       ) : (
         <ul className="flex flex-col gap-1.5">
-          {shown.map((entry) => (
-            <li
-              key={entry.id}
-              className="border-border bg-panel flex items-start justify-between gap-3 rounded border px-3.5 py-2.5"
-            >
-              <div className="min-w-0">
+          {shown.map((entry) =>
+            editingId === entry.id ? (
+              <li key={entry.id} className="border-accent bg-panel rounded border px-3.5 py-2.5">
                 <p className="text-text-muted mb-1 font-mono text-[11px]">{entry.dateLabel}</p>
-                <p className="text-text text-[13px] leading-relaxed break-words whitespace-pre-line">
-                  {entry.body}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => onRemove(entry.id)}
-                aria-label={labels.remove}
-                className="text-text-muted hover:text-warning shrink-0 cursor-pointer px-1 text-sm"
+                <textarea
+                  value={draft}
+                  onChange={(e) => setDraft(e.target.value)}
+                  aria-label={labels.edit}
+                  maxLength={maxLength}
+                  rows={3}
+                  autoFocus
+                  className="border-border bg-bg text-text focus:border-accent w-full resize-y rounded border px-3 py-2 text-[13px] leading-relaxed outline-none"
+                />
+                <div className="mt-2 flex items-center justify-between gap-3">
+                  <span
+                    className={`font-mono text-[11px] ${draft.length >= maxLength ? 'text-warning' : 'text-text-muted'}`}
+                  >
+                    {labels.count(draft.length, maxLength)}
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setEditingId(null)}
+                      className="border-border text-text-muted cursor-pointer rounded border px-3 py-1.5 font-mono text-xs hover:opacity-80"
+                    >
+                      {labels.cancel}
+                    </button>
+                    <button
+                      type="button"
+                      disabled={!draft.trim()}
+                      onClick={() => saveEdit(entry.id)}
+                      className="bg-accent text-bg rounded px-3 py-1.5 font-mono text-xs font-semibold enabled:cursor-pointer enabled:hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      {labels.save}
+                    </button>
+                  </div>
+                </div>
+              </li>
+            ) : (
+              <li
+                key={entry.id}
+                className="border-border bg-panel flex items-start justify-between gap-3 rounded border px-3.5 py-2.5"
               >
-                ×
-              </button>
-            </li>
-          ))}
+                <div className="min-w-0">
+                  <p className="text-text-muted mb-1 font-mono text-[11px]">{entry.dateLabel}</p>
+                  <p className="text-text text-[13px] leading-relaxed break-words whitespace-pre-line">
+                    {entry.body}
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setEditingId(entry.id)
+                      setDraft(entry.body)
+                    }}
+                    aria-label={labels.edit}
+                    className="text-text-muted hover:text-accent cursor-pointer px-1 text-sm"
+                  >
+                    ✎
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onRemove(entry.id)}
+                    aria-label={labels.remove}
+                    className="text-text-muted hover:text-warning cursor-pointer px-1 text-sm"
+                  >
+                    ×
+                  </button>
+                </div>
+              </li>
+            ),
+          )}
         </ul>
       )}
 

@@ -222,6 +222,22 @@ export async function addNote(
   })
 }
 
+export async function updateNote(
+  userId: string,
+  characterId: string,
+  noteId: number,
+  body: string,
+): Promise<boolean> {
+  return tx(async (client) => {
+    if (!(await owns(client, userId, characterId))) return false
+    const { rowCount } = await client.query(
+      'update character_note set body = $3 where id = $1 and character_id = $2',
+      [noteId, characterId, body],
+    )
+    return (rowCount ?? 0) > 0
+  })
+}
+
 export async function removeNote(
   userId: string,
   characterId: string,
