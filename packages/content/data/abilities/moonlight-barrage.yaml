@@ -29,3 +29,4 @@ sources:
   - type: focus
     id: practices-moon-magic
     tier: 4
+attack: true

@@ -24,3 +24,4 @@ sources:
   - type: focus
     id: inks-spells-on-skin
     tier: 3
+attack: true

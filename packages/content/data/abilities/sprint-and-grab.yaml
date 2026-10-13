@@ -13,3 +13,4 @@ sources:
   - type: focus
     id: hunts
     tier: 3
+attack: true

@@ -15,3 +15,4 @@ sources:
   - type: focus
     id: masters-spells
     tier: 1
+attack: true

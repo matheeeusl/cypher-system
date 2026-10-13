@@ -26,3 +26,4 @@ sources:
   - type: focus
     id: looks-for-trouble
     tier: 4
+attack: true

@@ -46,6 +46,8 @@ export function sheetAbilities(bundle: DerivedBundle, locale: Locale) {
           .filter(Boolean)
           .join(' · '),
         description: loc(ability.description, locale),
+        /** Trained with the Skills advancement (eases tasks using it). */
+        trained: known.trained,
       },
     ]
   })
@@ -99,7 +101,12 @@ export async function buildCharacterSheet(
       }
     }),
     skills: sheetSkills(bundle, locale),
-    abilities: sheetAbilities(bundle, locale),
+    // The printed sheet has one text line per ability, so the label joins it.
+    abilities: sheetAbilities(bundle, locale).map(({ name, meta, description, trained }) => ({
+      name,
+      meta: [meta, trained ? copy.abilityTrained : null].filter(Boolean).join(' · '),
+      description,
+    })),
     inventory: [
       ...(equipment.weapon ? [{ name: loc(equipment.weapon, locale), meta: t.weapon }] : []),
       ...(equipment.clothing ? [{ name: t.clothingItem, meta: t.clothing }] : []),

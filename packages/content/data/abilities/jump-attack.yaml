@@ -32,3 +32,4 @@ sources:
   - type: focus
     id: performs-feats-of-strength
     tier: 6
+attack: true

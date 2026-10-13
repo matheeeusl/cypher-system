@@ -36,7 +36,7 @@ export interface PlayView {
   pools: Array<{ key: PoolKey; name: string; edge: number; max: number }>
   spent: PoolPoints
   skills: Array<{ name: string; level: string }>
-  abilities: Array<{ name: string; meta: string; description: string }>
+  abilities: Array<{ name: string; meta: string; description: string; trained: boolean }>
   skillOptions: Array<{ id: string; name: string; level: SkillLevel | null }>
   advancement: {
     costXp: number
@@ -46,7 +46,7 @@ export interface PlayView {
     /** Already at the highest tier: nothing left to buy. */
     nextIsBlocked: boolean
   }
-  /** Known abilities, for the "train an ability" advancement. */
+  /** Known attack abilities, for the "train an ability" advancement. */
   abilityOptions: Array<{ id: string; name: string; trained: boolean }>
   /** Level-up choices still owed (new tier's Type abilities, a Focus choice). */
   pending: PendingChoice[]
@@ -115,7 +115,8 @@ export async function buildPlayView(
     },
     abilityOptions: derived.knownAbilities.flatMap((known) => {
       const ability = bundle.abilities.find((a) => a.id === known.abilityId)
-      return ability
+      // Only an attack can be trained by the Skills advancement.
+      return ability?.attack
         ? [{ id: ability.id, name: loc(ability.name, locale), trained: known.trained }]
         : []
     }),

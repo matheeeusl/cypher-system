@@ -164,6 +164,8 @@ export interface WizardAbility {
   name: LocalizedString
   description: LocalizedString
   cost: { pool: Stat; amount: number } | null
+  /** An attack ability — the only kind the Skills advancement can train. */
+  attack: boolean
   /** Set on abilities that train the character in skills they pick (Physical Skills, Life Lessons…). */
   skillGrant: {
     count: number
@@ -189,6 +191,7 @@ const ABILITIES_QUERY = `
       name { en ptBR }
       description { en ptBR }
       cost { pool amount }
+      attack
       skillGrant { count mode noncombat allowCustom options alternate { count mode } }
     }
   }

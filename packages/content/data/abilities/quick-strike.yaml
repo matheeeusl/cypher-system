@@ -17,3 +17,4 @@ sources:
   - type: focus
     id: moves-like-a-cat
     tier: 4
+attack: true

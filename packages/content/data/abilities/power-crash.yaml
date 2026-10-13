@@ -38,3 +38,4 @@ sources:
   - type: focus
     id: wields-an-enchanted-weapon
     tier: 2
+attack: true

@@ -598,6 +598,11 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
                     {ability.meta && (
                       <span className="text-text-muted font-mono text-[11px]">{ability.meta}</span>
                     )}
+                    {ability.trained && (
+                      <span className="text-accent font-mono text-[10px] uppercase">
+                        {copy.skills.abilityTrained}
+                      </span>
+                    )}
                   </div>
                   <p className="text-text-muted text-[13px] leading-relaxed">
                     {ability.description}

@@ -20,3 +20,4 @@ sources:
   - type: focus
     id: grows-to-towering-heights
     tier: 4
+attack: true

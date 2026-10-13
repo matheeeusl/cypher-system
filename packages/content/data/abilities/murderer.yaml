@@ -29,3 +29,4 @@ sources:
   - type: focus
     id: slays-monsters
     tier: 6
+attack: true

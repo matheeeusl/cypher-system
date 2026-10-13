@@ -103,6 +103,14 @@ export const AbilitySchema = z.object({
       message: 'skill_grant.alternate.count must differ from count',
     })
     .optional(),
+  // True for abilities that are themselves an attack: they make an attack roll
+  // or inflict damage on a target (Bash, Bolts of Power, Spray…). The Skills
+  // advancement may only train an *attack* ability ("you can choose an ability
+  // that is an attack"), so the app needs to tell them apart; the rulebook
+  // doesn't tag them, so this is curated by hand. Modifiers that only boost
+  // attacks (Fury, Deadly Aim) and effects that merely restrain or summon are
+  // left unflagged.
+  attack: z.boolean().optional(),
   // tier lives per-source, not on the ability itself: the same named
   // ability is sometimes printed under more than one Type/Focus at
   // different tiers (confirmed — e.g. "Surprise Attack" is tier 3 under

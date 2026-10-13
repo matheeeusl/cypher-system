@@ -19,3 +19,4 @@ sources:
   - type: focus
     id: turns-decay-to-growth
     tier: 1
+attack: true

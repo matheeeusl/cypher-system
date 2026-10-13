@@ -25,3 +25,4 @@ sources:
   - type: focus
     id: masters-the-swarm
     tier: 6
+attack: true

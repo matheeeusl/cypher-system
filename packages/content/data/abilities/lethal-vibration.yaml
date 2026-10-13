@@ -23,3 +23,4 @@ sources:
   - type: focus
     id: thunders
     tier: 6
+attack: true

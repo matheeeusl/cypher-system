@@ -138,6 +138,7 @@ export function mapAbility(a: WithVersion<Ability>) {
       tier: s.tier,
       cyberware: s.cyberware ?? false,
     })),
+    attack: a.attack ?? false,
     skillGrant: a.skill_grant
       ? {
           count: a.skill_grant.count,

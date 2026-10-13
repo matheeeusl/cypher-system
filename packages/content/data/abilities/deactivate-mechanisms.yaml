@@ -13,3 +13,4 @@ sources:
   - type: focus
     id: battles-robots
     tier: 6
+attack: true

@@ -15,3 +15,4 @@ sources:
   - type: focus
     id: bears-a-halo-of-fire
     tier: 3
+attack: true

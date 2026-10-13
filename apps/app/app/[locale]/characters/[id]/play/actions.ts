@@ -344,7 +344,9 @@ export async function purchaseAdvancementAction(
           ? isCustomSkill(choice.skillId)
             ? isSkillIdShape(choice.skillId)
             : bundle.skills.some((s) => s.id === choice.skillId)
-          : bundle.derived.knownAbilities.some((a) => a.abilityId === choice.abilityId)
+          : bundle.derived.knownAbilities.some((a) => a.abilityId === choice.abilityId) &&
+            // The Skills advancement trains an ability only if it's an attack.
+            bundle.abilities.some((a) => a.id === choice.abilityId && a.attack)
       if (!exists) return { ok: false, reason: 'invalid' }
       if ('skillId' in choice && isCustomSkill(choice.skillId)) {
         const typed = choice.skillId.toLowerCase().replace(/\s+/g, ' ')

@@ -29,3 +29,4 @@ sources:
   - type: focus
     id: employs-magnetism
     tier: 6
+attack: true

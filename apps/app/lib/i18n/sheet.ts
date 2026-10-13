@@ -12,6 +12,8 @@ export interface SheetCopy {
   xp: string
   fromType: string
   fromFocus: string
+  /** Marks an ability the character trained with the Skills advancement. */
+  abilityTrained: string
   exportPdf: string
   edit: string
   play: string
@@ -39,6 +41,7 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     xp: 'XP',
     fromType: 'Type',
     fromFocus: 'Focus',
+    abilityTrained: 'Trained',
     exportPdf: 'Export as PDF',
     edit: 'Edit',
     play: 'Play',
@@ -65,6 +68,7 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     xp: 'XP',
     fromType: 'Tipo',
     fromFocus: 'Foco',
+    abilityTrained: 'Treinada',
     exportPdf: 'Exportar como PDF',
     edit: 'Editar',
     play: 'Jogar',

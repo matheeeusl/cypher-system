@@ -27,3 +27,4 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 3
+attack: true

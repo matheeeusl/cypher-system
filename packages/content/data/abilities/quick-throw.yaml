@@ -19,3 +19,4 @@ sources:
   - type: focus
     id: throws-with-deadly-accuracy
     tier: 3
+attack: true

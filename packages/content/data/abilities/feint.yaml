@@ -21,3 +21,4 @@ sources:
   - type: type
     id: warrior
     tier: 4
+attack: true

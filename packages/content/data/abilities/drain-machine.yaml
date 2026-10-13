@@ -29,3 +29,4 @@ sources:
   - type: focus
     id: siphons-power
     tier: 1
+attack: true

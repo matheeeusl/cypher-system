@@ -19,3 +19,4 @@ sources:
   - type: focus
     id: is-wanted-by-the-law
     tier: 4
+attack: true

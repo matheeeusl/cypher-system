@@ -13,3 +13,4 @@ sources:
   - type: focus
     id: blazes-with-radiance
     tier: 2
+attack: true

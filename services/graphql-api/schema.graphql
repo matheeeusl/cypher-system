@@ -212,6 +212,9 @@ type Ability {
   cost: AbilityCost
   actionType: ActionType!
   sources: [AbilitySourceRef!]!
+  # An attack (makes an attack roll or inflicts damage) — the only kind of
+  # special ability the Skills advancement can train.
+  attack: Boolean!
   skillGrant: SkillGrant
   contentVersion: String!
 }

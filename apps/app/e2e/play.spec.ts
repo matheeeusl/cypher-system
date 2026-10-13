@@ -205,10 +205,10 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   // Skills and special abilities are separate lists
   await expect(page.getByRole('button', { name: /— ability \(train\)$/ })).toHaveCount(0)
   await page.getByRole('button', { name: 'Train a special ability instead →' }).click()
-  await page
-    .getByRole('button', { name: /— ability \(train\)$/ })
-    .first()
-    .click()
+  // Only attack abilities can be trained: Improved Edge (an enabler) isn't offered
+  await expect(page.getByRole('button', { name: /^Bash — ability \(train\)$/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Improved Edge/ })).toHaveCount(0)
+  await page.getByRole('button', { name: /^Bash — ability \(train\)$/ }).click()
 
   await expect(page.getByText('✓ Advanced to Tier 3 — all four steps purchased.')).toBeVisible()
   await completePicks(page, /Tier 3 — choose your Type abilities/, 3)
@@ -218,6 +218,10 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   await completeSkillPicks(page)
   await settled(page)
   await expect(page.getByText(/— choose/)).toHaveCount(0)
+
+  // The trained ability is marked in the Skills tab
+  await tab(page, 'Skills').click()
+  await expect(page.getByRole('listitem').filter({ hasText: 'Bash' })).toContainText('Trained')
 })
 
 test('advancement: the Skills advancement can train a skill typed by the player', async ({

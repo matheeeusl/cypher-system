@@ -26,3 +26,4 @@ sources:
   - type: focus
     id: hits-the-saloon
     tier: 4
+attack: true

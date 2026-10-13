@@ -13,3 +13,4 @@ sources:
   - type: focus
     id: commands-mental-powers
     tier: 3
+attack: true

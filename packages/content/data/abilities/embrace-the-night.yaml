@@ -17,3 +17,4 @@ sources:
   - type: focus
     id: dances-with-dark-matter
     tier: 6
+attack: true

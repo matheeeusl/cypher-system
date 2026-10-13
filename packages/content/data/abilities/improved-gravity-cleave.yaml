@@ -13,3 +13,4 @@ sources:
   - type: focus
     id: controls-gravity
     tier: 6
+attack: true

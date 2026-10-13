@@ -26,3 +26,4 @@ sources:
   - type: type
     id: solo
     tier: 1
+attack: true

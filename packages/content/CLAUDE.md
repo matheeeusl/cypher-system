@@ -26,6 +26,10 @@ A handful of filled-in cyphers carry a leading YAML comment flagging real caveat
 
 `src/test/loader.test.ts` fails if any `Descriptor.skill_training[].skill_id` or `Type.starting_skills` entry doesn't resolve to a Skill — the loader itself doesn't cross-check ids between categories. New `pt-BR` skill descriptions are still the `"Tradução em breve."` placeholder. The decisions, the per-id outcomes, and the open optional follow-ups are in [`SKILLS-TRACKING.md`](./SKILLS-TRACKING.md).
 
+### Abilities: the `attack` flag
+
+`attack: true` marks the ~90 abilities that are themselves an attack (they make an attack roll or inflict damage: Bash, Bolts of Power, Spray…). The rulebook doesn't tag them, so the list was curated by hand from the action abilities whose text mentions attacks or damage. Buffs that only boost attacks (Fury, Deadly Aim), effects that restrain or summon, and enablers are left unflagged. It exists for the Skills advancement, which can only train an attack ability; if a legitimate attack is missing, add the flag to its yaml.
+
 ### Known gap: no cross-reference mechanism for shared rules terms
 
 Some prose fields mention a rules concept that doesn't have its own entity/page yet — e.g. "the damage track" (`data/cyphers/death-bringer.yaml`'s `effect_text`, and the Warrior's Weapon Break player intrusion in `data/types/warrior.yaml`). There's no glossary/Rules entity category and no link syntax inside `LocalizedString` fields, so these stay plain prose with an inline YAML comment flagging the pending cross-reference. Revisit once apps/docs has a Rules/glossary page to actually link to — don't invent link structure for a single recurring term in the meantime.

@@ -16,3 +16,4 @@ sources:
   - type: focus
     id: needs-no-weapon
     tier: 5
+attack: true

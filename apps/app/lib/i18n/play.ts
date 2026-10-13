@@ -71,7 +71,7 @@ export interface PlayCopy {
     confirm: string
     error: string
   }
-  skills: { skills: string; abilities: string }
+  skills: { skills: string; abilities: string; abilityTrained: string }
   log: {
     xpLog: (total: number) => string
     reasonPlaceholder: string
@@ -210,7 +210,7 @@ const en: PlayCopy = {
     confirm: 'Confirm choices',
     error: 'Could not save these choices. Reload the page and try again.',
   },
-  skills: { skills: 'Skills', abilities: 'Abilities' },
+  skills: { skills: 'Skills', abilities: 'Abilities', abilityTrained: 'Trained' },
   log: {
     xpLog: (total) => `XP Log · ${total} XP`,
     reasonPlaceholder: 'Description (e.g. GM intrusion, milestone)',
@@ -357,7 +357,7 @@ const ptBr: PlayCopy = {
     confirm: 'Confirmar escolhas',
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',
   },
-  skills: { skills: 'Perícias', abilities: 'Habilidades' },
+  skills: { skills: 'Perícias', abilities: 'Habilidades', abilityTrained: 'Treinada' },
   log: {
     xpLog: (total) => `Registro de XP · ${total} XP`,
     reasonPlaceholder: 'Descrição (ex.: intrusão do Mestre, marco da história)',

@@ -26,3 +26,4 @@ sources:
   - type: type
     id: adept
     tier: 1
+attack: true

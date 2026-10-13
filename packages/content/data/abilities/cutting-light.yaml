@@ -18,3 +18,4 @@ sources:
   - type: type
     id: adept
     tier: 2
+attack: true

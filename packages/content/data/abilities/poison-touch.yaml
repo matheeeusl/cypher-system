@@ -16,3 +16,4 @@ sources:
   - type: focus
     id: inks-spells-on-skin
     tier: 1
+attack: true

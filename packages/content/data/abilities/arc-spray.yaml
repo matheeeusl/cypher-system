@@ -21,3 +21,4 @@ sources:
   - type: focus
     id: is-licensed-to-carry
     tier: 5
+attack: true
