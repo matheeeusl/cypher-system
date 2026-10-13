@@ -9,6 +9,8 @@ export interface InventoryRow {
   name: string
   meta: string
   qty: number
+  /** Shown when the row is clicked (a cypher's effect…). Omit for no details. */
+  description?: string | undefined
 }
 
 export interface InventoryLabels {
@@ -43,6 +45,7 @@ export function InventoryList({
 }: InventoryListProps) {
   const [name, setName] = useState('')
   const [meta, setMeta] = useState('')
+  const [openId, setOpenId] = useState<string | null>(null)
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -94,44 +97,63 @@ export function InventoryList({
       )}
 
       <ul className="flex flex-col gap-1.5">
-        {items.map((item) => (
-          <li
-            key={item.id}
-            className="border-border bg-panel flex items-center justify-between gap-3 rounded border px-3.5 py-2"
-          >
-            <div className="min-w-0">
-              <span className="text-text text-[13px]">{item.name}</span>
-              <span className="text-text-muted ml-2 font-mono text-[11px]">{item.meta}</span>
-            </div>
-            <div className="flex shrink-0 items-center gap-2.5">
-              <button
-                type="button"
-                onClick={() => onChangeQty(item.id, -1)}
-                aria-label={labels.decrease}
-                className={qtyButton}
-              >
-                −
-              </button>
-              <span className="w-4.5 text-center font-mono text-[13px]">{item.qty}</span>
-              <button
-                type="button"
-                onClick={() => onChangeQty(item.id, 1)}
-                aria-label={labels.increase}
-                className={qtyButton}
-              >
-                +
-              </button>
-              <button
-                type="button"
-                onClick={() => onRemove(item.id)}
-                aria-label={labels.remove}
-                className="text-text-muted hover:text-warning cursor-pointer px-1 text-sm"
-              >
-                ×
-              </button>
-            </div>
-          </li>
-        ))}
+        {items.map((item) => {
+          const open = openId === item.id && item.description !== undefined
+          return (
+            <li key={item.id} className="border-border bg-panel rounded border">
+              <div className="flex items-center justify-between gap-3 px-3.5 py-2">
+                {item.description !== undefined ? (
+                  <button
+                    type="button"
+                    aria-expanded={open}
+                    onClick={() => setOpenId(open ? null : item.id)}
+                    className="min-w-0 flex-1 cursor-pointer text-left hover:opacity-80"
+                  >
+                    <span className="text-text text-[13px]">{item.name}</span>
+                    <span className="text-text-muted ml-2 font-mono text-[11px]">{item.meta}</span>
+                  </button>
+                ) : (
+                  <div className="min-w-0">
+                    <span className="text-text text-[13px]">{item.name}</span>
+                    <span className="text-text-muted ml-2 font-mono text-[11px]">{item.meta}</span>
+                  </div>
+                )}
+                <div className="flex shrink-0 items-center gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => onChangeQty(item.id, -1)}
+                    aria-label={labels.decrease}
+                    className={qtyButton}
+                  >
+                    −
+                  </button>
+                  <span className="w-4.5 text-center font-mono text-[13px]">{item.qty}</span>
+                  <button
+                    type="button"
+                    onClick={() => onChangeQty(item.id, 1)}
+                    aria-label={labels.increase}
+                    className={qtyButton}
+                  >
+                    +
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onRemove(item.id)}
+                    aria-label={labels.remove}
+                    className="text-text-muted hover:text-warning cursor-pointer px-1 text-sm"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
+              {open && (
+                <p className="border-border text-text-muted border-t px-3.5 py-2.5 text-[13px] leading-relaxed whitespace-pre-line">
+                  {item.description}
+                </p>
+              )}
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

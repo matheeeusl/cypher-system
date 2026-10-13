@@ -98,6 +98,8 @@ export interface PlayCopy {
   inventory: {
     title: string
     cypherCount: (count: number, limit: number) => string
+    /** Shown when an item the player typed in is opened. */
+    customItem: string
     overLimit: (limit: number) => string
     browseHint: string
     browse: string
@@ -244,6 +246,7 @@ const en: PlayCopy = {
   },
   inventory: {
     title: 'Carried Cyphers & Equipment',
+    customItem: 'An item you added yourself.',
     cypherCount: (count, limit) => `Cyphers ${count} / ${limit}`,
     overLimit: (limit) =>
       `You carry more cyphers than your limit of ${limit}. The GM may let you exceed it at some cost.`,
@@ -399,6 +402,7 @@ const ptBr: PlayCopy = {
   },
   inventory: {
     title: 'Cifras & Equipamentos',
+    customItem: 'Um item que você mesmo adicionou.',
     cypherCount: (count, limit) => `Cifras ${count} / ${limit}`,
     overLimit: (limit) =>
       `Você porta mais cifras que o seu limite de ${limit}. O Mestre pode permitir excedê-lo a algum custo.`,

@@ -278,6 +278,12 @@ test('inventory: items, quantities, the cypher catalog and the cypher limit warn
   await tab(page, 'Inventory').click()
   await expect(page.getByText('Cyphers 3 / 2')).toBeVisible()
   await expect(page.getByRole('listitem').filter({ hasText: 'Rope' })).toBeVisible()
+
+  // Clicking a carried cypher opens its effect; an item you typed says so
+  await page.getByRole('button', { name: /^Adhesion/ }).click()
+  await expect(page.getByText(/Allows for automatic climbing of any surface/)).toBeVisible()
+  await page.getByRole('button', { name: /^Rope/ }).click()
+  await expect(page.getByText('An item you added yourself.')).toBeVisible()
 })
 
 test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ page }) => {

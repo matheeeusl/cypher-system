@@ -9,6 +9,11 @@ export interface CatalogCypher {
   category: CypherCategory
   levelRange: string
   effectText: LocalizedString
+  /** A table to roll on after the main effect (not every cypher has one). */
+  effectTable: {
+    label: LocalizedString
+    entries: Array<{ range: string; text: LocalizedString }>
+  } | null
 }
 
 const CYPHERS_QUERY = `
@@ -19,6 +24,7 @@ const CYPHERS_QUERY = `
       category
       levelRange
       effectText { en ptBR }
+      effectTable { label { en ptBR } entries { range text { en ptBR } } }
     }
   }
 `
@@ -36,6 +42,7 @@ const CYPHER_QUERY = `
       category
       levelRange
       effectText { en ptBR }
+      effectTable { label { en ptBR } entries { range text { en ptBR } } }
     }
   }
 `

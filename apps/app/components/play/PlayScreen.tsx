@@ -236,6 +236,29 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     }
   }
 
+  // The catalog also supplies the rules text of cyphers already carried, so it
+  // is loaded as soon as the inventory is looked at and holds a cypher.
+  const hasCypher = inventory.some((it) => it.kind === 'cypher')
+  useEffect(() => {
+    if (tab === 'inventory' && hasCypher && catalog === null && !catalogFailed) {
+      fetchCyphers().then(setCatalog, () => setCatalogFailed(true))
+    }
+  }, [tab, hasCypher, catalog, catalogFailed])
+
+  /** What a carried item shows when clicked: a cypher's effect (and table), or a note for the player's own. */
+  function itemDescription(item: (typeof inventory)[number]): string | undefined {
+    if (item.kind === 'item') return copy.inventory.customItem
+    const c = catalog?.find((x) => x.id === item.cypherId)
+    if (!c) return undefined
+    const table = c.effectTable
+      ? [
+          loc(c.effectTable.label, locale),
+          ...c.effectTable.entries.map((e) => `${e.range} — ${loc(e.text, locale)}`),
+        ].join('\n')
+      : null
+    return [loc(c.effectText, locale), table].filter(Boolean).join('\n\n')
+  }
+
   const pickerItems: CypherPickerItem[] | null = useMemo(
     () =>
       catalog
@@ -644,6 +667,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
           items={inventory.map((item) => ({
             id: item.id,
             qty: item.qty,
+            description: itemDescription(item),
             ...describeItem(item, locale),
           }))}
           labels={{
