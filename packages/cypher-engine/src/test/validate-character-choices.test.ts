@@ -256,3 +256,18 @@ describe('validateCharacterChoices', () => {
     )
   })
 })
+
+describe('validateCharacterChoices issues', () => {
+  it('reports a machine-readable code and params alongside every English error', () => {
+    const result = validateCharacterChoices(
+      { ...validChoices, pool_point_allocation: { might: 3, speed: 3, intellect: 3 } },
+      content,
+    )
+    if (result.valid) throw new Error('expected invalid')
+    expect(result.issues).toHaveLength(result.errors.length)
+    expect(result.issues).toContainEqual({
+      code: 'POOL_ALLOCATION_SUM',
+      params: { label: 'pool_point_allocation', expected: 6, actual: 9 },
+    })
+  })
+})

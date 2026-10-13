@@ -18,6 +18,10 @@ This package does not read files or perform I/O. Functions take already-parsed d
 
 Input/output types for `character.ts` type-import from `@cypher/content` (`import type { ... }`) — erased at compile time, so this still holds; `@cypher/content` is a devDependency here, not a runtime one.
 
+## Error codes
+
+Every rule violation `validateCharacterChoices` can report is a `CharacterRuleError` (`src/errors.ts`) with a stable `code` and `params`; its `message` stays the English sentence. `validateCharacterChoices` returns both `errors: string[]` and `issues: ValidationIssue[]` (same order and length), and graphql-api exposes `issues` so UIs can localize. When you add a new rule error, add a `RuleErrorCode`, throw `CharacterRuleError` with params, and add the translation in `apps/app/lib/i18n/wizard.ts`.
+
 ## Known gaps
 
 - **Type ability resolution beyond tier 1** isn't modeled in `character.ts`. The "choose N" count for Type abilities varies by both tier and Type (e.g. Warrior is 4,2,3,2,3,2 across tiers 1-6; Adept is 4,1,2,1,2,1). The data now exists — `TypeSchema.tier_choose_counts` (keyed by tier like `tier_abilities`) is populated for all 4 Types, and tiers 2-6 content is there too — but `resolveTypeAbilities` still only resolves the tier-1 "choose four" pick, with its own `REQUIRED_TIER_1_COUNT` constant rather than reading `tier_choose_counts['1']`. Extending it means taking the per-tier picks in `CharacterChoices` and validating each against its tier's count. From tier 2 up, a pick may come from that tier _or any lower one_ (rulebook, "Type Abilities"), so availability at tier N is the union of `tier_abilities` for tiers 1..N.

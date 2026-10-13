@@ -1,6 +1,7 @@
 import type { Descriptor } from '@cypher/content'
 
 import type { AdvancementPurchase, KnownAbility, SkillLevel } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const ERRORS = {
   ALREADY_MAXED:
@@ -31,10 +32,14 @@ export function applyDescriptorSkills(
     0,
   )
   if (descriptorSkillChoices.length !== requiredChoiceCount) {
-    throw new Error(ERRORS.WRONG_CHOICE_COUNT(requiredChoiceCount))
+    throw new CharacterRuleError(
+      'SKILL_CHOICE_COUNT',
+      ERRORS.WRONG_CHOICE_COUNT(requiredChoiceCount),
+      { required: requiredChoiceCount },
+    )
   }
   if (new Set(descriptorSkillChoices).size !== descriptorSkillChoices.length) {
-    throw new Error(ERRORS.DUPLICATE_CHOICE)
+    throw new CharacterRuleError('SKILL_CHOICE_DUPLICATE', ERRORS.DUPLICATE_CHOICE)
   }
 
   for (const entry of descriptor.skill_training) {
@@ -65,7 +70,7 @@ export function applySkillAdvancementPurchase(currentLevel: SkillLevel | undefin
     case 'trained':
       return 'specialized'
     case 'specialized':
-      throw new Error(ERRORS.ALREADY_MAXED)
+      throw new CharacterRuleError('SKILL_ALREADY_MAXED', ERRORS.ALREADY_MAXED)
   }
 }
 
@@ -84,7 +89,10 @@ export function applyAbilityTrainingPurchase(
 
   const targetId = purchase.target.ability_id
   const known = knownAbilities.some((ability) => ability.ability_id === targetId)
-  if (!known) throw new Error(ERRORS.ABILITY_NOT_KNOWN(targetId))
+  if (!known)
+    throw new CharacterRuleError('ABILITY_TRAINING_UNKNOWN', ERRORS.ABILITY_NOT_KNOWN(targetId), {
+      abilityId: targetId,
+    })
 
   return knownAbilities.map((ability) =>
     ability.ability_id === targetId ? { ...ability, trained: true } : ability,

@@ -1,6 +1,7 @@
 import type { Type } from '@cypher/content'
 
 import type { AdvancementPurchase, Stat } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const STATS: Stat[] = ['might', 'speed', 'intellect']
 
@@ -21,12 +22,16 @@ function validateAllocation(
 ): void {
   for (const stat of STATS) {
     if (!Number.isInteger(allocation[stat]) || allocation[stat] < 0) {
-      throw new Error(ERRORS.ALLOCATION_NEGATIVE)
+      throw new CharacterRuleError('POOL_ALLOCATION_NEGATIVE', ERRORS.ALLOCATION_NEGATIVE)
     }
   }
   const sum = sumStats(allocation)
   if (sum !== expectedSum) {
-    throw new Error(ERRORS.ALLOCATION_SUM(label, expectedSum, sum))
+    throw new CharacterRuleError(
+      'POOL_ALLOCATION_SUM',
+      ERRORS.ALLOCATION_SUM(label, expectedSum, sum),
+      { label, expected: expectedSum, actual: sum },
+    )
   }
 }
 

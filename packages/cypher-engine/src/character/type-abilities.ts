@@ -1,6 +1,7 @@
 import type { Type } from '@cypher/content'
 
 import type { KnownAbility } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const REQUIRED_TIER_1_COUNT = 4
 
@@ -24,15 +25,20 @@ export function resolveTypeAbilities(
   tier1AbilityIds: string[],
 ): KnownAbility[] {
   if (tier1AbilityIds.length !== REQUIRED_TIER_1_COUNT) {
-    throw new Error(ERRORS.WRONG_COUNT)
+    throw new CharacterRuleError('TYPE_ABILITY_COUNT', ERRORS.WRONG_COUNT, {
+      required: REQUIRED_TIER_1_COUNT,
+    })
   }
   if (new Set(tier1AbilityIds).size !== tier1AbilityIds.length) {
-    throw new Error(ERRORS.DUPLICATE)
+    throw new CharacterRuleError('TYPE_ABILITY_DUPLICATE', ERRORS.DUPLICATE)
   }
 
   const available = new Set(type.tier_abilities['1'] ?? [])
   for (const id of tier1AbilityIds) {
-    if (!available.has(id)) throw new Error(ERRORS.NOT_AVAILABLE(id))
+    if (!available.has(id))
+      throw new CharacterRuleError('TYPE_ABILITY_UNAVAILABLE', ERRORS.NOT_AVAILABLE(id), {
+        abilityId: id,
+      })
   }
 
   const source = { kind: 'type', type_id: type.id } as const

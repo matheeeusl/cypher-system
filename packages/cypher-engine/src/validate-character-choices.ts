@@ -11,9 +11,13 @@ import { deriveTier } from './character/tier.js'
 import { resolveTypeAbilities } from './character/type-abilities.js'
 import type { KnownAbility } from './character/types.js'
 import type { CharacterChoices, CharacterContent, DerivedCharacter } from './character.js'
+import { CharacterRuleError, type ValidationIssue } from './errors.js'
 
 export type ValidationResult =
-  { valid: true; character: DerivedCharacter } | { valid: false; errors: string[] }
+  | { valid: true; character: DerivedCharacter }
+  // `errors` are English sentences; `issues` is the same list as code + params
+  // (same order, same length) for callers that localize.
+  | { valid: false; errors: string[]; issues: ValidationIssue[] }
 
 /**
  * Validates a full set of character choices, collecting every problem
@@ -39,12 +43,22 @@ export function validateCharacterChoices(
 ): ValidationResult {
   const { type, descriptor, focus } = content
   const errors: string[] = []
+  const issues: ValidationIssue[] = []
+
+  function report(message: string, issue: ValidationIssue) {
+    errors.push(message)
+    issues.push(issue)
+  }
 
   function attempt<T>(fn: () => T): T | undefined {
     try {
       return fn()
     } catch (err) {
-      errors.push(err instanceof Error ? err.message : String(err))
+      if (err instanceof CharacterRuleError) {
+        report(err.message, { code: err.code, params: err.params })
+      } else {
+        report(err instanceof Error ? err.message : String(err), { code: 'UNKNOWN', params: {} })
+      }
       return undefined
     }
   }
@@ -64,7 +78,10 @@ export function validateCharacterChoices(
 
   let focusAbilities: KnownAbility[] | undefined
   if (tier === undefined) {
-    errors.push('Focus abilities cannot be validated: tier must be resolved first')
+    report('Focus abilities cannot be validated: tier must be resolved first', {
+      code: 'FOCUS_BLOCKED_BY_TIER',
+      params: {},
+    })
   } else {
     focusAbilities = attempt(() =>
       resolveFocusAbilities(focus, tier, choices.focus_choice_selections),
@@ -78,8 +95,12 @@ export function validateCharacterChoices(
 
   let knownAbilities: KnownAbility[] | undefined
   if (typeAbilities === undefined || focusAbilities === undefined) {
-    errors.push(
+    report(
       'Ability-training purchases cannot be validated: known abilities must be resolved first',
+      {
+        code: 'ABILITY_TRAINING_BLOCKED',
+        params: {},
+      },
     )
   } else {
     knownAbilities = [...typeAbilities, ...focusAbilities]
@@ -111,7 +132,7 @@ export function validateCharacterChoices(
     // already covers it — don't attempt (and don't double-report).
   }
 
-  if (errors.length > 0) return { valid: false, errors }
+  if (errors.length > 0) return { valid: false, errors, issues }
 
   // Every piece above succeeded, so none of these are undefined — the
   // non-null assertions here are safe given errors.length === 0.

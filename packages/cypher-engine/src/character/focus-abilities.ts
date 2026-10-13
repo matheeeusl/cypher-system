@@ -1,6 +1,7 @@
 import type { Focus } from '@cypher/content'
 
 import type { KnownAbility } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const ERRORS = {
   MISSING_SELECTION: (tier: string) =>
@@ -33,8 +34,14 @@ export function resolveFocusAbilities(
       }
 
       const selection = choiceSelections[tierKey]
-      if (selection === undefined) throw new Error(ERRORS.MISSING_SELECTION(tierKey))
-      if (!entry.options.includes(selection)) throw new Error(ERRORS.INVALID_SELECTION(tierKey))
+      if (selection === undefined)
+        throw new CharacterRuleError('FOCUS_SELECTION_MISSING', ERRORS.MISSING_SELECTION(tierKey), {
+          tier: tierKey,
+        })
+      if (!entry.options.includes(selection))
+        throw new CharacterRuleError('FOCUS_SELECTION_INVALID', ERRORS.INVALID_SELECTION(tierKey), {
+          tier: tierKey,
+        })
 
       abilities.push({ ability_id: selection, source, trained: false })
     }

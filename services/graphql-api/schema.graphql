@@ -350,8 +350,20 @@ type DerivedCharacterPayload {
 type ValidCharacterResult {
   character: DerivedCharacterPayload!
 }
+# One way the choices are invalid, as a stable code + parameters so clients can
+# localize it. `value` is always a string (numbers are stringified).
+type IssueParam {
+  key: String!
+  value: String!
+}
+type ValidationIssue {
+  code: String!
+  params: [IssueParam!]!
+}
 type InvalidCharacterResult {
+  # English sentences, same order/length as `issues`.
   errors: [String!]!
+  issues: [ValidationIssue!]!
 }
 union ValidationResultPayload = ValidCharacterResult | InvalidCharacterResult
 

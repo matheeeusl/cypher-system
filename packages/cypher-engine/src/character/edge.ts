@@ -1,6 +1,7 @@
 import type { Type } from '@cypher/content'
 
 import type { AdvancementPurchase, Stat } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const ERRORS = {
   CHOICE_REQUIRED:
@@ -21,12 +22,15 @@ export function resolveStartingEdge(
   const { stat_choices, amount } = type.starting_edge
 
   if (stat_choices.length > 1) {
-    if (choice === undefined) throw new Error(ERRORS.CHOICE_REQUIRED)
-    if (!stat_choices.includes(choice)) throw new Error(ERRORS.CHOICE_INVALID)
+    if (choice === undefined)
+      throw new CharacterRuleError('STARTING_EDGE_REQUIRED', ERRORS.CHOICE_REQUIRED)
+    if (!stat_choices.includes(choice))
+      throw new CharacterRuleError('STARTING_EDGE_INVALID', ERRORS.CHOICE_INVALID)
     return { stat: choice, amount }
   }
 
-  if (choice !== undefined) throw new Error(ERRORS.CHOICE_NOT_ALLOWED)
+  if (choice !== undefined)
+    throw new CharacterRuleError('STARTING_EDGE_NOT_ALLOWED', ERRORS.CHOICE_NOT_ALLOWED)
   // stat_choices is guaranteed non-empty by TypeSchema's .min(1).
   return { stat: stat_choices[0]!, amount }
 }

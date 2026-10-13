@@ -103,6 +103,7 @@ const VALIDATE_QUERY = `
       }
       ... on InvalidCharacterResult {
         errors
+        issues { code params { key value } }
       }
     }
   }
@@ -124,6 +125,7 @@ interface ValidateQueryData {
       skills: Array<{ skillId: string; level: string }>
     }
     errors?: string[]
+    issues?: Array<{ code: string; params: Array<{ key: string; value: string }> }>
   }
 }
 
@@ -194,6 +196,14 @@ describe('validateCharacterChoices (invalid build)', () => {
     const payload = result.data.validateCharacterChoices
     expect(payload.__typename).toBe('InvalidCharacterResult')
     expect(payload.errors?.some((e) => /sum to exactly 6/.test(e))).toBe(true)
+    expect(payload.issues).toContainEqual({
+      code: 'POOL_ALLOCATION_SUM',
+      params: [
+        { key: 'label', value: 'pool_point_allocation' },
+        { key: 'expected', value: '6' },
+        { key: 'actual', value: '5' },
+      ],
+    })
   })
 })
 

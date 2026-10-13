@@ -37,5 +37,12 @@ export function mapValidationResult(result: ValidationResult) {
       character: mapDerivedCharacter(result.character),
     }
   }
-  return { __typename: 'InvalidCharacterResult' as const, errors: result.errors }
+  return {
+    __typename: 'InvalidCharacterResult' as const,
+    errors: result.errors,
+    issues: result.issues.map(({ code, params }) => ({
+      code,
+      params: Object.entries(params).map(([key, value]) => ({ key, value: String(value) })),
+    })),
+  }
 }

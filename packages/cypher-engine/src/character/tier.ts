@@ -1,5 +1,6 @@
 import { ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement.js'
 import type { AdvancementPurchase } from './types.js'
+import { CharacterRuleError } from '../errors.js'
 
 const ERRORS = {
   SUBSTITUTION_NOT_SUPPORTED: (option: string) =>
@@ -24,7 +25,11 @@ const ERRORS = {
 export function deriveTier(purchases: AdvancementPurchase[]): number {
   for (const purchase of purchases) {
     if (!STANDARD_ADVANCEMENTS.some((advancement) => advancement.id === purchase.option)) {
-      throw new Error(ERRORS.SUBSTITUTION_NOT_SUPPORTED(purchase.option))
+      throw new CharacterRuleError(
+        'TIER_SUBSTITUTION_UNSUPPORTED',
+        ERRORS.SUBSTITUTION_NOT_SUPPORTED(purchase.option),
+        { option: purchase.option },
+      )
     }
   }
 
@@ -42,17 +47,26 @@ export function deriveTier(purchases: AdvancementPurchase[]): number {
   let tier = 1
   for (let candidateTier = 2; candidateTier <= highestTierWithPurchases; candidateTier++) {
     const tierPurchases = purchasesByTier.get(candidateTier)
-    if (!tierPurchases) throw new Error(ERRORS.GAP(candidateTier))
+    if (!tierPurchases)
+      throw new CharacterRuleError('TIER_GAP', ERRORS.GAP(candidateTier), { tier: candidateTier })
 
     const optionIds = tierPurchases.map((purchase) => purchase.option)
     if (new Set(optionIds).size !== optionIds.length) {
-      throw new Error(ERRORS.DUPLICATE_OPTION(candidateTier))
+      throw new CharacterRuleError(
+        'TIER_DUPLICATE_OPTION',
+        ERRORS.DUPLICATE_OPTION(candidateTier),
+        {
+          tier: candidateTier,
+        },
+      )
     }
     // No duplicates + this many entries, drawn from exactly 4 possible
     // standard option ids, means all 4 are present only when the count
     // matches — otherwise the tier is incomplete.
     if (optionIds.length !== ADVANCEMENTS_PER_TIER) {
-      throw new Error(ERRORS.INCOMPLETE_TIER(candidateTier))
+      throw new CharacterRuleError('TIER_INCOMPLETE', ERRORS.INCOMPLETE_TIER(candidateTier), {
+        tier: candidateTier,
+      })
     }
 
     tier = candidateTier
