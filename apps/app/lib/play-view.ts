@@ -1,4 +1,5 @@
 import { atMaxTier, boughtAtTier } from '@/lib/advancement'
+import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import { sheetAbilities, sheetSkills } from '@/lib/character-sheet'
 import type { DerivedBundle } from '@/lib/character-derived'
 import type { SavedCharacter } from '@/lib/characters'
@@ -94,9 +95,17 @@ export async function buildPlayView(
     spent: play.spent,
     skills: sheetSkills(bundle, locale),
     abilities: sheetAbilities(bundle, locale),
-    skillOptions: bundle.skills
-      .map((s) => ({ id: s.id, name: loc(s.name, locale), level: levelBySkill.get(s.id) ?? null }))
-      .sort((a, b) => a.name.localeCompare(b.name, locale)),
+    // The catalog, plus the skills the player typed for this character.
+    skillOptions: [
+      ...bundle.skills.map((s) => ({
+        id: s.id,
+        name: loc(s.name, locale),
+        level: levelBySkill.get(s.id) ?? null,
+      })),
+      ...derived.skills
+        .filter((s) => isCustomSkill(s.skillId))
+        .map((s) => ({ id: s.skillId, name: customSkillText(s.skillId), level: s.level })),
+    ].sort((a, b) => a.name.localeCompare(b.name, locale)),
     advancement: {
       costXp: rules.costXp,
       perTier: rules.perTier,

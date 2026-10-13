@@ -43,7 +43,9 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     !isNullableString(r.descriptorId) ||
     !isNullableString(r.focusId) ||
     !(edge === null || edge === 'MIGHT' || edge === 'SPEED' || edge === 'INTELLECT') ||
-    !isStringArray(r.descriptorSkillChoices) ||
+    !Array.isArray(r.descriptorSkillChoices) ||
+    r.descriptorSkillChoices.length > 10 ||
+    !r.descriptorSkillChoices.every(isSkillIdShape) ||
     !isStringArray(r.tier1TypeAbilityIds) ||
     !Array.isArray(r.focusChoiceSelections) ||
     !r.focusChoiceSelections.every((a) => Array.isArray(a) && a.every(isCount)) ||

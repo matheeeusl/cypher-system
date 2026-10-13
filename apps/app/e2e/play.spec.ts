@@ -217,6 +217,26 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   await expect(page.getByText(/— choose/)).toHaveCount(0)
 })
 
+test('advancement: the Skills advancement can train a skill typed by the player', async ({
+  page,
+}) => {
+  await page.goto(playUrl)
+  await addXp(page, 4, 'Typed skill')
+  await tab(page, 'Status').click()
+
+  await page
+    .getByRole('listitem')
+    .filter({ hasText: 'Skills —' })
+    .getByRole('button', { name: 'Purchase' })
+    .click()
+  await page.getByPlaceholder(/Search skills/).fill('Falconry')
+  await page.getByRole('button', { name: /Train “Falconry” as a new skill/ }).click()
+  await settled(page)
+
+  await tab(page, 'Skills').click()
+  await expect(page.getByText('Falconry', { exact: true })).toBeVisible()
+})
+
 test('inventory: items, quantities, the cypher catalog and the cypher limit warning', async ({
   page,
 }) => {

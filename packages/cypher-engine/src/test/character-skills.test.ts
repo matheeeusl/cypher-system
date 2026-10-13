@@ -53,6 +53,29 @@ describe('applyDescriptorSkills', () => {
   })
 })
 
+describe('applyDescriptorSkills with typed skills', () => {
+  const descriptor = { skill_training: [{ skill_id: null, choice_count: 2 }] }
+
+  it('accepts a typed skill next to a catalog one', () => {
+    expect(applyDescriptorSkills(descriptor, ['custom:Chess', 'climbing'])).toEqual({
+      'custom:Chess': { level: 'trained' },
+      climbing: { level: 'trained' },
+    })
+  })
+
+  it('treats typed skills that differ only by case or spacing as the same', () => {
+    expect(() => applyDescriptorSkills(descriptor, ['custom:Chess', 'custom: chess '])).toThrow(
+      /duplicate/,
+    )
+  })
+
+  it('refuses an empty typed skill', () => {
+    expect(() => applyDescriptorSkills(descriptor, ['custom:  ', 'climbing'])).toThrow(
+      /not a usable typed skill/,
+    )
+  })
+})
+
 describe('applySkillAdvancementPurchase', () => {
   it('trains a skill that has never been touched (defaults to practiced)', () => {
     expect(applySkillAdvancementPurchase(undefined)).toBe('trained')

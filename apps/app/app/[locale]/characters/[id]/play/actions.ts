@@ -33,7 +33,7 @@ import {
 } from '@/lib/play'
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
-import { isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
+import { customSkillText, isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
 import { withPick, withSkillPick } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
@@ -310,16 +310,17 @@ export async function purchaseAdvancementAction(
 ): Promise<PurchaseResult> {
   const uid = await userId()
   if (!uid) return { ok: false, reason: 'unauthorized' }
-  const choice = parseChoice(rawChoice)
+  const parsed = parseChoice(rawChoice)
   if (
     typeof characterId !== 'string' ||
     !UUID.test(characterId) ||
-    !choice ||
+    !parsed ||
     typeof locale !== 'string' ||
     !isLocale(locale)
   ) {
     return { ok: false, reason: 'invalid' }
   }
+  const choice = parsed
 
   try {
     const character = await getCharacter(uid, characterId)
@@ -334,15 +335,32 @@ export async function purchaseAdvancementAction(
     const bought = boughtAtTier(character.advancement, target)
     if (bought.has(choice.key)) return { ok: false, reason: 'invalid' }
     if (atMaxTier(tier, rules.maxTier)) return { ok: false, reason: 'capped' }
+    let skillIdOverride: string | undefined
     if (choice.key === 'skills') {
+      // A catalog skill, or one the player types (new, or one this character
+      // already has, in which case its existing entry is the one raised).
       const exists =
         'skillId' in choice
-          ? bundle.skills.some((s) => s.id === choice.skillId)
+          ? isCustomSkill(choice.skillId)
+            ? isSkillIdShape(choice.skillId)
+            : bundle.skills.some((s) => s.id === choice.skillId)
           : bundle.derived.knownAbilities.some((a) => a.abilityId === choice.abilityId)
       if (!exists) return { ok: false, reason: 'invalid' }
+      if ('skillId' in choice && isCustomSkill(choice.skillId)) {
+        const typed = choice.skillId.toLowerCase().replace(/\s+/g, ' ')
+        const have = bundle.derived.skills.find(
+          (s) => isCustomSkill(s.skillId) && s.skillId.toLowerCase().replace(/\s+/g, ' ') === typed,
+        )
+        if (have) skillIdOverride = have.skillId
+      }
     }
 
-    const next = [...character.advancement, toPurchase(choice, target)]
+    // A typed skill matches the character's existing entry, ignoring case.
+    const effective =
+      skillIdOverride !== undefined && choice.key === 'skills'
+        ? { ...choice, skillId: skillIdOverride }
+        : choice
+    const next = [...character.advancement, toPurchase(effective, target)]
     const input = buildCharacterChoicesInput(
       character.choices,
       {
@@ -539,7 +557,11 @@ function advancementReason(
     case 'skills': {
       if ('skillId' in choice) {
         const skill = bundle.skills.find((s) => s.id === choice.skillId)
-        detail = skill ? loc(skill.name, locale) : choice.skillId
+        detail = skill
+          ? loc(skill.name, locale)
+          : isCustomSkill(choice.skillId)
+            ? customSkillText(choice.skillId)
+            : choice.skillId
       } else {
         const ability = bundle.abilities.find((a) => a.id === choice.abilityId)
         detail = ability ? loc(ability.name, locale) : choice.abilityId

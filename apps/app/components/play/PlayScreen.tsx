@@ -382,6 +382,15 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     ) : picker === 'skills' ? (
       <ChipPicker
         searchPlaceholder={copy.advancement.skillSearch}
+        // Typing a name that isn't listed offers it as a new skill: the
+        // Skills advancement can train any skill, not just the catalog's.
+        extraOption={(query) => {
+          const id = toCustomSkill(query)
+          if (id === null) return null
+          const text = customSkillText(id).toLowerCase()
+          const listed = view.skillOptions.some((s) => s.name.toLowerCase() === text)
+          return listed ? null : { id, label: copy.advancement.skillNew(customSkillText(id)) }
+        }}
         options={[
           ...view.skillOptions.map((s) => {
             const from = s.level ?? 'PRACTICED'

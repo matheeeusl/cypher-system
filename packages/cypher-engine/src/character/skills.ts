@@ -2,6 +2,11 @@ import type { Descriptor } from '@cypher/content'
 
 import type { AdvancementPurchase, KnownAbility, SkillLevel } from './types.js'
 import { CharacterRuleError } from '../errors.js'
+import {
+  CUSTOM_SKILL_MAX_LENGTH,
+  CUSTOM_SKILL_PREFIX,
+  customSkillText,
+} from './ability-skill-grants.js'
 
 const ERRORS = {
   ALREADY_MAXED:
@@ -11,6 +16,8 @@ const ERRORS = {
   WRONG_CHOICE_COUNT: (required: number) =>
     `Exactly ${required} descriptor_skill_choices must be chosen, to match the Descriptor's skill_training choice_count entries`,
   DUPLICATE_CHOICE: 'descriptor_skill_choices contains a duplicate',
+  INVALID_CUSTOM: (id: string) =>
+    `"${id}" is not a usable typed skill: it needs 1 to ${CUSTOM_SKILL_MAX_LENGTH} characters after "${CUSTOM_SKILL_PREFIX}"`,
 }
 
 /**
@@ -38,7 +45,22 @@ export function applyDescriptorSkills(
       { required: requiredChoiceCount },
     )
   }
-  if (new Set(descriptorSkillChoices).size !== descriptorSkillChoices.length) {
+  // A typed skill ("custom:Chess") is the player's own; only its shape is checked.
+  for (const id of descriptorSkillChoices) {
+    if (!id.startsWith(CUSTOM_SKILL_PREFIX)) continue
+    const text = customSkillText(id)
+    if (text.length === 0 || text.length > CUSTOM_SKILL_MAX_LENGTH) {
+      throw new CharacterRuleError('SKILL_CHOICE_INVALID', ERRORS.INVALID_CUSTOM(id), {
+        skillId: id,
+      })
+    }
+  }
+  // Typed skills compare ignoring case and spacing, like in ability picks.
+  const sameSkill = (id: string) =>
+    id.startsWith(CUSTOM_SKILL_PREFIX)
+      ? CUSTOM_SKILL_PREFIX + customSkillText(id).toLowerCase()
+      : id
+  if (new Set(descriptorSkillChoices.map(sameSkill)).size !== descriptorSkillChoices.length) {
     throw new CharacterRuleError('SKILL_CHOICE_DUPLICATE', ERRORS.DUPLICATE_CHOICE)
   }
 

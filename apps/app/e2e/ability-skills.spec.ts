@@ -129,3 +129,52 @@ test('a typed skill is accepted for an ability that allows one', async ({ page }
   await page.getByRole('dialog').getByRole('button', { name: 'Delete' }).click()
   await expect(page.getByText('No characters yet.')).toBeVisible()
 })
+
+// The Descriptor's "N skills of your choice": one of them can be typed.
+test('a Descriptor skill choice can be a typed skill', async ({ page }) => {
+  await page.goto('/en/characters/new')
+
+  await page.getByRole('button', { name: /Warrior/ }).click()
+  await page.getByRole('button', { name: /Might \+1/ }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  await page.getByPlaceholder(/Search \d+ descriptors…/).fill('Calm')
+  await page.getByRole('button', { name: /^Calm/ }).first().click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  await page.getByPlaceholder(/Search \d+ foci…/).fill('Bears a Halo of Fire')
+  await page.getByRole('button', { name: 'Bears a Halo of Fire' }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  const plusButtons = page.locator('button:has-text("+")')
+  for (let i = 0; i < 3; i++) for (let n = 0; n < 2; n++) await plusButtons.nth(i).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  // Calm: four skills of your choice — three from the list, one typed
+  await expect(page.getByRole('heading', { name: 'Choose Trained Skills' })).toBeVisible()
+  for (const name of ['Climbing', 'Jumping', 'Running']) {
+    await page.getByRole('button', { name, exact: true }).click()
+  }
+  await page.getByPlaceholder(/type your own/).fill('Chess')
+  await page.getByRole('button', { name: 'Add', exact: true }).click()
+  await expect(page.getByText('4 / 4')).toBeVisible()
+  await expect(page.getByRole('button', { name: /Chess/ })).toBeVisible()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  const abilityButtons = page.locator('div.flex.max-h-\\[340px\\] button')
+  await expect(abilityButtons.first()).toBeVisible()
+  for (let i = 0; i < 4; i++) await abilityButtons.nth(i).click()
+  await page.getByRole('button', { name: 'Next →' }).click() // equipment
+  await page.getByRole('button', { name: 'Next →' }).click() // background
+  await page.getByPlaceholder('e.g. Kessa Verne').fill('Chess Hero')
+  await page.getByRole('button', { name: 'Next →' }).click()
+  await page.getByRole('button', { name: 'Save Character' }).click()
+
+  await expect(page.getByRole('heading', { name: 'Chess Hero' })).toBeVisible()
+  await expect(page.getByText('Chess', { exact: true })).toBeVisible()
+
+  await page.getByRole('link', { name: '← My Characters' }).click()
+  await page.getByRole('button', { name: 'Delete' }).click()
+  await page.getByRole('dialog').getByRole('button', { name: 'Delete' }).click()
+  await expect(page.getByText('No characters yet.')).toBeVisible()
+})

@@ -20,6 +20,11 @@ interface ChipPickerProps {
   cancelLabel?: string
   /** When set, shows a filter box above the chips and filters by label. */
   searchPlaceholder?: string
+  /**
+   * An extra choice built from what's typed in the filter box (e.g. "use this
+   * name as a new skill"), shown first. Return null for none.
+   */
+  extraOption?: ((query: string) => ChipOption | null) | undefined
 }
 
 /** A row of choices, optionally filterable — used for the advancement pickers. */
@@ -30,12 +35,15 @@ export function ChipPicker({
   onCancel,
   cancelLabel,
   searchPlaceholder,
+  extraOption,
 }: ChipPickerProps) {
   const [query, setQuery] = useState('')
   const q = query.trim().toLowerCase()
-  const shown = searchPlaceholder
+  const filtered = searchPlaceholder
     ? options.filter((o) => o.label.toLowerCase().includes(q))
     : options
+  const extra = searchPlaceholder && extraOption ? extraOption(query) : null
+  const shown = extra ? [extra, ...filtered] : filtered
 
   return (
     <div className="border-border mt-3 border-t pt-3">

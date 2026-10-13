@@ -1,5 +1,8 @@
 import type { WizardDescriptor, WizardSkill } from '@/lib/graphql/queries'
 
+import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
+
+import { CustomSkillInput } from './CustomSkillInput'
 import { descriptorAutoTrainedSkillIds, descriptorSkillChoicesNeeded } from './derive'
 import { useWizardI18n } from './i18n'
 
@@ -38,6 +41,8 @@ export function SkillsStep({
   const autoTrainedIds = descriptorAutoTrainedSkillIds(descriptor)
   const needed = descriptorSkillChoicesNeeded(descriptor)
   const pickable = skills.filter((s) => !autoTrainedIds.includes(s.id))
+  // Skills the player typed, picked in place of a catalog one.
+  const typedPicks = selectedSkillIds.filter(isCustomSkill)
 
   return (
     <div>
@@ -69,6 +74,19 @@ export function SkillsStep({
             {copy.skills.selected(selectedSkillIds.length, needed)}
           </div>
           <div className="flex max-h-[340px] flex-col gap-2 overflow-y-auto pr-1">
+            {typedPicks.map((id) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => onToggle(id)}
+                className="border-accent bg-accent-soft flex cursor-pointer items-center gap-3 rounded border px-3.5 py-3 text-left"
+              >
+                <span className="text-bg border-accent bg-accent flex h-4 w-4 shrink-0 items-center justify-center rounded-[3px] border-[1.5px] text-[11px]">
+                  ✓
+                </span>
+                <span className="text-text text-[14px] font-medium">{customSkillText(id)}</span>
+              </button>
+            ))}
             {pickable.map((skill) => {
               const isSelected = selectedSkillIds.includes(skill.id)
               return (
@@ -92,6 +110,13 @@ export function SkillsStep({
               )
             })}
           </div>
+          <CustomSkillInput
+            disabled={selectedSkillIds.length >= needed}
+            onAdd={(id) => {
+              const same = (a: string, b: string) => a.toLowerCase() === b.toLowerCase()
+              if (!selectedSkillIds.some((picked) => same(picked, id))) onToggle(id)
+            }}
+          />
         </>
       ) : (
         <p className="text-text-muted text-sm">{copy.skills.noExtraChoices(t(descriptor.name))}</p>

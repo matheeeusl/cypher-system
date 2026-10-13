@@ -281,6 +281,8 @@ const en: WizardCopy = {
         return `Choose exactly ${param(issue, 'required')} trained skills.`
       case 'SKILL_CHOICE_DUPLICATE':
         return 'The same skill was chosen more than once.'
+      case 'SKILL_CHOICE_INVALID':
+        return 'A typed skill must have between 1 and 60 characters.'
       case 'SKILL_ALREADY_MAXED':
         return 'This skill is already Specialized — the maximum training level.'
       case 'ABILITY_TRAINING_UNKNOWN':
@@ -492,6 +494,8 @@ const ptBr: WizardCopy = {
         return `Escolha exatamente ${param(issue, 'required')} perícias treinadas.`
       case 'SKILL_CHOICE_DUPLICATE':
         return 'A mesma perícia foi escolhida mais de uma vez.'
+      case 'SKILL_CHOICE_INVALID':
+        return 'Uma perícia digitada deve ter entre 1 e 60 caracteres.'
       case 'SKILL_ALREADY_MAXED':
         return 'Esta perícia já é Especializada — o nível máximo de treinamento.'
       case 'ABILITY_TRAINING_UNKNOWN':
