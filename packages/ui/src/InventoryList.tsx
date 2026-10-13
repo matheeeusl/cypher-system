@@ -3,6 +3,7 @@
 import { useState } from 'react'
 
 import { Alert } from './Alert'
+import { Pagination } from './Pagination'
 
 export interface InventoryRow {
   id: string
@@ -21,6 +22,9 @@ export interface InventoryLabels {
   decrease: string
   increase: string
   remove: string
+  previous: string
+  next: string
+  page: (current: number, total: number) => string
 }
 
 interface InventoryListProps {
@@ -32,6 +36,8 @@ interface InventoryListProps {
   onChangeQty: (id: string, delta: 1 | -1) => void
   onRemove: (id: string) => void
   errorMessage?: string | undefined
+  /** Rows per page. */
+  pageSize?: number | undefined
 }
 
 export function InventoryList({
@@ -42,10 +48,16 @@ export function InventoryList({
   onChangeQty,
   onRemove,
   errorMessage,
+  pageSize = 5,
 }: InventoryListProps) {
   const [name, setName] = useState('')
   const [meta, setMeta] = useState('')
   const [openId, setOpenId] = useState<string | null>(null)
+  const [page, setPage] = useState(0)
+  const pageCount = Math.max(1, Math.ceil(items.length / pageSize))
+  // Removing the last row of the last page must not leave an empty page.
+  const current = Math.min(page, pageCount - 1)
+  const shown = items.slice(current * pageSize, (current + 1) * pageSize)
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -97,7 +109,7 @@ export function InventoryList({
       )}
 
       <ul className="flex flex-col gap-1.5">
-        {items.map((item) => {
+        {shown.map((item) => {
           const open = openId === item.id && item.description !== undefined
           return (
             <li key={item.id} className="border-border bg-panel rounded border">
@@ -155,6 +167,13 @@ export function InventoryList({
           )
         })}
       </ul>
+      <Pagination
+        page={current}
+        pageCount={pageCount}
+        ariaLabel={labels.title}
+        labels={{ previous: labels.previous, next: labels.next, page: labels.page }}
+        onChange={setPage}
+      />
     </section>
   )
 }

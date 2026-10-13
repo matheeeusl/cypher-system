@@ -287,6 +287,18 @@ test('inventory: items, quantities, the cypher catalog and the cypher limit warn
   await expect(page.getByText(/Allows for automatic climbing of any surface/)).toBeVisible()
   await page.getByRole('button', { name: /^Rope/ }).click()
   await expect(page.getByText('An item you added yourself.')).toBeVisible()
+
+  // Five to a page: four items fit, a sixth moves on to a second page
+  const inventoryNav = page.getByRole('navigation', { name: 'Carried Cyphers & Equipment' })
+  await expect(inventoryNav).toHaveCount(0)
+  for (const extra of ['Lantern', 'Flint']) {
+    await page.getByPlaceholder('Item name').fill(extra)
+    await page.getByRole('button', { name: 'Add', exact: true }).click()
+  }
+  await expect(inventoryNav.getByText('Page 1 of 2')).toBeVisible()
+  await inventoryNav.getByRole('button', { name: 'Next →' }).click()
+  await expect(inventoryNav.getByText('Page 2 of 2')).toBeVisible()
+  await expect(inventoryNav.getByRole('button', { name: 'Next →' })).toBeDisabled()
 })
 
 test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ page }) => {

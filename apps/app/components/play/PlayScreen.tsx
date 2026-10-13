@@ -729,7 +729,11 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             decrease: copy.inventory.decrease,
             increase: copy.inventory.increase,
             remove: copy.inventory.remove,
+            previous: copy.inventory.previous,
+            next: copy.inventory.next,
+            page: copy.inventory.page,
           }}
+          pageSize={PAGE_SIZE}
           errorMessage={errors.inventory}
           header={
             <>

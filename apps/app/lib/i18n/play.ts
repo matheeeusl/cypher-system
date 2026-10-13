@@ -135,6 +135,9 @@ export interface PlayCopy {
     decrease: string
     increase: string
     remove: string
+    previous: string
+    next: string
+    page: (current: number, total: number) => string
     cypherMeta: (category: string, level: string) => string
     itemDefaultMeta: string
     errors: { limit: string; generic: string }
@@ -309,6 +312,9 @@ const en: PlayCopy = {
     decrease: 'Decrease quantity',
     increase: 'Increase quantity',
     remove: 'Remove item',
+    previous: '← Previous',
+    next: 'Next →',
+    page: (current, total) => `Page ${current} of ${total}`,
     cypherMeta: (category, level) => `Cypher · ${category} · Level ${level}`,
     itemDefaultMeta: 'Gear',
     errors: {
@@ -487,6 +493,9 @@ const ptBr: PlayCopy = {
     decrease: 'Diminuir quantidade',
     increase: 'Aumentar quantidade',
     remove: 'Remover item',
+    previous: '← Anterior',
+    next: 'Próxima →',
+    page: (current, total) => `Página ${current} de ${total}`,
     cypherMeta: (category, level) => `Cifra · ${category} · Nível ${level}`,
     itemDefaultMeta: 'Equipamento', // UNCONFIRMED
     errors: {
