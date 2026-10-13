@@ -24,3 +24,20 @@ export const Default: Story = {
     return <Tabs {...args} value={value} onChange={setValue} />
   },
 }
+
+export const Pills: Story = {
+  args: {
+    variant: 'pills',
+    items: [
+      { value: 'status', label: 'Status' },
+      { value: 'skills', label: 'Skills & Abilities' },
+      { value: 'inventory', label: 'Inventory' },
+      { value: 'log', label: 'Log & Notes' },
+    ],
+    value: 'status',
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value)
+    return <Tabs {...args} value={value} onChange={setValue} />
+  },
+}
