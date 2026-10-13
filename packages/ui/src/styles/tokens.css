@@ -33,3 +33,24 @@
   --color-warning-soft: #f1e1d6;
   --color-border: #d7dbdc;
 }
+
+/*
+  Printing (e.g. "Export as PDF" on the character sheet) always uses the light
+  palette, whichever theme is on screen — ink on white, no dark backgrounds.
+  Placed last so it wins over both blocks above at equal specificity.
+*/
+@media print {
+  :root,
+  [data-theme='dark'],
+  [data-theme='light'] {
+    --color-bg: #ffffff;
+    --color-panel: #ffffff;
+    --color-text: #1a2226;
+    --color-text-muted: #5b6a70;
+    --color-accent: #0f6e56;
+    --color-accent-soft: #dceeea;
+    --color-warning: #a85a2e;
+    --color-warning-soft: #f1e1d6;
+    --color-border: #cccccc;
+  }
+}

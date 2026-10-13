@@ -1,12 +1,13 @@
 interface AlertProps {
-  variant?: 'error' | 'success'
-  title?: string
+  variant?: 'error' | 'warning' | 'success'
+  title?: string | undefined
   children: React.ReactNode
 }
 
 export function Alert({ variant = 'error', title, children }: AlertProps) {
   const variants = {
     error: 'border-warning bg-warning-soft',
+    warning: 'border-warning bg-warning-soft',
     success: 'border-accent bg-accent-soft',
   }
 
