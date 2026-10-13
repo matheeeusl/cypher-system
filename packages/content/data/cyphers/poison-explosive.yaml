@@ -26,9 +26,17 @@ effect_table:
           'pt-BR': 'O detonador é ativado (deve estar dentro de uma distância longa).',
         }
     - range: '26–40'
-      text: { en: 'A specified amount of time passes.', 'pt-BR': 'Passa-se um período de tempo específico.' }
+      text:
+        {
+          en: 'A specified amount of time passes.',
+          'pt-BR': 'Passa-se um período de tempo específico.',
+        }
     - range: '41–50'
-      text: { en: 'The victim takes a specific action.', 'pt-BR': 'A vítima realiza uma ação específica.' }
+      text:
+        {
+          en: 'The victim takes a specific action.',
+          'pt-BR': 'A vítima realiza uma ação específica.',
+        }
     - range: '51–55'
       text:
         {

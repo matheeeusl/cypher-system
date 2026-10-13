@@ -20,7 +20,10 @@ effect_table:
   entries:
     - range: '01–10'
       text:
-        { en: 'Thick smoke: occludes sight while the cloud lasts.', 'pt-BR': 'Fumaça densa: obstrui a visão enquanto a nuvem durar.' }
+        {
+          en: 'Thick smoke: occludes sight while the cloud lasts.',
+          'pt-BR': 'Fumaça densa: obstrui a visão enquanto a nuvem durar.',
+        }
     - range: '11–20'
       text:
         {

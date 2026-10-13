@@ -52,10 +52,22 @@ effect_table:
           pt-BR: Restaura uma quantidade de pontos da Reserva de Intelecto igual ao nível da cifra,
         }
     - range: '66–75'
-      text: { en: Increases Might Edge by 1 for one hour, pt-BR: Aumenta a Margem de Força em 1 por uma hora }
+      text:
+        {
+          en: Increases Might Edge by 1 for one hour,
+          pt-BR: Aumenta a Margem de Força em 1 por uma hora,
+        }
     - range: '76–85'
-      text: { en: Increases Speed Edge by 1 for one hour, pt-BR: Aumenta a Margem de Velocidade em 1 por uma hora }
+      text:
+        {
+          en: Increases Speed Edge by 1 for one hour,
+          pt-BR: Aumenta a Margem de Velocidade em 1 por uma hora,
+        }
     - range: '86–95'
-      text: { en: Increases Intellect Edge by 1 for one hour, pt-BR: Aumenta a Margem de Intelecto em 1 por uma hora }
+      text:
+        {
+          en: Increases Intellect Edge by 1 for one hour,
+          pt-BR: Aumenta a Margem de Intelecto em 1 por uma hora,
+        }
     - range: '96–00'
       text: { en: Restores all Pools to full, pt-BR: Restaura todas as Reservas ao máximo }

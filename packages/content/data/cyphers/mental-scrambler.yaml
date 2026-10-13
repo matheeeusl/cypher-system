@@ -32,9 +32,13 @@ effect_table:
       text: { en: 'Victims cannot speak.', 'pt-BR': 'As vítimas não conseguem falar.' }
     - range: '41–50'
       text:
-        { en: 'Victims move slowly (immediate range) and clumsily.', 'pt-BR': 'As vítimas se movem devagar (distância imediata) e de forma desajeitada.' }
+        {
+          en: 'Victims move slowly (immediate range) and clumsily.',
+          'pt-BR': 'As vítimas se movem devagar (distância imediata) e de forma desajeitada.',
+        }
     - range: '51–60'
-      text: { en: 'Victims cannot see or hear.', 'pt-BR': 'As vítimas não conseguem ver nem ouvir.' }
+      text:
+        { en: 'Victims cannot see or hear.', 'pt-BR': 'As vítimas não conseguem ver nem ouvir.' }
     - range: '61–70'
       text:
         {
@@ -42,7 +46,11 @@ effect_table:
           'pt-BR': 'As vítimas perdem todo o senso de direção, profundidade e proporção.',
         }
     - range: '71–80'
-      text: { en: 'Victims do not recognize anyone they know.', 'pt-BR': 'As vítimas não reconhecem ninguém que conheçam.' }
+      text:
+        {
+          en: 'Victims do not recognize anyone they know.',
+          'pt-BR': 'As vítimas não reconhecem ninguém que conheçam.',
+        }
     - range: '81–88'
       text: { en: 'Victims suffer partial amnesia.', 'pt-BR': 'As vítimas sofrem amnésia parcial.' }
     - range: '89–94'

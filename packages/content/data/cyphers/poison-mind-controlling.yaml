@@ -22,9 +22,17 @@ effect_table:
           'pt-BR': 'Deita-se por um minuto com os olhos fechados quando mandada fazer isso.',
         }
     - range: '21–40'
-      text: { en: 'Flees in terror for one minute when threatened.', 'pt-BR': 'Foge em terror por um minuto quando ameaçada.' }
+      text:
+        {
+          en: 'Flees in terror for one minute when threatened.',
+          'pt-BR': 'Foge em terror por um minuto quando ameaçada.',
+        }
     - range: '41–60'
-      text: { en: 'Answers questions truthfully for one minute.', 'pt-BR': 'Responde perguntas com sinceridade por um minuto.' }
+      text:
+        {
+          en: 'Answers questions truthfully for one minute.',
+          'pt-BR': 'Responde perguntas com sinceridade por um minuto.',
+        }
     - range: '61–75'
       text:
         {

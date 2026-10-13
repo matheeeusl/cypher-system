@@ -30,9 +30,17 @@ effect_table:
           'pt-BR': 'Medo: Foge em terror por um minuto quando ameaçada.',
         }
     - range: '41–60'
-      text: { en: 'Lust: Cannot focus on any nonsexual activity.', 'pt-BR': 'Luxúria: Não consegue se concentrar em nenhuma atividade não sexual.' }
+      text:
+        {
+          en: 'Lust: Cannot focus on any nonsexual activity.',
+          'pt-BR': 'Luxúria: Não consegue se concentrar em nenhuma atividade não sexual.',
+        }
     - range: '61–75'
-      text: { en: 'Sadness: All tasks are hindered.', 'pt-BR': 'Tristeza: Todas as tarefas são prejudicadas.' }
+      text:
+        {
+          en: 'Sadness: All tasks are hindered.',
+          'pt-BR': 'Tristeza: Todas as tarefas são prejudicadas.',
+        }
     - range: '76–85'
       text:
         {

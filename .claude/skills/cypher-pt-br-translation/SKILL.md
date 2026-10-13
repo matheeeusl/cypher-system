@@ -21,6 +21,7 @@ Before translating any content:
 ## Two content types, two registers
 
 ### 1. Rules content (Types, Descriptors, Foci, Abilities, Cyphers, Artifacts, Oddities, flavor text)
+
 - Source of truth for meaning is always the English rulebook PDF in this project — verify what a term/ability actually does in English before translating it, the same way the project verifies before modeling schema.
 - Register: clear, rules-precise, second person ("você") — matches how the existing PT-BR content on the site reads. Avoid overly literary phrasing that obscures the mechanical meaning.
 - Keep numbers, dice notation (d20, d6...), and stat abbreviations unchanged.
@@ -28,6 +29,7 @@ Before translating any content:
 - Preserve the character-creation sentence structure: "Eu sou um(a) [Descritor] [Tipo] que [Foco]" — mirrors "I am a [Descriptor] [Type] who [Focus]" (see project overview). Note gender agreement (`um`/`uma`) is something English doesn't need — flag when a Descriptor/Type name makes the Portuguese article ambiguous or awkward, don't just pick one silently.
 
 ### 2. UI copy (buttons, labels, form fields, error/empty states, nav)
+
 - Register: concise, direct, consistent with standard Brazilian Portuguese software UI conventions (e.g. "Salvar", "Cancelar", "Criar personagem" — imperative/infinitive for actions, not "Você deveria salvar").
 - Game terms inside UI copy (e.g. a button labeled "Add Cypher") still follow the same glossary — "Adicionar Cifra", not "Adicionar Cypher".
 - Keep UI strings short — Portuguese tends to run longer than English; flag when a translated string is likely to break a fixed-width UI element (buttons, nav labels, badges) instead of silently truncating meaning.
@@ -35,6 +37,7 @@ Before translating any content:
 ## i18n structure
 
 Both locales are explicitly URL-prefixed (`/en/`, `/pt-br/`) across the Astro docs site and the Next.js character builder. When translating:
+
 - Mirror the English content's file/route structure exactly under the `/pt-br/` equivalent — same frontmatter fields, same slugs pattern (translate the slug too, if the project's convention is to localize slugs — confirm this against an existing `/pt-br/` page before assuming).
 - Don't invent new frontmatter fields or restructure content while translating; a translation pass changes language, not structure or schema. If the source content's structure seems wrong, flag it separately rather than fixing it silently mid-translation.
 

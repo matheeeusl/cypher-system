@@ -35,9 +35,17 @@ effect_table:
           'pt-BR': 'Um tipo de conhecimento acadêmico ou esotérico (biologia, história, magia, e assim por diante)',
         }
     - range: '41–50'
-      text: { en: 'Repairing (sometimes specific to one device)', 'pt-BR': 'Reparo (às vezes específico a um dispositivo)' }
+      text:
+        {
+          en: 'Repairing (sometimes specific to one device)',
+          'pt-BR': 'Reparo (às vezes específico a um dispositivo)',
+        }
     - range: '51–60'
-      text: { en: 'Crafting (usually specific to one thing)', 'pt-BR': 'Criação de itens (geralmente específica a uma coisa)' }
+      text:
+        {
+          en: 'Crafting (usually specific to one thing)',
+          'pt-BR': 'Criação de itens (geralmente específica a uma coisa)',
+        }
     - range: '61–70'
       text: { en: 'Persuasion', 'pt-BR': 'Persuasão' }
     - range: '71–75'

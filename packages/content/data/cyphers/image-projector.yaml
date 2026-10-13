@@ -36,7 +36,11 @@ effect_table:
           'pt-BR': 'Máquina enorme que obstrui a visão (cubo de 9 metros [30 pés])',
         }
     - range: '41–50'
-      text: { en: 'Beautiful pastoral scene (50-foot [15 m] cube)', 'pt-BR': 'Bela cena pastoral (cubo de 15 metros [50 pés])' }
+      text:
+        {
+          en: 'Beautiful pastoral scene (50-foot [15 m] cube)',
+          'pt-BR': 'Bela cena pastoral (cubo de 15 metros [50 pés])',
+        }
     - range: '51–60'
       text:
         {

@@ -26,7 +26,11 @@ effect_table:
   label: { en: 'Detonation (Spawn) Effects', 'pt-BR': 'Efeitos da Detonação (Geradora)' }
   entries:
     - range: '01–10'
-      text: { en: 'Cell-disrupting (harms only flesh)', 'pt-BR': 'Rompimento celular (prejudica apenas carne)' }
+      text:
+        {
+          en: 'Cell-disrupting (harms only flesh)',
+          'pt-BR': 'Rompimento celular (prejudica apenas carne)',
+        }
     - range: '11–30'
       text: { en: 'Corrosive', 'pt-BR': 'Corrosivo' }
     - range: '31–40'

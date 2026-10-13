@@ -55,7 +55,7 @@ effect_table:
     - range: '10–12'
       text: { en: A crystal skull, pt-BR: Uma caveira de cristal }
     - range: '13–15'
-      text: { en: An 8-foot candelabra, pt-BR: Um candelabro de 2,4 metros (8 pés) }
+      text: { en: An 8-foot candelabra, pt-BR: Um candelabro de 2, 4 metros (8 pés) }
     - range: '16–18'
       text: { en: An armoire, pt-BR: Um guarda-roupa }
     - range: '19–21'
@@ -63,13 +63,18 @@ effect_table:
     - range: '22–24'
       text: { en: A harpsichord, pt-BR: Um cravo }
     - range: '25–27'
-      text: { en: A typewriter in a random language, pt-BR: Uma máquina de escrever em um idioma aleatório }
+      text:
+        {
+          en: A typewriter in a random language,
+          pt-BR: Uma máquina de escrever em um idioma aleatório,
+        }
     - range: '28–30'
       text: { en: A set of light tools, pt-BR: Um conjunto de ferramentas leves }
     - range: '31–33'
       text: { en: A minecart, pt-BR: Um vagonete de mina }
     - range: '34–36'
-      text: { en: A stack of 12 banana crème pies, pt-BR: Uma pilha de 12 tortas de creme de banana }
+      text:
+        { en: A stack of 12 banana crème pies, pt-BR: Uma pilha de 12 tortas de creme de banana }
     - range: '37–39'
       text: { en: A rowboat, pt-BR: Um barco a remo }
     - range: '40–42'
@@ -87,25 +92,37 @@ effect_table:
         en: A cannon (with 1 cannonball and enough black powder for one shot)
         pt-BR: Um canhão (com 1 bala de canhão e pólvora negra suficiente para um disparo)
     - range: '55–57'
-      text: { en: A sack of flour (1 lb.), pt-BR: Um saco de farinha (0,45 kg / 1 lb.) }
+      text: { en: A sack of flour (1 lb.), pt-BR: Um saco de farinha (0, 45 kg / 1 lb.) }
     - range: '58–60'
       text: { en: A dozen eggs, pt-BR: Uma dúzia de ovos }
     - range: '61–63'
-      text: { en: A spool of copper wire (100 feet), pt-BR: Um carretel de fio de cobre (30 metros / 100 pés) }
+      text:
+        {
+          en: A spool of copper wire (100 feet),
+          pt-BR: Um carretel de fio de cobre (30 metros / 100 pés),
+        }
     - range: '64–66'
       text: { en: A barrel of rum, pt-BR: Um barril de rum }
     - range: '67–69'
-      text: { en: A sack of quicklime (5 lb.), pt-BR: Um saco de cal virgem (2,3 kg / 5 lb.) }
+      text: { en: A sack of quicklime (5 lb.), pt-BR: Um saco de cal virgem (2, 3 kg / 5 lb.) }
     - range: '70–72'
       text: { en: A flawed diamond, pt-BR: Um diamante com imperfeições }
     - range: '73–75'
-      text: { en: A lavishly furnished four-poster bed, pt-BR: Uma cama com dossel luxuosamente decorada }
+      text:
+        {
+          en: A lavishly furnished four-poster bed,
+          pt-BR: Uma cama com dossel luxuosamente decorada,
+        }
     - range: '76–78'
       text: { en: A treasure map, pt-BR: Um mapa do tesouro }
     - range: '79–81'
       text: { en: A silver bell, pt-BR: Um sino de prata }
     - range: '82–84'
-      text: { en: A book of useful phrases in an exotic language, pt-BR: Um livro de frases úteis em um idioma exótico }
+      text:
+        {
+          en: A book of useful phrases in an exotic language,
+          pt-BR: Um livro de frases úteis em um idioma exótico,
+        }
     - range: '85–87'
       text: { en: A cauldron, pt-BR: Um caldeirão }
     - range: '88–90'
@@ -115,7 +132,11 @@ effect_table:
     - range: '94–96'
       text: { en: A large block of ice, pt-BR: Um grande bloco de gelo }
     - range: '97–99'
-      text: { en: Twelve dozen wheels of various cheeses, pt-BR: Doze dúzias de rodas de queijos variados }
+      text:
+        {
+          en: Twelve dozen wheels of various cheeses,
+          pt-BR: Doze dúzias de rodas de queijos variados,
+        }
     - range: '100'
       text: { en: An old boot, pt-BR: Uma bota velha }
 flavor_quote: null

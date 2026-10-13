@@ -19,20 +19,46 @@ effect_table:
       text: { en: 'Eases attack by one step', 'pt-BR': 'Facilita o ataque em um nível' }
     - range: '11–20'
       text:
-        { en: 'Deals bonus electrical damage equal to cypher level', 'pt-BR': 'Causa dano elétrico bônus igual ao nível da cifra' }
+        {
+          en: 'Deals bonus electrical damage equal to cypher level',
+          'pt-BR': 'Causa dano elétrico bônus igual ao nível da cifra',
+        }
     - range: '21–30'
-      text: { en: 'Deals bonus cold damage equal to cypher level', 'pt-BR': 'Causa dano de frio bônus igual ao nível da cifra' }
+      text:
+        {
+          en: 'Deals bonus cold damage equal to cypher level',
+          'pt-BR': 'Causa dano de frio bônus igual ao nível da cifra',
+        }
     - range: '31–40'
-      text: { en: 'Deals bonus poison damage equal to cypher level', 'pt-BR': 'Causa dano de veneno bônus igual ao nível da cifra' }
+      text:
+        {
+          en: 'Deals bonus poison damage equal to cypher level',
+          'pt-BR': 'Causa dano de veneno bônus igual ao nível da cifra',
+        }
     - range: '41–50'
-      text: { en: 'Deals bonus acid damage equal to cypher level', 'pt-BR': 'Causa dano de ácido bônus igual ao nível da cifra' }
+      text:
+        {
+          en: 'Deals bonus acid damage equal to cypher level',
+          'pt-BR': 'Causa dano de ácido bônus igual ao nível da cifra',
+        }
     - range: '51–60'
-      text: { en: 'Deals bonus fire damage equal to cypher level', 'pt-BR': 'Causa dano de fogo bônus igual ao nível da cifra' }
+      text:
+        {
+          en: 'Deals bonus fire damage equal to cypher level',
+          'pt-BR': 'Causa dano de fogo bônus igual ao nível da cifra',
+        }
     - range: '61–70'
-      text: { en: 'Deals bonus sonic damage equal to cypher level', 'pt-BR': 'Causa dano sônico bônus igual ao nível da cifra' }
+      text:
+        {
+          en: 'Deals bonus sonic damage equal to cypher level',
+          'pt-BR': 'Causa dano sônico bônus igual ao nível da cifra',
+        }
     - range: '71–80'
       text:
-        { en: 'Deals bonus psychic damage equal to cypher level', 'pt-BR': 'Causa dano psíquico bônus igual ao nível da cifra' }
+        {
+          en: 'Deals bonus psychic damage equal to cypher level',
+          'pt-BR': 'Causa dano psíquico bônus igual ao nível da cifra',
+        }
     - range: '81–90'
       text:
         {
