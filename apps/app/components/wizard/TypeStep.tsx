@@ -39,7 +39,7 @@ export function TypeStep({
               key={type.id}
               type="button"
               onClick={() => onSelectType(type.id)}
-              className={`rounded-[5px] border-[1.5px] px-4 py-3.5 text-left ${
+              className={`cursor-pointer rounded-[5px] border-[1.5px] px-4 py-3.5 text-left ${
                 isSelected ? 'border-accent bg-accent-soft' : 'border-border bg-panel'
               }`}
             >
@@ -66,7 +66,7 @@ export function TypeStep({
                 key={stat}
                 type="button"
                 onClick={() => onSelectEdgeChoice(stat)}
-                className={`rounded border px-3 py-1.5 font-mono text-[12px] ${
+                className={`cursor-pointer rounded border px-3 py-1.5 font-mono text-[12px] ${
                   choices.startingEdgeChoice === stat
                     ? 'border-accent bg-accent-soft text-accent'
                     : 'border-border bg-panel text-text-muted'

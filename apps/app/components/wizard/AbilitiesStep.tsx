@@ -67,7 +67,7 @@ export function AbilitiesStep({
               key={id}
               type="button"
               onClick={() => onToggleTypeAbility(id)}
-              className={`flex items-start gap-3 rounded-[5px] border px-3.5 py-3 text-left ${
+              className={`flex cursor-pointer items-start gap-3 rounded-[5px] border px-3.5 py-3 text-left ${
                 isSelected ? 'border-accent bg-accent-soft' : 'border-border bg-panel'
               }`}
             >
@@ -137,7 +137,7 @@ export function AbilitiesStep({
                     key={optionIds.join('+')}
                     type="button"
                     onClick={() => onToggleFocusChoiceOption(entryIndex, optionIndex)}
-                    className={`rounded border px-3 py-1.5 text-left font-mono text-[12px] ${
+                    className={`cursor-pointer rounded border px-3 py-1.5 text-left font-mono text-[12px] ${
                       isSelected
                         ? 'border-accent bg-accent-soft text-accent'
                         : 'border-border bg-panel text-text-muted'

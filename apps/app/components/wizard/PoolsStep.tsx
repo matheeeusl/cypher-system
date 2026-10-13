@@ -59,7 +59,7 @@ export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
               <button
                 type="button"
                 onClick={() => adjust(key, -1)}
-                className="border-border bg-panel text-text h-[30px] w-[30px] rounded border text-base"
+                className="border-border bg-panel text-text h-[30px] w-[30px] cursor-pointer rounded border text-base"
               >
                 −
               </button>
@@ -69,7 +69,7 @@ export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
               <button
                 type="button"
                 onClick={() => adjust(key, 1)}
-                className="border-border bg-panel text-text h-[30px] w-[30px] rounded border text-base"
+                className="border-border bg-panel text-text h-[30px] w-[30px] cursor-pointer rounded border text-base"
               >
                 +
               </button>

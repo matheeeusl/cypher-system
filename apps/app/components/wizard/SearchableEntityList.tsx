@@ -54,7 +54,7 @@ export function SearchableEntityList<T extends EntityLike>({
               key={entity.id}
               type="button"
               onClick={() => onSelect(entity.id)}
-              className={`flex items-center justify-between gap-2 rounded border-[1.5px] px-3 py-2.5 text-left ${
+              className={`flex cursor-pointer items-center justify-between gap-2 rounded border-[1.5px] px-3 py-2.5 text-left ${
                 isSelected ? 'border-accent bg-accent-soft' : 'border-border bg-panel'
               }`}
             >

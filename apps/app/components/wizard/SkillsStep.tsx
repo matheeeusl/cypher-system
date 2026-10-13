@@ -76,7 +76,7 @@ export function SkillsStep({
                   key={skill.id}
                   type="button"
                   onClick={() => onToggle(skill.id)}
-                  className={`flex items-center gap-3 rounded border px-3.5 py-3 text-left ${
+                  className={`flex cursor-pointer items-center gap-3 rounded border px-3.5 py-3 text-left ${
                     isSelected ? 'border-accent bg-accent-soft' : 'border-border bg-panel'
                   }`}
                 >
