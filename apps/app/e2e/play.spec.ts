@@ -140,8 +140,11 @@ test('XP: spending more than you have is refused; advancing locks its XP entry',
 
   // Its XP entry is locked: no remove button on the spend row
   await tab(page, 'Log & Notes').click()
-  const spendRow = page.getByRole('listitem').filter({ hasText: 'Extra Effort' })
-  await expect(spendRow).toContainText('−4 XP')
+  const spendRow = page
+    .getByRole('listitem')
+    .filter({ hasText: 'Extra Effort' })
+    .filter({ hasText: '−4 XP' })
+  await expect(spendRow).toHaveCount(1)
   await expect(spendRow.getByRole('button', { name: 'Remove entry' })).toHaveCount(0)
 })
 
@@ -364,6 +367,35 @@ test('Skills tab: a skill opens its description; a typed one says it is yours', 
   // The skill typed in the advancement test has no rules text of its own
   await page.getByRole('button', { name: /^Falconry/ }).click()
   await expect(page.getByText(/Created by you/)).toBeVisible()
+})
+
+test('Log: the newest advancement can be undone and its XP comes back', async ({ page }) => {
+  await page.goto(playUrl)
+  await tab(page, 'Log & Notes').click()
+
+  const history = page.locator('section').filter({ hasText: 'Advancement history' })
+  const undo = history.getByRole('button', { name: 'Undo' })
+  // Only the newest tier's purchases can be undone; the older tiers' are locked
+  await expect(undo.first()).toBeEnabled()
+  expect(await undo.count()).toBeGreaterThan(1)
+  await expect(undo.last()).toBeDisabled()
+
+  const before = await page.getByText(/^XP Log · \d+ XP$/).textContent()
+  await undo.first().click()
+  const dialog = page.getByRole('dialog')
+  await expect(dialog).toContainText('Falconry')
+  await dialog.getByRole('button', { name: 'Undo advancement' }).click()
+  await expect(dialog).toBeHidden()
+
+  // Refunded as a log entry, and the skill is gone from the sheet
+  await expect(page.getByText(/^Refund — .*Falconry/)).toBeVisible()
+  const total = (t: string | null) => Number(/(\d+) XP$/.exec(t ?? '')?.[1])
+  await expect(async () => {
+    const after = await page.getByText(/^XP Log · \d+ XP$/).textContent()
+    expect(total(after)).toBe(total(before) + 4)
+  }).toPass()
+  await tab(page, 'Skills').click()
+  await expect(page.getByRole('button', { name: /^Falconry/ })).toHaveCount(0)
 })
 
 test('cleanup', async ({ page }) => {

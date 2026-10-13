@@ -2,7 +2,16 @@
 
 import { revalidatePath } from 'next/cache'
 
-import { atMaxTier, boughtAtTier, parseChoice, toPurchase } from '@/lib/advancement'
+import {
+  atMaxTier,
+  boughtAtTier,
+  choiceOf,
+  parseChoice,
+  revertableIndexes,
+  tierOf,
+  toPurchase,
+} from '@/lib/advancement'
+import { advancementReason } from '@/lib/advancement-reason'
 import { loadDerived } from '@/lib/character-derived'
 import { getCharacter } from '@/lib/characters'
 import { buildCharacterChoicesInput } from '@/components/wizard/derive'
@@ -23,6 +32,7 @@ import {
   getPlayData,
   removeItem,
   removeXp,
+  revertAdvancement,
   setNotes,
   setPoolMax,
   setTierPicks,
@@ -34,7 +44,7 @@ import {
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
 import { customSkillText, isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
-import { withPick, withSkillPick } from '@/lib/tier-picks'
+import { picksUpToTier, withPick, withSkillPick } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
 // the browser), and let lib/play.ts scope the query to the session user.
@@ -408,6 +418,91 @@ export async function purchaseAdvancementAction(
   }
 }
 
+// ---- undoing an advancement ----
+
+export type RevertAdvancementResult =
+  { ok: true; view: PlayView | null } | Fail<'conflict' | 'not_revertable'>
+
+/**
+ * Undoes one advancement purchase. Only the newest tier's purchases can go
+ * (`revertableIndexes`); the result is checked against the engine, the XP it
+ * cost is refunded as an entry in the log, and level-up picks that belonged to
+ * a tier the character no longer has are dropped.
+ */
+export async function revertAdvancementAction(
+  characterId: unknown,
+  index: unknown,
+  locale: unknown,
+): Promise<RevertAdvancementResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !isInt(index, 0, 1000) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const [rules, bundle] = await Promise.all([fetchAdvancementRules(), loadDerived(character)])
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    const purchases = character.advancement
+    const purchase = purchases[index]
+    if (!purchase || !revertableIndexes(purchases).includes(index)) {
+      return { ok: false, reason: 'not_revertable' }
+    }
+
+    const next = purchases.filter((_, i) => i !== index)
+    const tier = tierOf(next, rules.perTier)
+    const nextPicks = picksUpToTier(character.tierPicks, tier)
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        abilities: bundle.abilities,
+      },
+      next,
+      nextPicks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    // e.g. the purchase trained an ability a later pick still depends on
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'not_revertable' }
+
+    const refundPrefix = playCopy[locale].advancement.refundPrefix
+    const reason = `${refundPrefix} — ${advancementReason(locale, choiceOf(purchase), bundle)}`
+    const reverted = await revertAdvancement(uid, characterId, {
+      expected: purchases,
+      next,
+      expectedPicks: character.tierPicks,
+      nextPicks,
+      poolMax: {
+        might: result.character.pools.might.max,
+        speed: result.character.pools.speed.max,
+        intellect: result.character.pools.intellect.max,
+      },
+      tier: result.character.tier,
+      refundXp: rules.costXp,
+      reason: reason.slice(0, LIMITS.reason),
+    })
+    if (!reverted.ok) return { ok: false, reason: reverted.reason }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] revertAdvancement failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
 // ---- level-up picks ----
 
 export type PicksResult = { ok: true; view: PlayView | null } | Fail<'conflict'>
@@ -527,49 +622,4 @@ async function freshView(
   } catch {
     return null
   }
-}
-
-/** The XP-log line for a purchase, in the buyer's language. */
-function advancementReason(
-  locale: Locale,
-  choice: NonNullable<ReturnType<typeof parseChoice>>,
-  bundle: NonNullable<Awaited<ReturnType<typeof loadDerived>>>,
-): string {
-  const copy = playCopy[locale]
-  const t = terms[locale]
-  const name = copy.advancement.steps[choice.key].split(' — ')[0]
-  const stat = (s: Stat) => t.stats[s]
-  let detail: string
-  switch (choice.key) {
-    case 'pools':
-      detail = (['MIGHT', 'SPEED', 'INTELLECT'] as const)
-        .filter((st) => choice.allocation[st.toLowerCase() as keyof typeof choice.allocation] > 0)
-        .map(
-          (st) =>
-            `+${choice.allocation[st.toLowerCase() as keyof typeof choice.allocation]} ${stat(st)}`,
-        )
-        .join(', ')
-      break
-    case 'edge':
-      detail = `+1 ${copy.pools.edge} ${stat(choice.stat)}`
-      break
-    case 'effort':
-      detail = `+1 ${copy.pools.effort}`
-      break
-    case 'skills': {
-      if ('skillId' in choice) {
-        const skill = bundle.skills.find((s) => s.id === choice.skillId)
-        detail = skill
-          ? loc(skill.name, locale)
-          : isCustomSkill(choice.skillId)
-            ? customSkillText(choice.skillId)
-            : choice.skillId
-      } else {
-        const ability = bundle.abilities.find((a) => a.id === choice.abilityId)
-        detail = ability ? loc(ability.name, locale) : choice.abilityId
-      }
-      break
-    }
-  }
-  return `${copy.advancement.title} — ${name} (${detail})`.slice(0, LIMITS.reason)
 }

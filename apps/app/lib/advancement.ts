@@ -118,3 +118,42 @@ export function parseChoice(raw: unknown): AdvancementChoice | null {
       return null
   }
 }
+
+/** The one-click choice that produced a stored purchase (the inverse of `toPurchase`). */
+export function choiceOf(p: AdvancementPurchaseInput): AdvancementChoice {
+  if ('increasingCapabilities' in p) {
+    return { key: 'pools', allocation: p.increasingCapabilities.statPoolAllocation }
+  }
+  if ('movingTowardPerfection' in p) {
+    return { key: 'edge', stat: p.movingTowardPerfection.edgeStat }
+  }
+  if ('extraEffort' in p) return { key: 'effort' }
+  const target = p.skills.target
+  return 'skillId' in target
+    ? { key: 'skills', skillId: target.skillId }
+    : { key: 'skills', abilityId: target.abilityId }
+}
+
+/**
+ * The tier a purchase list adds up to: tier N is reached once every tier
+ * from 2 to N has `perTier` purchases tagged with it.
+ */
+export function tierOf(purchases: AdvancementPurchaseInput[], perTier: number): number {
+  let tier = 1
+  for (;;) {
+    const bought = purchases.filter((p) => purchaseTier(p) === tier + 1).length
+    if (bought < perTier) return tier
+    tier += 1
+  }
+}
+
+/**
+ * Which purchases can be undone: those of the newest tier bought toward. An
+ * older tier can't lose one while a later tier has some (the engine would
+ * call it incomplete), so undoing goes newest tier first. Returns indexes.
+ */
+export function revertableIndexes(purchases: AdvancementPurchaseInput[]): number[] {
+  if (purchases.length === 0) return []
+  const newest = Math.max(...purchases.map(purchaseTier))
+  return purchases.flatMap((p, i) => (purchaseTier(p) === newest ? [i] : []))
+}

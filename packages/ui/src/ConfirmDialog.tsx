@@ -68,7 +68,9 @@ export function ConfirmDialog({
           {title}
         </h2>
         {description && (
-          <p className="text-text-muted mb-5 text-sm leading-relaxed">{description}</p>
+          <p className="text-text-muted mb-5 text-sm leading-relaxed whitespace-pre-line">
+            {description}
+          </p>
         )}
         {errorMessage && (
           <div className="mb-4">

@@ -1,4 +1,11 @@
-import { atMaxTier, boughtAtTier } from '@/lib/advancement'
+import {
+  atMaxTier,
+  boughtAtTier,
+  choiceOf,
+  purchaseTier,
+  revertableIndexes,
+} from '@/lib/advancement'
+import { advancementReason } from '@/lib/advancement-reason'
 import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import { sheetAbilities, sheetSkills } from '@/lib/character-sheet'
 import type { DerivedBundle } from '@/lib/character-derived'
@@ -46,6 +53,8 @@ export interface PlayView {
     /** Already at the highest tier: nothing left to buy. */
     nextIsBlocked: boolean
   }
+  /** Purchases made so far, in order; `revertable` ones can be undone. */
+  purchases: Array<{ index: number; tier: number; label: string; revertable: boolean }>
   /** Known attack abilities, for the "train an ability" advancement. */
   abilityOptions: Array<{ id: string; name: string; trained: boolean }>
   /** Level-up choices still owed (new tier's Type abilities, a Focus choice). */
@@ -74,6 +83,7 @@ export async function buildPlayView(
   const { derived, type, descriptor, focus } = bundle
 
   const bought = boughtAtTier(character.advancement, derived.tier + 1)
+  const revertable = new Set(revertableIndexes(character.advancement))
   const levelBySkill = new Map(derived.skills.map((s) => [s.skillId, s.level]))
 
   return {
@@ -113,6 +123,12 @@ export async function buildPlayView(
       bought: [...bought],
       nextIsBlocked: atMaxTier(derived.tier, rules.maxTier),
     },
+    purchases: character.advancement.map((p, index) => ({
+      index,
+      tier: purchaseTier(p),
+      label: advancementReason(locale, choiceOf(p), bundle),
+      revertable: revertable.has(index),
+    })),
     abilityOptions: derived.knownAbilities.flatMap((known) => {
       const ability = bundle.abilities.find((a) => a.id === known.abilityId)
       // Only an attack can be trained by the Skills advancement.

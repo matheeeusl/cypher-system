@@ -65,3 +65,18 @@ export function withPick(
 export function withSkillPick(picks: TierPicks, key: string, skillIds: string[]): TierPicks {
   return { ...picks, skills: { ...picks.skills, [key]: skillIds } }
 }
+
+/**
+ * The picks that still apply at `tier`: Type/Focus picks and typed-skill picks
+ * made for a higher tier are dropped (a lower tier has nothing to pick yet).
+ */
+export function picksUpToTier(picks: TierPicks, tier: number): TierPicks {
+  const upTo = (record: Record<string, string[]>) =>
+    Object.fromEntries(Object.entries(record).filter(([t]) => Number(t) <= tier))
+  const skills = Object.fromEntries(
+    Object.entries(picks.skills ?? {}).filter(([key]) => Number(key.split(':')[1]) <= tier),
+  )
+  return Object.keys(skills).length > 0
+    ? { type: upTo(picks.type), focus: upTo(picks.focus), skills }
+    : { type: upTo(picks.type), focus: upTo(picks.focus) }
+}

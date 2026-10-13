@@ -33,6 +33,8 @@ export interface PlayCopy {
     cost: (xp: number) => string
     needs: (xp: number) => string
     purchase: string
+    /** Starts the XP-log line of a refunded advancement. */
+    refundPrefix: string
     unavailable: string
     addPoolsTo: string
     poolsRemaining: (n: number) => string
@@ -87,6 +89,20 @@ export interface PlayCopy {
     notesPlaceholder: string
     saving: string
     saved: string
+    history: {
+      title: string
+      empty: string
+      hint: string
+      tier: (tier: number) => string
+      undo: string
+      lockedHint: string
+      confirmTitle: string
+      confirmDescription: (label: string, xp: number) => string
+      confirm: string
+      cancel: string
+      working: string
+      errors: { notRevertable: string; conflict: string; generic: string }
+    }
     errors: {
       insufficient: string
       locked: string
@@ -171,6 +187,7 @@ const en: PlayCopy = {
       skills: 'Skills — train a skill',
     },
     purchased: 'Purchased',
+    refundPrefix: 'Refund',
     cost: (xp) => `${xp} XP`,
     needs: (xp) => `Needs ${xp} XP`,
     purchase: 'Purchase',
@@ -236,6 +253,25 @@ const en: PlayCopy = {
     notesPlaceholder: 'Session notes, reminders, loose threads…',
     saving: 'Saving…',
     saved: 'Saved',
+    history: {
+      title: 'Advancement history',
+      empty: 'No advancements purchased yet.',
+      hint: 'Undo the newest tier’s advancements first; an advancement’s XP is refunded to the log.',
+      tier: (tier) => `Tier ${tier}`,
+      undo: 'Undo',
+      lockedHint: 'Undo the later tier’s advancements first.',
+      confirmTitle: 'Undo this advancement?',
+      confirmDescription: (label, xp) =>
+        `${label}\n\nIt is removed from the character and ${xp} XP is refunded to the log. If it was the last step of a tier, the character goes back to the previous tier and the choices made for the new tier (abilities, skills) are removed.`,
+      confirm: 'Undo advancement',
+      cancel: 'Cancel',
+      working: 'Undoing…',
+      errors: {
+        notRevertable: 'This advancement can’t be undone now: later choices depend on it.',
+        conflict: 'The character changed in another tab. Reload and try again.',
+        generic: 'Could not undo the advancement. Try again.',
+      },
+    },
     errors: {
       insufficient: 'Not enough XP to spend that much.',
       locked: 'That entry paid for an advancement and can’t be removed.',
@@ -327,6 +363,7 @@ const ptBr: PlayCopy = {
       skills: 'Perícias — treinar uma perícia',
     },
     purchased: 'Comprado',
+    refundPrefix: 'Reembolso',
     cost: (xp) => `${xp} XP`,
     needs: (xp) => `Requer ${xp} XP`,
     purchase: 'Comprar',
@@ -392,6 +429,26 @@ const ptBr: PlayCopy = {
     notesPlaceholder: 'Notas da sessão, lembretes, pontas soltas…',
     saving: 'Salvando…',
     saved: 'Salvo',
+    history: {
+      title: 'Histórico de avanços',
+      empty: 'Nenhum avanço comprado ainda.',
+      hint: 'Desfaça primeiro os avanços do Grau mais recente; o XP do avanço volta para o registro.',
+      tier: (tier) => `Grau ${tier}`,
+      undo: 'Desfazer',
+      lockedHint: 'Desfaça antes os avanços do Grau mais recente.',
+      confirmTitle: 'Desfazer este avanço?',
+      confirmDescription: (label, xp) =>
+        `${label}\n\nEle é removido do personagem e ${xp} XP voltam para o registro. Se era o último passo de um Grau, o personagem volta ao Grau anterior e as escolhas feitas para o novo Grau (habilidades, perícias) são removidas.`,
+      confirm: 'Desfazer avanço',
+      cancel: 'Cancelar',
+      working: 'Desfazendo…',
+      errors: {
+        notRevertable:
+          'Este avanço não pode ser desfeito agora: escolhas posteriores dependem dele.',
+        conflict: 'O personagem mudou em outra aba. Recarregue e tente de novo.',
+        generic: 'Não foi possível desfazer o avanço. Tente de novo.',
+      },
+    },
     errors: {
       insufficient: 'XP insuficiente para gastar essa quantidade.',
       locked: 'Esse registro pagou um avanço e não pode ser removido.',

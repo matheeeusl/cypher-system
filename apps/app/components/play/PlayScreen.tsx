@@ -10,6 +10,7 @@ import {
   ChipPicker,
   PoolSplitPicker,
   ConditionBanner,
+  ConfirmDialog,
   CypherPicker,
   InventoryList,
   NotesField,
@@ -30,6 +31,7 @@ import {
   purchaseAdvancementAction,
   removeItemAction,
   removeXpAction,
+  revertAdvancementAction,
   setNotesAction,
 } from '@/app/[locale]/characters/[id]/play/actions'
 import { POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
@@ -75,6 +77,10 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [tab, setTab] = useState<TabKey>('status')
   const [spent, setSpent] = useState<PoolPoints>(initial.spent)
   const [xp, setXp] = useState(initial.xp)
+  // The purchase being confirmed for undoing (an index into view.purchases).
+  const [undoIndex, setUndoIndex] = useState<number | null>(null)
+  const [undoBusy, setUndoBusy] = useState(false)
+  const [undoError, setUndoError] = useState<string | undefined>(undefined)
   // The skill whose description is open in the Skills tab (by name).
   const [openSkill, setOpenSkill] = useState<string | null>(null)
   const [inventory, setInventory] = useState<InventoryItem[]>(initial.inventory)
@@ -356,6 +362,37 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
       setError('picks', copy.picks.error)
     }
     setBusy(false)
+  }
+
+  async function undoPurchase() {
+    if (undoIndex === null) return
+    setUndoBusy(true)
+    setUndoError(undefined)
+    const e = copy.log.history.errors
+    try {
+      const res = await enqueue(() => revertAdvancementAction(view.characterId, undoIndex, locale))
+      if (res.ok) {
+        if (res.view) {
+          setView(res.view)
+          setXp(res.view.xp)
+          setSpent(res.view.spent)
+        } else {
+          router.refresh()
+        }
+        setUndoIndex(null)
+      } else {
+        setUndoError(
+          res.reason === 'not_revertable'
+            ? e.notRevertable
+            : res.reason === 'conflict'
+              ? e.conflict
+              : e.generic,
+        )
+      }
+    } catch {
+      setUndoError(e.generic)
+    }
+    setUndoBusy(false)
   }
 
   function onBuy(key: string) {
@@ -768,6 +805,63 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             onAdd={(entry) => void addXp(entry)}
             onRemove={(id) => void removeXp(id)}
           />
+          <section>
+            <h2 className="text-text-muted mb-1 font-mono text-xs tracking-wider uppercase">
+              {copy.log.history.title}
+            </h2>
+            <p className="text-text-muted mb-2.5 text-[12px]">{copy.log.history.hint}</p>
+            {view.purchases.length === 0 ? (
+              <p className="border-border text-text-muted rounded border border-dashed p-4 text-center font-mono text-xs italic">
+                {copy.log.history.empty}
+              </p>
+            ) : (
+              <ul className="flex flex-col gap-1.5">
+                {[...view.purchases].reverse().map((p) => (
+                  <li
+                    key={p.index}
+                    className="border-border bg-panel flex items-center justify-between gap-3 rounded border px-3.5 py-2"
+                  >
+                    <span className="min-w-0 text-[13px]">
+                      <span className="text-text-muted mr-2 font-mono text-[11px]">
+                        {copy.log.history.tier(p.tier)}
+                      </span>
+                      <span className="text-text">{p.label}</span>
+                    </span>
+                    <button
+                      type="button"
+                      disabled={!p.revertable || busy}
+                      title={p.revertable ? undefined : copy.log.history.lockedHint}
+                      onClick={() => {
+                        setUndoError(undefined)
+                        setUndoIndex(p.index)
+                      }}
+                      className="border-border text-text-muted hover:text-warning shrink-0 rounded border px-2.5 py-1 font-mono text-[11px] enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      {copy.log.history.undo}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <ConfirmDialog
+              open={undoIndex !== null}
+              title={copy.log.history.confirmTitle}
+              description={copy.log.history.confirmDescription(
+                view.purchases.find((p) => p.index === undoIndex)?.label ?? '',
+                view.advancement.costXp,
+              )}
+              confirmLabel={copy.log.history.confirm}
+              cancelLabel={copy.log.history.cancel}
+              busyLabel={copy.log.history.working}
+              busy={undoBusy}
+              errorMessage={undoError}
+              destructive
+              onConfirm={() => void undoPurchase()}
+              onCancel={() => {
+                if (!undoBusy) setUndoIndex(null)
+              }}
+            />
+          </section>
           <NotesField
             label={copy.log.notes}
             value={notes}

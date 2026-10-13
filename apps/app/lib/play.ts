@@ -344,6 +344,71 @@ export async function applyAdvancement(
   })
 }
 
+export type RevertResult = { ok: true } | { ok: false; reason: 'not_found' | 'conflict' }
+
+/**
+ * Undoes one advancement: stores the build without the purchase (and with the
+ * level-up picks that no longer apply removed), refunds its XP as an ordinary
+ * entry, and caps the spent Pool points at the new maximums. As with
+ * `applyAdvancement`, the caller has validated the result against the engine;
+ * this guards the concurrent-write part.
+ */
+export async function revertAdvancement(
+  userId: string,
+  characterId: string,
+  args: {
+    expected: AdvancementPurchaseInput[]
+    next: AdvancementPurchaseInput[]
+    expectedPicks: TierPicks
+    nextPicks: TierPicks
+    poolMax: PoolPoints
+    tier: number
+    refundXp: number
+    reason: string
+  },
+): Promise<RevertResult> {
+  return tx(async (client) => {
+    if (!(await owns(client, userId, characterId))) return { ok: false, reason: 'not_found' }
+    const play = await lockPlay(client, characterId)
+    const { rowCount } = await client.query(
+      `update character
+          set advancement = $3,
+              tier_picks = $4,
+              pool_max = $5,
+              summary = jsonb_set(summary, '{tier}', to_jsonb($6::int)),
+              updated_at = now()
+        where id = $1 and user_id = $2
+          and advancement = $7::jsonb and tier_picks = $8::jsonb`,
+      [
+        characterId,
+        userId,
+        JSON.stringify(args.next),
+        JSON.stringify(args.nextPicks),
+        JSON.stringify(args.poolMax),
+        args.tier,
+        JSON.stringify(args.expected),
+        JSON.stringify(args.expectedPicks),
+      ],
+    )
+    if ((rowCount ?? 0) === 0) return { ok: false, reason: 'conflict' }
+
+    // A lower maximum can't leave more points spent than the Pool holds.
+    const spent = Object.fromEntries(
+      POOL_KEYS.map((key) => [key, Math.min(play.spent[key], args.poolMax[key])]),
+    )
+    await client.query(
+      'update character_play set spent = $2, updated_at = now() where character_id = $1',
+      [characterId, JSON.stringify(spent)],
+    )
+    await client.query(
+      `insert into character_xp_entry (character_id, kind, amount, reason)
+       values ($1, 'gain', $2, $3)`,
+      [characterId, args.refundXp, args.reason],
+    )
+    return { ok: true }
+  })
+}
+
 /**
  * Replaces the level-up picks, but only if nobody changed them since `expected`.
  * Returns false on a conflict (or when the character isn't the user's).
