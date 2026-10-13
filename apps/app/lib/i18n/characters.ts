@@ -37,12 +37,30 @@ export const updatedPrefix: Record<Locale, string> = {
   'pt-br': 'Atualizado',
 }
 
-export const deleteConfirm: Record<Locale, (name: string) => string> = {
-  en: (name) => `Delete "${name}"? This can't be undone.`,
-  'pt-br': (name) => `Excluir "${name}"? Esta ação não pode ser desfeita.`,
+export interface DeleteDialogCopy {
+  title: (name: string) => string
+  body: string
+  confirm: string
+  cancel: string
+  deleting: string
+  failed: string
 }
 
-export const deleteFailed: Record<Locale, string> = {
-  en: 'Could not delete the character. Please try again.',
-  'pt-br': 'Não foi possível excluir o personagem. Tente novamente.',
+export const deleteDialog: Record<Locale, DeleteDialogCopy> = {
+  en: {
+    title: (name) => `Delete "${name}"?`,
+    body: "This can't be undone.",
+    confirm: 'Delete',
+    cancel: 'Cancel',
+    deleting: 'Deleting…',
+    failed: 'Could not delete the character. Please try again.',
+  },
+  'pt-br': {
+    title: (name) => `Excluir "${name}"?`,
+    body: 'Esta ação não pode ser desfeita.',
+    confirm: 'Excluir',
+    cancel: 'Cancelar',
+    deleting: 'Excluindo…',
+    failed: 'Não foi possível excluir o personagem. Tente novamente.',
+  },
 }

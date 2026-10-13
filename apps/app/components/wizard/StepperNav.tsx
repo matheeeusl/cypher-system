@@ -23,9 +23,9 @@ export function StepperNav({ steps, currentIndex, onJump }: StepperNavProps) {
                 onClick={() => onJump(i)}
                 className={`flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full border-[1.5px] font-mono text-[11px] ${
                   isCurrent
-                    ? 'border-accent bg-accent-soft text-accent'
+                    ? 'border-accent bg-accent-soft text-accent cursor-pointer'
                     : isDone
-                      ? 'border-accent bg-accent text-bg'
+                      ? 'border-accent bg-accent text-bg cursor-pointer'
                       : 'border-border text-text-muted bg-transparent'
                 }`}
               >

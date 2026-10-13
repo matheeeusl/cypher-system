@@ -40,6 +40,7 @@ const copy = {
     toSheet: '← Character sheet',
     toList: '← My Characters',
     delete: 'Delete',
+    cancel: 'Cancel',
     empty: 'No characters yet.',
   },
   'pt-br': {
@@ -74,6 +75,7 @@ const copy = {
     toSheet: '← Ficha do personagem',
     toList: '← Meus Personagens',
     delete: 'Excluir',
+    cancel: 'Cancelar',
     empty: 'Nenhum personagem ainda.',
   },
 } as const
@@ -167,8 +169,14 @@ for (const locale of ['en', 'pt-br'] as const) {
     await card.click()
     await expect(page.getByRole('heading', { name: 'E2E Hero' })).toBeVisible()
     await page.getByRole('link', { name: t.toList }).click()
-    page.once('dialog', (dialog) => void dialog.accept())
     await page.getByRole('button', { name: t.delete }).click()
+    // A modal dialog (not window.confirm) asks first; cancelling keeps the card
+    const dialog = page.getByRole('dialog')
+    await expect(dialog).toContainText('E2E Hero')
+    await dialog.getByRole('button', { name: t.cancel }).click()
+    await expect(card).toBeVisible()
+    await page.getByRole('button', { name: t.delete }).click()
+    await dialog.getByRole('button', { name: t.delete }).click()
     await expect(page.getByText(t.empty)).toBeVisible()
   })
 }
