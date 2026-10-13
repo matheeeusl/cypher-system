@@ -10,6 +10,9 @@ export const ADVANCEMENT_COST_XP = 4
  */
 export const ADVANCEMENTS_PER_TIER = 4
 
+/** The highest tier a character can reach. */
+export const MAX_TIER = 6
+
 /**
  * The standard menu of character advancements. Purchasing one costs
  * ADVANCEMENT_COST_XP and can only be done once per tier per advancement;

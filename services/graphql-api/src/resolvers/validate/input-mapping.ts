@@ -22,6 +22,11 @@ export interface FocusChoiceSelectionInput {
   abilityId: string
 }
 
+export interface TypeAbilityPickInput {
+  tier: number
+  abilityId: string
+}
+
 export interface IncreasingCapabilitiesPurchaseInput {
   tier: number
   statPoolAllocation: StatAllocationInput
@@ -62,6 +67,7 @@ export interface CharacterChoicesInput {
   descriptorPoolBonus?: DescriptorPoolBonusInput | null
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: FocusChoiceSelectionInput[]
+  typeAbilityPicks?: TypeAbilityPickInput[] | null
   descriptorSkillChoices: string[]
   advancementPurchases: AdvancementPurchaseInput[]
 }
@@ -104,8 +110,18 @@ export function mapAdvancementPurchase(input: AdvancementPurchaseInput): Advance
 
 export function mapFocusChoiceSelections(
   list: FocusChoiceSelectionInput[],
-): Record<string, string> {
-  return Object.fromEntries(list.map(({ tier, abilityId }) => [String(tier), abilityId]))
+): Record<string, string[]> {
+  return groupByTier(list)
+}
+
+export function mapTypeAbilityPicks(list: TypeAbilityPickInput[]): Record<string, string[]> {
+  return groupByTier(list)
+}
+
+function groupByTier(list: Array<{ tier: number; abilityId: string }>): Record<string, string[]> {
+  const grouped: Record<string, string[]> = {}
+  for (const { tier, abilityId } of list) (grouped[String(tier)] ??= []).push(abilityId)
+  return grouped
 }
 
 export function mapCharacterChoicesInput(input: CharacterChoicesInput): CharacterChoices {
@@ -125,6 +141,9 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       : {}),
     tier_1_type_ability_ids: input.tier1TypeAbilityIds,
     focus_choice_selections: mapFocusChoiceSelections(input.focusChoiceSelections),
+    ...((input.typeAbilityPicks ?? []).length > 0
+      ? { type_ability_picks: mapTypeAbilityPicks(input.typeAbilityPicks ?? []) }
+      : {}),
     descriptor_skill_choices: input.descriptorSkillChoices,
     advancement_purchases: input.advancementPurchases.map(mapAdvancementPurchase),
   }

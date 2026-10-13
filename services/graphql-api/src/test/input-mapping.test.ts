@@ -83,7 +83,16 @@ describe('mapFocusChoiceSelections', () => {
         { tier: 3, abilityId: 'dual-medium-wield' },
         { tier: 6, abilityId: 'precise-cut' },
       ]),
-    ).toEqual({ '3': 'dual-medium-wield', '6': 'precise-cut' })
+    ).toEqual({ '3': ['dual-medium-wield'], '6': ['precise-cut'] })
+  })
+
+  it('keeps every ability of a tier together, instead of collapsing to the last one', () => {
+    expect(
+      mapFocusChoiceSelections([
+        { tier: 3, abilityId: 'a' },
+        { tier: 3, abilityId: 'b' },
+      ]),
+    ).toEqual({ '3': ['a', 'b'] })
   })
 
   it('returns an empty record for an empty list', () => {
@@ -114,7 +123,7 @@ describe('mapCharacterChoicesInput', () => {
       pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
       descriptor_pool_bonus: { stat: 'might', amount: 4 },
       tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
-      focus_choice_selections: { '3': 'dual-medium-wield' },
+      focus_choice_selections: { '3': ['dual-medium-wield'] },
       descriptor_skill_choices: ['perception'],
       advancement_purchases: [{ tier: 2, option: 'extra-effort' }],
     })

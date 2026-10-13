@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
-import { resolveTypeAbilities } from '../character/type-abilities.js'
+import { resolveTypeAbilities, resolveTypeTierPicks } from '../character/type-abilities.js'
+import type { PendingPick } from '../character/types.js'
 
 // Real data from content/types/warrior.yaml.
 const warrior = {
@@ -82,5 +83,45 @@ describe('resolveTypeAbilities', () => {
     expect(() =>
       resolveTypeAbilities(warrior, ['bash', 'overwatch', 'swipe', 'onslaught']),
     ).toThrow(/not one of this Type's tier-1 abilities/)
+  })
+})
+
+describe('resolveTypeTierPicks', () => {
+  const type = {
+    id: 'warrior',
+    tier_abilities: { '1': ['a', 'b', 'c', 'd', 'e'], '2': ['f', 'g'], '3': ['h'] },
+    tier_choose_counts: { '1': 4, '2': 2, '3': 3 },
+  }
+  const known = ['a', 'b', 'c', 'd']
+
+  it('grants nothing at tier 1', () => {
+    const pending: PendingPick[] = []
+    expect(resolveTypeTierPicks(type, 1, {}, known, pending)).toEqual([])
+    expect(pending).toEqual([])
+  })
+
+  it('reports unmade picks for each reached tier as pending', () => {
+    const pending: PendingPick[] = []
+    resolveTypeTierPicks(type, 3, { '2': ['f'] }, known, pending)
+    expect(pending).toEqual([
+      { kind: 'type', tier: 2, required: 2, chosen: 1 },
+      { kind: 'type', tier: 3, required: 3, chosen: 0 },
+    ])
+  })
+
+  it('lets a pick come from the tier or any lower one', () => {
+    const picks = resolveTypeTierPicks(type, 2, { '2': ['e', 'g'] }, known, [])
+    expect(picks.map((p) => p.ability_id)).toEqual(['e', 'g'])
+    expect(picks[0]?.source).toEqual({ kind: 'type', type_id: 'warrior' })
+  })
+
+  it('rejects abilities from a higher tier, duplicates, too many, and unreached tiers', () => {
+    const run = (picks: Record<string, string[]>, tier = 2) =>
+      resolveTypeTierPicks(type, tier, picks, known, [])
+    expect(() => run({ '2': ['h'] })).toThrow(/at or below tier 2/)
+    expect(() => run({ '2': ['a'] })).toThrow(/more than once/)
+    expect(() => run({ '2': ['f', 'f'] })).toThrow(/more than once/)
+    expect(() => run({ '2': ['e', 'f', 'g'] })).toThrow(/more were supplied/)
+    expect(() => run({ '3': ['h'] })).toThrow(/not reached yet/)
   })
 })

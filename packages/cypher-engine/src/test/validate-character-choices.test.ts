@@ -113,7 +113,7 @@ const validChoices: CharacterChoices = {
   pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
   descriptor_pool_bonus: { stat: 'might', amount: 4 },
   tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
-  focus_choice_selections: { '3': 'dual-medium-wield' },
+  focus_choice_selections: { '3': ['dual-medium-wield'] },
   descriptor_skill_choices: [],
   advancement_purchases: [
     ...completeTier(2, {
@@ -140,7 +140,7 @@ describe('validateCharacterChoices', () => {
     const choices: CharacterChoices = {
       ...validChoices,
       pool_point_allocation: { might: 2, speed: 2, intellect: 1 }, // sums to 5, not 6
-      focus_choice_selections: { '3': 'not-a-real-option' }, // invalid for tier 3's choice
+      focus_choice_selections: { '3': ['not-a-real-option'] }, // invalid for tier 3's choice
     }
 
     const result = validateCharacterChoices(choices, content)
@@ -148,7 +148,7 @@ describe('validateCharacterChoices', () => {
     if (result.valid) throw new Error('expected invalid result')
 
     expect(result.errors.some((e) => /sum to exactly 6/.test(e))).toBe(true)
-    expect(result.errors.some((e) => /not one of that tier's two options/.test(e))).toBe(true)
+    expect(result.errors.some((e) => /not a valid set of that tier's options/.test(e))).toBe(true)
   })
 
   it('blocks Focus ability validation when tier resolution fails, without attempting it against a guessed tier', () => {
@@ -292,5 +292,62 @@ describe('validateCharacterChoices issues', () => {
       code: 'POOL_ALLOCATION_SUM',
       params: { label: 'pool_point_allocation', expected: 6, actual: 9 },
     })
+  })
+})
+
+describe('validateCharacterChoices with level-up picks', () => {
+  it('is valid with outstanding picks, and lists them as pending', () => {
+    const result = validateCharacterChoices(
+      { ...validChoices, focus_choice_selections: {} },
+      content,
+    )
+    if (!result.valid) throw new Error('expected valid')
+    expect(result.character.pending_picks).toEqual([
+      { kind: 'type', tier: 2, required: 2, chosen: 0 },
+      { kind: 'type', tier: 3, required: 3, chosen: 0 },
+      { kind: 'focus', tier: 3, required: 1, chosen: 0 },
+    ])
+  })
+
+  it('adds made picks to the known abilities and clears them from pending', () => {
+    const result = validateCharacterChoices(
+      {
+        ...validChoices,
+        type_ability_picks: { '2': ['combat-prowess', 'quick-throw'], '3': ['a', 'b', 'c'] },
+      },
+      {
+        ...content,
+        type: {
+          ...warrior,
+          tier_abilities: { ...warrior.tier_abilities, '3': ['a', 'b', 'c'] },
+        },
+      },
+    )
+    if (!result.valid) throw new Error(result.errors.join('; '))
+    expect(result.character.pending_picks).toEqual([])
+    expect(result.character.known_abilities.map((a) => a.ability_id)).toEqual(
+      expect.arrayContaining(['combat-prowess', 'quick-throw', 'a', 'b', 'c']),
+    )
+  })
+
+  it('rejects a tier above the maximum', () => {
+    const result = validateCharacterChoices(
+      {
+        ...validChoices,
+        advancement_purchases: [
+          ...validChoices.advancement_purchases,
+          ...[4, 5, 6, 7].flatMap((tier) =>
+            completeTier(tier, {
+              tier,
+              option: 'skills',
+              target: { kind: 'skill', skill_id: `skill-${tier}` },
+            }),
+          ),
+        ],
+      },
+      content,
+    )
+    if (result.valid) throw new Error('expected invalid')
+    expect(result.issues.some((i) => i.code === 'TIER_TOO_HIGH')).toBe(true)
   })
 })

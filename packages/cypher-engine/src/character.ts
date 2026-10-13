@@ -10,11 +10,16 @@ import {
   applySkillAdvancementPurchase,
 } from './character/skills.js'
 import { deriveTier } from './character/tier.js'
-import { resolveTypeAbilities } from './character/type-abilities.js'
+import {
+  resolveTypeAbilities,
+  resolveTypeTierPicks,
+  sortPending,
+} from './character/type-abilities.js'
 import type {
   CharacterChoices,
   DerivedCharacter,
   KnownAbility,
+  PendingPick,
   SkillLevel,
 } from './character/types.js'
 
@@ -51,9 +56,18 @@ export function deriveCharacter(
     choices.advancement_purchases,
   )
 
+  const pending: PendingPick[] = []
+  const tier1TypeAbilities = resolveTypeAbilities(type, choices.tier_1_type_ability_ids)
   let knownAbilities: KnownAbility[] = [
-    ...resolveTypeAbilities(type, choices.tier_1_type_ability_ids),
-    ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections),
+    ...tier1TypeAbilities,
+    ...resolveTypeTierPicks(
+      type,
+      tier,
+      choices.type_ability_picks ?? {},
+      tier1TypeAbilities.map((a) => a.ability_id),
+      pending,
+    ),
+    ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections, pending),
   ]
 
   let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)
@@ -75,5 +89,13 @@ export function deriveCharacter(
     }
   }
 
-  return { tier, pools, edge, effort, known_abilities: knownAbilities, skills }
+  return {
+    tier,
+    pools,
+    edge,
+    effort,
+    known_abilities: knownAbilities,
+    skills,
+    pending_picks: sortPending(pending),
+  }
 }

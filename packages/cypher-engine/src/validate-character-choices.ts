@@ -8,8 +8,12 @@ import {
   applySkillAdvancementPurchase,
 } from './character/skills.js'
 import { deriveTier } from './character/tier.js'
-import { resolveTypeAbilities } from './character/type-abilities.js'
-import type { KnownAbility } from './character/types.js'
+import {
+  resolveTypeAbilities,
+  resolveTypeTierPicks,
+  sortPending,
+} from './character/type-abilities.js'
+import type { KnownAbility, PendingPick } from './character/types.js'
 import type { CharacterChoices, CharacterContent, DerivedCharacter } from './character.js'
 import { CharacterRuleError, type ValidationIssue } from './errors.js'
 
@@ -76,6 +80,8 @@ export function validateCharacterChoices(
   )
   const typeAbilities = attempt(() => resolveTypeAbilities(type, choices.tier_1_type_ability_ids))
 
+  const pending: PendingPick[] = []
+  let typePicks: KnownAbility[] | undefined
   let focusAbilities: KnownAbility[] | undefined
   if (tier === undefined) {
     report('Focus abilities cannot be validated: tier must be resolved first', {
@@ -84,8 +90,19 @@ export function validateCharacterChoices(
     })
   } else {
     focusAbilities = attempt(() =>
-      resolveFocusAbilities(focus, tier, choices.focus_choice_selections),
+      resolveFocusAbilities(focus, tier, choices.focus_choice_selections, pending),
     )
+    if (typeAbilities !== undefined) {
+      typePicks = attempt(() =>
+        resolveTypeTierPicks(
+          type,
+          tier,
+          choices.type_ability_picks ?? {},
+          typeAbilities.map((a) => a.ability_id),
+          pending,
+        ),
+      )
+    }
   }
 
   // deriveEdge is a pure sum with no validation of its own — nothing is
@@ -94,7 +111,7 @@ export function validateCharacterChoices(
     startingEdge === undefined ? undefined : deriveEdge(startingEdge, choices.advancement_purchases)
 
   let knownAbilities: KnownAbility[] | undefined
-  if (typeAbilities === undefined || focusAbilities === undefined) {
+  if (typeAbilities === undefined || focusAbilities === undefined || typePicks === undefined) {
     report(
       'Ability-training purchases cannot be validated: known abilities must be resolved first',
       {
@@ -103,7 +120,7 @@ export function validateCharacterChoices(
       },
     )
   } else {
-    knownAbilities = [...typeAbilities, ...focusAbilities]
+    knownAbilities = [...typeAbilities, ...typePicks, ...focusAbilities]
   }
 
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))
@@ -145,6 +162,7 @@ export function validateCharacterChoices(
       effort,
       known_abilities: knownAbilities!,
       skills: skills!,
+      pending_picks: sortPending(pending),
     },
   }
 }

@@ -1,6 +1,6 @@
 import type { Type } from '@cypher/content'
 
-import type { KnownAbility } from './types.js'
+import type { KnownAbility, PendingPick } from './types.js'
 import { CharacterRuleError } from '../errors.js'
 
 const REQUIRED_TIER_1_COUNT = 4
@@ -54,4 +54,86 @@ export function resolveTypeAbilities(
   }
 
   return abilities
+}
+
+const PICK_ERRORS = {
+  TOO_MANY: (tier: number, required: number) =>
+    `Tier ${tier} lets this Type pick ${required} ability(ies), but more were supplied`,
+  UNAVAILABLE: (id: string, tier: number) =>
+    `"${id}" is not one of this Type's abilities at or below tier ${tier}`,
+  DUPLICATE: (id: string) => `"${id}" is picked more than once across the Type abilities`,
+  FUTURE_TIER: (tier: number) =>
+    `Type ability picks were supplied for tier ${tier}, not reached yet`,
+}
+
+/**
+ * Resolves the Type abilities picked from tier 2 up. Each tier's pick count
+ * is the Type's `tier_choose_counts`; a pick may come from that tier or any
+ * lower one, and no ability can be known twice (counting the tier-1 picks in
+ * `alreadyKnown`). Fewer picks than required is not an error — those are
+ * reported in `pending`, the player's outstanding choices after a tier-up.
+ */
+export function resolveTypeTierPicks(
+  type: Pick<Type, 'id' | 'tier_abilities' | 'tier_choose_counts'>,
+  currentTier: number,
+  picks: Record<string, string[]>,
+  alreadyKnown: string[],
+  pending: PendingPick[],
+): KnownAbility[] {
+  for (const tierKey of Object.keys(picks)) {
+    if (Number(tierKey) > currentTier || Number(tierKey) < 2) {
+      throw new CharacterRuleError(
+        'TYPE_PICKS_FUTURE_TIER',
+        PICK_ERRORS.FUTURE_TIER(Number(tierKey)),
+        {
+          tier: Number(tierKey),
+        },
+      )
+    }
+  }
+
+  const source = { kind: 'type', type_id: type.id } as const
+  const known = new Set(alreadyKnown)
+  const abilities: KnownAbility[] = []
+  const available = new Set<string>(type.tier_abilities['1'] ?? [])
+
+  for (let tier = 2; tier <= currentTier; tier++) {
+    for (const id of type.tier_abilities[String(tier)] ?? []) available.add(id)
+    const required = type.tier_choose_counts[String(tier)] ?? 0
+    const chosen = picks[String(tier)] ?? []
+
+    if (chosen.length > required) {
+      throw new CharacterRuleError('TYPE_PICKS_TOO_MANY', PICK_ERRORS.TOO_MANY(tier, required), {
+        tier,
+        required,
+      })
+    }
+    for (const id of chosen) {
+      if (!available.has(id)) {
+        throw new CharacterRuleError('TYPE_PICKS_UNAVAILABLE', PICK_ERRORS.UNAVAILABLE(id, tier), {
+          tier,
+          abilityId: id,
+        })
+      }
+      if (known.has(id)) {
+        throw new CharacterRuleError('TYPE_PICKS_DUPLICATE', PICK_ERRORS.DUPLICATE(id), {
+          abilityId: id,
+        })
+      }
+      known.add(id)
+      abilities.push({ ability_id: id, source, trained: false })
+    }
+    if (chosen.length < required) {
+      pending.push({ kind: 'type', tier, required, chosen: chosen.length })
+    }
+  }
+
+  return abilities
+}
+
+/** Pending picks in the order a player would make them: by tier, Type before Focus. */
+export function sortPending(pending: PendingPick[]): PendingPick[] {
+  return [...pending].sort(
+    (a, b) => a.tier - b.tier || (a.kind === b.kind ? 0 : a.kind === 'type' ? -1 : 1),
+  )
 }

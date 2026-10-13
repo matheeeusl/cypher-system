@@ -31,10 +31,13 @@ export interface CharacterChoices {
 
   /**
    * Only for Focus tiers whose tier_abilities entries include a `choice`
-   * variant: tier (string key, matching Focus.tier_abilities) -> the chosen
-   * ability_id. "granted" abilities need no entry here.
+   * variant: tier (string key, matching Focus.tier_abilities) -> the ability
+   * ids of the chosen option(s) — `count` options, a bundled pair counting as
+   * one option but contributing both ids. "granted" abilities need no entry
+   * here. A choice at tier 2+ may be left out for now (it becomes a pending
+   * pick); tier 1 is the creation step and stays required.
    */
-  focus_choice_selections: Record<string, string>
+  focus_choice_selections: Record<string, string[]>
 
   /**
    * Skill ids chosen for the Descriptor's "N skills of your choice"
@@ -47,6 +50,15 @@ export interface CharacterChoices {
   descriptor_skill_choices: string[]
 
   advancement_purchases: AdvancementPurchase[]
+
+  /**
+   * Type abilities picked on reaching tier 2 and above: tier (string key) ->
+   * ability ids. The pick count per tier is the Type's `tier_choose_counts`,
+   * and each pick comes from that tier _or any lower one_. Picks not made yet
+   * simply show up in `DerivedCharacter.pending_picks` — they are the player's
+   * next to-do after a tier-up, not an error.
+   */
+  type_ability_picks?: Record<string, string[]>
 }
 
 export type AdvancementPurchase =
@@ -89,6 +101,11 @@ export interface KnownAbility {
 
 export type SkillLevel = 'inability' | 'practiced' | 'trained' | 'specialized'
 
+/** A level-up choice the character hasn't made yet. */
+export type PendingPick =
+  | { kind: 'type'; tier: number; required: number; chosen: number }
+  | { kind: 'focus'; tier: number; required: number; chosen: number }
+
 export interface DerivedCharacter {
   tier: number
   pools: Record<Stat, { max: number }>
@@ -97,4 +114,6 @@ export interface DerivedCharacter {
   known_abilities: KnownAbility[]
   /** Only entries actually touched by some source — not every skill at a default "practiced" level. */
   skills: Record<string, { level: SkillLevel }>
+  /** Type/Focus picks owed for tiers already reached (empty when nothing is outstanding). */
+  pending_picks: PendingPick[]
 }

@@ -1,4 +1,4 @@
-import { ADVANCEMENTS_PER_TIER, STANDARD_ADVANCEMENTS } from '../advancement.js'
+import { ADVANCEMENTS_PER_TIER, MAX_TIER, STANDARD_ADVANCEMENTS } from '../advancement.js'
 import type { AdvancementPurchase } from './types.js'
 import { CharacterRuleError } from '../errors.js'
 
@@ -13,6 +13,7 @@ const ERRORS = {
     `Tier ${tier} purchases repeat the same advancement option more than once`,
   INCOMPLETE_TIER: (tier: number) =>
     `Tier ${tier} has ${ADVANCEMENTS_PER_TIER} standard advancements to purchase, but a different number were supplied`,
+  TOO_HIGH: (tier: number) => `Tier ${tier} is above the maximum tier ${MAX_TIER}`,
   GAP: (tier: number) =>
     `Tier ${tier} has no purchases, but a later tier does — tiers must complete in order`,
 }
@@ -46,6 +47,10 @@ export function deriveTier(purchases: AdvancementPurchase[]): number {
   if (purchasesByTier.size === 0) return 1
 
   const highestTierWithPurchases = Math.max(...purchasesByTier.keys())
+  if (highestTierWithPurchases > MAX_TIER)
+    throw new CharacterRuleError('TIER_TOO_HIGH', ERRORS.TOO_HIGH(highestTierWithPurchases), {
+      tier: highestTierWithPurchases,
+    })
 
   let tier = 1
   for (let candidateTier = 2; candidateTier <= highestTierWithPurchases; candidateTier++) {

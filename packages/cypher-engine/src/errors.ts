@@ -24,6 +24,11 @@ export type RuleErrorCode =
   | 'TYPE_ABILITY_COUNT'
   | 'TYPE_ABILITY_DUPLICATE'
   | 'TYPE_ABILITY_UNAVAILABLE'
+  | 'TYPE_PICKS_TOO_MANY'
+  | 'TYPE_PICKS_UNAVAILABLE'
+  | 'TYPE_PICKS_DUPLICATE'
+  | 'TYPE_PICKS_FUTURE_TIER'
+  | 'TIER_TOO_HIGH'
   | 'UNKNOWN'
 
 export type RuleErrorParams = Record<string, string | number>

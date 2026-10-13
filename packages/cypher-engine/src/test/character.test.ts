@@ -100,7 +100,7 @@ describe('deriveCharacter (Warrior, end-to-end)', () => {
     pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
     descriptor_pool_bonus: { stat: 'might', amount: 4 },
     tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
-    focus_choice_selections: { '3': 'dual-medium-wield' },
+    focus_choice_selections: { '3': ['dual-medium-wield'] },
     descriptor_skill_choices: [],
     advancement_purchases: [
       // Tier 2, all 4 standard options.

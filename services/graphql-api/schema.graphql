@@ -38,6 +38,10 @@ type WeaponProficiency {
   practiced: [WeaponCategory!]!
   inability: [WeaponCategory!]!
 }
+type TypeTierChooseCount {
+  tier: Int!
+  count: Int!
+}
 type TypeTierAbilityGroup {
   tier: Int!
   abilityIds: [ID!]!
@@ -81,6 +85,8 @@ type Type {
   startingSkills: [ID!]!
   startingEquipment: TypeStartingEquipment!
   tierAbilities: [TypeTierAbilityGroup!]!
+  # How many Type abilities the player picks on reaching each tier.
+  tierChooseCounts: [TypeTierChooseCount!]!
   contentVersion: String!
 }
 
@@ -257,7 +263,13 @@ input DescriptorPoolBonusInput {
   stat: Stat!
   amount: Int!
 }
+# One ability of a Focus choice at `tier`. A choice of `count` options is sent as
+# all the ability ids of the chosen options (a bundled pair sends both ids).
 input FocusChoiceSelectionInput {
+  tier: Int!
+  abilityId: ID!
+}
+input TypeAbilityPickInput {
   tier: Int!
   abilityId: ID!
 }
@@ -297,6 +309,8 @@ input CharacterChoicesInput {
   descriptorPoolBonus: DescriptorPoolBonusInput
   tier1TypeAbilityIds: [ID!]!
   focusChoiceSelections: [FocusChoiceSelectionInput!]!
+  # Type abilities picked from tier 2 up (the tier-1 picks are tier1TypeAbilityIds).
+  typeAbilityPicks: [TypeAbilityPickInput!]! = []
   descriptorSkillChoices: [ID!]!
   advancementPurchases: [AdvancementPurchaseInput!]!
 }
@@ -347,6 +361,16 @@ type DerivedCharacterPayload {
   effort: Int!
   knownAbilities: [KnownAbility!]!
   skills: [SkillEntry!]!
+  # Level-up choices still owed for tiers already reached.
+  pendingPicks: [PendingPick!]!
+}
+
+type PendingPick {
+  # "type" or "focus"
+  kind: String!
+  tier: Int!
+  required: Int!
+  chosen: Int!
 }
 
 type ValidCharacterResult {
@@ -375,6 +399,8 @@ type AdvancementRules {
   costXp: Int!
   # Advancements that must all be bought to reach the next tier.
   perTier: Int!
+  # The highest tier a character can reach.
+  maxTier: Int!
 }
 
 # ---- queries ----

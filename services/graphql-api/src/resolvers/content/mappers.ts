@@ -86,6 +86,9 @@ export function mapType(t: WithVersion<Type>) {
       })),
     },
     tierAbilities: mapTypeTierAbilities(t.tier_abilities),
+    tierChooseCounts: Object.entries(t.tier_choose_counts)
+      .map(([tier, count]) => ({ tier: Number(tier), count }))
+      .sort((a, b) => a.tier - b.tier),
     contentVersion: t.content_version,
   }
 }
