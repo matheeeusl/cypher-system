@@ -9,6 +9,7 @@ import type {
   Type,
   WithVersion,
 } from '@cypher/content'
+import { getCypherLimit } from '@cypher/engine'
 
 type LocalizedStringValue = { en: string; 'pt-BR': string }
 
@@ -69,6 +70,7 @@ export function mapType(t: WithVersion<Type>) {
     startingPools: t.starting_pools,
     startingEdge: { statChoices: t.starting_edge.stat_choices, amount: t.starting_edge.amount },
     specialAbilityId: t.special_ability_id,
+    cypherLimit: getCypherLimit(t),
     weaponProficiency: {
       practiced: t.weapon_proficiency.practiced,
       inability: t.weapon_proficiency.inability,

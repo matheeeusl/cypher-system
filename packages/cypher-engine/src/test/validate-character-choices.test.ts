@@ -154,12 +154,20 @@ describe('validateCharacterChoices', () => {
   it('blocks Focus ability validation when tier resolution fails, without attempting it against a guessed tier', () => {
     const choices: CharacterChoices = {
       ...validChoices,
-      // Incomplete tier 2 (only 3 of the 4 standard advancements) -> deriveTier throws.
-      advancement_purchases: completeTier(2, {
-        tier: 2,
-        option: 'skills',
-        target: { kind: 'skill', skill_id: 'perception' },
-      }).slice(0, 3),
+      // Incomplete tier 2 (only 3 of the 4 standard advancements) while tier 3
+      // already has purchases -> deriveTier throws.
+      advancement_purchases: [
+        ...completeTier(2, {
+          tier: 2,
+          option: 'skills',
+          target: { kind: 'skill', skill_id: 'perception' },
+        }).slice(0, 3),
+        ...completeTier(3, {
+          tier: 3,
+          option: 'skills',
+          target: { kind: 'skill', skill_id: 'perception' },
+        }),
+      ],
       // No tier-3 selection supplied. If resolveFocusAbilities were (incorrectly)
       // attempted anyway with some guessed tier >= 3, this would additionally
       // throw "no selection was supplied" — its absence proves it wasn't attempted.
@@ -254,6 +262,21 @@ describe('validateCharacterChoices', () => {
     expect(result.errors.some((e) => /isn't among this character's known abilities/.test(e))).toBe(
       true,
     )
+  })
+})
+
+describe('validateCharacterChoices with a partly bought tier', () => {
+  it('is valid: partial progress toward the next tier keeps the current tier and applies the purchases', () => {
+    const partial: CharacterChoices = {
+      ...validChoices,
+      focus_choice_selections: {},
+      advancement_purchases: [{ tier: 2, option: 'extra-effort' }],
+    }
+    const result = validateCharacterChoices(partial, content)
+    expect(result.valid).toBe(true)
+    if (!result.valid) throw new Error('expected valid')
+    expect(result.character.tier).toBe(1)
+    expect(result.character.effort).toBe(2)
   })
 })
 

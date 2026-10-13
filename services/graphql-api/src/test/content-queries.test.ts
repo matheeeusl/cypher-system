@@ -26,6 +26,7 @@ describe('content queries', () => {
         startingEdge: { statChoices: string[]; amount: number }
         weaponProficiency: { practiced: string[]; inability: string[] }
         specialAbilityId: string | null
+        cypherLimit: number
         startingEquipment: {
           clothing: boolean
           weapon: LocalizedStringPayload | null
@@ -54,6 +55,7 @@ describe('content queries', () => {
           startingEdge { statChoices amount }
           weaponProficiency { practiced inability }
           specialAbilityId
+          cypherLimit
           startingEquipment {
             clothing
             weapon { en ptBR }
@@ -73,6 +75,7 @@ describe('content queries', () => {
       startingEdge: { statChoices: ['MIGHT', 'SPEED'], amount: 1 },
       weaponProficiency: { practiced: ['LIGHT', 'MEDIUM', 'HEAVY'], inability: [] },
       specialAbilityId: null,
+      cypherLimit: 2,
     })
     // Real rulebook text from content/types/warrior.yaml, not a paraphrase —
     // pinned so a future content or mapper regression (e.g. dropping a role,
@@ -540,5 +543,15 @@ describe('content queries', () => {
       effectTable: null,
       flavorQuote: null,
     })
+  })
+})
+
+describe('advancementRules query', () => {
+  it('exposes the engine constants (4 XP per advancement, 4 advancements per tier)', async () => {
+    const result = await graphqlRequest<{ advancementRules: { costXp: number; perTier: number } }>(
+      `{ advancementRules { costXp perTier } }`,
+    )
+    expect(result.errors).toBeUndefined()
+    expect(result.data.advancementRules).toEqual({ costXp: 4, perTier: 4 })
   })
 })

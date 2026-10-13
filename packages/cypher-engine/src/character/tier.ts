@@ -18,9 +18,12 @@ const ERRORS = {
 }
 
 /**
- * Current tier, derived from advancement purchase history. A tier is
- * "complete" only once all 4 standard advancements have been purchased for
- * it (each exactly once); tiers must complete in order, starting at 2.
+ * Current tier, derived from advancement purchase history. A purchase's
+ * `tier` is the tier it advances the character *toward* (the four purchases
+ * tagged `tier: 2` take a tier-1 character to tier 2). A tier is "complete"
+ * only once all 4 standard advancements have been purchased for it (each
+ * exactly once); tiers must complete in order, starting at 2. The newest tier
+ * may be incomplete (the character is partway there and keeps the current tier).
  */
 export function deriveTier(purchases: AdvancementPurchase[]): number {
   for (const purchase of purchases) {
@@ -62,7 +65,13 @@ export function deriveTier(purchases: AdvancementPurchase[]): number {
     }
     // No duplicates + this many entries, drawn from exactly 4 possible
     // standard option ids, means all 4 are present only when the count
-    // matches — otherwise the tier is incomplete.
+    // matches. The newest tier may be only partly bought — advancements are
+    // purchased one at a time, in any order, and the character advances only
+    // when the fourth lands — so it just doesn't count yet. An older tier with
+    // fewer than 4 is a real error: a later tier can't start before it finishes.
+    if (optionIds.length < ADVANCEMENTS_PER_TIER && candidateTier === highestTierWithPurchases) {
+      break
+    }
     if (optionIds.length !== ADVANCEMENTS_PER_TIER) {
       throw new CharacterRuleError('TIER_INCOMPLETE', ERRORS.INCOMPLETE_TIER(candidateTier), {
         tier: candidateTier,

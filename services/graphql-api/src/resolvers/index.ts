@@ -1,4 +1,5 @@
 import { abilityResolvers } from './content/abilities.js'
+import { advancementResolvers } from './content/advancement.js'
 import { artifactResolvers } from './content/artifacts.js'
 import { cypherResolvers } from './content/cyphers.js'
 import { descriptorResolvers } from './content/descriptors.js'
@@ -18,6 +19,7 @@ import { validateResolvers } from './validate/validate-character-choices.js'
 export const resolvers = {
   ...enumResolvers,
   Query: {
+    ...advancementResolvers.Query,
     ...typeResolvers.Query,
     ...descriptorResolvers.Query,
     ...focusResolvers.Query,

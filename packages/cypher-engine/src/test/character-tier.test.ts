@@ -39,8 +39,13 @@ describe('deriveTier', () => {
     expect(() => deriveTier(purchases)).toThrow(/repeat the same advancement option/)
   })
 
-  it('throws if a tier has fewer than the 4 standard advancements', () => {
-    const purchases = completeTier(2).slice(0, 3)
+  it('stays on the current tier while the newest tier is only partly purchased', () => {
+    expect(deriveTier(completeTier(2).slice(0, 3))).toBe(1)
+    expect(deriveTier([...completeTier(2), ...completeTier(3).slice(0, 1)])).toBe(2)
+  })
+
+  it('throws if an earlier tier has fewer than the 4 standard advancements', () => {
+    const purchases = [...completeTier(2).slice(0, 3), ...completeTier(3)]
     expect(() => deriveTier(purchases)).toThrow(/different number were supplied/)
   })
 

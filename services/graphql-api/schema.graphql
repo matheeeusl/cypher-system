@@ -75,6 +75,8 @@ type Type {
   startingPools: StartingPools!
   startingEdge: StartingEdge!
   specialAbilityId: ID
+  # How many cyphers this Type can bear at once (the engine's getCypherLimit).
+  cypherLimit: Int!
   weaponProficiency: WeaponProficiency!
   startingSkills: [ID!]!
   startingEquipment: TypeStartingEquipment!
@@ -367,8 +369,17 @@ type InvalidCharacterResult {
 }
 union ValidationResultPayload = ValidCharacterResult | InvalidCharacterResult
 
+# ---- advancement rules ----
+type AdvancementRules {
+  # XP cost of one standard advancement.
+  costXp: Int!
+  # Advancements that must all be bought to reach the next tier.
+  perTier: Int!
+}
+
 # ---- queries ----
 type Query {
+  advancementRules: AdvancementRules!
   types: [Type!]!
   type(id: ID!): Type
   descriptors: [Descriptor!]!
