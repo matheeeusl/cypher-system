@@ -9,13 +9,14 @@ Next.js 16, App Router. Depends on `@cypher/ui` for components/tokens and (as th
 - `app/layout.tsx` loads the three design fonts via `next/font/google` (Space Grotesk, Inter, IBM Plex Mono) as CSS variables (`--font-display`, `--font-sans`, `--font-mono`). These feed the `--font-*` mappings in `@cypher/ui`'s `@theme` block — don't re-import fonts elsewhere or hardcode font-family values.
 - `app/globals.css` should stay a thin entry point that pulls in `@cypher/ui/styles/globals.css`; put any app-only CSS in its own file rather than growing this one.
 
-## Supabase (planned)
+## Auth (Better Auth + Neon)
 
-Supabase (auth + Postgres + RLS) isn't wired up yet. When it lands:
-
-- Use the `@supabase/ssr` package with separate client helpers for Server Components/Actions vs. the browser — never share one client across both.
-- Treat Row Level Security as the actual authorization boundary; don't reimplement ownership checks in application code that RLS should already enforce.
-- Keep Supabase client construction in one place (e.g. `lib/supabase/`) rather than instantiating clients inline in routes/components.
+- `lib/auth.ts` is the single Better Auth instance: Postgres (Neon, `DATABASE_URL`, pooled string) via `pg`, email + password with **required email verification**, Google social login, `nextCookies()` plugin. Handler lives at `app/api/auth/[...all]/route.ts`; the browser client is `lib/auth-client.ts`.
+- Emails (verification, password reset) go through Resend in `lib/email.ts`. The email language is read from the `callbackURL` inside the link Better Auth generates, so always pass `/${locale}/…` as `callbackURL`/`redirectTo` from the client. `EMAIL_FROM` must use a domain verified in Resend.
+- Schema was created with `npx auth@latest migrate --config lib/auth.ts` (load `.env.local` first). Re-run it after adding plugins or user fields.
+- Server-side session: `getSession()` in `lib/session.ts`. `/` (the wizard) redirects to `/{locale}/auth` when there is no session; `/{locale}/auth` redirects to `/` when there is one. Check the session on the server — don't rely on client state.
+- There is no Row Level Security: ownership/authorization checks for user data must live in application code (and in the graphql-api once it stores per-user data).
+- UI lives in `@cypher/ui` (`AuthForm`, `ResetPasswordForm`, `AuthCard`, `TextField`, …) and takes all text via `labels` props; copy for en/pt-br is in `lib/i18n/auth.ts`.
 
 ## GraphQL
 
@@ -29,9 +30,11 @@ Supabase (auth + Postgres + RLS) isn't wired up yet. When it lands:
 
 - `components/wizard/Wizard.tsx` is the whole thing — one client component owning all `WizardChoices` state, per-step data fetching (fetch-on-first-visit into `components/wizard/state.ts`-shaped caches), and the debounced `validateCharacterChoices` call that drives the live pool/edge/effort preview.
 - One file per step kind under `components/wizard/` (`TypeStep.tsx`, `DescriptorStep.tsx`, etc.) plus `derive.ts` for the pure logic (step validity, error messages, building the mutation input) — keep new step logic there, not inlined in `Wizard.tsx`.
-- No save button yet: the Review step's primary action is a visibly disabled "Save Character (coming soon)" button, not a `Button` from `@cypher/ui` (that component has no `disabled` prop) — a plain styled `<button disabled>` instead.
+- No save button yet: the Review step's primary action is a visibly disabled "Save Character (coming soon)" button, a plain styled `<button disabled>`.
 
 ## Testing
 
 - `pnpm --filter @cypher/app test:e2e` (or `pnpm -F @cypher/app test:e2e`) runs the Playwright suite in `e2e/`. `playwright.config.ts`'s `webServer` starts `next dev` for you (reusing one already running locally) — but **graphql-api must already be running separately** (`pnpm dev:api`), same as for manual testing.
 - First run on a fresh machine needs browsers installed once: `npx playwright install chromium` from `apps/app/`.
+
+- **Known gap:** the wizard now requires a session, so `e2e/wizard.spec.ts` (which opens `/`) is redirected to the login page. It needs a test-user/session strategy before it passes again.

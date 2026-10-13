@@ -1,5 +1,8 @@
-import { Wizard } from '@/components/wizard/Wizard'
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return <Wizard />
+import { preferredLocale } from '@/lib/session'
+
+// The real home page is localized: /en and /pt-br.
+export default async function Root() {
+  redirect(`/${await preferredLocale()}`)
 }

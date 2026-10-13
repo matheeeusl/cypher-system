@@ -5,7 +5,7 @@ import { expect, test } from '@playwright/test'
 test('walks Type -> Descriptor -> Focus -> Pools -> Abilities with live validation numbers updating', async ({
   page,
 }) => {
-  await page.goto('/')
+  await page.goto('/en/characters/new')
 
   // Type
   await expect(page.getByRole('heading', { name: 'Choose Your Type' })).toBeVisible()

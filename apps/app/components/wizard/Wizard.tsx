@@ -32,6 +32,7 @@ import {
 import { EquipmentStep } from './EquipmentStep'
 import { ErrorBanner } from './ErrorBanner'
 import { FocusStep } from './FocusStep'
+import { UserMenu } from '@/components/auth/UserMenu'
 import { PoolsStep } from './PoolsStep'
 import { ReviewStep } from './ReviewStep'
 import { SentenceBanner } from './SentenceBanner'
@@ -71,7 +72,7 @@ function useEntityList<T>(fetcher: () => Promise<T[]>, needed: boolean): Content
   return state
 }
 
-export function Wizard() {
+export function Wizard({ userName, backHref }: { userName: string; backHref: string }) {
   const [stepIndex, setStepIndex] = useState(0)
   const [choices, setChoices] = useState<WizardChoices>(INITIAL_CHOICES)
   const [attemptedNext, setAttemptedNext] = useState(false)
@@ -241,8 +242,17 @@ export function Wizard() {
           <span className="text-text-muted font-mono text-[13px] tracking-wide">
             CYPHER://CHARACTER BUILDER
           </span>
+          <a
+            href={backHref}
+            className="text-accent hover:text-warning ml-3 cursor-pointer font-mono text-[11px] transition-colors"
+          >
+            ← My Characters
+          </a>
         </div>
-        <ThemeToggle />
+        <div className="flex items-center gap-4">
+          <UserMenu name={userName} />
+          <ThemeToggle />
+        </div>
       </div>
 
       <div className="mx-auto max-w-[920px] px-7 pt-6">
