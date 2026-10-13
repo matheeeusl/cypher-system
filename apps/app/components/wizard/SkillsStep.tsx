@@ -1,6 +1,7 @@
 import type { WizardDescriptor, WizardSkill } from '@/lib/graphql/queries'
 
 import { descriptorAutoTrainedSkillIds, descriptorSkillChoicesNeeded } from './derive'
+import { useWizardI18n } from './i18n'
 
 interface SkillsStepProps {
   descriptor: WizardDescriptor | undefined
@@ -19,12 +20,21 @@ export function SkillsStep({
   selectedSkillIds,
   onToggle,
 }: SkillsStepProps) {
-  if (!descriptor) return <p className="text-text-muted text-sm">Choose a Descriptor first.</p>
-  if (loading) return <p className="text-text-muted text-sm">Loading Skills…</p>
-  if (error) return <p className="text-warning text-sm">Couldn’t load Skills: {error}</p>
+  const { copy, t } = useWizardI18n()
+  if (!descriptor) {
+    return <p className="text-text-muted text-sm">{copy.chooseDescriptorFirst}</p>
+  }
+  if (loading)
+    return <p className="text-text-muted text-sm">{copy.loading(copy.entities.skills)}</p>
+  if (error) {
+    return <p className="text-warning text-sm">{copy.loadFailed(copy.entities.skills, error)}</p>
+  }
   if (!skills) return null
 
-  const skillName = (id: string) => skills.find((s) => s.id === id)?.name.en ?? id
+  const skillName = (id: string) => {
+    const skill = skills.find((s) => s.id === id)
+    return skill ? t(skill.name) : id
+  }
   const autoTrainedIds = descriptorAutoTrainedSkillIds(descriptor)
   const needed = descriptorSkillChoicesNeeded(descriptor)
   const pickable = skills.filter((s) => !autoTrainedIds.includes(s.id))
@@ -34,7 +44,7 @@ export function SkillsStep({
       {autoTrainedIds.length > 0 && (
         <div className="mb-5">
           <div className="text-text-muted mb-2 font-mono text-[11px] tracking-wide uppercase">
-            Trained automatically by {descriptor.name.en}
+            {copy.skills.autoTrained(t(descriptor.name))}
           </div>
           <div className="flex flex-wrap gap-2">
             {autoTrainedIds.map((id) => (
@@ -56,7 +66,7 @@ export function SkillsStep({
               selectedSkillIds.length === needed ? 'text-accent' : 'text-text-muted'
             }`}
           >
-            {selectedSkillIds.length} / {needed} selected
+            {copy.skills.selected(selectedSkillIds.length, needed)}
           </div>
           <div className="flex max-h-[340px] flex-col gap-2 overflow-y-auto pr-1">
             {pickable.map((skill) => {
@@ -77,17 +87,14 @@ export function SkillsStep({
                   >
                     {isSelected ? '✓' : ''}
                   </span>
-                  <span className="text-text text-[14px] font-medium">{skill.name.en}</span>
+                  <span className="text-text text-[14px] font-medium">{t(skill.name)}</span>
                 </button>
               )
             })}
           </div>
         </>
       ) : (
-        <p className="text-text-muted text-sm">
-          {descriptor.name.en} doesn’t grant any additional skill choices beyond what’s listed
-          above.
-        </p>
+        <p className="text-text-muted text-sm">{copy.skills.noExtraChoices(t(descriptor.name))}</p>
       )}
     </div>
   )

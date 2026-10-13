@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { HtmlLang } from '@/components/HtmlLang'
 import { ThemeToggle } from '@/components/wizard/ThemeToggle'
 import type { Locale } from '@/lib/i18n/auth'
 
@@ -20,7 +21,8 @@ export function AppShell({ locale, title, switchLocaleHref, actions, children }:
 
   return (
     <div className="bg-bg text-text min-h-screen">
-      <header className="border-border bg-panel flex items-center justify-between gap-4 border-b px-7 py-3.5">
+      <HtmlLang locale={locale} />
+      <header className="border-border bg-panel flex items-center justify-between gap-4 border-b px-7 py-3.5 print:hidden">
         <div className="flex items-center gap-2.5">
           <span className="bg-accent size-2 rounded-full shadow-[0_0_6px_var(--color-accent)]" />
           <span className="text-text-muted font-mono text-[13px] tracking-wider">{title}</span>

@@ -13,6 +13,7 @@ import {
   focusTier1ChoiceEntries,
   focusTier1GrantedIds,
 } from './derive'
+import { useWizardI18n } from './i18n'
 import type { StepId, WizardChoices } from './state'
 
 interface ReviewStepProps {
@@ -34,8 +35,15 @@ export function ReviewStep({
   abilities,
   onEdit,
 }: ReviewStepProps) {
-  const skillName = (id: string) => skills?.find((s) => s.id === id)?.name.en ?? id
-  const abilityName = (id: string) => abilities?.find((a) => a.id === id)?.name.en ?? id
+  const { copy, terms, t } = useWizardI18n()
+  const skillName = (id: string) => {
+    const skill = skills?.find((s) => s.id === id)
+    return skill ? t(skill.name) : id
+  }
+  const abilityName = (id: string) => {
+    const ability = abilities?.find((a) => a.id === id)
+    return ability ? t(ability.name) : id
+  }
 
   const skillIds = descriptor
     ? [...descriptorAutoTrainedSkillIds(descriptor), ...choices.descriptorSkillChoices]
@@ -54,35 +62,39 @@ export function ReviewStep({
     ...focusChoiceAbilityIds,
   ]
 
-  const rows: Array<{ label: string; value: string; stepId: StepId }> = [
-    { label: 'TYPE', value: type?.name.en ?? '—', stepId: 'type' },
-    { label: 'DESCRIPTOR', value: descriptor?.name.en ?? '—', stepId: 'descriptor' },
-    { label: 'FOCUS', value: focus?.name.en ?? '—', stepId: 'focus' },
+  const rows: Array<{ key: keyof typeof copy.review.rows; value: string; stepId: StepId }> = [
+    { key: 'type', value: type ? t(type.name) : '—', stepId: 'type' },
+    { key: 'descriptor', value: descriptor ? t(descriptor.name) : '—', stepId: 'descriptor' },
+    { key: 'focus', value: focus ? t(focus.name) : '—', stepId: 'focus' },
     {
-      label: 'POOLS',
+      key: 'pools',
       value: type
-        ? `Might ${type.startingPools.might + choices.poolAllocation.might} · Speed ${
-            type.startingPools.speed + choices.poolAllocation.speed
-          } · Intellect ${type.startingPools.intellect + choices.poolAllocation.intellect}`
+        ? `${terms.stats.MIGHT} ${type.startingPools.might + choices.poolAllocation.might} · ${
+            terms.stats.SPEED
+          } ${type.startingPools.speed + choices.poolAllocation.speed} · ${terms.stats.INTELLECT} ${
+            type.startingPools.intellect + choices.poolAllocation.intellect
+          }`
         : '—',
       stepId: 'pools',
     },
     {
-      label: 'SKILLS',
+      key: 'skills',
       value: skillIds.length > 0 ? skillIds.map(skillName).join(', ') : '—',
       stepId: 'skills',
     },
     {
-      label: 'ABILITIES',
+      key: 'abilities',
       value: allAbilityIds.length > 0 ? allAbilityIds.map(abilityName).join(', ') : '—',
       stepId: 'abilities',
     },
     {
-      label: 'EQUIPMENT',
-      value: type?.startingEquipment.weapon?.en ?? 'Clothing only',
+      key: 'equipment',
+      value: type?.startingEquipment.weapon
+        ? t(type.startingEquipment.weapon)
+        : copy.review.clothingOnly,
       stepId: 'equipment',
     },
-    { label: 'CHARACTER NAME', value: choices.name || '—', stepId: 'background' },
+    { key: 'name', value: choices.name || '—', stepId: 'background' },
   ]
 
   return (
@@ -90,24 +102,18 @@ export function ReviewStep({
       <div className="flex flex-col gap-1">
         {rows.map((row) => (
           <div
-            key={row.label}
+            key={row.key}
             className="border-border flex items-start justify-between gap-4 border-b py-3 last:border-b-0"
           >
             <div>
               <div className="text-text-muted mb-0.5 font-mono text-[11px] tracking-wide uppercase">
-                {row.label}
+                {copy.review.rows[row.key]}
               </div>
               <div className="font-display text-text text-[15px] font-semibold">{row.value}</div>
             </div>
-            <Button label="Edit" variant="ghost" onClick={() => onEdit(row.stepId)} />
+            <Button label={copy.review.edit} variant="ghost" onClick={() => onEdit(row.stepId)} />
           </div>
         ))}
-      </div>
-
-      <div className="border-border bg-panel mt-6 rounded border px-4 py-3.5">
-        <p className="text-text-muted text-[13px] leading-relaxed">
-          Saving requires an account, which isn’t built yet — this step is a preview only for now.
-        </p>
       </div>
     </div>
   )

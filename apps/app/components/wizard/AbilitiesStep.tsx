@@ -1,6 +1,7 @@
 import type { WizardAbility, WizardFocus, WizardType } from '@/lib/graphql/queries'
 
 import { focusTier1ChoiceEntries, focusTier1GrantedIds } from './derive'
+import { useWizardI18n } from './i18n'
 import { TIER1_TYPE_ABILITY_COUNT } from './state'
 
 interface AbilitiesStepProps {
@@ -26,12 +27,21 @@ export function AbilitiesStep({
   focusChoiceSelections,
   onToggleFocusChoiceOption,
 }: AbilitiesStepProps) {
-  if (!type) return <p className="text-text-muted text-sm">Choose a Type first.</p>
-  if (loading) return <p className="text-text-muted text-sm">Loading Abilities…</p>
-  if (error) return <p className="text-warning text-sm">Couldn’t load Abilities: {error}</p>
+  const { copy, terms, t } = useWizardI18n()
+  if (!type) return <p className="text-text-muted text-sm">{copy.chooseTypeFirst}</p>
+  if (loading) {
+    return <p className="text-text-muted text-sm">{copy.loading(copy.entities.abilities)}</p>
+  }
+  if (error) {
+    return <p className="text-warning text-sm">{copy.loadFailed(copy.entities.abilities, error)}</p>
+  }
   if (!abilities) return null
 
   const abilityById = (id: string) => abilities.find((a) => a.id === id)
+  const abilityName = (id: string) => {
+    const ability = abilityById(id)
+    return ability ? t(ability.name) : id
+  }
   const tier1 = type.tierAbilities.find((group) => group.tier === 1)
   const availableIds = tier1?.abilityIds ?? []
   const choiceEntries = focus ? focusTier1ChoiceEntries(focus) : []
@@ -46,7 +56,7 @@ export function AbilitiesStep({
             : 'text-text-muted'
         }`}
       >
-        {selectedTypeAbilityIds.length} / {TIER1_TYPE_ABILITY_COUNT} selected
+        {copy.abilities.selected(selectedTypeAbilityIds.length, TIER1_TYPE_ABILITY_COUNT)}
       </div>
       <div className="flex max-h-[340px] flex-col gap-2 overflow-y-auto pr-1">
         {availableIds.map((id) => {
@@ -69,17 +79,15 @@ export function AbilitiesStep({
                 {isSelected ? '✓' : ''}
               </span>
               <div>
-                <div className="text-text text-[14px] font-medium">{ability?.name.en ?? id}</div>
+                <div className="text-text text-[14px] font-medium">{abilityName(id)}</div>
                 {ability?.cost && (
                   <div className="text-text-muted mt-0.5 font-mono text-[11px]">
-                    {ability.cost.amount}{' '}
-                    {ability.cost.pool.charAt(0) + ability.cost.pool.slice(1).toLowerCase()} point
-                    {ability.cost.amount === 1 ? '' : 's'}
+                    {terms.cost(ability.cost.amount, ability.cost.pool)}
                   </div>
                 )}
                 {ability && (
                   <div className="text-text-muted mt-1 text-[12px] leading-relaxed">
-                    {ability.description.en}
+                    {t(ability.description)}
                   </div>
                 )}
               </div>
@@ -91,7 +99,7 @@ export function AbilitiesStep({
       {grantedFocusIds.length > 0 && (
         <div className="mt-5">
           <div className="text-text-muted mb-2 font-mono text-[11px] tracking-wide uppercase">
-            Granted automatically by your Focus
+            {copy.abilities.grantedByFocus}
           </div>
           <div className="flex flex-wrap gap-2">
             {grantedFocusIds.map((id) => (
@@ -99,7 +107,7 @@ export function AbilitiesStep({
                 key={id}
                 className="border-accent bg-accent-soft text-accent rounded border px-3 py-1 font-mono text-[12px]"
               >
-                {abilityById(id)?.name.en ?? id}
+                {abilityName(id)}
               </span>
             ))}
           </div>
@@ -118,12 +126,12 @@ export function AbilitiesStep({
                 selected.length === entry.count ? 'text-accent' : 'text-text-muted'
               }`}
             >
-              Focus choice — pick {entry.count} ({selected.length} / {entry.count} selected)
+              {copy.abilities.focusChoice(entry.count, selected.length, entry.count)}
             </div>
             <div className="flex flex-wrap gap-2">
               {entry.options.map((optionIds, optionIndex) => {
                 const isSelected = selected.includes(optionIndex)
-                const label = optionIds.map((id) => abilityById(id)?.name.en ?? id).join(' + ')
+                const label = optionIds.map(abilityName).join(' + ')
                 return (
                   <button
                     key={optionIds.join('+')}

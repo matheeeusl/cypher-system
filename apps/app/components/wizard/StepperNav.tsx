@@ -1,7 +1,7 @@
-import type { StepDef } from './state'
+import type { StepId } from './state'
 
 interface StepperNavProps {
-  steps: StepDef[]
+  steps: Array<{ id: StepId; label: string }>
   currentIndex: number
   onJump: (index: number) => void
 }

@@ -2,9 +2,13 @@
 
 import { useState } from 'react'
 
+import type { LocalizedString } from '@/lib/graphql/queries'
+
+import { useWizardI18n } from './i18n'
+
 interface EntityLike {
   id: string
-  name: { en: string }
+  name: LocalizedString
 }
 
 interface SearchableEntityListProps<T extends EntityLike> {
@@ -22,9 +26,10 @@ export function SearchableEntityList<T extends EntityLike>({
   searchPlaceholder,
   getMeta,
 }: SearchableEntityListProps<T>) {
+  const { copy, t } = useWizardI18n()
   const [query, setQuery] = useState('')
   const filtered = entities.filter((entity) =>
-    entity.name.en.toLowerCase().includes(query.trim().toLowerCase()),
+    t(entity.name).toLowerCase().includes(query.trim().toLowerCase()),
   )
 
   return (
@@ -37,7 +42,7 @@ export function SearchableEntityList<T extends EntityLike>({
           className="border-border bg-panel text-text flex-1 rounded border px-3 py-2 font-mono text-[13px] outline-none"
         />
         <span className="text-text-muted shrink-0 font-mono text-[12px]">
-          {filtered.length} shown
+          {copy.search.shown(filtered.length)}
         </span>
       </div>
 
@@ -53,7 +58,7 @@ export function SearchableEntityList<T extends EntityLike>({
                 isSelected ? 'border-accent bg-accent-soft' : 'border-border bg-panel'
               }`}
             >
-              <span className="text-text text-[14px] font-medium">{entity.name.en}</span>
+              <span className="text-text text-[14px] font-medium">{t(entity.name)}</span>
               {getMeta && (
                 <span className="text-text-muted shrink-0 font-mono text-[11px]">
                   {getMeta(entity)}
@@ -66,7 +71,7 @@ export function SearchableEntityList<T extends EntityLike>({
 
       {filtered.length === 0 && (
         <div className="text-text-muted py-4 font-mono text-[13px] italic">
-          No results match your search.
+          {copy.search.noResults}
         </div>
       )}
     </div>

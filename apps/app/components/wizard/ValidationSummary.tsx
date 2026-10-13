@@ -1,6 +1,7 @@
 import type { ValidationResult } from '@/lib/graphql/queries'
 
 import { ErrorBanner } from './ErrorBanner'
+import { useWizardI18n } from './i18n'
 
 interface ValidationSummaryProps {
   validation: ValidationResult | null
@@ -8,14 +9,18 @@ interface ValidationSummaryProps {
 }
 
 export function ValidationSummary({ validation, validating }: ValidationSummaryProps) {
+  const { copy, terms } = useWizardI18n()
   if (!validation) return null
 
   if (validation.__typename === 'InvalidCharacterResult') {
     return (
       <div className="mt-4 flex flex-col gap-2">
-        {validation.errors.map((message) => (
-          <ErrorBanner key={message} message={message} />
-        ))}
+        {validation.errors.map((english, i) => {
+          // Localize from the engine's code + params; fall back to its English sentence.
+          const issue = validation.issues[i]
+          const message = (issue && copy.issue(issue)) ?? english
+          return <ErrorBanner key={`${i}-${message}`} message={message} />
+        })}
       </div>
     )
   }
@@ -26,20 +31,26 @@ export function ValidationSummary({ validation, validating }: ValidationSummaryP
     <div className="border-accent bg-accent-soft mt-4 flex flex-wrap items-center justify-between gap-3 rounded border px-4 py-3 font-mono text-[12px]">
       <div className="text-accent flex flex-wrap gap-4">
         <span>
-          Might <strong>{character.pools.might.max}</strong>
+          {terms.stats.MIGHT} <strong>{character.pools.might.max}</strong>
         </span>
         <span>
-          Speed <strong>{character.pools.speed.max}</strong>
+          {terms.stats.SPEED} <strong>{character.pools.speed.max}</strong>
         </span>
         <span>
-          Intellect <strong>{character.pools.intellect.max}</strong>
+          {terms.stats.INTELLECT} <strong>{character.pools.intellect.max}</strong>
         </span>
         <span>
-          Edge M{character.edge.might}/S{character.edge.speed}/I{character.edge.intellect}
+          {copy.validation.edge(
+            character.edge.might,
+            character.edge.speed,
+            character.edge.intellect,
+          )}
         </span>
-        <span>Effort {character.effort}</span>
+        <span>
+          {copy.validation.effort} {character.effort}
+        </span>
       </div>
-      {validating && <span className="text-text-muted">updating…</span>}
+      {validating && <span className="text-text-muted">{copy.validation.updating}</span>}
     </div>
   )
 }

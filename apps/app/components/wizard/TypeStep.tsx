@@ -1,5 +1,6 @@
 import type { Stat, WizardType } from '@/lib/graphql/queries'
 
+import { useWizardI18n } from './i18n'
 import type { WizardChoices } from './state'
 
 interface TypeStepProps {
@@ -11,8 +12,6 @@ interface TypeStepProps {
   onSelectEdgeChoice: (stat: Stat) => void
 }
 
-const STAT_LABELS: Record<Stat, string> = { MIGHT: 'Might', SPEED: 'Speed', INTELLECT: 'Intellect' }
-
 export function TypeStep({
   types,
   loading,
@@ -21,8 +20,11 @@ export function TypeStep({
   onSelectType,
   onSelectEdgeChoice,
 }: TypeStepProps) {
-  if (loading) return <p className="text-text-muted text-sm">Loading Types…</p>
-  if (error) return <p className="text-warning text-sm">Couldn’t load Types: {error}</p>
+  const { copy, terms, t } = useWizardI18n()
+  if (loading) return <p className="text-text-muted text-sm">{copy.loading(copy.entities.types)}</p>
+  if (error) {
+    return <p className="text-warning text-sm">{copy.loadFailed(copy.entities.types, error)}</p>
+  }
   if (!types) return null
 
   const selected = types.find((t) => t.id === choices.typeId)
@@ -43,11 +45,11 @@ export function TypeStep({
             >
               <div className="mb-1 flex items-center justify-between">
                 <span className="font-display text-text text-[15px] font-semibold">
-                  {type.name.en}
+                  {t(type.name)}
                 </span>
                 {isSelected && <span className="text-accent font-mono text-xs">✓</span>}
               </div>
-              <div className="text-text-muted text-[13px] leading-relaxed">{type.tagline.en}</div>
+              <div className="text-text-muted text-[13px] leading-relaxed">{t(type.tagline)}</div>
             </button>
           )
         })}
@@ -56,7 +58,7 @@ export function TypeStep({
       {selected && selected.startingEdge.statChoices.length > 1 && (
         <div className="border-border bg-panel mt-5 rounded border p-4">
           <div className="text-text-muted mb-2 font-mono text-[11px] tracking-wide uppercase">
-            Starting Edge — choose one
+            {copy.type.startingEdge}
           </div>
           <div className="flex gap-2">
             {selected.startingEdge.statChoices.map((stat) => (
@@ -70,7 +72,7 @@ export function TypeStep({
                     : 'border-border bg-panel text-text-muted'
                 }`}
               >
-                {STAT_LABELS[stat]} +{selected.startingEdge.amount}
+                {terms.stats[stat]} +{selected.startingEdge.amount}
               </button>
             ))}
           </div>

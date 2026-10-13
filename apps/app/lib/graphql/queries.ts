@@ -218,9 +218,15 @@ export interface DerivedCharacter {
   skills: Array<{ skillId: string; level: SkillLevel }>
 }
 
+export interface ValidationIssueData {
+  code: string
+  params: Array<{ key: string; value: string }>
+}
+
 export type ValidationResult =
   | { __typename: 'ValidCharacterResult'; character: DerivedCharacter }
-  | { __typename: 'InvalidCharacterResult'; errors: string[] }
+  // `errors` are English; `issues` (same order) carry a code + params to localize.
+  | { __typename: 'InvalidCharacterResult'; errors: string[]; issues: ValidationIssueData[] }
 
 const VALIDATE_CHARACTER_CHOICES_QUERY = `
   query ValidateCharacterChoices($input: CharacterChoicesInput!) {
@@ -246,6 +252,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
       }
       ... on InvalidCharacterResult {
         errors
+        issues { code params { key value } }
       }
     }
   }

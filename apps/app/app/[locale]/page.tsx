@@ -7,7 +7,7 @@ import { CharacterListScreen } from '@/components/CharacterListScreen'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { listCharacters } from '@/lib/characters'
 import { timeAgo } from '@/lib/format'
-import { fetchContentVersions, type ContentVersions } from '@/lib/graphql/versions'
+import { fetchContentVersions, isStale, type ContentVersions } from '@/lib/graphql/versions'
 import { isLocale, locales, type Locale } from '@/lib/i18n/auth'
 import { characterListLabels, signOutLabel, updatedPrefix } from '@/lib/i18n/characters'
 import { getSession } from '@/lib/session'
@@ -44,9 +44,7 @@ export default async function MyCharactersPage({
     type: localized(c.summary.typeName, locale),
     focus: localized(c.summary.focusName, locale),
     updatedLabel: `${updatedPrefix[locale]} ${timeAgo(c.updatedAt, locale)}`,
-    stale: Object.entries(c.contentVersions).some(
-      ([id, version]) => versions.has(id) && versions.get(id) !== version,
-    ),
+    stale: isStale(c.contentVersions, versions),
     href: `/${locale}/characters/${c.id}`,
   }))
 

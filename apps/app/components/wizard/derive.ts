@@ -6,6 +6,8 @@ import type {
   WizardType,
 } from '@/lib/graphql/queries'
 
+import type { WizardCopy } from '@/lib/i18n/wizard'
+
 import {
   POOL_POINTS_TOTAL,
   TIER1_TYPE_ABILITY_COUNT,
@@ -114,39 +116,35 @@ export function stepErrorMessage(
   stepId: StepId,
   choices: WizardChoices,
   content: WizardContent,
+  copy: WizardCopy['stepErrors'],
 ): string {
   switch (stepId) {
     case 'type': {
-      if (!choices.typeId) return 'Select a Type to continue.'
+      if (!choices.typeId) return copy.selectType
       const needsEdgeChoice = (content.type?.startingEdge.statChoices.length ?? 0) > 1
-      if (needsEdgeChoice && choices.startingEdgeChoice === null) {
-        return 'Choose which stat gets your starting Edge.'
-      }
+      if (needsEdgeChoice && choices.startingEdgeChoice === null) return copy.chooseEdge
       return ''
     }
     case 'descriptor':
-      return 'Select a Descriptor to continue.'
+      return copy.selectDescriptor
     case 'focus':
-      return 'Select a Focus to continue.'
+      return copy.selectFocus
     case 'pools': {
       const { might, speed, intellect } = choices.poolAllocation
       const spent = might + speed + intellect
-      if (spent > POOL_POINTS_TOTAL)
-        return `You've overspent your pool points by ${spent - POOL_POINTS_TOTAL}.`
-      return 'Allocate all remaining points before continuing.'
+      if (spent > POOL_POINTS_TOTAL) return copy.overspent(spent - POOL_POINTS_TOTAL)
+      return copy.allocateAll
     }
-    case 'skills': {
-      const needed = descriptorSkillChoicesNeeded(content.descriptor)
-      return `Choose exactly ${needed} trained skill${needed === 1 ? '' : 's'}.`
-    }
+    case 'skills':
+      return copy.chooseSkills(descriptorSkillChoicesNeeded(content.descriptor))
     case 'abilities': {
       if (choices.tier1TypeAbilityIds.length !== TIER1_TYPE_ABILITY_COUNT) {
-        return `Choose exactly ${TIER1_TYPE_ABILITY_COUNT} tier-1 abilities.`
+        return copy.chooseAbilities(TIER1_TYPE_ABILITY_COUNT)
       }
-      return 'Make a selection for every Focus choice above.'
+      return copy.focusChoices
     }
     case 'background':
-      return 'Enter a character name to continue.'
+      return copy.enterName
     case 'equipment':
     case 'review':
       return ''

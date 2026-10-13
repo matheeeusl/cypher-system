@@ -56,37 +56,16 @@ export type StepId =
 
 export interface StepDef {
   id: StepId
-  label: string
-  title: string
-  blurb?: string
 }
 
 export const STEPS: StepDef[] = [
-  {
-    id: 'type',
-    label: 'Type',
-    title: 'Choose Your Type',
-    blurb:
-      'The noun of "I am an adjective noun who verbs." Your Type is the core of your character — in some other games, it might be called your character class.',
-  },
-  {
-    id: 'descriptor',
-    label: 'Descriptor',
-    title: 'Choose Your Descriptor',
-    blurb:
-      'The adjective of "I am an adjective noun who verbs." Your Descriptor defines your character — it colors everything you do.',
-  },
-  {
-    id: 'focus',
-    label: 'Focus',
-    title: 'Choose Your Focus',
-    blurb:
-      'The verb of "I am an adjective noun who verbs." Focus is what your character does best — it gives them specificity and interesting new abilities.',
-  },
-  { id: 'pools', label: 'Pools', title: 'Allocate Stat Pools' },
-  { id: 'skills', label: 'Skills', title: 'Choose Trained Skills' },
-  { id: 'abilities', label: 'Abilities', title: 'Choose Tier-1 Abilities' },
-  { id: 'equipment', label: 'Equipment', title: 'Starting Equipment' },
-  { id: 'background', label: 'Background', title: 'Name & Background' },
-  { id: 'review', label: 'Review', title: 'Review Your Character' },
+  { id: 'type' },
+  { id: 'descriptor' },
+  { id: 'focus' },
+  { id: 'pools' },
+  { id: 'skills' },
+  { id: 'abilities' },
+  { id: 'equipment' },
+  { id: 'background' },
+  { id: 'review' },
 ]

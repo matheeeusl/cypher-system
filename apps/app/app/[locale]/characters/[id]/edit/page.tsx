@@ -5,8 +5,8 @@ import { getCharacter } from '@/lib/characters'
 import { isLocale } from '@/lib/i18n/auth'
 import { getSession } from '@/lib/session'
 
-// Until a read-only character sheet exists, a saved character opens in the
-// wizard on its Review step (where each section has an Edit button).
+// Editing reuses the wizard, opened on its Review step where each section has
+// its own Edit button.
 export default async function EditCharacterPage({
   params,
 }: {
@@ -25,7 +25,7 @@ export default async function EditCharacterPage({
   return (
     <Wizard
       userName={session.user.name}
-      backHref={`/${locale}`}
+      locale={locale}
       characterId={character.id}
       initialChoices={character.choices}
     />

@@ -1,5 +1,6 @@
-import type { WizardType } from '@/lib/graphql/queries'
+import type { Stat, WizardType } from '@/lib/graphql/queries'
 
+import { useWizardI18n } from './i18n'
 import { POOL_POINTS_TOTAL, type PoolAllocation } from './state'
 
 interface PoolsStepProps {
@@ -8,14 +9,15 @@ interface PoolsStepProps {
   onChange: (allocation: PoolAllocation) => void
 }
 
-const POOLS: Array<{ key: keyof PoolAllocation; label: string }> = [
-  { key: 'might', label: 'Might' },
-  { key: 'speed', label: 'Speed' },
-  { key: 'intellect', label: 'Intellect' },
+const POOLS: Array<{ key: keyof PoolAllocation; stat: Stat }> = [
+  { key: 'might', stat: 'MIGHT' },
+  { key: 'speed', stat: 'SPEED' },
+  { key: 'intellect', stat: 'INTELLECT' },
 ]
 
 export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
-  if (!type) return <p className="text-text-muted text-sm">Choose a Type first.</p>
+  const { copy, terms } = useWizardI18n()
+  if (!type) return <p className="text-text-muted text-sm">{copy.chooseTypeFirst}</p>
 
   const spent = allocation.might + allocation.speed + allocation.intellect
   const remaining = POOL_POINTS_TOTAL - spent
@@ -34,11 +36,11 @@ export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
             : 'border-warning bg-warning/10 text-warning'
         }`}
       >
-        <span>Points remaining</span>
+        <span>{copy.pools.remaining}</span>
         <span className="text-base font-semibold">{remaining}</span>
       </div>
 
-      {POOLS.map(({ key, label }) => {
+      {POOLS.map(({ key, stat }) => {
         const base = type.startingPools[key]
         return (
           <div
@@ -46,9 +48,11 @@ export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
             className="border-border flex items-center justify-between border-b py-3.5 last:border-b-0"
           >
             <div>
-              <div className="font-display text-text text-[15px] font-semibold">{label}</div>
+              <div className="font-display text-text text-[15px] font-semibold">
+                {terms.stats[stat]}
+              </div>
               <div className="text-text-muted font-mono text-[12px]">
-                {base} base + {allocation[key]} = {base + allocation[key]}
+                {copy.pools.breakdown(base, allocation[key], base + allocation[key])}
               </div>
             </div>
             <div className="flex items-center gap-2.5">

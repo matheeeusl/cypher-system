@@ -10,12 +10,12 @@ const isCount = (v: unknown): v is number =>
   Number.isInteger(v) && (v as number) >= 0 && (v as number) <= 100
 
 /**
- * Server actions are public endpoints, so the wizard state arriving from the
- * browser is untrusted: rebuild a WizardChoices from known fields only.
- * Returns null when the shape is wrong. (Whether the *values* make a legal
- * character is checked separately against the rules API.)
+ * Rebuilds a WizardChoices from known fields only, checking just the shape —
+ * a half-finished wizard (empty name, no Type yet) is fine. Used both for
+ * untrusted server-action input and for restoring a browser-side draft.
+ * Returns null when the shape is wrong.
  */
-export function parseChoices(raw: unknown): WizardChoices | null {
+export function parseWizardState(raw: unknown): WizardChoices | null {
   if (typeof raw !== 'object' || raw === null) return null
   const r = raw as Record<string, unknown>
   const pool = r.poolAllocation as Record<string, unknown> | undefined
@@ -40,11 +40,6 @@ export function parseChoices(raw: unknown): WizardChoices | null {
     return null
   }
 
-  const name = r.name.trim()
-  if (name.length === 0 || name.length > NAME_MAX || r.background.length > BACKGROUND_MAX) {
-    return null
-  }
-
   return {
     ...INITIAL_CHOICES,
     typeId: r.typeId,
@@ -55,7 +50,24 @@ export function parseChoices(raw: unknown): WizardChoices | null {
     focusChoiceSelections: r.focusChoiceSelections as number[][],
     poolAllocation: { might: pool.might, speed: pool.speed, intellect: pool.intellect },
     tier1TypeAbilityIds: r.tier1TypeAbilityIds,
-    name,
+    name: r.name,
     background: r.background,
   }
+}
+
+/**
+ * Server actions are public endpoints, so a character arriving from the
+ * browser is untrusted: same shape check as above, plus the rules for a
+ * *saved* character (non-empty name, size caps). Whether the values make a
+ * legal character is checked separately against the rules API.
+ */
+export function parseChoices(raw: unknown): WizardChoices | null {
+  const state = parseWizardState(raw)
+  if (!state) return null
+
+  const name = state.name.trim()
+  if (name.length === 0 || name.length > NAME_MAX || state.background.length > BACKGROUND_MAX) {
+    return null
+  }
+  return { ...state, name }
 }

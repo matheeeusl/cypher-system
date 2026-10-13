@@ -15,6 +15,6 @@ export default async function NewCharacterPage({
   const session = await getSession()
   if (!session) redirect(`/${locale}/auth`)
 
-  // The wizard UI is English-only for now; the locale only drives the way back.
-  return <Wizard userName={session.user.name} backHref={`/${locale}`} />
+  // The wizard UI is English-only for now; the locale only drives the links.
+  return <Wizard userName={session.user.name} locale={locale} />
 }

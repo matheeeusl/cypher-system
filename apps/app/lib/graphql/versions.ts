@@ -26,3 +26,10 @@ export async function fetchContentVersions(): Promise<ContentVersions> {
     [...data.types, ...data.descriptors, ...data.foci].map((r) => [r.id, r.contentVersion]),
   )
 }
+
+/** True when any entity the character was built from has changed since it was saved. */
+export function isStale(saved: Record<string, string>, current: ContentVersions): boolean {
+  return Object.entries(saved).some(
+    ([id, version]) => current.has(id) && current.get(id) !== version,
+  )
+}
