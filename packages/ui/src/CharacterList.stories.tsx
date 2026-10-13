@@ -9,6 +9,7 @@ const labels: CharacterListLabels = {
   updateBadge: 'Rules Update',
   emptyTitle: 'No characters yet.',
   emptyBody: 'Build your first character to get started — it takes about ten minutes.',
+  delete: 'Delete',
 }
 
 const meta: Meta<typeof CharacterList> = {
@@ -24,6 +25,7 @@ export const Empty: Story = {}
 
 export const Populated: Story = {
   args: {
+    onDelete: () => {},
     characters: [
       {
         id: '1',

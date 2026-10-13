@@ -9,15 +9,22 @@ export interface CharacterListLabels {
   updateBadge: string
   emptyTitle: string
   emptyBody: string
+  delete: string
 }
 
 interface CharacterListProps {
   characters: CharacterSummary[]
   labels: CharacterListLabels
   newCharacterHref: string
+  onDelete?: (id: string) => void
 }
 
-export function CharacterList({ characters, labels, newCharacterHref }: CharacterListProps) {
+export function CharacterList({
+  characters,
+  labels,
+  newCharacterHref,
+  onDelete,
+}: CharacterListProps) {
   const isEmpty = characters.length === 0
   const cta = `+ ${labels.newCharacter}`
 
@@ -52,6 +59,7 @@ export function CharacterList({ characters, labels, newCharacterHref }: Characte
                 character={character}
                 tierLabel={labels.tier}
                 updateBadge={labels.updateBadge}
+                {...(onDelete ? { deleteLabel: labels.delete, onDelete } : {})}
               />
             </li>
           ))}
