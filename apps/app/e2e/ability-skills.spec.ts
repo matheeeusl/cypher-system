@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { Pool } from 'pg'
 
 // Requires graphql-api running separately (pnpm dev:api) — see
 // playwright.config.ts and apps/app/CLAUDE.md.
@@ -55,6 +56,23 @@ test('a skill-granting ability asks for its skills and trains the character', as
   await expect(page.getByRole('heading', { name: 'Skills Hero' })).toBeVisible()
   await expect(page.getByText('Climbing', { exact: true })).toBeVisible()
   await expect(page.getByText('Swimming', { exact: true })).toBeVisible()
+
+  // A character saved before skill choices existed has no such field in its
+  // stored choices; it must still open (sheet and edit) rather than crash.
+  const db = new Pool({ connectionString: process.env.DATABASE_URL })
+  try {
+    await db.query(
+      `update character set choices = choices - 'abilitySkillChoices' where name = 'Skills Hero'`,
+    )
+  } finally {
+    await db.end()
+  }
+  await page.reload()
+  await expect(page.getByRole('heading', { name: 'Skills Hero' })).toBeVisible()
+  await page.getByRole('link', { name: 'Edit' }).click()
+  await expect(page.getByRole('heading', { name: 'Review Your Character' })).toBeVisible()
+  await page.getByRole('link', { name: '← Character sheet' }).click()
+  await expect(page.getByRole('heading', { name: 'Skills Hero' })).toBeVisible()
 
   // Clean up so the other specs still see an empty list
   await page.getByRole('link', { name: '← My Characters' }).click()

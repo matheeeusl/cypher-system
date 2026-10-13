@@ -3,7 +3,7 @@ import { pool } from '@/lib/db'
 import type { AdvancementPurchaseInput, LocalizedString } from '@/lib/graphql/queries'
 import type { PoolPoints } from '@/lib/play'
 import { parsePicks, type TierPicks } from '@/lib/tier-picks'
-import type { WizardChoices } from '@/components/wizard/state'
+import { INITIAL_CHOICES, type WizardChoices } from '@/components/wizard/state'
 
 export interface CharacterSummaryData {
   typeName: LocalizedString
@@ -45,7 +45,9 @@ function fromRow(r: Row): SavedCharacter {
   return {
     id: r.id,
     name: r.name,
-    choices: r.choices,
+    // Rows saved before a WizardChoices field existed lack it; fill in defaults
+    // so the rest of the app can rely on every field being present.
+    choices: { ...INITIAL_CHOICES, ...r.choices },
     summary: r.summary,
     contentVersions: r.content_versions,
     advancement: r.advancement,
