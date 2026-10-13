@@ -27,6 +27,11 @@ export interface TypeAbilityPickInput {
   abilityId: string
 }
 
+export interface AbilitySkillChoiceInput {
+  key: string
+  skillIds: string[]
+}
+
 export interface IncreasingCapabilitiesPurchaseInput {
   tier: number
   statPoolAllocation: StatAllocationInput
@@ -69,6 +74,7 @@ export interface CharacterChoicesInput {
   focusChoiceSelections: FocusChoiceSelectionInput[]
   typeAbilityPicks?: TypeAbilityPickInput[] | null
   descriptorSkillChoices: string[]
+  abilitySkillChoices?: AbilitySkillChoiceInput[] | null
   advancementPurchases: AdvancementPurchaseInput[]
 }
 
@@ -124,6 +130,10 @@ function groupByTier(list: Array<{ tier: number; abilityId: string }>): Record<s
   return grouped
 }
 
+export function mapAbilitySkillChoices(list: AbilitySkillChoiceInput[]): Record<string, string[]> {
+  return Object.fromEntries(list.map(({ key, skillIds }) => [key, skillIds]))
+}
+
 export function mapCharacterChoicesInput(input: CharacterChoicesInput): CharacterChoices {
   return {
     type_id: input.typeId,
@@ -145,6 +155,9 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       ? { type_ability_picks: mapTypeAbilityPicks(input.typeAbilityPicks ?? []) }
       : {}),
     descriptor_skill_choices: input.descriptorSkillChoices,
+    ...((input.abilitySkillChoices ?? []).length > 0
+      ? { ability_skill_choices: mapAbilitySkillChoices(input.abilitySkillChoices ?? []) }
+      : {}),
     advancement_purchases: input.advancementPurchases.map(mapAdvancementPurchase),
   }
 }

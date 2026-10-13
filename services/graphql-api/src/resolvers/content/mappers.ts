@@ -138,6 +138,13 @@ export function mapAbility(a: WithVersion<Ability>) {
       tier: s.tier,
       cyberware: s.cyberware ?? false,
     })),
+    skillGrant: a.skill_grant
+      ? {
+          count: a.skill_grant.count,
+          any: a.skill_grant.options === 'any',
+          options: a.skill_grant.options === 'any' ? [] : a.skill_grant.options,
+        }
+      : null,
     contentVersion: a.content_version,
   }
 }

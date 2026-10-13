@@ -1,4 +1,10 @@
-import { getDescriptorById, getFocusById, getTypeById } from '@cypher/content'
+import {
+  getAllAbilities,
+  getDescriptorById,
+  getFocusById,
+  getSkillById,
+  getTypeById,
+} from '@cypher/content'
 import type { CharacterContent } from '@cypher/engine'
 import { validateCharacterChoices } from '@cypher/engine'
 import { GraphQLError } from 'graphql'
@@ -22,7 +28,24 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
   if (!descriptor) throw new GraphQLError(`No Descriptor found for id "${input.descriptorId}"`)
   if (!focus) throw new GraphQLError(`No Focus found for id "${input.focusId}"`)
 
-  return { type, descriptor, focus }
+  // Skill ids are an unvalidated string in the engine ('any' grants have no
+  // list to check against), so a stale or invented one is rejected here, as
+  // with the Type/Descriptor/Focus ids above.
+  for (const { skillIds } of input.abilitySkillChoices ?? []) {
+    for (const skillId of skillIds) {
+      if (!getSkillById(skillId)) throw new GraphQLError(`No Skill found for id "${skillId}"`)
+    }
+  }
+
+  return { type, descriptor, focus, skill_grants: skillGrantsByAbility() }
+}
+
+function skillGrantsByAbility(): NonNullable<CharacterContent['skill_grants']> {
+  const grants: NonNullable<CharacterContent['skill_grants']> = {}
+  for (const ability of getAllAbilities()) {
+    if (ability.skill_grant) grants[ability.id] = ability.skill_grant
+  }
+  return grants
 }
 
 export const validateResolvers = {

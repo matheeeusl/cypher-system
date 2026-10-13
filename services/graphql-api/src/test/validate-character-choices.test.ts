@@ -218,3 +218,89 @@ describe('validateCharacterChoices (unresolvable content id)', () => {
     expect(result.data).toBeNull()
   })
 })
+
+describe('validateCharacterChoices (skill-granting abilities)', () => {
+  const SKILL_QUERY = `
+    query ($input: CharacterChoicesInput!) {
+      validateCharacterChoices(input: $input) {
+        __typename
+        ... on ValidCharacterResult {
+          character { skills { skillId level } pendingPicks { kind tier key abilityId required chosen } }
+        }
+        ... on InvalidCharacterResult { issues { code params { key value } } }
+      }
+    }
+  `
+  const withPhysicalSkills = {
+    ...validInput,
+    tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'physical-skills'],
+    advancementPurchases: [],
+    focusChoiceSelections: [],
+  }
+
+  it('applies the picks made for a tier-1 skill-granting ability', async () => {
+    const result = await graphqlRequest<{
+      validateCharacterChoices: {
+        __typename: string
+        character?: { skills: Array<{ skillId: string; level: string }> }
+      }
+    }>(SKILL_QUERY, {
+      input: {
+        ...withPhysicalSkills,
+        abilitySkillChoices: [
+          { key: 'type:1:physical-skills', skillIds: ['climbing', 'swimming'] },
+        ],
+      },
+    })
+
+    expect(result.errors).toBeUndefined()
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('ValidCharacterResult')
+    expect(payload.character?.skills).toEqual(
+      expect.arrayContaining([
+        { skillId: 'climbing', level: 'TRAINED' },
+        { skillId: 'swimming', level: 'TRAINED' },
+      ]),
+    )
+  })
+
+  it('reports the missing picks as a coded issue', async () => {
+    const result = await graphqlRequest<{
+      validateCharacterChoices: {
+        __typename: string
+        issues?: Array<{ code: string }>
+      }
+    }>(SKILL_QUERY, { input: withPhysicalSkills })
+
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('InvalidCharacterResult')
+    expect(payload.issues?.map((i) => i.code)).toContain('ABILITY_SKILL_CHOICE_COUNT')
+  })
+
+  it('rejects a skill id that is not in the catalog as a top-level error', async () => {
+    const result = await graphqlRequest(SKILL_QUERY, {
+      input: {
+        ...withPhysicalSkills,
+        abilitySkillChoices: [{ key: 'type:1:physical-skills', skillIds: ['nope', 'climbing'] }],
+      },
+    })
+    expect(result.errors?.[0]?.message).toMatch(/No Skill found for id "nope"/)
+  })
+
+  it('exposes the grant on Ability.skillGrant', async () => {
+    const result = await graphqlRequest<{
+      physical: { skillGrant: { count: number; any: boolean; options: string[] } | null }
+      lessons: { skillGrant: { count: number; any: boolean; options: string[] } | null }
+      bash: { skillGrant: null }
+    }>(`{
+      physical: ability(id: "physical-skills") { skillGrant { count any options } }
+      lessons: ability(id: "life-lessons") { skillGrant { count any options } }
+      bash: ability(id: "bash") { skillGrant { count } }
+    }`)
+    expect(result.errors).toBeUndefined()
+    expect(result.data.physical.skillGrant?.count).toBe(2)
+    expect(result.data.physical.skillGrant?.options).toContain('climbing')
+    expect(result.data.lessons.skillGrant).toEqual({ count: 2, any: true, options: [] })
+    expect(result.data.bash.skillGrant).toBeNull()
+  })
+})

@@ -181,6 +181,15 @@ type AbilitySourceRef {
   cyberware: Boolean!
 }
 
+# "You are trained in `count` skills of your choice" — null on abilities that
+# don't grant skills. `any` means any skill (and `options` is then empty);
+# otherwise the player picks `count` of `options`.
+type SkillGrant {
+  count: Int!
+  any: Boolean!
+  options: [ID!]!
+}
+
 type Ability {
   id: ID!
   name: LocalizedString!
@@ -188,6 +197,7 @@ type Ability {
   cost: AbilityCost
   actionType: ActionType!
   sources: [AbilitySourceRef!]!
+  skillGrant: SkillGrant
   contentVersion: String!
 }
 
@@ -274,6 +284,14 @@ input TypeAbilityPickInput {
   abilityId: ID!
 }
 
+# The skills picked for one time a skill-granting ability was gained. `key` is
+# "<type|focus>:<tier>:<abilityId>" — a PendingPick's `key`, or built from the
+# ability and the tier it was gained at.
+input AbilitySkillChoiceInput {
+  key: String!
+  skillIds: [ID!]!
+}
+
 input AdvancementPurchaseInput @oneOf {
   increasingCapabilities: IncreasingCapabilitiesPurchaseInput
   movingTowardPerfection: MovingTowardPerfectionPurchaseInput
@@ -312,6 +330,8 @@ input CharacterChoicesInput {
   # Type abilities picked from tier 2 up (the tier-1 picks are tier1TypeAbilityIds).
   typeAbilityPicks: [TypeAbilityPickInput!]! = []
   descriptorSkillChoices: [ID!]!
+  # Skills picked for skill-granting abilities (Physical Skills, Life Lessons...).
+  abilitySkillChoices: [AbilitySkillChoiceInput!]! = []
   advancementPurchases: [AdvancementPurchaseInput!]!
 }
 
@@ -366,11 +386,15 @@ type DerivedCharacterPayload {
 }
 
 type PendingPick {
-  # "type" or "focus"
+  # "type", "focus" or "skill"
   kind: String!
   tier: Int!
   required: Int!
   chosen: Int!
+  # Only for kind "skill": the AbilitySkillChoiceInput.key to answer it under,
+  # and the ability it belongs to.
+  key: String
+  abilityId: ID
 }
 
 type ValidCharacterResult {
