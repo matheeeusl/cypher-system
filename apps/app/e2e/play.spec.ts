@@ -48,6 +48,21 @@ async function completePicks(page: Page, heading: RegExp, count: number) {
   await expect(panel).toHaveCount(0)
 }
 
+/**
+ * Answers every owed "choose the skills it trains" panel (a Type ability that
+ * grants skills, like Physical Skills, owes its picks once it's learned).
+ * Ticks the first two options of each — every such Type ability grants two.
+ */
+async function completeSkillPicks(page: Page) {
+  const heading = page.getByRole('heading', { name: /choose the skills it trains/ })
+  for (let n = await heading.count(); n > 0; n = await heading.count()) {
+    const panel = page.locator('section').filter({ has: heading.first() })
+    for (let i = 0; i < 2; i++) await panel.getByRole('checkbox').nth(i).check()
+    await panel.getByRole('button', { name: 'Confirm choices' }).click()
+    await expect(heading).toHaveCount(n - 1)
+  }
+}
+
 async function poolAction(page: Page, name: string, action: 'Spend' | 'Recover', amount: number) {
   const p = pool(page, name)
   await p.getByRole('button', { name: `${action} X` }).click()
@@ -160,6 +175,7 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   // Reaching tier 2 owes two Type abilities (a Warrior picks 2 at tier 2)
   await completePicks(page, /Tier 2 — choose your Type abilities/, 2)
   await expect(page.getByText(/Tier 2 — choose your Type abilities/)).toHaveCount(0)
+  await completeSkillPicks(page)
   await settled(page)
   await expect(async () => {
     await page.reload()
@@ -190,6 +206,7 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   // Some Foci also offer a choice at tier 3
   const focusPick = page.getByRole('heading', { name: /Tier 3 — choose a Focus ability/ })
   if (await focusPick.isVisible()) await completePicks(page, /Tier 3 — choose a Focus ability/, 1)
+  await completeSkillPicks(page)
   await settled(page)
   await expect(page.getByText(/— choose/)).toHaveCount(0)
 })

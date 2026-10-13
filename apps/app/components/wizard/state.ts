@@ -21,6 +21,9 @@ export interface WizardChoices {
   focusChoiceSelections: number[][]
   poolAllocation: PoolAllocation
   tier1TypeAbilityIds: string[]
+  // Skills picked for tier-1 abilities that grant skills, keyed by
+  // skillGrantKey('type' | 'focus', 1, abilityId) (see derive.ts).
+  abilitySkillChoices: Record<string, string[]>
   name: string
   background: string
 }
@@ -34,6 +37,7 @@ export const INITIAL_CHOICES: WizardChoices = {
   focusChoiceSelections: [],
   poolAllocation: { might: 0, speed: 0, intellect: 0 },
   tier1TypeAbilityIds: [],
+  abilitySkillChoices: {},
   name: '',
   background: '',
 }

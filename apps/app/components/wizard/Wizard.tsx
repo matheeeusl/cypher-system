@@ -27,8 +27,12 @@ import { DescriptorStep } from './DescriptorStep'
 import {
   buildCharacterChoicesInput,
   descriptorSkillChoicesNeeded,
+  descriptorAutoTrainedSkillIds,
   focusTier1ChoiceEntries,
   isStepValid,
+  skillGrantKey,
+  tier1SkillGrantSlots,
+  type SkillGrantSlot,
   stepErrorMessage,
 } from './derive'
 import { EquipmentStep } from './EquipmentStep'
@@ -78,6 +82,17 @@ function useEntityList<T>(fetcher: () => Promise<T[]>, needed: boolean): Content
   }, [needed, state.data, state.error])
 
   return state
+}
+
+function withoutSkillKey(record: Record<string, string[]>, key: string): Record<string, string[]> {
+  return Object.fromEntries(Object.entries(record).filter(([k]) => k !== key))
+}
+
+function withoutSkillKeys(
+  record: Record<string, string[]>,
+  prefix: string,
+): Record<string, string[]> {
+  return Object.fromEntries(Object.entries(record).filter(([k]) => !k.startsWith(prefix)))
 }
 
 interface WizardProps {
@@ -142,7 +157,10 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
   )
   const descriptors = useEntityList<WizardDescriptor>(
     fetchDescriptors,
-    step.id === 'descriptor' || step.id === 'skills' || step.id === 'review',
+    step.id === 'descriptor' ||
+      step.id === 'skills' ||
+      step.id === 'abilities' ||
+      step.id === 'review',
   )
   const foci = useEntityList<WizardFocus>(
     fetchFoci,
@@ -150,7 +168,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
   )
   const skills = useEntityList<WizardSkill>(
     fetchSkills,
-    step.id === 'skills' || step.id === 'review',
+    step.id === 'skills' || step.id === 'abilities' || step.id === 'review',
   )
   const abilities = useEntityList<WizardAbility>(
     fetchAbilities,
@@ -160,7 +178,12 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
   const selectedType = types.data?.find((t) => t.id === choices.typeId)
   const selectedDescriptor = descriptors.data?.find((d) => d.id === choices.descriptorId)
   const selectedFocus = foci.data?.find((f) => f.id === choices.focusId)
-  const content = { type: selectedType, descriptor: selectedDescriptor, focus: selectedFocus }
+  const content = {
+    type: selectedType,
+    descriptor: selectedDescriptor,
+    focus: selectedFocus,
+    abilities: abilities.data ?? undefined,
+  }
 
   // Live validation: call validateCharacterChoices as soon as Type/Descriptor/
   // Focus are all picked, debounced so rapid pool +/- clicks don't spam the API.
@@ -193,7 +216,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
       clearTimeout(timeoutId)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choices, selectedType, selectedDescriptor, selectedFocus])
+  }, [choices, selectedType, selectedDescriptor, selectedFocus, abilities.data])
 
   const stepValid = isStepValid(step.id, choices, content)
   const showLocalError = attemptedNext && !stepValid
@@ -244,7 +267,12 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
   }
 
   function onSelectType(id: string) {
-    update({ typeId: id, startingEdgeChoice: null, tier1TypeAbilityIds: [] })
+    update({
+      typeId: id,
+      startingEdgeChoice: null,
+      tier1TypeAbilityIds: [],
+      abilitySkillChoices: withoutSkillKeys(choices.abilitySkillChoices, 'type:'),
+    })
   }
 
   function onSelectFocus(id: string) {
@@ -253,6 +281,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
     update({
       focusId: id,
       focusChoiceSelections: Array.from({ length: entryCount }, () => []),
+      abilitySkillChoices: withoutSkillKeys(choices.abilitySkillChoices, 'focus:'),
     })
   }
 
@@ -279,10 +308,25 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
         return {
           ...prev,
           tier1TypeAbilityIds: prev.tier1TypeAbilityIds.filter((id) => id !== abilityId),
+          abilitySkillChoices: withoutSkillKey(
+            prev.abilitySkillChoices,
+            skillGrantKey('type', 1, abilityId),
+          ),
         }
       }
       if (prev.tier1TypeAbilityIds.length >= 4) return prev
       return { ...prev, tier1TypeAbilityIds: [...prev.tier1TypeAbilityIds, abilityId] }
+    })
+    setAttemptedNext(false)
+  }
+
+  function onToggleAbilitySkill(slot: SkillGrantSlot, skillId: string) {
+    setChoices((prev) => {
+      const current = prev.abilitySkillChoices[slot.key] ?? []
+      const has = current.includes(skillId)
+      if (!has && current.length >= slot.count) return prev
+      const next = has ? current.filter((id) => id !== skillId) : [...current, skillId]
+      return { ...prev, abilitySkillChoices: { ...prev.abilitySkillChoices, [slot.key]: next } }
     })
     setAttemptedNext(false)
   }
@@ -414,6 +458,18 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
               onToggleTypeAbility={onToggleTypeAbility}
               focusChoiceSelections={choices.focusChoiceSelections}
               onToggleFocusChoiceOption={onToggleFocusChoiceOption}
+              skills={skills.data}
+              skillGrantSlots={tier1SkillGrantSlots(choices, content)}
+              abilitySkillChoices={choices.abilitySkillChoices}
+              trainedSkillIds={
+                selectedDescriptor
+                  ? [
+                      ...descriptorAutoTrainedSkillIds(selectedDescriptor),
+                      ...choices.descriptorSkillChoices,
+                    ]
+                  : []
+              }
+              onToggleAbilitySkill={onToggleAbilitySkill}
             />
           )}
           {step.id === 'equipment' && <EquipmentStep type={selectedType} />}

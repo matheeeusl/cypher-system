@@ -12,6 +12,7 @@ import {
   descriptorAutoTrainedSkillIds,
   focusTier1ChoiceEntries,
   focusTier1GrantedIds,
+  tier1SkillGrantSlots,
 } from './derive'
 import { useWizardI18n } from './i18n'
 import type { StepId, WizardChoices } from './state'
@@ -45,9 +46,19 @@ export function ReviewStep({
     return ability ? t(ability.name) : id
   }
 
-  const skillIds = descriptor
-    ? [...descriptorAutoTrainedSkillIds(descriptor), ...choices.descriptorSkillChoices]
-    : []
+  // Skills from the Descriptor, then those picked for abilities that train skills.
+  const abilitySkillIds = tier1SkillGrantSlots(choices, {
+    type,
+    descriptor,
+    focus,
+    abilities: abilities ?? undefined,
+  }).flatMap((slot) => choices.abilitySkillChoices[slot.key] ?? [])
+  const skillIds = [
+    ...(descriptor
+      ? [...descriptorAutoTrainedSkillIds(descriptor), ...choices.descriptorSkillChoices]
+      : []),
+    ...abilitySkillIds,
+  ]
 
   const focusChoiceAbilityIds = focus
     ? focusTier1ChoiceEntries(focus).flatMap((entry, i) =>

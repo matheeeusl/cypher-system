@@ -9,6 +9,21 @@ const isNullableString = (v: unknown): v is string | null => v === null || isStr
 const isCount = (v: unknown): v is number =>
   Number.isInteger(v) && (v as number) >= 0 && (v as number) <= 100
 
+/** {key: skill ids} with a bounded size; keys look like "type:1:physical-skills". */
+function parseSkillChoices(raw: unknown): Record<string, string[]> | null {
+  if (raw === undefined) return {} // saved before skill choices existed
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
+  const entries = Object.entries(raw)
+  if (entries.length > 20) return null
+  const out: Record<string, string[]> = {}
+  for (const [key, ids] of entries) {
+    if (!/^(type|focus):[1-6]:[a-z0-9-]{1,100}$/.test(key)) return null
+    if (!isStringArray(ids) || ids.length > 10) return null
+    out[key] = ids
+  }
+  return out
+}
+
 /**
  * Rebuilds a WizardChoices from known fields only, checking just the shape —
  * a half-finished wizard (empty name, no Type yet) is fine. Used both for
@@ -20,6 +35,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
   const r = raw as Record<string, unknown>
   const pool = r.poolAllocation as Record<string, unknown> | undefined
   const edge = r.startingEdgeChoice
+  const abilitySkillChoices = parseSkillChoices(r.abilitySkillChoices)
 
   if (
     !isNullableString(r.typeId) ||
@@ -34,6 +50,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     !isCount(pool.might) ||
     !isCount(pool.speed) ||
     !isCount(pool.intellect) ||
+    !abilitySkillChoices ||
     !isString(r.name) ||
     !isString(r.background)
   ) {
@@ -50,6 +67,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     focusChoiceSelections: r.focusChoiceSelections as number[][],
     poolAllocation: { might: pool.might, speed: pool.speed, intellect: pool.intellect },
     tier1TypeAbilityIds: r.tier1TypeAbilityIds,
+    abilitySkillChoices,
     name: r.name,
     background: r.background,
   }

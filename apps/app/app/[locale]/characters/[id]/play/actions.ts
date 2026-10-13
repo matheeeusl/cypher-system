@@ -33,7 +33,7 @@ import {
 } from '@/lib/play'
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
-import { withPick } from '@/lib/tier-picks'
+import { withPick, withSkillPick } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
 // the browser), and let lib/play.ts scope the query to the session user.
@@ -344,7 +344,12 @@ export async function purchaseAdvancementAction(
     const next = [...character.advancement, toPurchase(choice, target)]
     const input = buildCharacterChoicesInput(
       character.choices,
-      { type: bundle.type, descriptor: bundle.descriptor, focus: bundle.focus },
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        abilities: bundle.abilities,
+      },
       next,
       character.tierPicks,
     )
@@ -398,14 +403,18 @@ export async function choosePicksAction(
   tier: unknown,
   optionIds: unknown,
   locale: unknown,
+  skillKey?: unknown,
 ): Promise<PicksResult> {
   const uid = await userId()
   if (!uid) return { ok: false, reason: 'unauthorized' }
   if (
     typeof characterId !== 'string' ||
     !UUID.test(characterId) ||
-    (kind !== 'type' && kind !== 'focus') ||
-    !isInt(tier, 2, 6) ||
+    (kind !== 'type' && kind !== 'focus' && kind !== 'skill') ||
+    // Skill picks can be owed from tier 1 (an ability taken at creation).
+    !isInt(tier, kind === 'skill' ? 1 : 2, 6) ||
+    (kind === 'skill' &&
+      !(typeof skillKey === 'string' && /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/.test(skillKey))) ||
     !Array.isArray(optionIds) ||
     optionIds.length === 0 ||
     optionIds.length > 10 ||
@@ -423,17 +432,34 @@ export async function choosePicksAction(
     if (!bundle) return { ok: false, reason: 'invalid' }
 
     // Only a pick that is actually owed, and only all of it at once.
-    const owed = bundle.derived.pendingPicks.find((p) => p.kind === kind && p.tier === tier)
+    const owed = bundle.derived.pendingPicks.find(
+      (p) => p.kind === kind && p.tier === tier && (kind !== 'skill' || p.key === skillKey),
+    )
     if (!owed) return { ok: false, reason: 'invalid' }
     const ids = (optionIds as string[]).flatMap((o) => o.split(','))
     if (kind === 'type' && ids.length !== owed.required - owed.chosen) {
       return { ok: false, reason: 'invalid' }
     }
+    if (kind === 'skill') {
+      // All of the grant's skills at once, each one a real skill.
+      if (ids.length !== owed.required) return { ok: false, reason: 'invalid' }
+      if (!ids.every((id) => bundle.skills.some((s) => s.id === id))) {
+        return { ok: false, reason: 'invalid' }
+      }
+    }
 
-    const picks = withPick(character.tierPicks, kind, tier, ids)
+    const picks =
+      kind === 'skill'
+        ? withSkillPick(character.tierPicks, skillKey as string, ids)
+        : withPick(character.tierPicks, kind, tier, ids)
     const input = buildCharacterChoicesInput(
       character.choices,
-      { type: bundle.type, descriptor: bundle.descriptor, focus: bundle.focus },
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        abilities: bundle.abilities,
+      },
       character.advancement,
       picks,
     )

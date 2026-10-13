@@ -11,8 +11,11 @@ import { terms } from '@/lib/i18n/terms'
 import type { InventoryItem, PlayData, PoolKey, PoolPoints } from '@/lib/play'
 
 export interface PendingChoice {
-  kind: 'type' | 'focus'
+  kind: 'type' | 'focus' | 'skill'
   tier: number
+  /** Only for kind 'skill': the choice key to answer under, and the ability it comes from. */
+  skillKey: string | null
+  abilityName: string | null
   required: number
   /** `id` is one option: a single ability id, or a bundled pair joined by ",". */
   options: Array<{ id: string; label: string; description: string; meta: string }>
@@ -126,6 +129,12 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
     return a ? loc(a.name, locale) : id
   }
   const known = new Set(derived.knownAbilities.map((k) => k.abilityId))
+  // A skill-granting ability trains skills "in which you are not already trained".
+  const trainedIds = new Set(
+    derived.skills
+      .filter((s) => s.level === 'TRAINED' || s.level === 'SPECIALIZED')
+      .map((s) => s.skillId),
+  )
 
   return derived.pendingPicks.flatMap((pick): PendingChoice[] => {
     if (pick.kind === 'type') {
@@ -142,7 +151,38 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
             })),
         )
       return [
-        { kind: 'type' as const, tier: pick.tier, required: pick.required - pick.chosen, options },
+        {
+          kind: 'type' as const,
+          tier: pick.tier,
+          skillKey: null,
+          abilityName: null,
+          required: pick.required - pick.chosen,
+          options,
+        },
+      ]
+    }
+    if (pick.kind === 'skill') {
+      const grant = abilityOf(pick.abilityId ?? '')?.skillGrant
+      if (!pick.key || !pick.abilityId || !grant) return []
+      const options = bundle.skills
+        .filter((skill) => grant.any || grant.options.includes(skill.id))
+        .filter((skill) => !trainedIds.has(skill.id))
+        .map((skill) => ({
+          id: skill.id,
+          label: loc(skill.name, locale),
+          description: '',
+          meta: '',
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, locale))
+      return [
+        {
+          kind: 'skill' as const,
+          tier: pick.tier,
+          skillKey: pick.key,
+          abilityName: nameOf(pick.abilityId),
+          required: pick.required,
+          options,
+        },
       ]
     }
     const entry = focus.tierAbilities
@@ -153,6 +193,8 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
       {
         kind: 'focus' as const,
         tier: pick.tier,
+        skillKey: null,
+        abilityName: null,
         required: entry.count,
         options: entry.options.map((ids) => ({
           id: ids.join(','),

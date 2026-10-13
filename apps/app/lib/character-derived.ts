@@ -47,7 +47,7 @@ export async function loadDerived(character: SavedCharacter): Promise<DerivedBun
 
   const input = buildCharacterChoicesInput(
     choices,
-    { type, descriptor, focus },
+    { type, descriptor, focus, abilities },
     character.advancement,
     character.tierPicks,
   )

@@ -161,6 +161,8 @@ export interface WizardAbility {
   name: LocalizedString
   description: LocalizedString
   cost: { pool: Stat; amount: number } | null
+  /** Set on abilities that train the character in skills they pick (Physical Skills, Life Lessons…). */
+  skillGrant: { count: number; any: boolean; options: string[] } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
   // values real Ability content actually uses — requesting it crashes the
@@ -175,6 +177,7 @@ const ABILITIES_QUERY = `
       name { en ptBR }
       description { en ptBR }
       cost { pool amount }
+      skillGrant { count any options }
     }
   }
 `
@@ -203,6 +206,8 @@ export interface CharacterChoicesInput {
   focusChoiceSelections: Array<{ tier: number; abilityId: string }>
   typeAbilityPicks?: Array<{ tier: number; abilityId: string }>
   descriptorSkillChoices: string[]
+  /** Skills picked for skill-granting abilities; `key` is built by `skillGrantKey`. */
+  abilitySkillChoices?: Array<{ key: string; skillIds: string[] }>
   // Empty at character creation; play mode adds one entry per purchase, in order.
   advancementPurchases: AdvancementPurchaseInput[]
 }
@@ -228,7 +233,15 @@ export interface DerivedCharacter {
   }>
   skills: Array<{ skillId: string; level: SkillLevel }>
   /** Level-up choices still owed for tiers already reached. */
-  pendingPicks: Array<{ kind: 'type' | 'focus'; tier: number; required: number; chosen: number }>
+  pendingPicks: Array<{
+    kind: 'type' | 'focus' | 'skill'
+    tier: number
+    required: number
+    chosen: number
+    /** Only for kind 'skill': the ability and the `abilitySkillChoices` key it is answered under. */
+    key: string | null
+    abilityId: string | null
+  }>
 }
 
 export interface ValidationIssueData {
@@ -261,7 +274,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
             }
           }
           skills { skillId level }
-          pendingPicks { kind tier required chosen }
+          pendingPicks { kind tier required chosen key abilityId }
         }
       }
       ... on InvalidCharacterResult {

@@ -55,6 +55,8 @@ export interface PlayCopy {
   picks: {
     typeTitle: (tier: number) => string
     focusTitle: (tier: number) => string
+    /** Skills an ability trains the character in, gained at `tier`. */
+    skillTitle: (abilityName: string, tier: number) => string
     hint: (selected: number, required: number) => string
     confirm: string
     error: string
@@ -184,6 +186,8 @@ const en: PlayCopy = {
   picks: {
     typeTitle: (tier) => `Tier ${tier} — choose your Type abilities`,
     focusTitle: (tier) => `Tier ${tier} — choose a Focus ability`,
+    skillTitle: (abilityName, tier) =>
+      `${abilityName} (tier ${tier}) — choose the skills it trains`,
     hint: (selected, required) => `Choose ${required} — ${selected} selected`,
     confirm: 'Confirm choices',
     error: 'Could not save these choices. Reload the page and try again.',
@@ -321,6 +325,8 @@ const ptBr: PlayCopy = {
   picks: {
     typeTitle: (tier) => `Grau ${tier} — escolha suas habilidades de Tipo`,
     focusTitle: (tier) => `Grau ${tier} — escolha uma habilidade de Foco`,
+    skillTitle: (abilityName, tier) =>
+      `${abilityName} (Grau ${tier}) — escolha as perícias que ela treina`,
     hint: (selected, required) => `Escolha ${required} — ${selected} selecionada(s)`,
     confirm: 'Confirmar escolhas',
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',

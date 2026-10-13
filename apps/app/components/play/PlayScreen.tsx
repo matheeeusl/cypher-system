@@ -311,11 +311,18 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     setBusy(false)
   }
 
-  async function savePicks(kind: 'type' | 'focus', tier: number, ids: string[]) {
+  async function savePicks(
+    kind: 'type' | 'focus' | 'skill',
+    tier: number,
+    ids: string[],
+    skillKey?: string,
+  ) {
     setBusy(true)
     setError('picks')
     try {
-      const res = await enqueue(() => choosePicksAction(view.characterId, kind, tier, ids, locale))
+      const res = await enqueue(() =>
+        choosePicksAction(view.characterId, kind, tier, ids, locale, skillKey),
+      )
       if (res.ok && res.view) setView(res.view)
       else if (res.ok) router.refresh()
       else setError('picks', copy.picks.error)
@@ -452,14 +459,18 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
 
           {view.pending.map((p) => (
             <AbilityPicker
-              key={`${p.kind}-${p.tier}`}
-              title={copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)}
+              key={`${p.kind}-${p.tier}-${p.skillKey ?? ''}`}
+              title={
+                p.kind === 'skill'
+                  ? copy.picks.skillTitle(p.abilityName ?? '', p.tier)
+                  : copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)
+              }
               hint={copy.picks.hint}
               required={p.required}
               options={p.options}
               confirmLabel={copy.picks.confirm}
               busy={busy}
-              onConfirm={(ids) => void savePicks(p.kind, p.tier, ids)}
+              onConfirm={(ids) => void savePicks(p.kind, p.tier, ids, p.skillKey ?? undefined)}
             />
           ))}
           {errors.picks && (

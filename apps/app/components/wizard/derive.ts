@@ -2,6 +2,7 @@ import type {
   AdvancementPurchaseInput,
   CharacterChoicesInput,
   FocusTierAbilityEntry,
+  WizardAbility,
   WizardDescriptor,
   WizardFocus,
   WizardType,
@@ -21,6 +22,69 @@ export interface WizardContent {
   type?: WizardType | undefined
   descriptor?: WizardDescriptor | undefined
   focus?: WizardFocus | undefined
+  /** The ability catalog; needed to know which abilities grant skills. */
+  abilities?: WizardAbility[] | undefined
+}
+
+/**
+ * The `abilitySkillChoices` key for an ability gained from a Type or Focus at
+ * a tier. Must match @cypher/engine's `skillGrantKey` (the app doesn't import
+ * the engine): `<type|focus>:<tier>:<abilityId>`.
+ */
+export function skillGrantKey(kind: 'type' | 'focus', tier: number, abilityId: string): string {
+  return `${kind}:${tier}:${abilityId}`
+}
+
+export interface SkillGrantSlot {
+  key: string
+  abilityId: string
+  count: number
+  /** Any skill may be picked (`options` is then empty). */
+  any: boolean
+  options: string[]
+}
+
+/**
+ * The skill-granting abilities among the character's tier-1 picks: the chosen
+ * Type abilities, the Focus's automatic grants and the Focus option(s) picked.
+ * (Skill grants gained at tier 2+ are answered in play mode.) The Type's
+ * special ability isn't looked at — none grants skills today; if one starts to,
+ * the engine reports it as a pending pick and play mode asks for it.
+ */
+export function tier1SkillGrantSlots(
+  choices: WizardChoices,
+  content: WizardContent,
+): SkillGrantSlot[] {
+  const { abilities, focus } = content
+  if (!abilities) return []
+
+  const focusChosenIds = focus
+    ? focusTier1ChoiceEntries(focus).flatMap((entry, i) =>
+        (choices.focusChoiceSelections[i] ?? []).flatMap(
+          (optionIndex) => entry.options[optionIndex] ?? [],
+        ),
+      )
+    : []
+  const sources: Array<{ kind: 'type' | 'focus'; ids: string[] }> = [
+    { kind: 'type', ids: choices.tier1TypeAbilityIds },
+    { kind: 'focus', ids: [...(focus ? focusTier1GrantedIds(focus) : []), ...focusChosenIds] },
+  ]
+
+  return sources.flatMap(({ kind, ids }) =>
+    [...new Set(ids)].flatMap((abilityId): SkillGrantSlot[] => {
+      const grant = abilities.find((a) => a.id === abilityId)?.skillGrant
+      if (!grant) return []
+      return [
+        {
+          key: skillGrantKey(kind, 1, abilityId),
+          abilityId,
+          count: grant.count,
+          any: grant.any,
+          options: grant.options,
+        },
+      ]
+    }),
+  )
 }
 
 /** Sum of a Descriptor's skill_training choice_count entries — the number of
@@ -101,8 +165,15 @@ export function isStepValid(
     case 'abilities': {
       if (choices.tier1TypeAbilityIds.length !== TIER1_TYPE_ABILITY_COUNT) return false
       const choiceEntries = focusTier1ChoiceEntries(content.focus)
-      return choiceEntries.every(
-        (entry, i) => (choices.focusChoiceSelections[i] ?? []).length === entry.count,
+      if (
+        !choiceEntries.every(
+          (entry, i) => (choices.focusChoiceSelections[i] ?? []).length === entry.count,
+        )
+      ) {
+        return false
+      }
+      return tier1SkillGrantSlots(choices, content).every(
+        (slot) => (choices.abilitySkillChoices[slot.key] ?? []).length === slot.count,
       )
     }
     case 'equipment':
@@ -112,6 +183,12 @@ export function isStepValid(
     case 'review':
       return true
   }
+}
+
+function focusChoicesComplete(choices: WizardChoices, content: WizardContent): boolean {
+  return focusTier1ChoiceEntries(content.focus).every(
+    (entry, i) => (choices.focusChoiceSelections[i] ?? []).length === entry.count,
+  )
 }
 
 export function stepErrorMessage(
@@ -143,7 +220,8 @@ export function stepErrorMessage(
       if (choices.tier1TypeAbilityIds.length !== TIER1_TYPE_ABILITY_COUNT) {
         return copy.chooseAbilities(TIER1_TYPE_ABILITY_COUNT)
       }
-      return copy.focusChoices
+      if (!focusChoicesComplete(choices, content)) return copy.focusChoices
+      return copy.abilitySkills
     }
     case 'background':
       return copy.enterName
@@ -188,6 +266,17 @@ export function buildCharacterChoicesInput(
   const poolBonus = descriptor.poolBonus[0]
   const choiceEntries = focusTier1ChoiceEntries(focus)
 
+  // Only tier-1 choices for abilities the character still has are sent — a
+  // pick left over from an ability that was since deselected would otherwise
+  // be rejected as matching nothing. Picks for tier 2+ come from tierPicks.
+  const currentKeys = new Set(tier1SkillGrantSlots(choices, content).map((slot) => slot.key))
+  const abilitySkillChoices = [
+    ...Object.entries(choices.abilitySkillChoices)
+      .filter(([key]) => currentKeys.has(key))
+      .map(([key, skillIds]) => ({ key, skillIds })),
+    ...Object.entries(tierPicks.skills ?? {}).map(([key, skillIds]) => ({ key, skillIds })),
+  ]
+
   return {
     typeId: choices.typeId,
     descriptorId: choices.descriptorId,
@@ -213,6 +302,7 @@ export function buildCharacterChoicesInput(
       ? { typeAbilityPicks: pairsOf(tierPicks.type) }
       : {}),
     descriptorSkillChoices: choices.descriptorSkillChoices,
+    ...(abilitySkillChoices.length > 0 ? { abilitySkillChoices } : {}),
     advancementPurchases,
   }
 }

@@ -61,6 +61,10 @@ export interface WizardCopy {
     selected: (count: number, needed: number) => string
     grantedByFocus: string
     focusChoice: (pick: number, count: number, needed: number) => string
+    /** Heading of the skill picker under an ability that trains skills. */
+    skillPick: (abilityName: string, count: number, needed: number) => string
+    /** A skill the character is already trained in, so it can't be picked again. */
+    skillTaken: string
   }
   equipment: {
     fixedByType: string
@@ -90,6 +94,7 @@ export interface WizardCopy {
     chooseSkills: (count: number) => string
     chooseAbilities: (count: number) => string
     focusChoices: string
+    abilitySkills: string
     enterName: string
   }
   /** Localized text for an engine rule error, or null to fall back to the English message. */
@@ -196,6 +201,9 @@ const en: WizardCopy = {
     grantedByFocus: 'Granted automatically by your Focus',
     focusChoice: (pick, count, needed) =>
       `Focus choice — pick ${pick} (${count} / ${needed} selected)`,
+    skillPick: (abilityName, count, needed) =>
+      `${abilityName} — choose ${needed} ${needed === 1 ? 'skill' : 'skills'} (${count} / ${needed} selected)`,
+    skillTaken: 'already trained',
   },
   equipment: {
     fixedByType: 'Starting equipment is fixed by your Type — there’s nothing to choose here.',
@@ -239,6 +247,7 @@ const en: WizardCopy = {
     chooseSkills: (count) => `Choose exactly ${count} trained skill${count === 1 ? '' : 's'}.`,
     chooseAbilities: (count) => `Choose exactly ${count} tier-1 abilities.`,
     focusChoices: 'Make a selection for every Focus choice above.',
+    abilitySkills: 'Choose the skills each ability above trains you in.',
     enterName: 'Enter a character name to continue.',
   },
   issue: (issue) => {
@@ -283,6 +292,14 @@ const en: WizardCopy = {
         return 'The same ability was chosen more than once.'
       case 'TYPE_ABILITY_UNAVAILABLE':
         return 'One of the chosen abilities isn’t available to this Type at tier 1.'
+      case 'ABILITY_SKILL_CHOICE_COUNT':
+        return `That ability trains only ${param(issue, 'required')} skill(s) — too many were chosen.`
+      case 'ABILITY_SKILL_CHOICE_INVALID':
+        return 'One of the chosen skills isn’t among the skills that ability can train.'
+      case 'ABILITY_SKILL_CHOICE_DUPLICATE':
+        return 'A skill chosen for an ability is one the character is already trained in.'
+      case 'ABILITY_SKILL_CHOICE_UNKNOWN':
+        return 'Skills were chosen for an ability the character doesn’t have.'
       default:
         return null
     }
@@ -386,6 +403,9 @@ const ptBr: WizardCopy = {
     grantedByFocus: 'Concedidas automaticamente pelo seu Foco',
     focusChoice: (pick, count, needed) =>
       `Escolha do Foco — escolha ${pick} (${count} / ${needed} selecionadas)`,
+    skillPick: (abilityName, count, needed) =>
+      `${abilityName} — escolha ${needed} ${needed === 1 ? 'perícia' : 'perícias'} (${count} / ${needed} selecionadas)`,
+    skillTaken: 'já treinada',
   },
   equipment: {
     fixedByType: 'O equipamento inicial é definido pelo seu Tipo — não há nada para escolher aqui.',
@@ -430,6 +450,7 @@ const ptBr: WizardCopy = {
       `Escolha exatamente ${count} ${count === 1 ? 'perícia treinada' : 'perícias treinadas'}.`,
     chooseAbilities: (count) => `Escolha exatamente ${count} habilidades de Grau 1.`,
     focusChoices: 'Faça uma seleção para cada escolha do Foco acima.',
+    abilitySkills: 'Escolha as perícias em que cada habilidade acima treina você.',
     enterName: 'Digite o nome do personagem para continuar.',
   },
   issue: (issue) => {
@@ -474,6 +495,14 @@ const ptBr: WizardCopy = {
         return 'A mesma habilidade foi escolhida mais de uma vez.'
       case 'TYPE_ABILITY_UNAVAILABLE':
         return 'Uma das habilidades escolhidas não está disponível para este Tipo no Grau 1.'
+      case 'ABILITY_SKILL_CHOICE_COUNT':
+        return `Essa habilidade treina apenas ${param(issue, 'required')} perícia(s) — foram escolhidas demais.`
+      case 'ABILITY_SKILL_CHOICE_INVALID':
+        return 'Uma das perícias escolhidas não está entre as que essa habilidade pode treinar.'
+      case 'ABILITY_SKILL_CHOICE_DUPLICATE':
+        return 'Uma perícia escolhida para uma habilidade é uma em que o personagem já é treinado.'
+      case 'ABILITY_SKILL_CHOICE_UNKNOWN':
+        return 'Foram escolhidas perícias para uma habilidade que o personagem não possui.'
       default:
         return null
     }
