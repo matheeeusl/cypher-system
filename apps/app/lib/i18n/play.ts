@@ -46,6 +46,10 @@ export interface PlayCopy {
     skillMaxed: (name: string) => string
     /** Offered while typing a skill that isn't listed. */
     skillNew: (name: string) => string
+    /** Switches the Skills advancement from the skill list to the ability list, and back. */
+    toAbilities: string
+    toSkills: string
+    abilitySearch: string
     abilityOption: (name: string) => string
     abilityTrained: (name: string) => string
     cancel: string
@@ -177,6 +181,9 @@ const en: PlayCopy = {
     skillOption: (name, from, to) => `${name} (${from} → ${to})`,
     skillMaxed: (name) => `${name} — Specialized (maxed)`,
     skillNew: (name) => `Train “${name}” as a new skill`,
+    toAbilities: 'Train a special ability instead →',
+    toSkills: '← Back to skills',
+    abilitySearch: 'Search your special abilities',
     abilityOption: (name) => `${name} — ability (train)`,
     abilityTrained: (name) => `${name} — ability, already trained`,
     cancel: 'Cancel',
@@ -321,6 +328,9 @@ const ptBr: PlayCopy = {
     skillOption: (name, from, to) => `${name} (${from} → ${to})`,
     skillMaxed: (name) => `${name} — Especializado (máximo)`,
     skillNew: (name) => `Treinar “${name}” como nova perícia`,
+    toAbilities: 'Treinar uma habilidade especial →',
+    toSkills: '← Voltar às perícias',
+    abilitySearch: 'Buscar suas habilidades especiais',
     abilityOption: (name) => `${name} — habilidade (treinar)`,
     abilityTrained: (name) => `${name} — habilidade, já treinada`,
     cancel: 'Cancelar',

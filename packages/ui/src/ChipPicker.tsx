@@ -25,6 +25,8 @@ interface ChipPickerProps {
    * name as a new skill"), shown first. Return null for none.
    */
   extraOption?: ((query: string) => ChipOption | null) | undefined
+  /** A link-like button beside cancel, for switching to a related list. */
+  secondaryAction?: { label: string; onClick: () => void } | undefined
 }
 
 /** A row of choices, optionally filterable — used for the advancement pickers. */
@@ -36,6 +38,7 @@ export function ChipPicker({
   cancelLabel,
   searchPlaceholder,
   extraOption,
+  secondaryAction,
 }: ChipPickerProps) {
   const [query, setQuery] = useState('')
   const q = query.trim().toLowerCase()
@@ -79,11 +82,22 @@ export function ChipPicker({
             {o.label}
           </button>
         ))}
+        {secondaryAction && (
+          <button
+            type="button"
+            onClick={secondaryAction.onClick}
+            className="text-accent ml-auto cursor-pointer font-mono text-[11px] hover:opacity-80"
+          >
+            {secondaryAction.label}
+          </button>
+        )}
         {onCancel && (
           <button
             type="button"
             onClick={onCancel}
-            className="text-text-muted hover:text-text ml-auto cursor-pointer font-mono text-[11px]"
+            className={`text-text-muted hover:text-text cursor-pointer font-mono text-[11px] ${
+              secondaryAction ? 'ml-3' : 'ml-auto'
+            }`}
           >
             {cancelLabel}
           </button>

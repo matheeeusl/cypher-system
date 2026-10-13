@@ -202,6 +202,9 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   await buy('Extra Effort').click()
   await expect(page.getByText('3 / 4 steps')).toBeVisible()
   await buy('Skills —').click()
+  // Skills and special abilities are separate lists
+  await expect(page.getByRole('button', { name: /— ability \(train\)$/ })).toHaveCount(0)
+  await page.getByRole('button', { name: 'Train a special ability instead →' }).click()
   await page
     .getByRole('button', { name: /— ability \(train\)$/ })
     .first()

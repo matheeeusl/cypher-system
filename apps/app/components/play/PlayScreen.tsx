@@ -78,7 +78,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [inventory, setInventory] = useState<InventoryItem[]>(initial.inventory)
   const [notes, setNotes] = useState(initial.notes)
   const [notesStatus, setNotesStatus] = useState<NotesStatus>('idle')
-  const [picker, setPicker] = useState<'pools' | 'edge' | 'skills' | null>(null)
+  const [picker, setPicker] = useState<'pools' | 'edge' | 'skills' | 'abilities' | null>(null)
   const [tierUp, setTierUp] = useState<number | null>(null)
   const [busy, setBusy] = useState(false)
   const [errors, setErrors] = useState<{
@@ -408,22 +408,34 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               highlight: s.level !== null,
             }
           }),
-          ...view.abilityOptions.map((a) => ({
-            id: `ability:${a.id}`,
-            label: a.trained
-              ? copy.advancement.abilityTrained(a.name)
-              : copy.advancement.abilityOption(a.name),
-            disabled: a.trained,
-            highlight: true,
-          })),
         ]}
-        onPick={(id) =>
-          void purchase(
-            id.startsWith('ability:')
-              ? { key: 'skills', abilityId: id.slice('ability:'.length) }
-              : { key: 'skills', skillId: id },
-          )
+        onPick={(id) => void purchase({ key: 'skills', skillId: id })}
+        // Training a special ability is a different choice from training a
+        // skill, so its list is kept apart from the skills.
+        secondaryAction={
+          view.abilityOptions.length > 0
+            ? { label: copy.advancement.toAbilities, onClick: () => setPicker('abilities') }
+            : undefined
         }
+        onCancel={() => setPicker(null)}
+        cancelLabel={copy.advancement.cancel}
+      />
+    ) : picker === 'abilities' ? (
+      <ChipPicker
+        searchPlaceholder={copy.advancement.abilitySearch}
+        options={view.abilityOptions.map((a) => ({
+          id: a.id,
+          label: a.trained
+            ? copy.advancement.abilityTrained(a.name)
+            : copy.advancement.abilityOption(a.name),
+          disabled: a.trained,
+          highlight: true,
+        }))}
+        onPick={(id) => void purchase({ key: 'skills', abilityId: id })}
+        secondaryAction={{
+          label: copy.advancement.toSkills,
+          onClick: () => setPicker('skills'),
+        }}
         onCancel={() => setPicker(null)}
         cancelLabel={copy.advancement.cancel}
       />
