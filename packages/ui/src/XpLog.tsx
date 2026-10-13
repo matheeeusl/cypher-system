@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Alert } from './Alert'
 
@@ -21,6 +21,10 @@ export interface XpLogLabels {
   add: string
   empty: string
   remove: string
+  previous: string
+  next: string
+  /** "Page 2 of 5" */
+  page: (current: number, total: number) => string
 }
 
 interface XpLogProps {
@@ -29,12 +33,33 @@ interface XpLogProps {
   onAdd: (entry: { kind: 'gain' | 'spend'; amount: number; reason: string }) => void
   onRemove: (id: number) => void
   errorMessage?: string | undefined
+  /** Entries per page (the list is shown in the order given). */
+  pageSize?: number | undefined
 }
 
-export function XpLog({ entries, labels, onAdd, onRemove, errorMessage }: XpLogProps) {
+export function XpLog({
+  entries,
+  labels,
+  onAdd,
+  onRemove,
+  errorMessage,
+  pageSize = 10,
+}: XpLogProps) {
   const [reason, setReason] = useState('')
   const [amount, setAmount] = useState('1')
   const [kind, setKind] = useState<'gain' | 'spend'>('gain')
+  const [page, setPage] = useState(0)
+
+  const pageCount = Math.max(1, Math.ceil(entries.length / pageSize))
+  const current = Math.min(page, pageCount - 1)
+  const shown = entries.slice(current * pageSize, (current + 1) * pageSize)
+
+  // A new entry goes back to the first page, where the newest one is shown.
+  const previousCount = useRef(entries.length)
+  useEffect(() => {
+    if (entries.length > previousCount.current) setPage(0)
+    previousCount.current = entries.length
+  }, [entries.length])
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -108,7 +133,7 @@ export function XpLog({ entries, labels, onAdd, onRemove, errorMessage }: XpLogP
         </p>
       ) : (
         <ul className="flex flex-col gap-1.5">
-          {entries.map((entry) => (
+          {shown.map((entry) => (
             <li
               key={entry.id}
               className="border-border bg-panel flex items-center justify-between gap-3 rounded border px-3.5 py-2"
@@ -138,6 +163,33 @@ export function XpLog({ entries, labels, onAdd, onRemove, errorMessage }: XpLogP
             </li>
           ))}
         </ul>
+      )}
+
+      {pageCount > 1 && (
+        <nav
+          aria-label={labels.title}
+          className="mt-3 flex items-center justify-between font-mono text-[11px]"
+        >
+          <button
+            type="button"
+            disabled={current === 0}
+            onClick={() => setPage(current - 1)}
+            className="border-border text-text rounded border px-3 py-1.5 enabled:cursor-pointer enabled:hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {labels.previous}
+          </button>
+          <span className="text-text-muted" aria-live="polite">
+            {labels.page(current + 1, pageCount)}
+          </span>
+          <button
+            type="button"
+            disabled={current >= pageCount - 1}
+            onClick={() => setPage(current + 1)}
+            className="border-border text-text rounded border px-3 py-1.5 enabled:cursor-pointer enabled:hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {labels.next}
+          </button>
+        </nav>
       )}
     </section>
   )

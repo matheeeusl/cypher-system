@@ -694,7 +694,9 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
       {tab === 'log' && (
         <div className="flex flex-col gap-7">
           <XpLog
-            entries={xp.map((e) => ({
+            // Newest first, 10 to a page: the log can grow without bound.
+            pageSize={10}
+            entries={[...xp].reverse().map((e) => ({
               id: e.id,
               reason: e.reason,
               amountLabel: `${e.kind === 'gain' ? '+' : '−'}${e.amount} XP`,
@@ -709,6 +711,9 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               add: copy.log.add,
               empty: copy.log.empty,
               remove: copy.log.remove,
+              previous: copy.log.previous,
+              next: copy.log.next,
+              page: copy.log.page,
             }}
             errorMessage={errors.xp}
             onAdd={(entry) => void addXp(entry)}

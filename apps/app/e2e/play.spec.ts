@@ -306,6 +306,40 @@ test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ 
   await expect(page.getByText('Aumentando Capacidades')).toBeVisible()
 })
 
+test('XP log: paginates ten entries to a page, newest first', async ({ page }) => {
+  await page.goto(playUrl)
+  await tab(page, 'Log & Notes').click()
+
+  // Six gain/spend pairs of 1 XP: twelve more entries, net zero XP
+  const reason = page.getByPlaceholder(/^Description/)
+  for (let i = 1; i <= 6; i++) {
+    for (const kind of ['Gain', 'Spend']) {
+      await page.getByRole('button', { name: kind, exact: true }).click()
+      await reason.fill(`Page test ${kind} ${i}`)
+      await page.getByRole('button', { name: 'Add', exact: true }).click()
+      await expect(page.getByText(`Page test ${kind} ${i}`)).toBeVisible()
+    }
+  }
+
+  const nav = page.getByRole('navigation', { name: /XP Log/ })
+  await expect(nav.getByText(/^Page 1 of \d+$/)).toBeVisible()
+  // The newest entry is on the first page; the oldest ones are not
+  await expect(page.getByText('Page test Spend 6')).toBeVisible()
+  await expect(page.getByText('Big milestone')).toHaveCount(0)
+  await expect(nav.getByRole('button', { name: '← Newer' })).toBeDisabled()
+
+  await nav.getByRole('button', { name: 'Older →' }).click()
+  await expect(nav.getByText(/^Page 2 of \d+$/)).toBeVisible()
+  await expect(page.getByText('Page test Spend 6')).toHaveCount(0)
+
+  // Adding an entry returns to the first page
+  await page.getByRole('button', { name: 'Gain', exact: true }).click()
+  await reason.fill('Newest entry')
+  await page.getByRole('button', { name: 'Add', exact: true }).click()
+  await expect(nav.getByText(/^Page 1 of \d+$/)).toBeVisible()
+  await expect(page.getByText('Newest entry')).toBeVisible()
+})
+
 test('cleanup', async ({ page }) => {
   await deleteCharacter(page, NAME)
 })

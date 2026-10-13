@@ -80,6 +80,9 @@ export interface PlayCopy {
     add: string
     empty: string
     remove: string
+    previous: string
+    next: string
+    page: (current: number, total: number) => string
     notes: string
     notesPlaceholder: string
     saving: string
@@ -219,6 +222,9 @@ const en: PlayCopy = {
     add: 'Add',
     empty: 'No XP recorded yet this session.',
     remove: 'Remove entry',
+    previous: '← Newer',
+    next: 'Older →',
+    page: (current, total) => `Page ${current} of ${total}`,
     notes: 'Notes',
     notesPlaceholder: 'Session notes, reminders, loose threads…',
     saving: 'Saving…',
@@ -366,6 +372,9 @@ const ptBr: PlayCopy = {
     add: 'Adicionar',
     empty: 'Nenhum XP registrado nesta sessão ainda.',
     remove: 'Remover registro',
+    previous: '← Mais recentes',
+    next: 'Mais antigos →',
+    page: (current, total) => `Página ${current} de ${total}`,
     notes: 'Anotações',
     notesPlaceholder: 'Notas da sessão, lembretes, pontas soltas…',
     saving: 'Salvando…',

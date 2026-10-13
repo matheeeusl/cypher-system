@@ -9,6 +9,9 @@ const labels = {
   add: 'Add',
   empty: 'No XP recorded yet this session.',
   remove: 'Remove entry',
+  previous: '← Newer',
+  next: 'Older →',
+  page: (current: number, total: number) => `Page ${current} of ${total}`,
 }
 
 const meta: Meta<typeof XpLog> = {
@@ -52,4 +55,17 @@ export const Empty: Story = { args: { entries: [] } }
 
 export const WithError: Story = {
   args: { entries: [], errorMessage: 'Not enough XP to spend that much.' },
+}
+
+export const Paginated: Story = {
+  args: {
+    pageSize: 10,
+    entries: Array.from({ length: 23 }, (_, i) => ({
+      id: i + 1,
+      reason: `Milestone ${23 - i}`,
+      amountLabel: '+1 XP',
+      tone: 'gain' as const,
+      removable: true,
+    })),
+  },
 }
