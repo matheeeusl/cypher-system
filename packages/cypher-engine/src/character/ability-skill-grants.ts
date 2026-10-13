@@ -23,8 +23,6 @@ export interface SkillGrantInstance {
 }
 
 const ERRORS = {
-  COUNT: (abilityId: string, required: number) =>
-    `Ability "${abilityId}" requires exactly ${required} skill choice(s)`,
   TOO_MANY: (abilityId: string, required: number) =>
     `Ability "${abilityId}" grants only ${required} skill(s), but more were supplied`,
   INVALID: (abilityId: string, skillId: string) =>
@@ -107,9 +105,11 @@ export function collectSkillGrantInstances(
  * ability's `options` unless that is 'any'. 'any' isn't checked against the
  * skill catalog — the engine has none; callers with the catalog should.
  *
- * An instance gained at tier 1 is the creation step and must be complete;
- * from tier 2 up, missing picks are reported through `pending` (a level-up
- * the player hasn't finished) rather than thrown.
+ * Missing picks are never an error here: they are reported through
+ * `pending`, whatever the tier. Skill choices were added after characters
+ * already existed, so one saved with, say, Physical Skills at tier 1 must
+ * still derive (and be asked again) rather than turn invalid. Creation flows
+ * that want the tier-1 picks complete check `pending_picks` themselves.
  *
  * Applied before all the 'skills' advancement purchases, whatever their
  * tier. Strictly, a purchase tagged tier N comes before the picks made on
@@ -142,13 +142,6 @@ export function applyAbilitySkillGrants(
       )
     }
     if (picked.length < grant.count) {
-      if (tier === 1) {
-        throw new CharacterRuleError(
-          'ABILITY_SKILL_CHOICE_COUNT',
-          ERRORS.COUNT(ability_id, grant.count),
-          { abilityId: ability_id, required: grant.count },
-        )
-      }
       pending.push({
         kind: 'skill',
         tier,

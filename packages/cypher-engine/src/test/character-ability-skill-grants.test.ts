@@ -83,10 +83,13 @@ describe('applyAbilitySkillGrants', () => {
     })
   })
 
-  it('requires a tier-1 grant to be complete', () => {
-    expect(() => applyAbilitySkillGrants(physical, { [key]: ['climbing'] }, {}, [])).toThrow(
-      /exactly 2 skill choice/,
-    )
+  it('reports an incomplete tier-1 grant as pending, applying what was picked', () => {
+    const pending: PendingPick[] = []
+    const skills = applyAbilitySkillGrants(physical, { [key]: ['climbing'] }, {}, pending)
+    expect(skills).toEqual({ climbing: { level: 'trained' } })
+    expect(pending).toEqual([
+      { kind: 'skill', tier: 1, key, ability_id: 'physical-skills', required: 2, chosen: 1 },
+    ])
   })
 
   it('rejects more skills than the ability grants', () => {
@@ -272,13 +275,19 @@ describe('deriveCharacter / validateCharacterChoices with skill grants', () => {
     })
   })
 
-  it('reports a missing tier-1 pick as a coded validation issue', () => {
+  it('lists a missing tier-1 pick as pending instead of invalidating the character', () => {
     const result = validateCharacterChoices({ ...base, ability_skill_choices: {} }, content)
-    if (result.valid) throw new Error('expected invalid')
-    expect(result.issues).toContainEqual({
-      code: 'ABILITY_SKILL_CHOICE_COUNT',
-      params: { abilityId: 'physical-skills', required: 2 },
-    })
+    if (!result.valid) throw new Error(result.errors.join('; '))
+    expect(result.character.pending_picks).toEqual([
+      {
+        kind: 'skill',
+        tier: 1,
+        key: 'type:1:physical-skills',
+        ability_id: 'physical-skills',
+        required: 2,
+        chosen: 0,
+      },
+    ])
   })
 
   it('treats a character without skill_grants content as having no grants', () => {

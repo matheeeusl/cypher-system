@@ -66,8 +66,8 @@ export interface CharacterChoices {
    * ability was taken, keyed by `skillGrantKey(source kind, tier, ability id)`
    * — an ability that can be taken again at a later tier (Physical Skills)
    * gets a separate entry, and a separate set of skills, for each tier.
-   * An instance gained at tier 1 must be complete; from tier 2 up, missing
-   * picks are reported in `pending_picks` instead of being an error.
+   * Missing picks, at any tier, are reported in `pending_picks` rather than
+   * being an error.
    */
   ability_skill_choices?: Record<string, string[]>
 }

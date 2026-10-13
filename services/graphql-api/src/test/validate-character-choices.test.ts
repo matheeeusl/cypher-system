@@ -264,17 +264,26 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
     )
   })
 
-  it('reports the missing picks as a coded issue', async () => {
+  it('lists missing picks as a pending skill pick', async () => {
     const result = await graphqlRequest<{
       validateCharacterChoices: {
         __typename: string
-        issues?: Array<{ code: string }>
+        character?: {
+          pendingPicks: Array<{ kind: string; tier: number; key: string; abilityId: string }>
+        }
       }
     }>(SKILL_QUERY, { input: withPhysicalSkills })
 
     const payload = result.data.validateCharacterChoices
-    expect(payload.__typename).toBe('InvalidCharacterResult')
-    expect(payload.issues?.map((i) => i.code)).toContain('ABILITY_SKILL_CHOICE_COUNT')
+    expect(payload.__typename).toBe('ValidCharacterResult')
+    expect(payload.character?.pendingPicks).toContainEqual(
+      expect.objectContaining({
+        kind: 'skill',
+        tier: 1,
+        key: 'type:1:physical-skills',
+        abilityId: 'physical-skills',
+      }),
+    )
   })
 
   it('rejects a skill id that is not in the catalog as a top-level error', async () => {
