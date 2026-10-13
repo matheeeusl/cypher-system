@@ -41,6 +41,8 @@ export interface CharacterContent {
    * a character must supply it, or `ability_skill_choices` is rejected.
    */
   skill_grants?: SkillGrantsByAbility
+  /** Ids of the skills flagged `combat`; a 'noncombat' grant can't pick them. */
+  combat_skill_ids?: string[]
 }
 
 /**
@@ -91,6 +93,7 @@ export function deriveCharacter(
     choices.ability_skill_choices ?? {},
     skills,
     pending,
+    new Set(content.combat_skill_ids ?? []),
   )
 
   // 'skills' purchases are order-sensitive (training the same skill twice

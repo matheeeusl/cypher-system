@@ -39,8 +39,8 @@ export interface SkillGrantSlot {
   key: string
   abilityId: string
   count: number
-  /** Any skill may be picked (`options` is then empty). */
-  any: boolean
+  /** Any skill not flagged `combat` may be picked (`options` is then empty). */
+  noncombat: boolean
   options: string[]
 }
 
@@ -79,7 +79,7 @@ export function tier1SkillGrantSlots(
           key: skillGrantKey(kind, 1, abilityId),
           abilityId,
           count: grant.count,
-          any: grant.any,
+          noncombat: grant.noncombat,
           options: grant.options,
         },
       ]

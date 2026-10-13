@@ -165,7 +165,7 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
       const grant = abilityOf(pick.abilityId ?? '')?.skillGrant
       if (!pick.key || !pick.abilityId || !grant) return []
       const options = bundle.skills
-        .filter((skill) => grant.any || grant.options.includes(skill.id))
+        .filter((skill) => (grant.noncombat ? !skill.combat : grant.options.includes(skill.id)))
         .filter((skill) => !trainedIds.has(skill.id))
         .map((skill) => ({
           id: skill.id,

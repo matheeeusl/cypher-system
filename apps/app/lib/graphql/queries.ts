@@ -138,6 +138,8 @@ export async function fetchFoci(): Promise<WizardFocus[]> {
 export interface WizardSkill {
   id: string
   name: LocalizedString
+  /** A fighting skill — excluded from "noncombat" skill picks. */
+  combat: boolean
 }
 
 const SKILLS_QUERY = `
@@ -145,6 +147,7 @@ const SKILLS_QUERY = `
     skills {
       id
       name { en ptBR }
+      combat
     }
   }
 `
@@ -162,7 +165,7 @@ export interface WizardAbility {
   description: LocalizedString
   cost: { pool: Stat; amount: number } | null
   /** Set on abilities that train the character in skills they pick (Physical Skills, Life Lessons…). */
-  skillGrant: { count: number; any: boolean; options: string[] } | null
+  skillGrant: { count: number; noncombat: boolean; options: string[] } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
   // values real Ability content actually uses — requesting it crashes the
@@ -177,7 +180,7 @@ const ABILITIES_QUERY = `
       name { en ptBR }
       description { en ptBR }
       cost { pool amount }
-      skillGrant { count any options }
+      skillGrant { count noncombat options }
     }
   }
 `

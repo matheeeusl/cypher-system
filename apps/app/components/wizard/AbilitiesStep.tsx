@@ -134,7 +134,7 @@ export function AbilitiesStep({
           .flatMap((other) => abilitySkillChoices[other.key] ?? [])
         const unavailable = new Set([...trainedSkillIds, ...takenElsewhere])
         const candidates = (skills ?? [])
-          .filter((skill) => slot.any || slot.options.includes(skill.id))
+          .filter((skill) => (slot.noncombat ? !skill.combat : slot.options.includes(skill.id)))
           .sort((a, b) => t(a.name).localeCompare(t(b.name)))
         return (
           <div key={slot.key} className="border-border bg-panel mt-5 rounded border p-4">

@@ -182,11 +182,11 @@ type AbilitySourceRef {
 }
 
 # "You are trained in `count` skills of your choice" — null on abilities that
-# don't grant skills. `any` means any skill (and `options` is then empty);
-# otherwise the player picks `count` of `options`.
+# don't grant skills. `noncombat` means any skill not flagged `combat` (and
+# `options` is then empty); otherwise the player picks `count` of `options`.
 type SkillGrant {
   count: Int!
-  any: Boolean!
+  noncombat: Boolean!
   options: [ID!]!
 }
 
@@ -206,6 +206,8 @@ type Skill {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
+  # A fighting skill (defense tasks, initiative) — excluded from "noncombat" picks.
+  combat: Boolean!
   contentVersion: String!
 }
 

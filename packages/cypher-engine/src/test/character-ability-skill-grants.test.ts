@@ -16,7 +16,7 @@ const grants = {
     count: 2,
     options: ['climbing', 'jumping', 'running', 'swimming'],
   },
-  'life-lessons': { count: 2, options: 'any' as const },
+  'life-lessons': { count: 2, options: 'noncombat' as const },
 }
 
 const noPicks = { type_ability_picks: {}, focus_choice_selections: {} }
@@ -102,6 +102,35 @@ describe('applyAbilitySkillGrants', () => {
     expect(() =>
       applyAbilitySkillGrants(physical, { [key]: ['climbing', 'perception'] }, {}, []),
     ).toThrow(/not one of the skills/)
+  })
+
+  it('rejects a combat skill for a noncombat grant, and allows others', () => {
+    const lessons = collectSkillGrantInstances(
+      { special_ability_id: null },
+      { tier_abilities: {} },
+      1,
+      { tier_1_type_ability_ids: ['life-lessons'], ...noPicks },
+      grants,
+    )
+    const lessonsKey = skillGrantKey('type', 1, 'life-lessons')
+    const combat = new Set(['might-defense'])
+    expect(() =>
+      applyAbilitySkillGrants(
+        lessons,
+        { [lessonsKey]: ['perception', 'might-defense'] },
+        {},
+        [],
+        combat,
+      ),
+    ).toThrow(/not one of the skills/)
+    const skills = applyAbilitySkillGrants(
+      lessons,
+      { [lessonsKey]: ['perception', 'history'] },
+      {},
+      [],
+      combat,
+    )
+    expect(Object.keys(skills)).toEqual(['perception', 'history'])
   })
 
   it('rejects a skill the character is already trained in', () => {

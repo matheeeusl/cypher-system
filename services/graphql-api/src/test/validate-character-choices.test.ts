@@ -296,20 +296,44 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
     expect(result.errors?.[0]?.message).toMatch(/No Skill found for id "nope"/)
   })
 
+  it('rejects a combat skill for a noncombat grant (Life Lessons)', async () => {
+    const lifeLessons = {
+      ...withPhysicalSkills,
+      tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
+      focusId: 'doesnt-do-much',
+    }
+    const ask = (skillIds: string[]) =>
+      graphqlRequest<{
+        validateCharacterChoices: { __typename: string; issues?: Array<{ code: string }> }
+      }>(SKILL_QUERY, {
+        input: {
+          ...lifeLessons,
+          abilitySkillChoices: [{ key: 'focus:1:life-lessons', skillIds }],
+        },
+      })
+
+    const combat = await ask(['might-defense', 'perception'])
+    expect(combat.data.validateCharacterChoices.issues?.map((i) => i.code)).toContain(
+      'ABILITY_SKILL_CHOICE_INVALID',
+    )
+    const fine = await ask(['history', 'perception'])
+    expect(fine.data.validateCharacterChoices.__typename).toBe('ValidCharacterResult')
+  })
+
   it('exposes the grant on Ability.skillGrant', async () => {
     const result = await graphqlRequest<{
-      physical: { skillGrant: { count: number; any: boolean; options: string[] } | null }
-      lessons: { skillGrant: { count: number; any: boolean; options: string[] } | null }
+      physical: { skillGrant: { count: number; noncombat: boolean; options: string[] } | null }
+      lessons: { skillGrant: { count: number; noncombat: boolean; options: string[] } | null }
       bash: { skillGrant: null }
     }>(`{
-      physical: ability(id: "physical-skills") { skillGrant { count any options } }
-      lessons: ability(id: "life-lessons") { skillGrant { count any options } }
+      physical: ability(id: "physical-skills") { skillGrant { count noncombat options } }
+      lessons: ability(id: "life-lessons") { skillGrant { count noncombat options } }
       bash: ability(id: "bash") { skillGrant { count } }
     }`)
     expect(result.errors).toBeUndefined()
     expect(result.data.physical.skillGrant?.count).toBe(2)
     expect(result.data.physical.skillGrant?.options).toContain('climbing')
-    expect(result.data.lessons.skillGrant).toEqual({ count: 2, any: true, options: [] })
+    expect(result.data.lessons.skillGrant).toEqual({ count: 2, noncombat: true, options: [] })
     expect(result.data.bash.skillGrant).toBeNull()
   })
 })

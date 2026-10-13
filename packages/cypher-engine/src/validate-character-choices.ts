@@ -136,7 +136,13 @@ export function validateCharacterChoices(
   if (skills !== undefined && tier !== undefined && typeAbilities && focusAbilities && typePicks) {
     const instances = collectSkillGrantInstances(type, focus, tier, choices, skillGrants)
     const granted = attempt(() =>
-      applyAbilitySkillGrants(instances, choices.ability_skill_choices ?? {}, skills!, pending),
+      applyAbilitySkillGrants(
+        instances,
+        choices.ability_skill_choices ?? {},
+        skills!,
+        pending,
+        new Set(content.combat_skill_ids ?? []),
+      ),
     )
     if (granted !== undefined) skills = granted
   }

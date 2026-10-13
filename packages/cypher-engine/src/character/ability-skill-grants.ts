@@ -102,8 +102,9 @@ export function collectSkillGrantInstances(
  * skill map, in tier order. Per the rulebook each pick must be a skill the
  * character is not already trained in (so two picks of the same ability, or
  * an ability and the Descriptor, can't overlap), and must come from the
- * ability's `options` unless that is 'any'. 'any' isn't checked against the
- * skill catalog — the engine has none; callers with the catalog should.
+ * ability's `options` unless that is 'noncombat', in which case it must not be
+ * one of `combatSkillIds`. Neither is checked against the skill catalog —
+ * the engine has none; callers with the catalog should.
  *
  * Missing picks are never an error here: they are reported through
  * `pending`, whatever the tier. Skill choices were added after characters
@@ -122,6 +123,7 @@ export function applyAbilitySkillGrants(
   choices: Record<string, string[]>,
   skills: Record<string, { level: SkillLevel }>,
   pending: PendingPick[],
+  combatSkillIds: ReadonlySet<string> = new Set(),
 ): Record<string, { level: SkillLevel }> {
   const known = new Set(instances.map((instance) => instance.key))
   for (const key of Object.keys(choices)) {
@@ -153,7 +155,11 @@ export function applyAbilitySkillGrants(
     }
 
     for (const skillId of picked) {
-      if (grant.options !== 'any' && !grant.options.includes(skillId)) {
+      const allowed =
+        grant.options === 'noncombat'
+          ? !combatSkillIds.has(skillId)
+          : grant.options.includes(skillId)
+      if (!allowed) {
         throw new CharacterRuleError(
           'ABILITY_SKILL_CHOICE_INVALID',
           ERRORS.INVALID(ability_id, skillId),

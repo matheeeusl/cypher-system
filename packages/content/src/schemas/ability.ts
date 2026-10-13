@@ -65,13 +65,13 @@ export const AbilitySchema = z.object({
   // you are not already trained. Choose two of the following..."). The
   // description stays the human-readable source of truth; this is the
   // structured form the engine validates and the app renders a picker
-  // from. `options` is either an explicit list of skill ids, or 'any' for
-  // "any skill / any noncombat skill / an area of knowledge" — the skill
-  // catalog has no combat/noncombat flag, so 'any' means any catalog skill.
+  // from. `options` is either an explicit list of skill ids, or 'noncombat'
+  // for the open picks ("any two noncombat skills", "an area of
+  // knowledge"): every catalog skill not flagged `combat`.
   skill_grant: z
     .object({
       count: z.number().int().min(1),
-      options: z.union([z.array(z.string()).min(1), z.literal('any')]),
+      options: z.union([z.array(z.string()).min(1), z.literal('noncombat')]),
     })
     .optional(),
   // tier lives per-source, not on the ability itself: the same named

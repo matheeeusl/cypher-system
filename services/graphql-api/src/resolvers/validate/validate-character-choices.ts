@@ -1,5 +1,6 @@
 import {
   getAllAbilities,
+  getAllSkills,
   getDescriptorById,
   getFocusById,
   getSkillById,
@@ -37,7 +38,15 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
     }
   }
 
-  return { type, descriptor, focus, skill_grants: skillGrantsByAbility() }
+  return {
+    type,
+    descriptor,
+    focus,
+    skill_grants: skillGrantsByAbility(),
+    combat_skill_ids: getAllSkills()
+      .filter((skill) => skill.combat)
+      .map((skill) => skill.id),
+  }
 }
 
 function skillGrantsByAbility(): NonNullable<CharacterContent['skill_grants']> {

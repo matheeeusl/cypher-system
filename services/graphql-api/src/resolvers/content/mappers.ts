@@ -141,8 +141,8 @@ export function mapAbility(a: WithVersion<Ability>) {
     skillGrant: a.skill_grant
       ? {
           count: a.skill_grant.count,
-          any: a.skill_grant.options === 'any',
-          options: a.skill_grant.options === 'any' ? [] : a.skill_grant.options,
+          noncombat: a.skill_grant.options === 'noncombat',
+          options: a.skill_grant.options === 'noncombat' ? [] : a.skill_grant.options,
         }
       : null,
     contentVersion: a.content_version,
@@ -154,6 +154,7 @@ export function mapSkill(s: WithVersion<Skill>) {
     id: s.id,
     name: mapLocalizedString(s.name),
     description: mapLocalizedString(s.description),
+    combat: s.combat ?? false,
     contentVersion: s.content_version,
   }
 }

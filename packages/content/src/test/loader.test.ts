@@ -57,7 +57,7 @@ describe('loader', () => {
           .map((id) => `type "${t.id}" -> "${id}"`),
       ),
       ...getAllAbilities().flatMap((a) =>
-        a.skill_grant && a.skill_grant.options !== 'any'
+        a.skill_grant && a.skill_grant.options !== 'noncombat'
           ? a.skill_grant.options
               .filter((id) => !getSkillById(id))
               .map((id) => `ability "${a.id}" skill_grant -> "${id}"`)

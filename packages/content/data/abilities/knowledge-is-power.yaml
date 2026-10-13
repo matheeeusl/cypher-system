@@ -27,4 +27,4 @@ sources:
     tier: 6
 skill_grant:
   count: 2
-  options: any
+  options: noncombat

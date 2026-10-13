@@ -15,4 +15,4 @@ sources:
     tier: 1
 skill_grant:
   count: 1
-  options: any
+  options: noncombat
