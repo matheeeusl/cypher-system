@@ -2,6 +2,13 @@
 @import './tokens.css';
 
 /*
+  Tailwind only scans the importing app's own files (and skips gitignored
+  paths like dist/), so utility classes used inside @cypher/ui components
+  would never be generated. Point it at the component sources explicitly.
+*/
+@source '..';
+
+/*
   @theme tells Tailwind v4 to generate utility classes from these values.
   bg-bg, text-text, border-border, etc. will all be available.
   The values reference our CSS custom properties — so when the theme
@@ -16,6 +23,7 @@
   --color-accent: var(--color-accent);
   --color-accent-soft: var(--color-accent-soft, transparent);
   --color-warning: var(--color-warning);
+  --color-warning-soft: var(--color-warning-soft);
   --color-border: var(--color-border);
 
   /* Typography */

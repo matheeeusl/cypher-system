@@ -17,6 +17,7 @@
   --color-accent: #4fb8b0;
   --color-accent-soft: rgba(79, 184, 176, 0.12);
   --color-warning: #c97b4a;
+  --color-warning-soft: rgba(201, 123, 74, 0.12);
   --color-border: #2b333a;
 }
 
@@ -29,5 +30,6 @@
   --color-accent: #0f6e56;
   --color-accent-soft: #dceeea;
   --color-warning: #a85a2e;
+  --color-warning-soft: #f1e1d6;
   --color-border: #d7dbdc;
 }
