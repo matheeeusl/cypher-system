@@ -59,6 +59,17 @@ export interface CharacterChoices {
    * next to-do after a tier-up, not an error.
    */
   type_ability_picks?: Record<string, string[]>
+
+  /**
+   * Skills picked for abilities that carry a `skill_grant` ("trained in two
+   * skills in which you are not already trained"). One entry per time the
+   * ability was taken, keyed by `skillGrantKey(source kind, tier, ability id)`
+   * — an ability that can be taken again at a later tier (Physical Skills)
+   * gets a separate entry, and a separate set of skills, for each tier.
+   * An instance gained at tier 1 must be complete; from tier 2 up, missing
+   * picks are reported in `pending_picks` instead of being an error.
+   */
+  ability_skill_choices?: Record<string, string[]>
 }
 
 export type AdvancementPurchase =
@@ -105,6 +116,16 @@ export type SkillLevel = 'inability' | 'practiced' | 'trained' | 'specialized'
 export type PendingPick =
   | { kind: 'type'; tier: number; required: number; chosen: number }
   | { kind: 'focus'; tier: number; required: number; chosen: number }
+  /** Skills still to choose for a skill-granting ability gained at `tier`. */
+  | {
+      kind: 'skill'
+      tier: number
+      /** The `ability_skill_choices` key the picks belong under. */
+      key: string
+      ability_id: string
+      required: number
+      chosen: number
+    }
 
 export interface DerivedCharacter {
   tier: number

@@ -1,3 +1,7 @@
+import {
+  applyAbilitySkillGrants,
+  collectSkillGrantInstances,
+} from './character/ability-skill-grants.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
@@ -80,6 +84,7 @@ export function validateCharacterChoices(
   )
   const typeAbilities = attempt(() => resolveTypeAbilities(type, choices.tier_1_type_ability_ids))
 
+  const skillGrants = content.skill_grants ?? {}
   const pending: PendingPick[] = []
   let typePicks: KnownAbility[] | undefined
   let focusAbilities: KnownAbility[] | undefined
@@ -100,6 +105,7 @@ export function validateCharacterChoices(
           choices.type_ability_picks ?? {},
           typeAbilities.map((a) => a.ability_id),
           pending,
+          new Set(Object.keys(skillGrants)),
         ),
       )
     }
@@ -124,6 +130,16 @@ export function validateCharacterChoices(
   }
 
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))
+
+  // Needs the same resolved tier and ability lists as the purchases below;
+  // when any of those failed, their own errors are already reported.
+  if (skills !== undefined && tier !== undefined && typeAbilities && focusAbilities && typePicks) {
+    const instances = collectSkillGrantInstances(type, focus, tier, choices, skillGrants)
+    const granted = attempt(() =>
+      applyAbilitySkillGrants(instances, choices.ability_skill_choices ?? {}, skills!, pending),
+    )
+    if (granted !== undefined) skills = granted
+  }
 
   // Order-sensitive (training the same skill twice moves it further along
   // practiced -> trained -> specialized), so purchases are applied in

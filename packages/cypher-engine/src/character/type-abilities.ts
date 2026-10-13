@@ -70,7 +70,7 @@ const PICK_ERRORS = {
  * Resolves the Type abilities picked from tier 2 up. Each tier's pick count
  * is the Type's `tier_choose_counts`; a pick may come from that tier or any
  * lower one, and no ability can be known twice (counting the tier-1 picks in
- * `alreadyKnown`). Fewer picks than required is not an error — those are
+ * `alreadyKnown`) unless it's in `repeatable`. Fewer picks than required is not an error — those are
  * reported in `pending`, the player's outstanding choices after a tier-up.
  */
 export function resolveTypeTierPicks(
@@ -79,6 +79,7 @@ export function resolveTypeTierPicks(
   picks: Record<string, string[]>,
   alreadyKnown: string[],
   pending: PendingPick[],
+  repeatable: ReadonlySet<string> = new Set(),
 ): KnownAbility[] {
   for (const tierKey of Object.keys(picks)) {
     if (Number(tierKey) > currentTier || Number(tierKey) < 2) {
@@ -101,6 +102,7 @@ export function resolveTypeTierPicks(
     for (const id of type.tier_abilities[String(tier)] ?? []) available.add(id)
     const required = type.tier_choose_counts[String(tier)] ?? 0
     const chosen = picks[String(tier)] ?? []
+    const pickedThisTier = new Set<string>()
 
     if (chosen.length > required) {
       throw new CharacterRuleError('TYPE_PICKS_TOO_MANY', PICK_ERRORS.TOO_MANY(tier, required), {
@@ -115,12 +117,16 @@ export function resolveTypeTierPicks(
           abilityId: id,
         })
       }
-      if (known.has(id)) {
+      // A repeatable ability (one with a skill_grant: "you can select this
+      // ability multiple times") may be taken again at a later tier, but
+      // still only once per tier.
+      if (pickedThisTier.has(id) || (known.has(id) && !repeatable.has(id))) {
         throw new CharacterRuleError('TYPE_PICKS_DUPLICATE', PICK_ERRORS.DUPLICATE(id), {
           abilityId: id,
         })
       }
       known.add(id)
+      pickedThisTier.add(id)
       abilities.push({ ability_id: id, source, trained: false })
     }
     if (chosen.length < required) {
@@ -131,9 +137,8 @@ export function resolveTypeTierPicks(
   return abilities
 }
 
-/** Pending picks in the order a player would make them: by tier, Type before Focus. */
+/** Pending picks in the order a player would make them: by tier, then Type, Focus, skill choices. */
 export function sortPending(pending: PendingPick[]): PendingPick[] {
-  return [...pending].sort(
-    (a, b) => a.tier - b.tier || (a.kind === b.kind ? 0 : a.kind === 'type' ? -1 : 1),
-  )
+  const rank = { type: 0, focus: 1, skill: 2 } as const
+  return [...pending].sort((a, b) => a.tier - b.tier || rank[a.kind] - rank[b.kind])
 }

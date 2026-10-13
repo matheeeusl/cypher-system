@@ -1,5 +1,10 @@
 import type { Descriptor, Focus, Type } from '@cypher/content'
 
+import {
+  applyAbilitySkillGrants,
+  collectSkillGrantInstances,
+  type SkillGrantsByAbility,
+} from './character/ability-skill-grants.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
@@ -29,6 +34,13 @@ export interface CharacterContent {
   type: Type
   descriptor: Descriptor
   focus: Focus
+  /**
+   * Skill grants of the abilities the character could have, by ability id
+   * (build it from every Ability that has a `skill_grant`). Left out, no
+   * ability is treated as granting skills — callers that save or validate
+   * a character must supply it, or `ability_skill_choices` is rejected.
+   */
+  skill_grants?: SkillGrantsByAbility
 }
 
 /**
@@ -57,6 +69,8 @@ export function deriveCharacter(
   )
 
   const pending: PendingPick[] = []
+  const skillGrants = content.skill_grants ?? {}
+  const repeatable = new Set(Object.keys(skillGrants))
   const tier1TypeAbilities = resolveTypeAbilities(type, choices.tier_1_type_ability_ids)
   let knownAbilities: KnownAbility[] = [
     ...tier1TypeAbilities,
@@ -66,11 +80,18 @@ export function deriveCharacter(
       choices.type_ability_picks ?? {},
       tier1TypeAbilities.map((a) => a.ability_id),
       pending,
+      repeatable,
     ),
     ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections, pending),
   ]
 
   let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)
+  skills = applyAbilitySkillGrants(
+    collectSkillGrantInstances(type, focus, tier, choices, skillGrants),
+    choices.ability_skill_choices ?? {},
+    skills,
+    pending,
+  )
 
   // 'skills' purchases are order-sensitive (training the same skill twice
   // moves it further along practiced -> trained -> specialized), so they're

@@ -29,6 +29,10 @@ export type RuleErrorCode =
   | 'TYPE_PICKS_DUPLICATE'
   | 'TYPE_PICKS_FUTURE_TIER'
   | 'TIER_TOO_HIGH'
+  | 'ABILITY_SKILL_CHOICE_COUNT'
+  | 'ABILITY_SKILL_CHOICE_INVALID'
+  | 'ABILITY_SKILL_CHOICE_DUPLICATE'
+  | 'ABILITY_SKILL_CHOICE_UNKNOWN'
   | 'UNKNOWN'
 
 export type RuleErrorParams = Record<string, string | number>
