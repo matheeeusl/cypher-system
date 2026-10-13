@@ -24,3 +24,6 @@ sources:
   - type: focus
     id: prepped-for-the-end
     tier: 3
+skill_grant:
+  count: 1
+  options: noncombat

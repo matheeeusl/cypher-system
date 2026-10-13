@@ -324,7 +324,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
     setChoices((prev) => {
       const current = prev.abilitySkillChoices[slot.key] ?? []
       const has = current.includes(skillId)
-      if (!has && current.length >= slot.count) return prev
+      if (!has && current.length >= Math.max(slot.count, slot.alternate?.count ?? 0)) return prev
       const next = has ? current.filter((id) => id !== skillId) : [...current, skillId]
       return { ...prev, abilitySkillChoices: { ...prev.abilitySkillChoices, [slot.key]: next } }
     })

@@ -125,6 +125,8 @@ export type PendingPick =
       ability_id: string
       required: number
       chosen: number
+      /** Set when the ability can instead take this many picks (its `alternate` shape). */
+      alternate_required?: number
     }
 
 export interface DerivedCharacter {

@@ -15,3 +15,9 @@ sources:
   - type: focus
     id: solves-mysteries
     tier: 3
+skill_grant:
+  count: 2
+  options: noncombat
+  alternate:
+    count: 1
+    mode: specialize

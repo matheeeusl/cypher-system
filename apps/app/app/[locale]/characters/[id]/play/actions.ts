@@ -442,7 +442,10 @@ export async function choosePicksAction(
     }
     if (kind === 'skill') {
       // All of the grant's skills at once, each one a real skill.
-      if (ids.length !== owed.required) return { ok: false, reason: 'invalid' }
+      // Either of the ability's shapes ("two skills, or specialized in one").
+      if (ids.length !== owed.required && ids.length !== owed.alternateRequired) {
+        return { ok: false, reason: 'invalid' }
+      }
       if (!ids.every((id) => bundle.skills.some((s) => s.id === id))) {
         return { ok: false, reason: 'invalid' }
       }

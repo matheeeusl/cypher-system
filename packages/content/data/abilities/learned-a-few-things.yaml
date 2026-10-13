@@ -20,3 +20,9 @@ sources:
   - type: focus
     id: learns-quickly
     tier: 5
+skill_grant:
+  count: 2
+  options: noncombat
+  alternate:
+    count: 1
+    mode: specialize

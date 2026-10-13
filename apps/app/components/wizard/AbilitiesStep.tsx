@@ -139,7 +139,11 @@ export function AbilitiesStep({
           .filter((other) => slot.mode === 'train' || other.abilityId === slot.abilityId)
           .flatMap((other) => abilitySkillChoices[other.key] ?? [])
         const unavailable = new Set(takenElsewhere)
-        if (slot.mode === 'train') trainedSkillIds.forEach((id) => unavailable.add(id))
+        // With an alternate shape ("or specialized in one") a trained skill is
+        // still a valid pick, so nothing is hidden for being trained.
+        if (slot.mode === 'train' && !slot.alternate) {
+          trainedSkillIds.forEach((id) => unavailable.add(id))
+        }
         const candidates = (skills ?? [])
           .filter((skill) => (slot.noncombat ? !skill.combat : slot.options.includes(skill.id)))
           .sort((a, b) => t(a.name).localeCompare(t(b.name)))
@@ -147,11 +151,18 @@ export function AbilitiesStep({
           <div key={slot.key} className="border-border bg-panel mt-5 rounded border p-4">
             <div
               className={`mb-2 font-mono text-[11px] tracking-wide uppercase ${
-                picked.length === slot.count ? 'text-accent' : 'text-text-muted'
+                picked.length === slot.count || picked.length === slot.alternate?.count
+                  ? 'text-accent'
+                  : 'text-text-muted'
               }`}
             >
               {copy.abilities.skillPick(abilityName(slot.abilityId), picked.length, slot.count)}
             </div>
+            {slot.alternate && (
+              <p className="text-text-muted mb-2 text-[12px]">
+                {copy.abilities.skillAlternate(slot.alternate.count)}
+              </p>
+            )}
             <div className="flex flex-wrap gap-2">
               {candidates.map((skill) => {
                 const isSelected = picked.includes(skill.id)

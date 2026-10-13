@@ -184,8 +184,16 @@ type AbilitySourceRef {
 # "You are trained in `count` skills of your choice" — null on abilities that
 # don't grant skills. `noncombat` means any skill not flagged `combat` (and
 # `options` is then empty); otherwise the player picks `count` of `options`.
+# A second shape an ability can take instead ("two skills, or specialized in
+# one"): the picks are of this shape when there are exactly `count` of them.
+type SkillGrantAlternate {
+  count: Int!
+  mode: String!
+}
+
 type SkillGrant {
   count: Int!
+  alternate: SkillGrantAlternate
   # What a pick does: "train" (a skill not yet trained), "train_or_specialize"
   # (trained, or specialized if already trained) or "specialize" (a skill the
   # character is already trained in).
@@ -401,6 +409,8 @@ type PendingPick {
   # and the ability it belongs to.
   key: String
   abilityId: ID
+  # Only for kind "skill": the pick count of the ability's alternate shape.
+  alternateRequired: Int
 }
 
 type ValidCharacterResult {

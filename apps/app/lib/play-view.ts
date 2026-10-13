@@ -19,6 +19,11 @@ export interface PendingChoice {
   required: number
   /** `id` is one option: a single ability id, or a bundled pair joined by ",". */
   options: Array<{ id: string; label: string; description: string; meta: string }>
+  /** Only for kind 'skill': the ability's other shape ("or specialize in one"). */
+  alternate: {
+    required: number
+    options: Array<{ id: string; label: string; description: string; meta: string }>
+  } | null
 }
 
 /** Everything the play screen needs, already localized and JSON-serializable. */
@@ -168,29 +173,32 @@ function pendingChoices(
           abilityName: null,
           required: pick.required - pick.chosen,
           options,
+          alternate: null,
         },
       ]
     }
     if (pick.kind === 'skill') {
       const grant = abilityOf(pick.abilityId ?? '')?.skillGrant
       if (!pick.key || !pick.abilityId || !grant) return []
-      const options = bundle.skills
-        .filter((skill) => (grant.noncombat ? !skill.combat : grant.options.includes(skill.id)))
-        .filter((skill) => {
-          const level = levelOf.get(skill.id)
-          if (chosenFor(pick.abilityId!).has(skill.id)) return false
-          // What the pick may be applied to depends on the grant's mode.
-          if (grant.mode === 'specialize') return level === 'TRAINED'
-          if (grant.mode === 'train_or_specialize') return level !== 'SPECIALIZED'
-          return level !== 'TRAINED' && level !== 'SPECIALIZED'
-        })
-        .map((skill) => ({
-          id: skill.id,
-          label: loc(skill.name, locale),
-          description: '',
-          meta: '',
-        }))
-        .sort((a, b) => a.label.localeCompare(b.label, locale))
+      // What a pick may be applied to depends on the shape's mode.
+      const optionsFor = (mode: 'train' | 'train_or_specialize' | 'specialize') =>
+        bundle.skills
+          .filter((skill) => (grant.noncombat ? !skill.combat : grant.options.includes(skill.id)))
+          .filter((skill) => {
+            const level = levelOf.get(skill.id)
+            if (chosenFor(pick.abilityId!).has(skill.id)) return false
+            if (mode === 'specialize') return level === 'TRAINED'
+            if (mode === 'train_or_specialize') return level !== 'SPECIALIZED'
+            return level !== 'TRAINED' && level !== 'SPECIALIZED'
+          })
+          .map((skill) => ({
+            id: skill.id,
+            label: loc(skill.name, locale),
+            description: '',
+            meta: '',
+          }))
+          .sort((a, b) => a.label.localeCompare(b.label, locale))
+      const options = optionsFor(grant.mode)
       return [
         {
           kind: 'skill' as const,
@@ -199,6 +207,9 @@ function pendingChoices(
           abilityName: nameOf(pick.abilityId),
           required: pick.required,
           options,
+          alternate: grant.alternate
+            ? { required: grant.alternate.count, options: optionsFor(grant.alternate.mode) }
+            : null,
         },
       ]
     }
@@ -212,6 +223,7 @@ function pendingChoices(
         tier: pick.tier,
         skillKey: null,
         abilityName: null,
+        alternate: null,
         required: entry.count,
         options: entry.options.map((ids) => ({
           id: ids.join(','),

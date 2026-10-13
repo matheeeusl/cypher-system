@@ -154,16 +154,24 @@ export function createSkillGrantApplier(
   function applyOne(instance: SkillGrantInstance, skills: SkillMap): SkillMap {
     const { key, ability_id, tier, grant } = instance
     const picked = choices[key] ?? []
-    const mode = grant.mode ?? 'train'
 
-    if (picked.length > grant.count) {
+    // An ability with an `alternate` shape ("two skills, or specialized in
+    // one") takes either; which one the picks are is told by their number.
+    const maxCount = Math.max(grant.count, grant.alternate?.count ?? 0)
+    const mode =
+      grant.alternate && picked.length === grant.alternate.count
+        ? grant.alternate.mode
+        : (grant.mode ?? 'train')
+    const complete = picked.length === grant.count || picked.length === grant.alternate?.count
+
+    if (picked.length > maxCount) {
       throw new CharacterRuleError(
         'ABILITY_SKILL_CHOICE_COUNT',
-        ERRORS.TOO_MANY(ability_id, grant.count),
-        { abilityId: ability_id, required: grant.count },
+        ERRORS.TOO_MANY(ability_id, maxCount),
+        { abilityId: ability_id, required: maxCount },
       )
     }
-    if (picked.length < grant.count) {
+    if (!complete) {
       pending.push({
         kind: 'skill',
         tier,
@@ -171,6 +179,7 @@ export function createSkillGrantApplier(
         ability_id,
         required: grant.count,
         chosen: picked.length,
+        ...(grant.alternate ? { alternate_required: grant.alternate.count } : {}),
       })
     }
 

@@ -25,8 +25,12 @@ function mapDerivedCharacter(character: DerivedCharacter) {
     skills: Object.entries(character.skills).map(([skillId, { level }]) => ({ skillId, level })),
     pendingPicks: character.pending_picks.map((pick) =>
       pick.kind === 'skill'
-        ? { ...pick, abilityId: pick.ability_id }
-        : { ...pick, key: null, abilityId: null },
+        ? {
+            ...pick,
+            abilityId: pick.ability_id,
+            alternateRequired: pick.alternate_required ?? null,
+          }
+        : { ...pick, key: null, abilityId: null, alternateRequired: null },
     ),
   }
 }

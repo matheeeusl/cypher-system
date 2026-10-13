@@ -326,8 +326,18 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
       lessons: { skillGrant: { count: number; noncombat: boolean; options: string[] } | null }
       bash: { skillGrant: null }
       mastery: { skillGrant: { count: number; mode: string; options: string[] } | null }
+      learned: {
+        skillGrant: {
+          count: number
+          noncombat: boolean
+          alternate: { count: number; mode: string } | null
+        } | null
+      }
     }>(`{
       mastery: ability(id: "mastery-with-defense") { skillGrant { count mode options } }
+      learned: ability(id: "learned-a-few-things") {
+        skillGrant { count noncombat alternate { count mode } }
+      }
       physical: ability(id: "physical-skills") { skillGrant { count noncombat options } }
       lessons: ability(id: "life-lessons") { skillGrant { count noncombat options } }
       bash: ability(id: "bash") { skillGrant { count } }
@@ -337,6 +347,11 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
     expect(result.data.physical.skillGrant?.options).toContain('climbing')
     expect(result.data.lessons.skillGrant).toEqual({ count: 2, noncombat: true, options: [] })
     expect(result.data.bash.skillGrant).toBeNull()
+    expect(result.data.learned.skillGrant).toEqual({
+      count: 2,
+      noncombat: true,
+      alternate: { count: 1, mode: 'specialize' },
+    })
     expect(result.data.mastery.skillGrant).toEqual({
       count: 1,
       mode: 'specialize',

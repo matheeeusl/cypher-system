@@ -40,6 +40,8 @@ export interface SkillGrantSlot {
   abilityId: string
   count: number
   mode: 'train' | 'train_or_specialize' | 'specialize'
+  /** A second shape, with its own pick count, instead of `count`. */
+  alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
   /** Any skill not flagged `combat` may be picked (`options` is then empty). */
   noncombat: boolean
   options: string[]
@@ -81,6 +83,7 @@ export function tier1SkillGrantSlots(
           abilityId,
           count: grant.count,
           mode: grant.mode,
+          alternate: grant.alternate,
           noncombat: grant.noncombat,
           options: grant.options,
         },
@@ -174,9 +177,10 @@ export function isStepValid(
       ) {
         return false
       }
-      return tier1SkillGrantSlots(choices, content).every(
-        (slot) => (choices.abilitySkillChoices[slot.key] ?? []).length === slot.count,
-      )
+      return tier1SkillGrantSlots(choices, content).every((slot) => {
+        const picked = (choices.abilitySkillChoices[slot.key] ?? []).length
+        return picked === slot.count || picked === slot.alternate?.count
+      })
     }
     case 'equipment':
       return true

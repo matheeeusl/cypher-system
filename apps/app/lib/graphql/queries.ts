@@ -170,6 +170,8 @@ export interface WizardAbility {
     mode: 'train' | 'train_or_specialize' | 'specialize'
     noncombat: boolean
     options: string[]
+    /** A second shape instead of `count` picks ("or specialized in one"). */
+    alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
   } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
@@ -185,7 +187,7 @@ const ABILITIES_QUERY = `
       name { en ptBR }
       description { en ptBR }
       cost { pool amount }
-      skillGrant { count mode noncombat options }
+      skillGrant { count mode noncombat options alternate { count mode } }
     }
   }
 `
@@ -249,6 +251,7 @@ export interface DerivedCharacter {
     /** Only for kind 'skill': the ability and the `abilitySkillChoices` key it is answered under. */
     key: string | null
     abilityId: string | null
+    alternateRequired: number | null
   }>
 }
 
@@ -282,7 +285,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
             }
           }
           skills { skillId level }
-          pendingPicks { kind tier required chosen key abilityId }
+          pendingPicks { kind tier required chosen key abilityId alternateRequired }
         }
       }
       ... on InvalidCharacterResult {

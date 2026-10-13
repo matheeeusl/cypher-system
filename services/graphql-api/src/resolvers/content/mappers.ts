@@ -142,6 +142,7 @@ export function mapAbility(a: WithVersion<Ability>) {
       ? {
           count: a.skill_grant.count,
           mode: a.skill_grant.mode ?? 'train',
+          alternate: a.skill_grant.alternate ?? null,
           noncombat: a.skill_grant.options === 'noncombat',
           options: a.skill_grant.options === 'noncombat' ? [] : a.skill_grant.options,
         }

@@ -83,6 +83,18 @@ export const AbilitySchema = z.object({
       options: z.union([z.array(z.string()).min(1), z.literal('noncombat')]),
       mode: z.enum(['train', 'train_or_specialize', 'specialize']).optional(),
       repeatable: z.boolean().optional(),
+      // "...or instead": a second shape the same ability can take ("two
+      // areas of knowledge, or specialized in one"). Which shape a set of
+      // picks is, is decided by how many there are, so the counts differ.
+      alternate: z
+        .object({
+          count: z.number().int().min(1),
+          mode: z.enum(['train', 'train_or_specialize', 'specialize']),
+        })
+        .optional(),
+    })
+    .refine((grant) => grant.alternate === undefined || grant.alternate.count !== grant.count, {
+      message: 'skill_grant.alternate.count must differ from count',
     })
     .optional(),
   // tier lives per-source, not on the ability itself: the same named

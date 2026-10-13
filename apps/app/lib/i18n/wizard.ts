@@ -65,6 +65,8 @@ export interface WizardCopy {
     skillPick: (abilityName: string, count: number, needed: number) => string
     /** A skill the character is already trained in, so it can't be picked again. */
     skillTaken: string
+    /** The ability's other shape: fewer picks, applied to skills already trained. */
+    skillAlternate: (count: number) => string
   }
   equipment: {
     fixedByType: string
@@ -204,6 +206,8 @@ const en: WizardCopy = {
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — choose ${needed} ${needed === 1 ? 'skill' : 'skills'} (${count} / ${needed} selected)`,
     skillTaken: 'already trained',
+    skillAlternate: (count) =>
+      `Or choose ${count} skill${count === 1 ? '' : 's'} you're already trained in, to become specialized.`,
   },
   equipment: {
     fixedByType: 'Starting equipment is fixed by your Type — there’s nothing to choose here.',
@@ -410,6 +414,8 @@ const ptBr: WizardCopy = {
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — escolha ${needed} ${needed === 1 ? 'perícia' : 'perícias'} (${count} / ${needed} selecionadas)`,
     skillTaken: 'já treinada',
+    skillAlternate: (count) =>
+      `Ou escolha ${count} ${count === 1 ? 'perícia' : 'perícias'} em que já é treinado, para se tornar especializado.`,
   },
   equipment: {
     fixedByType: 'O equipamento inicial é definido pelo seu Tipo — não há nada para escolher aqui.',

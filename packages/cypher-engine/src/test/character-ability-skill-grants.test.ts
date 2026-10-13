@@ -508,3 +508,66 @@ describe('skill grants and advancement purchases', () => {
     expect(result.issues.map((i) => i.code)).toContain('ABILITY_SKILL_CHOICE_NOT_TRAINED')
   })
 })
+
+describe('skill grants with an alternate shape', () => {
+  const learned = {
+    'learned-a-few-things': {
+      count: 2,
+      options: 'noncombat' as const,
+      alternate: { count: 1, mode: 'specialize' as const },
+    },
+  }
+  const instances = collectSkillGrantInstances(
+    { special_ability_id: null },
+    { tier_abilities: {} },
+    1,
+    { tier_1_type_ability_ids: ['learned-a-few-things'], ...noPicks },
+    learned,
+  )
+  const key = 'type:1:learned-a-few-things'
+
+  it('trains two skills', () => {
+    expect(applyAbilitySkillGrants(instances, { [key]: ['history', 'geography'] }, {}, [])).toEqual(
+      { history: { level: 'trained' }, geography: { level: 'trained' } },
+    )
+  })
+
+  it('or specializes one that is already trained', () => {
+    expect(
+      applyAbilitySkillGrants(
+        instances,
+        { [key]: ['history'] },
+        { history: { level: 'trained' } },
+        [],
+      ),
+    ).toEqual({ history: { level: 'specialized' } })
+  })
+
+  it('refuses specializing a skill that is not trained', () => {
+    expect(() => applyAbilitySkillGrants(instances, { [key]: ['history'] }, {}, [])).toThrow(
+      /already trained in/,
+    )
+  })
+
+  it('is pending, with the alternate count, until one of the shapes is complete', () => {
+    const pending: PendingPick[] = []
+    applyAbilitySkillGrants(instances, {}, {}, pending)
+    expect(pending).toEqual([
+      {
+        kind: 'skill',
+        tier: 1,
+        key,
+        ability_id: 'learned-a-few-things',
+        required: 2,
+        chosen: 0,
+        alternate_required: 1,
+      },
+    ])
+  })
+
+  it('refuses more picks than the larger shape', () => {
+    expect(() => applyAbilitySkillGrants(instances, { [key]: ['a', 'b', 'c'] }, {}, [])).toThrow(
+      /grants only 2/,
+    )
+  })
+})

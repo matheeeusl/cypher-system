@@ -457,7 +457,23 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             chips={[copy.chips.tier(view.tier), copy.chips.effort(view.effort)]}
           />
 
-          {view.pending.map((p) => (
+          {view.pending.flatMap((p) => [
+            ...(p.alternate
+              ? [
+                  <AbilityPicker
+                    key={`${p.kind}-${p.tier}-${p.skillKey ?? ''}-alt`}
+                    title={copy.picks.skillAlternateTitle(p.abilityName ?? '', p.tier)}
+                    hint={copy.picks.hint}
+                    required={p.alternate.required}
+                    options={p.alternate.options}
+                    confirmLabel={copy.picks.confirm}
+                    busy={busy}
+                    onConfirm={(ids) =>
+                      void savePicks(p.kind, p.tier, ids, p.skillKey ?? undefined)
+                    }
+                  />,
+                ]
+              : []),
             <AbilityPicker
               key={`${p.kind}-${p.tier}-${p.skillKey ?? ''}`}
               title={
@@ -471,8 +487,8 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               confirmLabel={copy.picks.confirm}
               busy={busy}
               onConfirm={(ids) => void savePicks(p.kind, p.tier, ids, p.skillKey ?? undefined)}
-            />
-          ))}
+            />,
+          ])}
           {errors.picks && (
             <p role="alert" className="text-warning font-mono text-xs">
               {errors.picks}

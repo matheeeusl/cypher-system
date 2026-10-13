@@ -15,3 +15,7 @@ sources:
   - type: focus
     id: prepped-for-the-end
     tier: 5
+skill_grant:
+  count: 1
+  options: noncombat
+  mode: train_or_specialize
