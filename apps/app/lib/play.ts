@@ -1,6 +1,7 @@
 import type { PoolClient } from 'pg'
 
 import { pool } from '@/lib/db'
+import type { TierPicks } from '@/lib/tier-picks'
 import type { AdvancementPurchaseInput, LocalizedString } from '@/lib/graphql/queries'
 
 // Authorization lives here (no RLS), same as lib/characters.ts: every function
@@ -341,6 +342,24 @@ export async function applyAdvancement(
     )
     return { ok: true }
   })
+}
+
+/**
+ * Replaces the level-up picks, but only if nobody changed them since `expected`.
+ * Returns false on a conflict (or when the character isn't the user's).
+ */
+export async function setTierPicks(
+  userId: string,
+  characterId: string,
+  expected: TierPicks,
+  next: TierPicks,
+): Promise<boolean> {
+  const { rowCount } = await pool.query(
+    `update character set tier_picks = $3, updated_at = now()
+      where id = $1 and user_id = $2 and tier_picks = $4::jsonb`,
+    [characterId, userId, JSON.stringify(next), JSON.stringify(expected)],
+  )
+  return (rowCount ?? 0) > 0
 }
 
 /** Refreshes the cached maximums (used when the play page re-derives and they drifted). */

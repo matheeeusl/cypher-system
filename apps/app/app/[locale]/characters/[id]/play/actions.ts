@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 
-import { boughtAtTier, parseChoice, toPurchase, wouldReachBlockedTier } from '@/lib/advancement'
+import { atMaxTier, boughtAtTier, parseChoice, toPurchase } from '@/lib/advancement'
 import { loadDerived } from '@/lib/character-derived'
 import { getCharacter } from '@/lib/characters'
 import { buildCharacterChoicesInput } from '@/components/wizard/derive'
@@ -25,6 +25,7 @@ import {
   removeXp,
   setNotes,
   setPoolMax,
+  setTierPicks,
   type InventoryItem,
   type PoolChange,
   type PoolKey,
@@ -32,6 +33,7 @@ import {
 } from '@/lib/play'
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
+import { withPick } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
 // the browser), and let lib/play.ts scope the query to the session user.
@@ -330,10 +332,13 @@ export async function purchaseAdvancementAction(
     const target = tier + 1
     const bought = boughtAtTier(character.advancement, target)
     if (bought.has(choice.key)) return { ok: false, reason: 'invalid' }
-    if (wouldReachBlockedTier(tier, bought.size, rules.perTier))
-      return { ok: false, reason: 'capped' }
-    if (choice.key === 'skills' && !bundle.skills.some((s) => s.id === choice.skillId)) {
-      return { ok: false, reason: 'invalid' }
+    if (atMaxTier(tier, rules.maxTier)) return { ok: false, reason: 'capped' }
+    if (choice.key === 'skills') {
+      const exists =
+        'skillId' in choice
+          ? bundle.skills.some((s) => s.id === choice.skillId)
+          : bundle.derived.knownAbilities.some((a) => a.abilityId === choice.abilityId)
+      if (!exists) return { ok: false, reason: 'invalid' }
     }
 
     const next = [...character.advancement, toPurchase(choice, target)]
@@ -341,6 +346,7 @@ export async function purchaseAdvancementAction(
       character.choices,
       { type: bundle.type, descriptor: bundle.descriptor, focus: bundle.focus },
       next,
+      character.tierPicks,
     )
     if (!input) return { ok: false, reason: 'invalid' }
     const result = await validateCharacterChoices(input)
@@ -372,6 +378,76 @@ export async function purchaseAdvancementAction(
     }
   } catch (err) {
     console.error('[play] purchaseAdvancement failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+// ---- level-up picks ----
+
+export type PicksResult = { ok: true; view: PlayView | null } | Fail<'conflict'>
+
+/**
+ * Saves the Type abilities (or Focus choice) a character owes for a tier it
+ * has reached. `optionIds` are the options the player ticked — a bundled pair
+ * arrives as "a,b". Which picks are owed, and whether these are legal, is
+ * decided by the engine through graphql-api; nothing here trusts the browser.
+ */
+export async function choosePicksAction(
+  characterId: unknown,
+  kind: unknown,
+  tier: unknown,
+  optionIds: unknown,
+  locale: unknown,
+): Promise<PicksResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    (kind !== 'type' && kind !== 'focus') ||
+    !isInt(tier, 2, 6) ||
+    !Array.isArray(optionIds) ||
+    optionIds.length === 0 ||
+    optionIds.length > 10 ||
+    !optionIds.every((o) => typeof o === 'string' && o.length > 0 && o.length < 200) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const bundle = await loadDerived(character)
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    // Only a pick that is actually owed, and only all of it at once.
+    const owed = bundle.derived.pendingPicks.find((p) => p.kind === kind && p.tier === tier)
+    if (!owed) return { ok: false, reason: 'invalid' }
+    const ids = (optionIds as string[]).flatMap((o) => o.split(','))
+    if (kind === 'type' && ids.length !== owed.required - owed.chosen) {
+      return { ok: false, reason: 'invalid' }
+    }
+
+    const picks = withPick(character.tierPicks, kind, tier, ids)
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      { type: bundle.type, descriptor: bundle.descriptor, focus: bundle.focus },
+      character.advancement,
+      picks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'invalid' }
+
+    const saved = await setTierPicks(uid, characterId, character.tierPicks, picks)
+    if (!saved) return { ok: false, reason: 'conflict' }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] choosePicks failed:', err)
     return { ok: false, reason: 'unavailable' }
   }
 }
@@ -422,8 +498,13 @@ function advancementReason(
       detail = `+1 ${copy.pools.effort}`
       break
     case 'skills': {
-      const skill = bundle.skills.find((s) => s.id === choice.skillId)
-      detail = skill ? loc(skill.name, locale) : choice.skillId
+      if ('skillId' in choice) {
+        const skill = bundle.skills.find((s) => s.id === choice.skillId)
+        detail = skill ? loc(skill.name, locale) : choice.skillId
+      } else {
+        const ability = bundle.abilities.find((a) => a.id === choice.abilityId)
+        detail = ability ? loc(ability.name, locale) : choice.abilityId
+      }
       break
     }
   }

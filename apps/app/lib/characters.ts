@@ -2,6 +2,7 @@ import { characterLimit } from '@/lib/entitlements'
 import { pool } from '@/lib/db'
 import type { AdvancementPurchaseInput, LocalizedString } from '@/lib/graphql/queries'
 import type { PoolPoints } from '@/lib/play'
+import { parsePicks, type TierPicks } from '@/lib/tier-picks'
 import type { WizardChoices } from '@/components/wizard/state'
 
 export interface CharacterSummaryData {
@@ -19,6 +20,8 @@ export interface SavedCharacter {
   contentVersions: Record<string, string>
   /** Advancement purchases (play mode), in purchase order. */
   advancement: AdvancementPurchaseInput[]
+  /** Level-up choices (Type abilities / Focus choice from tier 2). */
+  tierPicks: TierPicks
   /** Cached derived pool maximums; null until first derived. */
   poolMax: PoolPoints | null
   createdAt: Date
@@ -32,6 +35,7 @@ interface Row {
   summary: CharacterSummaryData
   content_versions: Record<string, string>
   advancement: AdvancementPurchaseInput[]
+  tier_picks: unknown
   pool_max: PoolPoints | null
   created_at: Date
   updated_at: Date
@@ -45,6 +49,7 @@ function fromRow(r: Row): SavedCharacter {
     summary: r.summary,
     contentVersions: r.content_versions,
     advancement: r.advancement,
+    tierPicks: parsePicks(r.tier_picks) ?? { type: {}, focus: {} },
     poolMax: r.pool_max,
     createdAt: r.created_at,
     updatedAt: r.updated_at,
@@ -52,7 +57,7 @@ function fromRow(r: Row): SavedCharacter {
 }
 
 const COLUMNS =
-  'id, name, choices, summary, content_versions, advancement, pool_max, created_at, updated_at'
+  'id, name, choices, summary, content_versions, advancement, tier_picks, pool_max, created_at, updated_at'
 
 // Authorization lives here (no RLS): every query is scoped to `userId`, which
 // callers must take from the verified session — never from client input.
@@ -76,7 +81,7 @@ export async function getCharacter(userId: string, id: string): Promise<SavedCha
 export type CharacterData = Pick<
   SavedCharacter,
   'name' | 'choices' | 'summary' | 'contentVersions'
-> & { poolMax: PoolPoints }
+> & { poolMax: PoolPoints; tierPicks?: TierPicks }
 
 export class CharacterLimitError extends Error {}
 
@@ -107,9 +112,18 @@ export async function updateCharacter(
   const { rowCount } = await pool.query(
     `update character
         set name = $3, choices = $4, summary = $5, content_versions = $6, pool_max = $7,
-            updated_at = now()
+            tier_picks = coalesce($8::jsonb, tier_picks), updated_at = now()
       where id = $1 and user_id = $2`,
-    [id, userId, data.name, data.choices, data.summary, data.contentVersions, data.poolMax],
+    [
+      id,
+      userId,
+      data.name,
+      data.choices,
+      data.summary,
+      data.contentVersions,
+      data.poolMax,
+      data.tierPicks ? JSON.stringify(data.tierPicks) : null,
+    ],
   )
   return (rowCount ?? 0) > 0
 }

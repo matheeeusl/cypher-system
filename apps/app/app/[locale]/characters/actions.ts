@@ -10,6 +10,7 @@ import {
   updateCharacter,
 } from '@/lib/characters'
 import { prepareCharacterData } from '@/lib/prepare-character'
+import { EMPTY_PICKS, isEmptyPicks } from '@/lib/tier-picks'
 import { getSession } from '@/lib/session'
 
 export type SaveResult =
@@ -30,7 +31,17 @@ export async function saveCharacter(rawChoices: unknown, id?: string): Promise<S
     // choices are validated together with it.
     const existing = id ? await getCharacter(session.user.id, id) : null
     if (id && !existing) return { ok: false, reason: 'invalid' }
-    const prepared = await prepareCharacterData(rawChoices, existing?.advancement ?? [])
+    // The level-up picks (Type abilities from tier 2, a Focus choice) are kept
+    // too. If the edit makes them impossible (a different Type or Focus, or a
+    // tier-1 ability now taken twice), drop them: the player is asked again.
+    let prepared = await prepareCharacterData(
+      rawChoices,
+      existing?.advancement ?? [],
+      existing?.tierPicks,
+    )
+    if (!prepared.ok && existing && !isEmptyPicks(existing.tierPicks)) {
+      prepared = await prepareCharacterData(rawChoices, existing.advancement, EMPTY_PICKS)
+    }
     if (!prepared.ok) return { ok: false, reason: 'invalid' }
     const { data } = prepared
 

@@ -27,6 +27,7 @@ export interface WizardType {
   startingEdge: { statChoices: Stat[]; amount: number }
   cypherLimit: number
   tierAbilities: Array<{ tier: number; abilityIds: string[] }>
+  tierChooseCounts: Array<{ tier: number; count: number }>
   startingEquipment: {
     clothing: boolean
     weapon: LocalizedString | null
@@ -44,6 +45,7 @@ const TYPES_QUERY = `
       startingEdge { statChoices amount }
       cypherLimit
       tierAbilities { tier abilityIds }
+      tierChooseCounts { tier count }
       startingEquipment {
         clothing
         weapon { en ptBR }
@@ -199,6 +201,7 @@ export interface CharacterChoicesInput {
   descriptorPoolBonus?: { stat: Stat; amount: number }
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: Array<{ tier: number; abilityId: string }>
+  typeAbilityPicks?: Array<{ tier: number; abilityId: string }>
   descriptorSkillChoices: string[]
   // Empty at character creation; play mode adds one entry per purchase, in order.
   advancementPurchases: AdvancementPurchaseInput[]
@@ -224,6 +227,8 @@ export interface DerivedCharacter {
       | { __typename: 'FocusAbilitySource'; focusId: string }
   }>
   skills: Array<{ skillId: string; level: SkillLevel }>
+  /** Level-up choices still owed for tiers already reached. */
+  pendingPicks: Array<{ kind: 'type' | 'focus'; tier: number; required: number; chosen: number }>
 }
 
 export interface ValidationIssueData {
@@ -256,6 +261,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
             }
           }
           skills { skillId level }
+          pendingPicks { kind tier required chosen }
         }
       }
       ... on InvalidCharacterResult {
@@ -281,11 +287,12 @@ export async function validateCharacterChoices(
 export interface AdvancementRules {
   costXp: number
   perTier: number
+  maxTier: number
 }
 
 export async function fetchAdvancementRules(): Promise<AdvancementRules> {
   const { advancementRules } = await gqlRequest<{ advancementRules: AdvancementRules }>(
-    'query AdvancementRules { advancementRules { costXp perTier } }',
+    'query AdvancementRules { advancementRules { costXp perTier maxTier } }',
   )
   return advancementRules
 }

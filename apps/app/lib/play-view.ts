@@ -1,4 +1,4 @@
-import { boughtAtTier, wouldReachBlockedTier } from '@/lib/advancement'
+import { atMaxTier, boughtAtTier } from '@/lib/advancement'
 import { sheetAbilities, sheetSkills } from '@/lib/character-sheet'
 import type { DerivedBundle } from '@/lib/character-derived'
 import type { SavedCharacter } from '@/lib/characters'
@@ -9,6 +9,14 @@ import type { AdvancementKey } from '@/lib/i18n/play'
 import { sheetCopy } from '@/lib/i18n/sheet'
 import { terms } from '@/lib/i18n/terms'
 import type { InventoryItem, PlayData, PoolKey, PoolPoints } from '@/lib/play'
+
+export interface PendingChoice {
+  kind: 'type' | 'focus'
+  tier: number
+  required: number
+  /** `id` is one option: a single ability id, or a bundled pair joined by ",". */
+  options: Array<{ id: string; label: string; description: string; meta: string }>
+}
 
 /** Everything the play screen needs, already localized and JSON-serializable. */
 export interface PlayView {
@@ -27,9 +35,13 @@ export interface PlayView {
     perTier: number
     tier: number
     bought: AdvancementKey[]
-    /** Buying one more would finish a tier we can't model yet (see lib/advancement.ts). */
+    /** Already at the highest tier: nothing left to buy. */
     nextIsBlocked: boolean
   }
+  /** Known abilities, for the "train an ability" advancement. */
+  abilityOptions: Array<{ id: string; name: string; trained: boolean }>
+  /** Level-up choices still owed (new tier's Type abilities, a Focus choice). */
+  pending: PendingChoice[]
   xp: Array<{ id: number; kind: 'gain' | 'spend'; amount: number; reason: string; locked: boolean }>
   inventory: InventoryItem[]
   cypherLimit: number
@@ -83,8 +95,15 @@ export async function buildPlayView(
       perTier: rules.perTier,
       tier: derived.tier,
       bought: [...bought],
-      nextIsBlocked: wouldReachBlockedTier(derived.tier, bought.size, rules.perTier),
+      nextIsBlocked: atMaxTier(derived.tier, rules.maxTier),
     },
+    abilityOptions: derived.knownAbilities.flatMap((known) => {
+      const ability = bundle.abilities.find((a) => a.id === known.abilityId)
+      return ability
+        ? [{ id: ability.id, name: loc(ability.name, locale), trained: known.trained }]
+        : []
+    }),
+    pending: pendingChoices(bundle, locale),
     xp: play.xp.map(({ id, kind, amount, reason, locked }) => ({
       id,
       kind,
@@ -96,4 +115,54 @@ export async function buildPlayView(
     cypherLimit: type.cypherLimit,
     notes: play.notes,
   }
+}
+
+function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] {
+  const { derived, type, focus, abilities } = bundle
+  const copy = sheetCopy[locale]
+  const abilityOf = (id: string) => abilities.find((a) => a.id === id)
+  const nameOf = (id: string) => {
+    const a = abilityOf(id)
+    return a ? loc(a.name, locale) : id
+  }
+  const known = new Set(derived.knownAbilities.map((k) => k.abilityId))
+
+  return derived.pendingPicks.flatMap((pick): PendingChoice[] => {
+    if (pick.kind === 'type') {
+      const options = type.tierAbilities
+        .filter((group) => group.tier <= pick.tier)
+        .flatMap((group) =>
+          group.abilityIds
+            .filter((id) => !known.has(id))
+            .map((id) => ({
+              id,
+              label: nameOf(id),
+              description: loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale),
+              meta: `${copy.tier} ${group.tier}`,
+            })),
+        )
+      return [
+        { kind: 'type' as const, tier: pick.tier, required: pick.required - pick.chosen, options },
+      ]
+    }
+    const entry = focus.tierAbilities
+      .find((group) => group.tier === pick.tier)
+      ?.entries.find((e) => e.__typename === 'ChoiceAbility')
+    if (!entry || entry.__typename !== 'ChoiceAbility') return []
+    return [
+      {
+        kind: 'focus' as const,
+        tier: pick.tier,
+        required: entry.count,
+        options: entry.options.map((ids) => ({
+          id: ids.join(','),
+          label: ids.map(nameOf).join(' + '),
+          description: ids
+            .map((id) => loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale))
+            .join(' '),
+          meta: `${copy.tier} ${pick.tier}`,
+        })),
+      },
+    ]
+  })
 }

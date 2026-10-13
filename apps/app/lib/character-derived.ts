@@ -49,6 +49,7 @@ export async function loadDerived(character: SavedCharacter): Promise<DerivedBun
     choices,
     { type, descriptor, focus },
     character.advancement,
+    character.tierPicks,
   )
   if (!input) return null
   const result = await validateCharacterChoices(input)

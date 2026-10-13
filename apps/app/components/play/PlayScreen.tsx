@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import {
   AdvancementPanel,
   Alert,
+  AbilityPicker,
   ChipPicker,
   PoolSplitPicker,
   ConditionBanner,
@@ -25,6 +26,7 @@ import {
   addXpAction,
   adjustPoolAction,
   changeItemQtyAction,
+  choosePicksAction,
   purchaseAdvancementAction,
   removeItemAction,
   removeXpAction,
@@ -80,6 +82,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [busy, setBusy] = useState(false)
   const [errors, setErrors] = useState<{
     advancement?: string
+    picks?: string
     xp?: string
     inventory?: string
     general?: string
@@ -308,6 +311,20 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     setBusy(false)
   }
 
+  async function savePicks(kind: 'type' | 'focus', tier: number, ids: string[]) {
+    setBusy(true)
+    setError('picks')
+    try {
+      const res = await enqueue(() => choosePicksAction(view.characterId, kind, tier, ids, locale))
+      if (res.ok && res.view) setView(res.view)
+      else if (res.ok) router.refresh()
+      else setError('picks', copy.picks.error)
+    } catch {
+      setError('picks', copy.picks.error)
+    }
+    setBusy(false)
+  }
+
   function onBuy(key: string) {
     setError('advancement')
     if (busy) return
@@ -357,23 +374,39 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     ) : picker === 'skills' ? (
       <ChipPicker
         searchPlaceholder={copy.advancement.skillSearch}
-        options={view.skillOptions.map((s) => {
-          const from = s.level ?? 'PRACTICED'
-          const maxed = from === 'SPECIALIZED'
-          return {
-            id: s.id,
-            label: maxed
-              ? copy.advancement.skillMaxed(s.name)
-              : copy.advancement.skillOption(
-                  s.name,
-                  t.skillLevels[from],
-                  t.skillLevels[NEXT_LEVEL[from]],
-                ),
-            disabled: maxed,
-            highlight: s.level !== null,
-          }
-        })}
-        onPick={(id) => void purchase({ key: 'skills', skillId: id })}
+        options={[
+          ...view.skillOptions.map((s) => {
+            const from = s.level ?? 'PRACTICED'
+            const maxed = from === 'SPECIALIZED'
+            return {
+              id: s.id,
+              label: maxed
+                ? copy.advancement.skillMaxed(s.name)
+                : copy.advancement.skillOption(
+                    s.name,
+                    t.skillLevels[from],
+                    t.skillLevels[NEXT_LEVEL[from]],
+                  ),
+              disabled: maxed,
+              highlight: s.level !== null,
+            }
+          }),
+          ...view.abilityOptions.map((a) => ({
+            id: `ability:${a.id}`,
+            label: a.trained
+              ? copy.advancement.abilityTrained(a.name)
+              : copy.advancement.abilityOption(a.name),
+            disabled: a.trained,
+            highlight: true,
+          })),
+        ]}
+        onPick={(id) =>
+          void purchase(
+            id.startsWith('ability:')
+              ? { key: 'skills', abilityId: id.slice('ability:'.length) }
+              : { key: 'skills', skillId: id },
+          )
+        }
         onCancel={() => setPicker(null)}
         cancelLabel={copy.advancement.cancel}
       />
@@ -416,6 +449,24 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             tone={condition === 'hale' ? 'ok' : 'warning'}
             chips={[copy.chips.tier(view.tier), copy.chips.effort(view.effort)]}
           />
+
+          {view.pending.map((p) => (
+            <AbilityPicker
+              key={`${p.kind}-${p.tier}`}
+              title={copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)}
+              hint={copy.picks.hint}
+              required={p.required}
+              options={p.options}
+              confirmLabel={copy.picks.confirm}
+              busy={busy}
+              onConfirm={(ids) => void savePicks(p.kind, p.tier, ids)}
+            />
+          ))}
+          {errors.picks && (
+            <p role="alert" className="text-warning font-mono text-xs">
+              {errors.picks}
+            </p>
+          )}
 
           <AdvancementPanel
             title={copy.advancement.title}

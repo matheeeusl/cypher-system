@@ -35,6 +35,19 @@ test('opens play mode from the sheet', async ({ page }) => {
   await expect(pool(page, 'Might')).toContainText('12 / 12')
 })
 
+/** Ticks the first `count` options of a level-up picker and confirms it. */
+async function completePicks(page: Page, heading: RegExp, count: number) {
+  const panel = page
+    .locator('section')
+    .filter({ has: page.getByRole('heading', { name: heading }) })
+  await expect(panel).toBeVisible()
+  const confirm = panel.getByRole('button', { name: 'Confirm choices' })
+  await expect(confirm).toBeDisabled()
+  for (let i = 0; i < count; i++) await panel.getByRole('checkbox').nth(i).check()
+  await confirm.click()
+  await expect(panel).toHaveCount(0)
+}
+
 async function poolAction(page: Page, name: string, action: 'Spend' | 'Recover', amount: number) {
   const p = pool(page, name)
   await p.getByRole('button', { name: `${action} X` }).click()
@@ -144,7 +157,17 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   await expect(page.getByText('Tier 2', { exact: true }).first()).toBeVisible()
   await expect(page.getByText('0 / 4 steps')).toBeVisible()
 
-  // Tier 2: three steps are fine, the fourth would reach tier 3 (not supported yet)
+  // Reaching tier 2 owes two Type abilities (a Warrior picks 2 at tier 2)
+  await completePicks(page, /Tier 2 — choose your Type abilities/, 2)
+  await expect(page.getByText(/Tier 2 — choose your Type abilities/)).toHaveCount(0)
+  await settled(page)
+  await expect(async () => {
+    await page.reload()
+    await expect(page.getByText(/Tier 2 — choose your Type abilities/)).toHaveCount(0)
+    await expect(page.getByText('Tier 2', { exact: true }).first()).toBeVisible()
+  }).toPass()
+
+  // Tier 2: train a known ability with the Skills advancement, then reach tier 3
   await addXp(page, 16, 'Another milestone')
   await tab(page, 'Status').click()
   await buy('Increasing Capabilities').click()
@@ -156,10 +179,19 @@ test('advancement: completing a tier levels up; the next tier stops before an un
   await expect(page.getByText('2 / 4 steps')).toBeVisible()
   await buy('Extra Effort').click()
   await expect(page.getByText('3 / 4 steps')).toBeVisible()
+  await buy('Skills —').click()
+  await page
+    .getByRole('button', { name: /— ability \(train\)$/ })
+    .first()
+    .click()
 
-  await expect(page.getByText('Not available yet')).toBeVisible()
-  await expect(page.getByText(/needs new ability choices/)).toBeVisible()
-  await expect(buy('Skills —')).toHaveCount(0)
+  await expect(page.getByText('✓ Advanced to Tier 3 — all four steps purchased.')).toBeVisible()
+  await completePicks(page, /Tier 3 — choose your Type abilities/, 3)
+  // Some Foci also offer a choice at tier 3
+  const focusPick = page.getByRole('heading', { name: /Tier 3 — choose a Focus ability/ })
+  if (await focusPick.isVisible()) await completePicks(page, /Tier 3 — choose a Focus ability/, 1)
+  await settled(page)
+  await expect(page.getByText(/— choose/)).toHaveCount(0)
 })
 
 test('inventory: items, quantities, the cypher catalog and the cypher limit warning', async ({
@@ -213,8 +245,7 @@ test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ 
   await expect(async () => {
     await page.goto(playUrl.replace(/\/play$/, ''))
     await expect(page.getByRole('heading', { name: NAME })).toBeVisible()
-    await expect(page.getByText('Tier 3')).toHaveCount(0)
-    await expect(page.getByText('Tier 2').first()).toBeVisible()
+    await expect(page.getByText('Tier 3').first()).toBeVisible()
     await expect(page.getByText('Rope')).toBeVisible()
   }).toPass()
 

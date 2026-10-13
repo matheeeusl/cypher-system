@@ -44,11 +44,20 @@ export interface PlayCopy {
     skillSearch: string
     skillOption: (name: string, from: string, to: string) => string
     skillMaxed: (name: string) => string
+    abilityOption: (name: string) => string
+    abilityTrained: (name: string) => string
     cancel: string
     tierUp: (tier: number) => string
     dismiss: string
     capped: string
     errors: { insufficient: string; conflict: string; capped: string; generic: string }
+  }
+  picks: {
+    typeTitle: (tier: number) => string
+    focusTitle: (tier: number) => string
+    hint: (selected: number, required: number) => string
+    confirm: string
+    error: string
   }
   skills: { skills: string; abilities: string }
   log: {
@@ -159,17 +168,25 @@ const en: PlayCopy = {
     skillSearch: 'Search skills — any skill can be trained, even ones you already have',
     skillOption: (name, from, to) => `${name} (${from} → ${to})`,
     skillMaxed: (name) => `${name} — Specialized (maxed)`,
+    abilityOption: (name) => `${name} — ability (train)`,
+    abilityTrained: (name) => `${name} — ability, already trained`,
     cancel: 'Cancel',
     tierUp: (tier) => `✓ Advanced to Tier ${tier} — all four steps purchased.`,
     dismiss: 'Dismiss',
-    capped:
-      'The last step of this tier would advance you to a tier that needs new ability choices, which aren’t supported yet — coming in a later update.',
+    capped: 'You have reached the highest tier (6) — there is nothing left to buy.',
     errors: {
       insufficient: 'Not enough XP.',
       conflict: 'This character changed somewhere else. Reload the page and try again.',
-      capped: 'This advancement isn’t available yet.',
+      capped: 'You are already at the highest tier.',
       generic: 'Could not apply the advancement. Please try again.',
     },
+  },
+  picks: {
+    typeTitle: (tier) => `Tier ${tier} — choose your Type abilities`,
+    focusTitle: (tier) => `Tier ${tier} — choose a Focus ability`,
+    hint: (selected, required) => `Choose ${required} — ${selected} selected`,
+    confirm: 'Confirm choices',
+    error: 'Could not save these choices. Reload the page and try again.',
   },
   skills: { skills: 'Skills', abilities: 'Abilities' },
   log: {
@@ -288,17 +305,25 @@ const ptBr: PlayCopy = {
     skillSearch: 'Buscar perícias — qualquer perícia pode ser treinada, até as que você já tem',
     skillOption: (name, from, to) => `${name} (${from} → ${to})`,
     skillMaxed: (name) => `${name} — Especializado (máximo)`,
+    abilityOption: (name) => `${name} — habilidade (treinar)`,
+    abilityTrained: (name) => `${name} — habilidade, já treinada`,
     cancel: 'Cancelar',
     tierUp: (tier) => `✓ Avançou para o Grau ${tier} — as quatro etapas foram compradas.`,
     dismiss: 'Dispensar',
-    capped:
-      'A última etapa deste Grau levaria você a um Grau que exige novas escolhas de habilidades, ainda não suportadas — chegará em uma atualização futura.',
+    capped: 'Você chegou ao Grau máximo (6) — não há mais nada a comprar.',
     errors: {
       insufficient: 'XP insuficiente.',
       conflict: 'Este personagem foi alterado em outro lugar. Recarregue a página e tente de novo.',
-      capped: 'Este avanço ainda não está disponível.',
+      capped: 'Você já está no Grau máximo.',
       generic: 'Não foi possível aplicar o avanço. Tente novamente.',
     },
+  },
+  picks: {
+    typeTitle: (tier) => `Grau ${tier} — escolha suas habilidades de Tipo`,
+    focusTitle: (tier) => `Grau ${tier} — escolha uma habilidade de Foco`,
+    hint: (selected, required) => `Escolha ${required} — ${selected} selecionada(s)`,
+    confirm: 'Confirmar escolhas',
+    error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',
   },
   skills: { skills: 'Perícias', abilities: 'Habilidades' },
   log: {

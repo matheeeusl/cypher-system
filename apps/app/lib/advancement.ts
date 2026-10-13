@@ -16,6 +16,7 @@ export type AdvancementChoice =
   | { key: 'edge'; stat: Stat }
   | { key: 'effort' }
   | { key: 'skills'; skillId: string }
+  | { key: 'skills'; abilityId: string }
 
 export function advancementKeyOf(p: AdvancementPurchaseInput): AdvancementKey {
   if ('increasingCapabilities' in p) return 'pools'
@@ -62,21 +63,19 @@ export function toPurchase(
     case 'effort':
       return { extraEffort: { tier } }
     case 'skills':
-      return { skills: { tier, target: { skillId: choice.skillId } } }
+      return {
+        skills: {
+          tier,
+          target:
+            'skillId' in choice ? { skillId: choice.skillId } : { abilityId: choice.abilityId },
+        },
+      }
   }
 }
 
-/**
- * Highest tier a character can reach for now. Reaching tier 3 and above needs
- * new ability picks (a Focus choice at tier 3, Type abilities from tier 2) that
- * the engine and wizard don't model yet — see packages/cypher-engine/CLAUDE.md
- * "Known gaps". Until that lands, the purchase that would complete tier 2 is blocked.
- */
-export const MAX_REACHABLE_TIER = 2
-
-/** True when buying one more advancement while at `tier` (with `boughtCount` already bought toward the next) would finish the next tier. */
-export function wouldReachBlockedTier(tier: number, boughtCount: number, perTier: number): boolean {
-  return boughtCount + 1 >= perTier && tier + 1 > MAX_REACHABLE_TIER
+/** True once the character is at the top tier and has nothing left to buy. */
+export function atMaxTier(tier: number, maxTier: number): boolean {
+  return tier >= maxTier
 }
 
 const STATS: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
@@ -108,10 +107,13 @@ export function parseChoice(raw: unknown): AdvancementChoice | null {
         : null
     case 'effort':
       return { key: 'effort' }
-    case 'skills':
-      return typeof r.skillId === 'string' && r.skillId.length > 0 && r.skillId.length < 100
-        ? { key: 'skills', skillId: r.skillId }
-        : null
+    case 'skills': {
+      const valid = (v: unknown): v is string =>
+        typeof v === 'string' && v.length > 0 && v.length < 100
+      if (valid(r.skillId)) return { key: 'skills', skillId: r.skillId }
+      if (valid(r.abilityId)) return { key: 'skills', abilityId: r.abilityId }
+      return null
+    }
     default:
       return null
   }

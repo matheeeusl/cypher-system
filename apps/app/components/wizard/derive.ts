@@ -8,6 +8,7 @@ import type {
 } from '@/lib/graphql/queries'
 
 import type { WizardCopy } from '@/lib/i18n/wizard'
+import { EMPTY_PICKS, type TierPicks } from '@/lib/tier-picks'
 
 import {
   POOL_POINTS_TOTAL,
@@ -159,10 +160,18 @@ export function stepErrorMessage(
  * "must sum to exactly 6" style errors as the player works through the rest
  * of the wizard, rather than only checking client-side.
  */
+/** {tier -> ids} to the API's flat {tier, abilityId} pairs. */
+function pairsOf(record: Record<string, string[]>) {
+  return Object.entries(record).flatMap(([tier, ids]) =>
+    ids.map((abilityId) => ({ tier: Number(tier), abilityId })),
+  )
+}
+
 export function buildCharacterChoicesInput(
   choices: WizardChoices,
   content: WizardContent,
   advancementPurchases: AdvancementPurchaseInput[] = [],
+  tierPicks: TierPicks = EMPTY_PICKS,
 ): CharacterChoicesInput | null {
   const { type, descriptor, focus } = content
   if (
@@ -190,21 +199,19 @@ export function buildCharacterChoicesInput(
       : {}),
     tier1TypeAbilityIds: choices.tier1TypeAbilityIds,
     // One {tier, abilityId} pair per individual ability id — a selected
-    // bundled-pair option contributes two pairs, both at the same tier.
-    // KNOWN GAP (not fixed here, flagged to the user): the server's
-    // mapFocusChoiceSelections keys its intermediate record by tier alone,
-    // so when more than one pair shares a tier only the *last* survives.
-    // This is live and reachable today for Channels Divine Blessings
-    // (tier-1 pick-2-of-13) — this wizard sends both chosen ability ids
-    // correctly, but validateCharacterChoices currently only grants one of
-    // them. Fixing it means changing @cypher/engine's
-    // resolveFocusAbilities (Record<string, string> -> Record<string,
-    // string[]>), not just this client.
-    focusChoiceSelections: choiceEntries.flatMap((entry, i) =>
-      (choices.focusChoiceSelections[i] ?? []).flatMap((optionIndex) =>
-        (entry.options[optionIndex] ?? []).map((abilityId) => ({ tier: entry.tier, abilityId })),
+    // bundled-pair option contributes two pairs, both at the same tier; the
+    // API groups them back by tier.
+    focusChoiceSelections: [
+      ...choiceEntries.flatMap((entry, i) =>
+        (choices.focusChoiceSelections[i] ?? []).flatMap((optionIndex) =>
+          (entry.options[optionIndex] ?? []).map((abilityId) => ({ tier: entry.tier, abilityId })),
+        ),
       ),
-    ),
+      ...pairsOf(tierPicks.focus),
+    ],
+    ...(Object.keys(tierPicks.type).length > 0
+      ? { typeAbilityPicks: pairsOf(tierPicks.type) }
+      : {}),
     descriptorSkillChoices: choices.descriptorSkillChoices,
     advancementPurchases,
   }
