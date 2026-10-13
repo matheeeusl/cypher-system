@@ -50,7 +50,7 @@ export default async function CharacterSheetPage({
   return (
     <AppShell
       locale={locale}
-      title="CYPHER://CHARACTER"
+      section="CHARACTER"
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/characters/${character.id}`}
       actions={<UserMenu name={session.user.name} signOutLabel={signOutLabel[locale]} />}
     >

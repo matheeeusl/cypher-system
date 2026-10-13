@@ -18,7 +18,7 @@ export default async function ResetPasswordPage({
   return (
     <AppShell
       locale={locale}
-      title="CYPHER://ACCOUNT"
+      section="ACCOUNT"
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/auth`}
     >
       <ResetPasswordScreen locale={locale} token={token} />

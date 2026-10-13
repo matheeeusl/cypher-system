@@ -1,3 +1,4 @@
+export { BRAND_PREFIX } from './brand'
 export { Alert } from './Alert'
 export { AuthCard } from './AuthCard'
 export { AuthForm } from './AuthForm'

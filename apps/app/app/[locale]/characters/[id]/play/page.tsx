@@ -63,7 +63,7 @@ export default async function PlayPage({
   return (
     <AppShell
       locale={locale}
-      title={`${copy.title} · ${character.name}`}
+      section={`${copy.title} · ${character.name}`}
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/characters/${id}/play`}
       actions={<UserMenu name={session.user.name} signOutLabel={signOutLabel[locale]} />}
     >

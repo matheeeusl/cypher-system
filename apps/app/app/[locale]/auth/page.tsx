@@ -17,7 +17,7 @@ export default async function AuthPage({ params }: { params: Promise<{ locale: s
   return (
     <AppShell
       locale={locale}
-      title="CYPHER://ACCOUNT"
+      section="ACCOUNT"
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/auth`}
     >
       <AuthScreen locale={locale} />

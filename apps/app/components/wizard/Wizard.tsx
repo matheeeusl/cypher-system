@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 
 import { Button } from '@cypher/ui'
 
+import { AppBrand } from '@/components/AppBrand'
 import {
   fetchAbilities,
   fetchDescriptors,
@@ -354,9 +355,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
       <div className="border-border bg-panel flex items-center justify-between gap-4 border-b px-7 py-3.5">
         <div className="flex items-center gap-2.5">
           <div className="bg-accent h-2 w-2 rounded-full shadow-[0_0_6px_var(--color-accent)]" />
-          <span className="text-text-muted font-mono text-[13px] tracking-wide">
-            CYPHER://CHARACTER BUILDER
-          </span>
+          <AppBrand locale={locale} section="CHARACTER BUILDER" />
           <a
             href={characterId ? `/${locale}/characters/${characterId}` : `/${locale}`}
             className="text-accent hover:text-warning ml-3 cursor-pointer font-mono text-[11px] transition-colors"

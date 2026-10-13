@@ -11,6 +11,7 @@
 // here — the homepage passes none. The `leading` slot (before the brand) works
 // the same way, for the sidebar toggle: only Starlight-shell pages have a
 // sidebar to toggle, so only Header.astro fills it.
+import { BRAND_PREFIX } from '@cypher/ui/brand';
 import { URL_LOCALES, type UrlLocale } from '../lib/locale';
 
 interface Props {
@@ -57,7 +58,7 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 		<slot name="leading" />
 		<a href={locale ? `/${locale}/` : '/'} class="flex items-center gap-2.5 text-inherit no-underline">
 			<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
-			<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">CYPHER://REFERENCE</span>
+			<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">{BRAND_PREFIX}REFERENCE</span>
 		</a>
 	</div>
 

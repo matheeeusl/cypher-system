@@ -120,7 +120,7 @@ export interface PlayCopy {
 }
 
 const en: PlayCopy = {
-  title: 'CYPHER://PLAY',
+  title: 'PLAY',
   backToSheet: '← Character sheet',
   tabs: {
     status: 'Status',
@@ -264,7 +264,7 @@ const en: PlayCopy = {
 }
 
 const ptBr: PlayCopy = {
-  title: 'CYPHER://PLAY',
+  title: 'PLAY',
   backToSheet: '← Ficha do personagem',
   tabs: {
     status: 'Status',
@@ -369,7 +369,7 @@ const ptBr: PlayCopy = {
     },
   },
   inventory: {
-    title: 'Cifras e Equipamentos Carregados',
+    title: 'Cifras & Equipamentos',
     cypherCount: (count, limit) => `Cifras ${count} / ${limit}`,
     overLimit: (limit) =>
       `Você porta mais cifras que o seu limite de ${limit}. O Mestre pode permitir excedê-lo a algum custo.`,
