@@ -40,6 +40,8 @@ export interface SkillGrantSlot {
   abilityId: string
   count: number
   mode: 'train' | 'train_or_specialize' | 'specialize'
+  /** The player may type their own skill/area instead of picking from the catalog. */
+  allowCustom: boolean
   /** A second shape, with its own pick count, instead of `count`. */
   alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
   /** Any skill not flagged `combat` may be picked (`options` is then empty). */
@@ -84,6 +86,7 @@ export function tier1SkillGrantSlots(
           count: grant.count,
           mode: grant.mode,
           alternate: grant.alternate,
+          allowCustom: grant.allowCustom,
           noncombat: grant.noncombat,
           options: grant.options,
         },

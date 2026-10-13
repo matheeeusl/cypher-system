@@ -33,6 +33,7 @@ import {
   setNotesAction,
 } from '@/app/[locale]/characters/[id]/play/actions'
 import { POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
+import { customSkillText, toCustomSkill } from '@/lib/custom-skill'
 import { fetchCyphers, type CatalogCypher } from '@/lib/graphql/cyphers'
 import type { SkillLevel, Stat } from '@/lib/graphql/queries'
 import type { Locale } from '@/lib/i18n/auth'
@@ -457,23 +458,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             chips={[copy.chips.tier(view.tier), copy.chips.effort(view.effort)]}
           />
 
-          {view.pending.flatMap((p) => [
-            ...(p.alternate
-              ? [
-                  <AbilityPicker
-                    key={`${p.kind}-${p.tier}-${p.skillKey ?? ''}-alt`}
-                    title={copy.picks.skillAlternateTitle(p.abilityName ?? '', p.tier)}
-                    hint={copy.picks.hint}
-                    required={p.alternate.required}
-                    options={p.alternate.options}
-                    confirmLabel={copy.picks.confirm}
-                    busy={busy}
-                    onConfirm={(ids) =>
-                      void savePicks(p.kind, p.tier, ids, p.skillKey ?? undefined)
-                    }
-                  />,
-                ]
-              : []),
+          {view.pending.map((p) => (
             <AbilityPicker
               key={`${p.kind}-${p.tier}-${p.skillKey ?? ''}`}
               title={
@@ -481,14 +466,30 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
                   ? copy.picks.skillTitle(p.abilityName ?? '', p.tier)
                   : copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)
               }
-              hint={copy.picks.hint}
+              hint={
+                p.alternateRequired !== null
+                  ? (selected, required) =>
+                      copy.picks.skillAlternateHint(selected, required, p.alternateRequired ?? 0)
+                  : copy.picks.hint
+              }
               required={p.required}
+              alsoAccept={p.alternateRequired !== null ? [p.alternateRequired] : undefined}
               options={p.options}
+              custom={
+                p.allowCustom
+                  ? {
+                      placeholder: copy.picks.customPlaceholder,
+                      addLabel: copy.picks.customAdd,
+                      toId: toCustomSkill,
+                      labelOf: customSkillText,
+                    }
+                  : undefined
+              }
               confirmLabel={copy.picks.confirm}
               busy={busy}
               onConfirm={(ids) => void savePicks(p.kind, p.tier, ids, p.skillKey ?? undefined)}
-            />,
-          ])}
+            />
+          ))}
           {errors.picks && (
             <p role="alert" className="text-warning font-mono text-xs">
               {errors.picks}

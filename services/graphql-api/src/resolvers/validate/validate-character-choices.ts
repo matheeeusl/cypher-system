@@ -34,7 +34,10 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
   // with the Type/Descriptor/Focus ids above.
   for (const { skillIds } of input.abilitySkillChoices ?? []) {
     for (const skillId of skillIds) {
-      if (!getSkillById(skillId)) throw new GraphQLError(`No Skill found for id "${skillId}"`)
+      // A typed skill ("custom:<text>") is the player's own; the engine
+      // checks it is allowed and not empty.
+      if (!skillId.startsWith('custom:') && !getSkillById(skillId))
+        throw new GraphQLError(`No Skill found for id "${skillId}"`)
     }
   }
 

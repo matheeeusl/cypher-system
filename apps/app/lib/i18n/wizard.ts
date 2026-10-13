@@ -67,6 +67,9 @@ export interface WizardCopy {
     skillTaken: string
     /** The ability's other shape: fewer picks, applied to skills already trained. */
     skillAlternate: (count: number) => string
+    /** Field for a skill/area the player types instead of choosing one. */
+    customPlaceholder: string
+    customAdd: string
   }
   equipment: {
     fixedByType: string
@@ -206,6 +209,8 @@ const en: WizardCopy = {
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — choose ${needed} ${needed === 1 ? 'skill' : 'skills'} (${count} / ${needed} selected)`,
     skillTaken: 'already trained',
+    customPlaceholder: 'Or type your own (e.g. chess, archaeology)…',
+    customAdd: 'Add',
     skillAlternate: (count) =>
       `Or choose ${count} skill${count === 1 ? '' : 's'} you're already trained in, to become specialized.`,
   },
@@ -414,6 +419,8 @@ const ptBr: WizardCopy = {
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — escolha ${needed} ${needed === 1 ? 'perícia' : 'perícias'} (${count} / ${needed} selecionadas)`,
     skillTaken: 'já treinada',
+    customPlaceholder: 'Ou digite a sua (ex.: xadrez, arqueologia)…',
+    customAdd: 'Adicionar',
     skillAlternate: (count) =>
       `Ou escolha ${count} ${count === 1 ? 'perícia' : 'perícias'} em que já é treinado, para se tornar especializado.`,
   },

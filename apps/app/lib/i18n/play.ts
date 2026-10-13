@@ -57,8 +57,10 @@ export interface PlayCopy {
     focusTitle: (tier: number) => string
     /** Skills an ability trains the character in, gained at `tier`. */
     skillTitle: (abilityName: string, tier: number) => string
-    /** The ability's other shape, offered beside `skillTitle`'s picker. */
-    skillAlternateTitle: (abilityName: string, tier: number) => string
+    /** Hint for an ability that takes two pick counts ("two skills, or one specialized"). */
+    skillAlternateHint: (selected: number, required: number, alternate: number) => string
+    customPlaceholder: string
+    customAdd: string
     hint: (selected: number, required: number) => string
     confirm: string
     error: string
@@ -190,8 +192,10 @@ const en: PlayCopy = {
     focusTitle: (tier) => `Tier ${tier} — choose a Focus ability`,
     skillTitle: (abilityName, tier) =>
       `${abilityName} (tier ${tier}) — choose the skills it improves`,
-    skillAlternateTitle: (abilityName, tier) =>
-      `${abilityName} (tier ${tier}) — or specialize in skills you already know`,
+    skillAlternateHint: (selected, required, alternate) =>
+      `Choose ${required}, or ${alternate} to specialize in a skill you already know — ${selected} selected`,
+    customPlaceholder: 'Or type your own…',
+    customAdd: 'Add',
     hint: (selected, required) => `Choose ${required} — ${selected} selected`,
     confirm: 'Confirm choices',
     error: 'Could not save these choices. Reload the page and try again.',
@@ -331,8 +335,10 @@ const ptBr: PlayCopy = {
     focusTitle: (tier) => `Grau ${tier} — escolha uma habilidade de Foco`,
     skillTitle: (abilityName, tier) =>
       `${abilityName} (Grau ${tier}) — escolha as perícias que ela aprimora`,
-    skillAlternateTitle: (abilityName, tier) =>
-      `${abilityName} (Grau ${tier}) — ou especialize-se em perícias que já conhece`,
+    skillAlternateHint: (selected, required, alternate) =>
+      `Escolha ${required}, ou ${alternate} para se especializar em uma perícia que já conhece — ${selected} selecionada(s)`,
+    customPlaceholder: 'Ou digite a sua…',
+    customAdd: 'Adicionar',
     hint: (selected, required) => `Escolha ${required} — ${selected} selecionada(s)`,
     confirm: 'Confirmar escolhas',
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',

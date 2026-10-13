@@ -83,6 +83,12 @@ export const AbilitySchema = z.object({
       options: z.union([z.array(z.string()).min(1), z.literal('noncombat')]),
       mode: z.enum(['train', 'train_or_specialize', 'specialize']).optional(),
       repeatable: z.boolean().optional(),
+      // The player may type their own area instead of (or besides) the
+      // catalog skills — for "an area of knowledge", "a sport", "a style of
+      // art": no catalog can list them, and whether one is combat/physical is
+      // for the player and the GM to judge, not the rules data. A typed pick
+      // is stored as `custom:<text>`.
+      allow_custom: z.boolean().optional(),
       // "...or instead": a second shape the same ability can take ("two
       // areas of knowledge, or specialized in one"). Which shape a set of
       // picks is, is decided by how many there are, so the counts differ.

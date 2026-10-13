@@ -1,3 +1,5 @@
+import { isSkillIdShape } from '@/lib/custom-skill'
+
 /** Level-up choices stored beside the advancement purchases (see db/migrations/003). */
 export interface TierPicks {
   /** Type abilities picked at tier 2+: tier -> ability ids. */
@@ -26,12 +28,13 @@ const SKILL_KEY = /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/
 function parseRecord(
   raw: unknown,
   keyOk: (key: string) => boolean,
+  idOk: (id: unknown) => boolean = (id) => typeof id === 'string' && ID.test(id),
 ): Record<string, string[]> | null {
   if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
   const out: Record<string, string[]> = {}
   for (const [key, ids] of Object.entries(raw)) {
     if (!keyOk(key) || !Array.isArray(ids) || ids.length > 10) return null
-    if (!ids.every((id) => typeof id === 'string' && ID.test(id))) return null
+    if (!ids.every(idOk)) return null
     out[key] = ids as string[]
   }
   return out
@@ -44,7 +47,8 @@ export function parsePicks(raw: unknown): TierPicks | null {
   const isTier = (key: string) => /^[2-6]$/.test(key)
   const type = parseRecord(r.type ?? {}, isTier)
   const focus = parseRecord(r.focus ?? {}, isTier)
-  const skills = parseRecord(r.skills ?? {}, (key) => SKILL_KEY.test(key))
+  // Skill picks may be typed by the player (`custom:<text>`), not just catalog ids.
+  const skills = parseRecord(r.skills ?? {}, (key) => SKILL_KEY.test(key), isSkillIdShape)
   if (!type || !focus || !skills) return null
   return Object.keys(skills).length > 0 ? { type, focus, skills } : { type, focus }
 }

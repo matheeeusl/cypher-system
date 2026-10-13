@@ -36,6 +36,7 @@ sources:
     id: remembers-the-past
     tier: 1
 skill_grant:
+  allow_custom: true
   count: 2
   options: noncombat
   repeatable: true

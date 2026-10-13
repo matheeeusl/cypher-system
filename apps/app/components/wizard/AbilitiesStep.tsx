@@ -1,3 +1,6 @@
+import { useState } from 'react'
+
+import { customSkillText, isCustomSkill, toCustomSkill } from '@/lib/custom-skill'
 import type { WizardAbility, WizardFocus, WizardSkill, WizardType } from '@/lib/graphql/queries'
 
 import { focusTier1ChoiceEntries, focusTier1GrantedIds, type SkillGrantSlot } from './derive'
@@ -22,6 +25,44 @@ interface AbilitiesStepProps {
   /** Skills already trained by the Descriptor — can't be picked again. */
   trainedSkillIds: string[]
   onToggleAbilitySkill: (slot: SkillGrantSlot, skillId: string) => void
+}
+
+/** A text field for a skill/area the player types themselves (see `allowCustom`). */
+function CustomSkillInput({ disabled, onAdd }: { disabled: boolean; onAdd: (id: string) => void }) {
+  const { copy } = useWizardI18n()
+  const [text, setText] = useState('')
+  const id = toCustomSkill(text)
+
+  function add() {
+    if (id === null || disabled) return
+    onAdd(id)
+    setText('')
+  }
+
+  return (
+    <div className="mt-3 flex gap-2">
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault()
+            add()
+          }
+        }}
+        placeholder={copy.abilities.customPlaceholder}
+        className="border-border bg-panel text-text min-w-0 flex-1 rounded border px-3 py-1.5 text-[12px] outline-none"
+      />
+      <button
+        type="button"
+        disabled={id === null || disabled}
+        onClick={add}
+        className="border-accent text-accent rounded border px-3 py-1.5 font-mono text-[12px] enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        {copy.abilities.customAdd}
+      </button>
+    </div>
+  )
 }
 
 export function AbilitiesStep({
@@ -164,6 +205,16 @@ export function AbilitiesStep({
               </p>
             )}
             <div className="flex flex-wrap gap-2">
+              {picked.filter(isCustomSkill).map((id) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => onToggleAbilitySkill(slot, id)}
+                  className="border-accent bg-accent-soft text-accent cursor-pointer rounded border px-3 py-1.5 text-left font-mono text-[12px]"
+                >
+                  {customSkillText(id)}
+                </button>
+              ))}
               {candidates.map((skill) => {
                 const isSelected = picked.includes(skill.id)
                 const isUnavailable =
@@ -190,6 +241,14 @@ export function AbilitiesStep({
                 )
               })}
             </div>
+            {slot.allowCustom && (
+              <CustomSkillInput
+                disabled={picked.length >= Math.max(slot.count, slot.alternate?.count ?? 0)}
+                onAdd={(id) => {
+                  if (!picked.includes(id)) onToggleAbilitySkill(slot, id)
+                }}
+              />
+            )}
           </div>
         )
       })}

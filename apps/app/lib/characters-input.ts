@@ -1,3 +1,4 @@
+import { isSkillIdShape } from '@/lib/custom-skill'
 import { INITIAL_CHOICES, type WizardChoices } from '@/components/wizard/state'
 
 export const NAME_MAX = 80
@@ -18,8 +19,8 @@ function parseSkillChoices(raw: unknown): Record<string, string[]> | null {
   const out: Record<string, string[]> = {}
   for (const [key, ids] of entries) {
     if (!/^(type|focus):[1-6]:[a-z0-9-]{1,100}$/.test(key)) return null
-    if (!isStringArray(ids) || ids.length > 10) return null
-    out[key] = ids
+    if (!Array.isArray(ids) || ids.length > 10 || !ids.every(isSkillIdShape)) return null
+    out[key] = ids as string[]
   }
   return out
 }

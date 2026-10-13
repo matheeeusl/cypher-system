@@ -193,6 +193,9 @@ type SkillGrantAlternate {
 
 type SkillGrant {
   count: Int!
+  # The player may type their own skill/area instead of picking from the
+  # catalog; a typed pick is sent and returned as "custom:<text>".
+  allowCustom: Boolean!
   alternate: SkillGrantAlternate
   # What a pick does: "train" (a skill not yet trained), "train_or_specialize"
   # (trained, or specialized if already trained) or "specialize" (a skill the

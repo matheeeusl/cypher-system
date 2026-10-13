@@ -8,6 +8,8 @@ import type {
 
 import { Button } from '@cypher/ui'
 
+import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
+
 import {
   descriptorAutoTrainedSkillIds,
   focusTier1ChoiceEntries,
@@ -38,6 +40,7 @@ export function ReviewStep({
 }: ReviewStepProps) {
   const { copy, terms, t } = useWizardI18n()
   const skillName = (id: string) => {
+    if (isCustomSkill(id)) return customSkillText(id)
     const skill = skills?.find((s) => s.id === id)
     return skill ? t(skill.name) : id
   }

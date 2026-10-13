@@ -22,6 +22,21 @@ export interface SkillGrantInstance {
   grant: SkillGrant
 }
 
+/** Prefix of a skill the player typed (`custom:chess`) instead of picking from the catalog. */
+export const CUSTOM_SKILL_PREFIX = 'custom:'
+export const CUSTOM_SKILL_MAX_LENGTH = 60
+
+export const isCustomSkill = (skillId: string) => skillId.startsWith(CUSTOM_SKILL_PREFIX)
+
+/** The typed text of a custom skill id, with whitespace tidied. */
+export function customSkillText(skillId: string): string {
+  return skillId.slice(CUSTOM_SKILL_PREFIX.length).trim().replace(/\s+/g, ' ')
+}
+
+/** Identity of a skill for "already chosen / already trained": custom ones compare ignoring case. */
+const canonical = (skillId: string) =>
+  isCustomSkill(skillId) ? CUSTOM_SKILL_PREFIX + customSkillText(skillId).toLowerCase() : skillId
+
 const ERRORS = {
   TOO_MANY: (abilityId: string, required: number) =>
     `Ability "${abilityId}" grants only ${required} skill(s), but more were supplied`,
@@ -186,30 +201,48 @@ export function createSkillGrantApplier(
     const usedByAbility = chosenByAbility.get(ability_id) ?? new Set<string>()
     chosenByAbility.set(ability_id, usedByAbility)
 
+    // The skill's entry in the map, found ignoring case for custom ones.
+    const entryKey = (map: SkillMap, skillId: string) =>
+      Object.keys(map).find((k) => canonical(k) === canonical(skillId)) ?? skillId
+
     let result = skills
-    for (const skillId of picked) {
-      const params = { abilityId: ability_id, skillId }
-      const allowed =
-        grant.options === 'noncombat'
-          ? !combatSkillIds.has(skillId)
-          : grant.options.includes(skillId)
-      if (!allowed) {
-        throw new CharacterRuleError(
-          'ABILITY_SKILL_CHOICE_INVALID',
-          ERRORS.INVALID(ability_id, skillId),
-          params,
-        )
+    for (const pickedId of picked) {
+      const params = { abilityId: ability_id, skillId: pickedId }
+      let skillId = pickedId
+      if (isCustomSkill(pickedId)) {
+        const text = customSkillText(pickedId)
+        if (!grant.allow_custom || text.length === 0 || text.length > CUSTOM_SKILL_MAX_LENGTH) {
+          throw new CharacterRuleError(
+            'ABILITY_SKILL_CHOICE_INVALID',
+            ERRORS.INVALID(ability_id, pickedId),
+            params,
+          )
+        }
+        skillId = CUSTOM_SKILL_PREFIX + text
+      } else {
+        const allowed =
+          grant.options === 'noncombat'
+            ? !combatSkillIds.has(skillId)
+            : grant.options.includes(skillId)
+        if (!allowed) {
+          throw new CharacterRuleError(
+            'ABILITY_SKILL_CHOICE_INVALID',
+            ERRORS.INVALID(ability_id, skillId),
+            params,
+          )
+        }
       }
-      if (usedByAbility.has(skillId)) {
+      if (usedByAbility.has(canonical(skillId))) {
         throw new CharacterRuleError(
           'ABILITY_SKILL_CHOICE_DUPLICATE',
           ERRORS.CHOSEN_AGAIN(skillId),
           params,
         )
       }
-      usedByAbility.add(skillId)
+      usedByAbility.add(canonical(skillId))
 
-      const level = result[skillId]?.level
+      const mapKey = entryKey(result, skillId)
+      const level = result[mapKey]?.level
       if (mode === 'train') {
         if (level === 'trained' || level === 'specialized') {
           throw new CharacterRuleError(
@@ -218,14 +251,14 @@ export function createSkillGrantApplier(
             params,
           )
         }
-        result = { ...result, [skillId]: { level: 'trained' } }
+        result = { ...result, [mapKey]: { level: 'trained' } }
       } else if (mode === 'train_or_specialize') {
         if (level === 'specialized') {
           throw new CharacterRuleError('ABILITY_SKILL_CHOICE_MAXED', ERRORS.MAXED(skillId), params)
         }
         result = {
           ...result,
-          [skillId]: { level: level === 'trained' ? 'specialized' : 'trained' },
+          [mapKey]: { level: level === 'trained' ? 'specialized' : 'trained' },
         }
       } else {
         if (level === 'specialized') {
@@ -238,7 +271,7 @@ export function createSkillGrantApplier(
             params,
           )
         }
-        result = { ...result, [skillId]: { level: 'specialized' } }
+        result = { ...result, [mapKey]: { level: 'specialized' } }
       }
     }
     return result

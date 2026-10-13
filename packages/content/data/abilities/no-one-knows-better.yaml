@@ -16,6 +16,7 @@ sources:
     id: interprets-the-law
     tier: 5
 skill_grant:
+  allow_custom: true
   count: 2
   options:
     - persuasion
@@ -23,7 +24,4 @@ skill_grant:
     - intimidation
     - research
     - seeing-through-tricks
-    - geography
-    - history
-    - supernatural-knowledge
   mode: train_or_specialize

@@ -80,3 +80,52 @@ test('a skill-granting ability asks for its skills and trains the character', as
   await page.getByRole('dialog').getByRole('button', { name: 'Delete' }).click()
   await expect(page.getByText('No characters yet.')).toBeVisible()
 })
+
+// "An area of knowledge" can't be listed: the player types it, and the sheet
+// shows it as written next to catalog skills.
+test('a typed skill is accepted for an ability that allows one', async ({ page }) => {
+  await page.goto('/en/characters/new')
+
+  await page.getByRole('button', { name: /Explorer/ }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  await page.getByPlaceholder(/Search \d+ descriptors…/).fill('Brash')
+  await page.getByRole('button', { name: 'Brash' }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  await page.getByPlaceholder(/Search \d+ foci…/).fill('Bears a Halo of Fire')
+  await page.getByRole('button', { name: 'Bears a Halo of Fire' }).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+
+  const plusButtons = page.locator('button:has-text("+")')
+  for (let i = 0; i < 3; i++) for (let n = 0; n < 2; n++) await plusButtons.nth(i).click()
+  await page.getByRole('button', { name: 'Next →' }).click()
+  await page.getByRole('button', { name: 'Next →' }).click() // skills: nothing to choose
+
+  await page.getByRole('button', { name: /^Knowledge Skills/ }).click()
+  const abilityButtons = page.locator('div.flex.max-h-\\[340px\\] button')
+  for (let i = 0; i < 3; i++) await abilityButtons.nth(i).click()
+  await expect(page.getByText('4 / 4 selected')).toBeVisible()
+
+  // One catalog skill and one the player types
+  await page.getByRole('button', { name: 'History', exact: true }).click()
+  await page.getByPlaceholder(/type your own/).fill('  Ancient   Runes ')
+  await page.getByRole('button', { name: 'Add', exact: true }).click()
+  await expect(page.getByText(/\(2 \/ 2 selected\)/)).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Ancient Runes', exact: true })).toBeVisible()
+
+  await page.getByRole('button', { name: 'Next →' }).click() // equipment
+  await page.getByRole('button', { name: 'Next →' }).click() // background
+  await page.getByPlaceholder('e.g. Kessa Verne').fill('Runes Hero')
+  await page.getByRole('button', { name: 'Next →' }).click()
+  await page.getByRole('button', { name: 'Save Character' }).click()
+
+  await expect(page.getByRole('heading', { name: 'Runes Hero' })).toBeVisible()
+  await expect(page.getByText('Ancient Runes', { exact: true })).toBeVisible()
+  await expect(page.getByText('History', { exact: true })).toBeVisible()
+
+  await page.getByRole('link', { name: '← My Characters' }).click()
+  await page.getByRole('button', { name: 'Delete' }).click()
+  await page.getByRole('dialog').getByRole('button', { name: 'Delete' }).click()
+  await expect(page.getByText('No characters yet.')).toBeVisible()
+})

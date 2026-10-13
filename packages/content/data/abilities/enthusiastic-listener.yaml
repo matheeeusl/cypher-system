@@ -14,5 +14,6 @@ sources:
     id: hits-the-saloon
     tier: 1
 skill_grant:
+  allow_custom: true
   count: 1
   options: noncombat

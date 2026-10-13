@@ -2,6 +2,7 @@ import type { CharacterSheetData } from '@cypher/ui'
 
 import { loadDerived, type DerivedBundle } from '@/lib/character-derived'
 import type { SavedCharacter } from '@/lib/characters'
+import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import type { Stat } from '@/lib/graphql/queries'
 import type { Locale } from '@/lib/i18n/auth'
 import { loc } from '@/lib/i18n/localized'
@@ -16,10 +17,16 @@ const STAT_ORDER: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
 export function sheetSkills(bundle: DerivedBundle, locale: Locale) {
   const t = terms[locale]
   return bundle.derived.skills.map((s) => ({
-    name: loc(
-      bundle.skills.find((k) => k.id === s.skillId)?.name ?? { en: s.skillId, ptBR: s.skillId },
-      locale,
-    ),
+    // A typed skill ("custom:Chess") is shown as the player wrote it.
+    name: isCustomSkill(s.skillId)
+      ? customSkillText(s.skillId)
+      : loc(
+          bundle.skills.find((k) => k.id === s.skillId)?.name ?? {
+            en: s.skillId,
+            ptBR: s.skillId,
+          },
+          locale,
+        ),
     level: t.skillLevels[s.level],
   }))
 }

@@ -33,6 +33,7 @@ import {
 } from '@/lib/play'
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
+import { isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
 import { withPick, withSkillPick } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
@@ -436,17 +437,26 @@ export async function choosePicksAction(
       (p) => p.kind === kind && p.tier === tier && (kind !== 'skill' || p.key === skillKey),
     )
     if (!owed) return { ok: false, reason: 'invalid' }
-    const ids = (optionIds as string[]).flatMap((o) => o.split(','))
+    // A bundled Focus option arrives as "a,b"; a typed skill may contain commas.
+    const ids =
+      kind === 'skill'
+        ? (optionIds as string[])
+        : (optionIds as string[]).flatMap((o) => o.split(','))
     if (kind === 'type' && ids.length !== owed.required - owed.chosen) {
       return { ok: false, reason: 'invalid' }
     }
     if (kind === 'skill') {
       // All of the grant's skills at once, each one a real skill.
       // Either of the ability's shapes ("two skills, or specialized in one").
-      if (ids.length !== owed.required && ids.length !== owed.alternateRequired) {
+      if (
+        !ids.every(isSkillIdShape) ||
+        (ids.length !== owed.required && ids.length !== owed.alternateRequired)
+      ) {
         return { ok: false, reason: 'invalid' }
       }
-      if (!ids.every((id) => bundle.skills.some((s) => s.id === id))) {
+      // Each a catalog skill, or the player's own typed one (the engine checks
+      // the ability allows that, and the graphql API the rest).
+      if (!ids.every((id) => isCustomSkill(id) || bundle.skills.some((s) => s.id === id))) {
         return { ok: false, reason: 'invalid' }
       }
     }

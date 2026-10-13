@@ -169,6 +169,8 @@ export interface WizardAbility {
     count: number
     mode: 'train' | 'train_or_specialize' | 'specialize'
     noncombat: boolean
+    /** The player may type their own skill/area (sent as `custom:<text>`). */
+    allowCustom: boolean
     options: string[]
     /** A second shape instead of `count` picks ("or specialized in one"). */
     alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
@@ -187,7 +189,7 @@ const ABILITIES_QUERY = `
       name { en ptBR }
       description { en ptBR }
       cost { pool amount }
-      skillGrant { count mode noncombat options alternate { count mode } }
+      skillGrant { count mode noncombat allowCustom options alternate { count mode } }
     }
   }
 `

@@ -286,6 +286,34 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
     )
   })
 
+  it('keeps a typed skill as a custom entry for abilities that allow one', async () => {
+    const result = await graphqlRequest<{
+      validateCharacterChoices: {
+        __typename: string
+        character?: { skills: Array<{ skillId: string; level: string }> }
+        issues?: Array<{ code: string }>
+      }
+    }>(SKILL_QUERY, {
+      input: {
+        ...withPhysicalSkills,
+        typeId: 'explorer',
+        startingEdgeChoice: undefined,
+        tier1TypeAbilityIds: ['block', 'endurance', 'decipher', 'knowledge-skills'],
+        abilitySkillChoices: [
+          { key: 'type:1:knowledge-skills', skillIds: ['custom:Archaeology', 'history'] },
+        ],
+      },
+    })
+
+    expect(result.errors).toBeUndefined()
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('ValidCharacterResult')
+    expect(payload.character?.skills).toContainEqual({
+      skillId: 'custom:Archaeology',
+      level: 'TRAINED',
+    })
+  })
+
   it('rejects a skill id that is not in the catalog as a top-level error', async () => {
     const result = await graphqlRequest(SKILL_QUERY, {
       input: {
@@ -330,13 +358,14 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
         skillGrant: {
           count: number
           noncombat: boolean
+          allowCustom: boolean
           alternate: { count: number; mode: string } | null
         } | null
       }
     }>(`{
       mastery: ability(id: "mastery-with-defense") { skillGrant { count mode options } }
       learned: ability(id: "learned-a-few-things") {
-        skillGrant { count noncombat alternate { count mode } }
+        skillGrant { count noncombat allowCustom alternate { count mode } }
       }
       physical: ability(id: "physical-skills") { skillGrant { count noncombat options } }
       lessons: ability(id: "life-lessons") { skillGrant { count noncombat options } }
@@ -350,6 +379,7 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
     expect(result.data.learned.skillGrant).toEqual({
       count: 2,
       noncombat: true,
+      allowCustom: true,
       alternate: { count: 1, mode: 'specialize' },
     })
     expect(result.data.mastery.skillGrant).toEqual({

@@ -571,3 +571,90 @@ describe('skill grants with an alternate shape', () => {
     )
   })
 })
+
+describe('custom (typed) skills', () => {
+  const grants = {
+    'celebrity-talent': { count: 2, options: 'noncombat' as const, allow_custom: true },
+    'life-lessons': { count: 1, options: 'noncombat' as const },
+    'greater-talent': {
+      count: 1,
+      options: 'noncombat' as const,
+      allow_custom: true,
+      mode: 'train_or_specialize' as const,
+      repeatable: true,
+    },
+  }
+  const at = (ability: string) =>
+    collectSkillGrantInstances(
+      { special_ability_id: null },
+      { tier_abilities: {} },
+      1,
+      { tier_1_type_ability_ids: [ability], ...noPicks },
+      grants,
+    )
+
+  it('trains a typed skill next to a catalog one', () => {
+    const skills = applyAbilitySkillGrants(
+      at('celebrity-talent'),
+      { 'type:1:celebrity-talent': ['custom:Chess', 'history'] },
+      {},
+      [],
+    )
+    expect(skills).toEqual({ 'custom:Chess': { level: 'trained' }, history: { level: 'trained' } })
+  })
+
+  it('refuses a typed skill when the ability does not allow one', () => {
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('life-lessons'),
+        { 'type:1:life-lessons': ['custom:Chess'] },
+        {},
+        [],
+      ),
+    ).toThrow(/not one of the skills/)
+  })
+
+  it('refuses an empty or over-long typed skill', () => {
+    const key = { 'type:1:celebrity-talent': ['custom:   ', 'history'] }
+    expect(() => applyAbilitySkillGrants(at('celebrity-talent'), key, {}, [])).toThrow(
+      /not one of the skills/,
+    )
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('celebrity-talent'),
+        { 'type:1:celebrity-talent': [`custom:${'x'.repeat(61)}`, 'history'] },
+        {},
+        [],
+      ),
+    ).toThrow(/not one of the skills/)
+  })
+
+  it('compares typed skills ignoring case and spacing', () => {
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('celebrity-talent'),
+        { 'type:1:celebrity-talent': ['custom:Chess', 'custom:  chess '] },
+        {},
+        [],
+      ),
+    ).toThrow(/more than once for the same ability/)
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('celebrity-talent'),
+        { 'type:1:celebrity-talent': ['custom:chess', 'history'] },
+        { 'custom:Chess': { level: 'trained' } },
+        [],
+      ),
+    ).toThrow(/already trained/)
+  })
+
+  it('specializes a typed skill the character already has, keeping its entry', () => {
+    const skills = applyAbilitySkillGrants(
+      at('greater-talent'),
+      { 'type:1:greater-talent': ['custom:chess'] },
+      { 'custom:Chess': { level: 'trained' } },
+      [],
+    )
+    expect(skills).toEqual({ 'custom:Chess': { level: 'specialized' } })
+  })
+})

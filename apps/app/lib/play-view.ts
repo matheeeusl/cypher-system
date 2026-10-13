@@ -19,11 +19,10 @@ export interface PendingChoice {
   required: number
   /** `id` is one option: a single ability id, or a bundled pair joined by ",". */
   options: Array<{ id: string; label: string; description: string; meta: string }>
-  /** Only for kind 'skill': the ability's other shape ("or specialize in one"). */
-  alternate: {
-    required: number
-    options: Array<{ id: string; label: string; description: string; meta: string }>
-  } | null
+  /** Only for kind 'skill': another pick count the ability accepts ("or specialize in one"). */
+  alternateRequired: number | null
+  /** Only for kind 'skill': the player may also type their own skill. */
+  allowCustom: boolean
 }
 
 /** Everything the play screen needs, already localized and JSON-serializable. */
@@ -173,7 +172,8 @@ function pendingChoices(
           abilityName: null,
           required: pick.required - pick.chosen,
           options,
-          alternate: null,
+          alternateRequired: null,
+          allowCustom: false,
         },
       ]
     }
@@ -198,7 +198,13 @@ function pendingChoices(
             meta: '',
           }))
           .sort((a, b) => a.label.localeCompare(b.label, locale))
-      const options = optionsFor(grant.mode)
+      // One list for both shapes: the alternate (specialize) lists the skills
+      // already trained, the main one those that can still be trained.
+      const seen = new Set<string>()
+      const options = [
+        ...optionsFor(grant.mode),
+        ...(grant.alternate ? optionsFor(grant.alternate.mode) : []),
+      ].filter((o) => !seen.has(o.id) && !!seen.add(o.id))
       return [
         {
           kind: 'skill' as const,
@@ -207,9 +213,8 @@ function pendingChoices(
           abilityName: nameOf(pick.abilityId),
           required: pick.required,
           options,
-          alternate: grant.alternate
-            ? { required: grant.alternate.count, options: optionsFor(grant.alternate.mode) }
-            : null,
+          alternateRequired: grant.alternate?.count ?? null,
+          allowCustom: grant.allowCustom,
         },
       ]
     }
@@ -223,7 +228,8 @@ function pendingChoices(
         tier: pick.tier,
         skillKey: null,
         abilityName: null,
-        alternate: null,
+        alternateRequired: null,
+        allowCustom: false,
         required: entry.count,
         options: entry.options.map((ids) => ({
           id: ids.join(','),
