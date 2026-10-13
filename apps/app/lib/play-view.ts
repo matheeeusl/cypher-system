@@ -35,7 +35,7 @@ export interface PlayView {
   effort: number
   pools: Array<{ key: PoolKey; name: string; edge: number; max: number }>
   spent: PoolPoints
-  skills: Array<{ name: string; level: string }>
+  skills: Array<{ name: string; level: string; description: string | null; custom: boolean }>
   abilities: Array<{ name: string; meta: string; description: string; trained: boolean }>
   skillOptions: Array<{ id: string; name: string; level: SkillLevel | null }>
   advancement: {

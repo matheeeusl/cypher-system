@@ -75,6 +75,8 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [tab, setTab] = useState<TabKey>('status')
   const [spent, setSpent] = useState<PoolPoints>(initial.spent)
   const [xp, setXp] = useState(initial.xp)
+  // The skill whose description is open in the Skills tab (by name).
+  const [openSkill, setOpenSkill] = useState<string | null>(null)
   const [inventory, setInventory] = useState<InventoryItem[]>(initial.inventory)
   const [notes, setNotes] = useState(initial.notes)
   const [notesStatus, setNotesStatus] = useState<NotesStatus>('idle')
@@ -572,16 +574,39 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
                 {copy.skills.skills}
               </h2>
               <ul className="flex flex-wrap gap-2">
-                {view.skills.map((skill) => (
-                  <li
-                    key={skill.name}
-                    className="border-border text-text flex items-center gap-1.5 rounded-sm border px-2.5 py-1 font-mono text-xs"
-                  >
-                    <span>{skill.name}</span>
-                    <span className="text-accent text-[10px] uppercase">{skill.level}</span>
-                  </li>
-                ))}
+                {view.skills.map((skill) => {
+                  const open = openSkill === skill.name
+                  return (
+                    <li key={skill.name}>
+                      <button
+                        type="button"
+                        aria-expanded={open}
+                        onClick={() => setOpenSkill(open ? null : skill.name)}
+                        className={`text-text flex cursor-pointer items-center gap-1.5 rounded-sm border px-2.5 py-1 font-mono text-xs transition-colors hover:opacity-80 ${
+                          open ? 'border-accent bg-accent-soft' : 'border-border'
+                        }`}
+                      >
+                        <span>{skill.name}</span>
+                        <span className="text-accent text-[10px] uppercase">{skill.level}</span>
+                      </button>
+                    </li>
+                  )
+                })}
               </ul>
+              {(() => {
+                const skill = view.skills.find((s) => s.name === openSkill)
+                if (!skill) return null
+                return (
+                  <div className="border-border bg-panel mt-3 rounded border px-3.5 py-3">
+                    <div className="font-display text-text mb-1 text-sm font-semibold">
+                      {skill.name}
+                    </div>
+                    <p className="text-text-muted text-[13px] leading-relaxed">
+                      {skill.custom ? copy.skills.createdByYou : skill.description}
+                    </p>
+                  </div>
+                )
+              })()}
             </section>
           )}
           <section>

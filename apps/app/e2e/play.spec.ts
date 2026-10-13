@@ -340,6 +340,26 @@ test('XP log: paginates ten entries to a page, newest first', async ({ page }) =
   await expect(page.getByText('Newest entry')).toBeVisible()
 })
 
+test('Skills tab: a skill opens its description; a typed one says it is yours', async ({
+  page,
+}) => {
+  await page.goto(playUrl)
+  await tab(page, 'Skills').click()
+
+  await page.getByRole('button', { name: /^Initiative/ }).click()
+  await expect(
+    page.getByText('Initiative actions, such as determining who goes first in combat.'),
+  ).toBeVisible()
+
+  // Clicking again closes it
+  await page.getByRole('button', { name: /^Initiative/ }).click()
+  await expect(page.getByText('Initiative actions, such as determining')).toHaveCount(0)
+
+  // The skill typed in the advancement test has no rules text of its own
+  await page.getByRole('button', { name: /^Falconry/ }).click()
+  await expect(page.getByText(/Created by you/)).toBeVisible()
+})
+
 test('cleanup', async ({ page }) => {
   await deleteCharacter(page, NAME)
 })

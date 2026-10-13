@@ -138,6 +138,7 @@ export async function fetchFoci(): Promise<WizardFocus[]> {
 export interface WizardSkill {
   id: string
   name: LocalizedString
+  description: LocalizedString
   /** A fighting skill — excluded from "noncombat" skill picks. */
   combat: boolean
 }
@@ -147,6 +148,7 @@ const SKILLS_QUERY = `
     skills {
       id
       name { en ptBR }
+      description { en ptBR }
       combat
     }
   }

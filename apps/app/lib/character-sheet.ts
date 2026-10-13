@@ -16,19 +16,25 @@ const STAT_ORDER: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
 /** Trained skills with their level label, for the sheet and for play mode. */
 export function sheetSkills(bundle: DerivedBundle, locale: Locale) {
   const t = terms[locale]
-  return bundle.derived.skills.map((s) => ({
-    // A typed skill ("custom:Chess") is shown as the player wrote it.
-    name: isCustomSkill(s.skillId)
-      ? customSkillText(s.skillId)
-      : loc(
-          bundle.skills.find((k) => k.id === s.skillId)?.name ?? {
-            en: s.skillId,
-            ptBR: s.skillId,
-          },
-          locale,
-        ),
-    level: t.skillLevels[s.level],
-  }))
+  return bundle.derived.skills.map((s) => {
+    // A typed skill ("custom:Chess") is shown as the player wrote it, and has
+    // no rules text of its own.
+    if (isCustomSkill(s.skillId)) {
+      return {
+        name: customSkillText(s.skillId),
+        level: t.skillLevels[s.level],
+        description: null,
+        custom: true,
+      }
+    }
+    const skill = bundle.skills.find((k) => k.id === s.skillId)
+    return {
+      name: loc(skill?.name ?? { en: s.skillId, ptBR: s.skillId }, locale),
+      level: t.skillLevels[s.level],
+      description: skill ? loc(skill.description, locale) : null,
+      custom: false,
+    }
+  })
 }
 
 /** Known abilities with their cost/source line, for the sheet and for play mode. */
@@ -100,7 +106,8 @@ export async function buildCharacterSheet(
         max,
       }
     }),
-    skills: sheetSkills(bundle, locale),
+    // The printed sheet lists a name and a level only.
+    skills: sheetSkills(bundle, locale).map(({ name, level }) => ({ name, level })),
     // The printed sheet has one text line per ability, so the label joins it.
     abilities: sheetAbilities(bundle, locale).map(({ name, meta, description, trained }) => ({
       name,
