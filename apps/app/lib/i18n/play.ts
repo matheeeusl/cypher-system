@@ -12,7 +12,7 @@ export type AdvancementKey = 'pools' | 'edge' | 'effort' | 'skills'
 export interface PlayCopy {
   title: string
   backToSheet: string
-  tabs: { status: string; skills: string; inventory: string; log: string }
+  tabs: { status: string; skills: string; inventory: string; log: string; notes: string }
   chips: { tier: (n: number) => string; effort: (n: number) => string }
   pools: {
     title: string
@@ -154,7 +154,8 @@ const en: PlayCopy = {
     status: 'Status',
     skills: 'Skills & Abilities',
     inventory: 'Inventory',
-    log: 'Log & Notes',
+    log: 'XP Log',
+    notes: 'Notes',
   },
   chips: { tier: (n) => `Tier ${n}`, effort: (n) => `Effort ${n}` },
   pools: {
@@ -333,7 +334,8 @@ const ptBr: PlayCopy = {
     status: 'Status',
     skills: 'Perícias e Habilidades',
     inventory: 'Inventário', // UNCONFIRMED
-    log: 'Registro e Notas',
+    log: 'Registro de XP',
+    notes: 'Notas',
   },
   chips: { tier: (n) => `Grau ${n}`, effort: (n) => `Esforço ${n}` },
   pools: {

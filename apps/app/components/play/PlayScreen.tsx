@@ -52,7 +52,7 @@ import { describeItem } from '@/lib/inventory-display'
 import type { InventoryItem, PoolKey, PoolPoints } from '@/lib/play'
 import type { PlayView } from '@/lib/play-view'
 
-type TabKey = 'status' | 'skills' | 'inventory' | 'log'
+type TabKey = 'status' | 'skills' | 'inventory' | 'log' | 'notes'
 type NotesStatus = 'idle' | 'saving' | 'saved'
 
 /** Entries per page in the XP log and the advancement history. */
@@ -531,6 +531,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             { value: 'skills', label: copy.tabs.skills },
             { value: 'inventory', label: copy.tabs.inventory },
             { value: 'log', label: copy.tabs.log },
+            { value: 'notes', label: copy.tabs.notes },
           ]}
         />
         {pending > 0 && (
@@ -891,6 +892,11 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               }}
             />
           </section>
+        </div>
+      )}
+
+      {tab === 'notes' && (
+        <div className="flex flex-col gap-7">
           <NotesField
             label={copy.log.notes}
             value={notes}

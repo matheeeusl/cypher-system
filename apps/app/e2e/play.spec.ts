@@ -18,7 +18,7 @@ const tab = (page: Page, name: string) => page.getByRole('tab', { name })
 const settled = (page: Page) => expect(page.getByText('Syncing…')).toHaveCount(0)
 
 async function addXp(page: Page, amount: number, reason: string) {
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'XP Log').click()
   await page.getByPlaceholder('Description (e.g. GM intrusion, milestone)').fill(reason)
   await page.getByLabel('XP', { exact: true }).fill(String(amount))
   await page.getByRole('button', { name: 'Gain', exact: true }).click()
@@ -117,7 +117,7 @@ test('XP: spending more than you have is refused; advancing locks its XP entry',
   page,
 }) => {
   await page.goto(playUrl)
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'XP Log').click()
 
   // Can't spend XP you don't have
   await page.getByPlaceholder('Description (e.g. GM intrusion, milestone)').fill('Too much')
@@ -139,7 +139,7 @@ test('XP: spending more than you have is refused; advancing locks its XP entry',
   await expect(page.getByText('Effort 2', { exact: true }).first()).toBeVisible()
 
   // Its XP entry is locked: no remove button on the spend row
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'XP Log').click()
   const spendRow = page
     .getByRole('listitem')
     .filter({ hasText: 'Extra Effort' })
@@ -303,11 +303,11 @@ test('inventory: items, quantities, the cypher catalog and the cypher limit warn
 
 test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ page }) => {
   await page.goto(playUrl)
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'Notes').click()
   await page.getByLabel('Notes').fill('Ask the GM about the Sunken Archive.')
   await expect(page.getByText('Saved', { exact: true })).toBeVisible()
   await page.reload()
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'Notes').click()
   await expect(page.getByLabel('Notes')).toHaveValue('Ask the GM about the Sunken Archive.')
 
   // Spend a point, then check the printable sheet reflects it
@@ -329,7 +329,7 @@ test('notes autosave; the sheet shows live pools and XP; pt-br works', async ({ 
 
 test('XP log: paginates five entries to a page, newest first', async ({ page }) => {
   await page.goto(playUrl)
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'XP Log').click()
 
   // Six gain/spend pairs of 1 XP: twelve more entries, net zero XP
   const reason = page.getByPlaceholder(/^Description/)
@@ -383,7 +383,7 @@ test('Skills tab: a skill opens its description; a typed one says it is yours', 
 
 test('Log: the newest advancement can be undone and its XP comes back', async ({ page }) => {
   await page.goto(playUrl)
-  await tab(page, 'Log & Notes').click()
+  await tab(page, 'XP Log').click()
 
   const history = page.locator('section').filter({ hasText: 'Advancement history' })
   const undo = history.getByRole('button', { name: 'Undo' })
