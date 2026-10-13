@@ -247,7 +247,7 @@ const en: WizardCopy = {
     chooseSkills: (count) => `Choose exactly ${count} trained skill${count === 1 ? '' : 's'}.`,
     chooseAbilities: (count) => `Choose exactly ${count} tier-1 abilities.`,
     focusChoices: 'Make a selection for every Focus choice above.',
-    abilitySkills: 'Choose the skills each ability above trains you in.',
+    abilitySkills: 'Choose the skills each ability above improves.',
     enterName: 'Enter a character name to continue.',
   },
   issue: (issue) => {
@@ -297,7 +297,11 @@ const en: WizardCopy = {
       case 'ABILITY_SKILL_CHOICE_INVALID':
         return 'One of the chosen skills isn’t among the skills that ability can train.'
       case 'ABILITY_SKILL_CHOICE_DUPLICATE':
-        return 'A skill chosen for an ability is one the character is already trained in.'
+        return 'A skill chosen for an ability is one the character already has, or was already chosen for that ability.'
+      case 'ABILITY_SKILL_CHOICE_MAXED':
+        return 'A skill chosen for an ability is one the character is already Specialized in.'
+      case 'ABILITY_SKILL_CHOICE_NOT_TRAINED':
+        return 'That ability only applies to a skill the character is already trained in.'
       case 'ABILITY_SKILL_CHOICE_UNKNOWN':
         return 'Skills were chosen for an ability the character doesn’t have.'
       default:
@@ -450,7 +454,7 @@ const ptBr: WizardCopy = {
       `Escolha exatamente ${count} ${count === 1 ? 'perícia treinada' : 'perícias treinadas'}.`,
     chooseAbilities: (count) => `Escolha exatamente ${count} habilidades de Grau 1.`,
     focusChoices: 'Faça uma seleção para cada escolha do Foco acima.',
-    abilitySkills: 'Escolha as perícias em que cada habilidade acima treina você.',
+    abilitySkills: 'Escolha as perícias que cada habilidade acima aprimora.',
     enterName: 'Digite o nome do personagem para continuar.',
   },
   issue: (issue) => {
@@ -500,7 +504,11 @@ const ptBr: WizardCopy = {
       case 'ABILITY_SKILL_CHOICE_INVALID':
         return 'Uma das perícias escolhidas não está entre as que essa habilidade pode treinar.'
       case 'ABILITY_SKILL_CHOICE_DUPLICATE':
-        return 'Uma perícia escolhida para uma habilidade é uma em que o personagem já é treinado.'
+        return 'Uma perícia escolhida para uma habilidade é uma que o personagem já tem, ou que já foi escolhida para essa habilidade.'
+      case 'ABILITY_SKILL_CHOICE_MAXED':
+        return 'Uma perícia escolhida para uma habilidade é uma em que o personagem já é Especializado.'
+      case 'ABILITY_SKILL_CHOICE_NOT_TRAINED':
+        return 'Essa habilidade só vale para uma perícia em que o personagem já é treinado.'
       case 'ABILITY_SKILL_CHOICE_UNKNOWN':
         return 'Foram escolhidas perícias para uma habilidade que o personagem não possui.'
       default:

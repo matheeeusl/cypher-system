@@ -47,3 +47,9 @@ sources:
   - type: focus
     id: throws-with-deadly-accuracy
     tier: 3
+skill_grant:
+  count: 1
+  options:
+    - might-defense
+    - speed-defense
+    - intellect-defense

@@ -176,7 +176,7 @@ describe('applyAbilitySkillGrants', () => {
         {},
         [],
       ),
-    ).toThrow(/already trained/)
+    ).toThrow(/more than once for the same ability/)
   })
 
   it('reports an unfinished tier-2+ grant as pending instead of failing', () => {
@@ -323,5 +323,188 @@ describe('deriveCharacter / validateCharacterChoices with skill grants', () => {
     const result = validateCharacterChoices(base, { type, descriptor, focus })
     if (result.valid) throw new Error('expected invalid')
     expect(result.issues.map((i) => i.code)).toEqual(['ABILITY_SKILL_CHOICE_UNKNOWN'])
+  })
+})
+
+describe('skill grant modes', () => {
+  const grantsByMode = {
+    'skill-with-defense': {
+      count: 1,
+      options: ['might-defense', 'speed-defense'],
+    },
+    'greater-skill-with-defense': {
+      count: 1,
+      options: ['might-defense', 'speed-defense'],
+      mode: 'train_or_specialize' as const,
+      repeatable: true,
+    },
+    'mastery-with-defense': {
+      count: 1,
+      options: ['might-defense', 'speed-defense'],
+      mode: 'specialize' as const,
+      repeatable: true,
+    },
+  }
+  const at = (ability: string) =>
+    collectSkillGrantInstances(
+      { special_ability_id: null },
+      { tier_abilities: {} },
+      1,
+      { tier_1_type_ability_ids: [ability], ...noPicks },
+      grantsByMode,
+    )
+  const key = (ability: string) => skillGrantKey('type', 1, ability)
+
+  it("'train_or_specialize' trains a new skill and specializes a trained one", () => {
+    const inst = at('greater-skill-with-defense')
+    const k = key('greater-skill-with-defense')
+    expect(applyAbilitySkillGrants(inst, { [k]: ['might-defense'] }, {}, [])).toEqual({
+      'might-defense': { level: 'trained' },
+    })
+    expect(
+      applyAbilitySkillGrants(
+        inst,
+        { [k]: ['might-defense'] },
+        { 'might-defense': { level: 'trained' } },
+        [],
+      ),
+    ).toEqual({ 'might-defense': { level: 'specialized' } })
+  })
+
+  it("'train_or_specialize' refuses an already specialized skill", () => {
+    const k = key('greater-skill-with-defense')
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('greater-skill-with-defense'),
+        { [k]: ['might-defense'] },
+        { 'might-defense': { level: 'specialized' } },
+        [],
+      ),
+    ).toThrow(/already specialized/)
+  })
+
+  it("'specialize' needs a trained skill", () => {
+    const k = key('mastery-with-defense')
+    expect(() =>
+      applyAbilitySkillGrants(at('mastery-with-defense'), { [k]: ['might-defense'] }, {}, []),
+    ).toThrow(/already trained in/)
+    expect(
+      applyAbilitySkillGrants(
+        at('mastery-with-defense'),
+        { [k]: ['might-defense'] },
+        { 'might-defense': { level: 'trained' } },
+        [],
+      ),
+    ).toEqual({ 'might-defense': { level: 'specialized' } })
+  })
+
+  it("'train' still refuses a skill the character is trained in", () => {
+    const k = key('skill-with-defense')
+    expect(() =>
+      applyAbilitySkillGrants(
+        at('skill-with-defense'),
+        { [k]: ['might-defense'] },
+        { 'might-defense': { level: 'trained' } },
+        [],
+      ),
+    ).toThrow(/already trained/)
+  })
+
+  it('refuses the same skill twice within one ability, even when specializing', () => {
+    const inst = collectSkillGrantInstances(
+      { special_ability_id: null },
+      { tier_abilities: {} },
+      2,
+      {
+        tier_1_type_ability_ids: ['greater-skill-with-defense'],
+        type_ability_picks: { '2': ['greater-skill-with-defense'] },
+        focus_choice_selections: {},
+      },
+      grantsByMode,
+    )
+    expect(() =>
+      applyAbilitySkillGrants(
+        inst,
+        {
+          'type:1:greater-skill-with-defense': ['might-defense'],
+          'type:2:greater-skill-with-defense': ['might-defense'],
+        },
+        {},
+        [],
+      ),
+    ).toThrow(/more than once for the same ability/)
+  })
+})
+
+describe('skill grants and advancement purchases', () => {
+  const type = {
+    id: 'warrior',
+    starting_pools: { might: 10, speed: 10, intellect: 8 },
+    starting_edge: { stat_choices: ['might'], amount: 1 },
+    special_ability_id: null,
+    tier_choose_counts: { '1': 4, '2': 2 },
+    tier_abilities: {
+      '1': ['bash', 'swipe', 'overwatch', 'quick-throw'],
+      '2': ['mastery-with-defense'],
+    },
+  } as unknown as Type
+  const descriptor = {
+    id: 'strong',
+    pool_bonus: [],
+    skill_training: [],
+  } as unknown as Descriptor
+  const focus = { id: 'f', tier_abilities: {} } as unknown as Focus
+  const content = {
+    type,
+    descriptor,
+    focus,
+    skill_grants: {
+      'mastery-with-defense': {
+        count: 1,
+        options: ['might-defense'],
+        mode: 'specialize' as const,
+        repeatable: true,
+      },
+    },
+  }
+  const tier2 = (skill: string): CharacterChoices['advancement_purchases'] => [
+    {
+      tier: 2,
+      option: 'increasing-capabilities',
+      stat_pool_allocation: { might: 4, speed: 0, intellect: 0 },
+    },
+    { tier: 2, option: 'moving-toward-perfection', edge_stat: 'might' },
+    { tier: 2, option: 'extra-effort' },
+    { tier: 2, option: 'skills', target: { kind: 'skill', skill_id: skill } },
+  ]
+  const base: CharacterChoices = {
+    type_id: 'warrior',
+    descriptor_id: 'strong',
+    focus_id: 'f',
+    pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
+    tier_1_type_ability_ids: ['bash', 'swipe', 'overwatch', 'quick-throw'],
+    focus_choice_selections: {},
+    descriptor_skill_choices: [],
+    advancement_purchases: tier2('might-defense'),
+    type_ability_picks: { '2': ['mastery-with-defense'] },
+    ability_skill_choices: { 'type:2:mastery-with-defense': ['might-defense'] },
+  }
+
+  it('lets a tier-2 pick specialize a skill trained by a purchase tagged tier 2', () => {
+    const result = validateCharacterChoices(base, content)
+    if (!result.valid) throw new Error(result.errors.join('; '))
+    expect(result.character.skills['might-defense']).toEqual({ level: 'specialized' })
+    expect(deriveCharacter(base, content).skills['might-defense']).toEqual({
+      level: 'specialized',
+    })
+  })
+
+  it('refuses specializing a skill nothing has trained', () => {
+    const result = validateCharacterChoices(
+      { ...base, advancement_purchases: tier2('perception') },
+      content,
+    )
+    if (result.valid) throw new Error('expected invalid')
+    expect(result.issues.map((i) => i.code)).toContain('ABILITY_SKILL_CHOICE_NOT_TRAINED')
   })
 })

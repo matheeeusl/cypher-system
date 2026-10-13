@@ -1,0 +1,8 @@
+id: medium-ranged-attacks
+name:
+  en: Medium Ranged Attacks
+  pt-BR: Ataques à Distância Médios
+description:
+  en: Attacks using medium ranged weapons.
+  pt-BR: Tradução em breve.
+combat: true

@@ -38,7 +38,7 @@ test('a skill-granting ability asks for its skills and trains the character', as
     page.getByText(/Physical Skills — choose 2 skills \(0 \/ 2 selected\)/),
   ).toBeVisible()
   await page.getByRole('button', { name: 'Next →' }).click()
-  await expect(page.getByText('Choose the skills each ability above trains you in.')).toBeVisible()
+  await expect(page.getByText('Choose the skills each ability above improves.')).toBeVisible()
 
   await page.getByRole('button', { name: 'Climbing', exact: true }).click()
   await page.getByRole('button', { name: 'Swimming', exact: true }).click()

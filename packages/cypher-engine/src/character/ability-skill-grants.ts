@@ -29,6 +29,12 @@ const ERRORS = {
     `"${skillId}" is not one of the skills ability "${abilityId}" can train`,
   DUPLICATE: (skillId: string) =>
     `"${skillId}" is chosen for an ability but the character is already trained in it`,
+  CHOSEN_AGAIN: (skillId: string) =>
+    `"${skillId}" is chosen more than once for the same ability — a different one is needed each time`,
+  MAXED: (skillId: string) =>
+    `"${skillId}" can't be chosen: the character is already specialized in it`,
+  NOT_TRAINED: (skillId: string) =>
+    `"${skillId}" can't be chosen: this ability only applies to skills the character is already trained in`,
   UNKNOWN: (key: string) =>
     `ability_skill_choices has an entry "${key}" that matches no skill-granting ability the character has`,
 }
@@ -97,34 +103,43 @@ export function collectSkillGrantInstances(
   )
 }
 
+type SkillMap = Record<string, { level: SkillLevel }>
+
 /**
- * Applies the player's skill picks for every skill-granting ability to the
- * skill map, in tier order. Per the rulebook each pick must be a skill the
- * character is not already trained in (so two picks of the same ability, or
- * an ability and the Descriptor, can't overlap), and must come from the
- * ability's `options` unless that is 'noncombat', in which case it must not be
- * one of `combatSkillIds`. Neither is checked against the skill catalog —
- * the engine has none; callers with the catalog should.
+ * Applies the player's skill picks for skill-granting abilities to a skill
+ * map, one instance at a time and in tier order, so callers can interleave
+ * them with the 'skills' advancement purchases. A purchase tagged tier N
+ * leads *to* N, so it comes before the picks made on reaching N: call
+ * `through(N - 1, …)` before applying a purchase tagged N, and `through(Infinity, …)`
+ * once the purchases are done.
  *
- * Missing picks are never an error here: they are reported through
- * `pending`, whatever the tier. Skill choices were added after characters
- * already existed, so one saved with, say, Physical Skills at tier 1 must
- * still derive (and be asked again) rather than turn invalid. Creation flows
- * that want the tier-1 picks complete check `pending_picks` themselves.
+ * What a pick does depends on the grant's `mode` (see `Ability.skill_grant`):
+ * - 'train' (default): the skill must not be trained yet -> trained.
+ * - 'train_or_specialize': not trained -> trained, trained -> specialized;
+ *   an already specialized skill is refused.
+ * - 'specialize': the skill must already be trained -> specialized.
+ * Every pick must come from the ability's `options` unless that is
+ * 'noncombat', in which case it must not be one of `combatSkillIds`. Neither
+ * list is checked against the skill catalog — the engine has none; callers
+ * with the catalog should. Within one ability (several times taken) and
+ * within one pick, a skill can't be chosen twice: the text says "a different
+ * type each time".
  *
- * Applied before all the 'skills' advancement purchases, whatever their
- * tier. Strictly, a purchase tagged tier N comes before the picks made on
- * reaching N, so this accepts one sequence the rulebook wouldn't (a
- * purchase trains X, then a later pick of X) — the resulting skill map is
- * the same either way, so the leniency isn't worth interleaving for.
+ * Missing picks are never an error: they are reported through `pending`,
+ * whatever the tier. Skill choices were added after characters already
+ * existed, so one saved with, say, Physical Skills at tier 1 must still
+ * derive (and be asked again) rather than turn invalid. Creation flows that
+ * want the tier-1 picks complete check `pending_picks` themselves.
+ *
+ * Throws on a bad pick; the failing instance is consumed first, so a caller
+ * that collects errors can keep going with the next one.
  */
-export function applyAbilitySkillGrants(
+export function createSkillGrantApplier(
   instances: SkillGrantInstance[],
   choices: Record<string, string[]>,
-  skills: Record<string, { level: SkillLevel }>,
   pending: PendingPick[],
   combatSkillIds: ReadonlySet<string> = new Set(),
-): Record<string, { level: SkillLevel }> {
+) {
   const known = new Set(instances.map((instance) => instance.key))
   for (const key of Object.keys(choices)) {
     if (!known.has(key)) {
@@ -132,9 +147,14 @@ export function applyAbilitySkillGrants(
     }
   }
 
-  let result = skills
-  for (const { key, ability_id, tier, grant } of instances) {
+  const ordered = [...instances]
+  const chosenByAbility = new Map<string, Set<string>>()
+  let next = 0
+
+  function applyOne(instance: SkillGrantInstance, skills: SkillMap): SkillMap {
+    const { key, ability_id, tier, grant } = instance
     const picked = choices[key] ?? []
+    const mode = grant.mode ?? 'train'
 
     if (picked.length > grant.count) {
       throw new CharacterRuleError(
@@ -154,7 +174,12 @@ export function applyAbilitySkillGrants(
       })
     }
 
+    const usedByAbility = chosenByAbility.get(ability_id) ?? new Set<string>()
+    chosenByAbility.set(ability_id, usedByAbility)
+
+    let result = skills
     for (const skillId of picked) {
+      const params = { abilityId: ability_id, skillId }
       const allowed =
         grant.options === 'noncombat'
           ? !combatSkillIds.has(skillId)
@@ -163,19 +188,77 @@ export function applyAbilitySkillGrants(
         throw new CharacterRuleError(
           'ABILITY_SKILL_CHOICE_INVALID',
           ERRORS.INVALID(ability_id, skillId),
-          { abilityId: ability_id, skillId },
+          params,
         )
       }
-      const level = result[skillId]?.level
-      if (level === 'trained' || level === 'specialized') {
-        throw new CharacterRuleError('ABILITY_SKILL_CHOICE_DUPLICATE', ERRORS.DUPLICATE(skillId), {
-          abilityId: ability_id,
-          skillId,
-        })
+      if (usedByAbility.has(skillId)) {
+        throw new CharacterRuleError(
+          'ABILITY_SKILL_CHOICE_DUPLICATE',
+          ERRORS.CHOSEN_AGAIN(skillId),
+          params,
+        )
       }
-      result = { ...result, [skillId]: { level: 'trained' } }
+      usedByAbility.add(skillId)
+
+      const level = result[skillId]?.level
+      if (mode === 'train') {
+        if (level === 'trained' || level === 'specialized') {
+          throw new CharacterRuleError(
+            'ABILITY_SKILL_CHOICE_DUPLICATE',
+            ERRORS.DUPLICATE(skillId),
+            params,
+          )
+        }
+        result = { ...result, [skillId]: { level: 'trained' } }
+      } else if (mode === 'train_or_specialize') {
+        if (level === 'specialized') {
+          throw new CharacterRuleError('ABILITY_SKILL_CHOICE_MAXED', ERRORS.MAXED(skillId), params)
+        }
+        result = {
+          ...result,
+          [skillId]: { level: level === 'trained' ? 'specialized' : 'trained' },
+        }
+      } else {
+        if (level === 'specialized') {
+          throw new CharacterRuleError('ABILITY_SKILL_CHOICE_MAXED', ERRORS.MAXED(skillId), params)
+        }
+        if (level !== 'trained') {
+          throw new CharacterRuleError(
+            'ABILITY_SKILL_CHOICE_NOT_TRAINED',
+            ERRORS.NOT_TRAINED(skillId),
+            params,
+          )
+        }
+        result = { ...result, [skillId]: { level: 'specialized' } }
+      }
     }
+    return result
   }
 
-  return result
+  return {
+    /** Applies every not-yet-applied instance gained at `tier` or below. */
+    through(tier: number, skills: SkillMap): SkillMap {
+      let result = skills
+      while (next < ordered.length && ordered[next]!.tier <= tier) {
+        const instance = ordered[next]!
+        next += 1
+        result = applyOne(instance, result)
+      }
+      return result
+    },
+  }
+}
+
+/** Applies every skill pick at once — for callers with no purchases to interleave. */
+export function applyAbilitySkillGrants(
+  instances: SkillGrantInstance[],
+  choices: Record<string, string[]>,
+  skills: SkillMap,
+  pending: PendingPick[],
+  combatSkillIds: ReadonlySet<string> = new Set(),
+): SkillMap {
+  return createSkillGrantApplier(instances, choices, pending, combatSkillIds).through(
+    Infinity,
+    skills,
+  )
 }

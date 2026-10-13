@@ -186,6 +186,10 @@ type AbilitySourceRef {
 # `options` is then empty); otherwise the player picks `count` of `options`.
 type SkillGrant {
   count: Int!
+  # What a pick does: "train" (a skill not yet trained), "train_or_specialize"
+  # (trained, or specialized if already trained) or "specialize" (a skill the
+  # character is already trained in).
+  mode: String!
   noncombat: Boolean!
   options: [ID!]!
 }

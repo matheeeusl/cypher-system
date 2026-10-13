@@ -21,3 +21,4 @@ skill_grant:
     - piloting
     - repairing-and-crafting-machines
     - vehicle-driving
+  repeatable: true

@@ -24,3 +24,4 @@ skill_grant:
     - lockpicking
     - sensing-danger
     - tinkering-with-devices
+  repeatable: true

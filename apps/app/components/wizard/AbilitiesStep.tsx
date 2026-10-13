@@ -129,10 +129,17 @@ export function AbilitiesStep({
 
       {skillGrantSlots.map((slot) => {
         const picked = abilitySkillChoices[slot.key] ?? []
-        const takenElsewhere = skillGrantSlots
-          .filter((other) => other.key !== slot.key)
+        // What can't be picked depends on the grant's mode: a plain "train"
+        // refuses anything already trained or picked by another ability; the
+        // upgrade modes only refuse a skill already chosen for this same
+        // ability (a different one is needed each time), and "specialize"
+        // also needs the skill to be trained already.
+        const otherSlots = skillGrantSlots.filter((other) => other.key !== slot.key)
+        const takenElsewhere = otherSlots
+          .filter((other) => slot.mode === 'train' || other.abilityId === slot.abilityId)
           .flatMap((other) => abilitySkillChoices[other.key] ?? [])
-        const unavailable = new Set([...trainedSkillIds, ...takenElsewhere])
+        const unavailable = new Set(takenElsewhere)
+        if (slot.mode === 'train') trainedSkillIds.forEach((id) => unavailable.add(id))
         const candidates = (skills ?? [])
           .filter((skill) => (slot.noncombat ? !skill.combat : slot.options.includes(skill.id)))
           .sort((a, b) => t(a.name).localeCompare(t(b.name)))
@@ -148,7 +155,10 @@ export function AbilitiesStep({
             <div className="flex flex-wrap gap-2">
               {candidates.map((skill) => {
                 const isSelected = picked.includes(skill.id)
-                const isUnavailable = !isSelected && unavailable.has(skill.id)
+                const isUnavailable =
+                  !isSelected &&
+                  (unavailable.has(skill.id) ||
+                    (slot.mode === 'specialize' && !trainedSkillIds.includes(skill.id)))
                 return (
                   <button
                     key={skill.id}

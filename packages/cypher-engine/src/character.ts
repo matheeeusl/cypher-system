@@ -1,8 +1,8 @@
 import type { Descriptor, Focus, Type } from '@cypher/content'
 
 import {
-  applyAbilitySkillGrants,
   collectSkillGrantInstances,
+  createSkillGrantApplier,
   type SkillGrantsByAbility,
 } from './character/ability-skill-grants.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
@@ -72,7 +72,11 @@ export function deriveCharacter(
 
   const pending: PendingPick[] = []
   const skillGrants = content.skill_grants ?? {}
-  const repeatable = new Set(Object.keys(skillGrants))
+  const repeatable = new Set(
+    Object.entries(skillGrants)
+      .filter(([, grant]) => grant.repeatable)
+      .map(([id]) => id),
+  )
   const tier1TypeAbilities = resolveTypeAbilities(type, choices.tier_1_type_ability_ids)
   let knownAbilities: KnownAbility[] = [
     ...tier1TypeAbilities,
@@ -88,13 +92,14 @@ export function deriveCharacter(
   ]
 
   let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)
-  skills = applyAbilitySkillGrants(
+  const grantApplier = createSkillGrantApplier(
     collectSkillGrantInstances(type, focus, tier, choices, skillGrants),
     choices.ability_skill_choices ?? {},
-    skills,
     pending,
     new Set(content.combat_skill_ids ?? []),
   )
+  // Picks made on reaching tier N come after the purchases tagged N.
+  skills = grantApplier.through(1, skills)
 
   // 'skills' purchases are order-sensitive (training the same skill twice
   // moves it further along practiced -> trained -> specialized), so they're
@@ -104,6 +109,7 @@ export function deriveCharacter(
     .sort((a, b) => a.tier - b.tier)
 
   for (const purchase of skillsPurchases) {
+    skills = grantApplier.through(purchase.tier - 1, skills)
     if (purchase.target.kind === 'skill') {
       const skillId = purchase.target.skill_id
       const level: SkillLevel = applySkillAdvancementPurchase(skills[skillId]?.level)
@@ -112,6 +118,8 @@ export function deriveCharacter(
       knownAbilities = applyAbilityTrainingPurchase(knownAbilities, purchase)
     }
   }
+
+  skills = grantApplier.through(Infinity, skills)
 
   return {
     tier,

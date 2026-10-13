@@ -31,3 +31,4 @@ skill_grant:
     - public-speaking
     - seeing-through-tricks
     - intimidation
+  repeatable: true

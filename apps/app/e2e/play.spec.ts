@@ -49,15 +49,21 @@ async function completePicks(page: Page, heading: RegExp, count: number) {
 }
 
 /**
- * Answers every owed "choose the skills it trains" panel (a Type ability that
- * grants skills, like Physical Skills, owes its picks once it's learned).
- * Ticks the first two options of each — every such Type ability grants two.
+ * Answers every owed "choose the skills it improves" panel (a Type ability that
+ * grants skills, like Physical Skills or Skill with Attacks, owes its picks
+ * once it's learned). Ticks the first options of each, as many as it asks for.
  */
 async function completeSkillPicks(page: Page) {
-  const heading = page.getByRole('heading', { name: /choose the skills it trains/ })
+  const heading = page.getByRole('heading', { name: /choose the skills it improves/ })
   for (let n = await heading.count(); n > 0; n = await heading.count()) {
     const panel = page.locator('section').filter({ has: heading.first() })
-    for (let i = 0; i < 2; i++) await panel.getByRole('checkbox').nth(i).check()
+    const hint =
+      (await panel
+        .getByText(/^Choose \d+/)
+        .first()
+        .textContent()) ?? ''
+    const required = Number(/Choose (\d+)/.exec(hint)?.[1] ?? 1)
+    for (let i = 0; i < required; i++) await panel.getByRole('checkbox').nth(i).check()
     await panel.getByRole('button', { name: 'Confirm choices' }).click()
     await expect(heading).toHaveCount(n - 1)
   }

@@ -62,3 +62,16 @@ sources:
   - type: focus
     id: works-the-system
     tier: 3
+skill_grant:
+  count: 1
+  options:
+    - light-bashing-attacks
+    - light-bladed-attacks
+    - light-ranged-attacks
+    - medium-bashing-attacks
+    - medium-bladed-attacks
+    - medium-ranged-attacks
+    - heavy-bashing-attacks
+    - heavy-bladed-attacks
+    - heavy-ranged-attacks
+  repeatable: true

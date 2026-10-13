@@ -33,6 +33,8 @@ export type RuleErrorCode =
   | 'ABILITY_SKILL_CHOICE_INVALID'
   | 'ABILITY_SKILL_CHOICE_DUPLICATE'
   | 'ABILITY_SKILL_CHOICE_UNKNOWN'
+  | 'ABILITY_SKILL_CHOICE_MAXED'
+  | 'ABILITY_SKILL_CHOICE_NOT_TRAINED'
   | 'UNKNOWN'
 
 export type RuleErrorParams = Record<string, string | number>

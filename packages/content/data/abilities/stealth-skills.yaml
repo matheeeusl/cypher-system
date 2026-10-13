@@ -30,3 +30,4 @@ skill_grant:
     - seeing-through-tricks
     - sleight-of-hand
     - stealth
+  repeatable: true

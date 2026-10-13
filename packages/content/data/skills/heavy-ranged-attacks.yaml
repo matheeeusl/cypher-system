@@ -1,0 +1,8 @@
+id: heavy-ranged-attacks
+name:
+  en: Heavy Ranged Attacks
+  pt-BR: Ataques à Distância Pesados
+description:
+  en: Attacks using heavy ranged weapons.
+  pt-BR: Tradução em breve.
+combat: true

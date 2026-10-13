@@ -26,3 +26,4 @@ skill_grant:
     - jumping
     - running
     - swimming
+  repeatable: true

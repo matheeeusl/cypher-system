@@ -38,3 +38,4 @@ sources:
 skill_grant:
   count: 2
   options: noncombat
+  repeatable: true

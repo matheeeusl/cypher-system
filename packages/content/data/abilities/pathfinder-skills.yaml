@@ -20,3 +20,4 @@ skill_grant:
     - initiative
     - sensing-danger
     - tracking
+  repeatable: true

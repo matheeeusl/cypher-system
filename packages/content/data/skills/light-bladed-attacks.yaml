@@ -1,0 +1,8 @@
+id: light-bladed-attacks
+name:
+  en: Light Bladed Attacks
+  pt-BR: Ataques Cortantes Leves
+description:
+  en: Attacks using light bladed weapons.
+  pt-BR: Tradução em breve.
+combat: true

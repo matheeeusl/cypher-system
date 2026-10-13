@@ -106,7 +106,7 @@ export async function buildPlayView(
         ? [{ id: ability.id, name: loc(ability.name, locale), trained: known.trained }]
         : []
     }),
-    pending: pendingChoices(bundle, locale),
+    pending: pendingChoices(bundle, character, locale),
     xp: play.xp.map(({ id, kind, amount, reason, locked }) => ({
       id,
       kind,
@@ -120,7 +120,11 @@ export async function buildPlayView(
   }
 }
 
-function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] {
+function pendingChoices(
+  bundle: DerivedBundle,
+  character: SavedCharacter,
+  locale: Locale,
+): PendingChoice[] {
   const { derived, type, focus, abilities } = bundle
   const copy = sheetCopy[locale]
   const abilityOf = (id: string) => abilities.find((a) => a.id === id)
@@ -129,12 +133,18 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
     return a ? loc(a.name, locale) : id
   }
   const known = new Set(derived.knownAbilities.map((k) => k.abilityId))
-  // A skill-granting ability trains skills "in which you are not already trained".
-  const trainedIds = new Set(
-    derived.skills
-      .filter((s) => s.level === 'TRAINED' || s.level === 'SPECIALIZED')
-      .map((s) => s.skillId),
-  )
+  const levelOf = new Map(derived.skills.map((skill) => [skill.skillId, skill.level]))
+  // Skills already picked for other instances of an ability: the text asks for
+  // "a different one each time". Keys end in `:<abilityId>`.
+  const chosenFor = (abilityId: string) =>
+    new Set(
+      [
+        ...Object.entries(character.choices.abilitySkillChoices),
+        ...Object.entries(character.tierPicks.skills ?? {}),
+      ]
+        .filter(([key]) => key.endsWith(`:${abilityId}`))
+        .flatMap(([, skillIds]) => skillIds),
+    )
 
   return derived.pendingPicks.flatMap((pick): PendingChoice[] => {
     if (pick.kind === 'type') {
@@ -166,7 +176,14 @@ function pendingChoices(bundle: DerivedBundle, locale: Locale): PendingChoice[] 
       if (!pick.key || !pick.abilityId || !grant) return []
       const options = bundle.skills
         .filter((skill) => (grant.noncombat ? !skill.combat : grant.options.includes(skill.id)))
-        .filter((skill) => !trainedIds.has(skill.id))
+        .filter((skill) => {
+          const level = levelOf.get(skill.id)
+          if (chosenFor(pick.abilityId!).has(skill.id)) return false
+          // What the pick may be applied to depends on the grant's mode.
+          if (grant.mode === 'specialize') return level === 'TRAINED'
+          if (grant.mode === 'train_or_specialize') return level !== 'SPECIALIZED'
+          return level !== 'TRAINED' && level !== 'SPECIALIZED'
+        })
         .map((skill) => ({
           id: skill.id,
           label: loc(skill.name, locale),

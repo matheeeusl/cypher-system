@@ -24,3 +24,16 @@ sources:
   - type: focus
     id: packs-chromed-heat
     tier: 5
+skill_grant:
+  count: 1
+  options:
+    - light-bashing-attacks
+    - light-bladed-attacks
+    - light-ranged-attacks
+    - medium-bashing-attacks
+    - medium-bladed-attacks
+    - medium-ranged-attacks
+    - heavy-bashing-attacks
+    - heavy-bladed-attacks
+    - heavy-ranged-attacks
+  mode: specialize

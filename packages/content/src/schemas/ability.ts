@@ -68,10 +68,21 @@ export const AbilitySchema = z.object({
   // from. `options` is either an explicit list of skill ids, or 'noncombat'
   // for the open picks ("any two noncombat skills", "an area of
   // knowledge"): every catalog skill not flagged `combat`.
+  //
+  // `mode` is what happens to a picked skill: 'train' (the default: must
+  // not be trained yet -> trained), 'train_or_specialize' ("even one in which
+  // you are already trained": not trained -> trained, trained ->
+  // specialized, never an already specialized one) and 'specialize' ("a
+  // skill in which you are trained" -> specialized).
+  // `repeatable` is true only where the text says the ability can be selected
+  // more than once (Type picks are otherwise once-only); each time it must be
+  // taken at a different tier and with different skills.
   skill_grant: z
     .object({
       count: z.number().int().min(1),
       options: z.union([z.array(z.string()).min(1), z.literal('noncombat')]),
+      mode: z.enum(['train', 'train_or_specialize', 'specialize']).optional(),
+      repeatable: z.boolean().optional(),
     })
     .optional(),
   // tier lives per-source, not on the ability itself: the same named

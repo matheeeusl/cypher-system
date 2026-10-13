@@ -1,6 +1,6 @@
 import {
-  applyAbilitySkillGrants,
   collectSkillGrantInstances,
+  createSkillGrantApplier,
 } from './character/ability-skill-grants.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
@@ -105,7 +105,11 @@ export function validateCharacterChoices(
           choices.type_ability_picks ?? {},
           typeAbilities.map((a) => a.ability_id),
           pending,
-          new Set(Object.keys(skillGrants)),
+          new Set(
+            Object.entries(skillGrants)
+              .filter(([, grant]) => grant.repeatable)
+              .map(([id]) => id),
+          ),
         ),
       )
     }
@@ -132,20 +136,26 @@ export function validateCharacterChoices(
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))
 
   // Needs the same resolved tier and ability lists as the purchases below;
-  // when any of those failed, their own errors are already reported.
-  if (skills !== undefined && tier !== undefined && typeAbilities && focusAbilities && typePicks) {
-    const instances = collectSkillGrantInstances(type, focus, tier, choices, skillGrants)
-    const granted = attempt(() =>
-      applyAbilitySkillGrants(
-        instances,
-        choices.ability_skill_choices ?? {},
-        skills!,
-        pending,
-        new Set(content.combat_skill_ids ?? []),
-      ),
-    )
+  // when any of those failed, their own errors are already reported. Without
+  // a skill map there is nothing to apply picks to either.
+  const grantApplier =
+    skills !== undefined && tier !== undefined && typeAbilities && focusAbilities && typePicks
+      ? attempt(() =>
+          createSkillGrantApplier(
+            collectSkillGrantInstances(type, focus, tier, choices, skillGrants),
+            choices.ability_skill_choices ?? {},
+            pending,
+            new Set(content.combat_skill_ids ?? []),
+          ),
+        )
+      : undefined
+  // Picks made on reaching tier N come after the purchases tagged N.
+  const applyGrantsThrough = (upTo: number) => {
+    if (!grantApplier || skills === undefined) return
+    const granted = attempt(() => grantApplier.through(upTo, skills!))
     if (granted !== undefined) skills = granted
   }
+  applyGrantsThrough(1)
 
   // Order-sensitive (training the same skill twice moves it further along
   // practiced -> trained -> specialized), so purchases are applied in
@@ -155,6 +165,7 @@ export function validateCharacterChoices(
     .sort((a, b) => a.tier - b.tier)
 
   for (const purchase of skillsPurchases) {
+    applyGrantsThrough(purchase.tier - 1)
     if (purchase.target.kind === 'skill') {
       // skills === undefined here means applyDescriptorSkills already
       // failed and reported its own error above — don't attempt (and
@@ -170,6 +181,8 @@ export function validateCharacterChoices(
     // knownAbilities === undefined here means the blocking message above
     // already covers it — don't attempt (and don't double-report).
   }
+
+  applyGrantsThrough(Infinity)
 
   if (errors.length > 0) return { valid: false, errors, issues }
 

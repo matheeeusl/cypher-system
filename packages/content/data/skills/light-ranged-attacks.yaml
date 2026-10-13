@@ -1,0 +1,8 @@
+id: light-ranged-attacks
+name:
+  en: Light Ranged Attacks
+  pt-BR: Ataques à Distância Leves
+description:
+  en: Attacks using light ranged weapons.
+  pt-BR: Tradução em breve.
+combat: true
