@@ -7,8 +7,9 @@ import { AuthForm, type AuthMode, type AuthStatus } from '@cypher/ui'
 
 import { authClient } from '@/lib/auth-client'
 import { authLabels, authMessages, type Locale } from '@/lib/i18n/auth'
+import { authHref } from '@/lib/redirect'
 
-export function AuthScreen({ locale }: { locale: Locale }) {
+export function AuthScreen({ locale, next }: { locale: Locale; next: string }) {
   const router = useRouter()
   const [mode, setMode] = useState<AuthMode>('login')
   const [status, setStatus] = useState<AuthStatus>('default')
@@ -32,7 +33,7 @@ export function AuthScreen({ locale }: { locale: Locale }) {
     // Redirects to Google on success, so only the failure path continues here.
     const { error } = await authClient.signIn.social({
       provider: 'google',
-      callbackURL: `/${locale}`,
+      callbackURL: next,
     })
     if (error) fail(messages.google)
   }
@@ -51,7 +52,7 @@ export function AuthScreen({ locale }: { locale: Locale }) {
 
     if (mode === 'login') {
       const { error } = await authClient.signIn.email({ email, password })
-      if (!error) return router.replace(`/${locale}`)
+      if (!error) return router.replace(next)
       fail(error.code === 'EMAIL_NOT_VERIFIED' ? messages.emailNotVerified : undefined)
       return
     }
@@ -61,7 +62,9 @@ export function AuthScreen({ locale }: { locale: Locale }) {
         name,
         email,
         password,
-        callbackURL: `/${locale}/auth`,
+        // Keeps `next` through the verification email, so the user lands back
+        // on the sign-in screen that still knows where they were headed.
+        callbackURL: authHref(locale, next),
       })
       if (!error) return setStatus('success')
       fail(error.code === 'PASSWORD_TOO_SHORT' ? messages.passwordTooShort : undefined)
