@@ -51,6 +51,8 @@ export interface WizardCopy {
   type: { startingEdge: string }
   descriptor: { tag: string; poolBonus: string; startingLink: string }
   focus: { tag: string; grants: (count: number) => string }
+  /** Label of the link from an entity to its page in the rules reference. */
+  viewInReference: string
   pools: { remaining: string; breakdown: (base: number, added: number, total: number) => string }
   skills: {
     autoTrained: (descriptorName: string) => string
@@ -186,6 +188,7 @@ const en: WizardCopy = {
     poolBonus: 'Pool bonus:',
     startingLink: 'Initial Link to the Starting Adventure',
   },
+  viewInReference: 'View in the reference',
   focus: {
     tag: 'Focus',
     grants: (count) =>
@@ -398,6 +401,7 @@ const ptBr: WizardCopy = {
     poolBonus: 'Bônus de Reserva:', // UNCONFIRMED
     startingLink: 'Vínculo inicial com a aventura inicial', // UNCONFIRMED
   },
+  viewInReference: 'Ver na referência',
   focus: {
     tag: 'Foco',
     grants: (count) =>

@@ -1,3 +1,5 @@
+import { DocsLink } from '@/components/DocsLink'
+import { docsLinks } from '@/lib/docs-links'
 import type { WizardFocus } from '@/lib/graphql/queries'
 
 import { focusTier1GrantedIds } from './derive'
@@ -13,7 +15,7 @@ interface FocusStepProps {
 }
 
 export function FocusStep({ foci, loading, error, selectedId, onSelect }: FocusStepProps) {
-  const { copy, t } = useWizardI18n()
+  const { copy, t, locale } = useWizardI18n()
   if (loading) return <p className="text-text-muted text-sm">{copy.loading(copy.entities.foci)}</p>
   if (error) {
     return <p className="text-warning text-sm">{copy.loadFailed(copy.entities.foci, error)}</p>
@@ -49,6 +51,9 @@ export function FocusStep({ foci, loading, error, selectedId, onSelect }: FocusS
               {copy.focus.grants(grantedCount)}
             </p>
           )}
+          <div className="mt-3">
+            <DocsLink href={docsLinks.entity(locale, 'foci', selected.id)} />
+          </div>
         </div>
       )}
     </div>
