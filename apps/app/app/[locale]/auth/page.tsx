@@ -26,6 +26,7 @@ export default async function AuthPage({
     <AppShell
       locale={locale}
       section="ACCOUNT"
+      signedIn={false}
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/auth`}
     >
       <AuthScreen locale={locale} next={next} />

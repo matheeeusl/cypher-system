@@ -19,6 +19,7 @@ export default async function ResetPasswordPage({
     <AppShell
       locale={locale}
       section="ACCOUNT"
+      signedIn={false}
       switchLocaleHref={`/${locale === 'en' ? 'pt-br' : 'en'}/auth`}
     >
       <ResetPasswordScreen locale={locale} token={token} />
