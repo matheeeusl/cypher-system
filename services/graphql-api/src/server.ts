@@ -5,14 +5,20 @@ import { createYoga } from 'graphql-yoga'
 import { resolvers } from './resolvers/index.js'
 import { buildSchema } from './schema/index.js'
 
+const ALLOWED_ORIGINS: Array<string | RegExp> = [
+  'https://csrd.app',
+  'https://play.csrd.app',
+  // Local dev: apps/docs and apps/app run on ports that vary across setups.
+  /^http:\/\/localhost:\d+$/,
+]
+
 export function buildServer(): FastifyInstance {
   const app = fastify()
 
-  // Reflects the request origin rather than a fixed allowlist — this API has
-  // no auth/cookies to protect yet, and dev clients (apps/app, apps/docs)
-  // run on ports that change across setups. Revisit with a real allowlist
-  // once this serves anything but local development.
-  void app.register(cors, { origin: true })
+  // Browsers may only call this API from these origins. CORS is a browser-side
+  // rule, not authentication: requests without an Origin header (apps/app's
+  // server actions, curl) are unaffected, and the API stays public by design.
+  void app.register(cors, { origin: ALLOWED_ORIGINS })
 
   const yoga = createYoga<{ req: FastifyRequest; reply: FastifyReply }>({
     schema: buildSchema<{ req: FastifyRequest; reply: FastifyReply }>(resolvers),
