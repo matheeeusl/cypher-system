@@ -12,6 +12,7 @@
 import '../../styles/globals.css';
 import SiteHeader from '@components/SiteHeader.astro';
 import FontLinks from '@components/FontLinks.astro';
+import { appLinks } from '@lib/app-links';
 import { URL_LOCALES, type UrlLocale } from '@lib/locale';
 
 export function getStaticPaths() {
@@ -43,15 +44,15 @@ const CHROME = {
 const SECTIONS = {
 	en: [
 		{ title: 'Getting Started', desc: 'New to the system? Start here.', href: '/en/rules/introduction/' },
-		{ title: 'Character Creation', desc: 'Types, descriptors, and foci.', href: '/en/types/' },
+		{ title: 'Character Creation', desc: 'Build your character in the wizard.', href: appLinks.newCharacter('en'), external: true },
 		{ title: 'Core Mechanics', desc: 'Task resolution, Effort, and Edge.', href: '/en/rules/core-mechanics/' },
 		{ title: 'Combat', desc: 'Initiative, damage, and recovery.', href: '/en/rules/combat/' },
 		{ title: 'Equipment', desc: 'Weapons, armor, and cyphers.', href: '/en/equipment/' },
-		{ title: 'Glossary', desc: 'Every term, defined and linked.', href: '/en/glossary/' },
+		{ title: 'Character Reference', desc: 'Types, descriptors, and foci.', href: '/en/types/' },
 	],
 	'pt-br': [
 		{ title: 'Primeiros Passos', desc: 'Novo no sistema? Comece aqui.', href: '/pt-br/rules/introduction/' },
-		{ title: 'Criação de Personagem', desc: 'Tipos, descritores e focos.', href: '/pt-br/types/' },
+		{ title: 'Criação de Personagem', desc: 'Monte seu personagem no assistente.', href: appLinks.newCharacter('pt-br'), external: true },
 		{
 			title: 'Mecânicas Principais',
 			desc: 'Resolução de tarefas, Esforço e Margem.',
@@ -59,7 +60,7 @@ const SECTIONS = {
 		},
 		{ title: 'Combate', desc: 'Iniciativa, dano e recuperação.', href: '/pt-br/rules/combat/' },
 		{ title: 'Equipamento', desc: 'Armas, armaduras e cifras.', href: '/pt-br/equipment/' },
-		{ title: 'Glossário', desc: 'Todos os termos, definidos e linkados.', href: '/pt-br/glossary/' },
+		{ title: 'Referência de Personagem', desc: 'Tipos, descritores e focos.', href: '/pt-br/types/' },
 	],
 } as const;
 
@@ -98,13 +99,33 @@ const sections = SECTIONS[locale];
 		<div class="mx-auto max-w-[900px] px-7 pt-3 pb-[72px]">
 			<div class="grid grid-cols-3 gap-3.5">
 				{
-					sections.map((sec) => (
-						<a href={sec.href} class="block rounded-md border border-border bg-panel p-5 text-inherit">
-							<span class="mb-3 block h-[7px] w-[7px] rounded-full bg-accent" />
-							<div class="mb-1.5 font-display text-base font-semibold">{sec.title}</div>
-							<div class="text-[13px] leading-[1.5] text-text-muted">{sec.desc}</div>
-						</a>
-					))
+					sections.map((sec) => {
+						// A card that leaves the reference for the app is highlighted in the
+						// same accent treatment as a primary action, with an arrow icon.
+						const external = 'external' in sec && sec.external;
+						return (
+							<a
+								href={sec.href}
+								class:list={[
+									'block rounded-md border p-5 text-inherit',
+									external ? 'border-accent bg-accent-soft hover:border-warning' : 'border-border bg-panel',
+								]}
+							>
+								<span class="mb-3 flex items-center justify-between">
+									<span class="block h-[7px] w-[7px] rounded-full bg-accent" />
+									{external && (
+										<span class="h-[7px] font-mono text-sm leading-none text-accent" aria-hidden="true">
+											↗
+										</span>
+									)}
+								</span>
+								<div class:list={['mb-1.5 font-display text-base font-semibold']}>
+									{sec.title}
+								</div>
+								<div class="text-[13px] leading-[1.5] text-text-muted">{sec.desc}</div>
+							</a>
+						);
+					})
 				}
 			</div>
 		</div>

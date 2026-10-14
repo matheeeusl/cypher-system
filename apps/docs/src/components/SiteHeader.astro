@@ -12,6 +12,7 @@
 // the same way, for the sidebar toggle: only Starlight-shell pages have a
 // sidebar to toggle, so only Header.astro fills it.
 import { BRAND_PREFIX } from '@cypher/ui/brand';
+import { appLinks } from '../lib/app-links';
 import { URL_LOCALES, type UrlLocale } from '../lib/locale';
 
 interface Props {
@@ -34,6 +35,24 @@ const { locale } = Astro.props;
 // from both the Starlight-shell Header override and the standalone
 // homepage without depending on Starlight's own routing context.
 const currentPath = Astro.url.pathname;
+
+// 404.astro has no locale of its own, so the sign-in link falls back to English.
+const signInHref = appLinks.signIn(locale ?? 'en');
+const signInLabel = locale === 'pt-br' ? 'Entrar' : 'Sign in';
+
+// Brand menu (the CYPHER:// prefix). Same fallback as above for the locale-less 404.
+const menuLocale = locale ?? 'en';
+const menu = {
+	label: menuLocale === 'pt-br' ? 'Menu principal' : 'Main menu',
+	items: [
+		{
+			label: menuLocale === 'pt-br' ? 'Primeiros Passos' : 'Getting Started',
+			href: `/${menuLocale}/rules/introduction/`,
+			external: false,
+		},
+		{ label: 'Wizard', href: appLinks.newCharacter(menuLocale), external: true },
+	],
+};
 const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//, `/${target}/`);
 ---
 
@@ -56,10 +75,41 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 >
 	<div class="flex items-center gap-3">
 		<slot name="leading" />
-		<a href={locale ? `/${locale}/` : '/'} class="flex items-center gap-2.5 text-inherit no-underline">
+		<span class="flex items-center gap-2.5">
 			<span class="h-2 w-2 rounded-full bg-accent shadow-[0_0_6px_var(--color-accent)]"></span>
-			<span class="font-mono text-[13px] tracking-[0.06em] text-text-muted">{BRAND_PREFIX}REFERENCE</span>
-		</a>
+			<span class="relative font-mono text-[13px] tracking-[0.06em] text-text-muted">
+				<button
+					id="brand-menu-button"
+					type="button"
+					aria-label={menu.label}
+					aria-haspopup="menu"
+					aria-expanded="false"
+					class="brand-menu-button cursor-pointer text-inherit hover:text-accent"
+				>
+					{BRAND_PREFIX}
+				</button>
+				<a href={locale ? `/${locale}/` : '/'} class="text-inherit no-underline hover:text-accent">REFERENCE</a>
+				<div
+					id="brand-menu"
+					role="menu"
+					hidden
+					class="absolute top-full left-0 z-10 mt-3 min-w-44 overflow-hidden rounded border border-border bg-panel py-1 tracking-normal shadow-lg"
+				>
+					{
+						menu.items.map((item) => (
+							<a
+								role="menuitem"
+								href={item.href}
+								class="block px-3.5 py-2 font-mono text-[12px] whitespace-nowrap text-text no-underline hover:bg-accent-soft hover:text-accent"
+							>
+								{item.label}
+								{item.external ? ' ↗' : ''}
+							</a>
+						))
+					}
+				</div>
+			</span>
+		</span>
 	</div>
 
 	<div class="mx-4 max-w-[420px] flex-1"><slot name="search" /></div>
@@ -84,6 +134,12 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 				</div>
 			)
 		}
+		<a
+			href={signInHref}
+			class="rounded border border-accent bg-accent-soft px-2.5 py-1.5 font-mono text-[11px] text-accent no-underline"
+		>
+			{signInLabel}
+		</a>
 		<button
 			id="mode-toggle"
 			type="button"
@@ -104,6 +160,15 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 	   standalone homepage never loads that reset at all. A scoped Astro <style>
 	   compiles unlayered, so it always wins — same fix BackButton.astro already
 	   uses for its own button, for the same reason. */
+	/* Same Starlight `button { font: inherit }` reset issue as .mode-toggle below:
+	   keeps the prefix looking like the plain brand text it replaces. */
+	.brand-menu-button {
+		font: inherit;
+		letter-spacing: inherit;
+		padding: 0;
+		border: 0;
+		background: none;
+	}
 	.mode-toggle {
 		font-family: var(--font-mono);
 		font-size: 0.6875rem;
@@ -149,6 +214,27 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 			document.documentElement.dataset.theme = next;
 			localStorage.setItem('starlight-theme', next);
 			sync();
+		});
+	}
+</script>
+<script is:inline>
+	{
+		const button = document.getElementById('brand-menu-button');
+		const menu = document.getElementById('brand-menu');
+
+		function setOpen(open) {
+			menu.hidden = !open;
+			button.setAttribute('aria-expanded', String(open));
+		}
+		button.addEventListener('click', () => setOpen(menu.hidden));
+		// Close on a click outside the menu, or on Escape (focus returns to the button).
+		document.addEventListener('mousedown', (event) => {
+			if (!menu.hidden && !menu.contains(event.target) && event.target !== button) setOpen(false);
+		});
+		document.addEventListener('keydown', (event) => {
+			if (event.key !== 'Escape' || menu.hidden) return;
+			setOpen(false);
+			button.focus();
 		});
 	}
 </script>

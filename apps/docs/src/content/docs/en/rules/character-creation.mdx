@@ -16,10 +16,13 @@ tableOfContents: false
 ---
 
 import EntityLink from '@components/EntityLink.astro'
+import WizardCallout from '@components/WizardCallout.astro'
 import ReferenceTable from '@components/ReferenceTable.astro'
 import { getFocusConnectionTable } from '@cypher/content'
 
 export const connections = getFocusConnectionTable()
+
+<WizardCallout locale="en" />
 
 ## The Character Sentence
 

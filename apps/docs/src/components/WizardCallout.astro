@@ -1,0 +1,23 @@
+---
+// Call to action into the character wizard (apps/app, on its own subdomain).
+// The wrapper carries `not-content` so Starlight's prose link/sibling-margin
+// rules don't restyle the button when this sits inside a chapter or index page.
+import { appLinks } from '../lib/app-links';
+import { type UrlLocale } from '../lib/locale';
+
+interface Props {
+	locale: UrlLocale;
+}
+
+const { locale } = Astro.props;
+const pt = locale === 'pt-br';
+---
+
+<div class="not-content mb-6">
+	<a
+		href={appLinks.newCharacter(locale)}
+		class="inline-flex items-center gap-2 rounded-md border border-accent bg-accent-soft px-4 py-2.5 font-mono text-[13px] text-accent no-underline hover:text-warning"
+	>
+		{pt ? 'Criar personagem no assistente →' : 'Create a character in the wizard →'}
+	</a>
+</div>
