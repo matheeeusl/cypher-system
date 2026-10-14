@@ -1,9 +1,13 @@
-// This is the only entrypoint Vercel should detect, which is why the factory
-// lives in build-server.ts: a file named server.ts (or app.ts) would be
-// picked up as the entrypoint instead and fail without a default export.
-import { buildServer } from './build-server.js'
+// Vercel's Fastify detection needs the entrypoint to import `fastify` itself,
+// and a file named server.ts or app.ts would be picked up instead (and fail
+// without a default export) — so the instance is created here and configured
+// by build-server.ts, which the tests use through buildServer().
+import fastify from 'fastify'
 
-const app = buildServer()
+import { configureServer } from './build-server.js'
+
+const app = fastify()
+configureServer(app)
 const port = Number(process.env.PORT ?? 4000)
 
 // host must be 0.0.0.0, not the fastify default localhost, so the server is
