@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { buildServer } from '../server.js'
+import { buildServer } from '../build-server.js'
 
 describe('server', () => {
   it('routes a bare query through Yoga end to end', async () => {

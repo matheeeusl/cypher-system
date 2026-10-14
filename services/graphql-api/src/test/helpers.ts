@@ -1,4 +1,4 @@
-import { buildServer } from '../server.js'
+import { buildServer } from '../build-server.js'
 
 export interface GraphQLTestResponse<TData> {
   data: TData
