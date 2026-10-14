@@ -172,6 +172,8 @@ const artifactsSidebarGroup = {
 
 // https://astro.build/config
 export default defineConfig({
+  // Canonical origin — enables the sitemap and absolute canonical URLs.
+  site: 'https://csrd.app',
   vite: {
     plugins: [tailwindcss()],
     // @cypher/content's loader locates its YAML directory relative to its
