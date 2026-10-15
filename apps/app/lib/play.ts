@@ -469,6 +469,64 @@ export async function revertAdvancement(
   })
 }
 
+export type LearnResult =
+  { ok: true } | { ok: false; reason: 'not_found' | 'conflict' | 'insufficient' }
+
+/**
+ * Records options bought for XP (cantrips): the new picks (only if nobody
+ * changed them since `expectedPicks`) and the locked XP spend entry, together.
+ * The caller has already validated the resulting build against the engine.
+ */
+export async function applyLearn(
+  userId: string,
+  characterId: string,
+  args: { expectedPicks: TierPicks; nextPicks: TierPicks; costXp: number; reason: string },
+): Promise<LearnResult> {
+  return tx(async (client) => {
+    if (!(await owns(client, userId, characterId))) return { ok: false, reason: 'not_found' }
+    await lockPlay(client, characterId)
+    if ((await xpAvailable(client, characterId)) < args.costXp) {
+      return { ok: false, reason: 'insufficient' }
+    }
+    const { rowCount } = await client.query(
+      `update character set tier_picks = $3, updated_at = now()
+        where id = $1 and user_id = $2 and tier_picks = $4::jsonb`,
+      [characterId, userId, JSON.stringify(args.nextPicks), JSON.stringify(args.expectedPicks)],
+    )
+    if ((rowCount ?? 0) === 0) return { ok: false, reason: 'conflict' }
+    await client.query(
+      `insert into character_xp_entry (character_id, kind, amount, reason, locked)
+       values ($1, 'spend', $2, $3, true)`,
+      [characterId, args.costXp, args.reason],
+    )
+    return { ok: true }
+  })
+}
+
+/** Undoes `applyLearn`: stores the picks without the purchase and refunds its XP as an ordinary entry. */
+export async function revertLearn(
+  userId: string,
+  characterId: string,
+  args: { expectedPicks: TierPicks; nextPicks: TierPicks; refundXp: number; reason: string },
+): Promise<RevertResult> {
+  return tx(async (client) => {
+    if (!(await owns(client, userId, characterId))) return { ok: false, reason: 'not_found' }
+    await lockPlay(client, characterId)
+    const { rowCount } = await client.query(
+      `update character set tier_picks = $3, updated_at = now()
+        where id = $1 and user_id = $2 and tier_picks = $4::jsonb`,
+      [characterId, userId, JSON.stringify(args.nextPicks), JSON.stringify(args.expectedPicks)],
+    )
+    if ((rowCount ?? 0) === 0) return { ok: false, reason: 'conflict' }
+    await client.query(
+      `insert into character_xp_entry (character_id, kind, amount, reason)
+       values ($1, 'gain', $2, $3)`,
+      [characterId, args.refundXp, args.reason],
+    )
+    return { ok: true }
+  })
+}
+
 /**
  * Replaces the level-up picks, but only if nobody changed them since `expected`.
  * Returns false on a conflict (or when the character isn't the user's).

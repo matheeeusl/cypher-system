@@ -74,6 +74,19 @@ export interface PlayCopy {
     confirm: string
     error: string
   }
+  /** Buying more options of a choice ability for XP (Cantrips). */
+  learn: {
+    title: (abilityName: string) => string
+    description: (xp: number, count: number) => string
+    action: (xp: number) => string
+    needs: (xp: number) => string
+    none: string
+    learned: string
+    undo: string
+    /** The XP-log line of a purchase. */
+    reason: (names: string[]) => string
+    errors: { insufficient: string; conflict: string; generic: string }
+  }
   skills: { skills: string; abilities: string; abilityTrained: string; createdByYou: string }
   log: {
     xpLog: (total: number) => string
@@ -243,6 +256,22 @@ const en: PlayCopy = {
     hint: (selected, required) => `Choose ${required} — ${selected} selected`,
     confirm: 'Confirm choices',
     error: 'Could not save these choices. Reload the page and try again.',
+  },
+  learn: {
+    title: (abilityName) => `Learn more — ${abilityName}`,
+    description: (xp, count) =>
+      `Spend ${xp} XP to learn ${count} more. Talk to your GM first about how your character learned them.`,
+    action: (xp) => `Learn (${xp} XP)`,
+    needs: (xp) => `Needs ${xp} XP`,
+    none: 'There is nothing left to learn.',
+    learned: 'Learned',
+    undo: 'Undo (refunds the XP)',
+    reason: (names) => `Learned: ${names.join(', ')}`,
+    errors: {
+      insufficient: 'Not enough XP.',
+      conflict: 'The character changed in another tab. Reload and try again.',
+      generic: 'Could not save this. Try again.',
+    },
   },
   skills: {
     skills: 'Skills',
@@ -434,6 +463,22 @@ const ptBr: PlayCopy = {
     hint: (selected, required) => `Escolha ${required} — ${selected} selecionada(s)`,
     confirm: 'Confirmar escolhas',
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',
+  },
+  learn: {
+    title: (abilityName) => `Aprender mais — ${abilityName}`,
+    description: (xp, count) =>
+      `Gaste ${xp} XP para aprender mais ${count}. Combine antes com o Mestre como o personagem os aprendeu.`,
+    action: (xp) => `Aprender (${xp} XP)`,
+    needs: (xp) => `Requer ${xp} XP`,
+    none: 'Não há mais nada para aprender.',
+    learned: 'Aprendidos',
+    undo: 'Desfazer (devolve o XP)',
+    reason: (names) => `Aprendeu: ${names.join(', ')}`,
+    errors: {
+      insufficient: 'XP insuficiente.',
+      conflict: 'O personagem mudou em outra aba. Recarregue e tente de novo.',
+      generic: 'Não foi possível salvar. Tente de novo.',
+    },
   },
   skills: {
     skills: 'Perícias',

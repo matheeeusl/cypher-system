@@ -19,6 +19,12 @@ export interface TierPicks {
    * -> ability ids. Left out while empty, like `skills`.
    */
   options?: Record<string, string[]> | undefined
+  /**
+   * Options bought later for XP (Cantrips): choice ability id -> the options, in
+   * the order bought, `learn.count` per purchase. Not tied to a tier, so it
+   * survives a tier being undone. Left out while empty, like `skills`.
+   */
+  learned?: Record<string, string[]> | undefined
 }
 
 export const EMPTY_PICKS: TierPicks = { type: {}, focus: {} }
@@ -27,7 +33,8 @@ export const isEmptyPicks = (p: TierPicks) =>
   Object.keys(p.type).length === 0 &&
   Object.keys(p.focus).length === 0 &&
   Object.keys(p.skills ?? {}).length === 0 &&
-  Object.keys(p.options ?? {}).length === 0
+  Object.keys(p.options ?? {}).length === 0 &&
+  Object.keys(p.learned ?? {}).length === 0
 
 const ID = /^[a-z0-9][a-z0-9-]{0,99}$/
 const SKILL_KEY = /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/
@@ -38,11 +45,12 @@ function parseRecord(
   raw: unknown,
   keyOk: (key: string) => boolean,
   idOk: (id: unknown) => boolean = (id) => typeof id === 'string' && ID.test(id),
+  maxIds = 10,
 ): Record<string, string[]> | null {
   if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
   const out: Record<string, string[]> = {}
   for (const [key, ids] of Object.entries(raw)) {
-    if (!keyOk(key) || !Array.isArray(ids) || ids.length > 10) return null
+    if (!keyOk(key) || !Array.isArray(ids) || ids.length > maxIds) return null
     if (!ids.every(idOk)) return null
     out[key] = ids as string[]
   }
@@ -59,12 +67,14 @@ export function parsePicks(raw: unknown): TierPicks | null {
   // Skill picks may be typed by the player (`custom:<text>`), not just catalog ids.
   const skills = parseRecord(r.skills ?? {}, (key) => SKILL_KEY.test(key), isSkillIdShape)
   const options = parseRecord(r.options ?? {}, (key) => OPTION_KEY.test(key))
-  if (!type || !focus || !skills || !options) return null
+  const learned = parseRecord(r.learned ?? {}, (key) => ID.test(key), undefined, 100)
+  if (!type || !focus || !skills || !options || !learned) return null
   return {
     type,
     focus,
     ...(Object.keys(skills).length > 0 ? { skills } : {}),
     ...(Object.keys(options).length > 0 ? { options } : {}),
+    ...(Object.keys(learned).length > 0 ? { learned } : {}),
   }
 }
 
@@ -79,6 +89,39 @@ export function withPick(
 
 export function withOptionPick(picks: TierPicks, key: string, abilityIds: string[]): TierPicks {
   return { ...picks, options: { ...picks.options, [key]: abilityIds } }
+}
+
+/** Adds one purchase's worth of learned options for a choice ability. */
+export function withLearned(picks: TierPicks, abilityId: string, optionIds: string[]): TierPicks {
+  return {
+    ...picks,
+    learned: {
+      ...picks.learned,
+      [abilityId]: [...(picks.learned?.[abilityId] ?? []), ...optionIds],
+    },
+  }
+}
+
+/** Removes the `count` options bought in the purchase at `purchase` (0 = first). */
+export function withoutLearnedPurchase(
+  picks: TierPicks,
+  abilityId: string,
+  purchase: number,
+  count: number,
+): TierPicks {
+  const kept = (picks.learned?.[abilityId] ?? []).filter(
+    (_, i) => Math.floor(i / count) !== purchase,
+  )
+  const learned = Object.fromEntries(
+    Object.entries({ ...picks.learned, [abilityId]: kept }).filter(([, ids]) => ids.length > 0),
+  )
+  const rest = {
+    type: picks.type,
+    focus: picks.focus,
+    skills: picks.skills,
+    options: picks.options,
+  }
+  return Object.keys(learned).length > 0 ? { ...rest, learned } : rest
 }
 
 export function withSkillPick(picks: TierPicks, key: string, skillIds: string[]): TierPicks {
@@ -104,5 +147,7 @@ export function picksUpToTier(picks: TierPicks, tier: number): TierPicks {
     focus: upTo(picks.focus),
     ...(Object.keys(skills).length > 0 ? { skills } : {}),
     ...(Object.keys(options).length > 0 ? { options } : {}),
+    // Not tied to a tier: it stays whatever tier the character drops to.
+    ...(picks.learned ? { learned: picks.learned } : {}),
   }
 }

@@ -29,10 +29,12 @@ import {
   adjustPoolAction,
   changeItemQtyAction,
   choosePicksAction,
+  learnOptionsAction,
   purchaseAdvancementAction,
   removeItemAction,
   removeXpAction,
   revertAdvancementAction,
+  revertLearnAction,
   addNoteAction,
   removeNoteAction,
   updateNoteAction,
@@ -53,6 +55,8 @@ import { terms } from '@/lib/i18n/terms'
 import { describeItem } from '@/lib/inventory-display'
 import type { InventoryItem, PoolKey, PoolPoints } from '@/lib/play'
 import type { PlayView } from '@/lib/play-view'
+
+import { LearnPanel } from './LearnPanel'
 
 type TabKey = 'status' | 'skills' | 'inventory' | 'log' | 'notes'
 
@@ -99,6 +103,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [errors, setErrors] = useState<{
     advancement?: string
     picks?: string
+    learn?: string
     xp?: string
     notes?: string
     inventory?: string
@@ -370,6 +375,44 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     setBusy(false)
   }
 
+  // ---- options bought for XP (Cantrips) -------------------------------------
+
+  async function runLearn(job: () => ReturnType<typeof learnOptionsAction>): Promise<boolean> {
+    setBusy(true)
+    setError('learn')
+    const e = copy.learn.errors
+    try {
+      const res = await enqueue(job)
+      if (res.ok) {
+        if (res.view) {
+          setView(res.view)
+          setXp(res.view.xp)
+        } else {
+          router.refresh()
+        }
+        setBusy(false)
+        return true
+      }
+      setError(
+        'learn',
+        res.reason === 'insufficient'
+          ? e.insufficient
+          : res.reason === 'conflict'
+            ? e.conflict
+            : e.generic,
+      )
+    } catch {
+      setError('learn', e.generic)
+    }
+    setBusy(false)
+    return false
+  }
+
+  const learnOptions = (ids: string[]) =>
+    runLearn(() => learnOptionsAction(view.characterId, ids, locale))
+  const undoLearn = (purchase: number) =>
+    void runLearn(() => revertLearnAction(view.characterId, purchase, locale))
+
   // The advancement history, newest first, paged like the XP log.
   const historyAll = [...view.purchases].reverse()
   const historyPages = Math.max(1, Math.ceil(historyAll.length / PAGE_SIZE))
@@ -610,6 +653,18 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             onDismissTierUp={() => setTierUp(null)}
             errorMessage={errors.advancement}
           />
+
+          {view.learn && (
+            <LearnPanel
+              learn={view.learn}
+              copy={copy}
+              xpTotal={xpTotal}
+              busy={busy}
+              errorMessage={errors.learn}
+              onLearn={learnOptions}
+              onUndo={undoLearn}
+            />
+          )}
 
           <section>
             <div className="mb-2.5 flex items-center justify-between">

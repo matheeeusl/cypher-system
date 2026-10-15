@@ -358,6 +358,11 @@ export function buildCharacterChoicesInput(
     ...Object.entries(tierPicks.options ?? {}).map(([key, abilityIds]) => ({ key, abilityIds })),
   ]
 
+  const learnedOptions = Object.entries(tierPicks.learned ?? {}).map(([abilityId, optionIds]) => ({
+    abilityId,
+    optionIds,
+  }))
+
   return {
     typeId: choices.typeId,
     descriptorId: choices.descriptorId,
@@ -386,6 +391,7 @@ export function buildCharacterChoicesInput(
     descriptorSkillChoices: choices.descriptorSkillChoices,
     ...(abilitySkillChoices.length > 0 ? { abilitySkillChoices } : {}),
     ...(abilityChoices.length > 0 ? { abilityChoices } : {}),
+    ...(learnedOptions.length > 0 ? { learnedOptions } : {}),
     advancementPurchases,
   }
 }

@@ -206,7 +206,12 @@ export interface WizardAbility {
     alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
   } | null
   /** Set on abilities that ask the player to pick `count` of `options` (other abilities). */
-  choice: { options: string[]; count: number } | null
+  choice: {
+    options: string[]
+    count: number
+    /** More options learnable later for XP (Cantrips: 2 XP for two). */
+    learn: { xpCost: number; count: number } | null
+  } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
   // values real Ability content actually uses — requesting it crashes the
@@ -223,7 +228,7 @@ const ABILITIES_QUERY = `
       cost { pool amount }
       attack
       skillGrant { count mode noncombat allowCustom options alternate { count mode } }
-      choice { options count }
+      choice { options count learn { xpCost count } }
     }
   }
 `
@@ -257,6 +262,8 @@ export interface CharacterChoicesInput {
   abilitySkillChoices?: Array<{ key: string; skillIds: string[] }>
   /** Abilities picked for choice abilities (Blessing of the Gods, Cantrips); `key` as for skills. */
   abilityChoices?: Array<{ key: string; abilityIds: string[] }>
+  /** Options learned later for XP (Cantrips): the choice ability and the options bought. */
+  learnedOptions?: Array<{ abilityId: string; optionIds: string[] }>
   // Empty at character creation; play mode adds one entry per purchase, in order.
   advancementPurchases: AdvancementPurchaseInput[]
 }

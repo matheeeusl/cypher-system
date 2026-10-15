@@ -33,6 +33,19 @@ export interface PendingChoice {
   allowCustom: boolean
 }
 
+/** Options a character can buy for XP (Cantrips), and what it has bought so far. */
+export interface LearnView {
+  abilityId: string
+  abilityName: string
+  costXp: number
+  /** How many options one purchase brings. */
+  count: number
+  /** What can still be bought: the ability's options minus those already known. */
+  options: PendingChoice['options']
+  /** One entry per purchase, in order; `index` is what to undo. */
+  purchases: Array<{ index: number; names: string[] }>
+}
+
 /** Everything the play screen needs, already localized and JSON-serializable. */
 export interface PlayView {
   characterId: string
@@ -57,6 +70,8 @@ export interface PlayView {
   purchases: Array<{ index: number; tier: number; label: string; revertable: boolean }>
   /** Known attack abilities, for the "train an ability" advancement. */
   abilityOptions: Array<{ id: string; name: string; trained: boolean }>
+  /** Null when the character's flavor offers nothing to learn. */
+  learn: LearnView | null
   /** Level-up choices still owed (new tier's Type abilities, a Focus choice). */
   pending: PendingChoice[]
   xp: Array<{ id: number; kind: 'gain' | 'spend'; amount: number; reason: string; locked: boolean }>
@@ -136,6 +151,7 @@ export async function buildPlayView(
         ? [{ id: ability.id, name: loc(ability.name, locale), trained: known.trained }]
         : []
     }),
+    learn: learnView(bundle, character, locale),
     pending: pendingChoices(bundle, character, locale),
     xp: play.xp.map(({ id, kind, amount, reason, locked }) => ({
       id,
@@ -150,6 +166,52 @@ export async function buildPlayView(
       id: n.id,
       body: n.body,
       createdAt: n.createdAt.toISOString(),
+    })),
+  }
+}
+
+/**
+ * The ability whose options the character may buy for XP: one with a `choice.learn`
+ * that the character's flavor lists (Cantrips, for Modern Magic). Null otherwise.
+ */
+export function learnableAbility(bundle: DerivedBundle) {
+  const offered = new Set((bundle.flavor?.tierAbilities ?? []).flatMap((g) => g.abilityIds))
+  return bundle.abilities.find((a) => a.choice?.learn && offered.has(a.id)) ?? null
+}
+
+function learnView(
+  bundle: DerivedBundle,
+  character: SavedCharacter,
+  locale: Locale,
+): LearnView | null {
+  const ability = learnableAbility(bundle)
+  const choice = ability?.choice
+  if (!ability || !choice?.learn) return null
+  const { xpCost, count } = choice.learn
+  const known = new Set(bundle.derived.knownAbilities.map((k) => k.abilityId))
+  const abilityOf = (id: string) => bundle.abilities.find((a) => a.id === id)
+  const nameOf = (id: string) => {
+    const a = abilityOf(id)
+    return a ? loc(a.name, locale) : id
+  }
+  const bought = character.tierPicks.learned?.[ability.id] ?? []
+  return {
+    abilityId: ability.id,
+    abilityName: loc(ability.name, locale),
+    costXp: xpCost,
+    count,
+    options: choice.options
+      .filter((id) => !known.has(id))
+      .map((id) => ({
+        id,
+        label: nameOf(id),
+        description: loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale),
+        meta: '',
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label, locale)),
+    purchases: Array.from({ length: Math.floor(bought.length / count) }, (_, index) => ({
+      index,
+      names: bought.slice(index * count, (index + 1) * count).map(nameOf),
     })),
   }
 }

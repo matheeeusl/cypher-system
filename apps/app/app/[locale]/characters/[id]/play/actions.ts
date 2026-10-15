@@ -28,11 +28,13 @@ import {
   addXp,
   adjustPool,
   applyAdvancement,
+  applyLearn,
   changeItemQty,
   getPlayData,
   removeItem,
   removeXp,
   revertAdvancement,
+  revertLearn,
   addNote,
   removeNote,
   updateNote,
@@ -43,10 +45,17 @@ import {
   type PoolKey,
   type PoolPoints,
 } from '@/lib/play'
-import { buildPlayView, type PlayView } from '@/lib/play-view'
+import { buildPlayView, learnableAbility, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
 import { customSkillText, isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
-import { picksUpToTier, withOptionPick, withPick, withSkillPick } from '@/lib/tier-picks'
+import {
+  picksUpToTier,
+  withLearned,
+  withOptionPick,
+  withPick,
+  withSkillPick,
+  withoutLearnedPurchase,
+} from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
 // the browser), and let lib/play.ts scope the query to the session user.
@@ -665,6 +674,165 @@ export async function choosePicksAction(
     return { ok: true, view: await freshView(uid, characterId, locale) }
   } catch (err) {
     console.error('[play] choosePicks failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+// ---- options bought for XP (Cantrips) ----
+
+export type LearnActionResult =
+  { ok: true; view: PlayView | null } | Fail<'conflict' | 'insufficient'>
+
+/**
+ * Buys one purchase of options for XP: `learn.count` options of the ability the
+ * character's flavor offers (Cantrips), at `learn.xpCost`. The browser only says
+ * *which* options; the ability, the cost and the count come from the content, the
+ * engine (through graphql-api) validates the resulting build, and the picks and
+ * the locked XP entry are written in one transaction.
+ */
+export async function learnOptionsAction(
+  characterId: unknown,
+  optionIds: unknown,
+  locale: unknown,
+): Promise<LearnActionResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !Array.isArray(optionIds) ||
+    optionIds.length === 0 ||
+    optionIds.length > 10 ||
+    !optionIds.every((o) => typeof o === 'string' && o.length > 0 && o.length < 200) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+  const ids = optionIds as string[]
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const bundle = await loadDerived(character)
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    const ability = learnableAbility(bundle)
+    const learn = ability?.choice?.learn
+    if (!ability || !learn) return { ok: false, reason: 'invalid' }
+    const known = new Set(bundle.derived.knownAbilities.map((k) => k.abilityId))
+    if (
+      ids.length !== learn.count ||
+      new Set(ids).size !== ids.length ||
+      !ids.every((id) => ability.choice?.options.includes(id) && !known.has(id))
+    ) {
+      return { ok: false, reason: 'invalid' }
+    }
+
+    const picks = withLearned(character.tierPicks, ability.id, ids)
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        flavor: bundle.flavor ?? undefined,
+        abilities: bundle.abilities,
+      },
+      character.advancement,
+      picks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'invalid' }
+
+    const names = ids.map((id) => {
+      const a = bundle.abilities.find((x) => x.id === id)
+      return a ? loc(a.name, locale) : id
+    })
+    const applied = await applyLearn(uid, characterId, {
+      expectedPicks: character.tierPicks,
+      nextPicks: picks,
+      costXp: learn.xpCost,
+      reason: playCopy[locale].learn.reason(names).slice(0, LIMITS.reason),
+    })
+    if (!applied.ok) return { ok: false, reason: applied.reason }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] learnOptions failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+/** Undoes one purchase of learned options (by its index in `PlayView.learn.purchases`) and refunds its XP. */
+export async function revertLearnAction(
+  characterId: unknown,
+  purchase: unknown,
+  locale: unknown,
+): Promise<LearnActionResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    !isInt(purchase, 0, 100) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const bundle = await loadDerived(character)
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    const ability = learnableAbility(bundle)
+    const learn = ability?.choice?.learn
+    if (!ability || !learn) return { ok: false, reason: 'invalid' }
+    const bought = character.tierPicks.learned?.[ability.id] ?? []
+    if (purchase >= Math.floor(bought.length / learn.count)) return { ok: false, reason: 'invalid' }
+
+    const picks = withoutLearnedPurchase(character.tierPicks, ability.id, purchase, learn.count)
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        flavor: bundle.flavor ?? undefined,
+        abilities: bundle.abilities,
+      },
+      character.advancement,
+      picks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'invalid' }
+
+    const names = bought.slice(purchase * learn.count, (purchase + 1) * learn.count).map((id) => {
+      const a = bundle.abilities.find((x) => x.id === id)
+      return a ? loc(a.name, locale) : id
+    })
+    const copy = playCopy[locale]
+    const reverted = await revertLearn(uid, characterId, {
+      expectedPicks: character.tierPicks,
+      nextPicks: picks,
+      refundXp: learn.xpCost,
+      reason: `${copy.advancement.refundPrefix} — ${copy.learn.reason(names)}`.slice(
+        0,
+        LIMITS.reason,
+      ),
+    })
+    if (!reverted.ok) return { ok: false, reason: reverted.reason }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] revertLearn failed:', err)
     return { ok: false, reason: 'unavailable' }
   }
 }
