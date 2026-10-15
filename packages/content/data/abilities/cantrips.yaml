@@ -11,6 +11,9 @@ description:
 cost: null
 action_type: enabler
 choice:
+  learn:
+    xp_cost: 2
+    count: 2
   options:
     - bee-cantrip
     - bug-cantrip

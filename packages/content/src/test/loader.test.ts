@@ -137,6 +137,19 @@ describe('loader', () => {
     expect(problems).toEqual([])
   })
 
+  // `choice.learn` lets a character buy more options later, but only through a
+  // flavor that lists the ability; a learnable choice no flavor lists is unreachable.
+  it('lists every learnable choice ability in at least one flavor', () => {
+    const listed = new Set(
+      getAllFlavors().flatMap((flavor) => Object.values(flavor.tier_abilities).flat()),
+    )
+    const unreachable = getAllAbilities()
+      .filter((ability) => ability.choice?.learn && !listed.has(ability.id))
+      .map((ability) => ability.id)
+    expect(unreachable).toEqual([])
+    expect(getAbilityById('cantrips')?.choice?.learn).toEqual({ xp_cost: 2, count: 2 })
+  })
+
   it('attaches a non-empty, deterministic content_version to every entity', () => {
     const [first] = getAllAbilities()
     expect(first?.content_version).toBeTruthy()

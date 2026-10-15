@@ -117,6 +117,13 @@ export const AbilitySchema = z.object({
     .object({
       options: z.array(z.string()).min(2),
       count: z.number().int().min(1),
+      // Present when more options can be learned later for XP (Cantrips: "spend
+      // 2 XP to learn two cantrips"): each purchase costs `xp_cost` and brings
+      // `count` more options. Only characters whose flavor lists this ability
+      // may learn them.
+      learn: z
+        .object({ xp_cost: z.number().int().min(1), count: z.number().int().min(1) })
+        .optional(),
     })
     .refine((choice) => choice.count <= choice.options.length, {
       message: 'choice.count can’t exceed the number of options',

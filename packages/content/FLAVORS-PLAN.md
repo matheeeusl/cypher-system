@@ -131,7 +131,7 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 | F1    | Widen the GraphQL `ActionType` enum to all 30 content action types                                | small  | **done**          |
 | F2    | pt-BR review sheet: every name I chose, in one table to approve or correct; apply the corrections | medium | **needs you**     |
 | F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
-| F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | —                 |
+| F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | **done**          |
 | F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | decision on D1    |
 | F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | decision on D2    |
 | F7    | Personalized flavors (GM-made lists)                                                              | —      | recommend: skip   |
@@ -156,14 +156,14 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 - Fill `description.pt-BR` of the ten flavor YAMLs (translate the PDF's intro paragraph of each).
 - Verify: docs build, spot-check `/pt-br/flavors`, run the wizard e2e in pt-br.
 
-### F4 — Learn cantrips for 2 XP
+### F4 — Learn cantrips for 2 XP (done)
 
-The rule: "spend 2 XP to learn two cantrips (if they are available for you to learn)". Cantrips are the 50 abilities with an `ability` source pointing at `cantrips`.
+The rule: "spend 2 XP to learn two cantrips (if they are available for you to learn)". Decision (D3): only characters who picked the **Modern Magic** flavor.
 
-- Open question — where it's stored. Recommended: a new `advancement` purchase kind `learn-cantrips` carrying the two ability ids. It reuses the existing purchase flow (`applyAdvancement`: atomic write plus a locked XP spend entry) and `revertAdvancement` for undo, and needs no migration if `advancement` stays JSON. The alternative (extra entries in `ability_choices`) can't be refunded cleanly.
-- Engine, test first: validate that both ids are cantrips, not already known, no duplicates; the purchase costs 2 XP; the learned cantrips show up as known abilities with the `cantrips` source. Only a character who has the container? The book says "if they are available to learn", so I'd allow any character whose Type/flavor has access to the Cantrips ability — **to confirm (D3)**.
-- API/app: a purchase picker in play mode (reuse `AbilityPicker`), history entry, undo.
-- Docs: a sentence on the cantrips ability page.
+- It is **not** an advancement purchase: those count towards the four per tier, so a 2 XP purchase would break `deriveTier`. It is `learned_options` in the engine and `tier_picks.learned` in the app.
+- Data-driven: `choice.learn` (`{ xp_cost: 2, count: 2 }`) on `cantrips`, and the rule "the character's flavor lists the ability" is what limits it to Modern Magic. No flavor is hard-coded.
+- Engine (`resolveLearnedOptions`, test first), GraphQL (`learnedOptions` input, `AbilityChoice.learn`), app (`LearnPanel` in the Status tab, `learnOptionsAction` / `revertLearnAction`, a locked XP spend and a refund on undo), docs (a "Learning more" line on the Cantrips page), e2e (`learn-play.spec.ts`).
+- Known gap: editing the character in the wizard so the learned cantrips become impossible (flavor changed) clears them but keeps the XP spent.
 
 ### F5 — Gain a flavor in play
 
