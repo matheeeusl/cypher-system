@@ -56,7 +56,14 @@ export interface PlayView {
   pools: Array<{ key: PoolKey; name: string; edge: number; max: number }>
   spent: PoolPoints
   skills: Array<{ name: string; level: string; description: string | null; custom: boolean }>
-  abilities: Array<{ name: string; meta: string; description: string; trained: boolean }>
+  abilities: Array<{
+    name: string
+    meta: string
+    description: string
+    trained: boolean
+    /** One of the options of the learnable choice ability (a cantrip): listed under its own heading. */
+    grouped: boolean
+  }>
   skillOptions: Array<{ id: string; name: string; level: SkillLevel | null }>
   advancement: {
     costXp: number
@@ -119,7 +126,7 @@ export async function buildPlayView(
     })),
     spent: play.spent,
     skills: sheetSkills(bundle, locale),
-    abilities: sheetAbilities(bundle, locale),
+    abilities: groupedAbilities(bundle, locale),
     // The catalog, plus the skills the player typed for this character.
     skillOptions: [
       ...bundle.skills.map((s) => ({
@@ -168,6 +175,19 @@ export async function buildPlayView(
       createdAt: n.createdAt.toISOString(),
     })),
   }
+}
+
+/**
+ * The character's abilities for the Skills tab. The options of the learnable
+ * choice ability (the cantrips of a Modern Magic character) are flagged so the
+ * screen lists them under their own heading; nobody else has any.
+ */
+function groupedAbilities(bundle: DerivedBundle, locale: Locale): PlayView['abilities'] {
+  const grouped = new Set(learnableAbility(bundle)?.choice?.options ?? [])
+  return sheetAbilities(bundle, locale).map(({ id, ...ability }) => ({
+    ...ability,
+    grouped: grouped.has(id),
+  }))
 }
 
 /**

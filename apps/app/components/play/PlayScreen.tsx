@@ -465,6 +465,14 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     key: stat.toLowerCase() as PoolKey,
   }))
 
+  // The Skills tab lists abilities, then (Modern Magic) the cantrips under their own heading.
+  const abilityGroups = [
+    { title: copy.skills.abilities, items: view.abilities.filter((a) => !a.grouped) },
+    ...(view.learn && view.abilities.some((a) => a.grouped)
+      ? [{ title: view.learn.abilityName, items: view.abilities.filter((a) => a.grouped) }]
+      : []),
+  ]
+
   const advancementPicker =
     picker === 'pools' ? (
       <PoolSplitPicker
@@ -742,33 +750,37 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               })()}
             </section>
           )}
-          <section>
-            <h2 className="text-text-muted mb-2.5 font-mono text-xs tracking-wider uppercase">
-              {copy.skills.abilities}
-            </h2>
-            <ul>
-              {view.abilities.map((ability) => (
-                <li key={ability.name} className="border-border border-b py-2.5">
-                  <div className="mb-0.5 flex flex-wrap items-baseline gap-2">
-                    <span className="font-display text-text text-sm font-semibold">
-                      {ability.name}
-                    </span>
-                    {ability.meta && (
-                      <span className="text-text-muted font-mono text-[11px]">{ability.meta}</span>
-                    )}
-                    {ability.trained && (
-                      <span className="text-accent font-mono text-[10px] uppercase">
-                        {copy.skills.abilityTrained}
+          {abilityGroups.map((group) => (
+            <section key={group.title}>
+              <h2 className="text-text-muted mb-2.5 font-mono text-xs tracking-wider uppercase">
+                {group.title}
+              </h2>
+              <ul>
+                {group.items.map((ability) => (
+                  <li key={ability.name} className="border-border border-b py-2.5">
+                    <div className="mb-0.5 flex flex-wrap items-baseline gap-2">
+                      <span className="font-display text-text text-sm font-semibold">
+                        {ability.name}
                       </span>
-                    )}
-                  </div>
-                  <p className="text-text-muted text-[13px] leading-relaxed">
-                    {ability.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </section>
+                      {ability.meta && (
+                        <span className="text-text-muted font-mono text-[11px]">
+                          {ability.meta}
+                        </span>
+                      )}
+                      {ability.trained && (
+                        <span className="text-accent font-mono text-[10px] uppercase">
+                          {copy.skills.abilityTrained}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-text-muted text-[13px] leading-relaxed">
+                      {ability.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
         </div>
       )}
 

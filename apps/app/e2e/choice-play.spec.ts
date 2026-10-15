@@ -83,6 +83,10 @@ test('Cantrips taken at tier 2 owe four cantrips, which join the character', asy
   await page.reload()
   await expect(page.getByText(/choose its abilities/)).toHaveCount(0)
   await tab(page, 'Abilities').click()
+  const cantrips = page
+    .locator('section')
+    .filter({ has: page.getByRole('heading', { name: 'Cantrips', exact: true, level: 2 }) })
+  await expect(cantrips.getByRole('listitem')).toHaveCount(4)
   for (const name of ['Bee Cantrip', 'Candles Cantrip', 'Light Switch Cantrip', 'Youth Cantrip']) {
     await expect(page.getByRole('listitem').filter({ hasText: name }).first()).toContainText(
       'Flavor',

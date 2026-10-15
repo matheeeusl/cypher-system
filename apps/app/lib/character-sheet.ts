@@ -51,6 +51,7 @@ export function sheetAbilities(bundle: DerivedBundle, locale: Locale) {
     }[known.source.__typename]
     return [
       {
+        id: ability.id,
         name: loc(ability.name, locale),
         meta: [ability.cost ? t.cost(ability.cost.amount, ability.cost.pool) : null, source]
           .filter(Boolean)

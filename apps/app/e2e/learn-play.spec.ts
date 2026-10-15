@@ -71,6 +71,11 @@ test('learning needs 2 XP, then adds the cantrips, and can be undone', async ({ 
   await expect(page.getByText(/XP Log · 2 XP/)).toBeVisible()
   await page.reload()
   await tab(page, 'Abilities').click()
+  // Cantrips are listed under their own heading, apart from the other abilities
+  const cantrips = page
+    .locator('section')
+    .filter({ has: page.getByRole('heading', { name: 'Cantrips', exact: true, level: 2 }) })
+  await expect(cantrips.getByRole('listitem')).toHaveCount(2)
   for (const name of ['Bee Cantrip', 'Youth Cantrip']) {
     await expect(page.getByRole('listitem').filter({ hasText: name }).first()).toContainText(
       'Flavor',
@@ -86,6 +91,9 @@ test('learning needs 2 XP, then adds the cantrips, and can be undone', async ({ 
   await expect(page.getByText(/XP Log · 4 XP/)).toBeVisible()
   await tab(page, 'Abilities').click()
   await expect(page.getByRole('listitem').filter({ hasText: 'Bee Cantrip' })).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: 'Cantrips', exact: true, level: 2 })).toHaveCount(
+    0,
+  )
 })
 
 test('cleanup', async ({ page }) => {
