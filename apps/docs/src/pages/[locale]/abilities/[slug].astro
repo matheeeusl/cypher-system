@@ -1,8 +1,10 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { getAllAbilities, getTypeById, getFocusById } from '@cypher/content';
+import { getAbilityById, getAllAbilities, getTypeById, getFlavorById, getFocusById } from '@cypher/content';
 import type { Ability } from '@cypher/content';
 import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import AbilityEntry from '@components/AbilityEntry.astro';
+import { FLAVOR_TERM } from '@lib/flavor-term';
 import { formatAbilityCost, formatActionType } from '@lib/ability-format';
 
 export function getStaticPaths() {
@@ -40,16 +42,37 @@ const actionTypeText = formatActionType(ability.action_type, locale);
 // an inert pill rather than a dead link.
 const sourceEntries = ability.sources.map((source) => {
 	const isType = source.type === 'type';
-	const resolved = isType ? getTypeById(source.id) : getFocusById(source.id);
+	const isFlavor = source.type === 'flavor';
+	// An 'ability' source means: one of the options a choice ability (Blessing of
+	// the Gods, Cantrips) asks the player to pick from.
+	const isAbility = source.type === 'ability';
+	const resolved = isType
+		? getTypeById(source.id)
+		: isFlavor
+			? getFlavorById(source.id)
+			: isAbility
+				? getAbilityById(source.id)
+				: getFocusById(source.id);
+	const section = isType ? 'types' : isFlavor ? 'flavors' : isAbility ? 'abilities' : 'foci';
 	return {
 		tier: source.tier,
 		cyberware: source.cyberware ?? false,
 		isType,
-		href: resolved ? `/${locale}/${isType ? 'types' : 'foci'}/${source.id}/` : null,
-		categoryLabel: isType ? t('Type', 'Tipo') : t('Focus', 'Foco'),
+		href: resolved && section ? `/${locale}/${section}/${source.id}/` : null,
+		categoryLabel: isType
+			? t('Type', 'Tipo')
+			: isFlavor
+				? FLAVOR_TERM[locale].singular
+				: isAbility
+					? t('Option of', 'Opção de')
+					: t('Focus', 'Foco'),
 		name: resolved ? pick(resolved.name, locale) : source.id,
 	};
 });
+
+// A choice ability (Blessing of the Gods, Cantrips) lists what it asks the
+// player to pick from. Ids that don't resolve are skipped by <AbilityEntry>.
+const choice = ability.choice ?? null;
 
 const hasCyberwareSource = ability.sources.some((source) => source.cyberware);
 ---
@@ -75,6 +98,21 @@ const hasCyberwareSource = ability.sources.some((source) => source.cyberware);
 			<span class="text-right font-medium text-text">{actionTypeText}</span>
 		</div>
 	</div>
+
+	{
+		choice && (
+			<>
+				<h2>{t(`Choose ${choice.count} of the following`, `Escolha ${choice.count} das seguintes`)}</h2>
+				<div class="not-content border-t border-border">
+					{choice.options.map((id) => (
+						<div class="border-b border-border py-3">
+							<AbilityEntry id={id} locale={locale} />
+						</div>
+					))}
+				</div>
+			</>
+		)
+	}
 
 	<h2>{t('Sources', 'Fontes')}</h2>
 	<div class="flex flex-wrap gap-1.5 not-prose">

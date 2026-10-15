@@ -59,6 +59,10 @@ const ACTION_TYPE_LABELS: Record<Ability['action_type'], [string, string]> = {
   action_to_change_back: ['Action to change back', 'Ação para reverter'],
   action_to_activate: ['Action to activate', 'Ação para ativar'],
   action_per_target_to_initiate: ['Action per target to initiate', 'Ação por alvo para iniciar'],
+  action_to_prepare_and_initiate: [
+    'Action to prepare; action to initiate',
+    'Ação para preparar; ação para iniciar',
+  ],
 }
 
 // English puts the stat before "point(s)" ("4 Intellect points"); Portuguese

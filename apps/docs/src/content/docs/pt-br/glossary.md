@@ -30,6 +30,8 @@ tableOfContents: false
 
 **[Esforço](/pt-br/rules/core-mechanics/#modificando-a-dificuldade)** — Gastar pontos de Reserva para facilitar uma tarefa, em até seis graus, a um custo de 3 pontos pelo primeiro nível e 2 pontos por cada nível adicional.
 
+**[Flavor](/pt-br/flavors/)** — Tradução em breve.
+
 **[Foco](/pt-br/foci/)** — O verbo da frase do personagem ("... que _explora lugares sombrios_") — aquilo que o personagem faz de melhor, concedendo novas habilidades especiais a cada grau.
 
 **[Intrusão do Mestre](/pt-br/rules/experience-and-advancement/#intrusão-do-mestre)** — Uma complicação que o Mestre introduz na história, oferecida ao jogador por 1 XP (2 se ele mesmo a provocar) ou imposta gratuitamente após um 1 natural.

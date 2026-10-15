@@ -34,6 +34,8 @@ tableOfContents: false
 
 **[Effort](/en/rules/core-mechanics/#modifying-the-difficulty)** — Spending Pool points to ease a task, up to six steps, at a cost of 3 points for the first level and 2 for each additional level.
 
+**[Flavor](/en/flavors/)** — An optional customization of a Type: at each tier a character can exchange type abilities for ones from the flavor's list (Combat, Stealth…), tailoring the character to the genre or setting.
+
 **[Focus](/en/foci/)** — The verb in the character sentence ("... who _explores dark places_")—what a character does best, granting new special abilities at every tier.
 
 **[GM Intrusion](/en/rules/experience-and-advancement/#gm-intrusion)** — A complication the GM introduces into the story, offered to the player for 1 XP (2 if they initiate it themselves) or imposed for free after a natural 1.

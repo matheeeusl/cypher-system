@@ -8,6 +8,7 @@ import {
   getAllDescriptors,
   getAllAbilities,
   getAllFoci,
+  getAllFlavors,
   getAllSkills,
   getAllCyphers,
   getAllArtifacts,
@@ -103,6 +104,27 @@ const fociSidebarGroup = {
       label: focus.name.en,
       translations: { 'pt-BR': focus.name['pt-BR'] },
       link: `/foci/${focus.id}/`,
+    })),
+  ],
+}
+
+// Flavors (src/pages/[locale]/flavors/[slug].astro): 2 so far, ten when all are
+// transcribed — short enough to stay expanded, sorted like the Foci group.
+// FLAVOR_TERM: the pt-BR word for "flavor" is still undecided, so the pt-BR
+// label is the English one (see src/lib/flavor-term.ts).
+const flavors = getAllFlavors()
+  .slice()
+  .sort((a, b) => a.name.en.localeCompare(b.name.en))
+
+const flavorsSidebarGroup = {
+  label: 'Flavors',
+  translations: { 'pt-BR': 'Flavors' },
+  items: [
+    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/flavors/' },
+    ...flavors.map((flavor) => ({
+      label: flavor.name.en,
+      translations: { 'pt-BR': flavor.name['pt-BR'] },
+      link: `/flavors/${flavor.id}/`,
     })),
   ],
 }
@@ -254,6 +276,7 @@ export default defineConfig({
         skillsSidebarGroup,
         abilitiesSidebarGroup,
         fociSidebarGroup,
+        flavorsSidebarGroup,
         cyphersSidebarGroup,
         artifactsSidebarGroup,
         // A single fixed page (src/pages/[locale]/equipment/index.astro), not a

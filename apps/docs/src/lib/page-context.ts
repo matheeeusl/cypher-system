@@ -1,3 +1,4 @@
+import { FLAVOR_TERM } from './flavor-term'
 import { URL_LOCALES, type UrlLocale } from './locale'
 
 // Chrome around a page's title (breadcrumb trail + the small "FOCUS"-style
@@ -52,6 +53,11 @@ const SECTIONS: Record<string, Section> = {
   foci: {
     crumb: { en: 'Foci', 'pt-br': 'Focos' },
     kind: { en: 'Focus', 'pt-br': 'Foco' },
+    hasIndex: true,
+  },
+  flavors: {
+    crumb: { en: FLAVOR_TERM.en.plural, 'pt-br': FLAVOR_TERM['pt-br'].plural },
+    kind: { en: FLAVOR_TERM.en.singular, 'pt-br': FLAVOR_TERM['pt-br'].singular },
     hasIndex: true,
   },
   cyphers: {

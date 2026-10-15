@@ -1,0 +1,80 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllFlavors } from '@cypher/content';
+import type { Flavor } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import { FLAVOR_TERM } from '@lib/flavor-term';
+import AbilityEntry from '@components/AbilityEntry.astro';
+
+export function getStaticPaths() {
+	const flavors = getAllFlavors();
+
+	return URL_LOCALES.flatMap((locale) =>
+		flavors.map((flavor) => ({
+			params: { locale, slug: flavor.id },
+			props: { flavor },
+		})),
+	);
+}
+
+interface Props {
+	flavor: Flavor;
+}
+
+const { locale } = Astro.params as { locale: UrlLocale; slug: string };
+const { flavor } = Astro.props as Props;
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+const term = FLAVOR_TERM[locale];
+
+// pt-BR description is empty until the pt-BR term for "flavor" is decided
+// (see lib/flavor-term.ts); show the English text rather than a blank page.
+const description = pick(flavor.description, locale) || flavor.description.en;
+
+// Unlike a Focus, a flavor grants nothing by itself: each tier is a plain
+// list of abilities the player may take in place of type abilities, so every
+// entry renders the same way (no granted/choice split).
+const tiers = Object.entries(flavor.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
+
+const rulesHref = `/${locale}/rules/character-creation/#flavor`;
+---
+
+<StarlightPage
+	frontmatter={{
+		title: pick(flavor.name, locale),
+		description,
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted italic">{description}</p>
+
+	<div class="mb-6 h-px bg-border"></div>
+
+	<h2>{t('Tier Abilities', 'Habilidades por Tier')}</h2>
+	<p class="text-text-muted">
+		{
+			t(
+				'Take these in place of abilities from your type’s list of the same tier. ',
+				'Tradução em breve. ',
+			)
+		}
+		<a href={rulesHref}>{t(`How ${term.plural.toLowerCase()} work`, 'Como funcionam')}</a>
+	</p>
+	{/* not-content on the wrapper (not the rows): opts everything inside out of Starlight's sibling-margin rules, which would otherwise pad every tier row. */}
+	<div class="not-content border-t border-border">
+		{
+			tiers.map(([tier, ids]) => (
+				<div class="grid grid-cols-[4.25rem_1fr] gap-x-4 border-b border-border py-3">
+					<span class="pt-0.5 font-mono text-xs text-accent">
+						{t('Tier', 'Tier')} {tier}
+					</span>
+					<div class="space-y-3">
+						{ids.map((id) => (
+							<AbilityEntry id={id} locale={locale} />
+						))}
+					</div>
+				</div>
+			))
+		}
+	</div>
+</StarlightPage>

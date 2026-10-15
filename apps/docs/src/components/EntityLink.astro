@@ -9,13 +9,15 @@ import {
 	getArtifactById,
 	getCypherById,
 	getDescriptorById,
+	getFlavorById,
 	getFocusById,
 	getTypeById,
 } from '@cypher/content';
+import { FLAVOR_TERM } from '../lib/flavor-term';
 import { pick, type UrlLocale } from '../lib/locale';
 
 interface Props {
-	kind: 'type' | 'descriptor' | 'focus' | 'ability' | 'cypher' | 'artifact';
+	kind: 'type' | 'descriptor' | 'focus' | 'flavor' | 'ability' | 'cypher' | 'artifact';
 	id: string;
 }
 
@@ -28,6 +30,7 @@ const entity = {
 	type: () => getTypeById(id),
 	descriptor: () => getDescriptorById(id),
 	focus: () => getFocusById(id),
+	flavor: () => getFlavorById(id),
 	ability: () => getAbilityById(id),
 	cypher: () => getCypherById(id),
 	artifact: () => getArtifactById(id),
@@ -39,6 +42,7 @@ const categoryLabel = {
 	type: t('Type', 'Tipo'),
 	descriptor: t('Descriptor', 'Descritor'),
 	focus: t('Focus', 'Foco'),
+	flavor: FLAVOR_TERM[locale].singular,
 	ability: t('Ability', 'Habilidade'),
 	cypher: t('Cypher', 'Cifra'),
 	artifact: t('Artifact', 'Artefato'),
@@ -48,6 +52,7 @@ const routeSegment = {
 	type: 'types',
 	descriptor: 'descriptors',
 	focus: 'foci',
+	flavor: 'flavors',
 	ability: 'abilities',
 	cypher: 'cyphers',
 	artifact: 'artifacts',

@@ -1,0 +1,59 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getAllFlavors } from '@cypher/content';
+import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import { FLAVOR_TERM } from '@lib/flavor-term';
+import EntityIndexList from '@components/EntityIndexList.astro';
+
+// One fixed index page per locale — the category's landing page, same shape
+// as foci/index.astro.
+export function getStaticPaths() {
+	return URL_LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: UrlLocale };
+
+const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
+const term = FLAVOR_TERM[locale];
+
+const flavors = getAllFlavors()
+	.slice()
+	.sort((a, b) => a.name.en.localeCompare(b.name.en));
+
+// A flavor's pt-BR description stays empty until the pt-BR term for "flavor"
+// is decided (see lib/flavor-term.ts), so fall back to the English text.
+const rows = flavors.map((flavor) => ({
+	href: `/${locale}/flavors/${flavor.id}/`,
+	name: pick(flavor.name, locale),
+	meta: pick(flavor.description, locale) || flavor.description.en,
+}));
+
+const rulesHref = `/${locale}/rules/character-creation/#${t('flavor', 'flavor')}`;
+---
+
+<StarlightPage
+	frontmatter={{
+		title: term.plural,
+		description: t(
+			'What a flavor is, and every flavor available to customize a Type.',
+			'O que é um flavor, e todos os flavors disponíveis para personalizar um Tipo.',
+		),
+		tableOfContents: false,
+	}}
+>
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				'A flavor is an optional customization of your type. At each tier you can trade a type ability for one from your flavor’s list of the same tier, tailoring the character to the genre or setting — a Warrior with the stealth flavor is an assassin, an Explorer with the technology flavor is an engineer.',
+				'Tradução em breve.',
+			)
+		}
+		<a href={rulesHref}>{t('How flavors work', 'Como funcionam')}</a>
+	</p>
+
+	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
+		{flavors.length} {term.plural.toLowerCase()}
+	</p>
+
+	<EntityIndexList caption={term.plural} rows={rows} />
+</StarlightPage>
