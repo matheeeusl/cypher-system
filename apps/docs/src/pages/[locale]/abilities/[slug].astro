@@ -1,6 +1,6 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { getAbilityById, getAllAbilities, getTypeById, getFlavorById, getFocusById } from '@cypher/content';
+import { getAbilityById, getAllAbilities, getAllFlavors, getTypeById, getFlavorById, getFocusById } from '@cypher/content';
 import type { Ability } from '@cypher/content';
 import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
 import AbilityEntry from '@components/AbilityEntry.astro';
@@ -73,6 +73,12 @@ const sourceEntries = ability.sources.map((source) => {
 // A choice ability (Blessing of the Gods, Cantrips) lists what it asks the
 // player to pick from. Ids that don't resolve are skipped by <AbilityEntry>.
 const choice = ability.choice ?? null;
+// Options that can be bought later for XP (Cantrips) are only open to the flavors
+// that list the ability.
+const learn = choice?.learn ?? null;
+const learnFlavors = learn
+	? getAllFlavors().filter((flavor) => Object.values(flavor.tier_abilities).flat().includes(ability.id))
+	: [];
 
 const hasCyberwareSource = ability.sources.some((source) => source.cyberware);
 ---
@@ -110,6 +116,22 @@ const hasCyberwareSource = ability.sources.some((source) => source.cyberware);
 						</div>
 					))}
 				</div>
+				{learn && learnFlavors.length > 0 && (
+					<p>
+						<strong>{t('Learning more', 'Aprender mais')}</strong> (
+						{learnFlavors.map((flavor, i) => (
+							<>
+								{i > 0 && ', '}
+								<a href={`/${locale}/flavors/${flavor.id}/`}>{pick(flavor.name, locale)}</a>
+							</>
+						))}
+						):{' '}
+						{t(
+							`spend ${learn.xp_cost} XP to learn ${learn.count} more.`,
+							`gaste ${learn.xp_cost} XP para aprender mais ${learn.count}.`,
+						)}
+					</p>
+				)}
 			</>
 		)
 	}
