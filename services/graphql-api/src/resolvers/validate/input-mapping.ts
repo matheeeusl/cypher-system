@@ -37,6 +37,11 @@ export interface AbilityChoiceInput {
   abilityIds: string[]
 }
 
+export interface LearnedOptionInput {
+  abilityId: string
+  optionIds: string[]
+}
+
 export interface IncreasingCapabilitiesPurchaseInput {
   tier: number
   statPoolAllocation: StatAllocationInput
@@ -82,6 +87,7 @@ export interface CharacterChoicesInput {
   descriptorSkillChoices: string[]
   abilitySkillChoices?: AbilitySkillChoiceInput[] | null
   abilityChoices?: AbilityChoiceInput[] | null
+  learnedOptions?: LearnedOptionInput[] | null
   advancementPurchases: AdvancementPurchaseInput[]
 }
 
@@ -145,6 +151,14 @@ export function mapAbilityChoices(list: AbilityChoiceInput[]): Record<string, st
   return Object.fromEntries(list.map(({ key, abilityIds }) => [key, abilityIds]))
 }
 
+export function mapLearnedOptions(list: LearnedOptionInput[]): Record<string, string[]> {
+  const learned: Record<string, string[]> = {}
+  for (const { abilityId, optionIds } of list) {
+    learned[abilityId] = [...(learned[abilityId] ?? []), ...optionIds]
+  }
+  return learned
+}
+
 export function mapCharacterChoicesInput(input: CharacterChoicesInput): CharacterChoices {
   return {
     type_id: input.typeId,
@@ -172,6 +186,9 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       : {}),
     ...((input.abilityChoices ?? []).length > 0
       ? { ability_choices: mapAbilityChoices(input.abilityChoices ?? []) }
+      : {}),
+    ...((input.learnedOptions ?? []).length > 0
+      ? { learned_options: mapLearnedOptions(input.learnedOptions ?? []) }
       : {}),
     advancement_purchases: input.advancementPurchases.map(mapAdvancementPurchase),
   }

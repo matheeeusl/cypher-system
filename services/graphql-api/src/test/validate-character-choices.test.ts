@@ -549,6 +549,57 @@ describe('validateCharacterChoices (flavor)', () => {
       expect(payload.__typename).toBe('InvalidCharacterResult')
       expect(payload.issues?.map((i) => i.code)).toContain('ABILITY_CHOICE_INVALID')
     })
+
+    describe('options learned for XP', () => {
+      const modern = {
+        ...validInput,
+        flavorId: 'modern-magic',
+        tier1TypeAbilityIds: ['bash', 'cantrips', 'swipe', 'improved-edge'],
+        abilityChoices: [
+          {
+            key: 'type:1:cantrips',
+            abilityIds: ['bee-cantrip', 'bug-cantrip', 'candles-cantrip', 'chill-cantrip'],
+          },
+        ],
+      }
+      const learn = (optionIds: string[]) => [{ abilityId: 'cantrips', optionIds }]
+
+      it('adds the learned cantrips, credited to the flavor', async () => {
+        const result = await graphqlRequest<Payload>(QUERY, {
+          input: { ...modern, learnedOptions: learn(['clean-cantrip', 'color-cantrip']) },
+        })
+        expect(result.errors).toBeUndefined()
+        const payload = result.data.validateCharacterChoices
+        expect(payload.__typename).toBe('ValidCharacterResult')
+        const clean = payload.character?.knownAbilities.find((a) => a.abilityId === 'clean-cantrip')
+        expect(clean?.source).toEqual({
+          __typename: 'FlavorAbilitySource',
+          flavorId: 'modern-magic',
+        })
+      })
+
+      it('refuses to learn without the Modern Magic flavor', async () => {
+        const result = await graphqlRequest<Payload>(QUERY, {
+          input: {
+            ...validInput,
+            flavorId: 'magic',
+            learnedOptions: learn(['clean-cantrip', 'color-cantrip']),
+          },
+        })
+        const payload = result.data.validateCharacterChoices
+        expect(payload.__typename).toBe('InvalidCharacterResult')
+        expect(payload.issues?.map((i) => i.code)).toContain('LEARN_NOT_AVAILABLE')
+      })
+
+      it('refuses a half purchase', async () => {
+        const result = await graphqlRequest<Payload>(QUERY, {
+          input: { ...modern, learnedOptions: learn(['clean-cantrip']) },
+        })
+        expect(result.data.validateCharacterChoices.issues?.map((i) => i.code)).toContain(
+          'LEARN_COUNT',
+        )
+      })
+    })
   })
 
   it('surfaces an unknown flavor id as a top-level GraphQL error', async () => {

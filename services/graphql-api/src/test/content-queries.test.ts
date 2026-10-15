@@ -412,6 +412,24 @@ describe('content queries', () => {
     expect(result.data.war?.sources).toContainEqual({ type: 'ABILITY', id: 'blessing-of-the-gods' })
   })
 
+  it('exposes what a choice ability can learn later for XP (Cantrips)', async () => {
+    interface LearnQueryData {
+      cantrips: { choice: { learn: { xpCost: number; count: number } | null } | null } | null
+      blessing: { choice: { learn: unknown } | null } | null
+    }
+
+    const result = await graphqlRequest<LearnQueryData>(`
+      query {
+        cantrips: ability(id: "cantrips") { choice { learn { xpCost count } } }
+        blessing: ability(id: "blessing-of-the-gods") { choice { learn { xpCost count } } }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    expect(result.data.cantrips?.choice?.learn).toEqual({ xpCost: 2, count: 2 })
+    expect(result.data.blessing?.choice?.learn).toBeNull()
+  })
+
   it('resolves a fantastic Cypher with a nested effect table (Chemical Factory)', async () => {
     interface CypherQueryData {
       cypher: {

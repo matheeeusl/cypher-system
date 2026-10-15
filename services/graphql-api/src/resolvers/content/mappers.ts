@@ -160,7 +160,15 @@ export function mapAbility(a: WithVersion<Ability>) {
           options: a.skill_grant.options === 'noncombat' ? [] : a.skill_grant.options,
         }
       : null,
-    choice: a.choice ? { options: a.choice.options, count: a.choice.count } : null,
+    choice: a.choice
+      ? {
+          options: a.choice.options,
+          count: a.choice.count,
+          learn: a.choice.learn
+            ? { xpCost: a.choice.learn.xp_cost, count: a.choice.learn.count }
+            : null,
+        }
+      : null,
     contentVersion: a.content_version,
   }
 }

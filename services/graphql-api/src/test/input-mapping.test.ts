@@ -191,4 +191,18 @@ describe('mapCharacterChoicesInput (ability choices)', () => {
   it('leaves ability_choices out when there are none', () => {
     expect(mapCharacterChoicesInput(base)).not.toHaveProperty('ability_choices')
   })
+
+  it('maps learnedOptions to an ability -> options record, joining repeats', () => {
+    const result = mapCharacterChoicesInput({
+      ...base,
+      learnedOptions: [
+        { abilityId: 'cantrips', optionIds: ['bee-cantrip', 'bug-cantrip'] },
+        { abilityId: 'cantrips', optionIds: ['candles-cantrip', 'chill-cantrip'] },
+      ],
+    })
+    expect(result.learned_options).toEqual({
+      cantrips: ['bee-cantrip', 'bug-cantrip', 'candles-cantrip', 'chill-cantrip'],
+    })
+    expect(mapCharacterChoicesInput(base)).not.toHaveProperty('learned_options')
+  })
 })

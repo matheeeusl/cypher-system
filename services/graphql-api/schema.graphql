@@ -238,6 +238,14 @@ type SkillGrantAlternate {
 type AbilityChoice {
   options: [ID!]!
   count: Int!
+  # Present when more options can be learned later for XP (Cantrips: 2 XP for
+  # two more). Only characters whose flavor lists the ability may.
+  learn: AbilityChoiceLearn
+}
+
+type AbilityChoiceLearn {
+  xpCost: Int!
+  count: Int!
 }
 
 type SkillGrant {
@@ -369,6 +377,13 @@ input AbilityChoiceInput {
   abilityIds: [ID!]!
 }
 
+# Options learned later for XP: `abilityId` is the choice ability (cantrips),
+# `optionIds` the options bought, in multiples of its learn count.
+input LearnedOptionInput {
+  abilityId: ID!
+  optionIds: [ID!]!
+}
+
 input AdvancementPurchaseInput @oneOf {
   increasingCapabilities: IncreasingCapabilitiesPurchaseInput
   movingTowardPerfection: MovingTowardPerfectionPurchaseInput
@@ -413,6 +428,8 @@ input CharacterChoicesInput {
   abilitySkillChoices: [AbilitySkillChoiceInput!]! = []
   # Abilities picked for choice abilities (Blessing of the Gods, Cantrips).
   abilityChoices: [AbilityChoiceInput!]! = []
+  # Options learned later for XP (cantrips). The XP itself isn't tracked here.
+  learnedOptions: [LearnedOptionInput!]! = []
   advancementPurchases: [AdvancementPurchaseInput!]!
 }
 
