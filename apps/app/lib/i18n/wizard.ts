@@ -10,7 +10,15 @@ import type { Locale } from '@/lib/i18n/auth'
 type EntityKind = 'types' | 'descriptors' | 'foci' | 'skills' | 'abilities'
 type SaveErrorReason = 'unauthorized' | 'invalid' | 'limit' | 'unavailable'
 type ReviewRow =
-  'type' | 'descriptor' | 'focus' | 'pools' | 'skills' | 'abilities' | 'equipment' | 'name'
+  | 'type'
+  | 'descriptor'
+  | 'focus'
+  | 'flavor'
+  | 'pools'
+  | 'skills'
+  | 'abilities'
+  | 'equipment'
+  | 'name'
 
 export interface WizardCopy {
   steps: Record<StepId, { label: string; title: string; blurb?: string }>
@@ -62,7 +70,19 @@ export interface WizardCopy {
   abilities: {
     selected: (count: number, needed: number) => string
     grantedByFocus: string
+    flavor: {
+      /** Heading of the optional flavor selector. */
+      heading: string
+      /** Explains what picking one does. */
+      hint: string
+      none: string
+      /** Badge on an ability that comes from the chosen flavor. */
+      badge: string
+      loading: string
+    }
     focusChoice: (pick: number, count: number, needed: number) => string
+    /** Heading of the picker under an ability that asks for other abilities. */
+    optionPick: (abilityName: string, count: number, needed: number) => string
     /** Heading of the skill picker under an ability that trains skills. */
     skillPick: (abilityName: string, count: number, needed: number) => string
     /** A skill the character is already trained in, so it can't be picked again. */
@@ -101,6 +121,7 @@ export interface WizardCopy {
     chooseSkills: (count: number) => string
     chooseAbilities: (count: number) => string
     focusChoices: string
+    abilityOptions: string
     abilitySkills: string
     enterName: string
   }
@@ -207,8 +228,17 @@ const en: WizardCopy = {
   abilities: {
     selected: (count, needed) => `${count} / ${needed} selected`,
     grantedByFocus: 'Granted automatically by your Focus',
+    flavor: {
+      heading: 'Flavor (optional)',
+      hint: 'A flavor adds its abilities to the list below. You still choose four — picking a flavor ability means giving up a Type one.',
+      none: 'None',
+      badge: 'Flavor',
+      loading: 'Loading flavors…',
+    },
     focusChoice: (pick, count, needed) =>
       `Focus choice — pick ${pick} (${count} / ${needed} selected)`,
+    optionPick: (abilityName, count, needed) =>
+      `${abilityName} — choose ${needed} ${needed === 1 ? 'ability' : 'abilities'} (${count} / ${needed} selected)`,
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — choose ${needed} ${needed === 1 ? 'skill' : 'skills'} (${count} / ${needed} selected)`,
     skillTaken: 'already trained',
@@ -235,6 +265,7 @@ const en: WizardCopy = {
       type: 'TYPE',
       descriptor: 'DESCRIPTOR',
       focus: 'FOCUS',
+      flavor: 'FLAVOR',
       pools: 'POOLS',
       skills: 'SKILLS',
       abilities: 'ABILITIES',
@@ -259,6 +290,7 @@ const en: WizardCopy = {
     chooseSkills: (count) => `Choose exactly ${count} trained skill${count === 1 ? '' : 's'}.`,
     chooseAbilities: (count) => `Choose exactly ${count} tier-1 abilities.`,
     focusChoices: 'Make a selection for every Focus choice above.',
+    abilityOptions: 'Choose the abilities each of your chosen abilities asks for.',
     abilitySkills: 'Choose the skills each ability above improves.',
     enterName: 'Enter a character name to continue.',
   },
@@ -305,7 +337,17 @@ const en: WizardCopy = {
       case 'TYPE_ABILITY_DUPLICATE':
         return 'The same ability was chosen more than once.'
       case 'TYPE_ABILITY_UNAVAILABLE':
-        return 'One of the chosen abilities isn’t available to this Type at tier 1.'
+        return 'One of the chosen abilities isn’t available to this Type or flavor at tier 1.'
+      case 'FLAVOR_UNKNOWN':
+        return 'The chosen flavor doesn’t exist.'
+      case 'ABILITY_CHOICE_COUNT':
+        return `That ability asks for only ${param(issue, 'required')} choice(s) — too many were chosen.`
+      case 'ABILITY_CHOICE_INVALID':
+        return 'One of the chosen abilities isn’t among those that ability offers.'
+      case 'ABILITY_CHOICE_DUPLICATE':
+        return 'An ability was chosen more than once, or the character already has it.'
+      case 'ABILITY_CHOICE_UNKNOWN':
+        return 'Abilities were chosen for an ability the character doesn’t have.'
       case 'ABILITY_SKILL_CHOICE_COUNT':
         return `That ability trains only ${param(issue, 'required')} skill(s) — too many were chosen.`
       case 'ABILITY_SKILL_CHOICE_INVALID':
@@ -420,8 +462,18 @@ const ptBr: WizardCopy = {
   abilities: {
     selected: (count, needed) => `${count} / ${needed} selecionadas`,
     grantedByFocus: 'Concedidas automaticamente pelo seu Foco',
+    // UNCONFIRMED: the pt-BR term for "flavor" is still being decided (FLAVORS-PLAN.md).
+    flavor: {
+      heading: 'Flavor (opcional)',
+      hint: 'Um flavor soma as habilidades dele à lista abaixo. Você continua escolhendo quatro — escolher uma habilidade do flavor significa abrir mão de uma do Tipo.',
+      none: 'Nenhum',
+      badge: 'Flavor',
+      loading: 'Carregando flavors…',
+    },
     focusChoice: (pick, count, needed) =>
       `Escolha do Foco — escolha ${pick} (${count} / ${needed} selecionadas)`,
+    optionPick: (abilityName, count, needed) =>
+      `${abilityName} — escolha ${needed} ${needed === 1 ? 'habilidade' : 'habilidades'} (${count} / ${needed} selecionadas)`,
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — escolha ${needed} ${needed === 1 ? 'perícia' : 'perícias'} (${count} / ${needed} selecionadas)`,
     skillTaken: 'já treinada',
@@ -448,6 +500,7 @@ const ptBr: WizardCopy = {
       type: 'TIPO',
       descriptor: 'DESCRITOR',
       focus: 'FOCO',
+      flavor: 'FLAVOR', // UNCONFIRMED, see abilities.flavor above
       pools: 'RESERVAS',
       skills: 'PERÍCIAS',
       abilities: 'HABILIDADES',
@@ -473,6 +526,7 @@ const ptBr: WizardCopy = {
       `Escolha exatamente ${count} ${count === 1 ? 'perícia treinada' : 'perícias treinadas'}.`,
     chooseAbilities: (count) => `Escolha exatamente ${count} habilidades de Grau 1.`,
     focusChoices: 'Faça uma seleção para cada escolha do Foco acima.',
+    abilityOptions: 'Escolha as habilidades que cada uma das suas habilidades escolhidas pede.',
     abilitySkills: 'Escolha as perícias que cada habilidade acima aprimora.',
     enterName: 'Digite o nome do personagem para continuar.',
   },
@@ -519,7 +573,17 @@ const ptBr: WizardCopy = {
       case 'TYPE_ABILITY_DUPLICATE':
         return 'A mesma habilidade foi escolhida mais de uma vez.'
       case 'TYPE_ABILITY_UNAVAILABLE':
-        return 'Uma das habilidades escolhidas não está disponível para este Tipo no Grau 1.'
+        return 'Uma das habilidades escolhidas não está disponível para este Tipo ou flavor no Grau 1.'
+      case 'FLAVOR_UNKNOWN':
+        return 'O flavor escolhido não existe.'
+      case 'ABILITY_CHOICE_COUNT':
+        return `Essa habilidade pede apenas ${param(issue, 'required')} escolha(s) — foram escolhidas demais.`
+      case 'ABILITY_CHOICE_INVALID':
+        return 'Uma das habilidades escolhidas não está entre as que essa habilidade oferece.'
+      case 'ABILITY_CHOICE_DUPLICATE':
+        return 'Uma habilidade foi escolhida mais de uma vez, ou o personagem já a possui.'
+      case 'ABILITY_CHOICE_UNKNOWN':
+        return 'Foram escolhidas habilidades para uma habilidade que o personagem não possui.'
       case 'ABILITY_SKILL_CHOICE_COUNT':
         return `Essa habilidade treina apenas ${param(issue, 'required')} perícia(s) — foram escolhidas demais.`
       case 'ABILITY_SKILL_CHOICE_INVALID':

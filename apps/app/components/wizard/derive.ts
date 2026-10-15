@@ -4,6 +4,7 @@ import type {
   FocusTierAbilityEntry,
   WizardAbility,
   WizardDescriptor,
+  WizardFlavor,
   WizardFocus,
   WizardType,
 } from '@/lib/graphql/queries'
@@ -22,8 +23,28 @@ export interface WizardContent {
   type?: WizardType | undefined
   descriptor?: WizardDescriptor | undefined
   focus?: WizardFocus | undefined
+  /** The chosen flavor; must be loaded whenever `choices.flavorId` is set. */
+  flavor?: WizardFlavor | undefined
   /** The ability catalog; needed to know which abilities grant skills. */
   abilities?: WizardAbility[] | undefined
+}
+
+/**
+ * The tier-1 abilities the player picks their four from: the Type's list, then
+ * the flavor's (a flavor widens the pool; it doesn't change how many are
+ * picked). An ability both offer is listed once, as the Type's.
+ */
+export function tier1PickPool(
+  type: WizardType | undefined,
+  flavor: WizardFlavor | undefined,
+): Array<{ id: string; fromFlavor: boolean }> {
+  const ofType = type?.tierAbilities.find((g) => g.tier === 1)?.abilityIds ?? []
+  const ofFlavor = flavor?.tierAbilities.find((g) => g.tier === 1)?.abilityIds ?? []
+  const typeIds = new Set(ofType)
+  return [
+    ...ofType.map((id) => ({ id, fromFlavor: false })),
+    ...ofFlavor.filter((id) => !typeIds.has(id)).map((id) => ({ id, fromFlavor: true })),
+  ]
 }
 
 /**
@@ -93,6 +114,36 @@ export function tier1SkillGrantSlots(
       ]
     }),
   )
+}
+
+export interface ChoiceSlot {
+  key: string
+  abilityId: string
+  /** How many of `options` the player must pick. */
+  count: number
+  options: string[]
+}
+
+/**
+ * The tier-1 picks that ask for more picks (Blessing of the Gods: two of its
+ * blessings; Cantrips: four cantrips), one slot each. Their key is a Type key
+ * even when the ability comes from a flavor — the engine's `abilityChoiceKey`.
+ */
+export function tier1ChoiceSlots(choices: WizardChoices, content: WizardContent): ChoiceSlot[] {
+  const { abilities } = content
+  if (!abilities) return []
+  return [...new Set(choices.tier1TypeAbilityIds)].flatMap((abilityId): ChoiceSlot[] => {
+    const choice = abilities.find((a) => a.id === abilityId)?.choice
+    if (!choice) return []
+    return [
+      {
+        key: skillGrantKey('type', 1, abilityId),
+        abilityId,
+        count: choice.count,
+        options: choice.options,
+      },
+    ]
+  })
 }
 
 /** Sum of a Descriptor's skill_training choice_count entries — the number of
@@ -180,6 +231,7 @@ export function isStepValid(
       ) {
         return false
       }
+      if (!choiceSlotsComplete(choices, content)) return false
       return tier1SkillGrantSlots(choices, content).every((slot) => {
         const picked = (choices.abilitySkillChoices[slot.key] ?? []).length
         return picked === slot.count || picked === slot.alternate?.count
@@ -192,6 +244,12 @@ export function isStepValid(
     case 'review':
       return true
   }
+}
+
+function choiceSlotsComplete(choices: WizardChoices, content: WizardContent): boolean {
+  return tier1ChoiceSlots(choices, content).every(
+    (slot) => (choices.abilityChoices[slot.key] ?? []).length === slot.count,
+  )
 }
 
 function focusChoicesComplete(choices: WizardChoices, content: WizardContent): boolean {
@@ -230,6 +288,7 @@ export function stepErrorMessage(
         return copy.chooseAbilities(TIER1_TYPE_ABILITY_COUNT)
       }
       if (!focusChoicesComplete(choices, content)) return copy.focusChoices
+      if (!choiceSlotsComplete(choices, content)) return copy.abilityOptions
       return copy.abilitySkills
     }
     case 'background':
@@ -272,6 +331,9 @@ export function buildCharacterChoicesInput(
     return null
   }
 
+  // A flavor the wizard can't resolve (still loading) can't be validated yet.
+  if (choices.flavorId !== null && content.flavor?.id !== choices.flavorId) return null
+
   const poolBonus = descriptor.poolBonus[0]
   const choiceEntries = focusTier1ChoiceEntries(focus)
 
@@ -286,10 +348,21 @@ export function buildCharacterChoicesInput(
     ...Object.entries(tierPicks.skills ?? {}).map(([key, skillIds]) => ({ key, skillIds })),
   ]
 
+  // Same rule for the abilities picked for choice abilities: only those the
+  // character still has. Tier 2+ answers come from tierPicks.
+  const currentChoiceKeys = new Set(tier1ChoiceSlots(choices, content).map((slot) => slot.key))
+  const abilityChoices = [
+    ...Object.entries(choices.abilityChoices)
+      .filter(([key]) => currentChoiceKeys.has(key))
+      .map(([key, abilityIds]) => ({ key, abilityIds })),
+    ...Object.entries(tierPicks.options ?? {}).map(([key, abilityIds]) => ({ key, abilityIds })),
+  ]
+
   return {
     typeId: choices.typeId,
     descriptorId: choices.descriptorId,
     focusId: choices.focusId,
+    ...(choices.flavorId ? { flavorId: choices.flavorId } : {}),
     ...(choices.startingEdgeChoice ? { startingEdgeChoice: choices.startingEdgeChoice } : {}),
     poolPointAllocation: choices.poolAllocation,
     ...(poolBonus
@@ -312,6 +385,7 @@ export function buildCharacterChoicesInput(
       : {}),
     descriptorSkillChoices: choices.descriptorSkillChoices,
     ...(abilitySkillChoices.length > 0 ? { abilitySkillChoices } : {}),
+    ...(abilityChoices.length > 0 ? { abilityChoices } : {}),
     advancementPurchases,
   }
 }

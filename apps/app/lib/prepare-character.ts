@@ -5,6 +5,7 @@ import { parseChoices } from '@/lib/characters-input'
 import {
   fetchAbilities,
   fetchDescriptors,
+  fetchFlavors,
   fetchFoci,
   fetchTypes,
   validateCharacterChoices,
@@ -26,19 +27,22 @@ export async function prepareCharacterData(
   const choices = parseChoices(rawChoices)
   if (!choices) return { ok: false }
 
-  const [types, descriptors, foci, abilities, versions] = await Promise.all([
+  const [types, descriptors, foci, flavors, abilities, versions] = await Promise.all([
     fetchTypes(),
     fetchDescriptors(),
     fetchFoci(),
+    fetchFlavors(),
     fetchAbilities(),
     fetchContentVersions(),
   ])
   const type = types.find((t) => t.id === choices.typeId)
   const descriptor = descriptors.find((d) => d.id === choices.descriptorId)
   const focus = foci.find((f) => f.id === choices.focusId)
-  const content = { type, descriptor, focus, abilities }
+  const flavor = choices.flavorId ? flavors.find((f) => f.id === choices.flavorId) : undefined
+  const content = { type, descriptor, focus, flavor, abilities }
 
   if (!type || !descriptor || !focus) return { ok: false }
+  if (choices.flavorId && !flavor) return { ok: false }
   if (!STEPS.every((step) => isStepValid(step.id, choices, content))) return { ok: false }
 
   const input = buildCharacterChoicesInput(choices, content, advancement, tierPicks)
@@ -64,7 +68,7 @@ export async function prepareCharacterData(
         tier: result.character.tier,
       },
       contentVersions: Object.fromEntries(
-        [type.id, descriptor.id, focus.id].flatMap((key) => {
+        [type.id, descriptor.id, focus.id, ...(flavor ? [flavor.id] : [])].flatMap((key) => {
           const v = versions.get(key)
           return v ? [[key, v]] : []
         }),

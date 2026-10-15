@@ -3,6 +3,7 @@ import type { SavedCharacter } from '@/lib/characters'
 import {
   fetchAbilities,
   fetchDescriptors,
+  fetchFlavors,
   fetchFoci,
   fetchSkills,
   fetchTypes,
@@ -10,6 +11,7 @@ import {
   type DerivedCharacter,
   type WizardAbility,
   type WizardDescriptor,
+  type WizardFlavor,
   type WizardFocus,
   type WizardSkill,
   type WizardType,
@@ -19,6 +21,8 @@ export interface DerivedBundle {
   type: WizardType
   descriptor: WizardDescriptor
   focus: WizardFocus
+  /** The chosen flavor, or null when the character has none. */
+  flavor: WizardFlavor | null
   derived: DerivedCharacter
   skills: WizardSkill[]
   abilities: WizardAbility[]
@@ -31,10 +35,11 @@ export interface DerivedBundle {
  * Shared by the read-only sheet and play mode.
  */
 export async function loadDerived(character: SavedCharacter): Promise<DerivedBundle | null> {
-  const [types, descriptors, foci, skills, abilities] = await Promise.all([
+  const [types, descriptors, foci, flavors, skills, abilities] = await Promise.all([
     fetchTypes(),
     fetchDescriptors(),
     fetchFoci(),
+    fetchFlavors(),
     fetchSkills(),
     fetchAbilities(),
   ])
@@ -43,11 +48,14 @@ export async function loadDerived(character: SavedCharacter): Promise<DerivedBun
   const type = types.find((t) => t.id === choices.typeId)
   const descriptor = descriptors.find((d) => d.id === choices.descriptorId)
   const focus = foci.find((f) => f.id === choices.focusId)
+  const flavor = choices.flavorId ? (flavors.find((f) => f.id === choices.flavorId) ?? null) : null
   if (!type || !descriptor || !focus) return null
+  // A flavor that no longer exists makes the build invalid, like a removed Focus.
+  if (choices.flavorId && !flavor) return null
 
   const input = buildCharacterChoicesInput(
     choices,
-    { type, descriptor, focus, abilities },
+    { type, descriptor, focus, flavor: flavor ?? undefined, abilities },
     character.advancement,
     character.tierPicks,
   )
@@ -55,5 +63,5 @@ export async function loadDerived(character: SavedCharacter): Promise<DerivedBun
   const result = await validateCharacterChoices(input)
   if (result.__typename !== 'ValidCharacterResult') return null
 
-  return { type, descriptor, focus, derived: result.character, skills, abilities }
+  return { type, descriptor, focus, flavor, derived: result.character, skills, abilities }
 }

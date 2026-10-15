@@ -350,7 +350,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   }
 
   async function savePicks(
-    kind: 'type' | 'focus' | 'skill',
+    kind: 'type' | 'focus' | 'skill' | 'option',
     tier: number,
     ids: string[],
     skillKey?: string,
@@ -563,7 +563,9 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               title={
                 p.kind === 'skill'
                   ? copy.picks.skillTitle(p.abilityName ?? '', p.tier)
-                  : copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)
+                  : p.kind === 'option'
+                    ? copy.picks.optionTitle(p.abilityName ?? '', p.tier)
+                    : copy.picks[p.kind === 'type' ? 'typeTitle' : 'focusTitle'](p.tier)
               }
               hint={
                 p.alternateRequired !== null

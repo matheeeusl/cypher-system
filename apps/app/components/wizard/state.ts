@@ -12,6 +12,9 @@ export interface WizardChoices {
   descriptorId: string | null
   descriptorSkillChoices: string[]
   focusId: string | null
+  // Optional. Its abilities join the pool the tier-1 Type abilities are picked
+  // from (the picks themselves stay in `tier1TypeAbilityIds`).
+  flavorId: string | null
   // One entry per tier-1 ChoiceAbility on the selected Focus, in the same
   // order focusTier1ChoiceEntries() returns them. Each inner array holds
   // the *option-bundle indices* currently picked for that entry (into that
@@ -24,6 +27,9 @@ export interface WizardChoices {
   // Skills picked for tier-1 abilities that grant skills, keyed by
   // skillGrantKey('type' | 'focus', 1, abilityId) (see derive.ts).
   abilitySkillChoices: Record<string, string[]>
+  // Abilities picked for tier-1 choice abilities (Blessing of the Gods, Cantrips),
+  // keyed like abilitySkillChoices (`type:1:<abilityId>`).
+  abilityChoices: Record<string, string[]>
   name: string
   background: string
 }
@@ -34,10 +40,12 @@ export const INITIAL_CHOICES: WizardChoices = {
   descriptorId: null,
   descriptorSkillChoices: [],
   focusId: null,
+  flavorId: null,
   focusChoiceSelections: [],
   poolAllocation: { might: 0, speed: 0, intellect: 0 },
   tier1TypeAbilityIds: [],
   abilitySkillChoices: {},
+  abilityChoices: {},
   name: '',
   background: '',
 }

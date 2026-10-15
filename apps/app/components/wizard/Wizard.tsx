@@ -10,6 +10,7 @@ import { AppBrand } from '@/components/AppBrand'
 import {
   fetchAbilities,
   fetchDescriptors,
+  fetchFlavors,
   fetchFoci,
   fetchSkills,
   fetchTypes,
@@ -17,6 +18,7 @@ import {
   type ValidationResult,
   type WizardAbility,
   type WizardDescriptor,
+  type WizardFlavor,
   type WizardFocus,
   type WizardSkill,
   type WizardType,
@@ -35,6 +37,9 @@ import {
   tier1SkillGrantSlots,
   type SkillGrantSlot,
   stepErrorMessage,
+  tier1ChoiceSlots,
+  tier1PickPool,
+  type ChoiceSlot,
 } from './derive'
 import { EquipmentStep } from './EquipmentStep'
 import { ErrorBanner } from './ErrorBanner'
@@ -167,6 +172,12 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
     fetchFoci,
     step.id === 'focus' || step.id === 'abilities' || step.id === 'review',
   )
+  // Needed on the Abilities step (the selector) and the Review step, and
+  // whenever one is already chosen: the live validation can't run without it.
+  const flavors = useEntityList<WizardFlavor>(
+    fetchFlavors,
+    step.id === 'abilities' || step.id === 'review' || choices.flavorId !== null,
+  )
   const skills = useEntityList<WizardSkill>(
     fetchSkills,
     step.id === 'skills' || step.id === 'abilities' || step.id === 'review',
@@ -179,10 +190,12 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
   const selectedType = types.data?.find((t) => t.id === choices.typeId)
   const selectedDescriptor = descriptors.data?.find((d) => d.id === choices.descriptorId)
   const selectedFocus = foci.data?.find((f) => f.id === choices.focusId)
+  const selectedFlavor = flavors.data?.find((f) => f.id === choices.flavorId)
   const content = {
     type: selectedType,
     descriptor: selectedDescriptor,
     focus: selectedFocus,
+    flavor: selectedFlavor,
     abilities: abilities.data ?? undefined,
   }
 
@@ -217,7 +230,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
       clearTimeout(timeoutId)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choices, selectedType, selectedDescriptor, selectedFocus, abilities.data])
+  }, [choices, selectedType, selectedDescriptor, selectedFocus, selectedFlavor, abilities.data])
 
   const stepValid = isStepValid(step.id, choices, content)
   const showLocalError = attemptedNext && !stepValid
@@ -273,7 +286,34 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
       startingEdgeChoice: null,
       tier1TypeAbilityIds: [],
       abilitySkillChoices: withoutSkillKeys(choices.abilitySkillChoices, 'type:'),
+      abilityChoices: {},
     })
+  }
+
+  // Changing the flavor keeps the picks the new pool still offers and drops the
+  // rest (with their skill picks), so no stale flavor ability is left behind.
+  function onSelectFlavor(id: string | null) {
+    const nextFlavor = flavors.data?.find((f) => f.id === id)
+    const stillOffered = new Set(tier1PickPool(selectedType, nextFlavor).map((a) => a.id))
+    setChoices((prev) => {
+      const dropped = prev.tier1TypeAbilityIds.filter((abilityId) => !stillOffered.has(abilityId))
+      return {
+        ...prev,
+        flavorId: id,
+        tier1TypeAbilityIds: prev.tier1TypeAbilityIds.filter((abilityId) =>
+          stillOffered.has(abilityId),
+        ),
+        abilitySkillChoices: dropped.reduce(
+          (record, abilityId) => withoutSkillKey(record, skillGrantKey('type', 1, abilityId)),
+          prev.abilitySkillChoices,
+        ),
+        abilityChoices: dropped.reduce(
+          (record, abilityId) => withoutSkillKey(record, skillGrantKey('type', 1, abilityId)),
+          prev.abilityChoices,
+        ),
+      }
+    })
+    setAttemptedNext(false)
   }
 
   function onSelectFocus(id: string) {
@@ -313,6 +353,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
             prev.abilitySkillChoices,
             skillGrantKey('type', 1, abilityId),
           ),
+          abilityChoices: withoutSkillKey(prev.abilityChoices, skillGrantKey('type', 1, abilityId)),
         }
       }
       if (prev.tier1TypeAbilityIds.length >= 4) return prev
@@ -328,6 +369,17 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
       if (!has && current.length >= Math.max(slot.count, slot.alternate?.count ?? 0)) return prev
       const next = has ? current.filter((id) => id !== skillId) : [...current, skillId]
       return { ...prev, abilitySkillChoices: { ...prev.abilitySkillChoices, [slot.key]: next } }
+    })
+    setAttemptedNext(false)
+  }
+
+  function onToggleAbilityChoice(slot: ChoiceSlot, abilityId: string) {
+    setChoices((prev) => {
+      const current = prev.abilityChoices[slot.key] ?? []
+      const has = current.includes(abilityId)
+      if (!has && current.length >= slot.count) return prev
+      const next = has ? current.filter((id) => id !== abilityId) : [...current, abilityId]
+      return { ...prev, abilityChoices: { ...prev.abilityChoices, [slot.key]: next } }
     })
     setAttemptedNext(false)
   }
@@ -450,6 +502,10 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
             <AbilitiesStep
               type={selectedType}
               focus={selectedFocus}
+              flavors={flavors.data}
+              flavorError={flavors.error}
+              selectedFlavorId={choices.flavorId}
+              onSelectFlavor={onSelectFlavor}
               abilities={abilities.data}
               loading={!abilities.data && !abilities.error}
               error={abilities.error}
@@ -457,6 +513,9 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
               onToggleTypeAbility={onToggleTypeAbility}
               focusChoiceSelections={choices.focusChoiceSelections}
               onToggleFocusChoiceOption={onToggleFocusChoiceOption}
+              choiceSlots={tier1ChoiceSlots(choices, content)}
+              abilityChoices={choices.abilityChoices}
+              onToggleAbilityChoice={onToggleAbilityChoice}
               skills={skills.data}
               skillGrantSlots={tier1SkillGrantSlots(choices, content)}
               abilitySkillChoices={choices.abilitySkillChoices}
@@ -486,6 +545,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
               type={selectedType}
               descriptor={selectedDescriptor}
               focus={selectedFocus}
+              flavor={selectedFlavor}
               skills={skills.data}
               abilities={abilities.data}
               onEdit={(stepId) => goTo(STEPS.findIndex((s) => s.id === stepId))}

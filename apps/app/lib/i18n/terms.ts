@@ -21,6 +21,8 @@ export interface Terms {
   clothingItem: string
   weapon: string
   gear: string
+  /** The optional Type customization (Combat, Stealth…). */
+  flavor: string
   /** "2 moderately priced items", "Up to 4 inexpensive items". */
   items: (count: number, exact: boolean, tier: PriceTier) => string
 }
@@ -54,6 +56,7 @@ const en: Terms = {
   clothingItem: 'A set of ordinary clothing',
   weapon: 'Weapon',
   gear: 'Gear',
+  flavor: 'Flavor',
   items: (count, exact, tier) => {
     const single = count === 1 && exact
     const price = (single ? en.priceTiers : en.priceTiersPlural)[tier]
@@ -91,6 +94,10 @@ const ptBr: Terms = {
   clothingItem: 'Um conjunto de roupas comuns',
   weapon: 'Arma',
   gear: 'Equipamento',
+  // UNCONFIRMED — the pt-BR term for "flavor" is still being decided
+  // (packages/content/FLAVORS-PLAN.md, open question 2). Change it here and in
+  // the docs site's lib/flavor-term.ts.
+  flavor: 'Flavor',
   items: (count, exact, tier) => {
     const single = count === 1 && exact
     const price = (single ? ptBr.priceTiers : ptBr.priceTiersPlural)[tier]

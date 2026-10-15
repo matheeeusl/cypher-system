@@ -6,7 +6,7 @@ const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL ?? 'https://csrd.app'
 
 /** Entity categories that have a generated page in the docs (`/<locale>/<kind>/<id>/`). */
 export type DocsEntityKind =
-  'types' | 'descriptors' | 'foci' | 'skills' | 'abilities' | 'cyphers' | 'artifacts'
+  'types' | 'descriptors' | 'foci' | 'flavors' | 'skills' | 'abilities' | 'cyphers' | 'artifacts'
 
 export const docsLinks = {
   home: (locale: Locale) => `${DOCS_URL}/${locale}/`,

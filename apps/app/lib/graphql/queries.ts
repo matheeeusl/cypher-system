@@ -133,6 +133,32 @@ export async function fetchFoci(): Promise<WizardFocus[]> {
   return foci
 }
 
+// ---- Flavor ----
+
+export interface WizardFlavor {
+  id: string
+  name: LocalizedString
+  /** pt-BR is empty until the flavor term is decided; callers fall back to English. */
+  description: LocalizedString
+  tierAbilities: Array<{ tier: number; abilityIds: string[] }>
+}
+
+const FLAVORS_QUERY = `
+  query Flavors {
+    flavors {
+      id
+      name { en ptBR }
+      description { en ptBR }
+      tierAbilities { tier abilityIds }
+    }
+  }
+`
+
+export async function fetchFlavors(): Promise<WizardFlavor[]> {
+  const { flavors } = await gqlRequest<{ flavors: WizardFlavor[] }>(FLAVORS_QUERY)
+  return flavors
+}
+
 // ---- Skill ----
 
 export interface WizardSkill {
@@ -179,6 +205,8 @@ export interface WizardAbility {
     /** A second shape instead of `count` picks ("or specialized in one"). */
     alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
   } | null
+  /** Set on abilities that ask the player to pick `count` of `options` (other abilities). */
+  choice: { options: string[]; count: number } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
   // values real Ability content actually uses — requesting it crashes the
@@ -195,6 +223,7 @@ const ABILITIES_QUERY = `
       cost { pool amount }
       attack
       skillGrant { count mode noncombat allowCustom options alternate { count mode } }
+      choice { options count }
     }
   }
 `
@@ -216,6 +245,7 @@ export interface CharacterChoicesInput {
   typeId: string
   descriptorId: string
   focusId: string
+  flavorId?: string
   startingEdgeChoice?: Stat
   poolPointAllocation: StatAllocationInput
   descriptorPoolBonus?: { stat: Stat; amount: number }
@@ -225,6 +255,8 @@ export interface CharacterChoicesInput {
   descriptorSkillChoices: string[]
   /** Skills picked for skill-granting abilities; `key` is built by `skillGrantKey`. */
   abilitySkillChoices?: Array<{ key: string; skillIds: string[] }>
+  /** Abilities picked for choice abilities (Blessing of the Gods, Cantrips); `key` as for skills. */
+  abilityChoices?: Array<{ key: string; abilityIds: string[] }>
   // Empty at character creation; play mode adds one entry per purchase, in order.
   advancementPurchases: AdvancementPurchaseInput[]
 }
@@ -247,15 +279,16 @@ export interface DerivedCharacter {
     source:
       | { __typename: 'TypeAbilitySource'; typeId: string }
       | { __typename: 'FocusAbilitySource'; focusId: string }
+      | { __typename: 'FlavorAbilitySource'; flavorId: string }
   }>
   skills: Array<{ skillId: string; level: SkillLevel }>
   /** Level-up choices still owed for tiers already reached. */
   pendingPicks: Array<{
-    kind: 'type' | 'focus' | 'skill'
+    kind: 'type' | 'focus' | 'skill' | 'option'
     tier: number
     required: number
     chosen: number
-    /** Only for kind 'skill': the ability and the `abilitySkillChoices` key it is answered under. */
+    /** Only for kind 'skill' | 'option': the ability and the `abilitySkillChoices` / `abilityChoices` key it is answered under. */
     key: string | null
     abilityId: string | null
     alternateRequired: number | null
@@ -289,6 +322,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
               __typename
               ... on TypeAbilitySource { typeId }
               ... on FocusAbilitySource { focusId }
+              ... on FlavorAbilitySource { flavorId }
             }
           }
           skills { skillId level }

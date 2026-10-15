@@ -12,18 +12,23 @@ const VERSIONS_QUERY = `
     types { id contentVersion }
     descriptors { id contentVersion }
     foci { id contentVersion }
+    flavors { id contentVersion }
   }
 `
 
-/** contentVersion of every Type/Descriptor/Focus, keyed by entity id. */
+/** contentVersion of every Type/Descriptor/Focus/Flavor, keyed by entity id. */
 export async function fetchContentVersions(): Promise<ContentVersions> {
   const data = await gqlRequest<{
     types: VersionRow[]
     descriptors: VersionRow[]
     foci: VersionRow[]
+    flavors: VersionRow[]
   }>(VERSIONS_QUERY)
   return new Map(
-    [...data.types, ...data.descriptors, ...data.foci].map((r) => [r.id, r.contentVersion]),
+    [...data.types, ...data.descriptors, ...data.foci, ...data.flavors].map((r) => [
+      r.id,
+      r.contentVersion,
+    ]),
   )
 }
 

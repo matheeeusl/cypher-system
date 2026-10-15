@@ -1,6 +1,7 @@
 import type {
   WizardAbility,
   WizardDescriptor,
+  WizardFlavor,
   WizardFocus,
   WizardSkill,
   WizardType,
@@ -14,6 +15,7 @@ import {
   descriptorAutoTrainedSkillIds,
   focusTier1ChoiceEntries,
   focusTier1GrantedIds,
+  tier1ChoiceSlots,
   tier1SkillGrantSlots,
 } from './derive'
 import { useWizardI18n } from './i18n'
@@ -24,6 +26,7 @@ interface ReviewStepProps {
   type: WizardType | undefined
   descriptor: WizardDescriptor | undefined
   focus: WizardFocus | undefined
+  flavor: WizardFlavor | undefined
   skills: WizardSkill[] | null
   abilities: WizardAbility[] | null
   onEdit: (stepId: StepId) => void
@@ -34,6 +37,7 @@ export function ReviewStep({
   type,
   descriptor,
   focus,
+  flavor,
   skills,
   abilities,
   onEdit,
@@ -54,6 +58,7 @@ export function ReviewStep({
     type,
     descriptor,
     focus,
+    flavor,
     abilities: abilities ?? undefined,
   }).flatMap((slot) => choices.abilitySkillChoices[slot.key] ?? [])
   const skillIds = [
@@ -70,8 +75,17 @@ export function ReviewStep({
         ),
       )
     : []
+  // The abilities picked for choice abilities (blessings, cantrips) are part of the build.
+  const chosenForAbilityIds = tier1ChoiceSlots(choices, {
+    type,
+    descriptor,
+    focus,
+    flavor,
+    abilities: abilities ?? undefined,
+  }).flatMap((slot) => choices.abilityChoices[slot.key] ?? [])
   const allAbilityIds = [
     ...choices.tier1TypeAbilityIds,
+    ...chosenForAbilityIds,
     ...(focus ? focusTier1GrantedIds(focus) : []),
     ...focusChoiceAbilityIds,
   ]
@@ -80,6 +94,16 @@ export function ReviewStep({
     { key: 'type', value: type ? t(type.name) : '—', stepId: 'type' },
     { key: 'descriptor', value: descriptor ? t(descriptor.name) : '—', stepId: 'descriptor' },
     { key: 'focus', value: focus ? t(focus.name) : '—', stepId: 'focus' },
+    // Optional, and chosen on the Abilities step where the pool it widens is.
+    ...(choices.flavorId
+      ? [
+          {
+            key: 'flavor' as const,
+            value: flavor ? t(flavor.name) : '—',
+            stepId: 'abilities' as const,
+          },
+        ]
+      : []),
     {
       key: 'pools',
       value: type

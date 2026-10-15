@@ -19,9 +19,9 @@ import { terms } from '@/lib/i18n/terms'
 import type { InventoryItem, PlayData, PoolKey, PoolPoints } from '@/lib/play'
 
 export interface PendingChoice {
-  kind: 'type' | 'focus' | 'skill'
+  kind: 'type' | 'focus' | 'skill' | 'option'
   tier: number
-  /** Only for kind 'skill': the choice key to answer under, and the ability it comes from. */
+  /** Only for kind 'skill' | 'option': the choice key to answer under, and the ability it comes from. */
   skillKey: string | null
   abilityName: string | null
   required: number
@@ -159,7 +159,7 @@ function pendingChoices(
   character: SavedCharacter,
   locale: Locale,
 ): PendingChoice[] {
-  const { derived, type, focus, abilities } = bundle
+  const { derived, type, focus, flavor, abilities } = bundle
   const copy = sheetCopy[locale]
   const abilityOf = (id: string) => abilities.find((a) => a.id === id)
   const nameOf = (id: string) => {
@@ -182,16 +182,28 @@ function pendingChoices(
 
   return derived.pendingPicks.flatMap((pick): PendingChoice[] => {
     if (pick.kind === 'type') {
-      const options = type.tierAbilities
+      // The Type's abilities of this tier or lower, then the flavor's (one the
+      // Type also offers is listed once, as the Type's).
+      const flavorLabel = flavor ? `${terms[locale].flavor}: ${loc(flavor.name, locale)}` : ''
+      const groups = [
+        ...type.tierAbilities.map((g) => ({ tier: g.tier, ids: g.abilityIds, extra: '' })),
+        ...(flavor?.tierAbilities ?? []).map((g) => ({
+          tier: g.tier,
+          ids: g.abilityIds,
+          extra: flavorLabel,
+        })),
+      ].sort((x, y) => x.tier - y.tier)
+      const listed = new Set<string>()
+      const options = groups
         .filter((group) => group.tier <= pick.tier)
         .flatMap((group) =>
-          group.abilityIds
-            .filter((id) => !known.has(id))
+          group.ids
+            .filter((id) => !known.has(id) && !listed.has(id) && !!listed.add(id))
             .map((id) => ({
               id,
               label: nameOf(id),
               description: loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale),
-              meta: `${copy.tier} ${group.tier}`,
+              meta: [`${copy.tier} ${group.tier}`, group.extra].filter(Boolean).join(' · '),
             })),
         )
       return [
@@ -202,6 +214,32 @@ function pendingChoices(
           abilityName: null,
           required: pick.required - pick.chosen,
           options,
+          alternateRequired: null,
+          allowCustom: false,
+        },
+      ]
+    }
+    if (pick.kind === 'option') {
+      // The abilities a choice ability offers, minus those already known; all of
+      // them are answered at once.
+      const choice = abilityOf(pick.abilityId ?? '')?.choice
+      if (!pick.key || !pick.abilityId || !choice) return []
+      return [
+        {
+          kind: 'option' as const,
+          tier: pick.tier,
+          skillKey: pick.key,
+          abilityName: nameOf(pick.abilityId),
+          required: pick.required,
+          options: choice.options
+            .filter((id) => !known.has(id))
+            .map((id) => ({
+              id,
+              label: nameOf(id),
+              description: loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale),
+              meta: '',
+            }))
+            .sort((a, b) => a.label.localeCompare(b.label, locale)),
           alternateRequired: null,
           allowCustom: false,
         },

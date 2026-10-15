@@ -44,7 +44,11 @@ export function sheetAbilities(bundle: DerivedBundle, locale: Locale) {
   return bundle.derived.knownAbilities.flatMap((known) => {
     const ability = bundle.abilities.find((a) => a.id === known.abilityId)
     if (!ability) return []
-    const source = known.source.__typename === 'TypeAbilitySource' ? copy.fromType : copy.fromFocus
+    const source = {
+      TypeAbilitySource: copy.fromType,
+      FocusAbilitySource: copy.fromFocus,
+      FlavorAbilitySource: copy.fromFlavor,
+    }[known.source.__typename]
     return [
       {
         name: loc(ability.name, locale),
@@ -75,7 +79,7 @@ export async function buildCharacterSheet(
   const t = terms[locale]
   const bundle = await loadDerived(character)
   if (!bundle) return null
-  const { type, descriptor, focus, derived } = bundle
+  const { type, descriptor, focus, flavor, derived } = bundle
 
   const poolKey = { MIGHT: 'might', SPEED: 'speed', INTELLECT: 'intellect' } as const
   const xpTotal = (play?.xp ?? []).reduce(
@@ -89,6 +93,7 @@ export async function buildCharacterSheet(
     headline: [
       `${loc(descriptor.name, locale)} ${loc(type.name, locale)}`,
       loc(focus.name, locale),
+      ...(flavor ? [`${t.flavor}: ${loc(flavor.name, locale)}`] : []),
       `${copy.tier} ${derived.tier}`,
     ].join(' · '),
     quickStats: [

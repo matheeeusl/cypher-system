@@ -25,6 +25,22 @@ function parseSkillChoices(raw: unknown): Record<string, string[]> | null {
   return out
 }
 
+/** {key: ability ids} for tier-1 choice abilities; keys look like "type:1:blessing-of-the-gods". */
+function parseAbilityChoices(raw: unknown): Record<string, string[]> | null {
+  if (raw === undefined) return {} // saved before choice abilities existed
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
+  const entries = Object.entries(raw)
+  if (entries.length > 10) return null
+  const out: Record<string, string[]> = {}
+  for (const [key, ids] of entries) {
+    if (!/^type:1:[a-z0-9-]{1,100}$/.test(key)) return null
+    if (!Array.isArray(ids) || ids.length > 60) return null
+    if (!ids.every((id) => isString(id) && /^[a-z0-9][a-z0-9-]{0,99}$/.test(id))) return null
+    out[key] = ids as string[]
+  }
+  return out
+}
+
 /**
  * Rebuilds a WizardChoices from known fields only, checking just the shape —
  * a half-finished wizard (empty name, no Type yet) is fine. Used both for
@@ -36,12 +52,16 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
   const r = raw as Record<string, unknown>
   const pool = r.poolAllocation as Record<string, unknown> | undefined
   const edge = r.startingEdgeChoice
+  // Saved (or drafted) before flavors existed: no key means no flavor.
+  const flavorId = r.flavorId === undefined ? null : r.flavorId
   const abilitySkillChoices = parseSkillChoices(r.abilitySkillChoices)
+  const abilityChoices = parseAbilityChoices(r.abilityChoices)
 
   if (
     !isNullableString(r.typeId) ||
     !isNullableString(r.descriptorId) ||
     !isNullableString(r.focusId) ||
+    !isNullableString(flavorId) ||
     !(edge === null || edge === 'MIGHT' || edge === 'SPEED' || edge === 'INTELLECT') ||
     !Array.isArray(r.descriptorSkillChoices) ||
     r.descriptorSkillChoices.length > 10 ||
@@ -54,6 +74,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     !isCount(pool.speed) ||
     !isCount(pool.intellect) ||
     !abilitySkillChoices ||
+    !abilityChoices ||
     !isString(r.name) ||
     !isString(r.background)
   ) {
@@ -67,10 +88,12 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     descriptorId: r.descriptorId,
     descriptorSkillChoices: r.descriptorSkillChoices,
     focusId: r.focusId,
+    flavorId,
     focusChoiceSelections: r.focusChoiceSelections as number[][],
     poolAllocation: { might: pool.might, speed: pool.speed, intellect: pool.intellect },
     tier1TypeAbilityIds: r.tier1TypeAbilityIds,
     abilitySkillChoices,
+    abilityChoices,
     name: r.name,
     background: r.background,
   }

@@ -1,7 +1,21 @@
 import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
-import type { WizardAbility, WizardFocus, WizardSkill, WizardType } from '@/lib/graphql/queries'
+import { DocsLink } from '@/components/DocsLink'
+import { docsLinks } from '@/lib/docs-links'
+import type {
+  WizardAbility,
+  WizardFlavor,
+  WizardFocus,
+  WizardSkill,
+  WizardType,
+} from '@/lib/graphql/queries'
 
-import { focusTier1ChoiceEntries, focusTier1GrantedIds, type SkillGrantSlot } from './derive'
+import {
+  focusTier1ChoiceEntries,
+  focusTier1GrantedIds,
+  tier1PickPool,
+  type ChoiceSlot,
+  type SkillGrantSlot,
+} from './derive'
 import { CustomSkillInput } from './CustomSkillInput'
 import { useWizardI18n } from './i18n'
 import { TIER1_TYPE_ABILITY_COUNT } from './state'
@@ -9,6 +23,11 @@ import { TIER1_TYPE_ABILITY_COUNT } from './state'
 interface AbilitiesStepProps {
   type: WizardType | undefined
   focus: WizardFocus | undefined
+  /** Every flavor, for the optional selector; null while loading. */
+  flavors: WizardFlavor[] | null
+  flavorError: string | null
+  selectedFlavorId: string | null
+  onSelectFlavor: (flavorId: string | null) => void
   abilities: WizardAbility[] | null
   loading: boolean
   error: string | null
@@ -16,6 +35,10 @@ interface AbilitiesStepProps {
   onToggleTypeAbility: (abilityId: string) => void
   focusChoiceSelections: number[][]
   onToggleFocusChoiceOption: (entryIndex: number, optionIndex: number) => void
+  /** The chosen abilities that ask for other abilities (Blessing of the Gods, Cantrips). */
+  choiceSlots: ChoiceSlot[]
+  abilityChoices: Record<string, string[]>
+  onToggleAbilityChoice: (slot: ChoiceSlot, abilityId: string) => void
   /** Skill catalog, for the pickers under abilities that train skills. */
   skills: WizardSkill[] | null
   /** The chosen/granted abilities that train skills, one picker each. */
@@ -29,6 +52,10 @@ interface AbilitiesStepProps {
 export function AbilitiesStep({
   type,
   focus,
+  flavors,
+  flavorError,
+  selectedFlavorId,
+  onSelectFlavor,
   abilities,
   loading,
   error,
@@ -36,13 +63,16 @@ export function AbilitiesStep({
   onToggleTypeAbility,
   focusChoiceSelections,
   onToggleFocusChoiceOption,
+  choiceSlots,
+  abilityChoices,
+  onToggleAbilityChoice,
   skills,
   skillGrantSlots,
   abilitySkillChoices,
   trainedSkillIds,
   onToggleAbilitySkill,
 }: AbilitiesStepProps) {
-  const { copy, terms, t } = useWizardI18n()
+  const { copy, terms, t, locale } = useWizardI18n()
   if (!type) return <p className="text-text-muted text-sm">{copy.chooseTypeFirst}</p>
   if (loading) {
     return <p className="text-text-muted text-sm">{copy.loading(copy.entities.abilities)}</p>
@@ -57,13 +87,57 @@ export function AbilitiesStep({
     const ability = abilityById(id)
     return ability ? t(ability.name) : id
   }
-  const tier1 = type.tierAbilities.find((group) => group.tier === 1)
-  const availableIds = tier1?.abilityIds ?? []
+  const selectedFlavor = flavors?.find((f) => f.id === selectedFlavorId)
+  const pool = tier1PickPool(type, selectedFlavor)
   const choiceEntries = focus ? focusTier1ChoiceEntries(focus) : []
   const grantedFocusIds = focus ? focusTier1GrantedIds(focus) : []
 
   return (
     <div>
+      <div className="border-border bg-panel mb-5 rounded border p-4">
+        <div className="text-text-muted mb-1 font-mono text-[11px] tracking-wide uppercase">
+          {copy.abilities.flavor.heading}
+        </div>
+        <p className="text-text-muted mb-3 text-[12px] leading-relaxed">
+          {copy.abilities.flavor.hint}
+        </p>
+        {flavorError ? (
+          <p className="text-warning text-[12px]">
+            {copy.loadFailed(copy.abilities.flavor.heading, flavorError)}
+          </p>
+        ) : !flavors ? (
+          <p className="text-text-muted text-[12px]">{copy.abilities.flavor.loading}</p>
+        ) : (
+          <div className="flex flex-wrap gap-2">
+            {[
+              { id: null, label: copy.abilities.flavor.none },
+              ...flavors.map((f) => ({ id: f.id, label: t(f.name) })),
+            ].map((option) => {
+              const isSelected = option.id === selectedFlavorId
+              return (
+                <button
+                  key={option.id ?? 'none'}
+                  type="button"
+                  aria-pressed={isSelected}
+                  onClick={() => onSelectFlavor(option.id)}
+                  className={`cursor-pointer rounded border px-3 py-1.5 text-left font-mono text-[12px] ${
+                    isSelected
+                      ? 'border-accent bg-accent-soft text-accent'
+                      : 'border-border bg-panel text-text-muted'
+                  }`}
+                >
+                  {option.label}
+                </button>
+              )
+            })}
+          </div>
+        )}
+        {selectedFlavor && (
+          <div className="mt-3">
+            <DocsLink href={docsLinks.entity(locale, 'flavors', selectedFlavor.id)} />
+          </div>
+        )}
+      </div>
       <div
         className={`mb-3.5 font-mono text-[12px] ${
           selectedTypeAbilityIds.length === TIER1_TYPE_ABILITY_COUNT
@@ -74,7 +148,7 @@ export function AbilitiesStep({
         {copy.abilities.selected(selectedTypeAbilityIds.length, TIER1_TYPE_ABILITY_COUNT)}
       </div>
       <div className="flex max-h-[340px] flex-col gap-2 overflow-y-auto pr-1">
-        {availableIds.map((id) => {
+        {pool.map(({ id, fromFlavor }) => {
           const ability = abilityById(id)
           const isSelected = selectedTypeAbilityIds.includes(id)
           return (
@@ -94,7 +168,14 @@ export function AbilitiesStep({
                 {isSelected ? '✓' : ''}
               </span>
               <div>
-                <div className="text-text text-[14px] font-medium">{abilityName(id)}</div>
+                <div className="text-text text-[14px] font-medium">
+                  {abilityName(id)}
+                  {fromFlavor && selectedFlavor && (
+                    <span className="border-border text-text-muted ml-2 rounded border px-1.5 py-px font-mono text-[10px] tracking-wide uppercase">
+                      {copy.abilities.flavor.badge}: {t(selectedFlavor.name)}
+                    </span>
+                  )}
+                </div>
                 {ability?.cost && (
                   <div className="text-text-muted mt-0.5 font-mono text-[11px]">
                     {terms.cost(ability.cost.amount, ability.cost.pool)}
@@ -128,6 +209,70 @@ export function AbilitiesStep({
           </div>
         </div>
       )}
+
+      {choiceSlots.map((slot) => {
+        const picked = abilityChoices[slot.key] ?? []
+        // An ability picked elsewhere (a Type pick, another blessing) can't be taken again.
+        const taken = new Set(selectedTypeAbilityIds)
+        const sorted = [...slot.options].sort((a, b) =>
+          abilityName(a).localeCompare(abilityName(b)),
+        )
+        return (
+          <div key={slot.key} className="border-border bg-panel mt-5 rounded border p-4">
+            <div
+              className={`mb-2 font-mono text-[11px] tracking-wide uppercase ${
+                picked.length === slot.count ? 'text-accent' : 'text-text-muted'
+              }`}
+            >
+              {copy.abilities.optionPick(abilityName(slot.abilityId), picked.length, slot.count)}
+            </div>
+            <div className="flex max-h-[260px] flex-wrap gap-2 overflow-y-auto pr-1">
+              {sorted.map((optionId) => {
+                const isSelected = picked.includes(optionId)
+                const isUnavailable = !isSelected && taken.has(optionId)
+                const ability = abilityById(optionId)
+                return (
+                  <button
+                    key={optionId}
+                    type="button"
+                    disabled={isUnavailable}
+                    aria-pressed={isSelected}
+                    title={ability ? t(ability.description) : undefined}
+                    onClick={() => onToggleAbilityChoice(slot, optionId)}
+                    className={`rounded border px-3 py-1.5 text-left font-mono text-[12px] ${
+                      isSelected
+                        ? 'border-accent bg-accent-soft text-accent cursor-pointer'
+                        : isUnavailable
+                          ? 'border-border bg-panel text-text-muted cursor-not-allowed opacity-40'
+                          : 'border-border bg-panel text-text-muted cursor-pointer'
+                    }`}
+                  >
+                    {abilityName(optionId)}
+                  </button>
+                )
+              })}
+            </div>
+            {picked.length > 0 && (
+              <ul className="text-text-muted mt-3 flex flex-col gap-1.5 text-[12px] leading-relaxed">
+                {picked.map((optionId) => {
+                  const ability = abilityById(optionId)
+                  return (
+                    <li key={optionId}>
+                      <span className="text-text font-medium">{abilityName(optionId)}</span>
+                      {ability?.cost && (
+                        <span className="ml-2 font-mono text-[11px]">
+                          {terms.cost(ability.cost.amount, ability.cost.pool)}
+                        </span>
+                      )}
+                      {ability && <> — {t(ability.description)}</>}
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+          </div>
+        )
+      })}
 
       {skillGrantSlots.map((slot) => {
         const picked = abilitySkillChoices[slot.key] ?? []
