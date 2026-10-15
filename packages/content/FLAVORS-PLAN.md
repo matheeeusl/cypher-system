@@ -119,3 +119,73 @@ Batch 6 notes:
 - The Cantrips section (pp. 441–445) lists **50** cantrips (the plan said ~55). All cost 1 Intellect point. The note about level-0 creatures stays on Bug Cantrip's text (it explains both pest cantrips).
 - pt-BR names I chose, not in the glossary: "Cantrip" → "Truque" (listed under "Needs confirmation"), the 50 "Truque de/da …" names, the two flavors (Magia, Magia Moderna) and the 18 new abilities.
 - The Magic flavor's Summon Giant Spider and Summon Demon keep their existing text (it already contains the creature stats).
+
+## Follow-up plan (after batch 6)
+
+Everything above shipped in five commits (content, engine, API, docs, app). What is left, in the order I'd do it. Items marked **needs you** can't be finished without a decision or a translation from Matheus.
+
+| Batch | What                                                                                              | Size   | Depends on        |
+| ----- | ------------------------------------------------------------------------------------------------- | ------ | ----------------- |
+| F1    | Widen the GraphQL `ActionType` enum to all 28 content action types                                | small  | —                 |
+| F2    | pt-BR review sheet: every name I chose, in one table to approve or correct; apply the corrections | medium | **needs you**     |
+| F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
+| F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | —                 |
+| F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | decision on D1    |
+| F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | decision on D2    |
+| F7    | Personalized flavors (GM-made lists)                                                              | —      | recommend: skip   |
+
+### F1 — Widen `ActionType`
+
+- Why: the schema has 28 action types, the GraphQL enum 4. Any ability outside those four can't be queried with its `actionType`, which is why the app's abilities query doesn't fetch it.
+- Do: add the missing values to `schema.graphql`, extend the mapper in `resolvers/content/enums.ts`, add a test that every `action_type` value in the content maps to an enum value (fails loudly the next time a type is added).
+- Then, optional: have the wizard and sheet show the action type (Action / Enabler / …) next to each ability. Not required for the flavors.
+- Verify: `pnpm --filter "@cypher/graphql-api..." build` and test.
+
+### F2 — pt-BR review sheet
+
+- Generate one table from the content: English name → my pt-BR name, grouped as (a) the 10 flavors, (b) the ~100 new abilities, (c) the 50 cantrips ("Truque de/da …"), (d) terms that aren't names ("Cantrip", "Safe Sex", "STI").
+- You approve or correct row by row; I apply the corrections to the YAMLs and to the glossary, and move confirmed terms out of "Needs confirmation".
+- Also check the existing inconsistency noticed in batch 1: "asset" is "recurso" in the glossary but "bônus" in Surprise Attack.
+- Nothing is promoted to confirmed without your answer.
+
+### F3 — "Flavor" term and descriptions
+
+- Replace every placeholder: `apps/docs/src/lib/flavor-term.ts` (also the `astro.config.mjs` sidebar label, grep `FLAVOR_TERM`), `terms.flavor`, `abilities.flavor.*` and the review row in the app i18n, `fromFlavor` in `sheet.ts`, the glossary rows, and the "Tradução em breve." stubs in the rules page and glossary.
+- Fill `description.pt-BR` of the ten flavor YAMLs (translate the PDF's intro paragraph of each).
+- Verify: docs build, spot-check `/pt-br/flavors`, run the wizard e2e in pt-br.
+
+### F4 — Learn cantrips for 2 XP
+
+The rule: "spend 2 XP to learn two cantrips (if they are available for you to learn)". Cantrips are the 50 abilities with an `ability` source pointing at `cantrips`.
+
+- Open question — where it's stored. Recommended: a new `advancement` purchase kind `learn-cantrips` carrying the two ability ids. It reuses the existing purchase flow (`applyAdvancement`: atomic write plus a locked XP spend entry) and `revertAdvancement` for undo, and needs no migration if `advancement` stays JSON. The alternative (extra entries in `ability_choices`) can't be refunded cleanly.
+- Engine, test first: validate that both ids are cantrips, not already known, no duplicates; the purchase costs 2 XP; the learned cantrips show up as known abilities with the `cantrips` source. Only a character who has the container? The book says "if they are available to learn", so I'd allow any character whose Type/flavor has access to the Cantrips ability — **to confirm (D3)**.
+- API/app: a purchase picker in play mode (reuse `AbilityPicker`), history entry, undo.
+- Docs: a sentence on the cantrips ability page.
+
+### F5 — Gain a flavor in play
+
+The rule: a flavor can be earned by a character arc, or bought for 4 XP; on gaining it you exchange type abilities (a few extra exchanges if gained after tier 2).
+
+- **D1:** do we model it? Today `flavor_id` is set at creation and affects the tier 1 pool. For a mid-game flavor the exchange has to apply to every tier already reached, so the "pool" idea isn't enough: the player must choose which type ability to swap out and which flavor ability replaces it, per tier.
+- If yes: a `gain-flavor` advancement (4 XP) with a list of `{tier, replaces, with}` swaps; the engine validates tier and that `replaces` is a type ability they have. Revert restores the swaps.
+- If no: document it as GM-handled and drop it. Recommended unless you actually want to play this.
+
+### F6 — Spells, preparation and activation
+
+Large and mostly rules text (3 XP per spell, low/mid/high tier gates, activate by recovery roll or time, prepare up to three swaps after an hour). It also depends on the whole Chapter 9 spell list, which isn't in the content.
+
+- **D2:** recommend not modelling it. Instead add a docs page that summarises the rules (EN and pt-BR) and link it from the Magic and Modern Magic flavors.
+
+### F7 — Personalized flavors
+
+GM-made lists approved per table. Out of scope for a content-driven app; skip.
+
+### Decisions needed
+
+- D1: model "gain a flavor in play" (F5)? Recommended: no.
+- D2: model spell learning/preparation (F6)? Recommended: docs page only.
+- D3: who may learn cantrips (F4)? Recommended: anyone who has the Cantrips ability (Modern Magic) or a flavor that grants it.
+- The pt-BR term for "Flavor" (F3) and the review sheet answers (F2).
+
+Suggested order: F1 and F4 now (no dependencies), F2 whenever you have time to review, F3 right after, F5/F6 only if you answer D1/D2 with yes.
