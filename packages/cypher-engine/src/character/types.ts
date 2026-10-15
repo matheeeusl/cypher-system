@@ -86,6 +86,14 @@ export interface CharacterChoices {
    * any tier, is reported in `pending_picks` rather than being an error.
    */
   ability_choices?: Record<string, string[]>
+
+  /**
+   * Options learned later for XP: choice ability id (Cantrips) -> the options
+   * bought, in multiples of its `choice.learn.count`. Only available when the
+   * character's flavor lists the ability. The XP itself is the caller's to
+   * track (`choice.learn.xp_cost` per purchase).
+   */
+  learned_options?: Record<string, string[]>
 }
 
 export type AdvancementPurchase =

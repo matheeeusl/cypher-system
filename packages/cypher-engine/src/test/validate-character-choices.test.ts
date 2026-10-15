@@ -465,3 +465,72 @@ describe('validateCharacterChoices with a choice ability', () => {
     expect(result.issues.map((i) => i.code)).toContain('ABILITY_CHOICE_UNKNOWN')
   })
 })
+
+describe('validateCharacterChoices with options learned for XP', () => {
+  // A flavor offering Cantrips (2 picked at creation, 2 more per purchase).
+  const modernMagic = { id: 'modern-magic', tier_abilities: { '1': ['cantrips'] } }
+  const ability_choices = {
+    cantrips: { options: ['a', 'b', 'c', 'd', 'e'], count: 2, learn: { xp_cost: 2, count: 2 } },
+  }
+  const base: CharacterChoices = {
+    ...validChoices,
+    flavor_id: 'modern-magic',
+    tier_1_type_ability_ids: ['bash', 'cantrips', 'swipe', 'improved-edge'],
+    ability_choices: { 'type:1:cantrips': ['a', 'b'] },
+  }
+  const withContent = { ...content, flavor: modernMagic, ability_choices }
+
+  it('adds the learned options to the known abilities, credited to the flavor', () => {
+    const result = validateCharacterChoices(
+      { ...base, learned_options: { cantrips: ['d', 'e'] } },
+      withContent,
+    )
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    expect(result.character.known_abilities.find((a) => a.ability_id === 'e')?.source).toEqual({
+      kind: 'flavor',
+      flavor_id: 'modern-magic',
+    })
+  })
+
+  it('reports learning without a flavor that offers the ability', () => {
+    const result = validateCharacterChoices(
+      {
+        ...base,
+        flavor_id: null,
+        tier_1_type_ability_ids: ['bash', 'swipe', 'improved-edge', 'overwatch'],
+        ability_choices: {},
+        learned_options: { cantrips: ['d', 'e'] },
+      },
+      { ...content, ability_choices },
+    )
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues).toContainEqual({
+      code: 'LEARN_NOT_AVAILABLE',
+      params: { abilityId: 'cantrips' },
+    })
+  })
+
+  it('reports an option already picked at creation, and a half purchase', () => {
+    const repeat = validateCharacterChoices(
+      { ...base, learned_options: { cantrips: ['a', 'e'] } },
+      withContent,
+    )
+    expect(repeat.valid).toBe(false)
+    if (!repeat.valid) {
+      expect(repeat.issues.map((i) => i.code)).toContain('LEARN_DUPLICATE')
+    }
+    const half = validateCharacterChoices(
+      { ...base, learned_options: { cantrips: ['e'] } },
+      withContent,
+    )
+    expect(half.valid).toBe(false)
+    if (!half.valid) {
+      expect(half.issues).toContainEqual({
+        code: 'LEARN_COUNT',
+        params: { abilityId: 'cantrips', per: 2 },
+      })
+    }
+  })
+})

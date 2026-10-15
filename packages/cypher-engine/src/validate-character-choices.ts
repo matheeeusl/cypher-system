@@ -9,6 +9,7 @@ import {
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFlavor } from './character/flavor.js'
+import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
 import {
@@ -153,6 +154,15 @@ export function validateCharacterChoices(
       ),
     )
     knownAbilities = [...knownAbilities, ...(chosen ?? [])]
+    const learned = attempt(() =>
+      resolveLearnedOptions(
+        flavor,
+        content.ability_choices ?? {},
+        choices.learned_options ?? {},
+        knownAbilities!,
+      ),
+    )
+    knownAbilities = [...knownAbilities, ...(learned ?? [])]
   }
 
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))

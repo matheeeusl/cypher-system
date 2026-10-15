@@ -13,6 +13,7 @@ import {
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFlavor, type FlavorContent } from './character/flavor.js'
+import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
 import {
@@ -114,6 +115,16 @@ export function deriveCharacter(
       choices.ability_choices ?? {},
       knownAbilities,
       pending,
+    ),
+  ]
+  // Options bought later for XP (Cantrips) come last, so a repeat of anything above is caught.
+  knownAbilities = [
+    ...knownAbilities,
+    ...resolveLearnedOptions(
+      flavor,
+      content.ability_choices ?? {},
+      choices.learned_options ?? {},
+      knownAbilities,
     ),
   ]
 
