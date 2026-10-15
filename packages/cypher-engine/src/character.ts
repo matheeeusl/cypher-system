@@ -5,8 +5,14 @@ import {
   createSkillGrantApplier,
   type SkillGrantsByAbility,
 } from './character/ability-skill-grants.js'
+import {
+  collectAbilityChoiceInstances,
+  resolveAbilityChoices,
+  type AbilityChoicesByAbility,
+} from './character/ability-choices.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
+import { resolveFlavor, type FlavorContent } from './character/flavor.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
 import {
@@ -34,6 +40,8 @@ export interface CharacterContent {
   type: Type
   descriptor: Descriptor
   focus: Focus
+  /** The flavor named by `choices.flavor_id`; required when that is set. */
+  flavor?: FlavorContent | null
   /**
    * Skill grants of the abilities the character could have, by ability id
    * (build it from every Ability that has a `skill_grant`). Left out, no
@@ -41,6 +49,12 @@ export interface CharacterContent {
    * a character must supply it, or `ability_skill_choices` is rejected.
    */
   skill_grants?: SkillGrantsByAbility
+  /**
+   * Choice of the abilities that have one, by ability id (build it from every
+   * Ability with a `choice`). Left out, no ability asks for picks and any
+   * `ability_choices` is rejected.
+   */
+  ability_choices?: AbilityChoicesByAbility
   /** Ids of the skills flagged `combat`; a 'noncombat' grant can't pick them. */
   combat_skill_ids?: string[]
 }
@@ -77,7 +91,8 @@ export function deriveCharacter(
       .filter(([, grant]) => grant.repeatable)
       .map(([id]) => id),
   )
-  const tier1TypeAbilities = resolveTypeAbilities(type, choices.tier_1_type_ability_ids)
+  const flavor = resolveFlavor(choices.flavor_id, content.flavor)
+  const tier1TypeAbilities = resolveTypeAbilities(type, choices.tier_1_type_ability_ids, flavor)
   let knownAbilities: KnownAbility[] = [
     ...tier1TypeAbilities,
     ...resolveTypeTierPicks(
@@ -87,8 +102,19 @@ export function deriveCharacter(
       tier1TypeAbilities.map((a) => a.ability_id),
       pending,
       repeatable,
+      flavor,
     ),
     ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections, pending),
+  ]
+  // Abilities picked for choice abilities (Blessing of the Gods…) join the rest.
+  knownAbilities = [
+    ...knownAbilities,
+    ...resolveAbilityChoices(
+      collectAbilityChoiceInstances(tier, choices, content.ability_choices ?? {}),
+      choices.ability_choices ?? {},
+      knownAbilities,
+      pending,
+    ),
   ]
 
   let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)

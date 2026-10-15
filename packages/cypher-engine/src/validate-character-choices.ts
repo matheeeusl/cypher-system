@@ -2,8 +2,13 @@ import {
   collectSkillGrantInstances,
   createSkillGrantApplier,
 } from './character/ability-skill-grants.js'
+import {
+  collectAbilityChoiceInstances,
+  resolveAbilityChoices,
+} from './character/ability-choices.js'
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
+import { resolveFlavor } from './character/flavor.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
 import {
@@ -82,7 +87,12 @@ export function validateCharacterChoices(
       choices.advancement_purchases,
     ),
   )
-  const typeAbilities = attempt(() => resolveTypeAbilities(type, choices.tier_1_type_ability_ids))
+  // A flavor that can't be resolved is reported once here; the picks below are
+  // then checked as if there were none.
+  const flavor = attempt(() => resolveFlavor(choices.flavor_id, content.flavor)) ?? null
+  const typeAbilities = attempt(() =>
+    resolveTypeAbilities(type, choices.tier_1_type_ability_ids, flavor),
+  )
 
   const skillGrants = content.skill_grants ?? {}
   const pending: PendingPick[] = []
@@ -110,6 +120,7 @@ export function validateCharacterChoices(
               .filter(([, grant]) => grant.repeatable)
               .map(([id]) => id),
           ),
+          flavor,
         ),
       )
     }
@@ -131,6 +142,17 @@ export function validateCharacterChoices(
     )
   } else {
     knownAbilities = [...typeAbilities, ...typePicks, ...focusAbilities]
+    // Abilities picked for choice abilities (Blessing of the Gods…) join the
+    // rest. tier is defined here: typePicks needs it.
+    const chosen = attempt(() =>
+      resolveAbilityChoices(
+        collectAbilityChoiceInstances(tier!, choices, content.ability_choices ?? {}),
+        choices.ability_choices ?? {},
+        knownAbilities!,
+        pending,
+      ),
+    )
+    knownAbilities = [...knownAbilities, ...(chosen ?? [])]
   }
 
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))

@@ -351,3 +351,117 @@ describe('validateCharacterChoices with level-up picks', () => {
     expect(result.issues.some((i) => i.code === 'TIER_TOO_HIGH')).toBe(true)
   })
 })
+
+describe('validateCharacterChoices with a flavor', () => {
+  // Trimmed shape of content/flavors/stealth.yaml.
+  const stealth = { id: 'stealth', tier_abilities: { '1': ['goad', 'legerdemain'] } }
+  const flavored: CharacterChoices = {
+    ...validChoices,
+    flavor_id: 'stealth',
+    tier_1_type_ability_ids: ['bash', 'goad', 'swipe', 'improved-edge'],
+  }
+
+  it('accepts flavor abilities among the tier-1 picks and sources them from the flavor', () => {
+    const result = validateCharacterChoices(flavored, { ...content, flavor: stealth })
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    const goad = result.character.known_abilities.find((a) => a.ability_id === 'goad')
+    expect(goad?.source).toEqual({ kind: 'flavor', flavor_id: 'stealth' })
+  })
+
+  it('lets a Skills advancement train a flavor ability the character knows', () => {
+    const choices: CharacterChoices = {
+      ...flavored,
+      advancement_purchases: completeTier(2, {
+        tier: 2,
+        option: 'skills',
+        target: { kind: 'ability', ability_id: 'goad' },
+      }),
+    }
+    expect(validateCharacterChoices(choices, { ...content, flavor: stealth }).valid).toBe(true)
+  })
+
+  it('reports a flavor abilities pick as unavailable when no flavor is chosen', () => {
+    const result = validateCharacterChoices(
+      { ...flavored, flavor_id: null },
+      { ...content, flavor: stealth },
+    )
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues.map((i) => i.code)).toContain('TYPE_ABILITY_UNAVAILABLE')
+  })
+
+  it('reports FLAVOR_UNKNOWN when the chosen flavor has no content', () => {
+    const result = validateCharacterChoices(flavored, content)
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues[0]).toEqual({ code: 'FLAVOR_UNKNOWN', params: { flavorId: 'stealth' } })
+  })
+})
+
+describe('validateCharacterChoices with a choice ability', () => {
+  // A flavor offering Blessing of the Gods, which asks for 2 of its options.
+  const magic = { id: 'magic', tier_abilities: { '1': ['blessing'] } }
+  const ability_choices = { blessing: { options: ['war', 'sky', 'water'], count: 2 } }
+  const base: CharacterChoices = {
+    ...validChoices,
+    flavor_id: 'magic',
+    tier_1_type_ability_ids: ['bash', 'blessing', 'swipe', 'improved-edge'],
+  }
+  const withContent = { ...content, flavor: magic, ability_choices }
+
+  it('adds the picked abilities to the known ones, credited to the flavor', () => {
+    const result = validateCharacterChoices(
+      { ...base, ability_choices: { 'type:1:blessing': ['war', 'sky'] } },
+      withContent,
+    )
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    const known = result.character.known_abilities
+    expect(known.find((a) => a.ability_id === 'war')?.source).toEqual({
+      kind: 'flavor',
+      flavor_id: 'magic',
+    })
+    expect(known.map((a) => a.ability_id)).toEqual(expect.arrayContaining(['blessing', 'sky']))
+    expect(result.character.pending_picks.filter((p) => p.kind === 'option')).toEqual([])
+  })
+
+  it('owes the picks as a pending choice, not an error, until they are made', () => {
+    const result = validateCharacterChoices(base, withContent)
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    expect(result.character.pending_picks.filter((p) => p.kind === 'option')).toEqual([
+      {
+        kind: 'option',
+        tier: 1,
+        key: 'type:1:blessing',
+        ability_id: 'blessing',
+        required: 2,
+        chosen: 0,
+      },
+    ])
+  })
+
+  it('reports an option the ability does not offer, with a code to localize', () => {
+    const result = validateCharacterChoices(
+      { ...base, ability_choices: { 'type:1:blessing': ['war', 'fire'] } },
+      withContent,
+    )
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues).toContainEqual({
+      code: 'ABILITY_CHOICE_INVALID',
+      params: { abilityId: 'blessing', optionId: 'fire' },
+    })
+  })
+
+  it('rejects picks when the caller supplied no choice definitions', () => {
+    const result = validateCharacterChoices(
+      { ...base, ability_choices: { 'type:1:blessing': ['war', 'sky'] } },
+      { ...content, flavor: magic },
+    )
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues.map((i) => i.code)).toContain('ABILITY_CHOICE_UNKNOWN')
+  })
+})

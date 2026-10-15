@@ -6,6 +6,14 @@ export interface CharacterChoices {
   focus_id: string
 
   /**
+   * Optional flavor (Combat, Stealth…). It adds its abilities to the pool the
+   * Type abilities are picked from — tier 1 in `tier_1_type_ability_ids`, later
+   * tiers in `type_ability_picks` — without changing how many are picked. Pair
+   * it with `CharacterContent.flavor`.
+   */
+  flavor_id?: string | null
+
+  /**
    * Required iff the Type's starting_edge.stat_choices has more than one
    * entry, and must be one of those entries. Supplying it when the Type has
    * only one eligible stat is also invalid — there's nothing to choose.
@@ -70,6 +78,14 @@ export interface CharacterChoices {
    * being an error.
    */
   ability_skill_choices?: Record<string, string[]>
+
+  /**
+   * Abilities picked for choice abilities (Blessing of the Gods: two of its
+   * blessings; Cantrips: any four): `abilityChoiceKey(tier, abilityId)` -> the
+   * picked ability ids. Same keys as `ability_skill_choices`. A shortfall, at
+   * any tier, is reported in `pending_picks` rather than being an error.
+   */
+  ability_choices?: Record<string, string[]>
 }
 
 export type AdvancementPurchase =
@@ -98,7 +114,12 @@ export type AdvancementPurchase =
 // out-of-scope "OTHER OPTIONS" substitution ("select another special
 // ability from your type") could do that — add a source kind for it if/when
 // substitutions get modeled, per "Known gaps" in this package's CLAUDE.md.
-export type AbilitySource = { kind: 'type'; type_id: string } | { kind: 'focus'; focus_id: string }
+export type AbilitySource =
+  | { kind: 'type'; type_id: string }
+  | { kind: 'focus'; focus_id: string }
+  // A flavor ability picked in place of a Type one. The pick still lives in
+  // the Type's lists, so its skill-grant key stays `type:<tier>:<id>`.
+  | { kind: 'flavor'; flavor_id: string }
 
 export interface KnownAbility {
   ability_id: string
@@ -116,6 +137,16 @@ export type SkillLevel = 'inability' | 'practiced' | 'trained' | 'specialized'
 export type PendingPick =
   | { kind: 'type'; tier: number; required: number; chosen: number }
   | { kind: 'focus'; tier: number; required: number; chosen: number }
+  /** Abilities still to choose for a choice ability picked at `tier`. */
+  | {
+      kind: 'option'
+      tier: number
+      /** The `ability_choices` key the picks belong under. */
+      key: string
+      ability_id: string
+      required: number
+      chosen: number
+    }
   /** Skills still to choose for a skill-granting ability gained at `tier`. */
   | {
       kind: 'skill'

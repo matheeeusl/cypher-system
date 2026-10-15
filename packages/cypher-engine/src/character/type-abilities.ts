@@ -1,6 +1,7 @@
 import type { Type } from '@cypher/content'
 
-import type { KnownAbility, PendingPick } from './types.js'
+import type { FlavorContent } from './flavor.js'
+import type { AbilitySource, KnownAbility, PendingPick } from './types.js'
 import { CharacterRuleError } from '../errors.js'
 
 const REQUIRED_TIER_1_COUNT = 4
@@ -9,6 +10,22 @@ const ERRORS = {
   WRONG_COUNT: `Exactly ${REQUIRED_TIER_1_COUNT} tier-1 Type abilities must be chosen`,
   DUPLICATE: 'tier_1_type_ability_ids contains a duplicate',
   NOT_AVAILABLE: (id: string) => `"${id}" is not one of this Type's tier-1 abilities`,
+}
+
+/**
+ * Where a picked ability counts as coming from: the Type if it offers the
+ * ability at any tier, otherwise the flavor. An ability both offer (Danger
+ * Sense) is credited to the Type.
+ */
+function sourceFor(
+  abilityId: string,
+  type: Pick<Type, 'id' | 'tier_abilities'>,
+  flavor: FlavorContent | null | undefined,
+): AbilitySource {
+  const fromType = Object.values(type.tier_abilities).some((ids) => ids.includes(abilityId))
+  return fromType || !flavor
+    ? { kind: 'type', type_id: type.id }
+    : { kind: 'flavor', flavor_id: flavor.id }
 }
 
 /**
@@ -23,6 +40,7 @@ const ERRORS = {
 export function resolveTypeAbilities(
   type: Pick<Type, 'id' | 'tier_abilities' | 'special_ability_id'>,
   tier1AbilityIds: string[],
+  flavor?: FlavorContent | null,
 ): KnownAbility[] {
   if (tier1AbilityIds.length !== REQUIRED_TIER_1_COUNT) {
     throw new CharacterRuleError('TYPE_ABILITY_COUNT', ERRORS.WRONG_COUNT, {
@@ -33,7 +51,10 @@ export function resolveTypeAbilities(
     throw new CharacterRuleError('TYPE_ABILITY_DUPLICATE', ERRORS.DUPLICATE)
   }
 
-  const available = new Set(type.tier_abilities['1'] ?? [])
+  const available = new Set([
+    ...(type.tier_abilities['1'] ?? []),
+    ...(flavor?.tier_abilities['1'] ?? []),
+  ])
   for (const id of tier1AbilityIds) {
     if (!available.has(id))
       throw new CharacterRuleError('TYPE_ABILITY_UNAVAILABLE', ERRORS.NOT_AVAILABLE(id), {
@@ -45,7 +66,7 @@ export function resolveTypeAbilities(
 
   const abilities: KnownAbility[] = tier1AbilityIds.map((ability_id) => ({
     ability_id,
-    source,
+    source: sourceFor(ability_id, type, flavor),
     trained: false,
   }))
 
@@ -80,6 +101,7 @@ export function resolveTypeTierPicks(
   alreadyKnown: string[],
   pending: PendingPick[],
   repeatable: ReadonlySet<string> = new Set(),
+  flavor?: FlavorContent | null,
 ): KnownAbility[] {
   for (const tierKey of Object.keys(picks)) {
     if (Number(tierKey) > currentTier || Number(tierKey) < 2) {
@@ -93,13 +115,16 @@ export function resolveTypeTierPicks(
     }
   }
 
-  const source = { kind: 'type', type_id: type.id } as const
   const known = new Set(alreadyKnown)
   const abilities: KnownAbility[] = []
-  const available = new Set<string>(type.tier_abilities['1'] ?? [])
+  const available = new Set<string>([
+    ...(type.tier_abilities['1'] ?? []),
+    ...(flavor?.tier_abilities['1'] ?? []),
+  ])
 
   for (let tier = 2; tier <= currentTier; tier++) {
     for (const id of type.tier_abilities[String(tier)] ?? []) available.add(id)
+    for (const id of flavor?.tier_abilities[String(tier)] ?? []) available.add(id)
     const required = type.tier_choose_counts[String(tier)] ?? 0
     const chosen = picks[String(tier)] ?? []
     const pickedThisTier = new Set<string>()
@@ -127,7 +152,7 @@ export function resolveTypeTierPicks(
       }
       known.add(id)
       pickedThisTier.add(id)
-      abilities.push({ ability_id: id, source, trained: false })
+      abilities.push({ ability_id: id, source: sourceFor(id, type, flavor), trained: false })
     }
     if (chosen.length < required) {
       pending.push({ kind: 'type', tier, required, chosen: chosen.length })
@@ -139,6 +164,6 @@ export function resolveTypeTierPicks(
 
 /** Pending picks in the order a player would make them: by tier, then Type, Focus, skill choices. */
 export function sortPending(pending: PendingPick[]): PendingPick[] {
-  const rank = { type: 0, focus: 1, skill: 2 } as const
+  const rank = { type: 0, focus: 1, option: 2, skill: 3 } as const
   return [...pending].sort((a, b) => a.tier - b.tier || rank[a.kind] - rank[b.kind])
 }
