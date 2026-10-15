@@ -1,0 +1,13 @@
+id: sense-ambush
+name:
+  en: Sense Ambush
+  pt-BR: Sentir Emboscada
+description:
+  en: You are never surprised by an attack.
+  pt-BR: Você nunca é surpreendido por um ataque.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 2

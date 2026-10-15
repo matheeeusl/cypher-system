@@ -1,0 +1,50 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: technology
+name:
+  en: Technology
+  pt-BR: Tecnologia
+description:
+  en: Characters with a flavor of technology typically are from science fiction or at least
+    modern-day settings (although anything is possible). They excel at using, dealing
+    with, and building machines. An Explorer with technology flavor might be a starship
+    pilot, and a Speaker flavored with technology could be a techno-priest. Some of the
+    less computer-oriented abilities might be appropriate for a steampunk character, while
+    a modern-day character could use some of the abilities that don’t involve starships or
+    ultratech.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - datajack
+    - hacker
+    - machine-interface
+    - scramble-machine
+    - tech-skills
+    - tinker
+  '2':
+    - distant-interface
+    - machine-efficiency
+    - overload-machine
+    - serv-0
+    - serv-0-defender
+    - serv-0-repair
+    - tool-mastery
+  '3':
+    - mechanical-telepathy
+    - serv-0-scanner
+    - ship-footing
+    - shipspeak
+    - spray
+  '4':
+    - machine-bond-remote-device
+    - robot-fighter
+    - serv-0-aim
+    - serv-0-brawler
+    - serv-0-spy
+  '5':
+    - control-machine
+    - jury-rig
+    - machine-companion
+  '6':
+    - information-gathering
+    - master-machine

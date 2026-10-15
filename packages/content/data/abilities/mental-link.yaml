@@ -1,0 +1,26 @@
+id: mental-link
+name:
+  en: Mental Link
+  pt-BR: Vínculo Mental
+description:
+  en: You open a pathway to another creature's mind via a light touch, which allows you to
+    transmit thoughts and images to each other. The mental link remains regardless of
+    distance and lasts for one hour. In addition to the normal options for using Effort,
+    you can choose to use Effort to extend the duration by one hour for each level of
+    Effort applied.
+  pt-BR: Você abre um canal para a mente de outra criatura por meio de um toque leve, o que
+    permite que vocês transmitam pensamentos e imagens um ao outro. O vínculo mental
+    permanece independentemente da distância e dura uma hora. Além das opções normais de
+    uso do Esforço, você pode usar Esforço para estender a duração em uma hora por nível
+    de Esforço aplicado.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: charms-and-figments
+    tier: 1
+  - type: flavor
+    id: magic
+    tier: 1

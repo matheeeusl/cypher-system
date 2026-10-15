@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: consorts-with-the-dead
     tier: 3
+  - type: flavor
+    id: magic
+    tier: 2

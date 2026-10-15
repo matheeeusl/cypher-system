@@ -1,0 +1,39 @@
+id: force-at-distance
+name:
+  en: Force at Distance
+  pt-BR: Força à Distância
+description:
+  en: You temporarily bend the fundamental law of gravity around a creature or object (up to
+    twice your mass) within short range. The target is caught in your telekinetic grip,
+    and you can move it up to a short distance in any direction each round that you retain
+    your hold. A creature in your grip can take actions, but it can’t move under its own
+    power. Each round after the initial attack, you can attempt to keep your grip on the
+    target by spending 2 additional Intellect points and succeeding at a difficulty 2
+    Intellect task. If your concentration lapses, the target drops back to the ground. In
+    addition to the normal options for using Effort, you can choose to use Effort to
+    increase the amount of mass you can affect. Each level allows you to affect a creature
+    or object twice as massive as before. For example, applying one level of Effort would
+    affect a creature four times as massive as you, two levels would affect a creature
+    eight times as massive, three levels would affect a creature sixteen times as massive,
+    and so on.
+  pt-BR: Você curva temporariamente a lei fundamental da gravidade ao redor de uma criatura
+    ou objeto (de até o dobro da sua massa) a distância curta. O alvo fica preso em seu
+    domínio telecinético, e você pode movê-lo até uma distância curta em qualquer direção
+    a cada round em que mantiver o controle. Uma criatura presa pode realizar ações, mas
+    não pode se mover por conta própria. A cada round após o ataque inicial, você pode
+    tentar manter o controle sobre o alvo gastando 2 pontos de Intelecto adicionais e
+    tendo sucesso em uma tarefa de Intelecto de dificuldade 2. Se sua concentração falhar,
+    o alvo cai de volta ao chão. Além das opções normais de uso do Esforço, você pode usar
+    Esforço para aumentar a massa que consegue afetar. Cada nível permite afetar uma
+    criatura ou objeto duas vezes mais massivo que antes. Por exemplo, aplicar um nível de
+    Esforço afetaria uma criatura quatro vezes mais massiva que você, dois níveis
+    afetariam uma criatura oito vezes mais massiva, três níveis, uma criatura dezesseis
+    vezes mais massiva, e assim por diante.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: magic
+    tier: 3

@@ -1,0 +1,31 @@
+id: laundry-day
+name:
+  en: Laundry Day
+  pt-BR: Dia de Lavar Roupa
+description:
+  en: You select two batches of laundry within immediate range, each large enough for a
+    typical washing machine or dryer. The laundry agitates and spins in midair for a
+    minute, becoming clean and dry as it does so, after which it sorts and stacks itself
+    into neat piles or, if you know where it belongs and that's within short range,
+    putting itself away. Particularly dirty clothes automatically take a few extra minutes
+    to finish cleaning and drying. The spell doesn't harm delicate items or clothing that
+    needs special care (such as dry cleaning or low temperature). In addition to the
+    normal options for using Effort, you can use Effort to affect more batches of laundry;
+    each level of Effort affects two additional batches.
+  pt-BR: Você escolhe dois montes de roupa suja a distância imediata, cada um grande o
+    bastante para uma máquina de lavar ou secar comum. A roupa se agita e gira no ar por
+    um minuto, ficando limpa e seca, e depois se separa e se empilha em pilhas organizadas
+    ou, se você souber onde ela deve ficar e isso estiver a distância curta, se guarda
+    sozinha. Roupas muito sujas levam automaticamente alguns minutos a mais para ficar
+    limpas e secas. A magia não danifica itens delicados nem roupas que exigem cuidados
+    especiais (como lavagem a seco ou baixa temperatura). Além das opções normais de uso
+    do Esforço, você pode usar Esforço para afetar mais montes de roupa; cada nível de
+    Esforço afeta dois montes adicionais.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate_and_complete
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 3

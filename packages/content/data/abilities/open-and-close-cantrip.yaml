@@ -1,0 +1,18 @@
+id: open-and-close-cantrip
+name:
+  en: Open and Close Cantrip
+  pt-BR: Truque de Abrir e Fechar
+description:
+  en: You open or close a small object within short range, such as a bag, box, bottle,
+    footlocker, window, or lightweight door. This cantrip cannot lock or unlock locks.
+  pt-BR: Você abre ou fecha um objeto pequeno a distância curta, como uma bolsa, caixa,
+    garrafa, baú, janela ou porta leve. Este truque não consegue trancar nem destrancar
+    fechaduras.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -21,3 +21,9 @@ sources:
   - type: focus
     id: separates-mind-from-body
     tier: 4
+  - type: flavor
+    id: divination
+    tier: 4
+  - type: flavor
+    id: modern-magic
+    tier: 3

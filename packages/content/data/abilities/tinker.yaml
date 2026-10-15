@@ -22,3 +22,6 @@ sources:
   - type: focus
     id: raids
     tier: 2
+  - type: flavor
+    id: technology
+    tier: 1

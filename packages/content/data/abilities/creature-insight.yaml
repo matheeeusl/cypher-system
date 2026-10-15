@@ -1,0 +1,22 @@
+id: creature-insight
+name:
+  en: Creature Insight
+  pt-BR: Discernimento sobre Criaturas
+description:
+  en: When examining any nonhuman creature, you can ask the GM one question to gain an idea
+    of its level, its capabilities, what it eats, what motivates it, what its weaknesses
+    are (if any), how it can be repaired, or any other similar query. This is for
+    difficult or strange creatures beyond those readily identified by using skills.
+  pt-BR: Ao examinar qualquer criatura não humana, você pode fazer uma pergunta ao Mestre
+    para ter uma ideia do nível dela, de suas capacidades, do que ela come, do que a
+    motiva, de quais são seus pontos fracos (se houver), de como ela pode ser consertada
+    ou de qualquer consulta semelhante. Serve para criaturas difíceis ou estranhas, além
+    daquelas que podem ser identificadas com o uso de perícias.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: divination
+    tier: 3

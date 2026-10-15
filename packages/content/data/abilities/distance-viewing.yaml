@@ -1,0 +1,25 @@
+id: distance-viewing
+name:
+  en: Distance Viewing
+  pt-BR: Visão à Distância
+description:
+  en: You know that space and distance are illusions. You concentrate to create an
+    invisible, immobile sensor at a location you have previously visited or viewed (at the
+    GM’s discretion, you may have to succeed at an Intellect task if the location is
+    warded). The sensor lasts for one hour. Once it is created, you can concentrate to
+    see, hear, and smell through the sensor. It doesn’t grant you sensory capabilities
+    beyond the norm.
+  pt-BR: Você sabe que o espaço e a distância são ilusões. Você se concentra para criar um
+    sensor invisível e imóvel em um local que já tenha visitado ou visto (a critério do
+    Mestre, você pode precisar ter sucesso em uma tarefa de Intelecto se o local estiver
+    protegido por proteções mágicas). O sensor dura uma hora. Depois de criado, você pode
+    se concentrar para ver, ouvir e sentir cheiros através dele. Ele não concede
+    capacidades sensoriais além do normal.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action_to_create_and_check
+sources:
+  - type: flavor
+    id: magic
+    tier: 3

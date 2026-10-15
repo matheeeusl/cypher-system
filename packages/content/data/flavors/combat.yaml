@@ -1,0 +1,40 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: combat
+name:
+  en: Combat
+  pt-BR: Combate
+description:
+  en: Combat flavor makes a character more martial. A Speaker with combat flavor in a
+    fantasy setting would be a battle bard. An Explorer with combat flavor in a historical
+    game might be a pirate. An Adept flavored with combat in a science fiction setting
+    could be a veteran of a thousand psychic wars.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - danger-sense
+    - practiced-in-armor
+    - practiced-with-medium-weapons
+  '2':
+    - bloodlust
+    - combat-prowess
+    - trained-without-armor
+  '3':
+    - practiced-with-all-weapons
+    - skill-with-attacks
+    - skill-with-defense
+    - successive-attack
+  '4':
+    - capable-warrior
+    - deadly-aim
+    - fury
+    - misdirect
+    - spray
+  '5':
+    - experienced-defender
+    - hard-target
+    - parry
+  '6':
+    - greater-skill-with-attacks
+    - mastery-in-armor
+    - mastery-with-defense

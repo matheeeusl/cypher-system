@@ -1,0 +1,21 @@
+id: tool-mastery
+name:
+  en: Tool Mastery
+  pt-BR: Maestria com Ferramentas
+description:
+  en: When you have an asset from using a tool, the time required to perform the task is cut
+    in half (minimum one round).
+  pt-BR: Quando você tem um recurso por usar uma ferramenta, o tempo necessário para
+    realizar a tarefa é reduzido pela metade (mínimo de um round).
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 2
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 4
+  - type: flavor
+    id: technology
+    tier: 2

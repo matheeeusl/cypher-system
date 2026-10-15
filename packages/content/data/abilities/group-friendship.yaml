@@ -16,3 +16,6 @@ sources:
   - type: type
     id: explorer
     tier: 5
+  - type: flavor
+    id: cozy-magic
+    tier: 5

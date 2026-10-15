@@ -1,0 +1,27 @@
+id: mending-cantrip
+name:
+  en: Mending Cantrip
+  pt-BR: Truque de Remendar
+description:
+  en: You touch a broken object of up to level 3 and attempt to magically repair a single
+    break or tear in it, such as a cracked stone wall, a shattered hand mirror, or a torn
+    piece of clothing. The damage can be no larger than about what you can cover with both
+    of your open hands. If you succeed at an Intellect-based roll against the object's
+    level, you repair it (although it still shows signs of being previously broken, and
+    may be fragile there). You can use this ability multiple times on the same object to
+    repair larger breaks.
+  pt-BR: Você toca um objeto quebrado de até nível 3 e tenta consertar magicamente uma única
+    quebra ou rasgo nele, como uma parede de pedra rachada, um espelho de mão estilhaçado
+    ou uma peça de roupa rasgada. O dano não pode ser maior do que o que você consegue
+    cobrir com as duas mãos abertas. Se você tiver sucesso em uma rolagem baseada em
+    Intelecto contra o nível do objeto, você o conserta (embora ele ainda mostre sinais de
+    ter sido quebrado e possa ficar frágil ali). Você pode usar esta habilidade várias
+    vezes no mesmo objeto para consertar quebras maiores.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

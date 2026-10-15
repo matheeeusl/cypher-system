@@ -1,0 +1,18 @@
+id: serv-0
+name:
+  en: Serv-0
+  pt-BR: Serv-0
+description:
+  en: You build a tiny robot assistant. It is level 1 and cannot take independent actions or
+    leave your immediate area. In truth, it’s more an extension of you than a separate
+    being. It gains a modification in using machines and other technological devices.
+  pt-BR: Você constrói um pequeno robô assistente. Ele é nível 1 e não pode realizar ações
+    independentes nem sair da sua área imediata. Na verdade, é mais uma extensão de você
+    do que um ser separado. Ele recebe uma modificação no uso de máquinas e outros
+    dispositivos tecnológicos.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 2

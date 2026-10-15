@@ -1,0 +1,24 @@
+id: ignition
+name:
+  en: Ignition
+  pt-BR: Ignição
+description:
+  en: You designate a creature or flammable object you can see within short range to catch
+    fire. This is an Intellect attack. The target takes 6 points of ambient damage per
+    round until the flames are extinguished, which a creature can do by dousing itself in
+    water, rolling on the ground, or smothering the flames. Usually, putting out the
+    flames takes an action.
+  pt-BR: Você designa uma criatura ou objeto inflamável que consiga ver a distância curta
+    para pegar fogo. É um ataque de Intelecto. O alvo sofre 6 pontos de dano ambiental por
+    round até que as chamas sejam apagadas, o que uma criatura pode fazer mergulhando em
+    água, rolando no chão ou abafando as chamas. Normalmente, apagar as chamas exige uma
+    ação.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action_to_initiate
+attack: true
+sources:
+  - type: flavor
+    id: magic
+    tier: 4

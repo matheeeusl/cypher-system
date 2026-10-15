@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: operates-undercover
     tier: 6
+  - type: flavor
+    id: modern-magic
+    tier: 6

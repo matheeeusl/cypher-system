@@ -1,0 +1,30 @@
+id: annoy-electronics
+name:
+  en: Annoy Electronics
+  pt-BR: Importunar Eletrônicos
+description:
+  en: You interfere with the operations of an electronic device. The device must be within
+    short range and you must be able to see it. Your interference is limited to things you
+    could do in a few seconds if you were directly using the device. For example, you
+    could make a person's phone start playing a loud video, type one or two commands on a
+    computer's keyboard, hit a bunch of buttons in an elevator, or change the station or
+    volume on a television screen. You must succeed at an Intellect-based task against the
+    device or its bearer (whichever level is higher). If you have never interacted with
+    the particular device before, the task is hindered by two steps.
+  pt-BR: Você interfere no funcionamento de um dispositivo eletrônico. O dispositivo deve
+    estar a distância curta e você deve conseguir vê-lo. Sua interferência se limita ao
+    que você poderia fazer em poucos segundos se estivesse usando o dispositivo
+    diretamente. Por exemplo, você poderia fazer o celular de alguém começar a tocar um
+    vídeo alto, digitar um ou dois comandos no teclado de um computador, apertar vários
+    botões em um elevador ou mudar a estação ou o volume na tela de uma televisão. Você
+    deve ter sucesso em uma tarefa baseada em Intelecto contra o dispositivo ou seu
+    portador (o que tiver o nível mais alto). Se nunca interagiu com aquele dispositivo
+    antes, a tarefa é dificultada em dois níveis.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

@@ -1,0 +1,19 @@
+id: ghostly-wings-cantrip
+name:
+  en: Ghostly Wings Cantrip
+  pt-BR: Truque das Asas Fantasmagóricas
+description:
+  en: You sprout a pair of ghostly wings that immediately unfurl, then vanish a few seconds
+    later. If you cast this cantrip while falling, you reduce the damage from the fall by
+    1 point.
+  pt-BR: Você faz brotar um par de asas fantasmagóricas que se abrem imediatamente e somem
+    alguns segundos depois. Se você lançar este truque enquanto cai, reduz em 1 ponto o
+    dano da queda.
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

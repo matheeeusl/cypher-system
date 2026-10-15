@@ -40,3 +40,6 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 5
+  - type: flavor
+    id: magic
+    tier: 5

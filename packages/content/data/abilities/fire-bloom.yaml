@@ -16,4 +16,7 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 3
+  - type: flavor
+    id: magic
+    tier: 3
 attack: true

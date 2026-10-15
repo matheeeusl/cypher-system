@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: conjures-bullets
     tier: 2
+  - type: flavor
+    id: modern-magic
+    tier: 2

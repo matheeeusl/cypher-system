@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: entertains
     tier: 4
+  - type: flavor
+    id: charms-and-figments
+    tier: 4

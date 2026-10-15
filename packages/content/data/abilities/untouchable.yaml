@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: exists-partially-out-of-phase
     tier: 5
+  - type: flavor
+    id: protection
+    tier: 6

@@ -13,3 +13,9 @@ sources:
   - type: type
     id: adept
     tier: 1
+  - type: flavor
+    id: protection
+    tier: 1
+  - type: flavor
+    id: modern-magic
+    tier: 1

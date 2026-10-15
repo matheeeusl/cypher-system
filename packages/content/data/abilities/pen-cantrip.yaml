@@ -1,0 +1,21 @@
+id: pen-cantrip
+name:
+  en: Pen Cantrip
+  pt-BR: Truque da Caneta
+description:
+  en: You write with your finger on a surface for up to ten minutes as if using a common
+    ballpoint pen. The "ink" immediately dries once you write, but it can be smeared or
+    cleaned up like a normal pen. The ink is blue, black, or dark brown, decided when you
+    cast this cantrip.
+  pt-BR: Você escreve com o dedo em uma superfície por até dez minutos como se usasse uma
+    esferográfica comum. A "tinta" seca imediatamente depois de escrita, mas pode ser
+    borrada ou limpa como a de uma caneta normal. A tinta é azul, preta ou marrom-escura,
+    definida quando você lança este truque.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

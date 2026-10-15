@@ -1,0 +1,14 @@
+id: serv-0-aim
+name:
+  en: Serv-0 Aim
+  pt-BR: Serv-0 Mira
+description:
+  en: Your Serv-0 aids you in ranged combat. It gains a modification in ranged attacks.
+  pt-BR: Seu Serv-0 ajuda você em combate à distância. Ele recebe uma modificação em ataques
+    à distância.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 4

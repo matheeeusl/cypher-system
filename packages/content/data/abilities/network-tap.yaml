@@ -30,3 +30,6 @@ sources:
   - type: focus
     id: merges-mind-with-machine
     tier: 4
+  - type: flavor
+    id: modern-magic
+    tier: 3

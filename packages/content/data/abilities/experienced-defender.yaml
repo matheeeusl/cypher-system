@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: stretches
     tier: 1
+  - type: flavor
+    id: combat
+    tier: 5

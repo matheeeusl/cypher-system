@@ -1,0 +1,32 @@
+id: gift-of-appeasement
+name:
+  en: Gift of Appeasement
+  pt-BR: Presente de Apaziguamento
+description:
+  en: You conjure a trifle that can fit in one hand and will please a creature within
+    immediate range. The object is impractical and inexpensive, but delightful to the
+    creature. Examples include their favorite kind of cookie, a small crafted coffee
+    beverage, or a paper origami of their favorite animal. You don't know what the spell
+    will create, but you know it will please them if you give it as a gift. If the
+    creature spends one minute appreciating the object (such as eating the cookie,
+    drinking the coffee, or examining the origami), they gain an asset on one task of
+    their choosing within one hour. In addition to the normal options for using Effort,
+    you can use Effort to affect more creatures; each level of Effort affects one
+    additional creature.
+  pt-BR: Você conjura uma lembrança simples, que cabe em uma das mãos e agradará a uma
+    criatura a uma distância imediata. O objeto é pouco prático e barato, mas encantador
+    para a criatura. Exemplos incluem seu tipo de biscoito favorito, um café artesanal
+    pequeno ou um origami de papel do seu animal favorito. Você não sabe o que a magia
+    criará, mas sabe que agradará à criatura se você a oferecer como presente. Se a
+    criatura passar um minuto apreciando o objeto (comendo o biscoito, bebendo o café ou
+    examinando o origami), ela ganha um recurso em uma tarefa à escolha dela dentro de uma
+    hora. Além das opções normais de uso do Esforço, você pode usar Esforço para afetar
+    mais criaturas; cada nível de Esforço afeta uma criatura adicional.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_per_target_to_initiate
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 1

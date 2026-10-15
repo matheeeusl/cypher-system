@@ -1,0 +1,38 @@
+id: emotional-support-pet
+name:
+  en: Emotional Support Pet
+  pt-BR: Pet de Apoio Emocional
+description:
+  en: 'You conjure an adorable animal that most people find irresistibly cute, such as a
+    puppy, kitten, or bunny, who is outgoing and friendly and otherwise acts according to
+    its nature. Anyone in short range who can see the animal eases their defense tasks
+    against negative feelings (such as anger, fear, sadness, and worry) for the next hour.
+    Anyone who pets, cuddles, or plays with this animal for at least a round or two (up to
+    four people can do so at once) feels happier for the next hour and adds +1 to any
+    recovery rolls they make during that time. At the end of the spell, the conjured
+    animal curls up, falls asleep, and disappears in a puff of smoke. If the animal is
+    harmed in any way, anyone who saw it happen eases all rolls against the creature
+    responsible for the harm. In addition to the normal options for using Effort, you can
+    conjure three additional animals for each level of Effort you apply to this ability.
+    Adorable animal: level 1, positive social interactions as level 3.'
+  pt-BR: 'Você conjura um animal adorável que a maioria das pessoas acha irresistivelmente
+    fofo, como um filhote de cachorro, um gatinho ou um coelhinho, que é extrovertido,
+    amigável e age conforme a própria natureza. Qualquer pessoa a distância curta que
+    consiga ver o animal facilita suas tarefas de defesa contra sentimentos negativos
+    (como raiva, medo, tristeza e preocupação) pela próxima hora. Quem fizer carinho,
+    abraçar ou brincar com o animal por pelo menos um ou dois rounds (até quatro pessoas
+    ao mesmo tempo) se sente mais feliz pela próxima hora e soma +1 a qualquer rolagem de
+    recuperação que fizer nesse período. No fim da magia, o animal conjurado se enrosca,
+    adormece e desaparece em uma nuvem de fumaça. Se o animal for ferido de qualquer
+    forma, todos que viram isso acontecer facilitam todas as rolagens contra a criatura
+    responsável pelo dano. Além das opções normais de uso do Esforço, você pode conjurar
+    três animais adicionais para cada nível de Esforço aplicado a esta habilidade. Animal
+    adorável: nível 1, interações sociais positivas como nível 3.'
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 2

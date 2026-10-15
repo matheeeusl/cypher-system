@@ -15,3 +15,6 @@ sources:
   - type: type
     id: speaker
     tier: 5
+  - type: flavor
+    id: cozy-magic
+    tier: 6

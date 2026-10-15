@@ -19,3 +19,9 @@ sources:
   - type: focus
     id: speaks-for-the-land
     tier: 3
+  - type: flavor
+    id: charms-and-figments
+    tier: 3
+  - type: flavor
+    id: modern-magic
+    tier: 4

@@ -1,0 +1,30 @@
+id: misdirect-blame
+name:
+  en: Misdirect Blame
+  pt-BR: Desviar a Culpa
+description:
+  en: Using your clever words and knowledge of others, you can attempt to alter the
+    narrative so that a target of up to level 3 within short range becomes uncertain of
+    its conviction in one simple area, such as their conviction that you just stole a
+    fruit from their stand or their belief that they've never met you before. This effect
+    usually lasts only for the period of time you spend speaking, and perhaps up to a
+    minute longer, before the target realizes its error. In addition to the normal options
+    for using Effort, you can choose to use Effort to increase the target level that can
+    be affected. Afterward, all your tasks to persuade or otherwise socially interact with
+    the target are hindered.
+  pt-BR: Usando suas palavras habilidosas e seu conhecimento das pessoas, você pode tentar
+    alterar a narrativa de modo que um alvo de até nível 3 a distância curta fique incerto
+    de sua convicção em uma área simples, como a convicção de que você acabou de roubar
+    uma fruta da barraca dele ou a crença de que nunca o viu antes. Esse efeito costuma
+    durar apenas o tempo em que você fala, e talvez até um minuto a mais, antes que o alvo
+    perceba o erro. Além das opções normais de uso do Esforço, você pode usar Esforço para
+    aumentar o nível do alvo que pode ser afetado. Depois disso, todas as suas tarefas
+    para persuadir ou interagir socialmente com o alvo são dificultadas.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: charms-and-figments
+    tier: 2

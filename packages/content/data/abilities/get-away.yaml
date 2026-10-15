@@ -1,0 +1,17 @@
+id: get-away
+name:
+  en: Get Away
+  pt-BR: Escapar
+description:
+  en: After your action on your turn, you move up to a short distance or get behind or
+    beneath cover within immediate range.
+  pt-BR: Depois da sua ação no seu turno, você se move até uma distância curta ou se coloca
+    atrás ou sob uma cobertura a uma distância imediata.
+cost:
+  pool: speed
+  amount: 2
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 2

@@ -1,0 +1,69 @@
+id: cantrips
+name:
+  en: Cantrips
+  pt-BR: Truques
+description:
+  en: Choose any four cantrips. Cantrips are simple spells that almost anyone can learn.
+    Attack rolls with cantrips are hindered by two steps—but there are a few exceptions.
+  pt-BR: Escolha quaisquer quatro truques. Truques são magias simples que quase qualquer
+    pessoa pode aprender. Rolagens de ataque com truques são dificultadas em dois níveis,
+    com algumas exceções.
+cost: null
+action_type: enabler
+choice:
+  options:
+    - bee-cantrip
+    - bug-cantrip
+    - candles-cantrip
+    - chill-cantrip
+    - clean-cantrip
+    - color-cantrip
+    - convenient-rideshare-cantrip
+    - cooking-cantrip
+    - cut-cantrip
+    - darkness-cantrip
+    - erase-cantrip
+    - exterminate-cantrip
+    - extra-chair-cantrip
+    - extra-fries-cantrip
+    - fire-crown-cantrip
+    - firework-cantrip
+    - flavor-cantrip
+    - forbidden-topic-cantrip
+    - gather-cantrip
+    - ghostly-wings-cantrip
+    - green-light-cantrip
+    - hand-cantrip
+    - hide-cantrip
+    - light-switch-cantrip
+    - loudness-cantrip
+    - mask-cantrip
+    - mending-cantrip
+    - message-cantrip
+    - mystic-eyes-cantrip
+    - obedient-flames-cantrip
+    - open-and-close-cantrip
+    - pen-cantrip
+    - present-cantrip
+    - quiet-cantrip
+    - rainbow-cantrip
+    - reshape-cantrip
+    - smoke-cantrip
+    - sprout-cantrip
+    - stitch-cantrip
+    - tattoo-cantrip
+    - throwing-stone-cantrip
+    - tie-cantrip
+    - tiny-illusion-cantrip
+    - tremor-cantrip
+    - warm-cantrip
+    - wash-car-cantrip
+    - wet-or-dry-cantrip
+    - wireless-network-cantrip
+    - wrap-cantrip
+    - youth-cantrip
+  count: 4
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

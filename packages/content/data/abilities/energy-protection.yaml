@@ -28,3 +28,6 @@ sources:
   - type: type
     id: adept
     tier: 3
+  - type: flavor
+    id: protection
+    tier: 3

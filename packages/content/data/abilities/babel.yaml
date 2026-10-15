@@ -16,3 +16,6 @@ sources:
   - type: type
     id: speaker
     tier: 1
+  - type: flavor
+    id: divination
+    tier: 1

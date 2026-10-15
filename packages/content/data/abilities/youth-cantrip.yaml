@@ -1,0 +1,17 @@
+id: youth-cantrip
+name:
+  en: Youth Cantrip
+  pt-BR: Truque da Juventude
+description:
+  en: You change the appearance of your face so you look about ten years younger than your
+    normal appearance, lasting about an hour.
+  pt-BR: Você muda a aparência do seu rosto para parecer cerca de dez anos mais jovem do que
+    sua aparência normal, por cerca de uma hora.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

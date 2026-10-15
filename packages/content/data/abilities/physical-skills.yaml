@@ -18,6 +18,9 @@ sources:
   - type: type
     id: warrior
     tier: 1
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 1
 skill_grant:
   count: 2
   options:

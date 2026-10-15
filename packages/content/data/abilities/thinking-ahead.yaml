@@ -1,0 +1,23 @@
+id: thinking-ahead
+name:
+  en: Thinking Ahead
+  pt-BR: Pensando à Frente
+description:
+  en: You produce a remedy that removes a negative condition because you've previously spent
+    considerable time thinking ahead and preparing for your current situation. For
+    instance, if another character is poisoned, you produce an antidote, or if they're
+    blinded, you produce a salve that returns sight (assuming they weren't blinded because
+    their eyes were destroyed). The Intellect cost for using this ability is equal to the
+    level of effect or creature that caused the negative condition.
+  pt-BR: Você produz um remédio que remove uma condição negativa porque passou bastante
+    tempo pensando à frente e se preparando para a situação atual. Por exemplo, se outro
+    personagem estiver envenenado, você produz um antídoto; se estiver cego, produz um
+    unguento que devolve a visão (desde que a cegueira não tenha sido causada pela
+    destruição dos olhos). O custo de Intelecto para usar esta habilidade é igual ao nível
+    do efeito ou da criatura que causou a condição negativa.
+cost: null
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 4

@@ -1,0 +1,22 @@
+id: unstealable-charm
+name:
+  en: Unstealable Charm
+  pt-BR: Amuleto Inroubável
+description:
+  en: An object you are holding, touching, or wearing becomes more difficult to steal;
+    attempts to remove it from your person without your knowledge or permission are
+    hindered. In addition to the normal options for using Effort, you can apply Effort to
+    hinder such attempts by an additional step. The charm lasts for twenty-four hours.
+  pt-BR: Um objeto que você esteja segurando, tocando ou vestindo se torna mais difícil de
+    roubar; as tentativas de tirá-lo de você sem o seu conhecimento ou permissão são
+    dificultadas. Além das opções normais de uso do Esforço, você pode aplicar Esforço
+    para dificultar essas tentativas em mais um nível. O amuleto dura vinte e quatro
+    horas.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: protection
+    tier: 3

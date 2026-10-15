@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: murders
     tier: 1
+  - type: flavor
+    id: stealth
+    tier: 2

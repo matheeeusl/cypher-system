@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: inks-spells-on-skin
     tier: 5
+  - type: flavor
+    id: modern-magic
+    tier: 5

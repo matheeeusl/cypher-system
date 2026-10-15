@@ -1,0 +1,23 @@
+id: lock
+name:
+  en: Lock
+  pt-BR: Trancar
+description:
+  en: A door, gate, chest, drawer, locket, or other object that can be closed within long
+    range snaps shut and is magically locked (level 3 effect) for one hour. If an object
+    or creature is physically holding the target object open, you must also succeed on an
+    Intellect-based attack. For each level of Effort you apply, the quality of the magical
+    lock increases by one level.
+  pt-BR: Uma porta, portão, baú, gaveta, medalhão ou outro objeto que possa ser fechado, a
+    distância longa, se fecha com um estalo e é trancado magicamente (efeito de nível 3)
+    por uma hora. Se um objeto ou criatura estiver segurando fisicamente o objeto aberto,
+    você também precisa ter sucesso em um ataque baseado em Intelecto. Para cada nível de
+    Esforço aplicado, a qualidade da tranca mágica aumenta em um nível.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: magic
+    tier: 2

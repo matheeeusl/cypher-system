@@ -1,0 +1,53 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: magic
+name:
+  en: Magic
+  pt-BR: Magia
+description:
+  en: You know a little about magic. You might not be a wizard, but you know the basics—how
+    it works, and how to accomplish a few wondrous things. Of course, in your setting,
+    “magic” might actually mean psychic powers, mutant abilities, weird alien tech, or
+    anything else that produces interesting and useful effects. An Explorer flavored with
+    magic might be a wizard-hunter, and a Speaker with magical flavor might be a
+    sorcerer-bard. Although an Adept flavored with magic is still an Adept, you might find
+    that swapping some of the type’s basic abilities with those given here tailors the
+    character in desirable ways. This flavor is good match for the spellcasting rule
+    detailed later in Chapter 7.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - blessing-of-the-gods
+    - closed-mind
+    - entangling-force
+    - hedge-magic
+    - magic-training
+    - mental-link
+    - premonition
+  '2':
+    - concussive-blast
+    - fetch
+    - force-field
+    - lock
+    - repair-flesh
+  '3':
+    - distance-viewing
+    - fire-bloom
+    - fling
+    - force-at-distance
+    - summon-giant-spider
+  '4':
+    - elemental-protection
+    - ignition
+    - pry-open
+  '5':
+    - create
+    - divine-intervention
+    - dragons-maw
+    - fast-travel
+    - true-senses
+  '6':
+    - relocate
+    - summon-demon
+    - traverse-the-worlds
+    - word-of-death

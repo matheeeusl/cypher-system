@@ -1,0 +1,19 @@
+id: scramble-machine
+name:
+  en: Scramble Machine
+  pt-BR: Embaralhar Máquina
+description:
+  en: You render one machine within short range unable to function for one round.
+    Alternatively, you can hinder any action by the machine (or by someone attempting to
+    use the machine) for one minute.
+  pt-BR: Você torna uma máquina a distância curta incapaz de funcionar por um round.
+    Alternativamente, pode dificultar qualquer ação da máquina (ou de quem tentar usá-la)
+    por um minuto.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: technology
+    tier: 1

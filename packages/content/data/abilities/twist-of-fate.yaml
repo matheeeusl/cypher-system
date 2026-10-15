@@ -1,0 +1,17 @@
+id: twist-of-fate
+name:
+  en: Twist of Fate
+  pt-BR: Reviravolta do Destino
+description:
+  en: Experience has taught you a lot, including that sometimes luck is something that you
+    have to make for yourself. When you roll a 1, you can reroll. You must use the new
+    result, even if it’s another 1.
+  pt-BR: A experiência lhe ensinou muito, inclusive que às vezes a sorte é algo que você
+    precisa fazer por conta própria. Quando tirar 1, você pode rolar de novo. Deve usar o
+    novo resultado, mesmo que seja outro 1.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 6

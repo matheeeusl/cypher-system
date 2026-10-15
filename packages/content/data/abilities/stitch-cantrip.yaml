@@ -1,0 +1,25 @@
+id: stitch-cantrip
+name:
+  en: Stitch Cantrip
+  pt-BR: Truque da Costura
+description:
+  en: You sew two touched pieces of cloth or thin leather together, up to about 2 square
+    yards (1.5 sq m). The stitches are of the same quality of hand stitching by a tailor
+    or leatherworker of reasonable skill. You choose the path of the stitches, so you
+    could create a piece of clothing by casting this cantrip several times. Instead of
+    sewing together two items, you can unravel the stitches of a touched object, affecting
+    up to 2 square yards (1.5 sq m).
+  pt-BR: Você costura dois pedaços de tecido ou couro fino que tocar, em até cerca de 2
+    jardas quadradas (1,5 m²). Os pontos têm a mesma qualidade de uma costura à mão feita
+    por um alfaiate ou curtidor de habilidade razoável. Você escolhe o trajeto dos pontos,
+    então poderia criar uma peça de roupa lançando este truque várias vezes. Em vez de
+    costurar dois itens, você pode desfazer os pontos de um objeto que tocar, afetando até
+    2 jardas quadradas (1,5 m²).
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,21 @@
+id: wireless-network-cantrip
+name:
+  en: Wireless Network Cantrip
+  pt-BR: Truque da Rede sem Fio
+description:
+  en: You improve wireless network reception in an immediate area for ten minutes. This
+    improves poor or average reception to full strength and zero bars to at least one bar.
+    When you cast this cantrip, you decide if this improved reception affects everyone in
+    the area or just you.
+  pt-BR: Você melhora a recepção de rede sem fio em uma área imediata por dez minutos. Isso
+    melhora uma recepção ruim ou mediana para força total, e zero barras para pelo menos
+    uma barra. Ao lançar este truque, você decide se a recepção melhorada afeta todos na
+    área ou apenas você.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,50 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: stealth
+name:
+  en: Stealth
+  pt-BR: Furtividade
+description:
+  en: Characters with the stealth flavor are good at sneaking around, infiltrating places
+    they don’t belong, and deceiving others. They use these abilities in a variety of
+    ways, including combat. An Explorer with stealth flavor might be a thief, while a
+    Warrior with stealth flavor might be an assassin. An Explorer with stealth flavor in a
+    superhero setting might be a crimefighter who stalks the streets at night.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - danger-sense
+    - goad
+    - legerdemain
+    - opportunist
+    - stealth-skills
+  '2':
+    - contortionist
+    - find-an-opening
+    - get-away
+    - sense-ambush
+    - surprise-attack
+  '3':
+    - evanesce
+    - from-the-shadows
+    - gambler-lucky-numbers
+    - inner-defense
+    - misdirect
+    - run-and-fight
+    - seize-the-moment
+  '4':
+    - ambusher
+    - debilitating-strike
+    - outwit
+    - preternatural-senses
+    - tumbling-moves
+  '5':
+    - assassin-strike
+    - mask
+    - return-to-sender
+    - uncanny-luck
+  '6':
+    - exploit-advantage
+    - spring-away
+    - thiefs-luck
+    - twist-of-fate

@@ -1,0 +1,23 @@
+id: dispel-magic
+name:
+  en: Dispel Magic
+  pt-BR: Dissipar Magia
+description:
+  en: Choose one magical effect within long range. An effect of up to level 3 ends if you
+    succeed on an Intellect-based attack roll against the level of the effect, or against
+    the level of the creature or object the magical effect affects, whichever is higher.
+    In addition to the normal options for using Effort, you can apply Effort to increase
+    the level of the effect that can potentially be dispelled.
+  pt-BR: Escolha um efeito mágico a distância longa. Um efeito de até nível 3 termina se
+    você tiver sucesso em uma rolagem de ataque baseada em Intelecto contra o nível do
+    efeito, ou contra o nível da criatura ou objeto afetado pelo efeito mágico, o que for
+    mais alto. Além das opções normais de uso do Esforço, você pode aplicar Esforço para
+    aumentar o nível do efeito que pode ser dissipado.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 2

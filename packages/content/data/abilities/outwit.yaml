@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: inks-spells-on-skin
     tier: 3
+  - type: flavor
+    id: stealth
+    tier: 4

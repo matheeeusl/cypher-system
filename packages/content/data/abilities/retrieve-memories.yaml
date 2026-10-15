@@ -27,3 +27,6 @@ sources:
   - type: type
     id: adept
     tier: 2
+  - type: flavor
+    id: divination
+    tier: 3

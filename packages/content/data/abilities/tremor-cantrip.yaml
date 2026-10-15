@@ -1,0 +1,19 @@
+id: tremor-cantrip
+name:
+  en: Tremor Cantrip
+  pt-BR: Truque do Tremor
+description:
+  en: You make the ground or floor vibrate within a short area, feeling similar to a mild
+    earthquake. Other objects on the floor might vibrate or slide (no more than a hand's
+    span) because of this vibration.
+  pt-BR: Você faz o chão ou o piso vibrar em uma área curta, com uma sensação semelhante a
+    um terremoto leve. Outros objetos no chão podem vibrar ou deslizar (não mais que um
+    palmo) por causa dessa vibração.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

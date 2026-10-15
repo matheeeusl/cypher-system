@@ -1,0 +1,27 @@
+id: spring-cleaning
+name:
+  en: Spring Cleaning
+  pt-BR: Faxina de Primavera
+description:
+  en: You choose a short area, such as a typical room in a house, two rooms in a small
+    apartment, or two automobiles. Over the next few minutes, the area is thoroughly
+    cleaned— floors are swept, vacuumed, or mopped; surfaces like countertops and sinks
+    are wiped down with a gentle soap and disinfectant; and so on. In addition to the
+    normal options for using Effort, you can use Effort to increase the area or clean more
+    quickly; each level of Effort affects an additional short area or reduces the cleaning
+    time from minutes to rounds.
+  pt-BR: 'Você escolhe uma área curta, como um cômodo típico de uma casa, dois cômodos de um
+    apartamento pequeno ou dois automóveis. Ao longo dos próximos minutos, a área é limpa
+    por completo: os pisos são varridos, aspirados ou esfregados; superfícies como
+    bancadas e pias são limpas com um sabão suave e desinfetante; e assim por diante. Além
+    das opções normais de uso do Esforço, você pode usar Esforço para aumentar a área ou
+    limpar mais rápido; cada nível de Esforço afeta uma área curta adicional ou reduz o
+    tempo de limpeza de minutos para rounds.'
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 3

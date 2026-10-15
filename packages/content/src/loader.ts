@@ -19,6 +19,7 @@ import {
 import { ArtifactSchema, type Artifact } from './schemas/artifact.js'
 import { CypherSchema, type Cypher } from './schemas/cypher.js'
 import { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
+import { FlavorSchema, type Flavor } from './schemas/flavor.js'
 import { FocusSchema, type Focus } from './schemas/focus.js'
 import {
   FocusConnectionTableSchema,
@@ -101,6 +102,7 @@ const types = loadEntities<Type>('types', TypeSchema)
 const abilities = loadEntities<Ability>('abilities', AbilitySchema)
 const descriptors = loadEntities<Descriptor>('descriptors', DescriptorSchema)
 const foci = loadEntities<Focus>('foci', FocusSchema)
+const flavors = loadEntities<Flavor>('flavors', FlavorSchema)
 const skills = loadEntities<Skill>('skills', SkillSchema)
 const cyphers = loadEntities<Cypher>('cyphers', CypherSchema)
 const artifacts = loadEntities<Artifact>('artifacts', ArtifactSchema)
@@ -151,6 +153,13 @@ export function getAllFoci(): WithVersion<Focus>[] {
 }
 export function getFocusById(id: string): WithVersion<Focus> | undefined {
   return foci.get(id)
+}
+
+export function getAllFlavors(): WithVersion<Flavor>[] {
+  return [...flavors.values()]
+}
+export function getFlavorById(id: string): WithVersion<Flavor> | undefined {
+  return flavors.get(id)
 }
 
 export function getAllSkills(): WithVersion<Skill>[] {

@@ -1,0 +1,28 @@
+id: overload-machine
+name:
+  en: Overload Machine
+  pt-BR: Sobrecarregar Máquina
+description:
+  en: Through the robot assistant from your Serv-0 ability, you infuse a powered device of
+    level 3 or lower with more energy than it can handle. If affected, the device is
+    destroyed or disabled for at least one minute, depending on its size and complexity.
+    The GM may rule that the disabling effect lasts until the device is repaired. In
+    addition to the normal options for using Effort, you can choose to use Effort to
+    increase the maximum level of the target. Thus, to overload a level 5 device (two
+    levels above the normal limit), you must apply two levels of Effort.
+  pt-BR: Por meio do robô assistente da sua habilidade Serv-0, você infunde em um
+    dispositivo energizado de nível 3 ou menor mais energia do que ele consegue suportar.
+    Se for afetado, o dispositivo é destruído ou desabilitado por pelo menos um minuto,
+    dependendo de seu tamanho e complexidade. O Mestre pode decidir que o efeito de
+    desabilitar dura até que o dispositivo seja consertado. Além das opções normais de uso
+    do Esforço, você pode usar Esforço para aumentar o nível máximo do alvo. Assim, para
+    sobrecarregar um dispositivo de nível 5 (dois níveis acima do limite normal), você
+    deve aplicar dois níveis de Esforço.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: technology
+    tier: 2

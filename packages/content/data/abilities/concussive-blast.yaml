@@ -1,0 +1,18 @@
+id: concussive-blast
+name:
+  en: Concussive Blast
+  pt-BR: Rajada Concussiva
+description:
+  en: You release a beam of pure force that smashes into a creature within short range,
+    inflicting 5 points of damage and moving it back an immediate distance.
+  pt-BR: Você libera um feixe de força pura que atinge uma criatura a distância curta,
+    causando 5 pontos de dano e empurrando-a para trás uma distância imediata.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+attack: true
+sources:
+  - type: flavor
+    id: magic
+    tier: 2

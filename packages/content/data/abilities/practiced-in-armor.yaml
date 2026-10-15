@@ -28,3 +28,6 @@ sources:
   - type: focus
     id: stands-like-a-bastion
     tier: 1
+  - type: flavor
+    id: combat
+    tier: 1

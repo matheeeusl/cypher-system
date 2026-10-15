@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: commands-mental-powers
     tier: 1
+  - type: flavor
+    id: cozy-magic
+    tier: 2

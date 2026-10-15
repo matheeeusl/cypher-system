@@ -20,3 +20,9 @@ sources:
   - type: focus
     id: slays-monsters
     tier: 3
+  - type: flavor
+    id: combat
+    tier: 4
+  - type: flavor
+    id: stealth
+    tier: 3

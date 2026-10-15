@@ -1,0 +1,19 @@
+id: color-cantrip
+name:
+  en: Color Cantrip
+  pt-BR: Truque da Cor
+description:
+  en: You change the color of an object, or you brighten or dull its color. The object can
+    be up to about 1 cubic foot in size and up to a short distance away. If used to change
+    a creature's hair color, it lasts a few days.
+  pt-BR: Você muda a cor de um objeto, ou o deixa mais vivo ou mais opaco. O objeto pode ter
+    até cerca de 1 pé cúbico e estar a até uma distância curta. Se usado para mudar a cor
+    do cabelo de uma criatura, dura alguns dias.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

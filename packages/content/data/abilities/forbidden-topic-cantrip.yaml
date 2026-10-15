@@ -1,0 +1,26 @@
+id: forbidden-topic-cantrip
+name:
+  en: Forbidden Topic Cantrip
+  pt-BR: Truque do Assunto Proibido
+description:
+  en: Wards an immediate area (enough to cover a large table at a holiday family gathering)
+    against conversation about a topic of your choice, such as "the election," "Mommy's
+    trial," or "that Cordell kid." Anytime someone in the area attempts to talk about this
+    topic, make an Intellect-based roll against them; success means they either talk about
+    something else or remain silent. The cantrip lasts for ten minutes or until you fail
+    an Intellect-based roll to stop someone from talking about that topic.
+  pt-BR: Protege uma área imediata (o suficiente para cobrir uma mesa grande em uma reunião
+    de família em um feriado) contra conversas sobre um assunto à sua escolha, como "as
+    eleições", "o julgamento da mamãe" ou "aquele garoto do Cordell". Sempre que alguém na
+    área tentar falar sobre esse assunto, faça uma rolagem baseada em Intelecto contra a
+    pessoa; o sucesso significa que ela passa a falar de outra coisa ou fica em silêncio.
+    O truque dura dez minutos ou até você falhar em uma rolagem baseada em Intelecto para
+    impedir alguém de falar sobre aquele assunto.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

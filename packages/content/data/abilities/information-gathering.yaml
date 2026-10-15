@@ -28,3 +28,9 @@ sources:
   - type: focus
     id: talks-to-machines
     tier: 5
+  - type: flavor
+    id: technology
+    tier: 6
+  - type: flavor
+    id: modern-magic
+    tier: 6

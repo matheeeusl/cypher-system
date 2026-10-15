@@ -1,0 +1,21 @@
+id: chill-cantrip
+name:
+  en: Chill Cantrip
+  pt-BR: Truque do Frio
+description:
+  en: You lower the temperature of a target within short range. If the target is a creature,
+    for the next couple of rounds they feel like they're standing under an air
+    conditioning vent. If the target is an object no larger than a 1-foot (30 cm) cube,
+    you cool it down as if you'd dunked it into a bucket of ice.
+  pt-BR: Você diminui a temperatura de um alvo a distância curta. Se o alvo for uma
+    criatura, nos próximos rounds ela sente como se estivesse debaixo de uma saída de
+    ar-condicionado. Se o alvo for um objeto de no máximo um cubo de 30 cm (1 pé), você o
+    resfria como se o tivesse mergulhado em um balde de gelo.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

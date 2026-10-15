@@ -1,0 +1,18 @@
+id: serv-0-spy
+name:
+  en: Serv-0 Spy
+  pt-BR: Serv-0 Espião
+description:
+  en: You can send your Serv-0 up to a long distance away for up to ten minutes and see and
+    hear through it as though its senses were your own. You direct its movement.
+  pt-BR: Você pode enviar seu Serv-0 a até uma distância longa por até dez minutos e ver e
+    ouvir através dele como se os sentidos dele fossem os seus. Você dirige o movimento
+    dele.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: technology
+    tier: 4

@@ -1,0 +1,23 @@
+id: cut-cantrip
+name:
+  en: Cut Cantrip
+  pt-BR: Truque do Corte
+description:
+  en: You cut an object up to level 2 as if using a sharp knife or a pair of scissors, up to
+    an immediate distance away. For example, this works on rope, candles, food, cloth,
+    paper, or even a thin wire or thin chain necklace. The object usually gives off
+    harmless blue sparks when it's cut. Cut Cantrip isn't hindered by two steps when used
+    to damage an unattended object.
+  pt-BR: Você corta um objeto de até nível 2 como se usasse uma faca afiada ou uma tesoura,
+    a até uma distância imediata. Por exemplo, funciona em corda, velas, comida, tecido,
+    papel ou até um fio fino ou uma corrente fina de colar. O objeto normalmente solta
+    faíscas azuis inofensivas quando é cortado. O Truque do Corte não é dificultado em
+    dois níveis quando usado para danificar um objeto sem vigilância.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

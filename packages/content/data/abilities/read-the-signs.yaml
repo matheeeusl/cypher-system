@@ -26,3 +26,9 @@ sources:
   - type: focus
     id: would-rather-be-reading
     tier: 6
+  - type: flavor
+    id: divination
+    tier: 5
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 5

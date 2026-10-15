@@ -1,0 +1,23 @@
+id: premonition
+name:
+  en: Premonition
+  pt-BR: Premonição
+description:
+  en: You learn one random fact about a creature or location that is pertinent to a topic
+    you designate. Alternatively, you can choose to learn a creature's level; however, if
+    you do so, you cannot learn anything else about it later with this ability.
+  pt-BR: Você descobre um fato aleatório sobre uma criatura ou local que seja pertinente a
+    um assunto que você designar. Alternativamente, pode escolher descobrir o nível de uma
+    criatura; porém, se fizer isso, não poderá descobrir mais nada sobre ela depois com
+    esta habilidade.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: divination
+    tier: 2
+  - type: flavor
+    id: magic
+    tier: 1

@@ -24,3 +24,6 @@ sources:
   - type: type
     id: speaker
     tier: 2
+  - type: flavor
+    id: charms-and-figments
+    tier: 2

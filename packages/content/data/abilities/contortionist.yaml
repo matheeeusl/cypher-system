@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: stretches
     tier: 1
+  - type: flavor
+    id: stealth
+    tier: 2

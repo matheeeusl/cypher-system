@@ -1,0 +1,19 @@
+id: find-an-opening
+name:
+  en: Find an Opening
+  pt-BR: Encontrar uma Brecha
+description:
+  en: You use trickery to find an opening in your foe’s defenses. If you succeed on a Speed
+    roll against one creature within immediate range, your next attack against that
+    creature before the end of the next round is eased.
+  pt-BR: Você usa um truque para encontrar uma brecha na defesa do seu inimigo. Se tiver
+    sucesso em uma rolagem de Velocidade contra uma criatura a uma distância imediata, seu
+    próximo ataque contra essa criatura antes do fim do próximo round é facilitado.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: flavor
+    id: stealth
+    tier: 2

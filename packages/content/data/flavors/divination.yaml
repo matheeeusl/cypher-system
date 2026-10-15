@@ -1,0 +1,36 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: divination
+name:
+  en: Divination
+  pt-BR: Adivinhação
+description:
+  en: Knowledge is power! Characters with the divination flavor are familiar with using
+    magic to learn information, see into hidden places, and discover secrets.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - babel
+    - scan
+    - third-eye
+  '2':
+    - diagnose-device
+    - mind-reading
+    - open-mind
+    - premonition
+    - see-history
+  '3':
+    - creature-insight
+    - device-insight
+    - question-past-self
+    - retrieve-memories
+  '4':
+    - reading-the-room
+    - remote-viewing
+    - sensor
+  '5':
+    - knowing-the-unknown
+    - read-the-signs
+    - true-senses
+  '6':
+    - see-through-time

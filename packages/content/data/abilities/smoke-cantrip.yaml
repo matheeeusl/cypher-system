@@ -1,0 +1,19 @@
+id: smoke-cantrip
+name:
+  en: Smoke Cantrip
+  pt-BR: Truque da Fumaça
+description:
+  en: You create a harmless puff of smoke within an immediate distance. The smoke fills
+    about a 1-foot (30 cm) cube and dissipates over the next few rounds. You decide if the
+    smoke is white, grey, blue, brown, green, red, or yellow.
+  pt-BR: Você cria uma baforada de fumaça inofensiva a uma distância imediata. A fumaça
+    preenche cerca de um cubo de 30 cm (1 pé) e se dissipa ao longo dos próximos rounds.
+    Você decide se a fumaça é branca, cinza, azul, marrom, verde, vermelha ou amarela.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

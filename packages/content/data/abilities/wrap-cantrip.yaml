@@ -1,0 +1,22 @@
+id: wrap-cantrip
+name:
+  en: Wrap Cantrip
+  pt-BR: Truque de Embrulhar
+description:
+  en: You use available materials to wrap up an object within an immediate distance. The
+    wrapped object must fit within a 1-foot (30 cm) cube. For example, you could wrap a
+    gift box with decorative paper, wrap a piece of paper around a letter to create an
+    envelope, or wrap a pile of potatoes with burlap to create an easily carried bundle.
+  pt-BR: Você usa os materiais disponíveis para embrulhar um objeto a uma distância
+    imediata. O objeto embrulhado deve caber em um cubo de 30 cm (1 pé). Por exemplo, você
+    poderia embrulhar uma caixa de presente com papel decorativo, enrolar um papel em
+    volta de uma carta para fazer um envelope ou embrulhar um monte de batatas em estopa
+    para fazer um fardo fácil de carregar.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

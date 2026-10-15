@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: masters-defense
     tier: 4
+  - type: flavor
+    id: modern-magic
+    tier: 5

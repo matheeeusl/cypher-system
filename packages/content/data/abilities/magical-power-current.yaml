@@ -1,0 +1,21 @@
+id: magical-power-current
+name:
+  en: Magical Power Current
+  pt-BR: Corrente de Energia Mágica
+description:
+  en: You provide electricity to a device that runs on standard house current, such as a
+    laptop computer, circular saw, or microwave oven, allowing it to function as if
+    plugged in for one hour. The cost is 2 Intellect points plus 1 point per level of the
+    device.
+  pt-BR: Você fornece eletricidade a um dispositivo que funciona com corrente doméstica
+    comum, como um laptop, uma serra circular ou um micro-ondas, permitindo que ele
+    funcione como se estivesse ligado na tomada por uma hora. O custo é de 2 pontos de
+    Intelecto mais 1 ponto por nível do dispositivo.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 2

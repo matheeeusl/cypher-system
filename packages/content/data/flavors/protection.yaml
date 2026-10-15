@@ -1,0 +1,34 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: protection
+name:
+  en: Protection
+  pt-BR: Proteção
+description:
+  en: Characters with the protection flavor use magic to defend against hostile
+    environments, hazardous substances, dangerous creatures, and intrusive mental powers.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - closed-mind
+    - resonance-field
+    - ward
+  '2':
+    - safe-sex
+    - trained-without-armor
+    - wind-armor
+  '3':
+    - energy-protection
+    - force-field-barrier
+    - unstealable-charm
+  '4':
+    - counter-danger
+    - elemental-protection
+    - poison-resistance
+  '5':
+    - defensive-field
+    - nothing-but-defend
+    - tower-of-intellect
+  '6':
+    - reactive-field
+    - untouchable

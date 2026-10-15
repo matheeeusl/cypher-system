@@ -1,0 +1,30 @@
+id: repair-machine
+name:
+  en: Repair Machine
+  pt-BR: Reparar Máquina
+description:
+  en: You automatically repair one broken device of up to level 4 that you touch, restoring
+    it to full working condition. This ability works only if at least 80 percent of the
+    original device is still on hand. The device may still need fuel, oil, or other
+    substances that aid its operation but are not part of the electronics or mechanism.
+    This ability only reliably works on human-crafted devices and tends to fail when used
+    on alien, high-technology, or otherwise mysterious machines. In addition to the normal
+    options for using Effort, you can use Effort to increase the target level that can be
+    affected by 1.
+  pt-BR: Você repara automaticamente um dispositivo quebrado de até nível 4 que tocar,
+    restaurando-o a pleno funcionamento. Esta habilidade só funciona se pelo menos 80 por
+    cento do dispositivo original ainda estiver disponível. O dispositivo ainda pode
+    precisar de combustível, óleo ou outras substâncias que auxiliam seu funcionamento,
+    mas que não fazem parte da eletrônica ou do mecanismo. Esta habilidade só funciona de
+    forma confiável em dispositivos feitos por humanos e tende a falhar em máquinas
+    alienígenas, de alta tecnologia ou misteriosas. Além das opções normais de uso do
+    Esforço, você pode usar Esforço para aumentar em 1 o nível do alvo que pode ser
+    afetado.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 4

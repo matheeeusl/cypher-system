@@ -1,0 +1,18 @@
+id: message-cantrip
+name:
+  en: Message Cantrip
+  pt-BR: Truque da Mensagem
+description:
+  en: You whisper a short message (about five to ten seconds) to a creature you can see
+    within a long distance. The target hears it as if you had whispered it in their ear.
+  pt-BR: Você sussurra uma mensagem curta (de cerca de cinco a dez segundos) para uma
+    criatura que consiga ver a uma distância longa. O alvo a ouve como se você a tivesse
+    sussurrado em seu ouvido.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: stands-like-a-bastion
     tier: 3
+  - type: flavor
+    id: combat
+    tier: 3

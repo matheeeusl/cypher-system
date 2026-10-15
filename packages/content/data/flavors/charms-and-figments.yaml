@@ -1,0 +1,42 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: charms-and-figments
+name:
+  en: Charms and Figments
+  pt-BR: Feitiços e Ilusões
+description:
+  en: Creating illusions and affecting minds are sometimes considered "soft" magical
+    disciplines (as opposed to "hard" disciplines that manipulate energy or physical
+    matter). It's common for a character with an interest in one to learn a few spells in
+    the other.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - background-music
+    - fast-talk
+    - goad
+    - impart-ideal
+    - mental-link
+    - minor-illusion
+  '2':
+    - calm-stranger
+    - cloud-personal-memories
+    - illusory-duplicate
+    - misdirect-blame
+  '3':
+    - advanced-command
+    - illusory-disguise
+    - soothe-the-savage
+  '4':
+    - calm
+    - major-illusion
+    - mind-control
+    - psychic-burst
+    - psychic-suggestion
+  '5':
+    - crowd-control
+    - mind-games
+    - projection
+  '6':
+    - flee
+    - terrifying-image

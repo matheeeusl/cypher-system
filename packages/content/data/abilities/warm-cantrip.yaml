@@ -1,0 +1,19 @@
+id: warm-cantrip
+name:
+  en: Warm Cantrip
+  pt-BR: Truque do Calor
+description:
+  en: You raise the temperature in a very small area (about 1 cubic foot) within short
+    range, enough to make someone's face feel flushed or warm a drink to about the
+    temperature of freshly served coffee.
+  pt-BR: Você eleva a temperatura em uma área bem pequena (cerca de 1 pé cúbico) a distância
+    curta, o suficiente para deixar o rosto de alguém corado ou aquecer uma bebida até
+    cerca da temperatura de um café recém-servido.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: infiltrates
     tier: 6
+  - type: flavor
+    id: stealth
+    tier: 6

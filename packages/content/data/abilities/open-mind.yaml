@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: separates-mind-from-body
     tier: 2
+  - type: flavor
+    id: divination
+    tier: 2

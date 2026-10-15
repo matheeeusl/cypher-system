@@ -4,6 +4,7 @@ export { AbilitySchema, type Ability } from './schemas/ability.js'
 export { TypeSchema, type Type } from './schemas/type.js'
 export { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
 export { FocusSchema, type Focus } from './schemas/focus.js'
+export { FlavorSchema, type Flavor } from './schemas/flavor.js'
 export {
   FocusConnectionTableSchema,
   type FocusConnectionTable,
@@ -36,6 +37,8 @@ export {
   getDescriptorById,
   getAllFoci,
   getFocusById,
+  getAllFlavors,
+  getFlavorById,
   getAllSkills,
   getSkillById,
   getAllCyphers,

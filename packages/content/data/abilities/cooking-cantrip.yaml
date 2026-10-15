@@ -1,0 +1,21 @@
+id: cooking-cantrip
+name:
+  en: Cooking Cantrip
+  pt-BR: Truque da Culinária
+description:
+  en: You accelerate the preparation and cooking of one dish, reducing the time until it's
+    ready by about ten minutes. (Time-consuming cooking, such as a large turkey, requires
+    multiple castings.) Under normal circumstances, this doesn't burn, overcook, or
+    otherwise ruin the dish.
+  pt-BR: Você acelera o preparo e o cozimento de um prato, reduzindo em cerca de dez minutos
+    o tempo até ele ficar pronto. (Cozimentos demorados, como um peru grande, exigem
+    várias conjurações.) Em circunstâncias normais, isso não queima, não passa do ponto
+    nem estraga o prato de outra forma.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

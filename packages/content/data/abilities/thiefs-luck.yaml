@@ -1,0 +1,24 @@
+id: thiefs-luck
+name:
+  en: Thief’s Luck
+  pt-BR: Sorte de Ladrão
+description:
+  en: Luck is not the chaotic ocean of random chance most people believe it to be. If you
+    fail on a task (including an attack roll or a defense roll), you can change the die
+    result to a natural 20. That still might not be enough to succeed if the difficulty is
+    higher than 6. Once you use this ability, it is not available again until after you
+    make a ten-hour recovery roll. (Thief’s Luck doesn’t work if you roll a natural 1 for
+    an attempted task, unless you also have and use the ability Wrest From Chance.)
+  pt-BR: A sorte não é o oceano caótico do acaso que a maioria das pessoas acredita. Se você
+    falhar em uma tarefa (incluindo uma rolagem de ataque ou de defesa), pode mudar o
+    resultado do dado para um 20 natural. Isso ainda pode não ser suficiente se a
+    dificuldade for maior que 6. Depois de usar esta habilidade, ela só fica disponível de
+    novo após uma rolagem de recuperação de dez horas. (Sorte de Ladrão não funciona se
+    você tirar um 1 natural na tarefa tentada, a menos que você também tenha e use a
+    habilidade Arrancar do Acaso.)
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 6

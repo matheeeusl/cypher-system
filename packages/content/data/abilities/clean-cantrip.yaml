@@ -1,0 +1,22 @@
+id: clean-cantrip
+name:
+  en: Clean Cantrip
+  pt-BR: Truque da Limpeza
+description:
+  en: You remove dirt, mud, and similar substances from one set of clothing (such as the
+    clothes you're wearing), about 1 cubic foot of loose material (clothes, curtains, a
+    box of toys, and so on), or an immediate area on a surface (such as a wall or floor).
+    When used on clothing, this also does a decent job of removing wrinkles.
+  pt-BR: Você remove sujeira, lama e substâncias semelhantes de um conjunto de roupas (como
+    as que está vestindo), de cerca de 1 pé cúbico de material solto (roupas, cortinas,
+    uma caixa de brinquedos e assim por diante) ou de uma área imediata em uma superfície
+    (como uma parede ou o chão). Quando usado em roupas, também faz um bom trabalho de
+    remover amassados.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,26 @@
+# The source also prints "level 1" after this ability (the servant's level).
+id: spectral-servant
+name:
+  en: Spectral Servant
+  pt-BR: Servo Espectral
+description:
+  en: You conjure a spectral servant, a semi-real magical construct that resembles the vague
+    nonthreatening outline of a person. It is more of an extension of your will than a
+    separate being, and it automatically assists you in simple tasks like bringing drinks
+    to houseguests and dealing with chores. It cannot attack or defend, and it vanishes if
+    you are ever more than a short distance from it. The servant lasts for one hour before
+    disappearing.
+  pt-BR: Você conjura um servo espectral, uma construção mágica semirreal que lembra o
+    contorno vago e inofensivo de uma pessoa. Ele é mais uma extensão da sua vontade do
+    que um ser separado, e auxilia automaticamente em tarefas simples, como levar bebidas
+    aos convidados e cuidar de afazeres. Ele não pode atacar nem se defender, e desaparece
+    se você se afastar mais que uma distância curta dele. O servo dura uma hora antes de
+    desaparecer.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 2

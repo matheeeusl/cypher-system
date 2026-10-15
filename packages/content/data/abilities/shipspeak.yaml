@@ -1,0 +1,20 @@
+id: shipspeak
+name:
+  en: Shipspeak
+  pt-BR: Fala de Nave
+description:
+  en: You can make basic maneuvers from a planetary distance with a starship that you have
+    bonded with using Machine Bond. You can send it to a designated place, call it to you,
+    have it land, allow or deny entrance, and so on, even if you are not on board. Bonding
+    is a process that requires a day of meditation while jacked into the ship.
+  pt-BR: Você pode fazer manobras básicas, de uma distância planetária, com uma nave estelar
+    à qual esteja vinculado por meio de Vínculo com a Máquina. Pode enviá-la a um lugar
+    designado, chamá-la até você, mandá-la pousar, permitir ou negar a entrada e assim por
+    diante, mesmo que não esteja a bordo. O vínculo é um processo que exige um dia de
+    meditação conectado à nave.
+cost: null
+action_type: action
+sources:
+  - type: flavor
+    id: technology
+    tier: 3

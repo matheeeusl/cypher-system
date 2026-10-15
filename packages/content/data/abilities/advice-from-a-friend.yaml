@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: helps-their-friends
     tier: 1
+  - type: flavor
+    id: cozy-magic
+    tier: 1

@@ -1,0 +1,17 @@
+id: tumbling-moves
+name:
+  en: Tumbling Moves
+  pt-BR: Movimentos Acrobáticos
+description:
+  en: When you use an action to move, Speed defense rolls are eased until the end of your
+    next turn.
+  pt-BR: Quando você usa uma ação para se mover, as rolagens de defesa de Velocidade são
+    facilitadas até o fim do seu próximo turno.
+cost:
+  pool: speed
+  amount: 5
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 4

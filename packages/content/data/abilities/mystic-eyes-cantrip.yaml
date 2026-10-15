@@ -1,0 +1,20 @@
+id: mystic-eyes-cantrip
+name:
+  en: Mystic Eyes Cantrip
+  pt-BR: Truque dos Olhos Místicos
+description:
+  en: You change the appearance of your eyes. If you just change their color to a different
+    hue (such as to blue, green, or brown), the change lasts for an hour. If you change
+    them to something unusual, such as red, yellow, solid black, or glowing, it only lasts
+    for a minute.
+  pt-BR: Você muda a aparência dos seus olhos. Se apenas mudar a cor para outro tom (como
+    azul, verde ou castanho), a mudança dura uma hora. Se mudar para algo incomum, como
+    vermelho, amarelo, totalmente preto ou brilhante, dura apenas um minuto.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

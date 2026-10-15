@@ -1,0 +1,22 @@
+id: bee-cantrip
+name:
+  en: Bee Cantrip
+  pt-BR: Truque da Abelha
+description:
+  en: You summon a nearby level 0 bee, housefly, gnat, or similar flying pest to a spot
+    within an immediate distance. The pest acts normally and (appearing in an unfamiliar
+    area) probably begins flying around, possibly landing on a creature. The cantrip
+    doesn't work if there are no suitable pests within a short distance.
+  pt-BR: Você invoca uma abelha, mosca-doméstica, mosquito ou praga voadora semelhante de
+    nível 0, que esteja por perto, para um ponto a uma distância imediata. A praga age
+    normalmente e (aparecendo em uma área desconhecida) provavelmente começa a voar por
+    aí, possivelmente pousando em uma criatura. O truque não funciona se não houver pragas
+    adequadas a uma distância curta.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

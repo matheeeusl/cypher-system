@@ -19,3 +19,6 @@ sources:
   - type: type
     id: adept
     tier: 5
+  - type: flavor
+    id: magic
+    tier: 5

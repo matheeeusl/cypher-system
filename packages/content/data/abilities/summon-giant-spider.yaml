@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: masters-spells
     tier: 3
+  - type: flavor
+    id: magic
+    tier: 3

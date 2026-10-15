@@ -1,0 +1,19 @@
+id: force-field
+name:
+  en: Force Field
+  pt-BR: Campo de Força
+description:
+  en: You create an invisible energy barrier around a creature or object you choose within
+    short range. The force field moves with the creature or object and lasts for ten
+    minutes. The target has +1 to Armor until the effect ends.
+  pt-BR: Você cria uma barreira de energia invisível ao redor de uma criatura ou objeto à
+    sua escolha a distância curta. O campo de força acompanha a criatura ou objeto e dura
+    dez minutos. O alvo tem +1 de Armadura até o efeito acabar.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: magic
+    tier: 2

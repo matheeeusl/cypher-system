@@ -1,0 +1,21 @@
+id: evanesce
+name:
+  en: Evanesce
+  pt-BR: Desvanecer
+description:
+  en: You step into shadows or behind cover, and everyone who was observing you completely
+    loses track of you. Although you’re not invisible, you can’t be seen until you reveal
+    yourself again by moving out of the shadows or from behind cover (or by making an
+    attack).
+  pt-BR: Você entra nas sombras ou atrás de uma cobertura, e todos que o observavam perdem
+    completamente o rastro de você. Embora não esteja invisível, você não pode ser visto
+    até se revelar outra vez ao sair das sombras ou de trás da cobertura (ou ao fazer um
+    ataque).
+cost:
+  pool: speed
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: stealth
+    tier: 3

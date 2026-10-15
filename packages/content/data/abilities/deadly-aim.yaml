@@ -15,3 +15,6 @@ sources:
   - type: type
     id: warrior
     tier: 3
+  - type: flavor
+    id: combat
+    tier: 4

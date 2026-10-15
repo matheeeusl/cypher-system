@@ -1,0 +1,19 @@
+id: bloodlust
+name:
+  en: Bloodlust
+  pt-BR: Sede de Sangue
+description:
+  en: If you take down a foe, you can move a short distance, but only if you move toward
+    another foe. You don’t need to spend the points until you know that the first foe is
+    down.
+  pt-BR: Se você derrubar um inimigo, pode se mover uma distância curta, mas apenas em
+    direção a outro inimigo. Você não precisa gastar os pontos até saber que o primeiro
+    inimigo caiu.
+cost:
+  pool: might
+  amount: 3
+action_type: enabler
+sources:
+  - type: flavor
+    id: combat
+    tier: 2

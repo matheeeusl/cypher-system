@@ -1,0 +1,24 @@
+id: fetch
+name:
+  en: Fetch
+  pt-BR: Buscar
+description:
+  en: You cause an object to disappear and reappear in your hands or somewhere else nearby.
+    Choose one object that can fit inside a 5-foot (2 m) cube and that you can see within
+    long range. The object vanishes and appears in your hands or in an open space anywhere
+    you choose within immediate range.
+  pt-BR: Você faz um objeto desaparecer e reaparecer em suas mãos ou em outro lugar próximo.
+    Escolha um objeto que caiba em um cubo de 2 metros (5 pés) e que você possa ver a
+    distância longa. O objeto desaparece e surge em suas mãos ou em um espaço livre
+    qualquer, à sua escolha, a distância imediata.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 2
+  - type: flavor
+    id: magic
+    tier: 2

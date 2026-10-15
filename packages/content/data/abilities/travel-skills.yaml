@@ -15,6 +15,9 @@ sources:
   - type: type
     id: explorer
     tier: 2
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 1
 skill_grant:
   count: 2
   options:

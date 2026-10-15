@@ -1,0 +1,24 @@
+id: darkness-cantrip
+name:
+  en: Darkness Cantrip
+  pt-BR: Truque da Escuridão
+description:
+  en: You suppress light in a cubic or spherical area about 1 foot (30 cm) across within an
+    immediate distance. Outdoors or in bright light, this area becomes very dim;
+    otherwise, it becomes darkness. When you create this area, decide if it remains at a
+    specific location (such as on a desk) or if it is attached to some part of you (such
+    as your head or left hand) and moves with you. The cantrip ends after about a minute.
+  pt-BR: Você suprime a luz em uma área cúbica ou esférica de cerca de 30 cm (1 pé) de lado,
+    a uma distância imediata. Ao ar livre ou sob luz forte, a área fica muito escura; caso
+    contrário, fica em escuridão. Ao criar essa área, decida se ela permanece em um local
+    específico (como sobre uma mesa) ou se fica presa a alguma parte de você (como a
+    cabeça ou a mão esquerda) e se move com você. O truque termina após cerca de um
+    minuto.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

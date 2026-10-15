@@ -1,0 +1,21 @@
+id: cloud-personal-memories
+name:
+  en: Cloud Personal Memories
+  pt-BR: Obscurecer Memórias Pessoais
+description:
+  en: If you interact with or study a target for at least a round, you gain a sense of how
+    its mind works, which you can use against it in the most blunt fashion possible. You
+    can attempt to confuse it and make it forget what's just happened. On a success, you
+    erase up to the last five minutes of its memory.
+  pt-BR: Se você interagir com um alvo ou estudá-lo por pelo menos um round, percebe como a
+    mente dele funciona, e pode usar isso contra ele da maneira mais direta possível. Você
+    pode tentar confundi-lo e fazê-lo esquecer o que acabou de acontecer. Em caso de
+    sucesso, você apaga até os últimos cinco minutos da memória dele.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action_to_prepare_and_initiate
+sources:
+  - type: flavor
+    id: charms-and-figments
+    tier: 2

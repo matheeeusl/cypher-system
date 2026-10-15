@@ -16,3 +16,9 @@ sources:
   - type: focus
     id: is-wanted-by-the-law
     tier: 1
+  - type: flavor
+    id: combat
+    tier: 1
+  - type: flavor
+    id: stealth
+    tier: 1

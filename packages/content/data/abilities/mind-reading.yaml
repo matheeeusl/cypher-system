@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: commands-mental-powers
     tier: 2
+  - type: flavor
+    id: divination
+    tier: 2

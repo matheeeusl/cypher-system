@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: fights-with-panache
     tier: 6
+  - type: flavor
+    id: stealth
+    tier: 5

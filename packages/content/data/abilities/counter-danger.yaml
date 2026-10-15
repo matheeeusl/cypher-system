@@ -1,0 +1,24 @@
+id: counter-danger
+name:
+  en: Counter Danger
+  pt-BR: Neutralizar Perigo
+description:
+  en: You negate a source of potential danger related to one creature or object within
+    immediate distance for one minute (instead of one round, as with Foil Danger). This
+    could be a weapon or device held by someone, a creature's natural ability, or a trap
+    triggered by a pressure plate. You can also try to counter an action (like moving or
+    making a conventional mundane attack with a weapon, a claw, etc.).
+  pt-BR: Você neutraliza uma fonte de perigo em potencial relacionada a uma criatura ou
+    objeto a distância imediata por um minuto (em vez de um round, como em Frustrar
+    Perigo). Pode ser uma arma ou dispositivo empunhado por alguém, uma habilidade natural
+    de uma criatura ou uma armadilha acionada por uma placa de pressão. Você também pode
+    tentar neutralizar uma ação (como se mover ou fazer um ataque mundano convencional com
+    uma arma, uma garra etc.).
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: flavor
+    id: protection
+    tier: 4

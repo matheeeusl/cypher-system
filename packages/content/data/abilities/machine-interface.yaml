@@ -1,0 +1,17 @@
+id: machine-interface
+name:
+  en: Machine Interface
+  pt-BR: Interface de Máquina
+description:
+  en: For one minute you gain an asset on tasks to discern the level, function, and
+    activation of technological devices that you touch.
+  pt-BR: Por um minuto, você ganha um recurso em tarefas para discernir o nível, a função e
+    a ativação de dispositivos tecnológicos que tocar.
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 1

@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: leads
     tier: 3
+  - type: flavor
+    id: charms-and-figments
+    tier: 3

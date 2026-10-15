@@ -21,3 +21,6 @@ sources:
   - type: focus
     id: merges-mind-with-machine
     tier: 6
+  - type: flavor
+    id: technology
+    tier: 6

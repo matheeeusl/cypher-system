@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: fights-dirty
     tier: 4
+  - type: flavor
+    id: combat
+    tier: 4

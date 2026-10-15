@@ -1,0 +1,21 @@
+id: tie-cantrip
+name:
+  en: Tie Cantrip
+  pt-BR: Truque do Nó
+description:
+  en: You control a piece of string, rope, or twine within short range, causing it to tie
+    itself to another object within 1 foot (30 cm) of it, using any sort of simple, common
+    knot (such as a square knot). Instead of tying a knot, you can cast this cantrip on a
+    simple knot within short range, untying it.
+  pt-BR: Você controla um pedaço de barbante, corda ou fio a distância curta, fazendo-o se
+    amarrar a outro objeto a até 30 cm (1 pé) dele, usando qualquer tipo de nó simples e
+    comum (como um nó direito). Em vez de dar um nó, você pode lançar este truque em um nó
+    simples a distância curta, desatando-o.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

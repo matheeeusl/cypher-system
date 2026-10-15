@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: talks-to-machines
     tier: 1
+  - type: flavor
+    id: technology
+    tier: 2

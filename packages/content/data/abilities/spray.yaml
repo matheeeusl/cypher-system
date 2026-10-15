@@ -26,4 +26,10 @@ sources:
   - type: focus
     id: is-licensed-to-carry
     tier: 3
+  - type: flavor
+    id: combat
+    tier: 4
+  - type: flavor
+    id: technology
+    tier: 3
 attack: true

@@ -1,0 +1,17 @@
+id: assassin-strike
+name:
+  en: Assassin Strike
+  pt-BR: Golpe de Assassino
+description:
+  en: If you successfully attack a creature that was previously unaware of your presence,
+    you deal 9 additional points of damage.
+  pt-BR: Se você atacar com sucesso uma criatura que não sabia da sua presença, causa 9
+    pontos adicionais de dano.
+cost:
+  pool: intellect
+  amount: 5
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 5

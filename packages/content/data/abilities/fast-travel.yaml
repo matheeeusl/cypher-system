@@ -1,0 +1,22 @@
+id: fast-travel
+name:
+  en: Fast Travel
+  pt-BR: Viagem Rápida
+description:
+  en: You warp time and space so that you and up to ten other creatures within immediate
+    distance travel overland at ten times the normal rate for up to eight hours. At this
+    speed, most dangerous encounters or regions of rough terrain are ignored, though the
+    GM may declare exceptions. Outright barriers still present a problem.
+  pt-BR: Você distorce o tempo e o espaço para que você e até dez outras criaturas a
+    distância imediata viajem por terra a dez vezes a velocidade normal por até oito
+    horas. Nessa velocidade, a maioria dos encontros perigosos ou regiões de terreno
+    acidentado é ignorada, embora o Mestre possa declarar exceções. Barreiras absolutas
+    ainda representam um problema.
+cost:
+  pool: intellect
+  amount: 7
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: magic
+    tier: 5

@@ -1,0 +1,23 @@
+id: uncanny-luck
+name:
+  en: Uncanny Luck
+  pt-BR: Sorte Sobrenatural
+description:
+  en: When you roll for a task and succeed, roll again. If the second number rolled is
+    higher than the first, you get a minor effect. If you roll the same number again, you
+    get a major effect. If you have Uncanny Luck from another source or a similar ability,
+    it’s your choice (no roll required) whether you get a minor effect, a major effect, or
+    a free activation of one of your tier 1−3 focus abilities.
+  pt-BR: Quando você rola para uma tarefa e tem sucesso, role outra vez. Se o segundo número
+    for maior que o primeiro, você obtém um efeito menor. Se tirar o mesmo número, obtém
+    um efeito maior. Se você tiver Sorte Sobrenatural de outra fonte ou uma habilidade
+    parecida, a escolha é sua (sem rolagem) entre um efeito menor, um efeito maior ou uma
+    ativação gratuita de uma de suas habilidades de Foco de grau 1 a 3.
+cost:
+  pool: speed
+  amount: 4
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 5

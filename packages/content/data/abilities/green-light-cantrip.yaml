@@ -1,0 +1,22 @@
+id: green-light-cantrip
+name:
+  en: Green Light Cantrip
+  pt-BR: Truque do Sinal Verde
+description:
+  en: You tweak the traffic lights at an intersection within long range so that one of them
+    turns green within a few seconds. The other lights in that system automatically adjust
+    to compensate (turning yellow and then red for cross traffic). Depending on that
+    traffic system, the light remains green anywhere from about ten seconds to a minute.
+  pt-BR: Você mexe nos semáforos de um cruzamento a distância longa para que um deles fique
+    verde em alguns segundos. Os outros semáforos desse sistema se ajustam automaticamente
+    para compensar (ficando amarelos e depois vermelhos para o tráfego cruzado).
+    Dependendo do sistema de trânsito, o sinal permanece verde de cerca de dez segundos a
+    um minuto.
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

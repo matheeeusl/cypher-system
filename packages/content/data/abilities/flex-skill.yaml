@@ -21,3 +21,6 @@ sources:
   - type: focus
     id: would-rather-be-reading
     tier: 3
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 3

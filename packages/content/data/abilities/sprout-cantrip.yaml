@@ -1,0 +1,24 @@
+id: sprout-cantrip
+name:
+  en: Sprout Cantrip
+  pt-BR: Truque do Broto
+description:
+  en: You make seeds sprout at an accelerated rate, causing a week's worth of growth to
+    happen in just a few moments. The seeds must be within a 1-foot (30 cm) cube and no
+    more than an immediate distance from you. If the seeds are in viable soil, they take
+    root as if planted there. If cast on immature or closed flowers, they bloom. If cast
+    on a piece of unripe fruit, it immediately ripens.
+  pt-BR: Você faz sementes brotarem em ritmo acelerado, fazendo com que uma semana de
+    crescimento aconteça em poucos instantes. As sementes devem estar dentro de um cubo de
+    30 cm (1 pé) e a no máximo uma distância imediata de você. Se as sementes estiverem em
+    solo viável, elas criam raízes como se tivessem sido plantadas ali. Se lançado em
+    flores imaturas ou fechadas, elas desabrocham. Se lançado em uma fruta verde, ela
+    amadurece imediatamente.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

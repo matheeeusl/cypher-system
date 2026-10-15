@@ -1,0 +1,38 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: skills-and-knowledge
+name:
+  en: Skills and Knowledge
+  pt-BR: Perícias e Conhecimento
+description:
+  en: This flavor is for characters in roles that call for more knowledge and more
+    real-world application of talent. It’s less flashy and dramatic than supernatural
+    powers or the ability to hack apart multiple foes, but sometimes expertise or know-how
+    is the real solution to a problem. A Warrior flavored with skills and knowledge might
+    be a military engineer. An Explorer flavored with skills and knowledge could be a
+    field scientist. A Speaker with this flavor might be a teacher.
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - interaction-skills
+    - investigative-skills
+    - knowledge-skills
+    - physical-skills
+    - travel-skills
+  '2':
+    - extra-skill
+    - tool-mastery
+    - understanding
+  '3':
+    - flex-skill
+    - improvise
+  '4':
+    - multiple-skills
+    - tool-mastery
+    - understanding
+  '5':
+    - practiced-with-medium-weapons
+    - read-the-signs
+  '6':
+    - skill-with-attacks
+    - skill-with-defense

@@ -1,0 +1,19 @@
+id: inner-defense
+name:
+  en: Inner Defense
+  pt-BR: Defesa Interior
+description:
+  en: Life’s trials have toughened you and made you hard to read. You are trained in any
+    task to resist another creature’s attempt to discern your true feelings, beliefs, or
+    plans. You are likewise trained in resisting torture, telepathic intrusion, and mind
+    control.
+  pt-BR: As provações da vida o endureceram e o tornaram difícil de ler. Você é treinada em
+    qualquer tarefa para resistir à tentativa de outra criatura de discernir seus
+    verdadeiros sentimentos, crenças ou planos. Você também é treinada em resistir a
+    tortura, intrusão telepática e controle mental.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 3

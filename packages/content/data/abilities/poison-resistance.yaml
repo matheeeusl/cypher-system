@@ -1,0 +1,18 @@
+id: poison-resistance
+name:
+  en: Poison Resistance
+  pt-BR: Resistência a Veneno
+description:
+  en: Thanks to an injection of biological agents, a quaff of a magical elixir, a ring from
+    a dying alien, or something just as extreme, you are now immune to poisons, toxins, or
+    any kind of particulate threat. You are not immune to viruses, bacteria, or radiation.
+  pt-BR: Graças a uma injeção de agentes biológicos, um gole de elixir mágico, um anel de um
+    alienígena moribundo ou algo igualmente extremo, você agora é imune a venenos, toxinas
+    ou qualquer tipo de ameaça particulada. Você não é imune a vírus, bactérias ou
+    radiação.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: protection
+    tier: 4

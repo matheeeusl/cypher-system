@@ -1,0 +1,33 @@
+id: blessing-of-the-gods
+name:
+  en: Blessing of the Gods
+  pt-BR: Bênção dos Deuses
+description:
+  en: As a servant of the gods, you can call up blessings in their name. This blessing
+    depends on the god’s general demeanor and area of influence. Choose two of the
+    abilities described below.
+  pt-BR: Como servo dos deuses, você pode invocar bênçãos em nome deles. Essa bênção depende
+    do temperamento geral e da área de influência do deus. Escolha duas das habilidades
+    descritas abaixo.
+cost: null
+action_type: enabler
+choice:
+  options:
+    - authority-law-peace
+    - benevolence-righteousness-spirit
+    - death-darkness
+    - desire-love-health
+    - earth-stone
+    - knowledge-wisdom
+    - nature-animals-plants
+    - protection-silence
+    - sky-air
+    - sun-light-fire
+    - trickery-greed-commerce
+    - war
+    - water-sea
+  count: 2
+sources:
+  - type: flavor
+    id: magic
+    tier: 1

@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: travels-through-time
     tier: 2
+  - type: flavor
+    id: divination
+    tier: 2

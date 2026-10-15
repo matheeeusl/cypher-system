@@ -1,0 +1,22 @@
+id: wet-or-dry-cantrip
+name:
+  en: Wet or Dry Cantrip
+  pt-BR: Truque de Molhar ou Secar
+description:
+  en: You alter the moisture level of an object or area within immediate range, affecting
+    about a 1-foot (30 cm) cube or one set of clothing. If you want the target to be
+    wetter, it is dampened as if you poured a cup of water on it. If you want it drier, it
+    is dried as if you hung it out in the sun on a warm day.
+  pt-BR: Você altera o nível de umidade de um objeto ou área a distância imediata, afetando
+    cerca de um cubo de 30 cm (1 pé) ou um conjunto de roupas. Se quiser que o alvo fique
+    mais molhado, ele é umedecido como se você derramasse um copo de água sobre ele. Se
+    quiser que fique mais seco, é seco como se você o tivesse pendurado ao sol em um dia
+    quente.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

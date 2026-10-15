@@ -1,0 +1,31 @@
+id: comfort-and-encouragement
+name:
+  en: Comfort and Encouragement
+  pt-BR: Conforto e Incentivo
+description:
+  en: You speak to a non-hostile creature within short range, telling them exactly what they
+    need to hear to have a better day. You don't know what these words are until you say
+    them, but you know they will help the creature's attitude. If the creature spends a
+    round or two thinking about what you said, they gain an asset on one task of their
+    choosing within one hour. Alternatively, if the creature has an ongoing penalty to
+    tasks (such as having a hangover, sadness from a recent fight with their romantic
+    partner, an injury, or a stressful situation at work), they can ignore that penalty
+    for the next hour. In addition to the normal options for using Effort, you can use
+    Effort to affect more creatures; each level of Effort affects one additional creature.
+  pt-BR: Você fala com uma criatura não hostil a distância curta, dizendo exatamente o que
+    ela precisa ouvir para ter um dia melhor. Você não sabe quais são essas palavras até
+    dizê-las, mas sabe que ajudarão a atitude da criatura. Se a criatura passar um ou dois
+    rounds pensando no que você disse, ela ganha um recurso em uma tarefa à escolha dela
+    dentro de uma hora. Alternativamente, se a criatura tiver uma penalidade contínua nas
+    tarefas (como ressaca, tristeza por uma briga recente com o parceiro romântico, um
+    ferimento ou uma situação estressante no trabalho), ela pode ignorar essa penalidade
+    pela próxima hora. Além das opções normais de uso do Esforço, você pode usar Esforço
+    para afetar mais criaturas; cada nível de Esforço afeta uma criatura adicional.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate_and_complete
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 1

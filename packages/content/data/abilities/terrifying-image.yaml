@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: crafts-illusions
     tier: 5
+  - type: flavor
+    id: charms-and-figments
+    tier: 6

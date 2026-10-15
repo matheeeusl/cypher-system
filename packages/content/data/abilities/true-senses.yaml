@@ -21,3 +21,9 @@ sources:
   - type: focus
     id: practices-moon-magic
     tier: 6
+  - type: flavor
+    id: divination
+    tier: 5
+  - type: flavor
+    id: magic
+    tier: 5

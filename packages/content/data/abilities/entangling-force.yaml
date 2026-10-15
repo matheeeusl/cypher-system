@@ -34,3 +34,6 @@ sources:
   - type: focus
     id: wields-invisible-force
     tier: 2
+  - type: flavor
+    id: magic
+    tier: 1

@@ -1,0 +1,24 @@
+id: fling
+name:
+  en: Fling
+  pt-BR: Arremessar
+description:
+  en: You violently launch a creature or object about your size or smaller within short
+    range and send it flying a short distance in any direction. This is an Intellect
+    attack that inflicts 4 points of damage to the object being flung when it lands or
+    strikes a barrier. If you aim the primary target at another creature or object (and
+    succeed on a second attack), the secondary target also takes 4 points of damage.
+  pt-BR: Você arremessa violentamente uma criatura ou objeto do seu tamanho ou menor a
+    distância curta, fazendo-o voar uma distância curta em qualquer direção. É um ataque
+    de Intelecto que causa 4 pontos de dano ao objeto arremessado quando ele cai ou atinge
+    uma barreira. Se você mirar o alvo principal em outra criatura ou objeto (e tiver
+    sucesso em um segundo ataque), o alvo secundário também sofre 4 pontos de dano.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+attack: true
+sources:
+  - type: flavor
+    id: magic
+    tier: 3

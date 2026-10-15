@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: soars-on-amazing-wings
     tier: 6
+  - type: flavor
+    id: combat
+    tier: 5

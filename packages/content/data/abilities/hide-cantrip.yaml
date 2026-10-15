@@ -1,0 +1,24 @@
+id: hide-cantrip
+name:
+  en: Hide Cantrip
+  pt-BR: Truque de Esconder
+description:
+  en: You conceal one target within immediate range for about a minute. The target can be no
+    larger than a typical rabbit, or several objects no larger than dice. The target is
+    basically invisible to anyone in front of you, but the illusion doesn't work on anyone
+    to your side or behind you. (If someone is intent on seeing the invisible target, make
+    an Intellect-based attack roll against them to hide it from their view.)
+  pt-BR: Você oculta um alvo a distância imediata por cerca de um minuto. O alvo não pode
+    ser maior que um coelho comum, ou pode ser vários objetos não maiores que dados. O
+    alvo fica basicamente invisível para qualquer um à sua frente, mas a ilusão não
+    funciona em quem estiver ao seu lado ou atrás de você. (Se alguém estiver decidido a
+    ver o alvo invisível, faça uma rolagem de ataque baseada em Intelecto contra essa
+    pessoa para escondê-lo da vista dela.)
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

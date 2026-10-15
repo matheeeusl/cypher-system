@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: plays-too-many-games
     tier: 4
+  - type: flavor
+    id: charms-and-figments
+    tier: 5

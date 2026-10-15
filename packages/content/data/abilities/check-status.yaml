@@ -1,0 +1,48 @@
+id: check-status
+name:
+  en: Check Status
+  pt-BR: Verificar Estado
+description:
+  en: You can telepathically reach out to up to ten creatures known to you, no matter where
+    they are. The individual creatures must be willing and able to communicate. You
+    immediately know their current status—eating, driving, sleeping, angry, injured, fine,
+    great, frightened, worried, and so on, generally in the form of a short sentence or a
+    few words. These creatures don't have to share anything they don't want to, including
+    acknowledging that you checked on them, but they can't lie through this connection.
+    For example, one person might let you know that they're upset, but that doesn't mean
+    you know why (they're dealing with a recent breakup) or what they're doing about it
+    (drinking to cope). You automatically succeed at using this ability; no roll is
+    required. Only you receive the status information. Other people affected by the spell
+    do not get a sense of each other's statuses, nor do they know who else you're checking
+    on. If you spend 5 Intellect points, you can check on twenty creatures at once, and
+    for every 1 Intellect point you spend above that, you can check on an additional ten
+    creatures. Check Status sort of operates like checking a person's current status on a
+    social media platform; some versions of the spell convey information only as emojis
+    instead of words. Some people become addicted to checking on the status of their
+    friends, much like people get addicted to scrolling through social media.
+  pt-BR: Você pode alcançar telepaticamente até dez criaturas que conheça, não importa onde
+    estejam. As criaturas devem estar dispostas e aptas a se comunicar. Você sabe
+    imediatamente o estado atual delas — comendo, dirigindo, dormindo, com raiva, ferida,
+    bem, ótima, assustada, preocupada e assim por diante, geralmente na forma de uma frase
+    curta ou algumas palavras. Essas criaturas não precisam compartilhar nada que não
+    queiram, nem mesmo reconhecer que você as consultou, mas não podem mentir por essa
+    conexão. Por exemplo, uma pessoa pode lhe dizer que está chateada, mas isso não
+    significa que você saiba o porquê (ela está lidando com um término recente) nem o que
+    ela está fazendo a respeito (bebendo para lidar com isso). Você tem sucesso
+    automaticamente ao usar esta habilidade; nenhuma rolagem é necessária. Somente você
+    recebe as informações de estado. As outras pessoas afetadas pela magia não percebem o
+    estado umas das outras, nem sabem quem mais você está consultando. Se você gastar 5
+    pontos de Intelecto, pode consultar vinte criaturas de uma vez, e para cada 1 ponto de
+    Intelecto gasto além disso, pode consultar mais dez criaturas. Verificar Estado
+    funciona mais ou menos como ver o estado atual de uma pessoa em uma rede social;
+    algumas versões da magia transmitem as informações apenas como emojis, em vez de
+    palavras. Algumas pessoas viciam em checar o estado dos amigos, assim como outras
+    viciam em rolar o feed das redes sociais.
+cost:
+  pool: intellect
+  amount: 0
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 1

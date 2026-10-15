@@ -1,0 +1,23 @@
+id: erase-cantrip
+name:
+  en: Erase Cantrip
+  pt-BR: Truque de Apagar
+description:
+  en: You erase up to a page of text from a typical surface (such as paper, parchment, wood,
+    or plastic) within immediate range. The writing slowly disappears over a few seconds.
+    Affecting magical writing requires an Intellect-based attack roll. Erase Cantrip
+    doesn't remove fingerprints, impressions in the paper, or other evidence that writing
+    used to be there.
+  pt-BR: Você apaga até uma página de texto de uma superfície comum (como papel, pergaminho,
+    madeira ou plástico) a distância imediata. A escrita desaparece aos poucos ao longo de
+    alguns segundos. Afetar escrita mágica exige uma rolagem de ataque baseada em
+    Intelecto. O Truque de Apagar não remove impressões digitais, marcas no papel ou
+    outras evidências de que ali havia escrita.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

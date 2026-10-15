@@ -1,0 +1,28 @@
+id: dragons-maw
+name:
+  en: Dragon’s Maw
+  pt-BR: Bocarra do Dragão
+description:
+  en: You fashion and control a “hovering” phantasmal construct of magic within long range
+    that resembles a dragon’s head. The construct lasts for up to an hour, until it is
+    destroyed, or until you cast another spell. It is a level 4 construct that inflicts 6
+    points of damage with its bite when directed. While the construct persists, you can
+    use it to manipulate large objects, carry heavy items in its mouth, or attack foes. If
+    you use it to attack foes, you must use your action to directly control the phantom
+    maw for each attack.
+  pt-BR: Você molda e controla uma construção fantasmagórica "flutuante" de magia, a
+    distância longa, que lembra uma cabeça de dragão. A construção dura até uma hora, até
+    ser destruída ou até você lançar outra magia. É uma construção de nível 4 que causa 6
+    pontos de dano com sua mordida quando dirigida. Enquanto a construção persiste, você
+    pode usá-la para manipular objetos grandes, carregar itens pesados na boca ou atacar
+    inimigos. Se usá-la para atacar inimigos, deve usar sua ação para controlar
+    diretamente a bocarra fantasma a cada ataque.
+cost:
+  pool: intellect
+  amount: 6
+action_type: action_to_initiate
+attack: true
+sources:
+  - type: flavor
+    id: magic
+    tier: 5

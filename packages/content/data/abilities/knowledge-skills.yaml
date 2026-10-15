@@ -35,6 +35,9 @@ sources:
   - type: focus
     id: remembers-the-past
     tier: 1
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 1
 skill_grant:
   allow_custom: true
   count: 2

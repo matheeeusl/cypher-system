@@ -1,0 +1,15 @@
+id: mechanical-telepathy
+name:
+  en: Mechanical Telepathy
+  pt-BR: Telepatia Mecânica
+description:
+  en: By touching a thinking machine, you gain access to its surface “thoughts.”
+  pt-BR: Ao tocar uma máquina pensante, você tem acesso aos "pensamentos" superficiais dela.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: technology
+    tier: 3

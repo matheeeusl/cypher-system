@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: shepherds-spirits
     tier: 3
+  - type: flavor
+    id: stealth
+    tier: 4

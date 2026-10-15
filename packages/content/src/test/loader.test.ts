@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 
 import {
+  getAbilityById,
   getAllDescriptors,
+  getAllFlavors,
   getAllTypes,
   getTypeById,
   getAllAbilities,
@@ -65,6 +67,74 @@ describe('loader', () => {
       ),
     ]
     expect(dangling).toEqual([])
+  })
+
+  // A Flavor lists ability ids per tier, and each Ability records the flavors it
+  // belongs to in `sources` (like Type/Focus abilities). The two sides are
+  // authored separately, so check they agree in both directions.
+  it('keeps every Flavor and its abilities in sync', () => {
+    const problems: string[] = []
+    for (const flavor of getAllFlavors()) {
+      for (const [tier, ids] of Object.entries(flavor.tier_abilities)) {
+        for (const id of ids) {
+          const ability = getAbilityById(id)
+          if (!ability) {
+            problems.push(`flavor "${flavor.id}" tier ${tier} -> unknown ability "${id}"`)
+          } else if (
+            !ability.sources.some(
+              (s) => s.type === 'flavor' && s.id === flavor.id && String(s.tier) === tier,
+            )
+          ) {
+            problems.push(`ability "${id}" has no flavor source "${flavor.id}" at tier ${tier}`)
+          }
+        }
+      }
+    }
+    for (const ability of getAllAbilities()) {
+      for (const source of ability.sources.filter((s) => s.type === 'flavor')) {
+        const flavor = getAllFlavors().find((f) => f.id === source.id)
+        if (!flavor?.tier_abilities[String(source.tier)]?.includes(ability.id)) {
+          problems.push(
+            `ability "${ability.id}" source "${source.id}" tier ${source.tier} not listed by the flavor`,
+          )
+        }
+      }
+    }
+    expect(problems).toEqual([])
+  })
+
+  // A choice ability lists the abilities it asks the player to pick; each of those
+  // records the ability back as an `ability` source. Authored separately, so
+  // check they agree in both directions, and that the engine's one-level
+  // assumption holds (an option can't grant skills or hold a choice itself).
+  it('keeps every choice ability and its options in sync', () => {
+    const problems: string[] = []
+    for (const ability of getAllAbilities()) {
+      for (const optionId of ability.choice?.options ?? []) {
+        const option = getAbilityById(optionId)
+        if (!option) {
+          problems.push(`ability "${ability.id}" choice -> unknown ability "${optionId}"`)
+          continue
+        }
+        if (!option.sources.some((s) => s.type === 'ability' && s.id === ability.id)) {
+          problems.push(`ability "${optionId}" has no "ability" source "${ability.id}"`)
+        }
+        if (option.skill_grant || option.choice) {
+          problems.push(
+            `ability "${optionId}" is an option of "${ability.id}" but has a skill_grant or choice`,
+          )
+        }
+      }
+      for (const source of ability.sources.filter((s) => s.type === 'ability')) {
+        const owner = getAbilityById(source.id)
+        if (!owner?.choice?.options.includes(ability.id)) {
+          problems.push(
+            `ability "${ability.id}" source "${source.id}" doesn’t list it as an option`,
+          )
+        }
+      }
+    }
+    expect(problems).toEqual([])
   })
 
   it('attaches a non-empty, deterministic content_version to every entity', () => {

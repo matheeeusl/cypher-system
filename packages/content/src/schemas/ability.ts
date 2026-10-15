@@ -59,6 +59,7 @@ export const AbilitySchema = z.object({
     'action_to_change_back',
     'action_to_activate',
     'action_per_target_to_initiate',
+    'action_to_prepare_and_initiate',
   ]),
   // Present only on abilities that train the character in `count` skills
   // the player picks themselves ("You are trained in two skills in which
@@ -103,6 +104,22 @@ export const AbilitySchema = z.object({
       message: 'skill_grant.alternate.count must differ from count',
     })
     .optional(),
+  // Present on abilities that, once picked, ask the player to choose `count` of
+  // `options` — other abilities: Blessing of the Gods (two of thirteen
+  // blessings), Cantrips (any four). It is the shape of a Focus `choice` entry
+  // in tier_abilities (options + count), without bundled pairs. The chosen
+  // abilities become known abilities, credited to wherever this one came from
+  // (a flavor, usually). An option can't itself grant skills (`skill_grant`) or
+  // hold a choice: the engine only resolves one level (checked in loader.test.ts).
+  choice: z
+    .object({
+      options: z.array(z.string()).min(2),
+      count: z.number().int().min(1),
+    })
+    .refine((choice) => choice.count <= choice.options.length, {
+      message: 'choice.count can’t exceed the number of options',
+    })
+    .optional(),
   // True for abilities that are themselves an attack: they make an attack roll
   // or inflict damage on a target (Bash, Bolts of Power, Spray…). The Skills
   // advancement may only train an *attack* ability ("you can choose an ability
@@ -127,7 +144,10 @@ export const AbilitySchema = z.object({
   sources: z
     .array(
       z.object({
-        type: z.enum(['type', 'focus']),
+        // 'ability': this ability is one of the `choice.options` of the ability
+        // `id` (a Blessing of the Gods blessing, a cantrip), not something a Type,
+        // Focus or flavor lists on its own. `tier` is that ability's tier.
+        type: z.enum(['type', 'focus', 'flavor', 'ability']),
         id: z.string(),
         tier: z.number().int().min(1).max(6),
         cyberware: z.boolean().optional(),

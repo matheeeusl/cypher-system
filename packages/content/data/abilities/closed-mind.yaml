@@ -1,0 +1,18 @@
+id: closed-mind
+name:
+  en: Closed Mind
+  pt-BR: Mente Fechada
+description:
+  en: You are trained in Intellect defense tasks and have +2 Armor against damage that
+    selectively targets your Intellect Pool (which normally ignores Armor).
+  pt-BR: Você é treinado em tarefas de defesa de Intelecto e tem +2 de Armadura contra dano
+    que atinge seletivamente sua Reserva de Intelecto (o que normalmente ignora Armadura).
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: protection
+    tier: 1
+  - type: flavor
+    id: magic
+    tier: 1

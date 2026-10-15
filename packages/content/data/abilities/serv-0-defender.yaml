@@ -1,0 +1,15 @@
+id: serv-0-defender
+name:
+  en: Serv-0 Defender
+  pt-BR: Serv-0 Defensor
+description:
+  en: Your Serv-0 aids you in combat by blocking attacks. It gains a modification in Speed
+    defense.
+  pt-BR: Seu Serv-0 ajuda você em combate bloqueando ataques. Ele recebe uma modificação em
+    defesa de Velocidade.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 2

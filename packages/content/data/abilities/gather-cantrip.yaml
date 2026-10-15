@@ -1,0 +1,21 @@
+id: gather-cantrip
+name:
+  en: Gather Cantrip
+  pt-BR: Truque de Juntar
+description:
+  en: You gather a scattered bunch of items into a small space, as if you had spent a minute
+    sweeping them together with your hands or a broom. This affects about 1 square yard (1
+    sq m), up to an immediate distance away. The cantrip is mainly useful for collecting
+    things that have been spilled, or for making it easier to clean up a room.
+  pt-BR: Você reúne um monte de itens espalhados em um espaço pequeno, como se tivesse
+    passado um minuto varrendo-os com as mãos ou com uma vassoura. Isso afeta cerca de 1
+    jarda quadrada (1 m²), a até uma distância imediata. O truque é útil principalmente
+    para recolher coisas derramadas ou facilitar a arrumação de um cômodo.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,26 @@
+id: exterminate-cantrip
+name:
+  en: Exterminate Cantrip
+  pt-BR: Truque do Extermínio
+description:
+  en: You create a bolt of energy that kills one common vermin creature (level 0) within a
+    short distance, such as a fly, worm, cockroach, or mouse. One casting can affect
+    multiple smaller creatures (such as ants or fleas) within 1 cubic foot. The spell is
+    accompanied by a quick bolt of black and yellow energy. Exterminate Cantrip’s attack
+    rolls aren’t hindered by two steps. A swarm whose level is 1 or higher is unaffected
+    by this cantrip, even though the individual creatures in the swarm might be.
+  pt-BR: Você cria um raio de energia que mata uma criatura comum de praga (nível 0) a uma
+    distância curta, como uma mosca, uma minhoca, uma barata ou um camundongo. Uma
+    conjuração pode afetar várias criaturas menores (como formigas ou pulgas) dentro de 1
+    pé cúbico. A magia é acompanhada de um rápido raio de energia preto e amarelo. As
+    rolagens de ataque do Truque do Extermínio não são dificultadas em dois níveis. Um
+    enxame de nível 1 ou superior não é afetado por este truque, ainda que as criaturas
+    individuais do enxame possam ser.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

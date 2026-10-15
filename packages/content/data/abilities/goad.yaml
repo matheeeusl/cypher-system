@@ -1,0 +1,29 @@
+id: goad
+name:
+  en: Goad
+  pt-BR: Provocar
+description:
+  en: You can attempt to goad a target into a belligerent—and probably foolish— reaction
+    that requires the target to try to close the distance between you and attempt to
+    physically strike you on its next turn. They attempt this action even if this would
+    cause them to break formation or to give up cover or a tactically superior position.
+    Whether the target strikes you or fails to do so, they come to their senses
+    immediately afterward, after which further tasks attempting to goad the target again
+    are hindered.
+  pt-BR: Você pode tentar provocar um alvo para uma reação belicosa — e provavelmente tola —
+    que exige que o alvo tente se aproximar de você e atacá-lo fisicamente em seu próximo
+    turno. Ele tenta essa ação mesmo que isso o faça romper a formação ou abrir mão de
+    cobertura ou de uma posição taticamente superior. Quer o alvo o atinja ou falhe, ele
+    recobra os sentidos logo em seguida, e depois disso novas tarefas para provocá-lo
+    outra vez são dificultadas.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: stealth
+    tier: 1
+  - type: flavor
+    id: charms-and-figments
+    tier: 1

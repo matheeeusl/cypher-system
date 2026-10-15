@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: pilots-starcraft
     tier: 3
+  - type: flavor
+    id: technology
+    tier: 3

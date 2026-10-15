@@ -1,0 +1,19 @@
+id: loudness-cantrip
+name:
+  en: Loudness Cantrip
+  pt-BR: Truque do Volume
+description:
+  en: You amplify your voice, allowing you to speak at up to three times your normal volume.
+    This isn't enough to harm anyone, but you can speak comfortably to a large crowd or
+    across a very long distance without effort.
+  pt-BR: Você amplifica sua voz, podendo falar com até três vezes o seu volume normal. Isso
+    não basta para machucar ninguém, mas você pode falar confortavelmente para uma grande
+    multidão ou a uma distância muito longa sem esforço.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

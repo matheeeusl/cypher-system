@@ -1,0 +1,37 @@
+id: question-past-self
+name:
+  en: Question Past Self
+  pt-BR: Interrogar o Eu Passado
+description:
+  en: You reach into the past up to a week and mentally ask your past self one or two
+    questions about something you knew or observed at the chosen time. For example, if
+    you've forgotten an important phone number or can't remember if a particular person
+    was in a meeting, you can ask your past self about it while it's still fresh in your
+    past self 's memory. Your past self doesn't perceive this as an intrusive voice—it
+    just seems like an unexpected moment of reflection about the questions your present
+    self asks. This doesn't allow you to remember things your past self didn't actually
+    know at the time, but it can sometimes help your present self (in the form of an
+    asset) learn more about or realize something your past self wasn't really paying
+    attention to at the time (such as seeing part of a password or noting whether there
+    was a red delivery truck nearby). For each level of Effort you apply to this ability,
+    you can reach an additional week further into the past.
+  pt-BR: Você alcança o passado em até uma semana e pergunta mentalmente ao seu eu passado
+    uma ou duas coisas sobre algo que você sabia ou observou naquele momento. Por exemplo,
+    se você esqueceu um número de telefone importante ou não se lembra se determinada
+    pessoa estava em uma reunião, pode perguntar ao seu eu passado enquanto a lembrança
+    ainda está fresca. Seu eu passado não percebe isso como uma voz intrusa — parece
+    apenas um momento inesperado de reflexão sobre as perguntas que seu eu presente faz.
+    Isso não permite lembrar coisas que seu eu passado não sabia de fato na época, mas às
+    vezes pode ajudar seu eu presente (na forma de um recurso) a aprender mais ou perceber
+    algo a que seu eu passado não estava prestando muita atenção (como ter visto parte de
+    uma senha ou notado se havia um caminhão de entrega vermelho por perto). Para cada
+    nível de Esforço aplicado a esta habilidade, você pode alcançar mais uma semana no
+    passado.
+cost:
+  pool: intellect
+  amount: 4
+action_type: action
+sources:
+  - type: flavor
+    id: divination
+    tier: 3

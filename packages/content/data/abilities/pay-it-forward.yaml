@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: lived-among-the-fey
     tier: 4
+  - type: flavor
+    id: cozy-magic
+    tier: 4

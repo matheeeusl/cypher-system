@@ -1,0 +1,33 @@
+id: jury-rig
+name:
+  en: Jury-Rig
+  pt-BR: Gambiarra
+description:
+  en: You quickly create an object using what would seem to be entirely inappropriate
+    materials. You can make a bomb out of a tin can and household cleaners, a lockpick out
+    of aluminum foil, or a sword out of broken furniture. The level of the item determines
+    the difficulty of the task, but the appropriateness of the materials eases or hinders
+    it as well. Generally, the object can be no larger than something you can hold in one
+    hand, and it functions once (or, in the case of a weapon or similar item, is
+    essentially useful for one encounter). If you spend at least ten minutes on the task,
+    you can create an item of level 5 or lower. You can’t change the nature of the
+    materials involved. For example, you can’t take iron rods and make a pile of gold
+    coins or a wicker basket.
+  pt-BR: Você cria rapidamente um objeto usando o que parecem ser materiais totalmente
+    inadequados. Pode fazer uma bomba com uma lata e produtos de limpeza domésticos, uma
+    gazua com papel-alumínio ou uma espada com móveis quebrados. O nível do item determina
+    a dificuldade da tarefa, mas a adequação dos materiais também a facilita ou dificulta.
+    Em geral, o objeto não pode ser maior do que algo que você consiga segurar com uma
+    mão, e funciona uma vez (ou, no caso de uma arma ou item semelhante, é essencialmente
+    útil por um encontro). Se você passar pelo menos dez minutos na tarefa, pode criar um
+    item de nível 5 ou menor. Você não pode mudar a natureza dos materiais envolvidos. Por
+    exemplo, não pode pegar barras de ferro e fazer uma pilha de moedas de ouro ou uma
+    cesta de vime.
+cost:
+  pool: intellect
+  amount: 5
+action_type: action
+sources:
+  - type: flavor
+    id: technology
+    tier: 5

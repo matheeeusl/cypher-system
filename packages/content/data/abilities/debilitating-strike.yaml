@@ -1,0 +1,20 @@
+id: debilitating-strike
+name:
+  en: Debilitating Strike
+  pt-BR: Golpe Debilitante
+description:
+  en: You make an attack to deliver a painful or debilitating strike. The attack is
+    hindered. If it hits, the creature takes 2 additional points of damage at the end of
+    the next round, and its attacks are hindered until the end of the next round.
+  pt-BR: Você faz um ataque para desferir um golpe doloroso ou debilitante. O ataque é
+    dificultado. Se acertar, a criatura sofre 2 pontos adicionais de dano ao fim do
+    próximo round, e seus ataques são dificultados até o fim do próximo round.
+cost:
+  pool: speed
+  amount: 4
+action_type: action
+attack: true
+sources:
+  - type: flavor
+    id: stealth
+    tier: 4

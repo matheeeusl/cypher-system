@@ -1,0 +1,21 @@
+id: wash-car-cantrip
+name:
+  en: Wash Car Cantrip
+  pt-BR: Truque de Lavar Carro
+description:
+  en: You clean the outside of a typical passenger automobile within immediate range as if
+    it had gone through an automatic car wash. Very large or very dirty cars may require
+    multiple castings. The cantrip works on motorcycles, bicycles, and other small
+    vehicles as well.
+  pt-BR: Você limpa o exterior de um automóvel de passeio comum a distância imediata como se
+    ele tivesse passado por uma lavagem automática. Carros muito grandes ou muito sujos
+    podem exigir várias conjurações. O truque também funciona em motocicletas, bicicletas
+    e outros veículos pequenos.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

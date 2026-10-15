@@ -1,0 +1,15 @@
+id: serv-0-scanner
+name:
+  en: Serv-0 Scanner
+  pt-BR: Serv-0 Escâner
+description:
+  en: Your Serv-0 gains the Scan ability.
+  pt-BR: Seu Serv-0 ganha a habilidade Varredura.
+cost:
+  pool: intellect
+  amount: 2
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 3

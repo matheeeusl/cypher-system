@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: sculpts-hard-light
     tier: 6
+  - type: flavor
+    id: protection
+    tier: 5

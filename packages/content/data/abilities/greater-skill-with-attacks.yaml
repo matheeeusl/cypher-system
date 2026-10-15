@@ -23,6 +23,9 @@ sources:
   - type: focus
     id: slays-monsters
     tier: 5
+  - type: flavor
+    id: combat
+    tier: 6
 skill_grant:
   count: 1
   options:

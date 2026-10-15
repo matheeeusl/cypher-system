@@ -1,0 +1,14 @@
+id: serv-0-repair
+name:
+  en: Serv-0 Repair
+  pt-BR: Serv-0 Reparador
+description:
+  en: Your Serv-0 aids you in repairing other devices. It gains a modification in repair.
+  pt-BR: Seu Serv-0 ajuda você a consertar outros dispositivos. Ele recebe uma modificação
+    em reparo.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 2

@@ -1,0 +1,43 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: modern-magic
+name:
+  en: Modern Magic
+  pt-BR: Magia Moderna
+description:
+  en: Characters who live in a modern world with magic and technology often know a bit about
+    mixing the two of them together. These characters usually pick up a few useful spells
+    (such as disrupting hostile magic or disabling a mugger's pistol) from various
+    sources, much like how people tend to learn skills unrelated to their day job (like
+    cooking, dancing, and playing guitar).
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - cantrips
+    - annoy-electronics
+    - arcanaphone
+    - enhance-athletics
+    - mage-clock
+    - spellpay
+    - ward
+  '2':
+    - charm-machine
+    - dispel-magic
+    - gun-jammer
+    - magical-power-current
+    - safe-fall
+    - safe-sex
+    - third-eye
+  '3':
+    - diagnose-device
+    - network-tap
+    - sensor
+  '4':
+    - repair-machine
+    - soothe-the-savage
+  '5':
+    - granite-wall
+    - tower-of-will
+  '6':
+    - information-gathering
+    - trust-to-luck

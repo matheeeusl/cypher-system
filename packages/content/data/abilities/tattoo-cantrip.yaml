@@ -1,0 +1,21 @@
+id: tattoo-cantrip
+name:
+  en: Tattoo Cantrip
+  pt-BR: Truque da Tatuagem
+description:
+  en: You create an image on your skin, as if tattooed there by a reasonably talented
+    artist. The image can be no larger than your hand, and consists of just one color. You
+    can cast this cantrip multiple times to create a larger tattoo, use more colors, or
+    both. The image lasts about an hour.
+  pt-BR: Você cria uma imagem na sua pele, como se tivesse sido tatuada ali por um artista
+    razoavelmente talentoso. A imagem não pode ser maior que a sua mão e tem apenas uma
+    cor. Você pode lançar este truque várias vezes para criar uma tatuagem maior, usar
+    mais cores, ou ambos. A imagem dura cerca de uma hora.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

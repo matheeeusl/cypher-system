@@ -20,3 +20,6 @@ sources:
   - type: focus
     id: sailed-beneath-the-jolly-roger
     tier: 6
+  - type: flavor
+    id: combat
+    tier: 3

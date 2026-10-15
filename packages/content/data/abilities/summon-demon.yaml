@@ -23,3 +23,6 @@ sources:
   - type: focus
     id: inks-spells-on-skin
     tier: 6
+  - type: flavor
+    id: magic
+    tier: 6

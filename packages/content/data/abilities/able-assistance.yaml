@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: interprets-the-law
     tier: 3
+  - type: flavor
+    id: cozy-magic
+    tier: 4

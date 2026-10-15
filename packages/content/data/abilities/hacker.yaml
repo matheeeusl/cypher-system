@@ -16,3 +16,6 @@ sources:
   - type: focus
     id: explores-cyberspace
     tier: 2
+  - type: flavor
+    id: technology
+    tier: 1

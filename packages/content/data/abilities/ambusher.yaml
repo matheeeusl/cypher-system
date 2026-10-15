@@ -11,3 +11,6 @@ sources:
   - type: focus
     id: remembers-the-past
     tier: 5
+  - type: flavor
+    id: stealth
+    tier: 4

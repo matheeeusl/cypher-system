@@ -20,3 +20,6 @@ sources:
   - type: type
     id: adept
     tier: 4
+  - type: flavor
+    id: charms-and-figments
+    tier: 5

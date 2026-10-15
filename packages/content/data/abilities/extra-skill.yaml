@@ -1,0 +1,22 @@
+id: extra-skill
+name:
+  en: Extra Skill
+  pt-BR: Perícia Extra
+description:
+  en: You are trained in one skill of your choice (other than attacks or defense) in which
+    you are not already trained. You can select this ability multiple times. Each time you
+    select it, you must choose a different skill.
+  pt-BR: Você é treinado em uma perícia à sua escolha (que não seja ataques ou defesa) na
+    qual ainda não é treinado. Você pode escolher esta habilidade várias vezes. A cada
+    vez, deve escolher uma perícia diferente.
+cost: null
+action_type: enabler
+skill_grant:
+  allow_custom: true
+  count: 1
+  options: noncombat
+  repeatable: true
+sources:
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 2

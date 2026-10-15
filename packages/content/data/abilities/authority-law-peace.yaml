@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: channels-divine-blessings
     tier: 1
+  - type: ability
+    id: blessing-of-the-gods
+    tier: 1

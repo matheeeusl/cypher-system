@@ -70,6 +70,8 @@ None right now — every term in the table above is confirmed. When a new term c
 
 | English | Candidate(s) seen informally | Status |
 | ------- | ---------------------------- | ------ |
+| Flavor (optional Type customization: Combat, Stealth, Magic…) | none yet — the English word is shown in pt-BR until decided | Matheus is checking a better translation (2026-10-15); see packages/content/FLAVORS-PLAN.md |
+| Cantrip | Truque | Used for the 50 cantrip names and the Cantrips ability (2026-10-15); not confirmed |
 
 ## How to extend this glossary
 

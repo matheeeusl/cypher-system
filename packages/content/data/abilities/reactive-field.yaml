@@ -17,3 +17,6 @@ sources:
   - type: focus
     id: scavenges
     tier: 6
+  - type: flavor
+    id: protection
+    tier: 6

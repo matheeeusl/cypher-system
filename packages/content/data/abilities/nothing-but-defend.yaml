@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: masters-defense
     tier: 5
+  - type: flavor
+    id: protection
+    tier: 5

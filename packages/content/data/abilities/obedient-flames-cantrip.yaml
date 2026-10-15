@@ -1,0 +1,21 @@
+id: obedient-flames-cantrip
+name:
+  en: Obedient Flames Cantrip
+  pt-BR: Truque das Chamas Obedientes
+description:
+  en: You affect flames within a short distance, making them appear brighter or dimmer,
+    flicker strangely, or change color. This lasts for one minute. You can affect up to
+    several dozen candles, a few torches, or one typical campfire with each casting of the
+    cantrip.
+  pt-BR: Você afeta chamas a uma distância curta, fazendo-as parecer mais brilhantes ou mais
+    fracas, tremular de forma estranha ou mudar de cor. Isso dura um minuto. Você pode
+    afetar até algumas dezenas de velas, algumas tochas ou uma fogueira comum a cada
+    conjuração do truque.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

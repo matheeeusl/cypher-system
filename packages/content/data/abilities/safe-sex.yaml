@@ -1,0 +1,21 @@
+id: safe-sex
+name:
+  en: Safe Sex
+  pt-BR: Sexo Seguro
+description:
+  en: One creature you touch can have sexual encounters with no chance of causing pregnancy
+    or transmitting an STI. This protection lasts for ten hours.
+  pt-BR: Uma criatura que você tocar pode ter encontros sexuais sem nenhuma chance de causar
+    gravidez ou transmitir uma IST. Essa proteção dura dez horas.
+cost: null
+action_type: action
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 2
+  - type: flavor
+    id: protection
+    tier: 2
+  - type: flavor
+    id: modern-magic
+    tier: 2

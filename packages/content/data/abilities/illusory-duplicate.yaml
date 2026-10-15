@@ -1,0 +1,25 @@
+id: illusory-duplicate
+name:
+  en: Illusory Duplicate
+  pt-BR: Duplicata Ilusória
+description:
+  en: You create a single image of yourself within immediate range. The image looks like you
+    as you are now (including how you are dressed). The image can move (for example, you
+    could make it walk or attack), but it can't move more than an immediate distance from
+    where you created it. The illusion includes sound and smell. It lasts for ten minutes
+    and changes as you direct (no concentration is needed). If you move beyond short range
+    of the illusion, it vanishes.
+  pt-BR: Você cria uma única imagem de si mesmo a uma distância imediata. A imagem se parece
+    com você como está agora (inclusive com as roupas que veste). A imagem pode se mover
+    (por exemplo, você pode fazê-la andar ou atacar), mas não pode se afastar mais que uma
+    distância imediata do lugar onde foi criada. A ilusão inclui som e cheiro. Dura dez
+    minutos e muda conforme você dirige (sem precisar de concentração). Se você se afastar
+    além de uma distância curta da ilusão, ela desaparece.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_create
+sources:
+  - type: flavor
+    id: charms-and-figments
+    tier: 2

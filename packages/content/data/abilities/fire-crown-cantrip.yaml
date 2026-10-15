@@ -1,0 +1,23 @@
+id: fire-crown-cantrip
+name:
+  en: Fire Crown Cantrip
+  pt-BR: Truque da Coroa de Fogo
+description:
+  en: You create a crown-like manifestation of fire on your head that lasts for ten minutes.
+    The fire doesn't burn you. If anyone touches it or makes a melee attack aimed at your
+    head, you can make a free Intellect-based attack roll against them to inflict 1 point
+    of damage. Variants of Fire Crown Cantrip create a crown of lightning, smoke, ice,
+    water, or thorns.
+  pt-BR: Você cria uma manifestação de fogo em forma de coroa sobre sua cabeça, que dura dez
+    minutos. O fogo não queima você. Se alguém a tocar ou fizer um ataque corpo a corpo
+    mirando sua cabeça, você pode fazer uma rolagem de ataque gratuita baseada em
+    Intelecto contra essa pessoa para causar 1 ponto de dano. Variantes do Truque da Coroa
+    de Fogo criam uma coroa de relâmpagos, fumaça, gelo, água ou espinhos.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,29 @@
+id: tiny-illusion-cantrip
+name:
+  en: Tiny Illusion Cantrip
+  pt-BR: Truque da Ilusão Minúscula
+description:
+  en: You create a single image of a creature or object within immediate range. The image
+    must fit within a 1-foot (30 cm) cube. The image can move (for example, you could make
+    the illusion of a mouse jump or crawl around), but it can't leave the area defined by
+    the cube. The illusion includes sound (up to the volume of a person's normal speaking
+    voice) but not smell. It lasts for one minute, but if you want to change the original
+    illusion significantly—such as making a creature appear to be wounded— you must
+    concentrate on it again (though doing so doesn't cost additional Intellect points). If
+    you move beyond immediate range of the cube, the illusion vanishes.
+  pt-BR: Você cria uma única imagem de uma criatura ou objeto a uma distância imediata. A
+    imagem deve caber em um cubo de 30 cm (1 pé). A imagem pode se mover (por exemplo,
+    você poderia fazer a ilusão de um camundongo pular ou rastejar), mas não pode sair da
+    área definida pelo cubo. A ilusão inclui som (até o volume da voz normal de uma
+    pessoa), mas não cheiro. Dura um minuto, mas se você quiser mudar significativamente a
+    ilusão original — como fazer uma criatura parecer ferida — deve se concentrar nela
+    novamente (embora isso não custe pontos de Intelecto adicionais). Se você se afastar
+    além da distância imediata do cubo, a ilusão desaparece.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action_to_create_and_modify
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

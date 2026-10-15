@@ -1,0 +1,24 @@
+id: convenient-rideshare-cantrip
+name:
+  en: Convenient Rideshare Cantrip
+  pt-BR: Truque da Carona Conveniente
+description:
+  en: When using a rideshare or taxi app, you are connected with a driver who can pick you
+    up within a couple of minutes. If you use this cantrip in a remote area where drivers
+    are scarce, results can get strange; for example, the car and driver might be ghosts,
+    you might have to share your ride with a dangerous supernatural creature, or you might
+    arrive at your destination minutes before or hours after you were picked up.
+  pt-BR: Ao usar um aplicativo de carona ou de táxi, você é conectado a um motorista que
+    pode buscá-lo em alguns minutos. Se você usar este truque em uma área remota onde os
+    motoristas são escassos, os resultados podem ficar estranhos; por exemplo, o carro e o
+    motorista podem ser fantasmas, você pode ter de dividir a carona com uma criatura
+    sobrenatural perigosa, ou pode chegar ao destino minutos antes ou horas depois de ter
+    sido buscado.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

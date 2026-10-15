@@ -1,0 +1,15 @@
+id: from-the-shadows
+name:
+  en: From the Shadows
+  pt-BR: Das Sombras
+description:
+  en: If you successfully attack a creature that was previously unaware of your presence,
+    you deal 3 additional points of damage.
+  pt-BR: Se você atacar com sucesso uma criatura que não sabia da sua presença, causa 3
+    pontos adicionais de dano.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 3

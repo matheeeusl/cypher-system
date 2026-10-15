@@ -13,3 +13,6 @@ sources:
   - type: focus
     id: commands-mental-powers
     tier: 3
+  - type: flavor
+    id: charms-and-figments
+    tier: 4

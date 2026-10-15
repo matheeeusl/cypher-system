@@ -13,3 +13,9 @@ sources:
   - type: type
     id: speaker
     tier: 1
+  - type: flavor
+    id: combat
+    tier: 1
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 5

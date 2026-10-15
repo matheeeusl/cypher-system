@@ -33,3 +33,6 @@ sources:
   - type: focus
     id: works-for-a-living
     tier: 3
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 3

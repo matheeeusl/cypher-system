@@ -1,0 +1,30 @@
+id: arcanaphone
+name:
+  en: Arcanaphone
+  pt-BR: Arcanofone
+description:
+  en: You make use of your cellular service to start a telephone call or use text messaging,
+    lasting up to ten minutes. To anyone watching you, you look like you're in "hands
+    free" mode. In all respects, this works as if you were carrying your device with you
+    and using it directly (meaning the network notes your current location as if you were
+    carrying your phone, and you may not have coverage in some areas). The first time you
+    use this ability with your mobile service, you must contact their customer service
+    department to authorize the magic (taking ten to sixty minutes), as if it were a new
+    device. You can't use this ability if you don't have a cellular account.
+  pt-BR: Você usa seu serviço de telefonia celular para iniciar uma chamada telefônica ou
+    enviar mensagens de texto, por até dez minutos. Para quem estiver olhando, parece que
+    você está no modo "mãos livres". Em todos os aspectos, funciona como se você estivesse
+    com seu aparelho e o usasse diretamente (ou seja, a rede registra sua localização
+    atual como se você estivesse com o celular, e você pode não ter cobertura em algumas
+    áreas). Na primeira vez que usar esta habilidade com seu serviço móvel, você deve
+    contatar o atendimento ao cliente para autorizar a magia (levando de dez a sessenta
+    minutos), como se fosse um aparelho novo. Você não pode usar esta habilidade se não
+    tiver uma conta de celular.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action_to_initiate
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

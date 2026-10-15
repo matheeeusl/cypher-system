@@ -33,3 +33,6 @@ sources:
     id: knows-everything
     tier: 1
     cyberware: true
+  - type: flavor
+    id: technology
+    tier: 1

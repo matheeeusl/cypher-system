@@ -1,0 +1,14 @@
+id: serv-0-brawler
+name:
+  en: Serv-0 Brawler
+  pt-BR: Serv-0 Brigão
+description:
+  en: Your Serv-0 aids you in melee combat. It gains a modification in melee attacks.
+  pt-BR: Seu Serv-0 ajuda você em combate corpo a corpo. Ele recebe uma modificação em
+    ataques corpo a corpo.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: technology
+    tier: 4

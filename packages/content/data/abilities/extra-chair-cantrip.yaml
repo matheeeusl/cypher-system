@@ -1,0 +1,21 @@
+id: extra-chair-cantrip
+name:
+  en: Extra Chair Cantrip
+  pt-BR: Truque da Cadeira Extra
+description:
+  en: A table you touch somehow has room (and a chair) for one more person to comfortably
+    sit there without affecting anyone else at the table. This lasts anywhere from ten
+    minutes to an hour, or less if the person in the extra chair leaves for more than a
+    few minutes.
+  pt-BR: Uma mesa que você tocar, de alguma forma, tem espaço (e uma cadeira) para mais uma
+    pessoa se sentar confortavelmente, sem afetar ninguém mais à mesa. Isso dura de dez
+    minutos a uma hora, ou menos se a pessoa na cadeira extra se ausentar por mais do que
+    alguns minutos.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

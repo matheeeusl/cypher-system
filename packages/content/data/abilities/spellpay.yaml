@@ -1,0 +1,30 @@
+id: spellpay
+name:
+  en: Spellpay
+  pt-BR: Pagamento Arcano
+description:
+  en: You initiate a transaction with another person or business cashier within short range,
+    giving them an amount of money that you specify. The currency comes from cash in your
+    possession, money in your account, or a mix of both; the recipient receives this money
+    in the same form as it came from you. For example, if you send someone $150, $50 of
+    which is cash in your wallet and $100 of which comes from your bank account, they
+    suddenly have $50 cash on hand and $100 in their bank account. Instead of a
+    transaction between two people, you can instead use this ability to access your
+    account, withdrawing or depositing cash as if using a teller machine.
+  pt-BR: Você inicia uma transação com outra pessoa ou caixa de um estabelecimento a
+    distância curta, entregando uma quantia de dinheiro que você especificar. A moeda vem
+    do dinheiro em espécie que você tem consigo, do dinheiro em sua conta ou de uma
+    mistura dos dois; o destinatário recebe esse dinheiro na mesma forma em que saiu de
+    você. Por exemplo, se você enviar $150 a alguém, sendo $50 em dinheiro da sua carteira
+    e $100 da sua conta bancária, a pessoa passa a ter de repente $50 em dinheiro vivo e
+    $100 em sua conta bancária. Em vez de uma transação entre duas pessoas, você pode usar
+    esta habilidade para acessar sua conta, sacando ou depositando dinheiro como se usasse
+    um caixa eletrônico.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

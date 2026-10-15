@@ -1,0 +1,21 @@
+id: mage-clock
+name:
+  en: Mage Clock
+  pt-BR: Relógio de Mago
+description:
+  en: You can mentally connect to a universal magical clock, allowing you to know the local
+    time, down to a tenth of a second. You can have up to three magical timers at once,
+    each of which sounds a mental alarm after an amount of time you specify or at a
+    specific time (such as nine minutes from now, three hours from now, or 8 o'clock in
+    the morning).
+  pt-BR: Você pode se conectar mentalmente a um relógio mágico universal, sabendo a hora
+    local com precisão de um décimo de segundo. Pode ter até três cronômetros mágicos ao
+    mesmo tempo, e cada um emite um alarme mental após um intervalo que você especificar
+    ou em um horário específico (como daqui a nove minutos, daqui a três horas ou às 8
+    horas da manhã).
+cost: null
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

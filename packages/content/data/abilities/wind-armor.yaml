@@ -1,0 +1,23 @@
+id: wind-armor
+name:
+  en: Wind Armor
+  pt-BR: Armadura de Vento
+description:
+  en: When you wish it, a cyclone of wind surrounds your body for ten minutes, giving you +1
+    to Armor and an additional +2 to Armor against physical projectile weapons
+    specifically. While the cyclone is active, you feel no discomfort from the wind, and
+    you can interact with other creatures and objects normally because the wind flow
+    automatically diverts to enable such interaction.
+  pt-BR: Quando você deseja, um ciclone de vento envolve seu corpo por dez minutos, dando +1
+    de Armadura e +2 de Armadura adicional especificamente contra armas de projéteis
+    físicos. Enquanto o ciclone está ativo, você não sente desconforto com o vento e pode
+    interagir normalmente com outras criaturas e objetos, porque o fluxo do vento se
+    desvia automaticamente para permitir essa interação.
+cost:
+  pool: intellect
+  amount: 1
+action_type: enabler
+sources:
+  - type: flavor
+    id: protection
+    tier: 2

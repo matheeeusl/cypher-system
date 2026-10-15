@@ -15,3 +15,6 @@ sources:
   - type: focus
     id: sees-beyond
     tier: 4
+  - type: flavor
+    id: divination
+    tier: 4

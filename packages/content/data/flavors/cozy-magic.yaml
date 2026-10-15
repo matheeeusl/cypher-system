@@ -1,0 +1,38 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
+# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+id: cozy-magic
+name:
+  en: Cozy Magic
+  pt-BR: Magia Aconchegante
+description:
+  en: 'Sometimes a sorcerer isn''t interested in combat magic and secrets of the universe.
+    Sometimes "cozy magic" is enough: bonding with a group of close friends, having a
+    nice house, and providing support and comfort in times of need.'
+  pt-BR: ''
+tier_abilities:
+  '1':
+    - advice-from-a-friend
+    - check-status
+    - comfort-and-encouragement
+    - gift-of-appeasement
+  '2':
+    - emotional-support-pet
+    - fetch
+    - safe-sex
+    - spectral-servant
+    - telepathic
+  '3':
+    - informer
+    - laundry-day
+    - spring-cleaning
+  '4':
+    - able-assistance
+    - pay-it-forward
+    - thinking-ahead
+  '5':
+    - group-friendship
+    - undo
+  '6':
+    - drawing-on-lifes-experiences
+    - stimulate
+    - telepathic-network

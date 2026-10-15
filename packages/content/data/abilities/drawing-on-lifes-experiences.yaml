@@ -19,3 +19,6 @@ sources:
   - type: focus
     id: steers-the-coven
     tier: 6
+  - type: flavor
+    id: cozy-magic
+    tier: 6

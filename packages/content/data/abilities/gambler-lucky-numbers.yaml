@@ -1,0 +1,19 @@
+id: gambler-lucky-numbers
+name:
+  en: Gambler
+  pt-BR: Jogador
+description:
+  en: Each day, choose two different numbers from 2 to 16. One number is your lucky number,
+    and the other is your unlucky number. Whenever you make a roll that day and get a
+    number matching your lucky number, your next task is eased. Whenever you make a roll
+    that day and get a number matching your unlucky number, your next task is hindered.
+  pt-BR: Todo dia, escolha dois números diferentes de 2 a 16. Um é seu número da sorte e o
+    outro é seu número do azar. Sempre que fizer uma rolagem nesse dia e tirar o número da
+    sorte, sua próxima tarefa é facilitada. Sempre que fizer uma rolagem nesse dia e tirar
+    o número do azar, sua próxima tarefa é dificultada.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: stealth
+    tier: 3

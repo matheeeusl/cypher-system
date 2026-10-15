@@ -1,0 +1,32 @@
+id: diagnose-device
+name:
+  en: Diagnose Device
+  pt-BR: Diagnosticar Dispositivo
+description:
+  en: You ease by two steps the task to diagnose what's wrong with a human-made electronic
+    or mechanical device or system (such as a computer, clothes dryer, or toilet) that is
+    damaged, malfunctioning, or broken. You must touch the device to diagnose it.
+    Typically a successful roll means that you learn the main problem and its cause. For
+    example, you could learn that a bricked phone is infected with malware, a pipe is
+    clogged with "flushable" wipes, or a rattling engine needs motor oil. This ability is
+    unreliable at best when used on alien, high-technology, or other mysterious devices.
+  pt-BR: Você facilita em dois níveis a tarefa de diagnosticar o que há de errado com um
+    dispositivo ou sistema eletrônico ou mecânico fabricado por humanos (como um
+    computador, uma secadora ou um vaso sanitário) que esteja danificado, com defeito ou
+    quebrado. Você precisa tocar o dispositivo para diagnosticá-lo. Normalmente, uma
+    rolagem bem-sucedida significa que você descobre o problema principal e sua causa. Por
+    exemplo, você poderia descobrir que um celular travado está infectado por malware, que
+    um cano está entupido por lenços "descartáveis" ou que um motor barulhento precisa de
+    óleo. Esta habilidade é pouco confiável quando usada em dispositivos alienígenas, de
+    alta tecnologia ou misteriosos.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: divination
+    tier: 2
+  - type: flavor
+    id: modern-magic
+    tier: 3

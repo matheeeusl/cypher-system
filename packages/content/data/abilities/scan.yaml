@@ -34,3 +34,6 @@ sources:
     id: knows-everything
     tier: 2
     cyberware: true
+  - type: flavor
+    id: divination
+    tier: 1

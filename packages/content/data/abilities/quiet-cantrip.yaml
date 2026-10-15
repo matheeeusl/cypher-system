@@ -1,0 +1,25 @@
+id: quiet-cantrip
+name:
+  en: Quiet Cantrip
+  pt-BR: Truque do Silêncio
+description:
+  en: You muffle the noise from one target within a short distance for a few seconds.
+    Breaking a window or knocking a glass off the table would be no louder than someone
+    tapping their finger on the glass. An obnoxious security alarm would only be as loud
+    as a computer speaker. A ringing phone would be barely audible. If you cast this on a
+    willing creature, they gain an asset on stealth tasks for one round if they move no
+    more than an immediate distance on their turn.
+  pt-BR: Você abafa o ruído de um alvo a uma distância curta por alguns segundos. Quebrar
+    uma janela ou derrubar um copo da mesa não faria mais barulho do que alguém batendo o
+    dedo no copo. Um alarme de segurança irritante seria tão alto quanto o alto-falante de
+    um computador. Um telefone tocando ficaria quase inaudível. Se você lançar isto em uma
+    criatura que aceite, ela ganha um recurso em tarefas de furtividade por um round se
+    não se mover mais do que uma distância imediata em seu turno.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

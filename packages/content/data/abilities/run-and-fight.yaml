@@ -16,4 +16,7 @@ sources:
   - type: focus
     id: operates-undercover
     tier: 3
+  - type: flavor
+    id: stealth
+    tier: 3
 attack: true

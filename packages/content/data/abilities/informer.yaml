@@ -1,0 +1,17 @@
+id: informer
+name:
+  en: Informer
+  pt-BR: Informante
+description:
+  en: You gain an informer within an allied community. They act as your secret (or known)
+    informer. If something of note happens in your informer's location, they will use
+    whatever means they have available to tell you about it.
+  pt-BR: Você ganha um informante em uma comunidade aliada. Ele atua como seu informante
+    secreto (ou conhecido). Se algo importante acontecer no local do informante, ele usará
+    os meios que tiver para lhe contar.
+cost: null
+action_type: enabler
+sources:
+  - type: flavor
+    id: cozy-magic
+    tier: 3

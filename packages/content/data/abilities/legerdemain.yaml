@@ -1,0 +1,23 @@
+id: legerdemain
+name:
+  en: Legerdemain
+  pt-BR: Truques de Mão
+description:
+  en: You can perform small but seemingly impossible tricks. For example, you can make a
+    small object in your hands disappear and move into a desired spot within reach (like
+    your pocket). You can make someone believe that they have something in their
+    possession that they do not have (or vice versa). You can switch similar objects right
+    in front of someone’s eyes.
+  pt-BR: Você pode realizar truques pequenos, mas aparentemente impossíveis. Por exemplo,
+    pode fazer um objeto pequeno em suas mãos desaparecer e ir parar no lugar que desejar
+    ao seu alcance (como seu bolso). Pode fazer alguém acreditar que tem algo em sua posse
+    que não tem (ou vice-versa). Pode trocar objetos parecidos bem diante dos olhos de
+    alguém.
+cost:
+  pool: speed
+  amount: 1
+action_type: action
+sources:
+  - type: flavor
+    id: stealth
+    tier: 1

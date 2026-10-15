@@ -1,0 +1,23 @@
+id: enhance-athletics
+name:
+  en: Enhance Athletics
+  pt-BR: Aprimorar Atletismo
+description:
+  en: You enhance the ability of one creature to perform certain athletic sports tasks. The
+    creature must be within long range and visible to you. For the next minute, the
+    creature can apply one free level of Effort to any one task to catch, hit, kick, or
+    throw an object, or to any one climbing, jumping, or running task. Once this free
+    level of Effort is used, the magic ends.
+  pt-BR: Você aprimora a capacidade de uma criatura de realizar certas tarefas esportivas
+    atléticas. A criatura deve estar a distância longa e visível para você. Pelo próximo
+    minuto, a criatura pode aplicar um nível gratuito de Esforço em uma tarefa para pegar,
+    acertar, chutar ou arremessar um objeto, ou em uma tarefa de escalar, saltar ou
+    correr. Depois que esse nível gratuito de Esforço é usado, a magia termina.
+cost:
+  pool: intellect
+  amount: 2
+action_type: action
+sources:
+  - type: flavor
+    id: modern-magic
+    tier: 1

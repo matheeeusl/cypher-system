@@ -30,3 +30,6 @@ sources:
   - type: type
     id: speaker
     tier: 6
+  - type: flavor
+    id: charms-and-figments
+    tier: 5

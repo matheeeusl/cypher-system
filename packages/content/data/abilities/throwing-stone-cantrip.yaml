@@ -1,0 +1,19 @@
+id: throwing-stone-cantrip
+name:
+  en: Throwing Stone Cantrip
+  pt-BR: Truque da Pedra de Arremesso
+description:
+  en: You summon a nearby object of stone, brick, concrete, cement, asphalt, or a similar
+    hard and common mineral to your hand. The cantrip doesn't work if there are no
+    suitable loose materials within a short distance.
+  pt-BR: Você invoca para a sua mão um objeto próximo de pedra, tijolo, concreto, cimento,
+    asfalto ou outro mineral duro e comum semelhante. O truque não funciona se não houver
+    materiais soltos adequados a uma distância curta.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

@@ -1,0 +1,28 @@
+id: bug-cantrip
+name:
+  en: Bug Cantrip
+  pt-BR: Truque do Inseto
+description:
+  en: You summon a nearby level 0 spider, cockroach, silverfish, or similar crawling pest to
+    a spot within an immediate distance. The pest acts normally and (appearing in an
+    unfamiliar area) probably begins moving around, possibly crawling on a creature. The
+    cantrip doesn't work if there are no suitable pests within a short distance. A level 0
+    creature isn't a threat to a character and is instantly killed if hit. However, tiny
+    creatures like the ones described in the Bee and Bug cantrips usually have a level 2
+    modifier for Speed defense because of their size.
+  pt-BR: Você invoca uma aranha, barata, traça ou praga rastejante semelhante de nível 0,
+    que esteja por perto, para um ponto a uma distância imediata. A praga age normalmente
+    e (aparecendo em uma área desconhecida) provavelmente começa a se mover por aí,
+    possivelmente subindo em uma criatura. O truque não funciona se não houver pragas
+    adequadas a uma distância curta. Uma criatura de nível 0 não representa ameaça a um
+    personagem e morre instantaneamente se for atingida. Porém, criaturas minúsculas como
+    as descritas nos truques da Abelha e do Inseto costumam ter um modificador de nível 2
+    na defesa de Velocidade por causa do tamanho.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

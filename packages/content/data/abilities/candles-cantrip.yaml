@@ -1,0 +1,19 @@
+id: candles-cantrip
+name:
+  en: Candles Cantrip
+  pt-BR: Truque das Velas
+description:
+  en: You create up to four candle-like lights that move to your mental commands (but no
+    farther away than how far you can reach), lasting about ten minutes. Each light can be
+    a different color.
+  pt-BR: Você cria até quatro luzes semelhantes a velas que se movem conforme seus comandos
+    mentais (mas não mais longe do que você consegue alcançar), durando cerca de dez
+    minutos. Cada luz pode ter uma cor diferente.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

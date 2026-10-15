@@ -47,6 +47,12 @@ sources:
   - type: focus
     id: throws-with-deadly-accuracy
     tier: 3
+  - type: flavor
+    id: combat
+    tier: 3
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 6
 skill_grant:
   count: 1
   options:

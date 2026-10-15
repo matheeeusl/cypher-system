@@ -1,0 +1,24 @@
+id: device-insight
+name:
+  en: Device Insight
+  pt-BR: Discernimento sobre Dispositivos
+description:
+  en: When examining any unknown, alien, or high-technology device, you can ask the GM one
+    question to gain an idea of its capabilities, how it functions, how it can be
+    activated or deactivated, what its weaknesses are (if any), how it can be repaired, or
+    any other similar query. This is for difficult or strange things beyond those readily
+    identified by using the appropriate knowledge or technical skill.
+  pt-BR: Ao examinar qualquer dispositivo desconhecido, alienígena ou de alta tecnologia,
+    você pode fazer uma pergunta ao Mestre para ter uma ideia de suas capacidades, de como
+    ele funciona, de como pode ser ativado ou desativado, de quais são seus pontos fracos
+    (se houver), de como pode ser consertado ou de qualquer consulta semelhante. Serve
+    para coisas difíceis ou estranhas, além daquelas que podem ser identificadas com a
+    perícia de conhecimento ou técnica apropriada.
+cost:
+  pool: intellect
+  amount: 3
+action_type: action
+sources:
+  - type: flavor
+    id: divination
+    tier: 3

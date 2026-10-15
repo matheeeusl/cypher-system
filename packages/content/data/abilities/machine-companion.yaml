@@ -14,3 +14,6 @@ sources:
   - type: focus
     id: talks-to-machines
     tier: 4
+  - type: flavor
+    id: technology
+    tier: 5

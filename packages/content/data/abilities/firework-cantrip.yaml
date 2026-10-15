@@ -1,0 +1,19 @@
+id: firework-cantrip
+name:
+  en: Firework Cantrip
+  pt-BR: Truque do Fogo de Artifício
+description:
+  en: You create an illusory firework within short range, which bursts with sparkling lights
+    and a loud pop. The effect is obviously an illusion but might distract or startle
+    people who aren't expecting it.
+  pt-BR: Você cria um fogo de artifício ilusório a distância curta, que explode com luzes
+    cintilantes e um estalo alto. O efeito é obviamente uma ilusão, mas pode distrair ou
+    assustar pessoas que não o esperam.
+cost:
+  pool: intellect
+  amount: 1
+action_type: action
+sources:
+  - type: ability
+    id: cantrips
+    tier: 1

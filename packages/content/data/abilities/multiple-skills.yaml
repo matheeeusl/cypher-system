@@ -1,0 +1,23 @@
+# skill_grant uses "noncombat" because there is no closer option; the source text does not exclude attacks or defense here.
+id: multiple-skills
+name:
+  en: Multiple Skills
+  pt-BR: Múltiplas Perícias
+description:
+  en: You are trained in three skills of your choice in which you are not already trained.
+    You can select this ability multiple times. Each time you select it, you must choose
+    three different skills.
+  pt-BR: Você é treinado em três perícias à sua escolha nas quais ainda não é treinado. Você
+    pode escolher esta habilidade várias vezes. A cada vez, deve escolher três perícias
+    diferentes.
+cost: null
+action_type: enabler
+skill_grant:
+  allow_custom: true
+  count: 3
+  options: noncombat
+  repeatable: true
+sources:
+  - type: flavor
+    id: skills-and-knowledge
+    tier: 4
