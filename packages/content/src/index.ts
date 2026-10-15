@@ -1,6 +1,6 @@
 export { LocalizedString, type WithVersion } from './schemas/shared.js'
 
-export { AbilitySchema, type Ability } from './schemas/ability.js'
+export { AbilitySchema, ActionTypeSchema, type Ability } from './schemas/ability.js'
 export { TypeSchema, type Type } from './schemas/type.js'
 export { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
 export { FocusSchema, type Focus } from './schemas/focus.js'

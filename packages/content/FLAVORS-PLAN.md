@@ -122,11 +122,13 @@ Batch 6 notes:
 
 ## Follow-up plan (after batch 6)
 
+Decisions (Matheus): F1 first; F2 and F3 (translations) are done in a separate chat; F4 only for characters who picked the **Modern Magic** flavor; F5 is modeled, with a short disclaimer to talk to the GM first; F6 is a docs page only; F7 skipped.
+
 Everything above shipped in five commits (content, engine, API, docs, app). What is left, in the order I'd do it. Items marked **needs you** can't be finished without a decision or a translation from Matheus.
 
 | Batch | What                                                                                              | Size   | Depends on        |
 | ----- | ------------------------------------------------------------------------------------------------- | ------ | ----------------- |
-| F1    | Widen the GraphQL `ActionType` enum to all 28 content action types                                | small  | —                 |
+| F1    | Widen the GraphQL `ActionType` enum to all 30 content action types                                | small  | **done**          |
 | F2    | pt-BR review sheet: every name I chose, in one table to approve or correct; apply the corrections | medium | **needs you**     |
 | F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
 | F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | —                 |
@@ -136,7 +138,7 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 
 ### F1 — Widen `ActionType`
 
-- Why: the schema has 28 action types, the GraphQL enum 4. Any ability outside those four can't be queried with its `actionType`, which is why the app's abilities query doesn't fetch it.
+- Why: the schema has 30 action types, the GraphQL enum had 4. Any ability outside those four can't be queried with its `actionType`, which is why the app's abilities query doesn't fetch it.
 - Do: add the missing values to `schema.graphql`, extend the mapper in `resolvers/content/enums.ts`, add a test that every `action_type` value in the content maps to an enum value (fails loudly the next time a type is added).
 - Then, optional: have the wizard and sheet show the action type (Action / Enabler / …) next to each ability. Not required for the flavors.
 - Verify: `pnpm --filter "@cypher/graphql-api..." build` and test.
