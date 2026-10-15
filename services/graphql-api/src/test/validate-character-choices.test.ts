@@ -96,6 +96,7 @@ const VALIDATE_QUERY = `
               __typename
               ... on TypeAbilitySource { typeId }
               ... on FocusAbilitySource { focusId }
+              ... on FlavorAbilitySource { flavorId }
             }
           }
           skills { skillId level }
@@ -387,5 +388,175 @@ describe('validateCharacterChoices (skill-granting abilities)', () => {
       mode: 'specialize',
       options: ['might-defense', 'speed-defense', 'intellect-defense'],
     })
+  })
+})
+
+describe('validateCharacterChoices (flavor)', () => {
+  // Warrior has no Goad; the Stealth flavor does, at tier 1.
+  const flavoredInput = {
+    ...validInput,
+    flavorId: 'stealth',
+    tier1TypeAbilityIds: ['bash', 'goad', 'swipe', 'improved-edge'],
+  }
+
+  it('accepts a flavor ability as a tier-1 pick and reports the flavor as its source', async () => {
+    const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: flavoredInput,
+    })
+
+    expect(result.errors).toBeUndefined()
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('ValidCharacterResult')
+    const goad = payload.character?.knownAbilities.find((a) => a.abilityId === 'goad')
+    expect(goad?.source).toEqual({ __typename: 'FlavorAbilitySource', flavorId: 'stealth' })
+  })
+
+  it('rejects the same pick without a flavor, as an ordinary rule error', async () => {
+    const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: { ...flavoredInput, flavorId: null },
+    })
+
+    expect(result.errors).toBeUndefined()
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('InvalidCharacterResult')
+    expect(payload.issues?.map((i) => i.code)).toContain('TYPE_ABILITY_UNAVAILABLE')
+  })
+
+  it('trains the skills picked for a skill-granting flavor ability, keyed like a Type pick', async () => {
+    const query = `
+      query ($input: CharacterChoicesInput!) {
+        validateCharacterChoices(input: $input) {
+          __typename
+          ... on ValidCharacterResult {
+            character {
+              skills { skillId level }
+              pendingPicks { kind key }
+            }
+          }
+        }
+      }
+    `
+    const result = await graphqlRequest<{
+      validateCharacterChoices: {
+        __typename: string
+        character?: {
+          skills: Array<{ skillId: string; level: string }>
+          pendingPicks: Array<{ kind: string; key: string | null }>
+        }
+      }
+    }>(query, {
+      input: {
+        ...validInput,
+        flavorId: 'skills-and-knowledge',
+        tier1TypeAbilityIds: ['bash', 'interaction-skills', 'swipe', 'improved-edge'],
+        // Skill picks of a flavor ability use the `type:` kind: the pick lives in the Type's list.
+        abilitySkillChoices: [
+          { key: 'type:1:interaction-skills', skillIds: ['persuasion', 'public-speaking'] },
+        ],
+      },
+    })
+
+    expect(result.errors).toBeUndefined()
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('ValidCharacterResult')
+    // validInput reaches tier 3, so Type picks are owed; the skill picks are all answered.
+    expect(payload.character?.pendingPicks.filter((pick) => pick.kind === 'skill')).toEqual([])
+    const trained = payload.character?.skills
+      .filter((s) => s.level === 'TRAINED')
+      .map((s) => s.skillId)
+    expect(trained).toEqual(expect.arrayContaining(['persuasion', 'public-speaking']))
+  })
+
+  describe('choice abilities (Blessing of the Gods)', () => {
+    const QUERY = `
+      query ($input: CharacterChoicesInput!) {
+        validateCharacterChoices(input: $input) {
+          __typename
+          ... on ValidCharacterResult {
+            character {
+              knownAbilities { abilityId source { __typename ... on FlavorAbilitySource { flavorId } } }
+              pendingPicks { kind key abilityId required chosen }
+            }
+          }
+          ... on InvalidCharacterResult { issues { code params { key value } } }
+        }
+      }
+    `
+    interface Payload {
+      validateCharacterChoices: {
+        __typename: string
+        character?: {
+          knownAbilities: Array<{
+            abilityId: string
+            source: { __typename: string; flavorId?: string }
+          }>
+          pendingPicks: Array<{
+            kind: string
+            key: string | null
+            abilityId: string | null
+            required: number
+            chosen: number
+          }>
+        }
+        issues?: Array<{ code: string }>
+      }
+    }
+    const blessed = {
+      ...validInput,
+      flavorId: 'magic',
+      tier1TypeAbilityIds: ['bash', 'blessing-of-the-gods', 'swipe', 'improved-edge'],
+    }
+
+    it('adds the blessings picked, credited to the flavor', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, {
+        input: {
+          ...blessed,
+          abilityChoices: [{ key: 'type:1:blessing-of-the-gods', abilityIds: ['war', 'sky-air'] }],
+        },
+      })
+      expect(result.errors).toBeUndefined()
+      const payload = result.data.validateCharacterChoices
+      expect(payload.__typename).toBe('ValidCharacterResult')
+      const war = payload.character?.knownAbilities.find((a) => a.abilityId === 'war')
+      expect(war?.source).toEqual({ __typename: 'FlavorAbilitySource', flavorId: 'magic' })
+      expect(payload.character?.pendingPicks.filter((p) => p.kind === 'option')).toEqual([])
+    })
+
+    it('owes the picks as a pending "option" choice with the key to answer under', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, { input: blessed })
+      const pending = result.data.validateCharacterChoices.character?.pendingPicks.filter(
+        (p) => p.kind === 'option',
+      )
+      expect(pending).toEqual([
+        {
+          kind: 'option',
+          key: 'type:1:blessing-of-the-gods',
+          abilityId: 'blessing-of-the-gods',
+          required: 2,
+          chosen: 0,
+        },
+      ])
+    })
+
+    it('rejects an option the ability does not offer', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, {
+        input: {
+          ...blessed,
+          abilityChoices: [{ key: 'type:1:blessing-of-the-gods', abilityIds: ['war', 'bash'] }],
+        },
+      })
+      const payload = result.data.validateCharacterChoices
+      expect(payload.__typename).toBe('InvalidCharacterResult')
+      expect(payload.issues?.map((i) => i.code)).toContain('ABILITY_CHOICE_INVALID')
+    })
+  })
+
+  it('surfaces an unknown flavor id as a top-level GraphQL error', async () => {
+    const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: { ...flavoredInput, flavorId: 'nonexistent-flavor' },
+    })
+
+    expect(result.errors?.[0]?.message).toMatch(/No Flavor found for id/)
+    expect(result.data).toBeNull()
   })
 })

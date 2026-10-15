@@ -3,6 +3,7 @@ import type {
   Artifact,
   Cypher,
   Descriptor,
+  Flavor,
   Focus,
   Oddity,
   Skill,
@@ -125,6 +126,16 @@ export function mapFocus(f: WithVersion<Focus>) {
   }
 }
 
+export function mapFlavor(f: WithVersion<Flavor>) {
+  return {
+    id: f.id,
+    name: mapLocalizedString(f.name),
+    description: mapLocalizedString(f.description),
+    tierAbilities: mapTypeTierAbilities(f.tier_abilities),
+    contentVersion: f.content_version,
+  }
+}
+
 export function mapAbility(a: WithVersion<Ability>) {
   return {
     id: a.id,
@@ -149,6 +160,7 @@ export function mapAbility(a: WithVersion<Ability>) {
           options: a.skill_grant.options === 'noncombat' ? [] : a.skill_grant.options,
         }
       : null,
+    choice: a.choice ? { options: a.choice.options, count: a.choice.count } : null,
     contentVersion: a.content_version,
   }
 }

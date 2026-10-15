@@ -1,12 +1,20 @@
 import type { DerivedCharacter, KnownAbility, ValidationResult } from '@cypher/engine'
 
+function mapAbilitySource(source: KnownAbility['source']) {
+  switch (source.kind) {
+    case 'type':
+      return { __typename: 'TypeAbilitySource' as const, typeId: source.type_id }
+    case 'focus':
+      return { __typename: 'FocusAbilitySource' as const, focusId: source.focus_id }
+    case 'flavor':
+      return { __typename: 'FlavorAbilitySource' as const, flavorId: source.flavor_id }
+  }
+}
+
 function mapKnownAbility(ability: KnownAbility) {
   return {
     abilityId: ability.ability_id,
-    source:
-      ability.source.kind === 'type'
-        ? { __typename: 'TypeAbilitySource' as const, typeId: ability.source.type_id }
-        : { __typename: 'FocusAbilitySource' as const, focusId: ability.source.focus_id },
+    source: mapAbilitySource(ability.source),
     trained: ability.trained,
   }
 }
@@ -30,7 +38,9 @@ function mapDerivedCharacter(character: DerivedCharacter) {
             abilityId: pick.ability_id,
             alternateRequired: pick.alternate_required ?? null,
           }
-        : { ...pick, key: null, abilityId: null, alternateRequired: null },
+        : pick.kind === 'option'
+          ? { ...pick, abilityId: pick.ability_id, alternateRequired: null }
+          : { ...pick, key: null, abilityId: null, alternateRequired: null },
     ),
   }
 }

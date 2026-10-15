@@ -20,7 +20,7 @@ export const enumResolvers = {
     ACTION_TO_INITIATE: 'action_to_initiate',
     ACTION_TO_INITIATE_OR_REINITIATE: 'action_to_initiate_or_reinitiate',
   },
-  AbilitySourceType: { TYPE: 'type', FOCUS: 'focus' },
+  AbilitySourceType: { TYPE: 'type', FOCUS: 'focus', FLAVOR: 'flavor', ABILITY: 'ability' },
   CypherCategory: {
     MANIFEST: 'manifest',
     FANTASTIC: 'fantastic',

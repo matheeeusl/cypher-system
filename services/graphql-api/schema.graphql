@@ -156,6 +156,18 @@ type Focus {
   contentVersion: String!
 }
 
+# ---- Flavor ----
+# An optional add-on to a Type (Combat, Stealth...) that widens the pool its
+# abilities are picked from. There are no pick counts here: those stay on the
+# Type (tierChooseCounts). Same per-tier shape as Type.tierAbilities.
+type Flavor {
+  id: ID!
+  name: LocalizedString!
+  description: LocalizedString!
+  tierAbilities: [TypeTierAbilityGroup!]!
+  contentVersion: String!
+}
+
 # ---- Ability ----
 enum ActionType {
   ACTION
@@ -166,6 +178,9 @@ enum ActionType {
 enum AbilitySourceType {
   TYPE
   FOCUS
+  FLAVOR
+  # This ability is one of the options of the ability named by `id`.
+  ABILITY
 }
 type AbilityCost {
   pool: Stat!
@@ -189,6 +204,14 @@ type AbilitySourceRef {
 type SkillGrantAlternate {
   count: Int!
   mode: String!
+}
+
+# Present on abilities that ask the player to pick `count` of `options` (other
+# abilities) once chosen: Blessing of the Gods, Cantrips. The picks are sent
+# as AbilityChoiceInput under the key a PendingPick of kind "option" carries.
+type AbilityChoice {
+  options: [ID!]!
+  count: Int!
 }
 
 type SkillGrant {
@@ -216,6 +239,7 @@ type Ability {
   # special ability the Skills advancement can train.
   attack: Boolean!
   skillGrant: SkillGrant
+  choice: AbilityChoice
   contentVersion: String!
 }
 
@@ -312,6 +336,13 @@ input AbilitySkillChoiceInput {
   skillIds: [ID!]!
 }
 
+# Abilities picked for an ability that asks for them. `key` is
+# "type:<tier>:<abilityId>", the same format as AbilitySkillChoiceInput.key.
+input AbilityChoiceInput {
+  key: String!
+  abilityIds: [ID!]!
+}
+
 input AdvancementPurchaseInput @oneOf {
   increasingCapabilities: IncreasingCapabilitiesPurchaseInput
   movingTowardPerfection: MovingTowardPerfectionPurchaseInput
@@ -342,6 +373,8 @@ input CharacterChoicesInput {
   typeId: ID!
   descriptorId: ID!
   focusId: ID!
+  # Optional flavor; its abilities join the pool tier1TypeAbilityIds / typeAbilityPicks draw from.
+  flavorId: ID
   startingEdgeChoice: Stat
   poolPointAllocation: StatAllocationInput!
   descriptorPoolBonus: DescriptorPoolBonusInput
@@ -352,6 +385,8 @@ input CharacterChoicesInput {
   descriptorSkillChoices: [ID!]!
   # Skills picked for skill-granting abilities (Physical Skills, Life Lessons...).
   abilitySkillChoices: [AbilitySkillChoiceInput!]! = []
+  # Abilities picked for choice abilities (Blessing of the Gods, Cantrips).
+  abilityChoices: [AbilityChoiceInput!]! = []
   advancementPurchases: [AdvancementPurchaseInput!]!
 }
 
@@ -376,7 +411,10 @@ type TypeAbilitySource {
 type FocusAbilitySource {
   focusId: ID!
 }
-union AbilitySource = TypeAbilitySource | FocusAbilitySource
+type FlavorAbilitySource {
+  flavorId: ID!
+}
+union AbilitySource = TypeAbilitySource | FocusAbilitySource | FlavorAbilitySource
 
 enum SkillLevel {
   INABILITY
@@ -406,13 +444,13 @@ type DerivedCharacterPayload {
 }
 
 type PendingPick {
-  # "type", "focus" or "skill"
+  # "type", "focus", "option" or "skill"
   kind: String!
   tier: Int!
   required: Int!
   chosen: Int!
-  # Only for kind "skill": the AbilitySkillChoiceInput.key to answer it under,
-  # and the ability it belongs to.
+  # Only for kind "skill" or "option": the AbilitySkillChoiceInput.key (or
+  # AbilityChoiceInput.key) to answer it under, and the ability it belongs to.
   key: String
   abilityId: ID
   # Only for kind "skill": the pick count of the ability's alternate shape.
@@ -458,6 +496,8 @@ type Query {
   descriptor(id: ID!): Descriptor
   foci: [Focus!]!
   focus(id: ID!): Focus
+  flavors: [Flavor!]!
+  flavor(id: ID!): Flavor
   abilities: [Ability!]!
   ability(id: ID!): Ability
   skills: [Skill!]!

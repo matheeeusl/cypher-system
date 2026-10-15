@@ -342,6 +342,76 @@ describe('content queries', () => {
     })
   })
 
+  it('resolves an Ability that comes from a Flavor (Goad)', async () => {
+    interface AbilityQueryData {
+      ability: { sources: Array<{ type: string; id: string; tier: number }> } | null
+    }
+
+    const result = await graphqlRequest<AbilityQueryData>(`
+      query {
+        ability(id: "goad") {
+          sources { type id tier }
+        }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Goad is offered by Stealth and by Charms and Figments, both at tier 1.
+    expect(result.data.ability?.sources).toEqual(
+      expect.arrayContaining([
+        { type: 'FLAVOR', id: 'stealth', tier: 1 },
+        { type: 'FLAVOR', id: 'charms-and-figments', tier: 1 },
+      ]),
+    )
+  })
+
+  it('lists the flavors and resolves one with its per-tier abilities', async () => {
+    interface FlavorQueryData {
+      flavors: Array<{ id: string }>
+      flavor: {
+        id: string
+        name: LocalizedStringPayload
+        tierAbilities: Array<{ tier: number; abilityIds: string[] }>
+      } | null
+    }
+
+    const result = await graphqlRequest<FlavorQueryData>(`
+      query {
+        flavors { id }
+        flavor(id: "stealth") { id name { en ptBR } tierAbilities { tier abilityIds } }
+        missing: flavor(id: "nope") { id }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    expect(result.data.flavors.map((f) => f.id)).toEqual(
+      expect.arrayContaining(['combat', 'stealth']),
+    )
+    expect(result.data.flavor?.name).toEqual({ en: 'Stealth', ptBR: 'Furtividade' })
+    expect(result.data.flavor?.tierAbilities.map((g) => g.tier)).toEqual([1, 2, 3, 4, 5, 6])
+    expect(result.data.flavor?.tierAbilities[0]?.abilityIds).toContain('goad')
+    expect((result.data as unknown as { missing: unknown }).missing).toBeNull()
+  })
+
+  it('resolves a choice ability with its options and the back-reference on an option', async () => {
+    interface ChoiceQueryData {
+      blessing: { choice: { options: string[]; count: number } | null } | null
+      war: { sources: Array<{ type: string; id: string }> } | null
+    }
+
+    const result = await graphqlRequest<ChoiceQueryData>(`
+      query {
+        blessing: ability(id: "blessing-of-the-gods") { choice { options count } }
+        war: ability(id: "war") { sources { type id } }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    expect(result.data.blessing?.choice?.count).toBe(2)
+    expect(result.data.blessing?.choice?.options).toHaveLength(13)
+    expect(result.data.war?.sources).toContainEqual({ type: 'ABILITY', id: 'blessing-of-the-gods' })
+  })
+
   it('resolves a fantastic Cypher with a nested effect table (Chemical Factory)', async () => {
     interface CypherQueryData {
       cypher: {

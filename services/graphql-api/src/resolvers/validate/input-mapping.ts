@@ -32,6 +32,11 @@ export interface AbilitySkillChoiceInput {
   skillIds: string[]
 }
 
+export interface AbilityChoiceInput {
+  key: string
+  abilityIds: string[]
+}
+
 export interface IncreasingCapabilitiesPurchaseInput {
   tier: number
   statPoolAllocation: StatAllocationInput
@@ -67,6 +72,7 @@ export interface CharacterChoicesInput {
   typeId: string
   descriptorId: string
   focusId: string
+  flavorId?: string | null
   startingEdgeChoice?: Stat | null
   poolPointAllocation: StatAllocationInput
   descriptorPoolBonus?: DescriptorPoolBonusInput | null
@@ -75,6 +81,7 @@ export interface CharacterChoicesInput {
   typeAbilityPicks?: TypeAbilityPickInput[] | null
   descriptorSkillChoices: string[]
   abilitySkillChoices?: AbilitySkillChoiceInput[] | null
+  abilityChoices?: AbilityChoiceInput[] | null
   advancementPurchases: AdvancementPurchaseInput[]
 }
 
@@ -134,11 +141,16 @@ export function mapAbilitySkillChoices(list: AbilitySkillChoiceInput[]): Record<
   return Object.fromEntries(list.map(({ key, skillIds }) => [key, skillIds]))
 }
 
+export function mapAbilityChoices(list: AbilityChoiceInput[]): Record<string, string[]> {
+  return Object.fromEntries(list.map(({ key, abilityIds }) => [key, abilityIds]))
+}
+
 export function mapCharacterChoicesInput(input: CharacterChoicesInput): CharacterChoices {
   return {
     type_id: input.typeId,
     descriptor_id: input.descriptorId,
     focus_id: input.focusId,
+    ...(input.flavorId != null ? { flavor_id: input.flavorId } : {}),
     ...(input.startingEdgeChoice != null ? { starting_edge_choice: input.startingEdgeChoice } : {}),
     pool_point_allocation: input.poolPointAllocation,
     ...(input.descriptorPoolBonus
@@ -157,6 +169,9 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
     descriptor_skill_choices: input.descriptorSkillChoices,
     ...((input.abilitySkillChoices ?? []).length > 0
       ? { ability_skill_choices: mapAbilitySkillChoices(input.abilitySkillChoices ?? []) }
+      : {}),
+    ...((input.abilityChoices ?? []).length > 0
+      ? { ability_choices: mapAbilityChoices(input.abilityChoices ?? []) }
       : {}),
     advancement_purchases: input.advancementPurchases.map(mapAdvancementPurchase),
   }

@@ -4,6 +4,7 @@ import { artifactResolvers } from './content/artifacts.js'
 import { cypherResolvers } from './content/cyphers.js'
 import { descriptorResolvers } from './content/descriptors.js'
 import { enumResolvers } from './content/enums.js'
+import { flavorResolvers } from './content/flavors.js'
 import { focusResolvers } from './content/foci.js'
 import { oddityResolvers } from './content/oddities.js'
 import { skillResolvers } from './content/skills.js'
@@ -23,6 +24,7 @@ export const resolvers = {
     ...typeResolvers.Query,
     ...descriptorResolvers.Query,
     ...focusResolvers.Query,
+    ...flavorResolvers.Query,
     ...abilityResolvers.Query,
     ...skillResolvers.Query,
     ...cypherResolvers.Query,

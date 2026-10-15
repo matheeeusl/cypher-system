@@ -2,6 +2,7 @@ import {
   getAllAbilities,
   getAllSkills,
   getDescriptorById,
+  getFlavorById,
   getFocusById,
   getSkillById,
   getTypeById,
@@ -28,6 +29,9 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
   if (!type) throw new GraphQLError(`No Type found for id "${input.typeId}"`)
   if (!descriptor) throw new GraphQLError(`No Descriptor found for id "${input.descriptorId}"`)
   if (!focus) throw new GraphQLError(`No Focus found for id "${input.focusId}"`)
+  const flavor = input.flavorId != null ? getFlavorById(input.flavorId) : null
+  if (input.flavorId != null && !flavor)
+    throw new GraphQLError(`No Flavor found for id "${input.flavorId}"`)
 
   // Skill ids are an unvalidated string in the engine ('any' grants have no
   // list to check against), so a stale or invented one is rejected here, as
@@ -45,7 +49,9 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
     type,
     descriptor,
     focus,
+    flavor: flavor ?? null,
     skill_grants: skillGrantsByAbility(),
+    ability_choices: abilityChoicesByAbility(),
     combat_skill_ids: getAllSkills()
       .filter((skill) => skill.combat)
       .map((skill) => skill.id),
@@ -58,6 +64,14 @@ function skillGrantsByAbility(): NonNullable<CharacterContent['skill_grants']> {
     if (ability.skill_grant) grants[ability.id] = ability.skill_grant
   }
   return grants
+}
+
+function abilityChoicesByAbility(): NonNullable<CharacterContent['ability_choices']> {
+  const choices: NonNullable<CharacterContent['ability_choices']> = {}
+  for (const ability of getAllAbilities()) {
+    if (ability.choice) choices[ability.id] = ability.choice
+  }
+  return choices
 }
 
 export const validateResolvers = {

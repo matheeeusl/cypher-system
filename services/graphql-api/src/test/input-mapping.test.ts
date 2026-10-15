@@ -145,3 +145,50 @@ describe('mapCharacterChoicesInput', () => {
     expect('descriptor_pool_bonus' in result).toBe(false)
   })
 })
+
+describe('mapCharacterChoicesInput (flavor)', () => {
+  const base = {
+    typeId: 'warrior',
+    descriptorId: 'strong',
+    focusId: 'wields-two-weapons-at-once',
+    poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
+    tier1TypeAbilityIds: ['bash', 'goad', 'swipe', 'improved-edge'],
+    focusChoiceSelections: [],
+    descriptorSkillChoices: [],
+    advancementPurchases: [],
+  }
+
+  it('maps flavorId to flavor_id', () => {
+    expect(mapCharacterChoicesInput({ ...base, flavorId: 'stealth' }).flavor_id).toBe('stealth')
+  })
+
+  it('leaves flavor_id out when there is no flavor', () => {
+    expect(mapCharacterChoicesInput(base)).not.toHaveProperty('flavor_id')
+    expect(mapCharacterChoicesInput({ ...base, flavorId: null })).not.toHaveProperty('flavor_id')
+  })
+})
+
+describe('mapCharacterChoicesInput (ability choices)', () => {
+  const base = {
+    typeId: 'warrior',
+    descriptorId: 'strong',
+    focusId: 'wields-two-weapons-at-once',
+    poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
+    tier1TypeAbilityIds: ['bash'],
+    focusChoiceSelections: [],
+    descriptorSkillChoices: [],
+    advancementPurchases: [],
+  }
+
+  it('maps abilityChoices to a key -> ids record', () => {
+    const result = mapCharacterChoicesInput({
+      ...base,
+      abilityChoices: [{ key: 'type:1:blessing-of-the-gods', abilityIds: ['war', 'sky-air'] }],
+    })
+    expect(result.ability_choices).toEqual({ 'type:1:blessing-of-the-gods': ['war', 'sky-air'] })
+  })
+
+  it('leaves ability_choices out when there are none', () => {
+    expect(mapCharacterChoicesInput(base)).not.toHaveProperty('ability_choices')
+  })
+})
