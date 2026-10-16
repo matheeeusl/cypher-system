@@ -7,6 +7,9 @@ export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value)
 }
 
+/** Request header proxy.ts sets to the URL's locale, read by the root layout. */
+export const LOCALE_HEADER = 'x-locale'
+
 export const authLabels: Record<Locale, AuthFormLabels> = {
   en: {
     eyebrow: 'Cypher Account',
