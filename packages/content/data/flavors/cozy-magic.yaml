@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: cozy-magic
 name:
   en: Cozy Magic
@@ -8,7 +8,7 @@ description:
   en: 'Sometimes a sorcerer isn''t interested in combat magic and secrets of the universe.
     Sometimes "cozy magic" is enough: bonding with a group of close friends, having a
     nice house, and providing support and comfort in times of need.'
-  pt-BR: ''
+  pt-BR: 'Às vezes um feiticeiro não se interessa por magia de combate nem pelos segredos do universo. Às vezes a "magia aconchegante" basta: criar laços com um grupo de amigos próximos, ter uma casa agradável e oferecer apoio e conforto nos momentos de necessidade.'
 tier_abilities:
   '1':
     - advice-from-a-friend

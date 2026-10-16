@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: charms-and-figments
 name:
   en: Charms and Figments
@@ -9,7 +9,7 @@ description:
     disciplines (as opposed to "hard" disciplines that manipulate energy or physical
     matter). It's common for a character with an interest in one to learn a few spells in
     the other.
-  pt-BR: ''
+  pt-BR: 'Criar ilusões e afetar mentes às vezes são consideradas disciplinas mágicas "suaves" (em oposição às disciplinas "duras", que manipulam energia ou matéria física). É comum que um personagem com interesse em uma delas aprenda alguns feitiços na outra.'
 tier_abilities:
   '1':
     - background-music

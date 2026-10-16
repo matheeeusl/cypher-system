@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: stealth
 name:
   en: Stealth
@@ -10,7 +10,7 @@ description:
     ways, including combat. An Explorer with stealth flavor might be a thief, while a
     Warrior with stealth flavor might be an assassin. An Explorer with stealth flavor in a
     superhero setting might be a crimefighter who stalks the streets at night.
-  pt-BR: ''
+  pt-BR: 'Personagens com o Traço de furtividade são bons em se esgueirar, infiltrar-se em lugares onde não deveriam estar e enganar os outros. Eles usam essas habilidades de várias maneiras, inclusive em combate. Um Explorador com o Traço de furtividade pode ser um ladrão, enquanto um Guerreiro com o Traço de furtividade pode ser um assassino. Um Explorador com o Traço de furtividade em um cenário de super-heróis pode ser um combatente do crime que ronda as ruas à noite.'
 tier_abilities:
   '1':
     - danger-sense

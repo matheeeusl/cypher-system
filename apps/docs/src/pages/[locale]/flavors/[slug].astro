@@ -27,8 +27,8 @@ const { flavor } = Astro.props as Props;
 const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
 const term = FLAVOR_TERM[locale];
 
-// pt-BR description is empty until the pt-BR term for "flavor" is decided
-// (see lib/flavor-term.ts); show the English text rather than a blank page.
+// pt-BR description is still empty (not translated yet); show the English text
+// rather than a blank page.
 const description = pick(flavor.description, locale) || flavor.description.en;
 
 // Unlike a Focus, a flavor grants nothing by itself: each tier is a plain
@@ -36,7 +36,7 @@ const description = pick(flavor.description, locale) || flavor.description.en;
 // entry renders the same way (no granted/choice split).
 const tiers = Object.entries(flavor.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
 
-const rulesHref = `/${locale}/rules/character-creation/#flavor`;
+const rulesHref = `/${locale}/rules/character-creation/#${term.anchor}`;
 
 // The flavors built around spells and psionics point to the chapter on learning,
 // activating and preparing them.
@@ -61,7 +61,7 @@ const spellcastingHref = ['magic', 'modern-magic'].includes(flavor.id)
 		{
 			t(
 				'Take these in place of abilities from your type’s list of the same tier. ',
-				'Tradução em breve. ',
+				'Escolha estas habilidades no lugar de habilidades da lista do seu Tipo, do mesmo Grau. ',
 			)
 		}
 		<a href={rulesHref}>{t(`How ${term.plural.toLowerCase()} work`, 'Como funcionam')}</a>

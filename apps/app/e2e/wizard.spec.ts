@@ -204,14 +204,16 @@ const flavorCopy = {
     badge: 'Flavor: Stealth',
     threeSelected: '3 / 4 selected',
     sheetFlavor: 'Flavor: Stealth',
+    fromFlavor: 'Flavor',
   },
   'pt-br': {
     flavorName: 'Furtividade',
     none: 'Nenhum',
     goad: 'Provocar',
-    badge: 'Flavor: Furtividade',
+    badge: 'Traço: Furtividade',
     threeSelected: '3 / 4 selecionadas',
-    sheetFlavor: 'Flavor: Furtividade',
+    sheetFlavor: 'Traço: Furtividade',
+    fromFlavor: 'Traço',
   },
 } as const
 
@@ -270,7 +272,9 @@ for (const locale of ['en', 'pt-br'] as const) {
     // The sheet names the flavor and labels Goad as coming from it
     await expect(page.getByRole('heading', { name: 'E2E Flavored' })).toBeVisible()
     await expect(page.getByText(f.sheetFlavor).first()).toBeVisible()
-    await expect(page.getByText(new RegExp(`${f.goad}[\\s\\S]*Flavor`)).first()).toBeVisible()
+    await expect(
+      page.getByText(new RegExp(`${f.goad}[\\s\\S]*${f.fromFlavor}`)).first(),
+    ).toBeVisible()
 
     // Reopening for edit keeps the flavor; then delete the character
     await page.getByRole('link', { name: t.edit }).click()
@@ -303,7 +307,7 @@ const blessingCopy = {
     war: 'Guerra',
     sky: 'Céu/Ar',
     need: 'Escolha as habilidades que cada uma das suas habilidades escolhidas pede.',
-    fromFlavor: 'Flavor',
+    fromFlavor: 'Traço',
   },
 } as const
 

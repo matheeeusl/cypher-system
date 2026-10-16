@@ -76,7 +76,7 @@ Personalized flavors, gaining a flavor in play (4 XP purchase / character arc �
 ## 4. Decisions (2026-10-15)
 
 1. Bundles (Blessing of the Gods, Cantrips): reuse the Focus `choice` shape — decided when the Magic / Modern Magic batch starts (`tier_abilities` is `string[]` for now; widen it then).
-2. pt-BR term for "Flavor": **pending, Matheus is checking.** Until then `description.pt-BR` of every flavor is `""` and the docs label falls back to "Flavor". Flavor names themselves ("Combate", "Furtividade") are plain words.
+2. pt-BR term for "Flavor": **"Traço"** (plural "Traços"), confirmed by Matheus on 2026-10-16 and applied everywhere (docs, app, glossary). `description.pt-BR` of every flavor is still `""` until the descriptions are translated (F3), and the docs fall back to the English text meanwhile. Flavor names themselves ("Combate", "Furtividade") are plain words.
 3. Delivery: in batches. Pipeline first with Combat + Stealth, then the rest.
 4. Combat's cost-less abilities (armor, defense training) stay **display text only**; the engine derives nothing from them.
 5. Wizard: flavor selector inside the Abilities step; flavor abilities join the Type's pick pool.
@@ -91,7 +91,7 @@ Personalized flavors, gaining a flavor in play (4 XP purchase / character arc �
 | 4     | Wizard (selector in the Abilities step), persistence (`flavorId` in the choices JSON, content version), play-mode level-up pickers, sheet label, i18n, e2e (`wizard.spec.ts`, `flavor-play.spec.ts`)                                                                                                                           | done   |
 | 5     | Content: Charms and Figments, Cozy Magic, Divination, Protection, Skills and Knowledge, Technology (44 new abilities, `flavor` sources on ~80 existing, new action type `action_to_prepare_and_initiate`)                                                                                                                      | done   |
 | 6     | Magic and Modern Magic, with **choice abilities** (`Ability.choice`, new `ability` source type, engine `ability_choices` + `option` pending picks, GraphQL `abilityChoices`, wizard picker, play-mode picker, docs list of options): Blessing of the Gods (2 of 13), Cantrips (4 of 50), 18 new abilities plus the 50 cantrips | done   |
-| —     | Left: fill the pt-BR term for "flavor" (`apps/docs/src/lib/flavor-term.ts`, `terms.flavor`, `abilities.flavor`, `description.pt-BR` of the ten flavors). Not modeled: learning cantrips for 2 XP and the spell preparation / activation rules (pp. 440–441)                                                                    | next   |
+| —     | Left: nothing for the pt-BR text — the term "Traço", the ten `description.pt-BR` and the stubs are done (2026-10-16; the names and arc names still wait for the F2 review). Not modeled: learning cantrips for 2 XP and the spell preparation / activation rules (pp. 440–441)                                                 | next   |
 
 Batch 1 notes:
 
@@ -130,7 +130,7 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 | ----- | ------------------------------------------------------------------------------------------------- | ------ | ----------------- |
 | F1    | Widen the GraphQL `ActionType` enum to all 30 content action types                                | small  | **done**          |
 | F2    | pt-BR review sheet: every name I chose, in one table to approve or correct; apply the corrections | medium | **needs you**     |
-| F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
+| F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | done (2026-10-16) |
 | F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | **done**          |
 | F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | **done**          |
 | F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | **done**          |
@@ -152,8 +152,8 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 
 ### F3 — "Flavor" term and descriptions
 
-- Replace every placeholder: `apps/docs/src/lib/flavor-term.ts` (also the `astro.config.mjs` sidebar label, grep `FLAVOR_TERM`), `terms.flavor`, `abilities.flavor.*` and the review row in the app i18n, `fromFlavor` in `sheet.ts`, the glossary rows, and the "Tradução em breve." stubs in the rules page and glossary.
-- Fill `description.pt-BR` of the ten flavor YAMLs (translate the PDF's intro paragraph of each).
+- **Term done (2026-10-16): "Traço".** The list below was the checklist for it: `apps/docs/src/lib/flavor-term.ts` (also the `astro.config.mjs` sidebar label, grep `FLAVOR_TERM`), `terms.flavor`, `abilities.flavor.*` and the review row in the app i18n, `fromFlavor` in `sheet.ts`, the glossary rows, and the "Tradução em breve." stubs in the rules page and glossary.
+- **Done (2026-10-16):** `description.pt-BR` of the ten flavor YAMLs, the rules-page section, the glossary entry and the two page stubs are translated.
 - Verify: docs build, spot-check `/pt-br/flavors`, run the wizard e2e in pt-br.
 
 ### F4 — Learn cantrips for 2 XP (done)
@@ -220,6 +220,6 @@ GM-made lists approved per table. Out of scope for a content-driven app; skip.
 - D1: model "gain a flavor in play" (F5)? Recommended: no.
 - D2: model spell learning/preparation (F6)? Recommended: docs page only.
 - D3: who may learn cantrips (F4)? Recommended: anyone who has the Cantrips ability (Modern Magic) or a flavor that grants it.
-- The pt-BR term for "Flavor" (F3) and the review sheet answers (F2).
+- The review sheet answers (F2). The term "Traço" and the ten pt-BR descriptions (F3) are done.
 
 Suggested order: F1 and F4 now (no dependencies), F2 whenever you have time to review, F3 right after, F5/F6 only if you answer D1/D2 with yes.

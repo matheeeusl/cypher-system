@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: divination
 name:
   en: Divination
@@ -7,7 +7,7 @@ name:
 description:
   en: Knowledge is power! Characters with the divination flavor are familiar with using
     magic to learn information, see into hidden places, and discover secrets.
-  pt-BR: ''
+  pt-BR: 'Conhecimento é poder! Personagens com o Traço de adivinhação estão acostumados a usar magia para obter informações, enxergar lugares ocultos e descobrir segredos.'
 tier_abilities:
   '1':
     - babel

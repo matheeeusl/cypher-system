@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: skills-and-knowledge
 name:
   en: Skills and Knowledge
@@ -11,7 +11,7 @@ description:
     is the real solution to a problem. A Warrior flavored with skills and knowledge might
     be a military engineer. An Explorer flavored with skills and knowledge could be a
     field scientist. A Speaker with this flavor might be a teacher.
-  pt-BR: ''
+  pt-BR: 'Este Traço é para personagens em papéis que exigem mais conhecimento e mais aplicação prática de talento no mundo real. É menos chamativo e dramático que poderes sobrenaturais ou a capacidade de retalhar vários inimigos, mas às vezes a experiência ou o saber prático é a verdadeira solução para um problema. Um Guerreiro com o Traço de perícias e conhecimento pode ser um engenheiro militar. Um Explorador com o Traço de perícias e conhecimento pode ser um cientista de campo. Um Orador com este Traço pode ser um professor.'
 tier_abilities:
   '1':
     - interaction-skills

@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: magic
 name:
   en: Magic
@@ -14,7 +14,7 @@ description:
     that swapping some of the type’s basic abilities with those given here tailors the
     character in desirable ways. This flavor is good match for the spellcasting rule
     detailed later in Chapter 7.
-  pt-BR: ''
+  pt-BR: 'Você sabe um pouco sobre magia. Pode não ser um mago, mas conhece o básico — como ela funciona e como realizar algumas coisas maravilhosas. Claro que, no seu cenário, "magia" pode significar poderes psíquicos, habilidades de mutantes, tecnologia alienígena estranha ou qualquer outra coisa que produza efeitos interessantes e úteis. Um Explorador com o Traço de magia pode ser um caçador de magos, e um Orador com o Traço de magia pode ser um bardo-feiticeiro. Embora um Adepto com o Traço de magia continue sendo um Adepto, talvez você ache que trocar algumas das habilidades básicas do Tipo pelas daqui adapta o personagem de maneiras desejáveis. Este Traço combina bem com as regras de feitiços e habilidades psiônicas, detalhadas mais adiante no Capítulo 7.'
 tier_abilities:
   '1':
     - blessing-of-the-gods

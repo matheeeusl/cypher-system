@@ -70,7 +70,7 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     xp: 'XP',
     fromType: 'Tipo',
     fromFocus: 'Foco',
-    fromFlavor: 'Flavor', // UNCONFIRMED, see terms.flavor
+    fromFlavor: 'Traço',
     abilityTrained: 'Treinada',
     exportPdf: 'Exportar como PDF',
     edit: 'Editar',

@@ -110,15 +110,15 @@ const fociSidebarGroup = {
 
 // Flavors (src/pages/[locale]/flavors/[slug].astro): 2 so far, ten when all are
 // transcribed — short enough to stay expanded, sorted like the Foci group.
-// FLAVOR_TERM: the pt-BR word for "flavor" is still undecided, so the pt-BR
-// label is the English one (see src/lib/flavor-term.ts).
+// FLAVOR_TERM: the pt-BR label mirrors the term in src/lib/flavor-term.ts (this
+// config can't import it), so change both together.
 const flavors = getAllFlavors()
   .slice()
   .sort((a, b) => a.name.en.localeCompare(b.name.en))
 
 const flavorsSidebarGroup = {
   label: 'Flavors',
-  translations: { 'pt-BR': 'Flavors' },
+  translations: { 'pt-BR': 'Traços' },
   items: [
     { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/flavors/' },
     ...flavors.map((flavor) => ({

@@ -468,16 +468,15 @@ const ptBr: WizardCopy = {
   abilities: {
     selected: (count, needed) => `${count} / ${needed} selecionadas`,
     grantedByFocus: 'Concedidas automaticamente pelo seu Foco',
-    // UNCONFIRMED: the pt-BR term for "flavor" is still being decided (FLAVORS-PLAN.md).
     flavor: {
-      heading: 'Flavor (opcional)',
-      hint: 'Um flavor soma as habilidades dele à lista abaixo. Você continua escolhendo quatro — escolher uma habilidade do flavor significa abrir mão de uma do Tipo.',
+      heading: 'Traço (opcional)',
+      hint: 'Um Traço soma as habilidades dele à lista abaixo. Você continua escolhendo quatro — escolher uma habilidade do Traço significa abrir mão de uma do Tipo.',
       none: 'Nenhum',
-      badge: 'Flavor',
-      loading: 'Carregando flavors…',
+      badge: 'Traço',
+      loading: 'Carregando Traços…',
       gained: (flavorName) => `Ganho em jogo: ${flavorName}`,
       gainedNote:
-        'Você ganhou este flavor em jogo, então ele não pode ser trocado aqui. Mudar uma habilidade de Tipo que você trocou por ele remove o flavor, e o XP não é devolvido. Desfaça pelo modo de jogo.',
+        'Você ganhou este Traço em jogo, então ele não pode ser trocado aqui. Mudar uma habilidade de Tipo que você trocou por ele remove o Traço, e o XP não é devolvido. Desfaça pelo modo de jogo.',
     },
     focusChoice: (pick, count, needed) =>
       `Escolha do Foco — escolha ${pick} (${count} / ${needed} selecionadas)`,
@@ -509,7 +508,7 @@ const ptBr: WizardCopy = {
       type: 'TIPO',
       descriptor: 'DESCRITOR',
       focus: 'FOCO',
-      flavor: 'FLAVOR', // UNCONFIRMED, see abilities.flavor above
+      flavor: 'TRAÇO',
       pools: 'RESERVAS',
       skills: 'PERÍCIAS',
       abilities: 'HABILIDADES',
@@ -582,9 +581,9 @@ const ptBr: WizardCopy = {
       case 'TYPE_ABILITY_DUPLICATE':
         return 'A mesma habilidade foi escolhida mais de uma vez.'
       case 'TYPE_ABILITY_UNAVAILABLE':
-        return 'Uma das habilidades escolhidas não está disponível para este Tipo ou flavor no Grau 1.'
+        return 'Uma das habilidades escolhidas não está disponível para este Tipo ou Traço no Grau 1.'
       case 'FLAVOR_UNKNOWN':
-        return 'O flavor escolhido não existe.'
+        return 'O Traço escolhido não existe.'
       case 'ABILITY_CHOICE_COUNT':
         return `Essa habilidade pede apenas ${param(issue, 'required')} escolha(s) — foram escolhidas demais.`
       case 'ABILITY_CHOICE_INVALID':

@@ -30,7 +30,7 @@ tableOfContents: false
 
 **[Esforço](/pt-br/rules/core-mechanics/#modificando-a-dificuldade)** — Gastar pontos de Reserva para facilitar uma tarefa, em até seis graus, a um custo de 3 pontos pelo primeiro nível e 2 pontos por cada nível adicional.
 
-**[Flavor](/pt-br/flavors/)** — Tradução em breve.
+**[Traço](/pt-br/flavors/)** — Uma personalização opcional de um Tipo: a cada Grau, o personagem pode trocar habilidades de Tipo por habilidades da lista do Traço (Combate, Furtividade…), adaptando o personagem ao gênero ou ao cenário.
 
 **[Foco](/pt-br/foci/)** — O verbo da frase do personagem ("... que _explora lugares sombrios_") — aquilo que o personagem faz de melhor, concedendo novas habilidades especiais a cada grau.
 

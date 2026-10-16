@@ -94,10 +94,9 @@ const ptBr: Terms = {
   clothingItem: 'Um conjunto de roupas comuns',
   weapon: 'Arma',
   gear: 'Equipamento',
-  // UNCONFIRMED — the pt-BR term for "flavor" is still being decided
-  // (packages/content/FLAVORS-PLAN.md, open question 2). Change it here and in
-  // the docs site's lib/flavor-term.ts.
-  flavor: 'Flavor',
+  // Confirmed by Matheus (2026-10-16). The docs site has the same term in
+  // lib/flavor-term.ts — change both together.
+  flavor: 'Traço',
   items: (count, exact, tier) => {
     const single = count === 1 && exact
     const price = (single ? ptBr.priceTiers : ptBr.priceTiersPlural)[tier]

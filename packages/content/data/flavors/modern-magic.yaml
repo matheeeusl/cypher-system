@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: modern-magic
 name:
   en: Modern Magic
@@ -10,7 +10,7 @@ description:
     (such as disrupting hostile magic or disabling a mugger's pistol) from various
     sources, much like how people tend to learn skills unrelated to their day job (like
     cooking, dancing, and playing guitar).
-  pt-BR: ''
+  pt-BR: 'Personagens que vivem em um mundo moderno com magia e tecnologia costumam saber um pouco sobre como misturar as duas. Esses personagens geralmente aprendem alguns feitiços úteis (como interromper magia hostil ou desativar a pistola de um assaltante) de várias fontes, assim como as pessoas costumam aprender perícias sem relação com o trabalho do dia a dia (como cozinhar, dançar e tocar violão).'
 tier_abilities:
   '1':
     - cantrips

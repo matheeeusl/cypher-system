@@ -1,5 +1,5 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), Chapter 7 "Further Customization" — NOT the official Cypher System Rulebook.
-# description.pt-BR is intentionally empty: the pt-BR term for "flavor" is still being decided (see FLAVORS-PLAN.md, open question 2).
+# description.pt-BR is a translation of the English description (the pt-BR term for "flavor" is "Traço").
 id: technology
 name:
   en: Technology
@@ -12,7 +12,7 @@ description:
     less computer-oriented abilities might be appropriate for a steampunk character, while
     a modern-day character could use some of the abilities that don’t involve starships or
     ultratech.
-  pt-BR: ''
+  pt-BR: 'Personagens com o Traço de tecnologia costumam vir da ficção científica ou, pelo menos, de cenários modernos (embora tudo seja possível). Eles se destacam em usar, lidar com e construir máquinas. Um Explorador com o Traço de tecnologia pode ser um piloto de nave estelar, e um Orador com o Traço de tecnologia pode ser um tecnossacerdote. Algumas das habilidades menos voltadas a computadores podem servir a um personagem steampunk, enquanto um personagem da era moderna pode usar algumas das habilidades que não envolvem naves estelares ou ultratecnologia.'
 tier_abilities:
   '1':
     - datajack

@@ -20,15 +20,15 @@ const flavors = getAllFlavors()
 	.slice()
 	.sort((a, b) => a.name.en.localeCompare(b.name.en));
 
-// A flavor's pt-BR description stays empty until the pt-BR term for "flavor"
-// is decided (see lib/flavor-term.ts), so fall back to the English text.
+// A flavor's pt-BR description is still empty (not translated yet), so fall
+// back to the English text.
 const rows = flavors.map((flavor) => ({
 	href: `/${locale}/flavors/${flavor.id}/`,
 	name: pick(flavor.name, locale),
 	meta: pick(flavor.description, locale) || flavor.description.en,
 }));
 
-const rulesHref = `/${locale}/rules/character-creation/#${t('flavor', 'flavor')}`;
+const rulesHref = `/${locale}/rules/character-creation/#${term.anchor}`;
 ---
 
 <StarlightPage
@@ -36,7 +36,7 @@ const rulesHref = `/${locale}/rules/character-creation/#${t('flavor', 'flavor')}
 		title: term.plural,
 		description: t(
 			'What a flavor is, and every flavor available to customize a Type.',
-			'O que é um flavor, e todos os flavors disponíveis para personalizar um Tipo.',
+			'O que é um Traço, e todos os Traços disponíveis para personalizar um Tipo.',
 		),
 		tableOfContents: false,
 	}}
@@ -45,7 +45,7 @@ const rulesHref = `/${locale}/rules/character-creation/#${t('flavor', 'flavor')}
 		{
 			t(
 				'A flavor is an optional customization of your type. At each tier you can trade a type ability for one from your flavor’s list of the same tier, tailoring the character to the genre or setting — a Warrior with the stealth flavor is an assassin, an Explorer with the technology flavor is an engineer.',
-				'Tradução em breve.',
+				'Um Traço é uma personalização opcional do seu Tipo. A cada Grau, você pode trocar uma habilidade de Tipo por uma da lista do seu Traço, do mesmo Grau, adaptando o personagem ao gênero ou ao cenário — um Guerreiro com o Traço de furtividade é um assassino, um Explorador com o Traço de tecnologia é um engenheiro.',
 			)
 		}
 		<a href={rulesHref}>{t('How flavors work', 'Como funcionam')}</a>
