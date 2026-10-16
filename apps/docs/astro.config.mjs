@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, fontProviders } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
@@ -197,6 +197,66 @@ const artifactsSidebarGroup = {
 export default defineConfig({
   // Canonical origin — enables the sitemap and absolute canonical URLs.
   site: 'https://csrd.app',
+  // The design system's three families, downloaded from Google at build time
+  // and served from this site (Astro's Fonts API) — a stylesheet on
+  // fonts.googleapis.com blocked first paint by 1.5–2 s on mobile. Rendered by
+  // src/components/FontLinks.astro; src/styles/globals.css points @cypher/ui's
+  // --font-sans/--font-display/--font-mono at these variables.
+  //
+  // Weights are the ones the UI uses (Space Grotesk 500/600/700 headings,
+  // Inter 400/500/600 body, IBM Plex Mono 400/500/600 chrome). Inter and Plex
+  // Mono also get their real 400 italic — taglines and the "not transcribed"
+  // notes are italic, and without it the browser fakes a slant. "latin"
+  // covers Portuguese accents.
+  fonts: [
+    {
+      name: 'Space Grotesk',
+      cssVariable: '--font-space-grotesk',
+      provider: fontProviders.google(),
+      weights: [500, 600, 700],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['sans-serif'],
+    },
+    // Same name + cssVariable twice: Astro merges the entries, so only these
+    // weight/style pairs download (not 500/600 italic too).
+    {
+      name: 'Inter',
+      cssVariable: '--font-inter',
+      provider: fontProviders.google(),
+      weights: [400, 500, 600],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['sans-serif'],
+    },
+    {
+      name: 'Inter',
+      cssVariable: '--font-inter',
+      provider: fontProviders.google(),
+      weights: [400],
+      styles: ['italic'],
+      subsets: ['latin'],
+      fallbacks: ['sans-serif'],
+    },
+    {
+      name: 'IBM Plex Mono',
+      cssVariable: '--font-ibm-plex-mono',
+      provider: fontProviders.google(),
+      weights: [400, 500, 600],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['monospace'],
+    },
+    {
+      name: 'IBM Plex Mono',
+      cssVariable: '--font-ibm-plex-mono',
+      provider: fontProviders.google(),
+      weights: [400],
+      styles: ['italic'],
+      subsets: ['latin'],
+      fallbacks: ['monospace'],
+    },
+  ],
   vite: {
     plugins: [tailwindcss()],
     // @cypher/content's loader locates its YAML directory relative to its

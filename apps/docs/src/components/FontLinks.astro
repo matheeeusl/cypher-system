@@ -5,18 +5,22 @@
 // Declaring `--font-*` in @cypher/ui only *names* the families; without this
 // nothing downloads them and the browser silently falls back to system-ui.
 //
-// Weights are the ones the UI actually uses (Space Grotesk 500/600/700
-// headings, Inter 400/500/600 body, IBM Plex Mono 400/500/600 chrome). Inter
-// and Plex Mono also ask for their real 400 italic — taglines and the "not
-// transcribed" notes are italic, and without it the browser fakes a slant.
-const href =
-	'https://fonts.googleapis.com/css2' +
-	'?family=Space+Grotesk:wght@500;600;700' +
-	'&family=Inter:ital,wght@0,400;0,500;0,600;1,400' +
-	'&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400' +
-	'&display=swap';
+// The families, weights and styles are configured in astro.config.mjs
+// (`fonts`): Astro downloads them at build time and serves them from this
+// site. Each <Font /> writes the @font-face rules plus its CSS variable, with
+// a metrics-adjusted fallback so text doesn't jump when the real font lands.
+//
+// Preload only what's on screen at first paint — body text (Inter) and
+// headings (Space Grotesk). Preloading every file would compete with the page
+// itself for bandwidth.
+//
+// Filtered by style, not weight: Google serves each family as one variable
+// file shared by every weight, and Astro tags that file's preload with only
+// the first weight it meets (Space Grotesk: 500), so `{ weight: 600 }` would
+// match nothing. `style: 'normal'` is exactly that one non-italic file.
+import { Font } from 'astro:assets';
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href={href} />
+<Font cssVariable="--font-inter" preload={[{ style: 'normal' }]} />
+<Font cssVariable="--font-space-grotesk" preload={[{ style: 'normal' }]} />
+<Font cssVariable="--font-ibm-plex-mono" />

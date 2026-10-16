@@ -30,6 +30,14 @@
   --sl-font: var(--font-sans);
   --sl-font-mono: var(--font-mono);
 
+  /* @cypher/ui names the families ('Inter', …); here they point at the
+     self-hosted copies from Astro's Fonts API (astro.config.mjs `fonts`,
+     rendered by FontLinks.astro), which come with metrics-matched fallbacks.
+     Unlayered, so this wins over Tailwind's @theme (in `@layer theme`). */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+
   /* Starlight paints headings (and other max-contrast text) in --sl-color-white,
      which is literally #fff in dark mode. The design's brightest text is
      --color-text, so headings follow it instead — and flip with the theme. */
