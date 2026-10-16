@@ -1,0 +1,52 @@
+---
+# Manutenção (comentários YAML: comentários no corpo do MDX são estragados pelo Prettier).
+# - Texto adaptado do OG-CSPG (rulebook/cypherrules.pdf, fora do git):
+#   "Spellcasting and Psionics" (p. 440). Esse livro é NÃO OFICIAL.
+# - ESCOPO: apenas um resumo das regras. O app não modela aprender, ativar nem
+#   preparar magias (FLAVORS-PLAN.md, F6).
+# - Fonte em inglês: ../../en/rules/spellcasting-and-psionics.mdx. "Feitiço" e
+#   "habilidade psiônica" ainda não estão no glossário pt-BR (ver "Needs
+#   confirmation" lá): são candidatos, não termos confirmados.
+title: Feitiços e Habilidades Psiônicas
+description: Como aprender feitiços e habilidades psiônicas, ativá-los e prepará-los trocando outras habilidades.
+sidebar:
+  order: 9
+tableOfContents: false
+---
+
+import EntityLink from '@components/EntityLink.astro'
+
+Feitiços e habilidades psiônicas são habilidades especiais que um personagem aprende além das habilidades do Tipo e do Foco. Este capítulo explica como obtê-las, como usá-las e como prepará-las. É um resumo das regras para a mesa: o app de personagem não controla nada disso, então anote o XP e as escolhas na sua ficha e combine tudo com o Mestre.
+
+Os flavors mais ligados a este capítulo são <EntityLink kind="flavor" id="magic" /> e <EntityLink kind="flavor" id="modern-magic" />. Os truques, os feitiços pequenos que um personagem de Magia Moderna pode aprender, seguem regras próprias (veja a habilidade <EntityLink kind="ability" id="cantrips" />).
+
+## Aprendendo feitiços e habilidades psiônicas
+
+Você pode ganhar um feitiço ou habilidade psiônica gastando **3 XP** e combinando com o Mestre uma história dentro do jogo que explique como a aprendeu. Você pode aprender outras gastando mais 3 XP por habilidade.
+
+Para aprender habilidades de Grau médio e alto, você precisa ter um Grau mínimo _e_ já conhecer uma habilidade da categoria indicada:
+
+| Categoria  | Grau mínimo | Pré-requisito                |
+| ---------- | ----------- | ---------------------------- |
+| Grau baixo | 1           | Nenhum                       |
+| Grau médio | 3           | Uma habilidade de Grau baixo |
+| Grau alto  | 5           | Uma habilidade de Grau médio |
+
+A lista completa de habilidades especiais por nível de poder está no Capítulo 9: Habilidades do Livro de Regras do Cypher System.
+
+## Ativando feitiços e habilidades psiônicas
+
+Ao usar um feitiço ou habilidade psiônica, você também paga o custo em pontos de Reserva dela. Há duas formas de ativá-la:
+
+- **Rolagem de recuperação.** Como uma ação — ou como parte de outra ação, se a habilidade for um Habilitador — você gasta uma rolagem de recuperação de uma ação, de dez minutos ou de uma hora para ativar a habilidade.
+- **Tempo.** Você passa um tempo concentrado profundamente, ou usando todas as suas ações, para ativar a habilidade. Uma habilidade de Grau baixo leva dez minutos, uma de Grau médio leva uma hora e uma de Grau alto leva dez horas.
+
+## Preparando feitiços e habilidades psiônicas
+
+Se você tem um Foco mágico (como Domina Feitiços), um Foco explicitamente psiônico (como Comanda Poderes Mentais) ou outro aspecto do personagem — um flavor de magia — que o torna especializado em magia ou psionismo, você pode **preparar** as habilidades que aprendeu. Preparar leva pelo menos uma hora ininterrupta de uma atividade adequada: estudar um grimório, rezar a um deus, meditar ou se concentrar. Costuma exigir a mente descansada, então faça isso logo depois de uma rolagem de recuperação de dez horas.
+
+Ao preparar, você pode trocar **até três** habilidades do Tipo ou do Foco por feitiços ou habilidades psiônicas que aprendeu. As duas habilidades precisam ser do mesmo grupo de Grau: baixo, médio ou alto.
+
+Por exemplo, você pode trocar Passo Distante (uma das suas habilidades de Grau 1 de Adepto) para preparar Fitas de Matéria Escura (um feitiço de Grau baixo que você conhece). Feito isso, você usa Fitas de Matéria Escura normalmente, mas só pode usar Passo Distante gastando uma rolagem de recuperação ou tempo para ativá-la.
+
+_Fonte: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Spellcasting and Psionics" (p. 440)._

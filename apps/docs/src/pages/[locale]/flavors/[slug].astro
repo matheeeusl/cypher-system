@@ -37,6 +37,12 @@ const description = pick(flavor.description, locale) || flavor.description.en;
 const tiers = Object.entries(flavor.tier_abilities).sort(([a], [b]) => Number(a) - Number(b));
 
 const rulesHref = `/${locale}/rules/character-creation/#flavor`;
+
+// The flavors built around spells and psionics point to the chapter on learning,
+// activating and preparing them.
+const spellcastingHref = ['magic', 'modern-magic'].includes(flavor.id)
+	? `/${locale}/rules/spellcasting-and-psionics/`
+	: null;
 ---
 
 <StarlightPage
@@ -59,6 +65,16 @@ const rulesHref = `/${locale}/rules/character-creation/#flavor`;
 			)
 		}
 		<a href={rulesHref}>{t(`How ${term.plural.toLowerCase()} work`, 'Como funcionam')}</a>
+		{
+			spellcastingHref && (
+				<>
+					{' · '}
+					<a href={spellcastingHref}>
+						{t('Spellcasting and psionics', 'Feitiços e habilidades psiônicas')}
+					</a>
+				</>
+			)
+		}
 	</p>
 	{/* not-content on the wrapper (not the rows): opts everything inside out of Starlight's sibling-margin rules, which would otherwise pad every tier row. */}
 	<div class="not-content border-t border-border">

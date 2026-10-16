@@ -1,0 +1,54 @@
+---
+# Maintenance notes (YAML comments: MDX body comments get mangled by Prettier).
+# - Prose is adapted from the OG-CSPG (rulebook/cypherrules.pdf, gitignored):
+#   "Spellcasting and Psionics" (p. 440). That book is UNOFFICIAL.
+# - SCOPE: a summary of the rules only. The app does not model learning,
+#   activating or preparing spells (FLAVORS-PLAN.md, F6); the spell and psionic
+#   ability list itself is Chapter 9 of the Cypher System Rulebook, which this
+#   site does not reproduce.
+# - pt-BR: ../../pt-br/rules/spellcasting-and-psionics.mdx. "spell" and
+#   "psionic ability" are not in the pt-BR glossary yet (listed under "Needs
+#   confirmation" there).
+title: Spellcasting and Psionics
+description: How to learn spells and psionic abilities, activate them, and prepare them by exchanging other abilities.
+sidebar:
+  order: 9
+tableOfContents: false
+---
+
+import EntityLink from '@components/EntityLink.astro'
+
+Spells and psionic abilities are special abilities that a character learns on top of their type and focus abilities. This chapter covers how to gain them, how to use them, and how to prepare them. It is a summary of the rules for the table: the character app does not track any of this, so keep the XP and the choices on your sheet and talk it over with your GM.
+
+The flavors most tied to this chapter are <EntityLink kind="flavor" id="magic" /> and <EntityLink kind="flavor" id="modern-magic" />. Cantrips, the small spells a Modern Magic character can learn, work on their own rules (see the <EntityLink kind="ability" id="cantrips" /> ability).
+
+## Learning spells and psionic abilities
+
+You can gain a spell or psionic ability by spending **3 XP** and working with the GM on an in-game story that explains how you learned it. You can learn more by spending another 3 XP for each.
+
+To learn mid-tier and high-tier abilities you must reach a minimum tier _and_ already know an ability from the category below:
+
+| Category  | Minimum tier | Prerequisite         |
+| --------- | ------------ | -------------------- |
+| Low-tier  | 1            | None                 |
+| Mid-tier  | 3            | One low-tier ability |
+| High-tier | 5            | One mid-tier ability |
+
+The complete list of special abilities by power grade is in Chapter 9: Abilities of the Cypher System Rulebook.
+
+## Activating spells and psionic abilities
+
+When you use a spell or psionic ability you also pay any Pool point cost it has. You can activate it in one of two ways:
+
+- **Recovery roll.** As an action — or as part of another action, if the ability is an Enabler — you expend a one-action, ten-minute or one-hour recovery roll to activate the ability.
+- **Time.** You spend time concentrating deeply, or otherwise using all your actions, to activate the ability. A low-tier ability takes ten minutes, a mid-tier ability an hour, and a high-tier ability ten hours.
+
+## Preparing spells and psionic abilities
+
+If you have a magical focus (like Masters Spells), an explicitly psionic one (like Commands Mental Powers), or some other aspect of your character — a magic flavor — that makes you specialized in magic or psionics, you can **prepare** the abilities you have learned. Preparing takes at least one uninterrupted hour of a suitable activity: studying a spellbook, praying to a god, meditating or concentrating. It usually needs a fresh mind, so do it soon after a ten-hour recovery roll.
+
+When you prepare, you can exchange **up to three** type or focus abilities for spells or psionic abilities you have learned. Both abilities must be in the same tier group: low, mid or high.
+
+For example, you can exchange Far Step (one of your tier 1 Adept abilities) to prepare Ribbons of Dark Matter (a low-tier spell you know). Once you do, you can use Ribbons of Dark Matter normally, but you can use Far Step only by expending a recovery roll or spending time to activate it.
+
+_Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG) — "Spellcasting and Psionics" (p. 440)._

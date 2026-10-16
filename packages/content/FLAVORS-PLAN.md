@@ -133,7 +133,7 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 | F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
 | F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | **done**          |
 | F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | **done**          |
-| F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | decision on D2    |
+| F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | **done**          |
 | F7    | Personalized flavors (GM-made lists)                                                              | —      | recommend: skip   |
 
 ### F1 — Widen `ActionType`
@@ -203,11 +203,13 @@ Decision (D1): modelled, with a short disclaimer to talk to the GM first.
 - The wizard's edit mode clears picks that become impossible, which would wipe a gain and its swaps while keeping the XP spent (the same gap as learned cantrips). G4 mitigates it by locking the selector for a character that gained a flavor.
 - pt-BR copy for the panel uses the "Flavor" placeholder term; it joins the list for the translation chat.
 
-### F6 — Spells, preparation and activation
+### F6 — Spells, preparation and activation (done: docs page only)
 
 Large and mostly rules text (3 XP per spell, low/mid/high tier gates, activate by recovery roll or time, prepare up to three swaps after an hour). It also depends on the whole Chapter 9 spell list, which isn't in the content.
 
 - **D2:** recommend not modelling it. Instead add a docs page that summarises the rules (EN and pt-BR) and link it from the Magic and Modern Magic flavors.
+
+Done: `rules/spellcasting-and-psionics.mdx` (en and pt-br; the pt-BR uses "feitiço" and "habilidade psiônica", already in the Foci content, listed under "Needs confirmation" in the glossary), linked from the Magic and Modern Magic flavor pages. Nothing is modelled.
 
 ### F7 — Personalized flavors
 
