@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# Pagefind's search index: thousands of binary fragments, not pages.
+Disallow: /pagefind/
+
+Sitemap: https://csrd.app/sitemap-index.xml

@@ -8,8 +8,16 @@
 // language preference only exists once the page is running client-side.
 // Redirect from inline script instead of Astro.redirect(), checking
 // navigator.languages for a Portuguese tag and falling back to `en`.
+//
+// In production this page is never served: vercel.json redirects `/` on the
+// server first (307, by the Accept-Language header's first language — the
+// same rule as apps/app's preferredLocale()), which crawlers can follow and
+// users don't see a blank flash for. This stays as the fallback for
+// `astro dev`/`preview`, kept out of the index and the sitemap
+// (astro.config.mjs).
 ---
 
+<meta name="robots" content="noindex" />
 <script is:inline>
   const prefersPortuguese = (navigator.languages ?? [navigator.language])
     .some((tag) => tag.toLowerCase().startsWith('pt'))

@@ -117,6 +117,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.9
         version: 0.9.9(prettier@3.9.5)(typescript@5.9.3)
+      '@astrojs/sitemap':
+        specifier: ^3.7.3
+        version: 3.7.3
       '@astrojs/starlight':
         specifier: ^0.41.3
         version: 0.41.3(astro@7.0.9)(typescript@5.9.3)
@@ -494,7 +497,7 @@ packages:
     dependencies:
       sitemap: 9.0.1
       stream-replace-string: 2.0.0
-      zod: 4.4.3
+      zod: 4.6.7
     dev: false
 
   /@astrojs/starlight@0.41.3(astro@7.0.9)(typescript@5.9.3):

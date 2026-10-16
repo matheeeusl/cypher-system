@@ -67,6 +67,12 @@ const SECTIONS = {
 
 const chrome = CHROME[locale];
 const sections = SECTIONS[locale];
+
+// This page bypasses Starlight, so it doesn't get the canonical/hreflang/Open
+// Graph tags Starlight writes on every other page — the same set, by hand.
+// x-default points at English, as on Starlight's pages.
+const homeUrl = (l: UrlLocale) => new URL(`/${l}/`, Astro.site).href;
+const langOf = (l: UrlLocale) => (l === 'pt-br' ? 'pt-BR' : 'en');
 ---
 
 <!doctype html>
@@ -77,6 +83,16 @@ const sections = SECTIONS[locale];
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<title>{chrome.title}</title>
 		<meta name="description" content={chrome.subtitle} />
+		<link rel="canonical" href={homeUrl(locale)} />
+		{URL_LOCALES.map((l) => <link rel="alternate" hreflang={langOf(l)} href={homeUrl(l)} />)}
+		<link rel="alternate" hreflang="x-default" href={homeUrl('en')} />
+		<meta property="og:title" content={chrome.title} />
+		<meta property="og:description" content={chrome.subtitle} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={homeUrl(locale)} />
+		<meta property="og:locale" content={htmlLang} />
+		<meta property="og:site_name" content="Cypher System Reference" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<FontLinks />
 	</head>
 	<body class="m-0 flex min-h-screen flex-col bg-bg font-sans text-text">

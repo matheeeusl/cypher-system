@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config'
+import sitemap from '@astrojs/sitemap'
 import starlight from '@astrojs/starlight'
 import tailwindcss from '@tailwindcss/vite'
 
@@ -213,6 +214,14 @@ export default defineConfig({
     },
   },
   integrations: [
+    // Starlight adds this same sitemap itself unless one is configured; ours
+    // repeats its i18n setup (the hreflang alternates) and adds a filter: the
+    // root `/` is only a redirect (see src/pages/index.astro), and listed it
+    // showed up as a second "en" alternate of /en/.
+    sitemap({
+      filter: (page) => page !== 'https://csrd.app/',
+      i18n: { defaultLocale: 'en', locales: { en: 'en', 'pt-br': 'pt-BR' } },
+    }),
     starlight({
       title: 'Cypher System Reference',
       customCss: ['./src/styles/globals.css'],
