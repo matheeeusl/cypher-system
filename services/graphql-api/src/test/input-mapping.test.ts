@@ -192,6 +192,24 @@ describe('mapCharacterChoicesInput (ability choices)', () => {
     expect(mapCharacterChoicesInput(base)).not.toHaveProperty('ability_choices')
   })
 
+  it('maps flavorGain to the engine’s flavor_gain, and leaves it out when absent', () => {
+    const result = mapCharacterChoicesInput({
+      ...base,
+      flavorGain: {
+        flavorId: 'stealth',
+        swaps: [{ tier: 1, replaces: 'swipe', with: 'goad' }],
+      },
+    })
+    expect(result.flavor_gain).toEqual({
+      flavor_id: 'stealth',
+      swaps: [{ tier: 1, replaces: 'swipe', with: 'goad' }],
+    })
+    expect(mapCharacterChoicesInput(base)).not.toHaveProperty('flavor_gain')
+    expect(mapCharacterChoicesInput({ ...base, flavorGain: null })).not.toHaveProperty(
+      'flavor_gain',
+    )
+  })
+
   it('maps learnedOptions to an ability -> options record, joining repeats', () => {
     const result = mapCharacterChoicesInput({
       ...base,

@@ -37,6 +37,11 @@ export interface AbilityChoiceInput {
   abilityIds: string[]
 }
 
+export interface FlavorGainInput {
+  flavorId: string
+  swaps: Array<{ tier: number; replaces: string; with: string }>
+}
+
 export interface LearnedOptionInput {
   abilityId: string
   optionIds: string[]
@@ -88,6 +93,7 @@ export interface CharacterChoicesInput {
   abilitySkillChoices?: AbilitySkillChoiceInput[] | null
   abilityChoices?: AbilityChoiceInput[] | null
   learnedOptions?: LearnedOptionInput[] | null
+  flavorGain?: FlavorGainInput | null
   advancementPurchases: AdvancementPurchaseInput[]
 }
 
@@ -165,6 +171,18 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
     descriptor_id: input.descriptorId,
     focus_id: input.focusId,
     ...(input.flavorId != null ? { flavor_id: input.flavorId } : {}),
+    ...(input.flavorGain
+      ? {
+          flavor_gain: {
+            flavor_id: input.flavorGain.flavorId,
+            swaps: input.flavorGain.swaps.map(({ tier, replaces, with: taken }) => ({
+              tier,
+              replaces,
+              with: taken,
+            })),
+          },
+        }
+      : {}),
     ...(input.startingEdgeChoice != null ? { starting_edge_choice: input.startingEdgeChoice } : {}),
     pool_point_allocation: input.poolPointAllocation,
     ...(input.descriptorPoolBonus

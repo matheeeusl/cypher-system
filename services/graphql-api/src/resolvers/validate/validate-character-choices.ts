@@ -29,9 +29,12 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
   if (!type) throw new GraphQLError(`No Type found for id "${input.typeId}"`)
   if (!descriptor) throw new GraphQLError(`No Descriptor found for id "${input.descriptorId}"`)
   if (!focus) throw new GraphQLError(`No Focus found for id "${input.focusId}"`)
-  const flavor = input.flavorId != null ? getFlavorById(input.flavorId) : null
-  if (input.flavorId != null && !flavor)
-    throw new GraphQLError(`No Flavor found for id "${input.flavorId}"`)
+  // The flavor in use: the one chosen at creation, or else the one gained in play.
+  // Both together is a rule violation the engine reports, so content is loaded for
+  // the creation flavor first.
+  const flavorId = input.flavorId ?? input.flavorGain?.flavorId ?? null
+  const flavor = flavorId !== null ? getFlavorById(flavorId) : null
+  if (flavorId !== null && !flavor) throw new GraphQLError(`No Flavor found for id "${flavorId}"`)
 
   // Skill ids are an unvalidated string in the engine ('any' grants have no
   // list to check against), so a stale or invented one is rejected here, as

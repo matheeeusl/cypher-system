@@ -642,4 +642,12 @@ describe('advancementRules query', () => {
     expect(result.errors).toBeUndefined()
     expect(result.data.advancementRules).toEqual({ costXp: 4, perTier: 4 })
   })
+
+  it('exposes what gaining a flavor in play costs (4 XP)', async () => {
+    const result = await graphqlRequest<{ advancementRules: { flavorCostXp: number } }>(
+      `{ advancementRules { flavorCostXp } }`,
+    )
+    expect(result.errors).toBeUndefined()
+    expect(result.data.advancementRules.flavorCostXp).toBe(4)
+  })
 })

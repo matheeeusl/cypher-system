@@ -602,6 +602,76 @@ describe('validateCharacterChoices (flavor)', () => {
     })
   })
 
+  describe('a flavor gained in play', () => {
+    const QUERY = `
+      query ($input: CharacterChoicesInput!) {
+        validateCharacterChoices(input: $input) {
+          __typename
+          ... on ValidCharacterResult {
+            character {
+              knownAbilities { abilityId source { __typename ... on FlavorAbilitySource { flavorId } } }
+            }
+          }
+          ... on InvalidCharacterResult { issues { code params { key value } } }
+        }
+      }
+    `
+    interface Payload {
+      validateCharacterChoices: {
+        __typename: string
+        character?: {
+          knownAbilities: Array<{
+            abilityId: string
+            source: { __typename: string; flavorId?: string }
+          }>
+        }
+        issues?: Array<{ code: string; params: Array<{ key: string; value: string }> }>
+      }
+    }
+    const gain = (swaps: Array<{ tier: number; replaces: string; with: string }>) => ({
+      ...validInput,
+      flavorGain: { flavorId: 'stealth', swaps },
+    })
+
+    it('swaps a pick for a flavor ability, credited to the flavor', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, {
+        input: gain([{ tier: 1, replaces: 'swipe', with: 'goad' }]),
+      })
+      expect(result.errors).toBeUndefined()
+      const payload = result.data.validateCharacterChoices
+      expect(payload.__typename).toBe('ValidCharacterResult')
+      const known = payload.character?.knownAbilities ?? []
+      expect(known.find((a) => a.abilityId === 'goad')?.source).toEqual({
+        __typename: 'FlavorAbilitySource',
+        flavorId: 'stealth',
+      })
+      expect(known.map((a) => a.abilityId)).not.toContain('swipe')
+    })
+
+    it('reports a bad exchange with its code and params', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, {
+        input: gain([{ tier: 1, replaces: 'swipe', with: 'not-a-flavor-ability' }]),
+      })
+      const payload = result.data.validateCharacterChoices
+      expect(payload.__typename).toBe('InvalidCharacterResult')
+      expect(payload.issues).toContainEqual({
+        code: 'FLAVOR_SWAP_WITH_INVALID',
+        params: [
+          { key: 'tier', value: '1' },
+          { key: 'replaces', value: 'swipe' },
+          { key: 'with', value: 'not-a-flavor-ability' },
+        ],
+      })
+    })
+
+    it('surfaces an unknown gained flavor id as a top-level GraphQL error', async () => {
+      const result = await graphqlRequest<Payload>(QUERY, {
+        input: { ...validInput, flavorGain: { flavorId: 'nonexistent-flavor', swaps: [] } },
+      })
+      expect(result.errors?.[0]?.message).toMatch(/No Flavor found for id/)
+    })
+  })
+
   it('surfaces an unknown flavor id as a top-level GraphQL error', async () => {
     const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
       input: { ...flavoredInput, flavorId: 'nonexistent-flavor' },

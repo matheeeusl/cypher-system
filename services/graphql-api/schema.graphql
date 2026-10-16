@@ -377,6 +377,20 @@ input AbilityChoiceInput {
   abilityIds: [ID!]!
 }
 
+# A flavor gained in play instead of at creation (so flavorId must be unset), with
+# the exchanges of already-picked Type abilities for flavor ones: `tier` is the
+# tier of the pick, `replaces` the Type ability given up, `with` the flavor
+# ability taken.
+input FlavorGainInput {
+  flavorId: ID!
+  swaps: [FlavorSwapInput!]!
+}
+input FlavorSwapInput {
+  tier: Int!
+  replaces: ID!
+  with: ID!
+}
+
 # Options learned later for XP: `abilityId` is the choice ability (cantrips),
 # `optionIds` the options bought, in multiples of its learn count.
 input LearnedOptionInput {
@@ -416,6 +430,8 @@ input CharacterChoicesInput {
   focusId: ID!
   # Optional flavor; its abilities join the pool tier1TypeAbilityIds / typeAbilityPicks draw from.
   flavorId: ID
+  # A flavor gained in play (not together with flavorId).
+  flavorGain: FlavorGainInput
   startingEdgeChoice: Stat
   poolPointAllocation: StatAllocationInput!
   descriptorPoolBonus: DescriptorPoolBonusInput
@@ -528,6 +544,8 @@ type AdvancementRules {
   perTier: Int!
   # The highest tier a character can reach.
   maxTier: Int!
+  # XP cost of gaining a flavor in play (free when a character arc grants it).
+  flavorCostXp: Int!
 }
 
 # ---- queries ----
