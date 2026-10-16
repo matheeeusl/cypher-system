@@ -255,7 +255,9 @@ main:has(.page-eyebrow) .sl-markdown-content h2 {
   display: block;
   text-decoration: none;
   margin-block-end: 0;
-  padding: 0.25rem 0;
+  /* 0.3rem, not 0.25rem: with the 0.75rem × 1.3 line below that makes each row
+     ~25px tall, over the 24px minimum touch target (0.25rem left it at 23.6px). */
+  padding: 0.3rem 0;
   border: 0;
   border-radius: 0;
   font-family: var(--font-mono);
@@ -292,4 +294,15 @@ main:has(.page-eyebrow) .sl-markdown-content h2 {
 .sl-markdown-content :is(ul, ol):not(:where(.not-content *)) {
   list-style: revert;
   padding-inline-start: 1.5rem;
+}
+
+/* Same preflight also strips the underline from every link, which left links
+   in running text told apart by colour alone — and the accent is only ~1.1:1
+   against the muted prose colour, short of the 3:1 that would allow that.
+   Underline them again inside prose; EntityLink pills and other component
+   markup sit under .not-content and stay as designed. */
+.sl-markdown-content :is(p, li, td, dd, blockquote) a:not(:where(.not-content *)) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }

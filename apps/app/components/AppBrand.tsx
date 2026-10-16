@@ -58,7 +58,8 @@ export function AppBrand({ locale, section, signedIn = true }: AppBrandProps) {
       <button
         ref={buttonRef}
         type="button"
-        aria-label={copy.menu}
+        // Contains the visible text, so voice control ("click CYPHER") finds it.
+        aria-label={`${BRAND_PREFIX} ${copy.menu}`}
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}

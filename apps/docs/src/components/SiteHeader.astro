@@ -41,6 +41,9 @@ const signInHref = appLinks.signIn(locale ?? 'en');
 const signInLabel = locale === 'pt-br' ? 'Entrar' : 'Sign in';
 
 // Brand menu (the CYPHER:// prefix). Same fallback as above for the locale-less 404.
+// The button's accessible name is "CYPHER:// Main menu", not the label alone:
+// it has to contain the visible text, or someone using voice control who
+// says "click CYPHER" gets no match.
 const menuLocale = locale ?? 'en';
 const menu = {
 	label: menuLocale === 'pt-br' ? 'Menu principal' : 'Main menu',
@@ -81,14 +84,16 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 				<button
 					id="brand-menu-button"
 					type="button"
-					aria-label={menu.label}
+					aria-label={`${BRAND_PREFIX} ${menu.label}`}
 					aria-haspopup="menu"
 					aria-expanded="false"
 					class="brand-menu-button cursor-pointer text-inherit hover:text-accent"
 				>
 					{BRAND_PREFIX}
 				</button>
-				<a href={locale ? `/${locale}/` : '/'} class="text-inherit no-underline hover:text-accent">REFERENCE</a>
+				<a href={locale ? `/${locale}/` : '/'} class="inline-block py-1 text-inherit no-underline hover:text-accent"
+					>REFERENCE</a
+				>
 				<div
 					id="brand-menu"
 					role="menu"
@@ -209,10 +214,13 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 	   uses for its own button, for the same reason. */
 	/* Same Starlight `button { font: inherit }` reset issue as .mode-toggle below:
 	   keeps the prefix looking like the plain brand text it replaces. */
+	/* The vertical padding (and the REFERENCE link's py-1 beside it) lifts both
+	   to ~27px tall: two 20px-high targets side by side failed the 24px
+	   minimum touch-target size. */
 	.brand-menu-button {
 		font: inherit;
 		letter-spacing: inherit;
-		padding: 0;
+		padding: 0.25rem 0;
 		border: 0;
 		background: none;
 	}
