@@ -5,3 +5,6 @@ dist
 out
 storybook-static
 pnpm-lock.yaml
+.auth
+test-results
+next-env.d.ts
