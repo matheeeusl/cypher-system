@@ -14,6 +14,10 @@
       "import": "./dist/brand.js",
       "types": "./dist/brand.d.ts"
     },
+    "./footer": {
+      "import": "./dist/footer.js",
+      "types": "./dist/footer.d.ts"
+    },
     "./styles/globals.css": "./src/styles/globals.css",
     "./styles/tokens.css": "./src/styles/tokens.css"
   },

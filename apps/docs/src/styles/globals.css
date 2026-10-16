@@ -69,14 +69,23 @@ h1 {
 
    The breadcrumb trail (src/components/Breadcrumbs.astro) sits above the box,
    outside <main>, and shares its width/centring through the same selector so
-   the two left edges line up. Below 50rem it just gets the page gutter. */
+   the two left edges line up. Below 50rem it just gets the page gutter.
+
+   The site footer (src/components/SiteFooter.astro) is mounted the same way,
+   after <main>, and joins the same selector so it spans exactly the box. */
 .breadcrumbs {
   padding: 1rem var(--sl-content-pad-x) 0;
 }
 
+main ~ .site-footer {
+  margin-block-end: 1.5rem;
+  padding-inline: var(--sl-content-pad-x);
+}
+
 @media (min-width: 50rem) {
   main,
-  .breadcrumbs {
+  .breadcrumbs,
+  main ~ .site-footer {
     --sl-content-width: 48rem;
     --sl-content-pad-x: 2rem;
 
@@ -86,8 +95,12 @@ h1 {
     margin-inline: auto;
   }
 
+  main ~ .site-footer {
+    padding-inline: 0;
+  }
+
   main {
-    margin-block: 1.5rem 3rem;
+    margin-block: 1.5rem 1rem;
     background-color: var(--color-panel);
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;

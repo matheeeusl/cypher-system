@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { AppBrand } from '@/components/AppBrand'
 import { HtmlLang } from '@/components/HtmlLang'
+import { SiteFooter } from '@/components/SiteFooter'
 import { ThemeToggle } from '@/components/wizard/ThemeToggle'
 import type { Locale } from '@/lib/i18n/auth'
 
@@ -30,7 +31,7 @@ export function AppShell({
   const otherLocale = locale === 'en' ? 'pt-br' : 'en'
 
   return (
-    <div className="bg-bg text-text min-h-screen">
+    <div className="bg-bg text-text flex min-h-screen flex-col">
       <HtmlLang locale={locale} />
       <header className="border-border bg-panel flex items-center justify-between gap-4 border-b px-7 py-3.5 print:hidden">
         <div className="flex items-center gap-2.5">
@@ -51,6 +52,7 @@ export function AppShell({
         </div>
       </header>
       <main className="px-7 pt-8 pb-16">{children}</main>
+      <SiteFooter locale={locale} className="mt-auto" />
     </div>
   )
 }

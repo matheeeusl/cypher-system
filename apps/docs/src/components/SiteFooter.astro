@@ -1,0 +1,104 @@
+---
+// The copyright + "buy me a coffee" footer. Used two ways, like SiteHeader:
+// - Standalone pages (the homepage and 404) import this directly, since they
+//   bypass Starlight's render pipeline.
+// - Starlight-shell pages get it via Footer.astro, Starlight's
+//   `components.Footer` override.
+// The text and links come from @cypher/ui/footer so the character app's footer
+// (apps/app) shows the same thing. `locale` is optional for the same reason as
+// in SiteHeader: the locale-less 404 omits it and falls back to English, which
+// has no Pix (Pix only works for Brazilian bank accounts).
+import { Image } from 'astro:assets';
+import { COPYRIGHT_HOLDER, FOOTER_LABELS, KOFI_URL, PIX_KEY } from '@cypher/ui/footer';
+import type { UrlLocale } from '../lib/locale';
+import pixQr from '../assets/pix-key.png';
+
+interface Props {
+	locale?: UrlLocale;
+	// Where the footer sits is the caller's call: standalone pages pass their own
+	// margin/gutter classes, and on Starlight pages globals.css lines it up with
+	// the content box (same selector as the breadcrumb).
+	class?: string;
+}
+
+const { locale = 'en', class: className } = Astro.props;
+const labels = FOOTER_LABELS[locale];
+const year = new Date().getFullYear();
+---
+
+<footer
+	class:list={[
+		'site-footer flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-border py-3 font-mono text-[11px] text-text-muted',
+		className,
+	]}
+>
+	<span>© {year} {COPYRIGHT_HOLDER}. {labels.rights}</span>
+
+	{
+		labels.pix ? (
+			<details class="pix relative">
+				<summary class="cursor-pointer list-none text-accent hover:underline">☕ {labels.pix.trigger}</summary>
+				<div class="absolute right-0 bottom-full z-10 mb-2 flex w-52 flex-col items-center gap-2 rounded-md border border-border bg-panel p-3">
+					<Image src={pixQr} alt="QR Code Pix" width={168} height={168} class="mb-1 rounded bg-white p-1" />
+					<a
+						href={KOFI_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="w-full rounded border border-accent bg-accent-soft px-3 py-1.5 text-center font-mono text-[11px] text-accent no-underline hover:border-warning"
+					>
+						{labels.pix.kofi} ↗
+					</a>
+					<button
+						type="button"
+						data-pix-copy={PIX_KEY}
+						data-copied={labels.pix.copied}
+						class="w-full cursor-pointer rounded border border-border bg-bg px-3 py-1.5 font-mono text-[11px] text-text hover:border-accent"
+					>
+						{labels.pix.copy}
+					</button>
+				</div>
+			</details>
+		) : (
+			<a href={KOFI_URL} target="_blank" rel="noopener noreferrer" class="text-accent no-underline hover:underline">
+				☕ {labels.kofi}
+			</a>
+		)
+	}
+</footer>
+
+<style>
+	/* Hides the default disclosure triangle (Safari/WebKit ignores list-style on <summary>). */
+	summary::-webkit-details-marker {
+		display: none;
+	}
+</style>
+
+<script>
+	// Delegated, so it works regardless of how many footers a page has and
+	// without waiting for the button to exist when the script runs.
+	const closePix = (except?: Element | null) => {
+		document.querySelectorAll<HTMLDetailsElement>('details.pix[open]').forEach((d) => {
+			if (d !== except) d.open = false;
+		});
+	};
+	// A click anywhere outside the open panel, or Esc, closes it.
+	document.addEventListener('click', (event) => closePix((event.target as Element).closest('details.pix')));
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') closePix();
+	});
+
+	document.addEventListener('click', async (event) => {
+		const button = (event.target as Element).closest<HTMLButtonElement>('[data-pix-copy]');
+		if (!button) return;
+		const original = button.textContent;
+		try {
+			await navigator.clipboard.writeText(button.dataset.pixCopy ?? '');
+			button.textContent = button.dataset.copied ?? original;
+			setTimeout(() => {
+				button.textContent = original;
+			}, 2000);
+		} catch {
+			// Clipboard blocked (e.g. insecure context): leave the label alone.
+		}
+	});
+</script>

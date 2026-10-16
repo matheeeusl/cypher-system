@@ -4,15 +4,20 @@
 // override point that sits *around* <main> — that's what lets the breadcrumb
 // land above the content box rather than inside it. It wraps Starlight's own
 // component instead of copying it, so the column layout stays Starlight's and
-// keeps up with upgrades; the only addition is the trail before the default
-// slot (which holds <main>). `right-sidebar` is re-forwarded by hand because a
+// keeps up with upgrades; the additions are the trail before the default
+// slot (which holds <main>) and the site footer after it, both outside the box. `right-sidebar` is re-forwarded by hand because a
 // wrapper doesn't pass named slots through on its own.
 import Default from '@astrojs/starlight/components/TwoColumnContent.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
+import SiteFooter from './SiteFooter.astro';
+import type { UrlLocale } from '../lib/locale';
+
+const locale = (Astro.url.pathname.split('/')[1] || 'en') as UrlLocale;
 ---
 
 <Default {...Astro.props}>
 	<slot name="right-sidebar" slot="right-sidebar" />
 	<Breadcrumbs />
 	<slot />
+	<SiteFooter locale={locale} />
 </Default>
