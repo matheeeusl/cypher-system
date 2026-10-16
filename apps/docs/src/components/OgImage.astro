@@ -1,0 +1,15 @@
+---
+// The link-preview image (WhatsApp, Discord, social posts) for the page's
+// language: public/og/<locale>.png, 1200×630, drawn from the design system.
+// Rendered by Head.astro on Starlight-shell pages and directly by the
+// standalone homepage. Twitter/X falls back to og:image, and Starlight already
+// sets twitter:card to summary_large_image.
+const isPt = Astro.url.pathname.split('/')[1] === 'pt-br';
+const image = new URL(`/og/${isPt ? 'pt-br' : 'en'}.png`, Astro.site).href;
+const alt = isPt ? 'Referência do Cypher System — csrd.app' : 'Cypher System Reference — csrd.app';
+---
+
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={alt} />

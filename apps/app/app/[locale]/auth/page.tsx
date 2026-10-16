@@ -4,7 +4,7 @@ import { notFound, redirect } from 'next/navigation'
 import { AuthScreen } from '@/components/auth/AuthScreen'
 import { AppShell } from '@/components/AppShell'
 import { isLocale, locales } from '@/lib/i18n/auth'
-import { metaCopy } from '@/lib/i18n/meta'
+import { metaCopy, ogImages } from '@/lib/i18n/meta'
 import { safeNextPath } from '@/lib/redirect'
 import { getSession } from '@/lib/session'
 
@@ -35,6 +35,7 @@ export async function generateMetadata({
       title: copy.siteTitle,
       description: copy.description,
       locale: copy.ogLocale,
+      images: ogImages(isLocale(locale) ? locale : 'en'),
       url: `/${locale}/auth`,
     },
   }

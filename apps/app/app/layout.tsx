@@ -4,7 +4,7 @@ import { headers } from 'next/headers'
 
 import { NextLinkProvider } from '@/components/NextLinkProvider'
 import { LOCALE_HEADER } from '@/lib/i18n/auth'
-import { metaCopy } from '@/lib/i18n/meta'
+import { metaCopy, ogImages } from '@/lib/i18n/meta'
 
 import './globals.css'
 
@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://play.csrd.app'),
   title: { default: metaCopy.en.siteTitle, template: '%s · Cypher System' },
   description: metaCopy.en.description,
-  openGraph: { siteName: 'Cypher System', type: 'website' },
+  openGraph: { siteName: 'Cypher System', type: 'website', images: ogImages('en') },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default async function RootLayout({

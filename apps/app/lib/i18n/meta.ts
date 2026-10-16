@@ -33,3 +33,19 @@ export const metaCopy: Record<
     ogLocale: 'pt_BR',
   },
 }
+
+/**
+ * Link-preview image (public/og/<locale>.png, 1200×630). Every `openGraph`
+ * object has to list it: metadata merges shallowly, so a page or layout that
+ * sets openGraph replaces its parent's whole, image included.
+ */
+export function ogImages(locale: Locale) {
+  return [
+    {
+      url: `/og/${locale}.png`,
+      width: 1200,
+      height: 630,
+      alt: `${metaCopy[locale].siteTitle} — play.csrd.app`,
+    },
+  ]
+}

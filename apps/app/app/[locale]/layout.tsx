@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { isLocale } from '@/lib/i18n/auth'
-import { metaCopy } from '@/lib/i18n/meta'
+import { metaCopy, ogImages } from '@/lib/i18n/meta'
 
 /**
  * Localized metadata for every /{locale} route. Kept out of search results by
@@ -30,6 +30,7 @@ export async function generateMetadata({
       title: copy.siteTitle,
       description: copy.description,
       locale: copy.ogLocale,
+      images: ogImages(isLocale(locale) ? locale : 'en'),
     },
     robots: { index: false, follow: false },
   }
