@@ -10,7 +10,7 @@ import type {
 } from '@/lib/graphql/queries'
 
 import type { WizardCopy } from '@/lib/i18n/wizard'
-import { EMPTY_PICKS, type TierPicks } from '@/lib/tier-picks'
+import { EMPTY_PICKS, flavorIdInUse, type TierPicks } from '@/lib/tier-picks'
 
 import {
   POOL_POINTS_TOTAL,
@@ -331,8 +331,10 @@ export function buildCharacterChoicesInput(
     return null
   }
 
-  // A flavor the wizard can't resolve (still loading) can't be validated yet.
-  if (choices.flavorId !== null && content.flavor?.id !== choices.flavorId) return null
+  // A flavor the wizard can't resolve (still loading) can't be validated yet. The
+  // flavor in use is the one chosen at creation, or else the one gained in play.
+  const flavorId = flavorIdInUse(choices, tierPicks)
+  if (flavorId !== null && content.flavor?.id !== flavorId) return null
 
   const poolBonus = descriptor.poolBonus[0]
   const choiceEntries = focusTier1ChoiceEntries(focus)
@@ -392,6 +394,14 @@ export function buildCharacterChoicesInput(
     ...(abilitySkillChoices.length > 0 ? { abilitySkillChoices } : {}),
     ...(abilityChoices.length > 0 ? { abilityChoices } : {}),
     ...(learnedOptions.length > 0 ? { learnedOptions } : {}),
+    ...(tierPicks.flavorGain
+      ? {
+          flavorGain: {
+            flavorId: tierPicks.flavorGain.flavorId,
+            swaps: tierPicks.flavorGain.swaps,
+          },
+        }
+      : {}),
     advancementPurchases,
   }
 }

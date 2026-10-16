@@ -1,5 +1,6 @@
 import { buildCharacterChoicesInput } from '@/components/wizard/derive'
 import type { SavedCharacter } from '@/lib/characters'
+import { flavorIdInUse } from '@/lib/tier-picks'
 import {
   fetchAbilities,
   fetchDescriptors,
@@ -48,10 +49,11 @@ export async function loadDerived(character: SavedCharacter): Promise<DerivedBun
   const type = types.find((t) => t.id === choices.typeId)
   const descriptor = descriptors.find((d) => d.id === choices.descriptorId)
   const focus = foci.find((f) => f.id === choices.focusId)
-  const flavor = choices.flavorId ? (flavors.find((f) => f.id === choices.flavorId) ?? null) : null
+  const flavorId = flavorIdInUse(choices, character.tierPicks)
+  const flavor = flavorId ? (flavors.find((f) => f.id === flavorId) ?? null) : null
   if (!type || !descriptor || !focus) return null
   // A flavor that no longer exists makes the build invalid, like a removed Focus.
-  if (choices.flavorId && !flavor) return null
+  if (flavorId && !flavor) return null
 
   const input = buildCharacterChoicesInput(
     choices,

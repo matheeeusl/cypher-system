@@ -74,6 +74,11 @@ export interface PlayCopy {
     confirm: string
     error: string
   }
+  /** Gaining a flavor in play. */
+  flavorGain: {
+    /** The XP-log line of the purchase (`free`: a character arc granted it). */
+    reason: (flavorName: string) => string
+  }
   /** Buying more options of a choice ability for XP (Cantrips). */
   learn: {
     title: (abilityName: string) => string
@@ -256,6 +261,9 @@ const en: PlayCopy = {
     hint: (selected, required) => `Choose ${required} — ${selected} selected`,
     confirm: 'Confirm choices',
     error: 'Could not save these choices. Reload the page and try again.',
+  },
+  flavorGain: {
+    reason: (flavorName) => `Gained the ${flavorName} flavor`,
   },
   learn: {
     title: (abilityName) => `Learn more — ${abilityName}`,
@@ -463,6 +471,9 @@ const ptBr: PlayCopy = {
     hint: (selected, required) => `Escolha ${required} — ${selected} selecionada(s)`,
     confirm: 'Confirmar escolhas',
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',
+  },
+  flavorGain: {
+    reason: (flavorName) => `Ganhou o Flavor ${flavorName}`,
   },
   learn: {
     title: (abilityName) => `Aprender mais — ${abilityName}`,

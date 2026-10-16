@@ -264,6 +264,11 @@ export interface CharacterChoicesInput {
   abilityChoices?: Array<{ key: string; abilityIds: string[] }>
   /** Options learned later for XP (Cantrips): the choice ability and the options bought. */
   learnedOptions?: Array<{ abilityId: string; optionIds: string[] }>
+  /** A flavor gained in play (not together with `flavorId`), with its exchanges of Type abilities. */
+  flavorGain?: {
+    flavorId: string
+    swaps: Array<{ tier: number; replaces: string; with: string }>
+  }
   // Empty at character creation; play mode adds one entry per purchase, in order.
   advancementPurchases: AdvancementPurchaseInput[]
 }
@@ -360,11 +365,13 @@ export interface AdvancementRules {
   costXp: number
   perTier: number
   maxTier: number
+  /** XP cost of gaining a flavor in play. */
+  flavorCostXp: number
 }
 
 export async function fetchAdvancementRules(): Promise<AdvancementRules> {
   const { advancementRules } = await gqlRequest<{ advancementRules: AdvancementRules }>(
-    'query AdvancementRules { advancementRules { costXp perTier maxTier } }',
+    'query AdvancementRules { advancementRules { costXp perTier maxTier flavorCostXp } }',
   )
   return advancementRules
 }

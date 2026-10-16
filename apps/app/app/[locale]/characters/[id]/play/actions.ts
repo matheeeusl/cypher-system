@@ -16,7 +16,12 @@ import { loadDerived } from '@/lib/character-derived'
 import { getCharacter } from '@/lib/characters'
 import { buildCharacterChoicesInput } from '@/components/wizard/derive'
 import { fetchCypher } from '@/lib/graphql/cyphers'
-import { fetchAdvancementRules, validateCharacterChoices, type Stat } from '@/lib/graphql/queries'
+import {
+  fetchAdvancementRules,
+  fetchFlavors,
+  validateCharacterChoices,
+  type Stat,
+} from '@/lib/graphql/queries'
 import { isLocale, type Locale } from '@/lib/i18n/auth'
 import { loc } from '@/lib/i18n/localized'
 import { playCopy } from '@/lib/i18n/play'
@@ -28,13 +33,13 @@ import {
   addXp,
   adjustPool,
   applyAdvancement,
-  applyLearn,
+  applyPicksPurchase,
   changeItemQty,
   getPlayData,
   removeItem,
   removeXp,
   revertAdvancement,
-  revertLearn,
+  revertPicksPurchase,
   addNote,
   removeNote,
   updateNote,
@@ -50,11 +55,14 @@ import { getSession } from '@/lib/session'
 import { customSkillText, isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
 import {
   picksUpToTier,
+  withFlavorGain,
   withLearned,
   withOptionPick,
   withPick,
   withSkillPick,
+  withoutFlavorGain,
   withoutLearnedPurchase,
+  flavorIdInUse,
 } from '@/lib/tier-picks'
 
 // Every action: verify the session, validate every argument (they arrive from
@@ -750,7 +758,7 @@ export async function learnOptionsAction(
       const a = bundle.abilities.find((x) => x.id === id)
       return a ? loc(a.name, locale) : id
     })
-    const applied = await applyLearn(uid, characterId, {
+    const applied = await applyPicksPurchase(uid, characterId, {
       expectedPicks: character.tierPicks,
       nextPicks: picks,
       costXp: learn.xpCost,
@@ -818,7 +826,7 @@ export async function revertLearnAction(
       return a ? loc(a.name, locale) : id
     })
     const copy = playCopy[locale]
-    const reverted = await revertLearn(uid, characterId, {
+    const reverted = await revertPicksPurchase(uid, characterId, {
       expectedPicks: character.tierPicks,
       nextPicks: picks,
       refundXp: learn.xpCost,
@@ -833,6 +841,176 @@ export async function revertLearnAction(
     return { ok: true, view: await freshView(uid, characterId, locale) }
   } catch (err) {
     console.error('[play] revertLearn failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+// ---- a flavor gained in play ----
+
+export type FlavorGainResult =
+  { ok: true; view: PlayView | null } | Fail<'conflict' | 'insufficient' | 'not_revertable'>
+
+const ABILITY_ID = /^[a-z0-9][a-z0-9-]{0,99}$/
+
+/**
+ * Gains a flavor after creation, exchanging Type abilities already picked for the
+ * flavor's (see `applyFlavorGain` in the engine). It costs `flavorCostXp`, or
+ * nothing when `free` says a character arc granted it; the GM decides which, so
+ * nothing here can check it. The engine (through graphql-api) validates the
+ * resulting build, and the picks and the locked XP entry are written together.
+ */
+export async function gainFlavorAction(
+  characterId: unknown,
+  flavorId: unknown,
+  swaps: unknown,
+  free: unknown,
+  locale: unknown,
+): Promise<FlavorGainResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    typeof flavorId !== 'string' ||
+    !ABILITY_ID.test(flavorId) ||
+    typeof free !== 'boolean' ||
+    !Array.isArray(swaps) ||
+    swaps.length > 30 ||
+    !swaps.every((swap) => {
+      const w = swap as { tier?: unknown; replaces?: unknown; with?: unknown } | null
+      return (
+        w !== null &&
+        typeof w === 'object' &&
+        isInt(w.tier, 1, 6) &&
+        typeof w.replaces === 'string' &&
+        ABILITY_ID.test(w.replaces) &&
+        typeof w.with === 'string' &&
+        ABILITY_ID.test(w.with)
+      )
+    }) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+  const exchanges = (swaps as Array<{ tier: number; replaces: string; with: string }>).map(
+    ({ tier, replaces, with: taken }) => ({ tier, replaces, with: taken }),
+  )
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const [rules, flavors, bundle] = await Promise.all([
+      fetchAdvancementRules(),
+      fetchFlavors(),
+      loadDerived(character),
+    ])
+    if (!bundle) return { ok: false, reason: 'invalid' }
+    // One flavor per character.
+    if (flavorIdInUse(character.choices, character.tierPicks) !== null) {
+      return { ok: false, reason: 'invalid' }
+    }
+    const flavor = flavors.find((f) => f.id === flavorId)
+    if (!flavor) return { ok: false, reason: 'invalid' }
+
+    const picks = withFlavorGain(character.tierPicks, {
+      flavorId,
+      swaps: exchanges,
+      costXp: free ? 0 : rules.flavorCostXp,
+    })
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        flavor,
+        abilities: bundle.abilities,
+      },
+      character.advancement,
+      picks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'invalid' }
+
+    const applied = await applyPicksPurchase(uid, characterId, {
+      expectedPicks: character.tierPicks,
+      nextPicks: picks,
+      costXp: free ? 0 : rules.flavorCostXp,
+      reason: playCopy[locale].flavorGain.reason(loc(flavor.name, locale)).slice(0, LIMITS.reason),
+    })
+    if (!applied.ok) return { ok: false, reason: applied.reason }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] gainFlavor failed:', err)
+    return { ok: false, reason: 'unavailable' }
+  }
+}
+
+/**
+ * Undoes a flavor gained in play: the flavor and its exchanges go, and the XP it
+ * cost comes back. Refused (`not_revertable`) when the engine says the build
+ * would no longer be valid, e.g. a later Type pick was taken from the flavor.
+ */
+export async function revertFlavorGainAction(
+  characterId: unknown,
+  locale: unknown,
+): Promise<FlavorGainResult> {
+  const uid = await userId()
+  if (!uid) return { ok: false, reason: 'unauthorized' }
+  if (
+    typeof characterId !== 'string' ||
+    !UUID.test(characterId) ||
+    typeof locale !== 'string' ||
+    !isLocale(locale)
+  ) {
+    return { ok: false, reason: 'invalid' }
+  }
+
+  try {
+    const character = await getCharacter(uid, characterId)
+    if (!character) return { ok: false, reason: 'not_found' }
+    const gain = character.tierPicks.flavorGain
+    if (!gain) return { ok: false, reason: 'invalid' }
+    const bundle = await loadDerived(character)
+    if (!bundle) return { ok: false, reason: 'invalid' }
+
+    const picks = withoutFlavorGain(character.tierPicks)
+    const input = buildCharacterChoicesInput(
+      character.choices,
+      {
+        type: bundle.type,
+        descriptor: bundle.descriptor,
+        focus: bundle.focus,
+        abilities: bundle.abilities,
+      },
+      character.advancement,
+      picks,
+    )
+    if (!input) return { ok: false, reason: 'invalid' }
+    const result = await validateCharacterChoices(input)
+    if (result.__typename !== 'ValidCharacterResult') return { ok: false, reason: 'not_revertable' }
+
+    const copy = playCopy[locale]
+    const name = bundle.flavor ? loc(bundle.flavor.name, locale) : gain.flavorId
+    const reverted = await revertPicksPurchase(uid, characterId, {
+      expectedPicks: character.tierPicks,
+      nextPicks: picks,
+      refundXp: gain.costXp,
+      reason: `${copy.advancement.refundPrefix} — ${copy.flavorGain.reason(name)}`.slice(
+        0,
+        LIMITS.reason,
+      ),
+    })
+    if (!reverted.ok) return { ok: false, reason: reverted.reason }
+
+    touch(characterId)
+    return { ok: true, view: await freshView(uid, characterId, locale) }
+  } catch (err) {
+    console.error('[play] revertFlavorGain failed:', err)
     return { ok: false, reason: 'unavailable' }
   }
 }

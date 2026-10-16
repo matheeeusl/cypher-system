@@ -469,19 +469,22 @@ export async function revertAdvancement(
   })
 }
 
-export type LearnResult =
+export type PicksPurchaseResult =
   { ok: true } | { ok: false; reason: 'not_found' | 'conflict' | 'insufficient' }
 
 /**
- * Records options bought for XP (cantrips): the new picks (only if nobody
- * changed them since `expectedPicks`) and the locked XP spend entry, together.
- * The caller has already validated the resulting build against the engine.
+ * Records something bought for XP that lives in the picks (cantrips, a flavor
+ * gained in play): the new picks (only if nobody changed them since
+ * `expectedPicks`) and the locked XP spend entry, together. A `costXp` of 0 (a
+ * flavor granted by a character arc) writes the picks and no entry, since the
+ * ledger only holds positive amounts. The caller has already validated the
+ * resulting build against the engine.
  */
-export async function applyLearn(
+export async function applyPicksPurchase(
   userId: string,
   characterId: string,
   args: { expectedPicks: TierPicks; nextPicks: TierPicks; costXp: number; reason: string },
-): Promise<LearnResult> {
+): Promise<PicksPurchaseResult> {
   return tx(async (client) => {
     if (!(await owns(client, userId, characterId))) return { ok: false, reason: 'not_found' }
     await lockPlay(client, characterId)
@@ -494,17 +497,19 @@ export async function applyLearn(
       [characterId, userId, JSON.stringify(args.nextPicks), JSON.stringify(args.expectedPicks)],
     )
     if ((rowCount ?? 0) === 0) return { ok: false, reason: 'conflict' }
-    await client.query(
-      `insert into character_xp_entry (character_id, kind, amount, reason, locked)
-       values ($1, 'spend', $2, $3, true)`,
-      [characterId, args.costXp, args.reason],
-    )
+    if (args.costXp > 0) {
+      await client.query(
+        `insert into character_xp_entry (character_id, kind, amount, reason, locked)
+         values ($1, 'spend', $2, $3, true)`,
+        [characterId, args.costXp, args.reason],
+      )
+    }
     return { ok: true }
   })
 }
 
-/** Undoes `applyLearn`: stores the picks without the purchase and refunds its XP as an ordinary entry. */
-export async function revertLearn(
+/** Undoes `applyPicksPurchase`: stores the picks without the purchase and refunds its XP as an ordinary entry. */
+export async function revertPicksPurchase(
   userId: string,
   characterId: string,
   args: { expectedPicks: TierPicks; nextPicks: TierPicks; refundXp: number; reason: string },
@@ -518,11 +523,13 @@ export async function revertLearn(
       [characterId, userId, JSON.stringify(args.nextPicks), JSON.stringify(args.expectedPicks)],
     )
     if ((rowCount ?? 0) === 0) return { ok: false, reason: 'conflict' }
-    await client.query(
-      `insert into character_xp_entry (character_id, kind, amount, reason)
-       values ($1, 'gain', $2, $3)`,
-      [characterId, args.refundXp, args.reason],
-    )
+    if (args.refundXp > 0) {
+      await client.query(
+        `insert into character_xp_entry (character_id, kind, amount, reason)
+         values ($1, 'gain', $2, $3)`,
+        [characterId, args.refundXp, args.reason],
+      )
+    }
     return { ok: true }
   })
 }

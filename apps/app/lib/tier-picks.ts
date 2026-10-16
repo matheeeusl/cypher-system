@@ -25,7 +25,24 @@ export interface TierPicks {
    * survives a tier being undone. Left out while empty, like `skills`.
    */
   learned?: Record<string, string[]> | undefined
+  /**
+   * A flavor gained in play instead of at creation (then `choices.flavorId` is
+   * null): the flavor, the exchanges of already-picked Type abilities for its
+   * abilities, and the XP it cost (0 when a character arc granted it), kept so
+   * undoing refunds exactly that. Left out while there is none.
+   */
+  flavorGain?: FlavorGainPick | undefined
 }
+
+export interface FlavorGainPick {
+  flavorId: string
+  swaps: Array<{ tier: number; replaces: string; with: string }>
+  costXp: number
+}
+
+/** The flavor a character has: the one chosen at creation, or else the one gained in play. */
+export const flavorIdInUse = (choices: { flavorId: string | null }, picks: TierPicks) =>
+  choices.flavorId ?? picks.flavorGain?.flavorId ?? null
 
 export const EMPTY_PICKS: TierPicks = { type: {}, focus: {} }
 
@@ -34,7 +51,8 @@ export const isEmptyPicks = (p: TierPicks) =>
   Object.keys(p.focus).length === 0 &&
   Object.keys(p.skills ?? {}).length === 0 &&
   Object.keys(p.options ?? {}).length === 0 &&
-  Object.keys(p.learned ?? {}).length === 0
+  Object.keys(p.learned ?? {}).length === 0 &&
+  p.flavorGain === undefined
 
 const ID = /^[a-z0-9][a-z0-9-]{0,99}$/
 const SKILL_KEY = /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/
@@ -57,6 +75,26 @@ function parseRecord(
   return out
 }
 
+function parseFlavorGain(raw: unknown): FlavorGainPick | undefined | null {
+  if (raw === undefined) return undefined
+  if (typeof raw !== 'object' || raw === null) return null
+  const r = raw as Record<string, unknown>
+  const isId = (v: unknown): v is string => typeof v === 'string' && ID.test(v)
+  if (!isId(r.flavorId) || !Array.isArray(r.swaps) || r.swaps.length > 30) return null
+  if (!Number.isInteger(r.costXp) || (r.costXp as number) < 0 || (r.costXp as number) > 1000) {
+    return null
+  }
+  const swaps: FlavorGainPick['swaps'] = []
+  for (const swap of r.swaps) {
+    if (typeof swap !== 'object' || swap === null) return null
+    const w = swap as Record<string, unknown>
+    if (!Number.isInteger(w.tier) || (w.tier as number) < 1 || (w.tier as number) > 6) return null
+    if (!isId(w.replaces) || !isId(w.with)) return null
+    swaps.push({ tier: w.tier as number, replaces: w.replaces, with: w.with })
+  }
+  return { flavorId: r.flavorId, swaps, costXp: r.costXp as number }
+}
+
 /** Runtime check of a stored/received picks object. */
 export function parsePicks(raw: unknown): TierPicks | null {
   if (typeof raw !== 'object' || raw === null) return null
@@ -68,14 +106,26 @@ export function parsePicks(raw: unknown): TierPicks | null {
   const skills = parseRecord(r.skills ?? {}, (key) => SKILL_KEY.test(key), isSkillIdShape)
   const options = parseRecord(r.options ?? {}, (key) => OPTION_KEY.test(key))
   const learned = parseRecord(r.learned ?? {}, (key) => ID.test(key), undefined, 100)
-  if (!type || !focus || !skills || !options || !learned) return null
+  const flavorGain = parseFlavorGain(r.flavorGain)
+  if (!type || !focus || !skills || !options || !learned || flavorGain === null) return null
   return {
     type,
     focus,
     ...(Object.keys(skills).length > 0 ? { skills } : {}),
     ...(Object.keys(options).length > 0 ? { options } : {}),
     ...(Object.keys(learned).length > 0 ? { learned } : {}),
+    ...(flavorGain ? { flavorGain } : {}),
   }
+}
+
+export function withFlavorGain(picks: TierPicks, flavorGain: FlavorGainPick): TierPicks {
+  return { ...picks, flavorGain }
+}
+
+export function withoutFlavorGain(picks: TierPicks): TierPicks {
+  const rest = { ...picks }
+  delete rest.flavorGain
+  return rest
 }
 
 export function withPick(
@@ -149,5 +199,14 @@ export function picksUpToTier(picks: TierPicks, tier: number): TierPicks {
     ...(Object.keys(options).length > 0 ? { options } : {}),
     // Not tied to a tier: it stays whatever tier the character drops to.
     ...(picks.learned ? { learned: picks.learned } : {}),
+    // The gain stays too; only exchanges of picks from tiers no longer reached go.
+    ...(picks.flavorGain
+      ? {
+          flavorGain: {
+            ...picks.flavorGain,
+            swaps: picks.flavorGain.swaps.filter((swap) => swap.tier <= tier),
+          },
+        }
+      : {}),
   }
 }

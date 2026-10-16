@@ -11,7 +11,7 @@ import {
   validateCharacterChoices,
   type AdvancementPurchaseInput,
 } from '@/lib/graphql/queries'
-import { EMPTY_PICKS, type TierPicks } from '@/lib/tier-picks'
+import { EMPTY_PICKS, flavorIdInUse, type TierPicks } from '@/lib/tier-picks'
 import { fetchContentVersions } from '@/lib/graphql/versions'
 
 /**
@@ -38,11 +38,12 @@ export async function prepareCharacterData(
   const type = types.find((t) => t.id === choices.typeId)
   const descriptor = descriptors.find((d) => d.id === choices.descriptorId)
   const focus = foci.find((f) => f.id === choices.focusId)
-  const flavor = choices.flavorId ? flavors.find((f) => f.id === choices.flavorId) : undefined
+  const flavorId = flavorIdInUse(choices, tierPicks)
+  const flavor = flavorId ? flavors.find((f) => f.id === flavorId) : undefined
   const content = { type, descriptor, focus, flavor, abilities }
 
   if (!type || !descriptor || !focus) return { ok: false }
-  if (choices.flavorId && !flavor) return { ok: false }
+  if (flavorId && !flavor) return { ok: false }
   if (!STEPS.every((step) => isStepValid(step.id, choices, content))) return { ok: false }
 
   const input = buildCharacterChoicesInput(choices, content, advancement, tierPicks)
