@@ -1,3 +1,7 @@
+'use client'
+
+import { useLinkComponent } from './LinkComponent'
+
 interface LinkButtonProps {
   href: string
   label: string
@@ -6,6 +10,7 @@ interface LinkButtonProps {
 }
 
 export function LinkButton({ href, label, size = 'md', variant = 'primary' }: LinkButtonProps) {
+  const Link = useLinkComponent()
   const sizes = {
     md: 'px-4.5 py-2.5',
     lg: 'px-5.5 py-2.75',
@@ -17,11 +22,11 @@ export function LinkButton({ href, label, size = 'md', variant = 'primary' }: Li
   }
 
   return (
-    <a
+    <Link
       href={href}
       className={`inline-block shrink-0 cursor-pointer rounded font-mono transition-opacity hover:opacity-90 ${variants[variant]} ${sizes[size]}`}
     >
       {label}
-    </a>
+    </Link>
   )
 }

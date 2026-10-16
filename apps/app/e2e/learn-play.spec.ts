@@ -37,6 +37,8 @@ test('only a character with the Modern Magic flavor has something to learn', asy
   await page.getByRole('button', { name: 'Save Changes' }).click()
   await expect(page.getByRole('heading', { name: NAME })).toBeVisible()
   await page.getByRole('link', { name: 'Play' }).click()
+  // Client-side navigation: the URL changes once the play page has arrived.
+  await expect(page).toHaveURL(/\/characters\/[0-9a-f-]+\/play$/)
   playUrl = page.url()
 })
 

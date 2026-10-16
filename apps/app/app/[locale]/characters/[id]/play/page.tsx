@@ -76,6 +76,10 @@ export default async function PlayPage({
       actions={<UserMenu name={session.user.name} signOutLabel={signOutLabel[locale]} />}
     >
       <div className="mx-auto w-full max-w-195">
+        {/* A plain <a> on purpose: a full page load fires PlayScreen's
+            beforeunload warning while changes are still syncing, and the
+            sheet is rendered only after they've landed. A client-side <Link>
+            would skip both. */}
         <a
           href={`/${locale}/characters/${id}`}
           className="text-accent hover:text-warning mb-4 inline-block cursor-pointer font-mono text-xs transition-colors"

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from 'next/font/google'
+import { NextLinkProvider } from '@/components/NextLinkProvider'
+
 import './globals.css'
 
 const inter = Inter({
@@ -33,7 +35,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <NextLinkProvider>{children}</NextLinkProvider>
+      </body>
     </html>
   )
 }

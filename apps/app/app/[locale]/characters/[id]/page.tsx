@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 
 import { Alert, CharacterSheet, LinkButton, type CharacterSheetData } from '@cypher/ui'
@@ -56,12 +57,12 @@ export default async function CharacterSheetPage({
       actions={<UserMenu name={session.user.name} signOutLabel={signOutLabel[locale]} />}
     >
       <div className="mx-auto w-full max-w-200">
-        <a
+        <Link
           href={`/${locale}`}
           className="text-accent hover:text-warning mb-4 inline-block cursor-pointer font-mono text-xs transition-colors print:hidden"
         >
           {copy.backToList}
-        </a>
+        </Link>
 
         {isStale(character.contentVersions, versions) && (
           <div className="mb-4 print:hidden">

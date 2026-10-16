@@ -1,3 +1,7 @@
+'use client'
+
+import { useLinkComponent } from './LinkComponent'
+
 export interface CharacterSummary {
   id: string
   name: string
@@ -28,9 +32,10 @@ export function CharacterCard({
   deleteLabel,
   onDelete,
 }: CharacterCardProps) {
+  const Link = useLinkComponent()
   return (
     <div className="border-border bg-panel hover:border-accent flex items-stretch overflow-hidden rounded-md border transition-colors">
-      <a
+      <Link
         href={c.href}
         className="flex min-w-0 flex-1 cursor-pointer flex-wrap items-center justify-between gap-4 px-5 py-4"
       >
@@ -51,7 +56,7 @@ export function CharacterCard({
           </div>
         </div>
         <div className="text-text-muted shrink-0 font-mono text-xs">{c.updatedLabel}</div>
-      </a>
+      </Link>
       {onDelete && (
         <button
           type="button"

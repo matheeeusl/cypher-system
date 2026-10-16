@@ -36,6 +36,8 @@ test('adds the Stealth flavor to a saved character', async ({ page }) => {
   await expect(page.getByText('Flavor: Stealth').first()).toBeVisible()
 
   await page.getByRole('link', { name: 'Play' }).click()
+  // Client-side navigation: the URL changes once the play page has arrived.
+  await expect(page).toHaveURL(/\/characters\/[0-9a-f-]+\/play$/)
   playUrl = page.url()
 })
 

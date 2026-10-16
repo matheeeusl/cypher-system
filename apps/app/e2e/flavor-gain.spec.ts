@@ -28,6 +28,8 @@ async function gainXp(page: Page, amount: number) {
 test('setup: a saved Warrior with no flavor', async ({ page }) => {
   await createCharacter(page, NAME)
   await page.getByRole('link', { name: 'Play' }).click()
+  // Client-side navigation: the URL changes once the play page has arrived.
+  await expect(page).toHaveURL(/\/characters\/[0-9a-f-]+\/play$/)
   playUrl = page.url()
   await expect(panel(page, 'Gain a flavor')).toBeVisible()
 })
