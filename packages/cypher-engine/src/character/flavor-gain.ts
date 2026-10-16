@@ -149,5 +149,5 @@ export function applyFlavorGain<C extends GainInput>(
     flavor_id: gain.flavor_id,
     tier_1_type_ability_ids: tierOne,
     ...(choices.type_ability_picks ? { type_ability_picks: later } : {}),
-  } as unknown as C
+  }
 }
