@@ -8,6 +8,30 @@ import { HOME_LABEL, getPageContext } from '../lib/page-context';
 
 const ctx = getPageContext(Astro.url.pathname);
 const title = Astro.locals.starlightRoute.entry.data.title;
+
+// The same trail as schema.org BreadcrumbList JSON-LD, which search engines can
+// show in place of the raw URL. Every level but the last needs a URL, so a
+// section without its own index page ("Rules") is left out here even though
+// the visible trail shows it as text. `<` is escaped so a title can never close
+// the <script> early.
+const jsonLd =
+	ctx &&
+	JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ name: HOME_LABEL[ctx.locale], item: new URL(`/${ctx.locale}/`, Astro.site).href },
+			...(ctx.section && ctx.isNested && ctx.section.hasIndex
+				? [
+						{
+							name: ctx.section.crumb[ctx.locale],
+							item: new URL(`/${ctx.locale}/${ctx.segment}/`, Astro.site).href,
+						},
+					]
+				: []),
+			{ name: title, item: new URL(Astro.url.pathname, Astro.site).href },
+		].map((crumb, i) => ({ '@type': 'ListItem', position: i + 1, ...crumb })),
+	}).replace(/</g, '\\u003c');
 ---
 
 {
@@ -43,6 +67,7 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 					<span class="text-text">{title}</span>
 				</li>
 			</ol>
+			<script type="application/ld+json" set:html={jsonLd} />
 		</nav>
 	)
 }

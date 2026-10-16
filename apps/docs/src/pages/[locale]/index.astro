@@ -12,6 +12,7 @@
 import '../../styles/globals.css';
 import SiteHeader from '@components/SiteHeader.astro';
 import FontLinks from '@components/FontLinks.astro';
+import OgImage from '@components/OgImage.astro';
 import SiteFooter from '@components/SiteFooter.astro';
 import { appLinks } from '@lib/app-links';
 import { URL_LOCALES, type UrlLocale } from '@lib/locale';
@@ -73,6 +74,17 @@ const sections = SECTIONS[locale];
 // x-default points at English, as on Starlight's pages.
 const homeUrl = (l: UrlLocale) => new URL(`/${l}/`, Astro.site).href;
 const langOf = (l: UrlLocale) => (l === 'pt-br' ? 'pt-BR' : 'en');
+
+// schema.org WebSite: lets search results show the site's name instead of the
+// bare domain. Entity/chapter pages carry BreadcrumbList instead (Breadcrumbs.astro).
+const websiteJsonLd = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: chrome.title,
+	url: homeUrl(locale),
+	inLanguage: htmlLang,
+	description: chrome.subtitle,
+}).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -91,8 +103,11 @@ const langOf = (l: UrlLocale) => (l === 'pt-br' ? 'pt-BR' : 'en');
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={homeUrl(locale)} />
 		<meta property="og:locale" content={htmlLang} />
-		<meta property="og:site_name" content="Cypher System Reference" />
+		<meta property="og:site_name" content={CHROME[locale].title} />
+		<OgImage />
+		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<script type="application/ld+json" set:html={websiteJsonLd} />
 		<FontLinks />
 	</head>
 	<body class="m-0 flex min-h-screen flex-col bg-bg font-sans text-text">

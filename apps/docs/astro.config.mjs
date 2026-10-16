@@ -251,7 +251,9 @@ export default defineConfig({
       i18n: { defaultLocale: 'en', locales: { en: 'en', 'pt-br': 'pt-BR' } },
     }),
     starlight({
-      title: 'Cypher System Reference',
+      // Per locale (BCP-47 keys): pt-BR pages were titled "… | Cypher System
+      // Reference". The pt-BR name is the home page's own (src/pages/[locale]/index.astro).
+      title: { en: 'Cypher System Reference', 'pt-BR': 'Referência do Cypher System' },
       customCss: ['./src/styles/globals.css'],
       // Applies the saved sidebar-collapsed state before first paint, the same
       // way Starlight's own ThemeProvider inlines the theme — otherwise a
