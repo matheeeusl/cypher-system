@@ -3,6 +3,7 @@
 // pass: these stay in sync by hand, which is fine at this size and makes the
 // wire shape visible instead of generated.
 
+import { cachedCatalog } from './cache'
 import { gqlRequest } from './client'
 
 export interface LocalizedString {
@@ -55,10 +56,12 @@ const TYPES_QUERY = `
   }
 `
 
-export async function fetchTypes(): Promise<WizardType[]> {
-  const { types } = await gqlRequest<{ types: WizardType[] }>(TYPES_QUERY)
+export const fetchTypes = cachedCatalog(async (): Promise<WizardType[]> => {
+  const { types } = await gqlRequest<{ types: WizardType[] }>(TYPES_QUERY, undefined, {
+    method: 'GET',
+  })
   return types
-}
+})
 
 // ---- Descriptor ----
 
@@ -88,10 +91,14 @@ const DESCRIPTORS_QUERY = `
   }
 `
 
-export async function fetchDescriptors(): Promise<WizardDescriptor[]> {
-  const { descriptors } = await gqlRequest<{ descriptors: WizardDescriptor[] }>(DESCRIPTORS_QUERY)
+export const fetchDescriptors = cachedCatalog(async (): Promise<WizardDescriptor[]> => {
+  const { descriptors } = await gqlRequest<{ descriptors: WizardDescriptor[] }>(
+    DESCRIPTORS_QUERY,
+    undefined,
+    { method: 'GET' },
+  )
   return descriptors
-}
+})
 
 // ---- Focus ----
 
@@ -128,10 +135,12 @@ const FOCI_QUERY = `
   }
 `
 
-export async function fetchFoci(): Promise<WizardFocus[]> {
-  const { foci } = await gqlRequest<{ foci: WizardFocus[] }>(FOCI_QUERY)
+export const fetchFoci = cachedCatalog(async (): Promise<WizardFocus[]> => {
+  const { foci } = await gqlRequest<{ foci: WizardFocus[] }>(FOCI_QUERY, undefined, {
+    method: 'GET',
+  })
   return foci
-}
+})
 
 // ---- Flavor ----
 
@@ -154,10 +163,12 @@ const FLAVORS_QUERY = `
   }
 `
 
-export async function fetchFlavors(): Promise<WizardFlavor[]> {
-  const { flavors } = await gqlRequest<{ flavors: WizardFlavor[] }>(FLAVORS_QUERY)
+export const fetchFlavors = cachedCatalog(async (): Promise<WizardFlavor[]> => {
+  const { flavors } = await gqlRequest<{ flavors: WizardFlavor[] }>(FLAVORS_QUERY, undefined, {
+    method: 'GET',
+  })
   return flavors
-}
+})
 
 // ---- Skill ----
 
@@ -180,10 +191,12 @@ const SKILLS_QUERY = `
   }
 `
 
-export async function fetchSkills(): Promise<WizardSkill[]> {
-  const { skills } = await gqlRequest<{ skills: WizardSkill[] }>(SKILLS_QUERY)
+export const fetchSkills = cachedCatalog(async (): Promise<WizardSkill[]> => {
+  const { skills } = await gqlRequest<{ skills: WizardSkill[] }>(SKILLS_QUERY, undefined, {
+    method: 'GET',
+  })
   return skills
-}
+})
 
 // ---- Ability ----
 
@@ -233,10 +246,14 @@ const ABILITIES_QUERY = `
   }
 `
 
-export async function fetchAbilities(): Promise<WizardAbility[]> {
-  const { abilities } = await gqlRequest<{ abilities: WizardAbility[] }>(ABILITIES_QUERY)
+export const fetchAbilities = cachedCatalog(async (): Promise<WizardAbility[]> => {
+  const { abilities } = await gqlRequest<{ abilities: WizardAbility[] }>(
+    ABILITIES_QUERY,
+    undefined,
+    { method: 'GET' },
+  )
   return abilities
-}
+})
 
 // ---- validateCharacterChoices ----
 
@@ -369,9 +386,11 @@ export interface AdvancementRules {
   flavorCostXp: number
 }
 
-export async function fetchAdvancementRules(): Promise<AdvancementRules> {
+export const fetchAdvancementRules = cachedCatalog(async (): Promise<AdvancementRules> => {
   const { advancementRules } = await gqlRequest<{ advancementRules: AdvancementRules }>(
     'query AdvancementRules { advancementRules { costXp perTier maxTier flavorCostXp } }',
+    undefined,
+    { method: 'GET' },
   )
   return advancementRules
-}
+})

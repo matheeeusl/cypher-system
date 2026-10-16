@@ -1,6 +1,6 @@
 import cors from '@fastify/cors'
 import fastify, { type FastifyInstance, type FastifyReply, type FastifyRequest } from 'fastify'
-import { createYoga } from 'graphql-yoga'
+import { createYoga, type Plugin } from 'graphql-yoga'
 
 import { resolvers } from './resolvers/index.js'
 import { buildSchema } from './schema/index.js'
@@ -11,6 +11,25 @@ const ALLOWED_ORIGINS: Array<string | RegExp> = [
   // Local dev: apps/docs and apps/app run on ports that vary across setups.
   /^http:\/\/localhost:\d+$/,
 ]
+
+// Every answer this API gives is a pure function of the rules content, which
+// only changes with a deploy — so GET responses (Yoga only runs queries over
+// GET, never mutations) are safe to cache. s-maxage is for Vercel's CDN, whose
+// cache key includes the deployment URL: a new deploy starts with an empty
+// cache, so it can be long. Browsers can't tell when a deploy happens, so
+// max-age stays short. POST (validateCharacterChoices, with its big input)
+// is left uncached.
+const GET_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800'
+
+function useCacheableGet(): Plugin {
+  return {
+    onResponse({ request, response }) {
+      if (request.method === 'GET' && response.status === 200) {
+        response.headers.set('Cache-Control', GET_CACHE_CONTROL)
+      }
+    },
+  }
+}
 
 export function buildServer(): FastifyInstance {
   const app = fastify()
@@ -28,6 +47,7 @@ export function configureServer(app: FastifyInstance): void {
 
   const yoga = createYoga<{ req: FastifyRequest; reply: FastifyReply }>({
     schema: buildSchema<{ req: FastifyRequest; reply: FastifyReply }>(resolvers),
+    plugins: [useCacheableGet()],
   })
 
   app.route({

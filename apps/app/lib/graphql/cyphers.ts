@@ -1,3 +1,4 @@
+import { cachedCatalog } from '@/lib/graphql/cache'
 import { gqlRequest } from '@/lib/graphql/client'
 import type { LocalizedString } from '@/lib/graphql/queries'
 
@@ -29,10 +30,12 @@ const CYPHERS_QUERY = `
   }
 `
 
-export async function fetchCyphers(): Promise<CatalogCypher[]> {
-  const { cyphers } = await gqlRequest<{ cyphers: CatalogCypher[] }>(CYPHERS_QUERY)
+export const fetchCyphers = cachedCatalog(async (): Promise<CatalogCypher[]> => {
+  const { cyphers } = await gqlRequest<{ cyphers: CatalogCypher[] }>(CYPHERS_QUERY, undefined, {
+    method: 'GET',
+  })
   return cyphers
-}
+})
 
 const CYPHER_QUERY = `
   query Cypher($id: ID!) {
@@ -51,6 +54,7 @@ export async function fetchCypher(id: string): Promise<CatalogCypher | null> {
   const { cypher } = await gqlRequest<{ cypher: CatalogCypher | null }, { id: string }>(
     CYPHER_QUERY,
     { id },
+    { method: 'GET' },
   )
   return cypher
 }

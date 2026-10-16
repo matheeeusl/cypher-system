@@ -1,3 +1,4 @@
+import { cachedCatalog } from '@/lib/graphql/cache'
 import { gqlRequest } from '@/lib/graphql/client'
 
 interface VersionRow {
@@ -17,20 +18,20 @@ const VERSIONS_QUERY = `
 `
 
 /** contentVersion of every Type/Descriptor/Focus/Flavor, keyed by entity id. */
-export async function fetchContentVersions(): Promise<ContentVersions> {
+export const fetchContentVersions = cachedCatalog(async (): Promise<ContentVersions> => {
   const data = await gqlRequest<{
     types: VersionRow[]
     descriptors: VersionRow[]
     foci: VersionRow[]
     flavors: VersionRow[]
-  }>(VERSIONS_QUERY)
+  }>(VERSIONS_QUERY, undefined, { method: 'GET' })
   return new Map(
     [...data.types, ...data.descriptors, ...data.foci, ...data.flavors].map((r) => [
       r.id,
       r.contentVersion,
     ]),
   )
-}
+})
 
 /** True when any entity the character was built from has changed since it was saved. */
 export function isStale(saved: Record<string, string>, current: ContentVersions): boolean {
