@@ -57,6 +57,13 @@ export interface CharacterChoices {
    */
   descriptor_skill_choices: string[]
 
+  /**
+   * A flavor gained in play instead of at creation (so `flavor_id` must be
+   * unset): the flavor, and the exchanges of Type abilities picked so far for
+   * flavor abilities. See `applyFlavorGain`.
+   */
+  flavor_gain?: FlavorGain
+
   advancement_purchases: AdvancementPurchase[]
 
   /**
@@ -94,6 +101,18 @@ export interface CharacterChoices {
    * track (`choice.learn.xp_cost` per purchase).
    */
   learned_options?: Record<string, string[]>
+}
+
+/** Gives up the Type ability picked at `tier` (`replaces`) for a flavor ability (`with`). */
+export interface FlavorSwap {
+  tier: number
+  replaces: string
+  with: string
+}
+
+export interface FlavorGain {
+  flavor_id: string
+  swaps: FlavorSwap[]
 }
 
 export type AdvancementPurchase =

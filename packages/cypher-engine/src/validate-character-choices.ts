@@ -9,6 +9,7 @@ import {
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFlavor } from './character/flavor.js'
+import { applyFlavorGain } from './character/flavor-gain.js'
 import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
@@ -52,7 +53,7 @@ export type ValidationResult =
  *     known_abilities list (from resolveTypeAbilities + resolveFocusAbilities).
  */
 export function validateCharacterChoices(
-  choices: CharacterChoices,
+  givenChoices: CharacterChoices,
   content: CharacterContent,
 ): ValidationResult {
   const { type, descriptor, focus } = content
@@ -76,6 +77,13 @@ export function validateCharacterChoices(
       return undefined
     }
   }
+
+  // A flavor gained in play is applied up front: from here on it is just the
+  // character's flavor, with the exchanged picks already in place. When it
+  // can't be applied, the rest is checked as if there were no gain.
+  const choices =
+    attempt(() => applyFlavorGain(givenChoices, content)) ??
+    (({ flavor_gain: _gain, ...rest }) => rest)(givenChoices)
 
   const startingEdge = attempt(() => resolveStartingEdge(type, choices.starting_edge_choice))
   const tier = attempt(() => deriveTier(choices.advancement_purchases))

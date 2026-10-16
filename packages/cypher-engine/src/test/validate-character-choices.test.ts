@@ -534,3 +534,79 @@ describe('validateCharacterChoices with options learned for XP', () => {
     }
   })
 })
+
+describe('validateCharacterChoices with a flavor gained in play', () => {
+  const stealth = { id: 'stealth', tier_abilities: { '1': ['danger-sense'], '2': ['vanish'] } }
+  const picked: CharacterChoices = {
+    ...validChoices,
+    type_ability_picks: {
+      '2': ['quick-throw', 'control-the-field'],
+      '3': ['practiced-in-armor', 'trained-without-armor', 'no-need-for-weapons'],
+    },
+  }
+  const gained = (swaps: Array<{ tier: number; replaces: string; with: string }>) => ({
+    ...picked,
+    flavor_gain: { flavor_id: 'stealth', swaps },
+  })
+  const withFlavor = { ...content, flavor: stealth }
+  const swaps = [
+    { tier: 1, replaces: 'swipe', with: 'danger-sense' },
+    { tier: 2, replaces: 'quick-throw', with: 'vanish' },
+  ]
+
+  it('swaps the picks already made, crediting the flavor abilities to the flavor', () => {
+    const result = validateCharacterChoices(gained(swaps), withFlavor)
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    const known = result.character.known_abilities
+    expect(known.find((a) => a.ability_id === 'danger-sense')?.source).toEqual({
+      kind: 'flavor',
+      flavor_id: 'stealth',
+    })
+    expect(known.map((a) => a.ability_id)).toEqual(
+      expect.arrayContaining(['danger-sense', 'vanish']),
+    )
+    expect(known.map((a) => a.ability_id)).not.toContain('swipe')
+    expect(known.map((a) => a.ability_id)).not.toContain('quick-throw')
+    expect(result.character.pending_picks).toEqual([])
+  })
+
+  it('matches deriveCharacter exactly', () => {
+    const result = validateCharacterChoices(gained(swaps), withFlavor)
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    expect(result.character).toEqual(deriveCharacter(gained(swaps), withFlavor))
+  })
+
+  it('also widens the pool for the picks still to come', () => {
+    const pending: CharacterChoices = {
+      ...validChoices,
+      flavor_gain: { flavor_id: 'stealth', swaps: [] },
+      type_ability_picks: { '2': ['vanish', 'control-the-field'] },
+    }
+    const result = validateCharacterChoices(pending, withFlavor)
+    expect(result.valid).toBe(true)
+    if (!result.valid) return
+    expect(result.character.known_abilities.map((a) => a.ability_id)).toContain('vanish')
+  })
+
+  it('reports a bad exchange with a code, and still checks the rest of the build', () => {
+    const result = validateCharacterChoices(
+      gained([{ tier: 1, replaces: 'nope', with: 'danger-sense' }]),
+      withFlavor,
+    )
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues).toContainEqual({
+      code: 'FLAVOR_SWAP_REPLACES_INVALID',
+      params: { tier: 1, replaces: 'nope', with: 'danger-sense' },
+    })
+  })
+
+  it('refuses a flavor from creation and a gained one together', () => {
+    const result = validateCharacterChoices({ ...gained([]), flavor_id: 'stealth' }, withFlavor)
+    expect(result.valid).toBe(false)
+    if (result.valid) return
+    expect(result.issues.map((i) => i.code)).toContain('FLAVOR_GAIN_CONFLICT')
+  })
+})

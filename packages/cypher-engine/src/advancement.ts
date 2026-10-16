@@ -4,6 +4,13 @@
 export const ADVANCEMENT_COST_XP = 4
 
 /**
+ * The cost, in XP, of gaining a flavor in play (the book lists it as a
+ * long-term benefit or character advancement). A flavor granted by a
+ * character arc is free: the caller just doesn't charge.
+ */
+export const FLAVOR_GAIN_COST_XP = 4
+
+/**
  * Advancements needed to reach the next tier (up to tier 6). Each of the
  * standard advancements below can only be purchased once per tier, so a
  * character advancing by standard means alone takes all four exactly once.

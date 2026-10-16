@@ -13,6 +13,7 @@ import {
 import { deriveEdge, resolveStartingEdge } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFlavor, type FlavorContent } from './character/flavor.js'
+import { applyFlavorGain } from './character/flavor-gain.js'
 import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
 import { derivePoolMax } from './character/pool.js'
@@ -69,10 +70,13 @@ export interface CharacterContent {
  * client-submitted derived block.
  */
 export function deriveCharacter(
-  choices: CharacterChoices,
+  givenChoices: CharacterChoices,
   content: CharacterContent,
 ): DerivedCharacter {
   const { type, descriptor, focus } = content
+  // A flavor gained in play is applied up front: from here on it is just the
+  // character's flavor, with the exchanged picks already in place.
+  const choices = applyFlavorGain(givenChoices, content)
 
   const startingEdge = resolveStartingEdge(type, choices.starting_edge_choice)
   const tier = deriveTier(choices.advancement_purchases)
