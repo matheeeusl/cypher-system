@@ -8,6 +8,16 @@ export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL,
   secret: process.env.BETTER_AUTH_SECRET,
   database: pool,
+  // getSession() runs on every page; with the cookie cache it reads a signed
+  // copy of the session from a cookie instead of querying Postgres each time.
+  // The trade-off (per Better Auth's docs): a session revoked elsewhere stays
+  // usable on this device until the copy expires — at most `maxAge`.
+  session: {
+    cookieCache: {
+      enabled: true,
+      maxAge: 5 * 60,
+    },
+  },
   emailAndPassword: {
     enabled: true,
     requireEmailVerification: true,

@@ -5,7 +5,7 @@ import { Alert, CharacterSheet, LinkButton, type CharacterSheetData } from '@cyp
 import { AppShell } from '@/components/AppShell'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { PrintButton } from '@/components/PrintButton'
-import { getCharacter } from '@/lib/characters'
+import { getCharacter, type SavedCharacter } from '@/lib/characters'
 import { getPlayData, type PlayData } from '@/lib/play'
 import { buildCharacterSheet } from '@/lib/character-sheet'
 import { fetchContentVersions, isStale, type ContentVersions } from '@/lib/graphql/versions'
@@ -26,18 +26,19 @@ export default async function CharacterSheetPage({
   if (!session) redirect(`/${locale}/auth`)
 
   // Malformed ids make Postgres' uuid cast throw; treat them as "not found".
-  const character = /^[0-9a-f-]{36}$/i.test(id) ? await getCharacter(session.user.id, id) : null
+  // Both reads are scoped to the user, so they run together.
+  const [character, play]: [SavedCharacter | null, PlayData | null] = /^[0-9a-f-]{36}$/i.test(id)
+    ? await Promise.all([getCharacter(session.user.id, id), getPlayData(session.user.id, id)])
+    : [null, null]
   if (!character) notFound()
 
   const copy = sheetCopy[locale]
   const editHref = `/${locale}/characters/${character.id}/edit`
 
   let sheet: CharacterSheetData | null = null
-  let play: PlayData | null = null
   let versions: ContentVersions = new Map()
   let unavailable = false
   try {
-    play = await getPlayData(session.user.id, character.id)
     ;[sheet, versions] = await Promise.all([
       buildCharacterSheet(character, locale, play),
       fetchContentVersions(),

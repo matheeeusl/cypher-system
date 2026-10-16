@@ -130,25 +130,45 @@ async function lockPlay(client: PoolClient, characterId: string) {
   return rows[0]!
 }
 
+/**
+ * Read-only, so no transaction and no row lock: the three reads run in
+ * parallel (one database round trip instead of eight in a row), each scoped
+ * to the user through a join on `character`. A character whose play row
+ * hasn't been created yet (`lockPlay` creates it on the first write) reads as
+ * the defaults.
+ */
 export async function getPlayData(userId: string, characterId: string): Promise<PlayData | null> {
-  return tx(async (client) => {
-    if (!(await owns(client, userId, characterId))) return null
-    const play = await lockPlay(client, characterId)
-    const { rows } = await client.query<XpRow>(
-      'select id, kind, amount, reason, locked, created_at from character_xp_entry where character_id = $1 order by id',
-      [characterId],
-    )
-    const { rows: noteRows } = await client.query<NoteRow>(
-      'select id, body, created_at from character_note where character_id = $1 order by id',
-      [characterId],
-    )
-    return {
-      spent: { ...NO_SPENT, ...play.spent },
-      notes: noteRows.map(toNote),
-      inventory: play.inventory,
-      xp: rows.map(toXp),
-    }
-  })
+  const [play, xp, notes] = await Promise.all([
+    pool.query<{ spent: PoolPoints | null; inventory: InventoryItem[] | null }>(
+      `select p.spent, p.inventory
+         from character c left join character_play p on p.character_id = c.id
+        where c.id = $1 and c.user_id = $2`,
+      [characterId, userId],
+    ),
+    pool.query<XpRow>(
+      `select x.id, x.kind, x.amount, x.reason, x.locked, x.created_at
+         from character_xp_entry x join character c on c.id = x.character_id
+        where x.character_id = $1 and c.user_id = $2
+        order by x.id`,
+      [characterId, userId],
+    ),
+    pool.query<NoteRow>(
+      `select n.id, n.body, n.created_at
+         from character_note n join character c on c.id = n.character_id
+        where n.character_id = $1 and c.user_id = $2
+        order by n.id`,
+      [characterId, userId],
+    ),
+  ])
+  // No row: the character doesn't exist or isn't this user's.
+  const row = play.rows[0]
+  if (!row) return null
+  return {
+    spent: { ...NO_SPENT, ...row.spent },
+    notes: notes.rows.map(toNote),
+    inventory: row.inventory ?? [],
+    xp: xp.rows.map(toXp),
+  }
 }
 
 async function xpAvailable(client: PoolClient, characterId: string): Promise<number> {

@@ -1,4 +1,5 @@
 import { notFound, redirect } from 'next/navigation'
+import { after } from 'next/server'
 
 import { Alert } from '@cypher/ui'
 
@@ -6,12 +7,12 @@ import { AppShell } from '@/components/AppShell'
 import { UserMenu } from '@/components/auth/UserMenu'
 import { PlayScreen } from '@/components/play/PlayScreen'
 import { loadDerived } from '@/lib/character-derived'
-import { getCharacter } from '@/lib/characters'
+import { getCharacter, type SavedCharacter } from '@/lib/characters'
 import { isLocale } from '@/lib/i18n/auth'
 import { signOutLabel } from '@/lib/i18n/characters'
 import { playCopy } from '@/lib/i18n/play'
 import { sheetCopy } from '@/lib/i18n/sheet'
-import { getPlayData, setPoolMax } from '@/lib/play'
+import { getPlayData, setPoolMax, type PlayData } from '@/lib/play'
 import { buildPlayView, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
 
@@ -27,7 +28,11 @@ export default async function PlayPage({
   if (!session) redirect(`/${locale}/auth`)
 
   // Malformed ids make Postgres' uuid cast throw; treat them as "not found".
-  const character = /^[0-9a-f-]{36}$/i.test(id) ? await getCharacter(session.user.id, id) : null
+  // Both reads are scoped to the user, so they run together.
+  const userId = session.user.id
+  const [character, play]: [SavedCharacter | null, PlayData | null] = /^[0-9a-f-]{36}$/i.test(id)
+    ? await Promise.all([getCharacter(userId, id), getPlayData(userId, id)])
+    : [null, null]
   if (!character) notFound()
 
   const copy = playCopy[locale]
@@ -36,10 +41,7 @@ export default async function PlayPage({
   let view: PlayView | null = null
   let unavailable = false
   try {
-    const [bundle, play] = await Promise.all([
-      loadDerived(character),
-      getPlayData(session.user.id, id),
-    ])
+    const bundle = await loadDerived(character)
     if (bundle && play) {
       view = await buildPlayView(character, bundle, play, locale)
       // Keep the cached maximums (used by the Pool buttons) in step with the engine.
@@ -52,7 +54,13 @@ export default async function PlayPage({
         cached.speed !== max.speed ||
         cached.intellect !== max.intellect
       ) {
-        await setPoolMax(session.user.id, id, max)
+        // A cache refresh the page doesn't need for itself: write it after the
+        // response is sent instead of making the player wait on it.
+        after(() =>
+          setPoolMax(userId, id, max).catch((err: unknown) =>
+            console.error('[play] failed to cache pool maximums:', err),
+          ),
+        )
       }
     }
   } catch (err) {
