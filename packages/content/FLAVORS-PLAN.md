@@ -132,7 +132,7 @@ Everything above shipped in five commits (content, engine, API, docs, app). What
 | F2    | pt-BR review sheet: every name I chose, in one table to approve or correct; apply the corrections | medium | **needs you**     |
 | F3    | pt-BR "Flavor" term and the ten flavor descriptions; remove the placeholders                      | small  | **needs you**, F2 |
 | F4    | Learn two cantrips for 2 XP in play mode (PDF p. 441)                                             | medium | **done**          |
-| F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | decision on D1    |
+| F5    | Buy a flavor for 4 XP / gain a flavor in play (PDF p. 410)                                        | large  | **done**          |
 | F6    | Spell learning (3 XP, tier gates) and spell preparation / activation (PDF p. 440)                 | large  | decision on D2    |
 | F7    | Personalized flavors (GM-made lists)                                                              | —      | recommend: skip   |
 
@@ -165,7 +165,7 @@ The rule: "spend 2 XP to learn two cantrips (if they are available for you to le
 - Engine (`resolveLearnedOptions`, test first), GraphQL (`learnedOptions` input, `AbilityChoice.learn`), app (`LearnPanel` in the Status tab, `learnOptionsAction` / `revertLearnAction`, a locked XP spend and a refund on undo), docs (a "Learning more" line on the Cantrips page), e2e (`learn-play.spec.ts`).
 - Known gap: editing the character in the wizard so the learned cantrips become impossible (flavor changed) clears them but keeps the XP spent.
 
-### F5 — Gain a flavor in play (plan)
+### F5 — Gain a flavor in play (done)
 
 Decision (D1): modelled, with a short disclaimer to talk to the GM first.
 
