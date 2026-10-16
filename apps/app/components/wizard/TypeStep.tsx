@@ -60,7 +60,7 @@ export function TypeStep({
           <div className="text-text-muted mb-2 font-mono text-[11px] tracking-wide uppercase">
             {copy.type.startingEdge}
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {selected.startingEdge.statChoices.map((stat) => (
               <button
                 key={stat}

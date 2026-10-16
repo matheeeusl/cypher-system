@@ -106,7 +106,7 @@ export function PoolMeter({
           style={{ width: `${pct}%` }}
         />
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <MeterButton onClick={() => open('spend')}>{spendLabel} X</MeterButton>
         <div className="flex-1" />
         <MeterButton tone="accent" onClick={() => open('recover')}>

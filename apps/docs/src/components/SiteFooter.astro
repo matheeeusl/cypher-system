@@ -38,7 +38,7 @@ const year = new Date().getFullYear();
 		labels.pix ? (
 			<details class="pix relative">
 				<summary class="cursor-pointer list-none text-accent hover:underline">☕ {labels.pix.trigger}</summary>
-				<div class="absolute right-0 bottom-full z-10 mb-2 flex w-52 flex-col items-center gap-2 rounded-md border border-border bg-panel p-3">
+				<div class="absolute bottom-full left-0 z-10 mb-2 flex w-52 flex-col items-center gap-2 rounded-md border border-border bg-panel p-3">
 					<Image src={pixQr} alt="QR Code Pix" width={168} height={168} class="mb-1 rounded bg-white p-1" />
 					<a
 						href={KOFI_URL}

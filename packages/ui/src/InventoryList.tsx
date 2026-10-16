@@ -84,7 +84,7 @@ export function InventoryList({
           placeholder={labels.itemName}
           aria-label={labels.itemName}
           maxLength={80}
-          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent min-w-40 flex-1 rounded border px-3 py-2 text-[13px] outline-none"
+          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent w-full min-w-0 flex-1 rounded border px-3 py-2 text-[13px] outline-none sm:w-auto sm:min-w-40"
         />
         <input
           value={meta}
@@ -92,7 +92,7 @@ export function InventoryList({
           placeholder={labels.itemMeta}
           aria-label={labels.itemMeta}
           maxLength={80}
-          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent min-w-40 flex-1 rounded border px-3 py-2 font-mono text-xs outline-none"
+          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent w-full min-w-0 flex-1 rounded border px-3 py-2 font-mono text-xs outline-none sm:w-auto sm:min-w-40"
         />
         <button
           type="submit"

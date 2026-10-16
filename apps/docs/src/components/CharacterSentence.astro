@@ -38,7 +38,7 @@ const HREFS = {
 } as const satisfies Record<keyof typeof LABELS, string>;
 ---
 
-<p class="mb-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-1 font-display text-lg text-text">
+<p class="mb-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-1 font-display text-base text-text sm:text-lg">
 	<span>{lead}</span>
 	<a href={HREFS.descriptor} class={bracketClass('descriptor')}>[{LABELS.descriptor}]</a>
 	<a href={HREFS.type} class={bracketClass('type')}>[{LABELS.type}]</a>

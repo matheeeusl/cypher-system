@@ -39,7 +39,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 export function CharacterSheet({ sheet, labels, actions, printDate }: CharacterSheetProps) {
   return (
-    <div className="border-border bg-panel rounded-md border px-9 py-8 print:rounded-none print:border-0 print:p-0">
+    <div className="border-border bg-panel rounded-md border px-4 py-6 sm:px-9 sm:py-8 print:rounded-none print:border-0 print:p-0">
       <div className="mb-1.5 flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="font-display text-text mb-1 text-[30px] font-semibold">{sheet.name}</h1>
@@ -50,7 +50,7 @@ export function CharacterSheet({ sheet, labels, actions, printDate }: CharacterS
 
       <div className="bg-border mt-4.5 mb-5.5 h-px" />
 
-      <div className="mb-6 grid grid-cols-3 gap-3">
+      <div className="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
         {sheet.quickStats.map((stat) => (
           <div key={stat.label} className="border-border rounded border px-3.5 py-2.5">
             <div className="text-text-muted mb-1 font-mono text-[11px] tracking-wide uppercase">
@@ -67,7 +67,7 @@ export function CharacterSheet({ sheet, labels, actions, printDate }: CharacterS
           {sheet.pools.map((pool) => (
             <div
               key={pool.name}
-              className="border-border flex items-center justify-between border-b py-2.5 last:border-b-0"
+              className="border-border flex flex-wrap items-center justify-between gap-y-1 border-b py-2.5 last:border-b-0"
             >
               <span className="font-display text-text text-sm font-semibold">{pool.name}</span>
               <div className="flex items-center gap-4">

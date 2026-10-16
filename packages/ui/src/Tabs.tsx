@@ -39,7 +39,7 @@ export function Tabs({ items, value, onChange, variant = 'segmented' }: TabsProp
   }
 
   return (
-    <div role="tablist" className="border-border flex overflow-hidden rounded-md border">
+    <div role="tablist" className="border-border flex overflow-x-auto rounded-md border">
       {items.map((item, i) => {
         const active = item.value === value
         return (
@@ -49,7 +49,7 @@ export function Tabs({ items, value, onChange, variant = 'segmented' }: TabsProp
             role="tab"
             aria-selected={active}
             onClick={() => onChange(item.value)}
-            className={`flex-1 cursor-pointer px-2.5 py-2.5 font-mono text-xs transition-colors ${
+            className={`shrink-0 cursor-pointer px-3.5 py-2.5 font-mono text-xs whitespace-nowrap transition-colors sm:flex-1 ${
               i > 0 ? 'border-border border-l' : ''
             } ${active ? 'bg-accent-soft text-accent' : 'text-text-muted hover:text-text bg-transparent'}`}
           >

@@ -141,7 +141,7 @@ export function ReviewStep({
         {rows.map((row) => (
           <div
             key={row.key}
-            className="border-border flex items-start justify-between gap-4 border-b py-3 last:border-b-0"
+            className="border-border flex flex-col gap-2 border-b py-3 last:border-b-0 sm:flex-row sm:items-start sm:justify-between sm:gap-4"
           >
             <div>
               <div className="text-text-muted mb-0.5 font-mono text-[11px] tracking-wide uppercase">

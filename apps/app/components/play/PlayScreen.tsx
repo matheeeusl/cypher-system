@@ -967,7 +967,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
                 {historyShown.map((p) => (
                   <li
                     key={p.index}
-                    className="border-border bg-panel flex items-center justify-between gap-3 rounded border px-3.5 py-2"
+                    className="border-border bg-panel flex flex-col items-start gap-2 rounded border px-3.5 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
                   >
                     <span className="min-w-0 text-[13px]">
                       <span className="text-text-muted mr-2 font-mono text-[11px]">

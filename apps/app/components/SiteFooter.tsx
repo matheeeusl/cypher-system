@@ -17,7 +17,7 @@ export function SiteFooter({
 
   return (
     <footer
-      className={`border-border text-text-muted flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t px-7 py-3 font-mono text-[11px] print:hidden ${className}`}
+      className={`border-border text-text-muted flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t px-4 py-3 font-mono text-[11px] sm:px-7 print:hidden ${className}`}
     >
       <span>
         © {new Date().getFullYear()} {COPYRIGHT_HOLDER}. {labels.rights}

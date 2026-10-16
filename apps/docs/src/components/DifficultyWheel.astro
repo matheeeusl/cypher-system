@@ -14,6 +14,6 @@ interface Props {
 const { alt } = Astro.props;
 ---
 
-<figure class="not-content mx-auto my-6 w-fit rounded-lg bg-white p-3">
-	<Image src={wheel} alt={alt} width={360} class="block h-auto max-w-full" />
+<figure class="not-content mx-auto my-6 w-fit rounded-lg bg-white p-2 sm:p-3">
+	<Image src={wheel} alt={alt} width={360} class="block h-auto w-full max-w-full sm:w-[360px]" />
 </figure>

@@ -70,7 +70,7 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 	   their explicit 0/auto defaults — a no-op, identical to before. */
 }
 <div
-	class="flex h-full min-h-(--sl-nav-height,auto) items-center justify-between gap-4 border-b border-border bg-panel px-7 py-3.5"
+	class="flex h-full min-h-(--sl-nav-height,auto) items-center justify-between gap-4 border-b border-border bg-panel px-4 py-3.5 sm:px-7"
 	style="margin: calc(-1 * var(--sl-nav-pad-y, 0px)) calc(-1 * var(--sl-nav-pad-x, 0px));"
 >
 	<div class="flex items-center gap-3">
@@ -112,34 +112,81 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 		</span>
 	</div>
 
-	<div class="mx-4 max-w-[420px] flex-1"><slot name="search" /></div>
+	<div class="mx-2 max-w-[140px] flex-1 sm:mx-4 sm:max-w-[420px]"><slot name="search" /></div>
 
 	<div class="flex items-center gap-2">
-		{
-			locale && (
-				<div class="flex overflow-hidden rounded border border-border">
-					{URL_LOCALES.map((code, i) => (
-						<a
-							href={localeHref(code)}
-							aria-current={locale === code ? 'page' : undefined}
-							class:list={[
-								'px-2.5 py-1.5 font-mono text-[11px]',
-								i > 0 && 'border-l border-border',
-								locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
-							]}
-						>
-							{code === 'en' ? 'EN' : 'PT-BR'}
-						</a>
-					))}
-				</div>
-			)
-		}
-		<a
-			href={signInHref}
-			class="rounded border border-accent bg-accent-soft px-2.5 py-1.5 font-mono text-[11px] text-accent no-underline"
-		>
-			{signInLabel}
-		</a>
+		<div class="relative sm:hidden">
+			<button
+				id="mobile-nav-toggle"
+				type="button"
+				aria-label={menuLocale === 'pt-br' ? 'Abrir menu' : 'Open menu'}
+				aria-haspopup="menu"
+				aria-expanded="false"
+				aria-controls="mobile-nav-menu"
+				class="flex cursor-pointer items-center rounded border border-border bg-panel px-2.5 py-1.5 text-text-muted"
+			>
+				☰
+			</button>
+			<div
+				id="mobile-nav-menu"
+				role="menu"
+				hidden
+				class="absolute top-full right-0 z-10 mt-2 flex min-w-40 flex-col gap-2 rounded border border-border bg-panel p-2 shadow-lg"
+			>
+				{
+					locale && (
+						<div class="flex overflow-hidden rounded border border-border">
+							{URL_LOCALES.map((code, i) => (
+								<a
+									href={localeHref(code)}
+									aria-current={locale === code ? 'page' : undefined}
+									class:list={[
+										'flex-1 px-2.5 py-1.5 text-center font-mono text-[11px]',
+										i > 0 && 'border-l border-border',
+										locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
+									]}
+								>
+									{code === 'en' ? 'EN' : 'PT-BR'}
+								</a>
+							))}
+						</div>
+					)
+				}
+				<a
+					href={signInHref}
+					class="rounded border border-accent bg-accent-soft px-2.5 py-1.5 text-center font-mono text-[11px] text-accent no-underline"
+				>
+					{signInLabel}
+				</a>
+			</div>
+		</div>
+		<div class="hidden items-center gap-2 sm:flex">
+			{
+				locale && (
+					<div class="flex overflow-hidden rounded border border-border">
+						{URL_LOCALES.map((code, i) => (
+							<a
+								href={localeHref(code)}
+								aria-current={locale === code ? 'page' : undefined}
+								class:list={[
+									'px-2.5 py-1.5 font-mono text-[11px]',
+									i > 0 && 'border-l border-border',
+									locale === code ? 'bg-accent-soft text-accent' : 'text-text-muted',
+								]}
+							>
+								{code === 'en' ? 'EN' : 'PT-BR'}
+							</a>
+						))}
+					</div>
+				)
+			}
+			<a
+				href={signInHref}
+				class="rounded border border-accent bg-accent-soft px-2.5 py-1.5 font-mono text-[11px] text-accent no-underline"
+			>
+				{signInLabel}
+			</a>
+		</div>
 		<button
 			id="mode-toggle"
 			type="button"
@@ -228,6 +275,28 @@ const localeHref = (target: UrlLocale) => currentPath.replace(/^\/(en|pt-br)\//,
 		}
 		button.addEventListener('click', () => setOpen(menu.hidden));
 		// Close on a click outside the menu, or on Escape (focus returns to the button).
+		document.addEventListener('mousedown', (event) => {
+			if (!menu.hidden && !menu.contains(event.target) && event.target !== button) setOpen(false);
+		});
+		document.addEventListener('keydown', (event) => {
+			if (event.key !== 'Escape' || menu.hidden) return;
+			setOpen(false);
+			button.focus();
+		});
+	}
+</script>
+<script is:inline>
+	{
+		// Same open/close/outside-click/Escape pattern as the brand menu above,
+		// for the mobile-only dropdown holding the locale toggle + sign-in link.
+		const button = document.getElementById('mobile-nav-toggle');
+		const menu = document.getElementById('mobile-nav-menu');
+
+		function setOpen(open) {
+			menu.hidden = !open;
+			button.setAttribute('aria-expanded', String(open));
+		}
+		button.addEventListener('click', () => setOpen(menu.hidden));
 		document.addEventListener('mousedown', (event) => {
 			if (!menu.hidden && !menu.contains(event.target) && event.target !== button) setOpen(false);
 		});

@@ -84,7 +84,7 @@ export function XpLog({
           placeholder={labels.reasonPlaceholder}
           aria-label={labels.reasonPlaceholder}
           maxLength={200}
-          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent min-w-50 flex-1 rounded border px-3 py-2 text-[13px] outline-none"
+          className="border-border bg-panel text-text placeholder:text-text-muted focus:border-accent w-full min-w-0 flex-1 rounded border px-3 py-2 text-[13px] outline-none sm:w-auto sm:min-w-50"
         />
         <input
           value={amount}

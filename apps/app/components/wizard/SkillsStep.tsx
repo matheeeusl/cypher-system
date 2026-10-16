@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import type { WizardDescriptor, WizardSkill } from '@/lib/graphql/queries'
 
 import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
@@ -24,6 +26,8 @@ export function SkillsStep({
   onToggle,
 }: SkillsStepProps) {
   const { copy, t } = useWizardI18n()
+  // The fixed skill whose description is open (same toggle as play mode's Skills tab).
+  const [openSkillId, setOpenSkillId] = useState<string | null>(null)
   if (!descriptor) {
     return <p className="text-text-muted text-sm">{copy.chooseDescriptorFirst}</p>
   }
@@ -52,15 +56,37 @@ export function SkillsStep({
             {copy.skills.autoTrained(t(descriptor.name))}
           </div>
           <div className="flex flex-wrap gap-2">
-            {autoTrainedIds.map((id) => (
-              <span
-                key={id}
-                className="border-accent bg-accent-soft text-accent rounded border px-3 py-1 font-mono text-[12px]"
-              >
-                {skillName(id)}
-              </span>
-            ))}
+            {autoTrainedIds.map((id) => {
+              const open = openSkillId === id
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  aria-expanded={open}
+                  onClick={() => setOpenSkillId(open ? null : id)}
+                  className={`border-accent text-accent cursor-pointer rounded border px-3 py-1 font-mono text-[12px] transition-colors hover:opacity-80 ${
+                    open ? 'bg-accent-soft ring-accent ring-1' : 'bg-accent-soft'
+                  }`}
+                >
+                  {skillName(id)}
+                </button>
+              )
+            })}
           </div>
+          {(() => {
+            const skill = skills.find((s) => s.id === openSkillId)
+            if (!skill) return null
+            return (
+              <div className="border-border bg-panel mt-3 rounded border px-3.5 py-3">
+                <div className="font-display text-text mb-1 text-sm font-semibold">
+                  {t(skill.name)}
+                </div>
+                <p className="text-text-muted text-[13px] leading-relaxed">
+                  {t(skill.description)}
+                </p>
+              </div>
+            )
+          })()}
         </div>
       )}
 

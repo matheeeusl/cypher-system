@@ -90,7 +90,7 @@ export function CypherPicker({
               }}
               placeholder={labels.search}
               aria-label={labels.search}
-              className="border-border bg-bg text-text placeholder:text-text-muted focus:border-accent min-w-45 flex-1 rounded border px-3 py-2 font-mono text-[13px] outline-none"
+              className="border-border bg-bg text-text placeholder:text-text-muted focus:border-accent w-full min-w-0 flex-1 rounded border px-3 py-2 font-mono text-[13px] outline-none sm:w-auto sm:min-w-45"
             />
             <span className="text-text-muted font-mono text-[11px] whitespace-nowrap">
               {labels.shown(rows.length)}

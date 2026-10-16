@@ -1,26 +1,37 @@
 import type { ValidationResult } from '@/lib/graphql/queries'
 
+import { issueStepId } from './derive'
 import { ErrorBanner } from './ErrorBanner'
 import { useWizardI18n } from './i18n'
+import { STEPS } from './state'
 
 interface ValidationSummaryProps {
   validation: ValidationResult | null
   validating: boolean
+  /** Only issues fixed on this step or an earlier one are shown. */
+  stepIndex: number
 }
 
-export function ValidationSummary({ validation, validating }: ValidationSummaryProps) {
+export function ValidationSummary({ validation, validating, stepIndex }: ValidationSummaryProps) {
   const { copy, terms } = useWizardI18n()
   if (!validation) return null
 
   if (validation.__typename === 'InvalidCharacterResult') {
+    const messages = validation.errors.flatMap((english, i) => {
+      const issue = validation.issues[i]
+      // Hide issues belonging to a step the player hasn't reached yet.
+      if (issue && STEPS.findIndex((s) => s.id === issueStepId(issue.code)) > stepIndex) {
+        return []
+      }
+      // Localize from the engine's code + params; fall back to its English sentence.
+      return [(issue && copy.issue(issue)) ?? english]
+    })
+    if (messages.length === 0) return null
     return (
       <div className="mt-4 flex flex-col gap-2">
-        {validation.errors.map((english, i) => {
-          // Localize from the engine's code + params; fall back to its English sentence.
-          const issue = validation.issues[i]
-          const message = (issue && copy.issue(issue)) ?? english
-          return <ErrorBanner key={`${i}-${message}`} message={message} />
-        })}
+        {messages.map((message, i) => (
+          <ErrorBanner key={`${i}-${message}`} message={message} />
+        ))}
       </div>
     )
   }

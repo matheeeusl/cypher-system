@@ -14,6 +14,7 @@ import { EMPTY_PICKS, flavorIdInUse, type TierPicks } from '@/lib/tier-picks'
 
 import {
   POOL_POINTS_TOTAL,
+  STEPS,
   TIER1_TYPE_ABILITY_COUNT,
   type StepId,
   type WizardChoices,
@@ -244,6 +245,39 @@ export function isStepValid(
     case 'review':
       return true
   }
+}
+
+/**
+ * Index of the furthest step the player may open: the first step that isn't
+ * complete yet (it can be opened so it can be filled in), or the last step
+ * when every one is complete. Steps after it stay locked in the stepper.
+ * Steps that need nothing (Equipment) are always complete, so they never lock.
+ */
+export function furthestReachableStep(choices: WizardChoices, content: WizardContent): number {
+  const firstIncomplete = STEPS.findIndex((s) => !isStepValid(s.id, choices, content))
+  return firstIncomplete === -1 ? STEPS.length - 1 : firstIncomplete
+}
+
+/**
+ * The wizard step where the player fixes an engine validation issue, from its
+ * code. The live validation checks the whole character at once, so without
+ * this a player on the Focus step would already see errors about Pools or
+ * abilities they haven't reached. Unknown codes go to Review, the last step.
+ */
+export function issueStepId(code: string): StepId {
+  if (code.startsWith('STARTING_EDGE_')) return 'type'
+  if (code.startsWith('POOL_')) return 'pools'
+  if (code.startsWith('SKILL_')) return 'skills'
+  if (
+    code.startsWith('FOCUS_') ||
+    code.startsWith('TYPE_ABILITY_') ||
+    code.startsWith('ABILITY_') ||
+    code === 'FLAVOR_UNKNOWN'
+  ) {
+    // Focus choices, flavors and ability picks are all made on the Abilities step.
+    return 'abilities'
+  }
+  return 'review'
 }
 
 function choiceSlotsComplete(choices: WizardChoices, content: WizardContent): boolean {

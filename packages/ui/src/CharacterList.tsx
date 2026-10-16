@@ -41,7 +41,7 @@ export function CharacterList({
       </div>
 
       {isEmpty ? (
-        <div className="border-border rounded-md border border-dashed px-8 py-16 text-center">
+        <div className="border-border rounded-md border border-dashed px-4 py-10 text-center sm:px-8 sm:py-16">
           <span className="bg-accent mx-auto mb-4.5 block size-2.5 rounded-full" />
           <h2 className="font-display text-text mb-2 text-[19px] font-semibold">
             {labels.emptyTitle}

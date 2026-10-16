@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import { DocsLink } from '@/components/DocsLink'
 import { docsLinks } from '@/lib/docs-links'
@@ -76,6 +78,8 @@ export function AbilitiesStep({
   onToggleAbilitySkill,
 }: AbilitiesStepProps) {
   const { copy, terms, t, locale } = useWizardI18n()
+  // The Focus-granted ability whose description is open (same toggle as play mode).
+  const [openGrantedId, setOpenGrantedId] = useState<string | null>(null)
   if (!type) return <p className="text-text-muted text-sm">{copy.chooseTypeFirst}</p>
   if (loading) {
     return <p className="text-text-muted text-sm">{copy.loading(copy.entities.abilities)}</p>
@@ -215,15 +219,44 @@ export function AbilitiesStep({
             {copy.abilities.grantedByFocus}
           </div>
           <div className="flex flex-wrap gap-2">
-            {grantedFocusIds.map((id) => (
-              <span
-                key={id}
-                className="border-accent bg-accent-soft text-accent rounded border px-3 py-1 font-mono text-[12px]"
-              >
-                {abilityName(id)}
-              </span>
-            ))}
+            {grantedFocusIds.map((id) => {
+              const open = openGrantedId === id
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  aria-expanded={open}
+                  onClick={() => setOpenGrantedId(open ? null : id)}
+                  className={`border-accent bg-accent-soft text-accent cursor-pointer rounded border px-3 py-1 font-mono text-[12px] transition-colors hover:opacity-80 ${
+                    open ? 'ring-accent ring-1' : ''
+                  }`}
+                >
+                  {abilityName(id)}
+                </button>
+              )
+            })}
           </div>
+          {(() => {
+            const ability = openGrantedId ? abilityById(openGrantedId) : undefined
+            if (!ability) return null
+            return (
+              <div className="border-border bg-panel mt-3 rounded border px-3.5 py-3">
+                <div className="mb-1 flex flex-wrap items-baseline gap-x-2">
+                  <span className="font-display text-text text-sm font-semibold">
+                    {t(ability.name)}
+                  </span>
+                  {ability.cost && (
+                    <span className="text-accent font-mono text-[11px]">
+                      {terms.cost(ability.cost.amount, ability.cost.pool)}
+                    </span>
+                  )}
+                </div>
+                <p className="text-text-muted text-[13px] leading-relaxed">
+                  {t(ability.description)}
+                </p>
+              </div>
+            )
+          })()}
         </div>
       )}
 
