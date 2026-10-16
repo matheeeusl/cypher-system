@@ -111,19 +111,22 @@ for (const locale of ['en', 'pt-br'] as const) {
     // The fill-in-the-blank sentence reflects all three picks
     await expect(page.getByText(t.sentence)).toBeVisible()
 
-    // Live validation kicks in as soon as Type/Descriptor/Focus are all set —
-    // Pools/Abilities aren't finished yet, so it surfaces a real engine error
-    // (localized from the engine's error code) rather than numbers.
-    await expect(page.getByText(t.poolsMustSum)).toBeVisible()
+    // Live validation runs as soon as Type/Descriptor/Focus are all set, but an
+    // issue only shows on the step that fixes it (issueStepId in derive.ts) —
+    // so the unallocated Pools aren't flagged here on Focus yet.
+    await expect(page.getByText(t.poolsMustSum)).toBeHidden()
     await page.getByRole('button', { name: t.next }).click()
 
-    // Pools — allocate all 6 points
+    // Pools — here it surfaces as a real engine error (localized from the
+    // engine's error code), until all 6 points are allocated
     await expect(page.getByRole('heading', { name: t.poolsTitle })).toBeVisible()
+    await expect(page.getByText(t.poolsMustSum)).toBeVisible()
     const plusButtons = page.locator('button:has-text("+")')
     for (let i = 0; i < 2; i++) await plusButtons.nth(0).click()
     for (let i = 0; i < 2; i++) await plusButtons.nth(1).click()
     for (let i = 0; i < 2; i++) await plusButtons.nth(2).click()
     await expect(page.getByText(t.pointsRemaining)).toBeVisible()
+    await expect(page.getByText(t.poolsMustSum)).toBeHidden()
     await page.getByRole('button', { name: t.next }).click()
 
     // Skills — Brash auto-trains Initiative and offers no further choices
