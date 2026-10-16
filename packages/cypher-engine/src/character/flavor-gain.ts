@@ -42,6 +42,13 @@ const ERRORS = {
  * picked later. Throws on a violation. The number of exchanges is not limited:
  * it is the GM's call.
  */
+/** The choices without the `flavor_gain` key. */
+export function withoutFlavorGain<C extends GainInput>(choices: C): C {
+  const rest = { ...choices }
+  delete rest.flavor_gain
+  return rest
+}
+
 export function applyFlavorGain<C extends GainInput>(
   choices: C,
   content: {
@@ -136,10 +143,9 @@ export function applyFlavorGain<C extends GainInput>(
     }
   }
 
-  const { flavor_gain: _gain, ...rest } = choices
   const { '1': tierOne = [], ...later } = picks
   return {
-    ...rest,
+    ...withoutFlavorGain(choices),
     flavor_id: gain.flavor_id,
     tier_1_type_ability_ids: tierOne,
     ...(choices.type_ability_picks ? { type_ability_picks: later } : {}),
