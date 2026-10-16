@@ -28,6 +28,7 @@ export default async function EditCharacterPage({
       locale={locale}
       characterId={character.id}
       initialChoices={character.choices}
+      gainedFlavorId={character.tierPicks.flavorGain?.flavorId ?? null}
     />
   )
 }

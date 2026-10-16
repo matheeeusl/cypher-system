@@ -29,11 +29,13 @@ import {
   adjustPoolAction,
   changeItemQtyAction,
   choosePicksAction,
+  gainFlavorAction,
   learnOptionsAction,
   purchaseAdvancementAction,
   removeItemAction,
   removeXpAction,
   revertAdvancementAction,
+  revertFlavorGainAction,
   revertLearnAction,
   addNoteAction,
   removeNoteAction,
@@ -56,6 +58,7 @@ import { describeItem } from '@/lib/inventory-display'
 import type { InventoryItem, PoolKey, PoolPoints } from '@/lib/play'
 import type { PlayView } from '@/lib/play-view'
 
+import { FlavorGainPanel } from './FlavorGainPanel'
 import { LearnPanel } from './LearnPanel'
 
 type TabKey = 'status' | 'skills' | 'inventory' | 'log' | 'notes'
@@ -104,6 +107,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     advancement?: string
     picks?: string
     learn?: string
+    flavor?: string
     xp?: string
     notes?: string
     inventory?: string
@@ -413,6 +417,49 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const undoLearn = (purchase: number) =>
     void runLearn(() => revertLearnAction(view.characterId, purchase, locale))
 
+  // ---- a flavor gained in play ----------------------------------------------
+
+  async function runFlavorGain(job: () => ReturnType<typeof gainFlavorAction>): Promise<boolean> {
+    setBusy(true)
+    setError('flavor')
+    const e = copy.flavorGain.errors
+    try {
+      const res = await enqueue(job)
+      if (res.ok) {
+        if (res.view) {
+          setView(res.view)
+          setXp(res.view.xp)
+        } else {
+          router.refresh()
+        }
+        setBusy(false)
+        return true
+      }
+      setError(
+        'flavor',
+        res.reason === 'insufficient'
+          ? e.insufficient
+          : res.reason === 'conflict'
+            ? e.conflict
+            : res.reason === 'not_revertable'
+              ? e.notRevertable
+              : e.generic,
+      )
+    } catch {
+      setError('flavor', e.generic)
+    }
+    setBusy(false)
+    return false
+  }
+
+  const gainFlavor = (
+    flavorId: string,
+    swaps: Array<{ tier: number; replaces: string; with: string }>,
+    free: boolean,
+  ) => runFlavorGain(() => gainFlavorAction(view.characterId, flavorId, swaps, free, locale))
+  const undoFlavorGain = () =>
+    void runFlavorGain(() => revertFlavorGainAction(view.characterId, locale))
+
   // The advancement history, newest first, paged like the XP log.
   const historyAll = [...view.purchases].reverse()
   const historyPages = Math.max(1, Math.ceil(historyAll.length / PAGE_SIZE))
@@ -661,6 +708,18 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
             onDismissTierUp={() => setTierUp(null)}
             errorMessage={errors.advancement}
           />
+
+          {view.flavorGain && (
+            <FlavorGainPanel
+              gain={view.flavorGain}
+              copy={copy}
+              xpTotal={xpTotal}
+              busy={busy}
+              errorMessage={errors.flavor}
+              onGain={gainFlavor}
+              onUndo={undoFlavorGain}
+            />
+          )}
 
           {view.learn && (
             <LearnPanel

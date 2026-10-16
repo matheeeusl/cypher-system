@@ -10,7 +10,7 @@ import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import { sheetAbilities, sheetSkills } from '@/lib/character-sheet'
 import type { DerivedBundle } from '@/lib/character-derived'
 import type { SavedCharacter } from '@/lib/characters'
-import { fetchAdvancementRules, type SkillLevel } from '@/lib/graphql/queries'
+import { fetchAdvancementRules, fetchFlavors, type SkillLevel } from '@/lib/graphql/queries'
 import type { Locale } from '@/lib/i18n/auth'
 import { loc } from '@/lib/i18n/localized'
 import type { AdvancementKey } from '@/lib/i18n/play'
@@ -46,6 +46,30 @@ export interface LearnView {
   purchases: Array<{ index: number; names: string[] }>
 }
 
+/** Gaining a flavor in play: what is on offer, or what was gained. Null when the flavor came with creation. */
+export interface FlavorGainView {
+  /** XP the purchase costs (a GM may grant it for free instead). */
+  costXp: number
+  gained: {
+    name: string
+    /** XP that was paid, refunded on undo. */
+    paidXp: number
+    swaps: Array<{ tier: number; replaces: string; with: string }>
+  } | null
+  /** Present while the character has no flavor. */
+  offer: {
+    /** Type abilities that can be given up: picked, untrained, with no picks of their own. */
+    picks: Array<{ tier: number; id: string; name: string }>
+    flavors: Array<{
+      id: string
+      name: string
+      description: string
+      /** Flavor abilities the Type doesn't offer and the character doesn't have. */
+      abilities: Array<{ id: string; name: string; description: string; tier: number }>
+    }>
+  } | null
+}
+
 /** Everything the play screen needs, already localized and JSON-serializable. */
 export interface PlayView {
   characterId: string
@@ -79,6 +103,7 @@ export interface PlayView {
   abilityOptions: Array<{ id: string; name: string; trained: boolean }>
   /** Null when the character's flavor offers nothing to learn. */
   learn: LearnView | null
+  flavorGain: FlavorGainView | null
   /** Level-up choices still owed (new tier's Type abilities, a Focus choice). */
   pending: PendingChoice[]
   xp: Array<{ id: number; kind: 'gain' | 'spend'; amount: number; reason: string; locked: boolean }>
@@ -159,6 +184,7 @@ export async function buildPlayView(
         : []
     }),
     learn: learnView(bundle, character, locale),
+    flavorGain: await flavorGainView(bundle, character, rules.flavorCostXp, locale),
     pending: pendingChoices(bundle, character, locale),
     xp: play.xp.map(({ id, kind, amount, reason, locked }) => ({
       id,
@@ -174,6 +200,95 @@ export async function buildPlayView(
       body: n.body,
       createdAt: n.createdAt.toISOString(),
     })),
+  }
+}
+
+/**
+ * Type abilities picked so far that can be exchanged for a flavor's: those the
+ * Type itself offers (a flavor one can't be given up), that no Skills advancement
+ * trained, and that carry no picks of their own (their answers would be left
+ * with nothing to belong to).
+ */
+export function swappablePicks(bundle: DerivedBundle, character: SavedCharacter) {
+  const offeredByType = new Set(bundle.type.tierAbilities.flatMap((group) => group.abilityIds))
+  const trained = new Set(
+    bundle.derived.knownAbilities.filter((k) => k.trained).map((k) => k.abilityId),
+  )
+  const picked = [
+    ...character.choices.tier1TypeAbilityIds.map((id) => ({ tier: 1, id })),
+    ...Object.entries(character.tierPicks.type)
+      .filter(([tier]) => Number(tier) <= bundle.derived.tier)
+      .flatMap(([tier, ids]) => ids.map((id) => ({ tier: Number(tier), id }))),
+  ]
+  return picked.filter(({ id }) => {
+    const ability = bundle.abilities.find((a) => a.id === id)
+    return (
+      !!ability &&
+      offeredByType.has(id) &&
+      !trained.has(id) &&
+      !ability.skillGrant &&
+      !ability.choice
+    )
+  })
+}
+
+async function flavorGainView(
+  bundle: DerivedBundle,
+  character: SavedCharacter,
+  costXp: number,
+  locale: Locale,
+): Promise<FlavorGainView | null> {
+  const gain = character.tierPicks.flavorGain
+  const abilityOf = (id: string) => bundle.abilities.find((a) => a.id === id)
+  const nameOf = (id: string) => {
+    const a = abilityOf(id)
+    return a ? loc(a.name, locale) : id
+  }
+  if (gain) {
+    return {
+      costXp,
+      gained: {
+        name: bundle.flavor ? loc(bundle.flavor.name, locale) : gain.flavorId,
+        paidXp: gain.costXp,
+        swaps: gain.swaps.map((swap) => ({
+          tier: swap.tier,
+          replaces: nameOf(swap.replaces),
+          with: nameOf(swap.with),
+        })),
+      },
+      offer: null,
+    }
+  }
+  // A flavor chosen at creation: nothing to gain.
+  if (character.choices.flavorId !== null) return null
+
+  const offeredByType = new Set(bundle.type.tierAbilities.flatMap((group) => group.abilityIds))
+  const known = new Set(bundle.derived.knownAbilities.map((k) => k.abilityId))
+  const flavors = await fetchFlavors()
+  return {
+    costXp,
+    gained: null,
+    offer: {
+      picks: swappablePicks(bundle, character).map(({ tier, id }) => ({
+        tier,
+        id,
+        name: nameOf(id),
+      })),
+      flavors: flavors.map((flavor) => ({
+        id: flavor.id,
+        name: loc(flavor.name, locale),
+        description: loc(flavor.description, locale) || loc(flavor.description, 'en'),
+        abilities: flavor.tierAbilities
+          .flatMap((group) => group.abilityIds.map((id) => ({ id, tier: group.tier })))
+          .filter(({ id }) => !offeredByType.has(id) && !known.has(id))
+          .map(({ id, tier }) => ({
+            id,
+            tier,
+            name: nameOf(id),
+            description: loc(abilityOf(id)?.description ?? { en: '', ptBR: '' }, locale),
+          })),
+      })),
+    },
   }
 }
 

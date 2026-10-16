@@ -79,6 +79,9 @@ export interface WizardCopy {
       /** Badge on an ability that comes from the chosen flavor. */
       badge: string
       loading: string
+      /** Shown instead of the selector for a flavor gained in play. */
+      gained: (flavorName: string) => string
+      gainedNote: string
     }
     focusChoice: (pick: number, count: number, needed: number) => string
     /** Heading of the picker under an ability that asks for other abilities. */
@@ -234,6 +237,9 @@ const en: WizardCopy = {
       none: 'None',
       badge: 'Flavor',
       loading: 'Loading flavors…',
+      gained: (flavorName) => `Gained in play: ${flavorName}`,
+      gainedNote:
+        'You gained this flavor in play, so it can’t be changed here. Changing a Type ability you exchanged for it removes the flavor, and its XP is not refunded. Undo it from play mode instead.',
     },
     focusChoice: (pick, count, needed) =>
       `Focus choice — pick ${pick} (${count} / ${needed} selected)`,
@@ -469,6 +475,9 @@ const ptBr: WizardCopy = {
       none: 'Nenhum',
       badge: 'Flavor',
       loading: 'Carregando flavors…',
+      gained: (flavorName) => `Ganho em jogo: ${flavorName}`,
+      gainedNote:
+        'Você ganhou este flavor em jogo, então ele não pode ser trocado aqui. Mudar uma habilidade de Tipo que você trocou por ele remove o flavor, e o XP não é devolvido. Desfaça pelo modo de jogo.',
     },
     focusChoice: (pick, count, needed) =>
       `Escolha do Foco — escolha ${pick} (${count} / ${needed} selecionadas)`,

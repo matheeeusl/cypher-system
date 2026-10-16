@@ -27,6 +27,8 @@ interface AbilitiesStepProps {
   flavors: WizardFlavor[] | null
   flavorError: string | null
   selectedFlavorId: string | null
+  /** A flavor gained in play: shown instead of the selector, which stays locked. */
+  gainedFlavorId: string | null
   onSelectFlavor: (flavorId: string | null) => void
   abilities: WizardAbility[] | null
   loading: boolean
@@ -55,6 +57,7 @@ export function AbilitiesStep({
   flavors,
   flavorError,
   selectedFlavorId,
+  gainedFlavorId,
   onSelectFlavor,
   abilities,
   loading,
@@ -101,7 +104,21 @@ export function AbilitiesStep({
         <p className="text-text-muted mb-3 text-[12px] leading-relaxed">
           {copy.abilities.flavor.hint}
         </p>
-        {flavorError ? (
+        {gainedFlavorId ? (
+          <>
+            <p className="text-text font-mono text-[12px]">
+              {copy.abilities.flavor.gained(
+                (() => {
+                  const gained = flavors?.find((f) => f.id === gainedFlavorId)
+                  return gained ? t(gained.name) : gainedFlavorId
+                })(),
+              )}
+            </p>
+            <p className="text-text-muted mt-1 text-[12px] leading-relaxed">
+              {copy.abilities.flavor.gainedNote}
+            </p>
+          </>
+        ) : flavorError ? (
           <p className="text-warning text-[12px]">
             {copy.loadFailed(copy.abilities.flavor.heading, flavorError)}
           </p>

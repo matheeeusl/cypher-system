@@ -50,7 +50,7 @@ import {
   type PoolKey,
   type PoolPoints,
 } from '@/lib/play'
-import { buildPlayView, learnableAbility, type PlayView } from '@/lib/play-view'
+import { buildPlayView, learnableAbility, swappablePicks, type PlayView } from '@/lib/play-view'
 import { getSession } from '@/lib/session'
 import { customSkillText, isCustomSkill, isSkillIdShape } from '@/lib/custom-skill'
 import {
@@ -912,6 +912,11 @@ export async function gainFlavorAction(
     }
     const flavor = flavors.find((f) => f.id === flavorId)
     if (!flavor) return { ok: false, reason: 'invalid' }
+    // Only Type abilities that can really be given up (see swappablePicks).
+    const allowed = swappablePicks(bundle, character)
+    if (!exchanges.every((x) => allowed.some((p) => p.tier === x.tier && p.id === x.replaces))) {
+      return { ok: false, reason: 'invalid' }
+    }
 
     const picks = withFlavorGain(character.tierPicks, {
       flavorId,

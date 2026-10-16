@@ -1,4 +1,5 @@
 import type { Locale } from '@/lib/i18n/auth'
+import { terms } from '@/lib/i18n/terms'
 
 // Game terms: lib/i18n/terms.ts for ones shared with the wizard/sheet. Damage
 // track names and effects follow apps/docs' recovery-and-healing chapter (the
@@ -76,8 +77,32 @@ export interface PlayCopy {
   }
   /** Gaining a flavor in play. */
   flavorGain: {
-    /** The XP-log line of the purchase (`free`: a character arc granted it). */
+    /** The XP-log line of the purchase. */
     reason: (flavorName: string) => string
+    title: string
+    gainedTitle: (flavorName: string) => string
+    description: (xp: number) => string
+    disclaimer: string
+    open: string
+    choose: string
+    exchanges: string
+    exchangesHint: string
+    giveUp: string
+    take: string
+    pickOne: string
+    tier: (tier: number) => string
+    addExchange: string
+    removeExchange: string
+    /** Checkbox: the GM granted the flavor (a character arc), so it costs no XP. */
+    free: string
+    confirm: (xp: number, free: boolean) => string
+    needs: (xp: number) => string
+    swap: (replaces: string, taken: string, tier: number) => string
+    noExchanges: string
+    undo: (paidXp: number) => string
+    /** Note under the flavor selector that no exchange is available. */
+    nothingToExchange: string
+    errors: { insufficient: string; conflict: string; notRevertable: string; generic: string }
   }
   /** Buying more options of a choice ability for XP (Cantrips). */
   learn: {
@@ -264,6 +289,36 @@ const en: PlayCopy = {
   },
   flavorGain: {
     reason: (flavorName) => `Gained the ${flavorName} flavor`,
+    title: 'Gain a flavor',
+    gainedTitle: (flavorName) => `Flavor gained in play: ${flavorName}`,
+    description: (xp) =>
+      `A flavor lets you exchange Type abilities you picked for abilities from its list. It costs ${xp} XP, or nothing if a character arc earned it.`,
+    disclaimer:
+      'Talk to your GM first: they decide whether it fits the game and how many exchanges to allow (more, if you gain it after tier 2). An exchange is permanent.',
+    open: 'Gain a flavor…',
+    choose: 'Choose a flavor',
+    exchanges: 'Exchanges',
+    exchangesHint:
+      'Give up a Type ability you picked for one from the flavor, of the same tier or lower. You can also add none.',
+    giveUp: 'Give up',
+    take: 'Take instead',
+    pickOne: 'Choose…',
+    tier: (tier) => `Tier ${tier}`,
+    addExchange: 'Add an exchange',
+    removeExchange: 'Remove',
+    free: 'My GM granted it (character arc) — no XP',
+    confirm: (xp, free) => (free ? 'Gain flavor (granted)' : `Gain flavor (${xp} XP)`),
+    needs: (xp) => `Needs ${xp} XP`,
+    swap: (replaces, taken, tier) => `${replaces} → ${taken} (tier ${tier})`,
+    noExchanges: 'No exchanges: the flavor only adds to your future choices.',
+    undo: (paidXp) => (paidXp > 0 ? `Undo (refunds ${paidXp} XP)` : 'Undo'),
+    nothingToExchange: 'None of your Type abilities can be exchanged right now.',
+    errors: {
+      insufficient: 'Not enough XP.',
+      conflict: 'The character changed in another tab. Reload and try again.',
+      notRevertable: 'This can’t be undone now: later choices depend on the flavor.',
+      generic: 'Could not save this. Try again.',
+    },
   },
   learn: {
     title: (abilityName) => `Learn more — ${abilityName}`,
@@ -473,7 +528,36 @@ const ptBr: PlayCopy = {
     error: 'Não foi possível salvar essas escolhas. Recarregue a página e tente de novo.',
   },
   flavorGain: {
-    reason: (flavorName) => `Ganhou o Flavor ${flavorName}`,
+    reason: (flavorName) => `Ganhou o ${terms['pt-br'].flavor} ${flavorName}`,
+    title: `Ganhar um ${terms['pt-br'].flavor}`,
+    gainedTitle: (flavorName) => `${terms['pt-br'].flavor} ganho em jogo: ${flavorName}`,
+    description: (xp) =>
+      `Um ${terms['pt-br'].flavor} permite trocar habilidades de Tipo que você escolheu por habilidades da lista dele. Custa ${xp} XP, ou nada se um arco do personagem o concedeu.`,
+    disclaimer:
+      'Converse antes com o Mestre: ele decide se combina com o jogo e quantas trocas permitir (mais, se você o ganhar depois do Grau 2). Uma troca é permanente.',
+    open: `Ganhar um ${terms['pt-br'].flavor}…`,
+    choose: `Escolha um ${terms['pt-br'].flavor}`,
+    exchanges: 'Trocas',
+    exchangesHint: `Abra mão de uma habilidade de Tipo que você escolheu por uma do ${terms['pt-br'].flavor}, do mesmo Grau ou menor. Você também pode não trocar nenhuma.`,
+    giveUp: 'Abrir mão de',
+    take: 'Ficar com',
+    pickOne: 'Escolha…',
+    tier: (tier) => `Grau ${tier}`,
+    addExchange: 'Adicionar uma troca',
+    removeExchange: 'Remover',
+    free: 'O Mestre concedeu (arco do personagem) — sem XP',
+    confirm: (xp, free) => (free ? 'Ganhar (concedido)' : `Ganhar (${xp} XP)`),
+    needs: (xp) => `Requer ${xp} XP`,
+    swap: (replaces, taken, tier) => `${replaces} → ${taken} (Grau ${tier})`,
+    noExchanges: 'Sem trocas: só passa a somar às suas escolhas futuras.',
+    undo: (paidXp) => (paidXp > 0 ? `Desfazer (devolve ${paidXp} XP)` : 'Desfazer'),
+    nothingToExchange: 'Nenhuma das suas habilidades de Tipo pode ser trocada agora.',
+    errors: {
+      insufficient: 'XP insuficiente.',
+      conflict: 'O personagem mudou em outra aba. Recarregue e tente de novo.',
+      notRevertable: 'Não dá para desfazer agora: escolhas posteriores dependem dele.',
+      generic: 'Não foi possível salvar. Tente de novo.',
+    },
   },
   learn: {
     title: (abilityName) => `Aprender mais — ${abilityName}`,

@@ -108,6 +108,8 @@ interface WizardProps {
   characterId?: string
   /** Saved choices to start from. Reopens straight on the Review step. */
   initialChoices?: WizardChoices
+  /** A flavor the character gained in play: it can't be changed here. */
+  gainedFlavorId?: string | null
 }
 
 export function Wizard(props: WizardProps) {
@@ -118,7 +120,13 @@ export function Wizard(props: WizardProps) {
   )
 }
 
-function WizardInner({ userName, locale, characterId, initialChoices }: WizardProps) {
+function WizardInner({
+  userName,
+  locale,
+  characterId,
+  initialChoices,
+  gainedFlavorId = null,
+}: WizardProps) {
   const router = useRouter()
   const { copy } = useWizardI18n()
   const [stepIndex, setStepIndex] = useState(
@@ -505,6 +513,7 @@ function WizardInner({ userName, locale, characterId, initialChoices }: WizardPr
               flavors={flavors.data}
               flavorError={flavors.error}
               selectedFlavorId={choices.flavorId}
+              gainedFlavorId={gainedFlavorId}
               onSelectFlavor={onSelectFlavor}
               abilities={abilities.data}
               loading={!abilities.data && !abilities.error}
