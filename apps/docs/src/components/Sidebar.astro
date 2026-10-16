@@ -11,15 +11,81 @@
 // current link. The script is `is:inline` on purpose: it runs the moment the
 // parser reaches it, i.e. before first paint, so the entry never appears to
 // grow after load. Without JS the menu is simply Starlight's own.
+//
+// It also fills in the two long groups (Abilities, Cyphers), whose entries
+// aren't in the page — see src/lib/sidebar-lists.ts.
 import Default from '@astrojs/starlight/components/Sidebar.astro';
+import type { UrlLocale } from '@lib/locale';
+import { SIDEBAR_LISTS, sidebarListFile } from '@lib/sidebar-lists';
 
 const { headings } = Astro.locals.starlightRoute;
 // h2 only: the mock lists one level of sections, and deeper headings would
 // turn a chapter's menu entry into a second full table of contents.
 const sections = headings.filter((heading) => heading.depth === 2);
+
+const locale = (Astro.url.pathname.split('/')[1] || 'en') as UrlLocale;
+// The loader script below is inline, so the requests start while the page is
+// still being parsed. Each list's rows go right after its group's Overview
+// link; the rest mirrors what Starlight does for entries it renders itself:
+// mark the current page and open its group. Starlight restores the sidebar's
+// saved scroll position before these rows exist (so it can come up short),
+// and inserting them shifts it again (scroll anchoring) — so the position is
+// set once more after each insert. If a request fails, the group just keeps
+// its Overview link, and that page lists every entry anyway.
+const lists = SIDEBAR_LISTS.map((list) => ({
+	overview: `/${locale}/${list}/`,
+	url: `/sidebar-lists/${sidebarListFile(list, locale)}.html`,
+}));
 ---
 
 <Default {...Astro.props}><slot /></Default>
+
+<script is:inline define:vars={{ lists }}>
+	(function () {
+		var sidebar = document.getElementById('starlight__sidebar');
+		if (!sidebar || !window.fetch) return;
+
+		// The scroll position Starlight saved when leaving the previous page, read
+		// the same way its own restore does (SidebarPersister.astro), or null.
+		function savedScroll() {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return null;
+				var persist = document.querySelector('sl-sidebar-state-persist');
+				var state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!persist || !state || persist.dataset.hash !== state.hash) return null;
+				return state.scroll;
+			} catch (e) {
+				return null;
+			}
+		}
+
+		lists.forEach(function (list) {
+			var overview = sidebar.querySelector('a[href="' + list.overview + '"]');
+			var row = overview && overview.parentElement;
+			if (!row) return;
+			fetch(list.url)
+				.then(function (response) {
+					return response.ok ? response.text() : Promise.reject();
+				})
+				.then(function (html) {
+					// Rows inserted above what's on screen make the browser's scroll
+					// anchoring push the position down by the list's whole height, so
+					// set it explicitly afterwards: the saved one if any, else where it was.
+					var top = sidebar.scrollTop;
+					row.insertAdjacentHTML('afterend', html);
+					var current = row.parentElement.querySelector('a[href="' + location.pathname + '"]');
+					if (current && current !== overview) {
+						current.setAttribute('aria-current', 'page');
+						var group = row.closest('details');
+						if (group) group.open = true;
+					}
+					var saved = savedScroll();
+					sidebar.scrollTop = saved === null ? top : saved;
+				})
+				.catch(function () {});
+		});
+	})();
+</script>
 
 {
 	sections.length > 0 && (

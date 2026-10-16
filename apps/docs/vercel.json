@@ -8,5 +8,11 @@
       "permanent": false
     },
     { "source": "/", "destination": "/en/", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/sidebar-lists/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
   ]
 }

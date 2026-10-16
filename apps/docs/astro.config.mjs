@@ -7,11 +7,9 @@ import tailwindcss from '@tailwindcss/vite'
 import {
   getAllTypes,
   getAllDescriptors,
-  getAllAbilities,
   getAllFoci,
   getAllFlavors,
   getAllSkills,
-  getAllCyphers,
   getAllArtifacts,
 } from '@cypher/content'
 
@@ -60,37 +58,21 @@ const descriptorsSidebarGroup = {
   ],
 }
 
-// Same manual-group pattern again, but at a very different scale: 965
-// Abilities vs. Types' 4 or Descriptors' 50. Two adjustments that only
-// matter at this size:
-// - `collapsed: true` (Starlight's own manual-sidebar option) so the group
-//   doesn't dump 965 links into the sidebar by default — Types/Descriptors
-//   stay expanded since they're short enough to just scan.
-// - An explicit alphabetical sort. getAllTypes()/getAllDescriptors() were
-//   used in filesystem read order, which was fine for a handful of items;
-//   at 965 that order isn't guaranteed to look intentional, so this group
-//   sorts by English name instead of trusting directory order.
-const abilities = getAllAbilities()
-  .slice()
-  .sort((a, b) => a.name.en.localeCompare(b.name.en))
-
+// Abilities (1,200+) and Cyphers (166) are too long to render into every
+// page, so their groups hold only the Overview link here: the entries come
+// from a cached file that src/components/Sidebar.astro inserts after load
+// (see src/lib/sidebar-lists.ts, which also sorts them alphabetically).
+// `collapsed: true` so neither group opens on its own; Sidebar.astro opens
+// it when the current page is one of its entries.
 const abilitiesSidebarGroup = {
   label: 'Abilities',
   translations: { 'pt-BR': 'Habilidades' },
   collapsed: true,
-  items: [
-    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/abilities/' },
-    ...abilities.map((ability) => ({
-      label: ability.name.en,
-      translations: { 'pt-BR': ability.name['pt-BR'] },
-      link: `/abilities/${ability.id}/`,
-    })),
-  ],
+  items: [{ label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/abilities/' }],
 }
 
-// Same manual-group pattern, at a scale between Descriptors' 50 and
-// Abilities' 965 — 50 Foci, so sorted alphabetically like Abilities for
-// the same directory-order-isn't-intentional-at-this-size reason, but left
+// Same manual-group pattern for the 50 Foci: sorted alphabetically (at this
+// size directory order isn't guaranteed to look intentional), but left
 // expanded like Types/Descriptors since 50 is still short enough to scan.
 const foci = getAllFoci()
   .slice()
@@ -150,26 +132,12 @@ const skillsSidebarGroup = {
   ],
 }
 
-// Same manual-group pattern, at a scale between Descriptors' 50 and
-// Abilities' 965 — 166 Cyphers, closer to Abilities' situation than Foci's,
-// so it gets the same treatment: sorted alphabetically and collapsed by
-// default rather than dumping 166 links into the sidebar.
-const cyphers = getAllCyphers()
-  .slice()
-  .sort((a, b) => a.name.en.localeCompare(b.name.en))
-
+// Entries inserted after load, like Abilities above.
 const cyphersSidebarGroup = {
   label: 'Cyphers',
   translations: { 'pt-BR': 'Cifras' },
   collapsed: true,
-  items: [
-    { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/cyphers/' },
-    ...cyphers.map((cypher) => ({
-      label: cypher.name.en,
-      translations: { 'pt-BR': cypher.name['pt-BR'] },
-      link: `/cyphers/${cypher.id}/`,
-    })),
-  ],
+  items: [{ label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/cyphers/' }],
 }
 
 // 15 Artifacts — bigger than Types' 4 but the same order of magnitude, so

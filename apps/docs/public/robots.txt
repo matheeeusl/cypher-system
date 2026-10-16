@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 # Pagefind's search index: thousands of binary fragments, not pages.
 Disallow: /pagefind/
+# Sidebar entries loaded after the page (src/lib/sidebar-lists.ts): fragments,
+# not pages — each Overview page links every entry for crawlers.
+Disallow: /sidebar-lists/
 
 Sitemap: https://csrd.app/sitemap-index.xml
