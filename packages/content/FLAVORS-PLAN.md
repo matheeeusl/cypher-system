@@ -165,13 +165,43 @@ The rule: "spend 2 XP to learn two cantrips (if they are available for you to le
 - Engine (`resolveLearnedOptions`, test first), GraphQL (`learnedOptions` input, `AbilityChoice.learn`), app (`LearnPanel` in the Status tab, `learnOptionsAction` / `revertLearnAction`, a locked XP spend and a refund on undo), docs (a "Learning more" line on the Cantrips page), e2e (`learn-play.spec.ts`).
 - Known gap: editing the character in the wizard so the learned cantrips become impossible (flavor changed) clears them but keeps the XP spent.
 
-### F5 — Gain a flavor in play
+### F5 — Gain a flavor in play (plan)
 
-The rule: a flavor can be earned by a character arc, or bought for 4 XP; on gaining it you exchange type abilities (a few extra exchanges if gained after tier 2).
+Decision (D1): modelled, with a short disclaimer to talk to the GM first.
 
-- **D1:** do we model it? Today `flavor_id` is set at creation and affects the tier 1 pool. For a mid-game flavor the exchange has to apply to every tier already reached, so the "pool" idea isn't enough: the player must choose which type ability to swap out and which flavor ability replaces it, per tier.
-- If yes: a `gain-flavor` advancement (4 XP) with a list of `{tier, replaces, with}` swaps; the engine validates tier and that `replaces` is a type ability they have. Revert restores the swaps.
-- If no: document it as GM-handled and drop it. Recommended unless you actually want to play this.
+**The rule (PDF p. 410).** A personalized flavor can be earned by a character arc, or bought for 4 XP "as a long-term benefit or character advancement". Gaining a flavor works like creating with one: it lets you exchange Type abilities for flavor abilities, and "if you gained your flavor after reaching tier 2, the GM might allow a few additional exchanges". An exchange is permanent: the Type ability you give up can't be picked later (the book's Bash example).
+
+**Model.** Creating with a flavor already widens the pick pool (`flavor_id`). A flavor gained later needs the same pool for future picks **plus retroactive swaps** of picks already made. So:
+
+- Engine: `CharacterChoices.flavor_gain?: { flavor_id, swaps: [{ replaces, with }] }`. `flavor_id` and `flavor_gain` together is an error (`FLAVOR_GAIN_CONFLICT`: one flavor per character; recommended, D4).
+- The resolved flavor is `flavor_id ?? flavor_gain.flavor_id`, so everything flavors already do (the pool for future picks, the `Flavor` label, docs) keeps working.
+- Swaps are applied by **rewriting the Type picks before resolving them**: `replaces` becomes `with` in `tier_1_type_ability_ids` or in `type_ability_picks[tier]`. Then skill grants, choice abilities, pending picks and sources all work through the existing machinery, keyed by the pick's tier (a swapped-in Physical Skills owes its skill picks at that tier).
+- A swap is valid when: `replaces` is a Type ability the character holds from a Type pick (not Focus, not already a flavor ability) and isn't trained by a Skills advancement; `with` is an ability of the gained flavor of the same tier or lower than the pick it replaces (the same rule as the creation pool) and not already known; no ability is replaced or swapped in twice. The replaced ability can't be picked again later (`FLAVOR_SWAP_REPICKED`). Codes: `FLAVOR_GAIN_CONFLICT`, `FLAVOR_SWAP_REPLACES_INVALID`, `FLAVOR_SWAP_WITH_INVALID`, `FLAVOR_SWAP_DUPLICATE`, `FLAVOR_SWAP_REPICKED`.
+- No cap on the number of swaps (the book says "a few", at the GM's discretion); the disclaimer carries that.
+- Cost: `FLAVOR_GAIN_COST_XP = 4` in the engine, next to `ADVANCEMENT_COST_XP`, served by the existing `advancementRules` query. A gain granted by a character arc is free (D5, recommended: a "my GM granted it" option that charges nothing; the XP log says so).
+- Storage: `tier_picks.flavorGain = { flavorId, swaps }` (no migration, left out while empty), like `learned`. Not an `AdvancementPurchase`, for the same reason as cantrips.
+- Undo: removes the gain and refunds the XP; checked by the engine first (not revertable when a later pick depends on the flavor, e.g. a tier-3 Type pick taken from its list), like undoing an advancement.
+
+**Batches**
+
+| Batch | What                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| G1    | Engine, test first: `flavor_gain`, the pick rewrite, the five error codes, `FLAVOR_GAIN_COST_XP`. Integration tests in `validate-character-choices`.                                                                                                                                                                                                                                                                                                |
+| G2    | GraphQL: `flavorGain` input (`flavorId` + `swaps`), content resolution for the gained flavor (`resolveContentOrThrow`), `flavorCostXp` on `advancementRules`, issue params. Tests.                                                                                                                                                                                                                                                                  |
+| G3    | App data: `TierPicks.flavorGain` (parse, `isEmptyPicks`, `picksUpToTier` keeps it), the flavor in use is `choices.flavorId ?? tierPicks.flavorGain` in `loadDerived`, `buildCharacterChoicesInput`, `prepare-character` and the play actions; `gainFlavorAction` / `revertFlavorGainAction` reusing `applyLearn` / `revertLearn` (generalised to a picks purchase with a cost, possibly 0).                                                         |
+| G4    | App UI: a "Gain a flavor" panel in the Status tab for a character with no flavor (pick the flavor, add exchanges row by row: ability to give up → ability to take; the GM disclaimer; pay 4 XP or "granted by my GM"); after gaining it shows the flavor, the exchanges and Undo. In the wizard's edit mode the flavor selector is replaced by "gained in play: X" (otherwise setting `flavorId` would conflict and clear the gain). i18n en/pt-br. |
+| G5    | Docs: a paragraph on gaining a flavor in the Flavor section of the Character Creation chapter (en, pt-br) and the glossary. e2e `flavor-gain.spec.ts`: refused without XP, a swap, derived abilities, undo with refund, the free path. CLAUDE.md notes in the three packages.                                                                                                                                                                       |
+
+**Decisions to confirm** (defaults in brackets):
+
+- D4: one flavor per character; gaining is only offered to a character without one [yes].
+- D5: a free "granted by my GM / character arc" path next to the 4 XP purchase [yes].
+- D6: no cap on exchanges, GM disclaimer in the panel [yes].
+
+**Risks**
+
+- The wizard's edit mode clears picks that become impossible, which would wipe a gain and its swaps while keeping the XP spent (the same gap as learned cantrips). G4 mitigates it by locking the selector for a character that gained a flavor.
+- pt-BR copy for the panel uses the "Flavor" placeholder term; it joins the list for the translation chat.
 
 ### F6 — Spells, preparation and activation
 
