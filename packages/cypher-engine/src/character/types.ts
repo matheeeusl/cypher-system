@@ -1,5 +1,10 @@
 export type Stat = 'might' | 'speed' | 'intellect'
 
+/** See CharacterChoices.descriptor_pool_choice. */
+export type DescriptorPoolChoice =
+  | { allocation: Record<Stat, number> } // a `divide` choice
+  | { option_index: number } // a `one-of` choice, 0-based
+
 export interface CharacterChoices {
   type_id: string
   descriptor_id: string
@@ -27,12 +32,12 @@ export interface CharacterChoices {
   pool_point_allocation: Record<Stat, number>
 
   /**
-   * A Descriptor's freeform Pool bonus (e.g. Strong's "+4 to your Might
-   * Pool"), entered by the player after reading Descriptor.initial_bonus
-   * themselves — this is never parsed from that text. Optional since not
-   * every Descriptor grants a Pool bonus.
+   * The player's answer to the Descriptor's `pool_bonus_choice`: how the
+   * points are divided (Hideous: 4 among all three Pools) or which option
+   * was picked (Sylph: +2 Intellect or +2 Speed). Required exactly when the
+   * Descriptor has a choice. Its fixed `pool_bonus` needs nothing here.
    */
-  descriptor_pool_bonus?: { stat: Stat; amount: number }
+  descriptor_pool_choice?: DescriptorPoolChoice
 
   /** Exactly the 4 ability ids chosen from the Type's tier_abilities["1"]. */
   tier_1_type_ability_ids: string[]

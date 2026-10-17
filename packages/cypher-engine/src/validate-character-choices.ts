@@ -91,7 +91,8 @@ export function validateCharacterChoices(
     derivePoolMax(
       type,
       choices.pool_point_allocation,
-      choices.descriptor_pool_bonus,
+      descriptor,
+      choices.descriptor_pool_choice,
       choices.advancement_purchases,
     ),
   )

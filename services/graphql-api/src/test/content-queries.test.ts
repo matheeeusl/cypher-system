@@ -151,6 +151,65 @@ describe('content queries', () => {
     expect(result.data.type).toBeNull()
   })
 
+  it('resolves a Descriptor category, Pool choice (both kinds) and skill note', async () => {
+    const result = await graphqlRequest<{
+      hideous: { category: { id: string }; poolBonusChoice: unknown }
+      sylph: {
+        category: {
+          id: string
+          name: LocalizedStringPayload
+          intro: LocalizedStringPayload | null
+          page: number
+        }
+        poolBonusChoice: unknown
+      }
+      elf: { skillTraining: Array<{ skillId: string | null; note: LocalizedStringPayload | null }> }
+    }>(`
+      fragment PoolChoice on Descriptor {
+        poolBonusChoice {
+          __typename
+          ... on DescriptorPoolDivide { points stats }
+          ... on DescriptorPoolOneOf { options { stat amount } }
+        }
+      }
+      query {
+        hideous: descriptor(id: "hideous") { category { id } ...PoolChoice }
+        sylph: descriptor(id: "sylph") {
+          category { id name { en ptBR } intro { en } page }
+          ...PoolChoice
+        }
+        elf: descriptor(id: "elf") { skillTraining { skillId note { en } } }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    // Real data: hideous.yaml, sylph.yaml, elf.yaml and descriptor-categories.yaml.
+    expect(result.data.hideous).toEqual({
+      category: { id: 'standard' },
+      poolBonusChoice: {
+        __typename: 'DescriptorPoolDivide',
+        points: 4,
+        stats: ['MIGHT', 'SPEED', 'INTELLECT'],
+      },
+    })
+    expect(result.data.sylph.category).toEqual({
+      id: 'modern-magic',
+      name: { en: 'Modern Magic', ptBR: 'Magia Moderna' },
+      intro: {
+        en: 'Most of these descriptors are for characters who are or become significantly nonhuman.',
+      },
+      page: 70,
+    })
+    expect(result.data.sylph.poolBonusChoice).toEqual({
+      __typename: 'DescriptorPoolOneOf',
+      options: [[{ stat: 'INTELLECT', amount: 2 }], [{ stat: 'SPEED', amount: 2 }]],
+    })
+    expect(result.data.elf.skillTraining[0]).toEqual({
+      skillId: 'perception',
+      note: { en: 'You are specialized in tasks related to perception.' },
+    })
+  })
+
   it('resolves a Descriptor, including pool bonus, skill training, and connection options', async () => {
     interface DescriptorQueryData {
       descriptor: {

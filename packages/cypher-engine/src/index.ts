@@ -4,4 +4,10 @@ export * from './character/cypher-limit.js'
 export * from './character.js'
 export * from './validate-character-choices.js'
 export * from './errors.js'
-export type { Stat, CharacterChoices, AdvancementPurchase, DerivedCharacter } from './character.js'
+export type {
+  Stat,
+  CharacterChoices,
+  AdvancementPurchase,
+  DerivedCharacter,
+  DescriptorPoolChoice,
+} from './character.js'

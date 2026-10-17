@@ -1,4 +1,9 @@
-import type { AdvancementPurchase, CharacterChoices, Stat } from '@cypher/engine'
+import type {
+  AdvancementPurchase,
+  CharacterChoices,
+  DescriptorPoolChoice,
+  Stat,
+} from '@cypher/engine'
 
 // GraphQL input shapes (camelCase), mirroring schema.graphql's
 // CharacterChoicesInput family. The Stat enum's internal value (see
@@ -15,6 +20,12 @@ export interface StatAllocationInput {
 export interface DescriptorPoolBonusInput {
   stat: Stat
   amount: number
+}
+
+// @oneOf: exactly one field is set.
+export interface DescriptorPoolChoiceInput {
+  allocation?: StatAllocationInput | null
+  optionIndex?: number | null
 }
 
 export interface FocusChoiceSelectionInput {
@@ -85,7 +96,11 @@ export interface CharacterChoicesInput {
   flavorId?: string | null
   startingEdgeChoice?: Stat | null
   poolPointAllocation: StatAllocationInput
+  // Deprecated and ignored: the engine reads the Descriptor's Pool bonuses
+  // from content. Still accepted so an app deployed before the API doesn't
+  // get "unknown field" errors.
   descriptorPoolBonus?: DescriptorPoolBonusInput | null
+  descriptorPoolChoice?: DescriptorPoolChoiceInput | null
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: FocusChoiceSelectionInput[]
   typeAbilityPicks?: TypeAbilityPickInput[] | null
@@ -131,6 +146,14 @@ export function mapAdvancementPurchase(input: AdvancementPurchaseInput): Advance
   // Unreachable in practice: the schema's @oneOf directive guarantees
   // exactly one field is set before this resolver ever runs.
   throw new Error('AdvancementPurchaseInput must have exactly one variant set')
+}
+
+export function mapDescriptorPoolChoice(input: DescriptorPoolChoiceInput): DescriptorPoolChoice {
+  if (input.allocation) return { allocation: input.allocation }
+  if (input.optionIndex != null) return { option_index: input.optionIndex }
+  // Unreachable in practice: the schema's @oneOf directive guarantees
+  // exactly one field is set.
+  throw new Error('DescriptorPoolChoiceInput must have exactly one of allocation/optionIndex set')
 }
 
 export function mapFocusChoiceSelections(
@@ -185,13 +208,8 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       : {}),
     ...(input.startingEdgeChoice != null ? { starting_edge_choice: input.startingEdgeChoice } : {}),
     pool_point_allocation: input.poolPointAllocation,
-    ...(input.descriptorPoolBonus
-      ? {
-          descriptor_pool_bonus: {
-            stat: input.descriptorPoolBonus.stat,
-            amount: input.descriptorPoolBonus.amount,
-          },
-        }
+    ...(input.descriptorPoolChoice
+      ? { descriptor_pool_choice: mapDescriptorPoolChoice(input.descriptorPoolChoice) }
       : {}),
     tier_1_type_ability_ids: input.tier1TypeAbilityIds,
     focus_choice_selections: mapFocusChoiceSelections(input.focusChoiceSelections),

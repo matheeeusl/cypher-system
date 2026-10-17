@@ -36,7 +36,6 @@ const validChoices: CharacterChoices = {
   focus_id: 'wields-two-weapons-at-once',
   starting_edge_choice: 'speed',
   pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
-  descriptor_pool_bonus: { stat: 'might', amount: 4 },
   tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
   focus_choice_selections: { '3': ['dual-medium-wield'] },
   descriptor_skill_choices: [],
@@ -69,6 +68,7 @@ const validInput = {
   focusId: 'wields-two-weapons-at-once',
   startingEdgeChoice: 'SPEED',
   poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
+  // Deprecated and ignored; kept here to prove an older client still validates.
   descriptorPoolBonus: { stat: 'MIGHT', amount: 4 },
   tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
   focusChoiceSelections: [{ tier: 3, abilityId: 'dual-medium-wield' }],
@@ -205,6 +205,51 @@ describe('validateCharacterChoices (invalid build)', () => {
         { key: 'actual', value: '5' },
       ],
     })
+  })
+})
+
+describe('validateCharacterChoices (Descriptor Pool choice)', () => {
+  // Hideous: "4 additional points to divide among your stat Pools".
+  const hideous = { ...validInput, descriptorId: 'hideous' }
+  const mightOf = (data: ValidateQueryData) =>
+    data.validateCharacterChoices.character?.pools.might.max ?? Number.NaN
+
+  it('adds the divided points where the player put them', async () => {
+    const allMight = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: {
+        ...hideous,
+        descriptorPoolChoice: { allocation: { might: 4, speed: 0, intellect: 0 } },
+      },
+    })
+    const allIntellect = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: {
+        ...hideous,
+        descriptorPoolChoice: { allocation: { might: 0, speed: 0, intellect: 4 } },
+      },
+    })
+
+    expect(allMight.data.validateCharacterChoices.__typename).toBe('ValidCharacterResult')
+    expect(mightOf(allMight.data) - mightOf(allIntellect.data)).toBe(4)
+  })
+
+  it('reports a missing answer as an issue', async () => {
+    const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, { input: hideous })
+
+    expect(result.data.validateCharacterChoices.issues).toContainEqual({
+      code: 'DESCRIPTOR_POOL_CHOICE_REQUIRED',
+      params: [{ key: 'kind', value: 'divide' }],
+    })
+  })
+
+  it('rejects an answer with both fields set (@oneOf)', async () => {
+    const result = await graphqlRequest<ValidateQueryData>(VALIDATE_QUERY, {
+      input: {
+        ...hideous,
+        descriptorPoolChoice: { allocation: { might: 4, speed: 0, intellect: 0 }, optionIndex: 0 },
+      },
+    })
+
+    expect(result.errors).toBeDefined()
   })
 })
 

@@ -104,13 +104,40 @@ type DescriptorSkillTraining {
   # skill, or "N skills of your choice."
   skillId: ID
   choiceCount: Int
+  # The rest of the book's line when it adds a rule: a condition, a narrower
+  # choice ("perception or stealth"), or "specialized".
+  note: LocalizedString
 }
+# The book's descriptor groups (Standard, Cyberpunk, Fairy Tale…).
+type DescriptorCategory {
+  id: ID!
+  name: LocalizedString!
+  # The book's one-line introduction to the group; null for Standard.
+  intro: LocalizedString
+  # First page of the group in OG-CSPG.
+  page: Int!
+}
+# "N additional points to divide among <stats>" (Hideous, Addicted…).
+type DescriptorPoolDivide {
+  points: Int!
+  stats: [Stat!]!
+}
+# Pick exactly one option; each is a list of fixed bonuses (Sylph, Rusted).
+type DescriptorPoolOneOf {
+  options: [[DescriptorPoolBonus!]!]!
+}
+union DescriptorPoolBonusChoice = DescriptorPoolDivide | DescriptorPoolOneOf
 
 type Descriptor {
   id: ID!
   name: LocalizedString!
   description: LocalizedString!
+  category: DescriptorCategory!
+  # Fixed bonuses; all of them apply.
   poolBonus: [DescriptorPoolBonus!]!
+  # A Pool bonus the player decides, on top of poolBonus; answered by
+  # CharacterChoicesInput.descriptorPoolChoice.
+  poolBonusChoice: DescriptorPoolBonusChoice
   characteristics: [DescriptorCharacteristic!]!
   skillTraining: [DescriptorSkillTraining!]!
   # Prose, not skill ids — real inability text is often a whole task
@@ -118,7 +145,8 @@ type Descriptor {
   inabilities: [LocalizedString!]!
   # Present on some Descriptors, absent on others.
   additionalEquipment: LocalizedString
-  # Always exactly 4 numbered options in the source.
+  # 4 numbered options, or none where the book prints no Initial Link
+  # (Artificially Intelligent, Quintar).
   connectionOptions: [LocalizedString!]!
   contentVersion: String!
 }
@@ -351,6 +379,12 @@ input DescriptorPoolBonusInput {
   stat: Stat!
   amount: Int!
 }
+# The answer to Descriptor.poolBonusChoice: `allocation` for a
+# DescriptorPoolDivide, or `optionIndex` (0-based) for a DescriptorPoolOneOf.
+input DescriptorPoolChoiceInput @oneOf {
+  allocation: StatAllocationInput
+  optionIndex: Int
+}
 # One ability of a Focus choice at `tier`. A choice of `count` options is sent as
 # all the ability ids of the chosen options (a bundled pair sends both ids).
 input FocusChoiceSelectionInput {
@@ -434,7 +468,11 @@ input CharacterChoicesInput {
   flavorGain: FlavorGainInput
   startingEdgeChoice: Stat
   poolPointAllocation: StatAllocationInput!
+  # Ignored: every Pool bonus is read from the Descriptor's content.
   descriptorPoolBonus: DescriptorPoolBonusInput
+    @deprecated(reason: "Ignored. The Descriptor's Pool bonuses come from content.")
+  # Required when the Descriptor has a poolBonusChoice; omitted otherwise.
+  descriptorPoolChoice: DescriptorPoolChoiceInput
   tier1TypeAbilityIds: [ID!]!
   focusChoiceSelections: [FocusChoiceSelectionInput!]!
   # Type abilities picked from tier 2 up (the tier-1 picks are tier1TypeAbilityIds).

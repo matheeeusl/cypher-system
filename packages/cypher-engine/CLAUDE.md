@@ -22,6 +22,10 @@ Input/output types for `character.ts` type-import from `@cypher/content` (`impor
 
 Every rule violation `validateCharacterChoices` can report is a `CharacterRuleError` (`src/errors.ts`) with a stable `code` and `params`; its `message` stays the English sentence. `validateCharacterChoices` returns both `errors: string[]` and `issues: ValidationIssue[]` (same order and length), and graphql-api exposes `issues` so UIs can localize. When you add a new rule error, add a `RuleErrorCode`, throw `CharacterRuleError` with params, and add the translation in `apps/app/lib/i18n/wizard.ts`.
 
+## Descriptor Pools
+
+`derivePoolMax` reads the Descriptor from content: every fixed `pool_bonus` entry applies (Tongue-Tied gets both, Clumsy's −2 Speed applies), and the client never sends a bonus. A Descriptor with a `pool_bonus_choice` needs `CharacterChoices.descriptor_pool_choice`: `{ allocation }` for a `divide` choice (non-negative, only on the offered stats, summing to `points`) or `{ option_index }` for a `one-of` choice. `resolveDescriptorPoolChoice` checks it; codes `DESCRIPTOR_POOL_CHOICE_REQUIRED` (missing or the wrong kind; `kind` param), `_UNEXPECTED`, `_STAT`, `_SUM`, `_OPTION`, plus `POOL_ALLOCATION_NEGATIVE`. A missing answer is an error, not a pending pick: it is a creation choice, like the 6-point allocation.
+
 ## Advancement purchases
 
 An `AdvancementPurchase.tier` is the tier the purchase leads **to** (the four purchases tagged `tier: 2` take a tier-1 character to tier 2). `deriveTier` lets the _newest_ tier be partly bought — advancements are bought one at a time in any order, and the character only advances when the fourth lands — but an older tier with fewer than four is an error. Pool/Edge/Effort/skill effects apply as soon as each purchase is made, whatever the tier's completeness.

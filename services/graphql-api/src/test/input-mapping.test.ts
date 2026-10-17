@@ -121,7 +121,6 @@ describe('mapCharacterChoicesInput', () => {
       focus_id: 'wields-two-weapons-at-once',
       starting_edge_choice: 'speed',
       pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
-      descriptor_pool_bonus: { stat: 'might', amount: 4 },
       tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
       focus_choice_selections: { '3': ['dual-medium-wield'] },
       descriptor_skill_choices: ['perception'],
@@ -129,7 +128,23 @@ describe('mapCharacterChoicesInput', () => {
     })
   })
 
-  it('omits starting_edge_choice and descriptor_pool_bonus entirely when not provided', () => {
+  it('ignores the deprecated descriptorPoolBonus (the engine reads it from content)', () => {
+    const result = mapCharacterChoicesInput({
+      typeId: 'warrior',
+      descriptorId: 'strong',
+      focusId: 'wields-two-weapons-at-once',
+      poolPointAllocation: { might: 2, speed: 2, intellect: 2 },
+      descriptorPoolBonus: { stat: 'might', amount: 20 },
+      tier1TypeAbilityIds: ['bash', 'overwatch', 'swipe', 'improved-edge'],
+      focusChoiceSelections: [],
+      descriptorSkillChoices: [],
+      advancementPurchases: [],
+    })
+
+    expect('descriptor_pool_bonus' in result).toBe(false)
+  })
+
+  it('omits starting_edge_choice entirely when not provided', () => {
     const result = mapCharacterChoicesInput({
       typeId: 'warrior',
       descriptorId: 'strong',
@@ -142,7 +157,6 @@ describe('mapCharacterChoicesInput', () => {
     })
 
     expect('starting_edge_choice' in result).toBe(false)
-    expect('descriptor_pool_bonus' in result).toBe(false)
   })
 })
 

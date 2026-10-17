@@ -278,6 +278,8 @@ describe('deriveCharacter / validateCharacterChoices with skill grants', () => {
   const descriptor = {
     id: 'strong',
     pool_bonus: [],
+    category: 'standard',
+    pool_bonus_choice: null,
     skill_training: [{ skill_id: 'jumping', choice_count: null }],
   } as unknown as Descriptor
   const focus = { id: 'f', tier_abilities: {} } as unknown as Focus
@@ -451,6 +453,8 @@ describe('skill grants and advancement purchases', () => {
   const descriptor = {
     id: 'strong',
     pool_bonus: [],
+    category: 'standard',
+    pool_bonus_choice: null,
     skill_training: [],
   } as unknown as Descriptor
   const focus = { id: 'f', tier_abilities: {} } as unknown as Focus

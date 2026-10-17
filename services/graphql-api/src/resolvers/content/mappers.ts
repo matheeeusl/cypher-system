@@ -10,6 +10,7 @@ import type {
   Type,
   WithVersion,
 } from '@cypher/content'
+import { getDescriptorCategoryTable } from '@cypher/content'
 import { getCypherLimit } from '@cypher/engine'
 
 type LocalizedStringValue = { en: string; 'pt-BR': string }
@@ -94,12 +95,43 @@ export function mapType(t: WithVersion<Type>) {
   }
 }
 
+function mapDescriptorCategory(id: Descriptor['category']) {
+  // The content tests guarantee every category id has a row.
+  const row = getDescriptorCategoryTable().find((c) => c.id === id)
+  if (!row) throw new Error(`Unknown descriptor category "${id}"`)
+  return {
+    id: row.id,
+    name: mapLocalizedString(row.name),
+    intro: row.intro ? mapLocalizedString(row.intro) : null,
+    page: row.page,
+  }
+}
+
+function mapPoolBonusChoice(choice: Descriptor['pool_bonus_choice']) {
+  if (!choice) return null
+  if (choice.kind === 'divide') {
+    return {
+      __typename: 'DescriptorPoolDivide' as const,
+      points: choice.points,
+      stats: choice.stats,
+    }
+  }
+  return {
+    __typename: 'DescriptorPoolOneOf' as const,
+    options: choice.options.map((option) =>
+      option.map((b) => ({ stat: b.stat, amount: b.amount })),
+    ),
+  }
+}
+
 export function mapDescriptor(d: WithVersion<Descriptor>) {
   return {
     id: d.id,
     name: mapLocalizedString(d.name),
     description: mapLocalizedString(d.description),
+    category: mapDescriptorCategory(d.category),
     poolBonus: d.pool_bonus.map((b) => ({ stat: b.stat, amount: b.amount })),
+    poolBonusChoice: mapPoolBonusChoice(d.pool_bonus_choice),
     characteristics: d.characteristics.map((c) => ({
       name: mapLocalizedString(c.name),
       description: mapLocalizedString(c.description),
@@ -107,6 +139,7 @@ export function mapDescriptor(d: WithVersion<Descriptor>) {
     skillTraining: d.skill_training.map((s) => ({
       skillId: s.skill_id,
       choiceCount: s.choice_count,
+      note: s.note ? mapLocalizedString(s.note) : null,
     })),
     inabilities: d.inabilities.map(mapLocalizedString),
     additionalEquipment: d.additional_equipment ? mapLocalizedString(d.additional_equipment) : null,

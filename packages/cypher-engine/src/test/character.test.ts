@@ -53,6 +53,8 @@ const strong: Descriptor = {
   name: { en: 'Strong', 'pt-BR': 'Forte' },
   description: { en: '', 'pt-BR': '' },
   pool_bonus: [{ stat: 'might', amount: 4 }],
+  category: 'standard',
+  pool_bonus_choice: null,
   characteristics: [],
   skill_training: [
     { skill_id: 'breaking-inanimate-objects', choice_count: null },
@@ -98,7 +100,6 @@ describe('deriveCharacter (Warrior, end-to-end)', () => {
     focus_id: 'wields-two-weapons-at-once',
     starting_edge_choice: 'speed',
     pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
-    descriptor_pool_bonus: { stat: 'might', amount: 4 },
     tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
     focus_choice_selections: { '3': ['dual-medium-wield'] },
     descriptor_skill_choices: [],
