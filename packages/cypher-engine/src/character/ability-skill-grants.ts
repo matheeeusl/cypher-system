@@ -2,6 +2,7 @@ import type { Ability, Focus, Type } from '@cypher/content'
 
 import type { CharacterChoices, PendingPick, SkillLevel } from './types.js'
 import { CharacterRuleError } from '../errors.js'
+import { abilityPurchases, purchasedAbilityIds } from './other-advancements.js'
 
 export type SkillGrant = NonNullable<Ability['skill_grant']>
 
@@ -21,10 +22,13 @@ export interface SkillGrantInstance<G = SkillGrant> {
   /** The `ability_skill_choices` key for this instance. */
   key: string
   ability_id: string
-  kind: 'type' | 'focus'
+  kind: GrantSourceKind
   tier: number
   grant: G
 }
+
+/** Where an ability with a grant came from: a Type pick, the Focus, or an Other Option purchase. */
+export type GrantSourceKind = 'type' | 'focus' | 'advancement'
 
 /** Prefix of a skill the player typed (`custom:chess`) instead of picking from the catalog. */
 export const CUSTOM_SKILL_PREFIX = 'custom:'
@@ -58,8 +62,11 @@ const ERRORS = {
     `ability_skill_choices has an entry "${key}" that matches no skill-granting ability the character has`,
 }
 
-/** The `ability_skill_choices` key for an ability gained from a Type or Focus at a tier. */
-export function skillGrantKey(kind: 'type' | 'focus', tier: number, abilityId: string): string {
+/**
+ * The `ability_skill_choices` key for an ability gained from a Type pick, the
+ * Focus, or an Other Option purchase (`advancement`, tier = the purchase's) at a tier.
+ */
+export function skillGrantKey(kind: GrantSourceKind, tier: number, abilityId: string): string {
   return `${kind}:${tier}:${abilityId}`
 }
 
@@ -77,11 +84,12 @@ export function collectSkillGrantInstances<G = SkillGrant>(
   choices: Pick<
     CharacterChoices,
     'tier_1_type_ability_ids' | 'type_ability_picks' | 'focus_choice_selections'
-  >,
+  > &
+    Partial<Pick<CharacterChoices, 'advancement_purchases'>>,
   grants: Record<string, G>,
 ): SkillGrantInstance<G>[] {
   const instances: SkillGrantInstance<G>[] = []
-  const add = (kind: 'type' | 'focus', tier: number, ids: Iterable<string>) => {
+  const add = (kind: GrantSourceKind, tier: number, ids: Iterable<string>) => {
     for (const ability_id of new Set(ids)) {
       const grant = grants[ability_id]
       if (grant) {
@@ -117,9 +125,13 @@ export function collectSkillGrantInstances<G = SkillGrant>(
     )
   }
 
-  return instances.sort(
-    (a, b) => a.tier - b.tier || (a.kind === b.kind ? 0 : a.kind === 'type' ? -1 : 1),
-  )
+  // Bought, so gained whatever the tier's completeness.
+  for (const purchase of abilityPurchases(choices.advancement_purchases ?? [])) {
+    add('advancement', purchase.tier, purchasedAbilityIds(purchase))
+  }
+
+  const rank = { type: 0, focus: 1, advancement: 2 } as const
+  return instances.sort((a, b) => a.tier - b.tier || rank[a.kind] - rank[b.kind])
 }
 
 type SkillMap = Record<string, { level: SkillLevel }>

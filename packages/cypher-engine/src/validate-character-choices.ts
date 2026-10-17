@@ -12,6 +12,11 @@ import { resolveFlavor } from './character/flavor.js'
 import { applyFlavorGain, withoutFlavorGain } from './character/flavor-gain.js'
 import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
+import {
+  deriveArmorSpeedCostReduction,
+  deriveRecoveryRollBonus,
+  resolveAdvancementAbilities,
+} from './character/other-advancements.js'
 import { derivePoolMax } from './character/pool.js'
 import {
   applyAbilityTrainingPurchase,
@@ -104,6 +109,11 @@ export function validateCharacterChoices(
   )
 
   const skillGrants = content.skill_grants ?? {}
+  const repeatable = new Set(
+    Object.entries(skillGrants)
+      .filter(([, grant]) => grant.repeatable)
+      .map(([id]) => id),
+  )
   const pending: PendingPick[] = []
   let typePicks: KnownAbility[] | undefined
   let focusAbilities: KnownAbility[] | undefined
@@ -124,11 +134,7 @@ export function validateCharacterChoices(
           choices.type_ability_picks ?? {},
           typeAbilities.map((a) => a.ability_id),
           pending,
-          new Set(
-            Object.entries(skillGrants)
-              .filter(([, grant]) => grant.repeatable)
-              .map(([id]) => id),
-          ),
+          repeatable,
           flavor,
         ),
       )
@@ -146,6 +152,19 @@ export function validateCharacterChoices(
     )
   } else {
     knownAbilities = [...typeAbilities, ...typePicks, ...focusAbilities]
+    // Abilities bought as Other Options, checked against everything above.
+    const bought = attempt(() =>
+      resolveAdvancementAbilities(
+        type,
+        flavor,
+        focus,
+        choices.advancement_purchases,
+        choices.focus_choice_selections,
+        knownAbilities!,
+        repeatable,
+      ),
+    )
+    knownAbilities = [...knownAbilities, ...(bought ?? [])]
     // Abilities picked for choice abilities (Blessing of the Gods…) join the
     // rest. tier is defined here: typePicks needs it.
     const chosen = attempt(() =>
@@ -250,6 +269,8 @@ export function validateCharacterChoices(
       pools: pools!,
       edge: edge!,
       effort,
+      recovery_roll_bonus: deriveRecoveryRollBonus(choices.advancement_purchases),
+      armor_speed_cost_reduction: deriveArmorSpeedCostReduction(choices.advancement_purchases),
       known_abilities: knownAbilities!,
       skills: skills!,
       pending_picks: sortPending(pending),

@@ -148,19 +148,25 @@ export type AdvancementPurchase =
        */
       target: { kind: 'skill'; skill_id: string } | { kind: 'ability'; ability_id: string }
     }
+  // The "Other Options": at most one per tier, in place of a standard one.
+  | { tier: number; option: 'reduce-armor-speed-cost' }
+  | { tier: number; option: 'recovery-roll-bonus' }
+  /** Another Type (or flavor) ability, of the tier the character has when buying or lower. */
+  | { tier: number; option: 'type-ability'; ability_id: string }
+  /**
+   * One more option of a Focus choice already made (the GM's call): the ids of
+   * one option, so a bundled pair gives two.
+   */
+  | { tier: number; option: 'focus-ability'; ability_ids: string[] }
 
-// No 'advancement' source kind: the standard advancement menu can only
-// train an ability the character already knows (see
-// applyAbilityTrainingPurchase), never grant a new one. Only the
-// out-of-scope "OTHER OPTIONS" substitution ("select another special
-// ability from your type") could do that — add a source kind for it if/when
-// substitutions get modeled, per "Known gaps" in this package's CLAUDE.md.
 export type AbilitySource =
   | { kind: 'type'; type_id: string }
   | { kind: 'focus'; focus_id: string }
   // A flavor ability picked in place of a Type one. The pick still lives in
   // the Type's lists, so its skill-grant key stays `type:<tier>:<id>`.
   | { kind: 'flavor'; flavor_id: string }
+  // Gained through a 'type-ability' or 'focus-ability' purchase tagged `tier`.
+  | { kind: 'advancement'; tier: number }
 
 export interface KnownAbility {
   ability_id: string
@@ -214,6 +220,10 @@ export interface DerivedCharacter {
   pools: Record<Stat, { max: number }>
   edge: Record<Stat, number>
   effort: number
+  /** Added to every recovery roll (1d6 + tier + this), from 'recovery-roll-bonus' purchases. */
+  recovery_roll_bonus: number
+  /** Taken off the Speed Effort cost of wearing armor, from 'reduce-armor-speed-cost' purchases. */
+  armor_speed_cost_reduction: number
   known_abilities: KnownAbility[]
   /** Only entries actually touched by some source — not every skill at a default "practiced" level. */
   skills: Record<string, { level: SkillLevel }>

@@ -32,3 +32,21 @@ export const STANDARD_ADVANCEMENTS = [
   { id: 'extra-effort', effect: { kind: 'effort', amount: 1 } },
   { id: 'skills', effect: { kind: 'skill', amount: 1 } },
 ] as const
+
+/**
+ * The "Other Options": once each tier, one of these can be bought in place of
+ * a standard advancement (same XP cost). The tier still takes
+ * ADVANCEMENTS_PER_TIER purchases.
+ */
+export const OTHER_ADVANCEMENTS = [
+  { id: 'reduce-armor-speed-cost' },
+  { id: 'recovery-roll-bonus' },
+  { id: 'type-ability' },
+  { id: 'focus-ability' },
+] as const
+
+/** What each 'recovery-roll-bonus' purchase adds to recovery rolls. */
+export const RECOVERY_ROLL_BONUS = 2
+
+/** What each 'reduce-armor-speed-cost' purchase takes off the Speed Effort cost of armor. */
+export const ARMOR_SPEED_COST_REDUCTION = 1

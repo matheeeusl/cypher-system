@@ -16,6 +16,11 @@ import { resolveFlavor, type FlavorContent } from './character/flavor.js'
 import { applyFlavorGain } from './character/flavor-gain.js'
 import { resolveLearnedOptions } from './character/learned-options.js'
 import { resolveFocusAbilities } from './character/focus-abilities.js'
+import {
+  deriveArmorSpeedCostReduction,
+  deriveRecoveryRollBonus,
+  resolveAdvancementAbilities,
+} from './character/other-advancements.js'
 import { derivePoolMax } from './character/pool.js'
 import {
   applyAbilityTrainingPurchase,
@@ -117,6 +122,19 @@ export function deriveCharacter(
     ),
     ...resolveFocusAbilities(focus, tier, choices.focus_choice_selections, pending),
   ]
+  // Abilities bought as Other Options, checked against everything above.
+  knownAbilities = [
+    ...knownAbilities,
+    ...resolveAdvancementAbilities(
+      type,
+      flavor,
+      focus,
+      choices.advancement_purchases,
+      choices.focus_choice_selections,
+      knownAbilities,
+      repeatable,
+    ),
+  ]
   // Abilities picked for choice abilities (Blessing of the Gods…) join the rest.
   knownAbilities = [
     ...knownAbilities,
@@ -183,6 +201,8 @@ export function deriveCharacter(
     pools,
     edge,
     effort,
+    recovery_roll_bonus: deriveRecoveryRollBonus(choices.advancement_purchases),
+    armor_speed_cost_reduction: deriveArmorSpeedCostReduction(choices.advancement_purchases),
     known_abilities: knownAbilities,
     skills,
     pending_picks: sortPending(pending),

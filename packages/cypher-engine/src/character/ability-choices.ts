@@ -2,6 +2,7 @@ import type { Ability } from '@cypher/content'
 
 import type { CharacterChoices, KnownAbility, PendingPick } from './types.js'
 import { CharacterRuleError } from '../errors.js'
+import { abilityPurchases, purchasedAbilityIds } from './other-advancements.js'
 
 export type AbilityChoiceDef = NonNullable<Ability['choice']>
 
@@ -25,9 +26,15 @@ export interface AbilityChoiceInstance {
  * The `ability_choices` key for a choice ability picked among the Type abilities
  * at a tier. Same format as a Type skill-grant key (`skillGrantKey('type', …)`):
  * the pick lives in the Type's lists even when the ability comes from a flavor.
+ * One gained through an Other Option purchase uses `advancement` and the
+ * purchase's tier, like its skill-grant key.
  */
-export function abilityChoiceKey(tier: number, abilityId: string): string {
-  return `type:${tier}:${abilityId}`
+export function abilityChoiceKey(
+  tier: number,
+  abilityId: string,
+  kind: 'type' | 'advancement' = 'type',
+): string {
+  return `${kind}:${tier}:${abilityId}`
 }
 
 const ERRORS = {
@@ -44,24 +51,31 @@ const ERRORS = {
 /**
  * Lists every choice ability among the character's picks, once per time it was
  * taken. Only Type picks are looked at (tier 1 and `type_ability_picks`):
- * those are where a flavor's abilities end up. Call it once the Type ability
- * resolution has succeeded; it doesn't re-validate those picks.
+ * those are where a flavor's abilities end up. Plus the abilities gained
+ * through Other Option purchases. Call it once the Type ability resolution
+ * has succeeded; it doesn't re-validate those picks.
  */
 export function collectAbilityChoiceInstances(
   currentTier: number,
-  choices: Pick<CharacterChoices, 'tier_1_type_ability_ids' | 'type_ability_picks'>,
+  choices: Pick<CharacterChoices, 'tier_1_type_ability_ids' | 'type_ability_picks'> &
+    Partial<Pick<CharacterChoices, 'advancement_purchases'>>,
   defs: AbilityChoicesByAbility,
 ): AbilityChoiceInstance[] {
   const instances: AbilityChoiceInstance[] = []
-  const add = (tier: number, ids: Iterable<string>) => {
+  const add = (tier: number, ids: Iterable<string>, kind: 'type' | 'advancement' = 'type') => {
     for (const ability_id of new Set(ids)) {
       const def = defs[ability_id]
-      if (def) instances.push({ key: abilityChoiceKey(tier, ability_id), ability_id, tier, def })
+      if (def) {
+        instances.push({ key: abilityChoiceKey(tier, ability_id, kind), ability_id, tier, def })
+      }
     }
   }
   add(1, choices.tier_1_type_ability_ids)
   for (const [tierKey, ids] of Object.entries(choices.type_ability_picks ?? {})) {
     if (Number(tierKey) <= currentTier) add(Number(tierKey), ids)
+  }
+  for (const purchase of abilityPurchases(choices.advancement_purchases ?? [])) {
+    add(purchase.tier, purchasedAbilityIds(purchase), 'advancement')
   }
   return instances.sort((a, b) => a.tier - b.tier)
 }
