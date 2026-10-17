@@ -189,6 +189,7 @@ export function mapAbility(a: WithVersion<Ability>) {
           mode: a.skill_grant.mode ?? 'train',
           alternate: a.skill_grant.alternate ?? null,
           allowCustom: a.skill_grant.allow_custom ?? false,
+          repeatable: a.skill_grant.repeatable ?? false,
           noncombat: a.skill_grant.options === 'noncombat',
           options: a.skill_grant.options === 'noncombat' ? [] : a.skill_grant.options,
         }

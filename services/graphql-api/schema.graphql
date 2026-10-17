@@ -299,6 +299,9 @@ type SkillGrant {
   mode: String!
   noncombat: Boolean!
   options: [ID!]!
+  # "You can select this ability multiple times": it may be taken again at a
+  # later tier (each time with different skills).
+  repeatable: Boolean!
 }
 
 type Ability {
