@@ -9,7 +9,7 @@ import { terms } from '@/lib/i18n/terms'
 // listed under "Needs confirmation" there.
 
 type EntityKind = 'types' | 'descriptors' | 'foci' | 'skills' | 'abilities'
-type SaveErrorReason = 'unauthorized' | 'invalid' | 'limit' | 'unavailable'
+type SaveErrorReason = 'unauthorized' | 'invalid' | 'advancement' | 'limit' | 'unavailable'
 type ReviewRow =
   | 'type'
   | 'descriptor'
@@ -208,6 +208,8 @@ const en: WizardCopy = {
   saveErrors: {
     unauthorized: 'Your session expired. Please log in again.',
     invalid: 'Some choices are incomplete or no longer valid. Review the steps and try again.',
+    advancement:
+      'This change takes away an ability an advancement depends on (one it bought or trained). Undo that advancement in play mode first, then edit again.',
     limit: 'You have reached the character limit for your plan.',
     unavailable: 'Could not save right now. Please try again.',
   },
@@ -482,6 +484,8 @@ const ptBr: WizardCopy = {
     unauthorized: 'Sua sessão expirou. Entre novamente.',
     invalid:
       'Algumas escolhas estão incompletas ou deixaram de ser válidas. Revise as etapas e tente novamente.',
+    advancement:
+      'Esta mudança tira uma habilidade da qual um avanço depende (que ele comprou ou treinou). Desfaça esse avanço no modo de jogo antes e edite de novo.',
     limit: 'Você atingiu o limite de personagens do seu plano.',
     unavailable: 'Não foi possível salvar agora. Tente novamente.',
   },

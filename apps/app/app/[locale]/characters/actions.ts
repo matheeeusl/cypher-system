@@ -15,7 +15,7 @@ import { getSession } from '@/lib/session'
 
 export type SaveResult =
   | { ok: true; id: string }
-  | { ok: false; reason: 'unauthorized' | 'invalid' | 'limit' | 'unavailable' }
+  | { ok: false; reason: 'unauthorized' | 'invalid' | 'advancement' | 'limit' | 'unavailable' }
 
 /**
  * Creates (no `id`) or updates (`id`) a saved character. Nothing the browser
@@ -42,7 +42,9 @@ export async function saveCharacter(rawChoices: unknown, id?: string): Promise<S
     if (!prepared.ok && existing && !isEmptyPicks(existing.tierPicks)) {
       prepared = await prepareCharacterData(rawChoices, existing.advancement, EMPTY_PICKS)
     }
-    if (!prepared.ok) return { ok: false, reason: 'invalid' }
+    if (!prepared.ok) {
+      return { ok: false, reason: prepared.advancementConflict ? 'advancement' : 'invalid' }
+    }
     const { data } = prepared
 
     let savedId: string

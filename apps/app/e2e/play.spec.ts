@@ -148,9 +148,7 @@ test('XP: spending more than you have is refused; advancing locks its XP entry',
   await expect(spendRow.getByRole('button', { name: 'Remove entry' })).toHaveCount(0)
 })
 
-test('advancement: completing a tier levels up; the next tier stops before an unsupported one', async ({
-  page,
-}) => {
+test('advancement: completing a tier levels up and owes the new tier’s picks', async ({ page }) => {
   await page.goto(playUrl)
   await addXp(page, 12, 'Big milestone')
   await tab(page, 'Status').click()
@@ -511,6 +509,58 @@ test('advancement: an Other option takes a step’s place; undoing it refunds it
       .filter({ hasText: name })
       .filter({ hasText: 'Advancement (tier 4)' }),
   ).toHaveCount(1)
+})
+
+test('advancement: a second Focus choice as an Other option; armor in the next tier', async ({
+  page,
+}) => {
+  await page.goto(playUrl)
+  await addXp(page, 16, 'Focus and armor')
+
+  // This tier's Other option is the Type ability bought above: undo it first
+  await tab(page, 'XP Log').click()
+  const history = page.locator('section').filter({ hasText: 'Advancement history' })
+  await history.getByRole('button', { name: 'Undo' }).first().click()
+  const dialog = page.getByRole('dialog')
+  await expect(dialog).toContainText('Type ability')
+  await dialog.getByRole('button', { name: 'Undo advancement' }).click()
+  await expect(dialog).toBeHidden()
+
+  // Tier 3's Focus choice was Wings of Fire; the other option can be taken too
+  await tab(page, 'Status').click()
+  const other = page.getByRole('listitem').filter({ hasText: 'Other option' })
+  await other.getByRole('button', { name: 'Choose…' }).click()
+  await page.getByRole('button', { name: /^Focus choice — / }).click()
+  await expect(page.getByText(/A second Focus choice is up to your GM/)).toBeVisible()
+  await page.getByRole('button', { name: 'Fiery Hand of Doom — tier 3' }).click()
+  await expect(page.getByText('1 / 4 steps')).toBeVisible()
+  await settled(page)
+
+  // Three standard steps close the tier
+  const buy = (step: string) =>
+    page.getByRole('listitem').filter({ hasText: step }).getByRole('button', { name: 'Purchase' })
+  await buy('Increasing Capabilities').click()
+  for (let i = 0; i < 4; i++) await page.getByRole('button', { name: 'Add to Speed' }).click()
+  await page.getByRole('button', { name: 'Confirm' }).click()
+  await buy('Moving Toward Perfection').click()
+  await page.getByRole('button', { name: /^Might \(/ }).click()
+  await buy('Extra Effort').click()
+  await expect(page.getByText('✓ Advanced to Tier 4 — all four steps purchased.')).toBeVisible()
+  await completePicks(page, /Tier 4 — choose your Type abilities/, 2)
+  await completeSkillPicks(page)
+  await settled(page)
+
+  // Next tier's Other option: armor
+  await expect(page.getByText(/Armor Speed Effort cost/)).toHaveCount(0)
+  await other.getByRole('button', { name: 'Choose…' }).click()
+  await page.getByRole('button', { name: /^Armor — / }).click()
+  await expect(page.getByText('Armor Speed Effort cost −1')).toBeVisible()
+  await settled(page)
+
+  await tab(page, 'Skills').click()
+  await expect(page.getByRole('listitem').filter({ hasText: 'Fiery Hand of Doom' })).toContainText(
+    'Advancement (tier 4)',
+  )
 })
 
 test('cleanup', async ({ page }) => {

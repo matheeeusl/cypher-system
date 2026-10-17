@@ -15,6 +15,19 @@ import { EMPTY_PICKS, flavorIdInUse, type TierPicks } from '@/lib/tier-picks'
 import { fetchContentVersions } from '@/lib/graphql/versions'
 
 /**
+ * Rule errors that mean the edit took away what an advancement depends on: an
+ * ability bought as an Other Option, or one a Skills purchase trained. The
+ * player has to undo that advancement in play mode first.
+ */
+const ADVANCEMENT_CONFLICTS = new Set([
+  'ADVANCEMENT_ABILITY_NOT_OFFERED',
+  'ADVANCEMENT_ABILITY_KNOWN',
+  'ADVANCEMENT_FOCUS_OPTION_INVALID',
+  'ADVANCEMENT_FOCUS_FIRST_CHOICE_MISSING',
+  'ABILITY_TRAINING_UNKNOWN',
+])
+
+/**
  * Turns untrusted wizard state into the row we store, or says why not.
  * Re-checks the shape, every wizard step, and finally asks the rules API
  * whether the choices make a legal character. Throws if the API is down.
@@ -23,7 +36,7 @@ export async function prepareCharacterData(
   rawChoices: unknown,
   advancement: AdvancementPurchaseInput[] = [],
   tierPicks: TierPicks = EMPTY_PICKS,
-): Promise<{ ok: true; data: CharacterData } | { ok: false }> {
+): Promise<{ ok: true; data: CharacterData } | { ok: false; advancementConflict?: true }> {
   const choices = parseChoices(rawChoices)
   if (!choices) return { ok: false }
 
@@ -49,7 +62,11 @@ export async function prepareCharacterData(
   const input = buildCharacterChoicesInput(choices, content, advancement, tierPicks)
   if (!input) return { ok: false }
   const result = await validateCharacterChoices(input)
-  if (result.__typename !== 'ValidCharacterResult') return { ok: false }
+  if (result.__typename !== 'ValidCharacterResult') {
+    return result.issues.some((issue) => ADVANCEMENT_CONFLICTS.has(issue.code))
+      ? { ok: false, advancementConflict: true }
+      : { ok: false }
+  }
 
   return {
     ok: true,
