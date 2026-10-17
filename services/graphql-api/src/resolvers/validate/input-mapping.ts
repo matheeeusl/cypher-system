@@ -87,11 +87,29 @@ export interface SkillsPurchaseInput {
   target: SkillsPurchaseTargetInput
 }
 
+export interface OtherOptionPurchaseInput {
+  tier: number
+}
+
+export interface TypeAbilityPurchaseInput {
+  tier: number
+  abilityId: string
+}
+
+export interface FocusAbilityPurchaseInput {
+  tier: number
+  abilityIds: string[]
+}
+
 export interface AdvancementPurchaseInput {
   increasingCapabilities?: IncreasingCapabilitiesPurchaseInput | null
   movingTowardPerfection?: MovingTowardPerfectionPurchaseInput | null
   extraEffort?: ExtraEffortPurchaseInput | null
   skills?: SkillsPurchaseInput | null
+  reduceArmorSpeedCost?: OtherOptionPurchaseInput | null
+  recoveryRollBonus?: OtherOptionPurchaseInput | null
+  typeAbility?: TypeAbilityPurchaseInput | null
+  focusAbility?: FocusAbilityPurchaseInput | null
 }
 
 export interface CharacterChoicesInput {
@@ -127,7 +145,7 @@ function mapSkillsPurchaseTarget(input: SkillsPurchaseTargetInput): SkillsPurcha
 }
 
 // The GraphQL @oneOf discriminant is *which field is populated*
-// (increasingCapabilities/movingTowardPerfection/extraEffort/skills), not an
+// (increasingCapabilities/movingTowardPerfection/extraEffort/skills/…), not an
 // explicit string tag — @cypher/engine's `option`, by contrast, IS an
 // explicit kebab-case string literal. That translation is hand-written here
 // and isn't checked by the type system (a typo like 'increasingCapabilities'
@@ -148,6 +166,20 @@ export function mapAdvancementPurchase(input: AdvancementPurchaseInput): Advance
   if (input.skills) {
     const { tier, target } = input.skills
     return { tier, option: 'skills', target: mapSkillsPurchaseTarget(target) }
+  }
+  if (input.reduceArmorSpeedCost) {
+    return { tier: input.reduceArmorSpeedCost.tier, option: 'reduce-armor-speed-cost' }
+  }
+  if (input.recoveryRollBonus) {
+    return { tier: input.recoveryRollBonus.tier, option: 'recovery-roll-bonus' }
+  }
+  if (input.typeAbility) {
+    const { tier, abilityId } = input.typeAbility
+    return { tier, option: 'type-ability', ability_id: abilityId }
+  }
+  if (input.focusAbility) {
+    const { tier, abilityIds } = input.focusAbility
+    return { tier, option: 'focus-ability', ability_ids: abilityIds }
   }
   // Unreachable in practice: the schema's @oneOf directive guarantees
   // exactly one field is set before this resolver ever runs.

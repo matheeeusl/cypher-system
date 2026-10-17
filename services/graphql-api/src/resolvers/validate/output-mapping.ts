@@ -8,6 +8,8 @@ function mapAbilitySource(source: KnownAbility['source']) {
       return { __typename: 'FocusAbilitySource' as const, focusId: source.focus_id }
     case 'flavor':
       return { __typename: 'FlavorAbilitySource' as const, flavorId: source.flavor_id }
+    case 'advancement':
+      return { __typename: 'AdvancementAbilitySource' as const, tier: source.tier }
   }
 }
 
@@ -29,6 +31,8 @@ function mapDerivedCharacter(character: DerivedCharacter) {
     },
     edge: character.edge,
     effort: character.effort,
+    recoveryRollBonus: character.recovery_roll_bonus,
+    armorSpeedCostReduction: character.armor_speed_cost_reduction,
     knownAbilities: character.known_abilities.map(mapKnownAbility),
     skills: Object.entries(character.skills).map(([skillId, { level }]) => ({ skillId, level })),
     pendingPicks: character.pending_picks.map((pick) =>

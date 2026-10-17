@@ -798,3 +798,83 @@ describe('validateCharacterChoices (Improved Edge)', () => {
     expect(payload.issues?.map((i) => i.code)).toEqual(['EDGE_CHOICE_NOT_ZERO'])
   })
 })
+
+describe('validateCharacterChoices (Other Options)', () => {
+  const QUERY = `
+    query Validate($input: CharacterChoicesInput!) {
+      validateCharacterChoices(input: $input) {
+        __typename
+        ... on ValidCharacterResult {
+          character {
+            tier
+            recoveryRollBonus
+            armorSpeedCostReduction
+            knownAbilities {
+              abilityId
+              source {
+                __typename
+                ... on AdvancementAbilitySource { tier }
+              }
+            }
+          }
+        }
+        ... on InvalidCharacterResult { issues { code } }
+      }
+    }
+  `
+  interface Data {
+    validateCharacterChoices: {
+      __typename: string
+      character?: {
+        tier: number
+        recoveryRollBonus: number
+        armorSpeedCostReduction: number
+        knownAbilities: Array<{ abilityId: string; source: { __typename: string; tier?: number } }>
+      }
+      issues?: Array<{ code: string }>
+    }
+  }
+
+  const threeStandard = (tier: number) => completeTierInput(tier, {}).slice(0, 3)
+
+  it('takes one Other Option per tier in place of a standard advancement', async () => {
+    const input = {
+      ...validInput,
+      advancementPurchases: [
+        ...threeStandard(2),
+        { typeAbility: { tier: 2, abilityId: 'quick-throw' } },
+        ...threeStandard(3),
+        { recoveryRollBonus: { tier: 3 } },
+        { focusAbility: { tier: 4, abilityIds: ['precise-cut'] } },
+      ],
+    }
+    const result = await graphqlRequest<Data>(QUERY, { input })
+    expect(result.errors).toBeUndefined()
+    const character = result.data.validateCharacterChoices.character!
+    expect(character.tier).toBe(3)
+    expect(character.recoveryRollBonus).toBe(2)
+    expect(character.armorSpeedCostReduction).toBe(0)
+    const bought = character.knownAbilities.filter(
+      (a) => a.source.__typename === 'AdvancementAbilitySource',
+    )
+    expect(bought).toEqual([
+      { abilityId: 'quick-throw', source: { __typename: 'AdvancementAbilitySource', tier: 2 } },
+      { abilityId: 'precise-cut', source: { __typename: 'AdvancementAbilitySource', tier: 4 } },
+    ])
+  })
+
+  it('reports two Other Options in one tier by code', async () => {
+    const input = {
+      ...validInput,
+      advancementPurchases: [
+        ...threeStandard(2).slice(0, 2),
+        { recoveryRollBonus: { tier: 2 } },
+        { reduceArmorSpeedCost: { tier: 2 } },
+      ],
+    }
+    const result = await graphqlRequest<Data>(QUERY, { input })
+    expect(result.data.validateCharacterChoices.issues?.map((i) => i.code)).toContain(
+      'TIER_OTHER_REPEATED',
+    )
+  })
+})

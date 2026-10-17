@@ -734,4 +734,15 @@ describe('advancementRules query', () => {
     expect(result.errors).toBeUndefined()
     expect(result.data.advancementRules.flavorCostXp).toBe(4)
   })
+
+  it('exposes what the recovery and armor Other Options give', async () => {
+    const result = await graphqlRequest<{
+      advancementRules: { recoveryRollBonus: number; armorSpeedCostReduction: number }
+    }>(`{ advancementRules { recoveryRollBonus armorSpeedCostReduction } }`)
+    expect(result.errors).toBeUndefined()
+    expect(result.data.advancementRules).toEqual({
+      recoveryRollBonus: 2,
+      armorSpeedCostReduction: 1,
+    })
+  })
 })

@@ -457,6 +457,24 @@ input AdvancementPurchaseInput @oneOf {
   movingTowardPerfection: MovingTowardPerfectionPurchaseInput
   extraEffort: ExtraEffortPurchaseInput
   skills: SkillsPurchaseInput
+  # The Other Options: at most one per tier, in place of a standard advancement.
+  reduceArmorSpeedCost: OtherOptionPurchaseInput
+  recoveryRollBonus: OtherOptionPurchaseInput
+  # Another Type (or flavor) ability, of the tier the character has when buying or lower.
+  typeAbility: TypeAbilityPurchaseInput
+  # One more option of a Focus choice already made (a bundled pair gives two ids).
+  focusAbility: FocusAbilityPurchaseInput
+}
+input OtherOptionPurchaseInput {
+  tier: Int!
+}
+input TypeAbilityPurchaseInput {
+  tier: Int!
+  abilityId: ID!
+}
+input FocusAbilityPurchaseInput {
+  tier: Int!
+  abilityIds: [ID!]!
 }
 input IncreasingCapabilitiesPurchaseInput {
   tier: Int!
@@ -533,7 +551,15 @@ type FocusAbilitySource {
 type FlavorAbilitySource {
   flavorId: ID!
 }
-union AbilitySource = TypeAbilitySource | FocusAbilitySource | FlavorAbilitySource
+# Gained through a typeAbility/focusAbility purchase tagged `tier`.
+type AdvancementAbilitySource {
+  tier: Int!
+}
+union AbilitySource =
+  | TypeAbilitySource
+  | FocusAbilitySource
+  | FlavorAbilitySource
+  | AdvancementAbilitySource
 
 enum SkillLevel {
   INABILITY
@@ -556,6 +582,10 @@ type DerivedCharacterPayload {
   pools: Pools!
   edge: Edge!
   effort: Int!
+  # Added to recovery rolls (1d6 + tier + this), from recoveryRollBonus purchases.
+  recoveryRollBonus: Int!
+  # Taken off the Speed Effort cost of wearing armor, from reduceArmorSpeedCost purchases.
+  armorSpeedCostReduction: Int!
   knownAbilities: [KnownAbility!]!
   skills: [SkillEntry!]!
   # Level-up choices still owed for tiers already reached.
@@ -608,6 +638,10 @@ type AdvancementRules {
   maxTier: Int!
   # XP cost of gaining a flavor in play (free when a character arc grants it).
   flavorCostXp: Int!
+  # What one recoveryRollBonus purchase adds to recovery rolls.
+  recoveryRollBonus: Int!
+  # What one reduceArmorSpeedCost purchase takes off the Speed Effort cost of armor.
+  armorSpeedCostReduction: Int!
 }
 
 # ---- queries ----

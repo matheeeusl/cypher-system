@@ -71,6 +71,25 @@ describe('mapAdvancementPurchase', () => {
     })
   })
 
+  it('maps the Other Options to their exact literals', () => {
+    expect(mapAdvancementPurchase({ reduceArmorSpeedCost: { tier: 2 } })).toEqual({
+      tier: 2,
+      option: 'reduce-armor-speed-cost',
+    })
+    expect(mapAdvancementPurchase({ recoveryRollBonus: { tier: 2 } })).toEqual({
+      tier: 2,
+      option: 'recovery-roll-bonus',
+    })
+    expect(mapAdvancementPurchase({ typeAbility: { tier: 3, abilityId: 'bash' } })).toEqual({
+      tier: 3,
+      option: 'type-ability',
+      ability_id: 'bash',
+    })
+    expect(
+      mapAdvancementPurchase({ focusAbility: { tier: 4, abilityIds: ['precise-cut'] } }),
+    ).toEqual({ tier: 4, option: 'focus-ability', ability_ids: ['precise-cut'] })
+  })
+
   it('throws if no variant is set (defensive — @oneOf should prevent this reaching here)', () => {
     expect(() => mapAdvancementPurchase({})).toThrow()
   })
