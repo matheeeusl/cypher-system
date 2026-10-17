@@ -104,6 +104,9 @@ type DescriptorSkillTraining {
   # skill, or "N skills of your choice."
   skillId: ID
   choiceCount: Int
+  # The level a fixed skill starts at: TRAINED, except the Elf's perception
+  # (SPECIALIZED). A choice entry is always TRAINED.
+  level: SkillLevel!
   # The rest of the book's line when it adds a rule: a condition, a narrower
   # choice ("perception or stealth"), or "specialized".
   note: LocalizedString

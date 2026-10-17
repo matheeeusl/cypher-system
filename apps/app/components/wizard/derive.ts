@@ -304,6 +304,16 @@ export function descriptorAutoTrainedSkillIds(descriptor: WizardDescriptor | und
     .filter((id): id is string => id !== null)
 }
 
+/** The auto-granted skills that start specialized (the Elf's perception) —
+ * already at the maximum, so no ability can train or specialize them. */
+export function descriptorSpecializedSkillIds(descriptor: WizardDescriptor | undefined): string[] {
+  if (!descriptor) return []
+  return descriptor.skillTraining
+    .filter((entry) => entry.level === 'SPECIALIZED')
+    .map((entry) => entry.skillId)
+    .filter((id): id is string => id !== null)
+}
+
 /** A Focus's tier-1 ChoiceAbility entries — most Foci have none (every
  * tier-1 ability is auto-granted). `options` is a list of option-bundles
  * (usually 1 ability id each, occasionally 2 for a bundled-pair option);

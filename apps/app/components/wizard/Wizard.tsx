@@ -36,6 +36,7 @@ import {
   descriptorPoolBonus,
   descriptorSkillChoicesNeeded,
   descriptorAutoTrainedSkillIds,
+  descriptorSpecializedSkillIds,
   focusTier1ChoiceEntries,
   furthestReachableStep,
   isStepValid,
@@ -591,6 +592,7 @@ function WizardInner({
                     ]
                   : []
               }
+              specializedSkillIds={descriptorSpecializedSkillIds(selectedDescriptor)}
               onToggleAbilitySkill={onToggleAbilitySkill}
             />
           )}

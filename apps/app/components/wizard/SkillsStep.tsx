@@ -5,7 +5,11 @@ import type { WizardDescriptor, WizardSkill } from '@/lib/graphql/queries'
 import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 
 import { CustomSkillInput } from './CustomSkillInput'
-import { descriptorAutoTrainedSkillIds, descriptorSkillChoicesNeeded } from './derive'
+import {
+  descriptorAutoTrainedSkillIds,
+  descriptorSkillChoicesNeeded,
+  descriptorSpecializedSkillIds,
+} from './derive'
 import { useWizardI18n } from './i18n'
 
 interface SkillsStepProps {
@@ -25,7 +29,7 @@ export function SkillsStep({
   selectedSkillIds,
   onToggle,
 }: SkillsStepProps) {
-  const { copy, t } = useWizardI18n()
+  const { copy, terms, t } = useWizardI18n()
   // The fixed skill whose description is open (same toggle as play mode's Skills tab).
   const [openSkillId, setOpenSkillId] = useState<string | null>(null)
   if (!descriptor) {
@@ -43,6 +47,7 @@ export function SkillsStep({
     return skill ? t(skill.name) : id
   }
   const autoTrainedIds = descriptorAutoTrainedSkillIds(descriptor)
+  const specializedIds = descriptorSpecializedSkillIds(descriptor)
   const needed = descriptorSkillChoicesNeeded(descriptor)
   const pickable = skills.filter((s) => !autoTrainedIds.includes(s.id))
   // Skills the player typed, picked in place of a catalog one.
@@ -69,6 +74,9 @@ export function SkillsStep({
                   }`}
                 >
                   {skillName(id)}
+                  {specializedIds.includes(id) && (
+                    <span className="text-warning"> · {terms.skillLevels.SPECIALIZED}</span>
+                  )}
                 </button>
               )
             })}

@@ -35,6 +35,22 @@ describe('applyDescriptorSkills', () => {
     })
   })
 
+  it('applies a fixed skill at its level when the Descriptor starts it above trained', () => {
+    const skills = applyDescriptorSkills(
+      {
+        skill_training: [
+          { skill_id: 'perception', choice_count: null, level: 'specialized' },
+          { skill_id: 'stealth', choice_count: null },
+        ],
+      },
+      [],
+    )
+    expect(skills).toEqual({
+      perception: { level: 'specialized' },
+      stealth: { level: 'trained' },
+    })
+  })
+
   it('throws when the number of choices does not match the required choice_count', () => {
     expect(() =>
       applyDescriptorSkills({ skill_training: [{ skill_id: null, choice_count: 2 }] }, [

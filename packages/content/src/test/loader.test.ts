@@ -169,6 +169,17 @@ describe('loader', () => {
     })
   })
 
+  // The Elf's perception is the only Descriptor skill the book grants above
+  // trained (its woodland stealth is conditional, so it stays trained).
+  it('marks only the Elf perception as a specialized Descriptor skill', () => {
+    const specialized = getAllDescriptors().flatMap((d) =>
+      d.skill_training
+        .filter((entry) => entry.level === 'specialized')
+        .map((entry) => `${d.id}:${entry.skill_id}`),
+    )
+    expect(specialized).toEqual(['elf:perception'])
+  })
+
   it('attaches a non-empty, deterministic content_version to every entity', () => {
     const [first] = getAllAbilities()
     expect(first?.content_version).toBeTruthy()

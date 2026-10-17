@@ -87,7 +87,9 @@ export interface WizardDescriptor {
   characteristics: Array<{ name: LocalizedString; description: LocalizedString }>
   // skillId is null when this entry is a "choose N skills" slot instead of a
   // specific named skill — see choiceCount.
-  skillTraining: Array<{ skillId: string | null; choiceCount: number | null }>
+  // level is TRAINED except where the book starts a fixed skill higher (the
+  // Elf's perception is SPECIALIZED).
+  skillTraining: Array<{ skillId: string | null; choiceCount: number | null; level: SkillLevel }>
   connectionOptions: LocalizedString[]
 }
 
@@ -105,7 +107,7 @@ const DESCRIPTORS_QUERY = `
         ... on DescriptorPoolOneOf { options { stat amount } }
       }
       characteristics { name { en ptBR } description { en ptBR } }
-      skillTraining { skillId choiceCount }
+      skillTraining { skillId choiceCount level }
       connectionOptions { en ptBR }
     }
   }

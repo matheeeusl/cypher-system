@@ -5,12 +5,15 @@
 // kept as a fallback so a bad id can never point at a page getStaticPaths
 // didn't generate. Choice entries ("N skills of your choice") have no skill
 // to link to, so they render as a plain muted pill instead of a bracketed
-// link.
+// link. A fixed entry's note (Elf: "specialized in woodland") shows as the
+// pill's tooltip rather than expanding the page; a level above trained
+// ("specialized") is printed on the pill, since a tooltip can't be read on
+// touch screens.
 import type { Skill } from '@cypher/content';
 import { pick, type UrlLocale } from '@lib/locale';
 
 type Entry =
-	| { kind: 'fixed'; id: string; skill: Skill | undefined }
+	| { kind: 'fixed'; id: string; skill: Skill | undefined; note?: string | null; level?: string | undefined }
 	| { kind: 'choice'; count: number };
 
 interface Props {
@@ -29,17 +32,20 @@ const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
 		entry.skill ? (
 			<a
 				href={`/${locale}/skills/${entry.id}/`}
+				title={entry.note ?? undefined}
 				class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap no-underline hover:border-accent"
 			>
 				<span class="opacity-50">[</span>
 				{pick(entry.skill.name, locale)}
 				<span class="opacity-50">]</span>
+				{entry.level && <span class="text-warning"> · {entry.level}</span>}
 			</a>
 		) : (
-			<span class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
+			<span title={entry.note ?? undefined} class="rounded border border-border bg-panel px-2 py-1 font-mono text-xs text-accent whitespace-nowrap">
 				<span class="opacity-50">[</span>
 				{entry.id}
 				<span class="opacity-50">]</span>
+				{entry.level && <span class="text-warning"> · {entry.level}</span>}
 			</span>
 		)
 	) : (

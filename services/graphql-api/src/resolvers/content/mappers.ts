@@ -139,6 +139,7 @@ export function mapDescriptor(d: WithVersion<Descriptor>) {
     skillTraining: d.skill_training.map((s) => ({
       skillId: s.skill_id,
       choiceCount: s.choice_count,
+      level: s.level ?? 'trained',
       note: s.note ? mapLocalizedString(s.note) : null,
     })),
     inabilities: d.inabilities.map(mapLocalizedString),

@@ -22,7 +22,9 @@ const ERRORS = {
 
 /**
  * Seeds a skill-level map from a Descriptor's structured skill_training:
- * entries with a specific skill_id are auto-applied as trained, entries
+ * entries with a specific skill_id are auto-applied as trained (or at the
+ * entry's `level`, when the book starts it higher — the Elf's perception is
+ * specialized), entries
  * with a choice_count are filled in from the player-chosen
  * descriptorSkillChoices. Descriptor.inabilities is prose, not skill ids —
  * often a whole task category rather than a single skill — so it's never
@@ -66,7 +68,7 @@ export function applyDescriptorSkills(
 
   for (const entry of descriptor.skill_training) {
     if (entry.skill_id !== null) {
-      skills[entry.skill_id] = { level: 'trained' }
+      skills[entry.skill_id] = { level: entry.level ?? 'trained' }
     }
   }
   for (const skillId of descriptorSkillChoices) {

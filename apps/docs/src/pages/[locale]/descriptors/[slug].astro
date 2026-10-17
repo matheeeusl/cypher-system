@@ -71,22 +71,44 @@ const CHOICE_RESTRICTIONS: Record<string, [string, string]> = {
 };
 const choiceRestriction = CHOICE_RESTRICTIONS[descriptor.id];
 
+// A level above trained that holds only somewhere, printed on the pill like
+// `level: specialized` is. The Elf's woodland stealth is the one case: the
+// data keeps it trained (it is, elsewhere) and the note has the condition,
+// so the short label is UI chrome keyed here like CHOICE_RESTRICTIONS.
+const CONDITIONAL_LEVELS: Record<string, Record<string, [string, string]>> = {
+	elf: { stealth: ['specialized in woodland', 'especializado em bosques'] },
+};
+const conditionalLevel = (skillId: string) => {
+	const label = CONDITIONAL_LEVELS[descriptor.id]?.[skillId];
+	return label && t(...label);
+};
+
 // Each entry is either a specific skill (skill_id set) or "N skills of your
 // choice" (choice_count set) — never both, per the schema's documented
 // convention. Resolved here, once, so the template just branches on `kind`.
 //
 // A `note` (genre descriptors: "You are trained in tasks related to stone,
 // including…", or Addicted's list of skills to pick from) is a whole
-// sentence, too long for a pill: noted entries render as rows below the
-// pills instead.
+// sentence, too long for a pill. A fixed skill is just its linked pill — the
+// Skill page is the reference, and the note rides along as a tooltip. Only a
+// noted *choice* renders as a row below the pills, since "Choose 1" means
+// nothing without saying what from (Uncanny: perception or stealth).
 const skillTrainingEntries = descriptor.skill_training.map((entry) => ({
 	...(entry.skill_id
-		? { kind: 'fixed' as const, id: entry.skill_id, skill: getSkillById(entry.skill_id) }
+		? {
+				kind: 'fixed' as const,
+				id: entry.skill_id,
+				skill: getSkillById(entry.skill_id),
+				level:
+					entry.level === 'specialized'
+						? t('specialized', 'especializado')
+						: conditionalLevel(entry.skill_id),
+			}
 		: { kind: 'choice' as const, count: entry.choice_count ?? 0 }),
 	note: entry.note ? pick(entry.note, locale) : null,
 }));
-const plainSkillEntries = skillTrainingEntries.filter((entry) => !entry.note);
-const notedSkillEntries = skillTrainingEntries.filter((entry) => entry.note);
+const plainSkillEntries = skillTrainingEntries.filter((entry) => entry.kind === 'fixed' || !entry.note);
+const notedSkillEntries = skillTrainingEntries.filter((entry) => entry.kind === 'choice' && entry.note);
 
 const additionalEquipmentText = descriptor.additional_equipment
 	? pick(descriptor.additional_equipment, locale)

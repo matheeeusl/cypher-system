@@ -163,7 +163,13 @@ describe('content queries', () => {
         }
         poolBonusChoice: unknown
       }
-      elf: { skillTraining: Array<{ skillId: string | null; note: LocalizedStringPayload | null }> }
+      elf: {
+        skillTraining: Array<{
+          skillId: string | null
+          level: string
+          note: LocalizedStringPayload | null
+        }>
+      }
     }>(`
       fragment PoolChoice on Descriptor {
         poolBonusChoice {
@@ -178,7 +184,7 @@ describe('content queries', () => {
           category { id name { en ptBR } intro { en } page }
           ...PoolChoice
         }
-        elf: descriptor(id: "elf") { skillTraining { skillId note { en } } }
+        elf: descriptor(id: "elf") { skillTraining { skillId level note { en } } }
       }
     `)
 
@@ -206,8 +212,11 @@ describe('content queries', () => {
     })
     expect(result.data.elf.skillTraining[0]).toEqual({
       skillId: 'perception',
+      level: 'SPECIALIZED',
       note: { en: 'You are specialized in tasks related to perception.' },
     })
+    // Woodland-only specialization stays trained; the note says where.
+    expect(result.data.elf.skillTraining[1]?.level).toBe('TRAINED')
   })
 
   it('resolves a Descriptor, including pool bonus, skill training, and connection options', async () => {

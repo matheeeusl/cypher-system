@@ -56,6 +56,9 @@ interface AbilitiesStepProps {
   abilitySkillChoices: Record<string, string[]>
   /** Skills already trained by the Descriptor — can't be picked again. */
   trainedSkillIds: string[]
+  /** The ones it starts specialized (the Elf's perception) — the maximum, so
+   * no grant can take them, whatever its mode. */
+  specializedSkillIds: string[]
   onToggleAbilitySkill: (slot: SkillGrantSlot, skillId: string) => void
 }
 
@@ -84,6 +87,7 @@ export function AbilitiesStep({
   skillGrantSlots,
   abilitySkillChoices,
   trainedSkillIds,
+  specializedSkillIds,
   onToggleAbilitySkill,
 }: AbilitiesStepProps) {
   const { copy, terms, t, locale } = useWizardI18n()
@@ -385,6 +389,7 @@ export function AbilitiesStep({
         if (slot.mode === 'train' && !slot.alternate) {
           trainedSkillIds.forEach((id) => unavailable.add(id))
         }
+        specializedSkillIds.forEach((id) => unavailable.add(id))
         const candidates = (skills ?? [])
           .filter((skill) => (slot.noncombat ? !skill.combat : slot.options.includes(skill.id)))
           .sort((a, b) => t(a.name).localeCompare(t(b.name)))

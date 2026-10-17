@@ -83,6 +83,12 @@ export const DescriptorSchema = z.object({
       // named skill, or "N skills of your choice."
       skill_id: z.string().nullable(),
       choice_count: z.number().int().nullable(),
+      // Set only when a fixed skill starts above trained — the Elf's
+      // perception is the one case in the book. Absent means trained, so
+      // the other files don't gain a key (and keep their content_version).
+      // A level that holds only somewhere (Elf: specialized in stealth in
+      // natural woodland) stays trained here; the note carries the rest.
+      level: z.literal('specialized').optional(),
       // The rest of the book's line when it adds a rule the id can't carry:
       // a condition (Bitter: "If a creature has wronged you, the tracking
       // task is eased"), a narrower choice (Uncanny: perception or stealth)

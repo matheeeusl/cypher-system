@@ -1,7 +1,8 @@
 # Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
 # 2025-09-17), p. 65 — Fantasy Species descriptors. Unofficial guide, not
-# the Cypher System Rulebook. skill_training has no level: perception
-# (specialized) and woodland stealth (specialized) say so in their notes.
+# the Cypher System Rulebook. Perception is `level: specialized`; stealth is
+# only specialized in natural woodland, so it stays trained and its note
+# says where.
 id: elf
 category: fantasy-species
 name:
@@ -52,6 +53,7 @@ characteristics:
 skill_training:
   - skill_id: perception
     choice_count: null
+    level: specialized
     note:
       en: You are specialized in tasks related to perception.
       pt-BR: Você é especializado em tarefas relacionadas à percepção.
