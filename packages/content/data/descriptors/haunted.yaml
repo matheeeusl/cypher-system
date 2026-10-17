@@ -1,0 +1,84 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 63 — Fairy Tale descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: haunted
+category: fairy-tale
+name:
+  en: Haunted
+  pt-BR: Assombrado
+description:
+  en: >-
+    The world seems more dangerous than it should. You are troubled by
+    fearful and anxious thoughts, and can't always discern what is a true
+    threat and what isn't. You might see shadows following you, be plagued
+    by nightmares, or be filled with a general sense of unease. This
+    constant feeling of being haunted drives you to try to make things feel
+    safer for yourself and those around you.
+  pt-BR: >-
+    O mundo parece mais perigoso do que deveria. Você é perturbado por
+    pensamentos de medo e ansiedade, e nem sempre consegue discernir o que é
+    uma ameaça real e o que não é. Talvez você veja sombras o seguindo, seja
+    atormentado por pesadelos ou tomado por uma sensação geral de
+    inquietação. Essa sensação constante de ser assombrado o leva a tentar
+    tornar as coisas mais seguras para você e para quem está à sua volta.
+pool_bonus:
+  - stat: speed
+    amount: 4
+characteristics:
+  - name:
+      en: Prescient
+      pt-BR: Presciente
+    description:
+      en: >-
+        You always see danger coming, whether it's there or not. Once after
+        each ten-hour recovery roll, you can refuse a GM intrusion without
+        spending XP. Alternatively, you can spend 1 XP and work with the GM
+        to turn the intrusion into something positive for your character.
+      pt-BR: >-
+        Você sempre vê o perigo chegando, esteja ele ali ou não. Uma vez após
+        cada rolagem de recuperação de dez horas, você pode recusar uma
+        intrusão do Mestre sem gastar XP. Como alternativa, pode gastar 1 XP
+        e trabalhar com o Mestre para transformar a intrusão em algo positivo
+        para o seu personagem.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+  - skill_id: sensing-danger
+    choice_count: null
+inabilities:
+  - en: >-
+      Anxious thoughts are heavy, and carrying them leaves you feeling
+      emotionally weaker than you'd like. Intellect defense tasks are
+      hindered.
+    pt-BR: >-
+      Pensamentos ansiosos são pesados, e carregá-los o deixa emocionalmente
+      mais fraco do que gostaria. Tarefas de defesa de Intelecto são
+      dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Being around one or more of the other PCs helps you better handle your
+      thoughts and emotions.
+    pt-BR: >-
+      Estar perto de um ou mais dos outros personagens o ajuda a lidar melhor
+      com os seus pensamentos e emoções.
+  - en: >-
+      You feel that one of the other PCs is in danger in some way, and you'd
+      like to help out or keep an eye on them.
+    pt-BR: >-
+      Você sente que um dos outros personagens está em perigo de alguma forma
+      e gostaria de ajudar ou ficar de olho nele.
+  - en: >-
+      One or more of the PCs helped you out when you were having a difficult
+      time.
+    pt-BR: >-
+      Um ou mais dos personagens o ajudaram quando você estava passando por
+      um momento difícil.
+  - en: >-
+      You are trying to learn more about your thoughts and emotions, and you
+      think that trying out your skills on an adventure is a great way to do
+      so.
+    pt-BR: >-
+      Você está tentando aprender mais sobre os seus pensamentos e emoções, e
+      acha que pôr as suas habilidades à prova numa aventura é uma ótima
+      maneira de fazer isso.

@@ -1,0 +1,125 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 61 — Fairy Tale descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: changeling
+category: fairy-tale
+name:
+  en: Changeling
+  pt-BR: Trocado
+description:
+  en: >-
+    Early on you discovered—or perhaps you knew all along—that you weren't
+    really who everyone thought you were. Perhaps when you were still very
+    young, the child whose name you have now was stolen, and you were put in
+    their place. Or perhaps you are the same person you've always been, but
+    you've never felt like yourself, and you know that the real you is
+    nothing like the one that everyone else knows. More than once in your
+    life, you've been abandoned, distrusted, and rejected by those you loved
+    most, which means that sometimes you fall into deep funks. However, you
+    are just as adept at pulling yourself out of them when the situation
+    demands it. If nothing else, you're supremely adaptable.
+  pt-BR: >-
+    Cedo você descobriu — ou talvez sempre soubesse — que não era de fato
+    quem todos pensavam. Talvez, quando você ainda era muito pequeno, a
+    criança cujo nome você tem hoje tenha sido roubada e você tenha sido
+    posto no lugar dela. Ou talvez você seja a mesma pessoa de sempre, mas
+    nunca se sentiu você mesmo, e sabe que o seu verdadeiro eu não tem nada
+    a ver com aquele que todos conhecem. Mais de uma vez na vida você foi
+    abandonado, desacreditado e rejeitado por quem mais amava, e por isso às
+    vezes cai em fossas profundas. Porém, você é igualmente hábil em sair
+    delas quando a situação exige. Se não for nada mais, você é
+    extremamente adaptável.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics:
+  - name:
+      en: Face-taker
+      pt-BR: Ladrão de Rostos
+    description:
+      en: >-
+        When you spend 1 XP, you can change your appearance over the course
+        of one minute to look like someone else of about your size who
+        you've had direct contact with or from whom you have a piece of hair
+        or flesh, or an object they handled often. You cannot return to your
+        previous appearance unless you have the same components at hand for
+        that appearance to initiate the change. Action to initiate, one
+        minute to complete.
+      pt-BR: >-
+        Ao gastar 1 XP, você pode mudar a sua aparência ao longo de um minuto
+        para se parecer com outra pessoa de tamanho semelhante ao seu com
+        quem teve contato direto, ou de quem tenha um pedaço de cabelo ou de
+        carne, ou um objeto que ela manuseava com frequência. Você não pode
+        voltar à aparência anterior a menos que tenha à mão os mesmos
+        componentes dessa aparência para iniciar a mudança. Ação para
+        iniciar, um minuto para concluir.
+  - name:
+      en: Changeable (2 Intellect points)
+      pt-BR: Mutável (2 pontos de Intelecto)
+    description:
+      en: >-
+        When you fail at a task and try again using a different method, you
+        roll twice on the second attempt and use the higher result. For
+        example, if guards catch you in the queen's chamber after dark and you
+        fail to convince them that you're there on legitimate business, you
+        can instead decide to flee, rolling twice on your roll to get away and
+        taking the higher result. Enabler.
+      pt-BR: >-
+        Quando você falha em uma tarefa e tenta de novo usando um método
+        diferente, rola duas vezes na segunda tentativa e usa o resultado
+        mais alto. Por exemplo, se os guardas o pegam nos aposentos da rainha
+        depois do anoitecer e você não consegue convencê-los de que está ali
+        a negócios legítimos, pode decidir fugir, rolando duas vezes para
+        escapar e ficando com o resultado mais alto. Habilitador.
+  - name:
+      en: Fragile
+      pt-BR: Frágil
+    description:
+      en: When you fail a Might defense roll to avoid damage, you take 1 extra point of damage.
+      pt-BR: >-
+        Quando você falha em uma rolagem de defesa de Força para evitar dano,
+        sofre 1 ponto de dano extra.
+skill_training:
+  - skill_id: deception
+    choice_count: null
+inabilities:
+  - en: >-
+      Your fluid nature leaves you less resistant to physical threats. Your
+      Might defense tasks are hindered.
+    pt-BR: >-
+      A sua natureza fluida o deixa menos resistente a ameaças físicas. Suas
+      tarefas de defesa de Força são dificultadas.
+additional_equipment:
+  en: >-
+    You have an amulet with a strange symbol on it, a link to your truest,
+    deepest self.
+  pt-BR: >-
+    Você tem um amuleto com um símbolo estranho, um elo com o seu eu mais
+    verdadeiro e profundo.
+connection_options:
+  - en: >-
+      The PCs discovered you weren't who they thought you were, but it doesn't
+      matter—they're still your friends.
+    pt-BR: >-
+      Os personagens descobriram que você não era quem eles pensavam, mas
+      isso não importa — eles continuam sendo seus amigos.
+  - en: >-
+      You want to discover your true self, and the PCs offered to help you
+      find it.
+    pt-BR: >-
+      Você quer descobrir o seu verdadeiro eu, e os personagens se
+      ofereceram para ajudá-lo a encontrá-lo.
+  - en: >-
+      Everything was fine until you were attacked by a group of "faerie
+      hunters." The PCs helped you fight back or flee.
+    pt-BR: >-
+      Estava tudo bem até você ser atacado por um grupo de "caçadores de
+      fadas". Os personagens o ajudaram a lutar ou a fugir.
+  - en: >-
+      You helped the PCs deal with a situation, and that led you to
+      discovering more about yourself and your background. You hope to do
+      more of that.
+    pt-BR: >-
+      Você ajudou os personagens a lidar com uma situação, e isso o levou a
+      descobrir mais sobre si mesmo e sobre o seu passado. Você espera fazer
+      mais disso.

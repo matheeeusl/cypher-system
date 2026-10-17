@@ -1,0 +1,90 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 76 — Modern Magic descriptors. Unofficial guide, not the
+# Cypher System Rulebook. Its two sidebars (the inability can't be trained
+# away; Adepts and Speakers are a challenge) are not modeled.
+id: unmagical
+category: modern-magic
+name:
+  en: Unmagical
+  pt-BR: Não Mágico
+description:
+  en: >-
+    You're not good at using magic. In fact, it's clear that you're
+    inherently unmagical—magic is as confusing, difficult, and awkward for
+    you as learning lava spells would be for a frost giant. It's not that you
+    don't believe in magic (though maybe you don't) or that you don't like
+    magic (though maybe you don't). It's just that you and magic are
+    incompatible. You've learned to compensate for this problem and even
+    turn it into an advantage in some cases.
+  pt-BR: >-
+    Você não é bom em usar magia. Na verdade, está claro que você é
+    inerentemente não mágico — a magia é tão confusa, difícil e desajeitada
+    para você quanto aprender feitiços de lava seria para um gigante do
+    gelo. Não é que você não acredite em magia (embora talvez não acredite)
+    ou que não goste de magia (embora talvez não goste). É só que você e a
+    magia são incompatíveis. Você aprendeu a compensar esse problema e até a
+    transformá-lo em vantagem em alguns casos.
+pool_bonus:
+  - stat: might
+    amount: 1
+  - stat: speed
+    amount: 1
+  - stat: intellect
+    amount: 1
+characteristics:
+  - name:
+      en: Resistant to Magic
+      pt-BR: Resistente à Magia
+    description:
+      en: >-
+        You are trained in all defense rolls against magic, spells, and
+        magical effects.
+      pt-BR: >-
+        Você é treinado em todas as rolagens de defesa contra magia, feitiços
+        e efeitos mágicos.
+  - name:
+      en: Magical Failure
+      pt-BR: Falha Mágica
+    description:
+      en: >-
+        Your unmagical nature means magic goes awry more often. For any task
+        relating to or interacting with magic, you trigger a GM intrusion on a
+        d20 roll of 1 or 2.
+      pt-BR: >-
+        A sua natureza não mágica faz a magia dar errado com mais frequência.
+        Em qualquer tarefa relacionada à magia ou que interaja com ela, você
+        provoca uma intrusão do Mestre com um resultado de 1 ou 2 no d20.
+skill_training: []
+inabilities:
+  - en: >-
+      All actions using magic (including casting spells and using magic
+      objects) are hindered.
+    pt-BR: >-
+      Todas as ações que usam magia (incluindo lançar feitiços e usar
+      objetos mágicos) são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      One of the other PCs initially diagnosed you as unmagical, which made a
+      lot of your life suddenly make sense.
+    pt-BR: >-
+      Um dos outros personagens foi quem primeiro o diagnosticou como não
+      mágico, o que de repente fez muito da sua vida fazer sentido.
+  - en: >-
+      You think this group of PCs might be on track to figuring out why some
+      people are unmagical and perhaps "fixing" them.
+    pt-BR: >-
+      Você acha que este grupo de personagens pode estar perto de descobrir
+      por que algumas pessoas são não mágicas e talvez "consertá-las".
+  - en: >-
+      You and the other PCs have the same rival or foe—someone who once tried
+      using magic on you and failed spectacularly.
+    pt-BR: >-
+      Você e os outros personagens têm o mesmo rival ou inimigo — alguém que
+      uma vez tentou usar magia em você e falhou espetacularmente.
+  - en: >-
+      You volunteered because you knew your inherent resistance to magic would
+      be useful to the group.
+    pt-BR: >-
+      Você se ofereceu porque sabia que a sua resistência inerente à magia
+      seria útil para o grupo.

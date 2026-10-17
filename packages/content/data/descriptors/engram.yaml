@@ -1,0 +1,112 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 57 — Cyberpunk descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The entry opens with a pull quote, kept as the
+# first line of the description.
+id: engram
+category: cyberpunk
+name:
+  en: Engram
+  pt-BR: Engrama
+description:
+  en: >-
+    "But I thought I was human this whole time!"
+
+    A common refrain within this uncommon demographic. You've got some
+    chrome—who doesn't?—but you thought you were human at the core. As it
+    turns out, you're not a mammalian body with machine augmentations.
+    You're a machine intelligence housed in a body constructed from
+    biological components. You're an engram—an AI personality based on
+    someone else's consciousness.
+
+    Short of an x-ray, invasive medical procedure, or catastrophic injury,
+    you seem normal enough. You may have recently found out you're an
+    engram, harbor suspicions that something isn't quite right, or begin
+    the adventure oblivious to your own android nature.
+  pt-BR: >-
+    "Mas eu achei que fosse humano esse tempo todo!"
+
+    Um refrão comum nesse grupo incomum. Você tem um pouco de cromo — quem
+    não tem? — mas achava que era humano no fundo. No fim das contas, você
+    não é um corpo mamífero com aprimoramentos mecânicos. Você é uma
+    inteligência de máquina abrigada num corpo construído com componentes
+    biológicos. Você é um engrama — uma personalidade de IA baseada na
+    consciência de outra pessoa.
+
+    Fora um raio X, um procedimento médico invasivo ou um ferimento
+    catastrófico, você parece normal o bastante. Talvez tenha descoberto há
+    pouco que é um engrama, desconfie de que algo não está muito certo ou
+    comece a aventura sem saber da sua própria natureza androide.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics:
+  - name:
+      en: Machine Reflexes
+      pt-BR: Reflexos de Máquina
+    description:
+      en: You are trained in Speed defense.
+      pt-BR: Você é treinado em defesa de Velocidade.
+  - name:
+      en: Inorganic Components
+      pt-BR: Componentes Inorgânicos
+    description:
+      en: >-
+        Attacks based on poison, disease, or infection have no effect on you.
+        Conversely, attacks that normally disrupt machines (such as an
+        electromagnetic pulse) can affect you.
+      pt-BR: >-
+        Ataques baseados em veneno, doença ou infecção não têm efeito sobre
+        você. Por outro lado, ataques que normalmente perturbam máquinas
+        (como um pulso eletromagnético) podem afetá-lo.
+  - name:
+      en: Computer Memory
+      pt-BR: Memória de Computador
+    description:
+      en: >-
+        You're observant and good at making inferences based on what's
+        around you. You are trained in tasks related to figuring out how to
+        solve problems with multiple solutions (like the best way to pack a
+        truck, or the fastest route through the city). Enabler.
+      pt-BR: >-
+        Você é observador e bom em fazer inferências com base no que está à
+        sua volta. Você é treinado em tarefas relacionadas a descobrir como
+        resolver problemas com várias soluções (como a melhor forma de
+        carregar um caminhão ou a rota mais rápida pela cidade). Habilitador.
+skill_training:
+  - skill_id: speed-defense
+    choice_count: null
+inabilities:
+  - en: >-
+      In the process of copying and transferring your consciousness, a few
+      things got muddled—including your social skills. All tasks relating to
+      pleasant social interaction are hindered.
+    pt-BR: >-
+      No processo de copiar e transferir a sua consciência, algumas coisas
+      se embaralharam — incluindo as suas habilidades sociais. Todas as
+      tarefas relacionadas a interações sociais agradáveis são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You're looking for others like yourself; you believe (perhaps
+      incorrectly) that another PC is also an engram.
+    pt-BR: >-
+      Você está procurando outros como você; acredita (talvez erroneamente)
+      que outro personagem também é um engrama.
+  - en: >-
+      Another PC was present when you discovered that you're an engram; they
+      may have even realized before you did.
+    pt-BR: >-
+      Outro personagem estava presente quando você descobriu que é um
+      engrama; talvez ele tenha até percebido antes de você.
+  - en: >-
+      You're looking for whoever made you; you may desire revenge, closure,
+      or to express gratitude.
+    pt-BR: >-
+      Você está procurando quem o criou; talvez queira vingança, um
+      desfecho ou expressar gratidão.
+  - en: >-
+      You overheard the PCs discussing something interesting and warned them
+      of a potential flaw in their plan.
+    pt-BR: >-
+      Você ouviu os personagens discutindo algo interessante e os alertou
+      sobre uma possível falha no plano deles.

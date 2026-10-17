@@ -1,0 +1,130 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), pp. 72–73 — Modern Magic descriptors. Unofficial guide, not
+# the Cypher System Rulebook. The Advancement options are listed by name
+# only; the book's stray "(188)" after Surprise Attack is dropped.
+id: ghost
+category: modern-magic
+name:
+  en: Ghost
+  pt-BR: Fantasma
+description:
+  en: >-
+    Unfortunately, you're dead. But hey, it's not all bad! Your spirit has
+    remained in the mortal world. You can still walk among the living, but
+    you no longer need pesky things like food or sleep. It's up to you how
+    long you've been dead, whether you remember your death, and why you've
+    stuck around: seeking revenge, settling a debt, protecting your
+    descendants, perfecting your great-grandma's pecan pie recipe, or
+    something else entirely.
+  pt-BR: >-
+    Infelizmente, você está morto. Mas, ei, nem tudo é ruim! O seu espírito
+    permaneceu no mundo mortal. Você ainda pode andar entre os vivos, mas
+    não precisa mais de coisas chatas como comida ou sono. Cabe a você
+    decidir há quanto tempo está morto, se lembra da sua morte e por que
+    continua por aqui: em busca de vingança, para quitar uma dívida,
+    proteger os seus descendentes, aperfeiçoar a receita de torta de nozes
+    da sua bisavó ou por algum motivo completamente diferente.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Sneaky
+      pt-BR: Sorrateiro
+    description:
+      en: You're trained in stealth and intimidation.
+      pt-BR: Você é treinado em furtividade e intimidação.
+  - name:
+      en: Incorporeal
+      pt-BR: Incorpóreo
+    description:
+      en: You're trained in Speed defense.
+      pt-BR: Você é treinado em defesa de Velocidade.
+  - name:
+      en: Calling the Dead
+      pt-BR: Chamado dos Mortos
+    description:
+      en: >-
+        You're trained in communicating with other ghosts, wraiths, undead,
+        and so on. You can also serve as a catalyst for communication with
+        the dead, providing an asset to a living character attempting such a
+        task (such as a séance or summoning).
+      pt-BR: >-
+        Você é treinado em se comunicar com outros fantasmas, espectros,
+        mortos-vivos e assim por diante. Também pode servir de catalisador
+        para a comunicação com os mortos, fornecendo um recurso a um
+        personagem vivo que tente uma tarefa assim (como uma sessão espírita
+        ou uma invocação).
+  - name:
+      en: Insubstantial
+      pt-BR: Insubstancial
+    description:
+      en: All physical attacks are hindered.
+      pt-BR: Todos os ataques físicos são dificultados.
+  - name:
+      en: Dead
+      pt-BR: Morto
+    description:
+      en: Positive social interaction tasks with living creatures are hindered.
+      pt-BR: >-
+        Tarefas de interação social positiva com criaturas vivas são
+        dificultadas.
+  - name:
+      en: Uniform
+      pt-BR: Uniforme
+    description:
+      en: >-
+        You're permanently wearing the clothes you had on when you died. This
+        can hinder social interactions if you're inappropriately dressed for
+        the setting (wearing a bathrobe and slippers to a formal party, for
+        example).
+      pt-BR: >-
+        Você usa para sempre as roupas que vestia quando morreu. Isso pode
+        dificultar interações sociais se você estiver vestido de forma
+        inadequada para o ambiente (de roupão e chinelos numa festa de gala,
+        por exemplo).
+  - name:
+      en: Ghost Advancement
+      pt-BR: Avanço de Fantasma
+    description:
+      en: >-
+        With the GM's approval, you can choose from these abilities instead
+        of your type abilities: Duplicate, Question the Spirits, See the
+        Unseen, Speaker for the Dead, Surprise Attack, Walk Through Walls.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher entre estas habilidades
+        em vez das habilidades do seu tipo: Duplicata, Questionar os
+        Espíritos, Ver o Invisível, Portador da Voz dos Mortos, Ataque
+        Surpresa, Atravessar Paredes.
+skill_training:
+  - skill_id: stealth
+    choice_count: null
+  - skill_id: intimidation
+    choice_count: null
+  - skill_id: speed-defense
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: You're on a journey to make amends with someone you wronged in life.
+    pt-BR: >-
+      Você está numa jornada para se redimir com alguém que prejudicou em
+      vida.
+  - en: >-
+      You're looking for the resting place of your physical body so you can
+      be resurrected.
+    pt-BR: >-
+      Você está procurando o lugar onde jaz o seu corpo físico para poder ser
+      ressuscitado.
+  - en: >-
+      One of the other PCs is a distant relative, and you need to keep them
+      alive so your bloodline continues.
+    pt-BR: >-
+      Um dos outros personagens é um parente distante, e você precisa mantê-lo
+      vivo para que a sua linhagem continue.
+  - en: >-
+      You're studying the secrets of reincarnation and suspect that one of
+      the other PCs has vital information.
+    pt-BR: >-
+      Você está estudando os segredos da reencarnação e suspeita que um dos
+      outros personagens tem informações vitais.

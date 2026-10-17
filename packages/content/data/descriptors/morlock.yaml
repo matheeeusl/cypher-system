@@ -1,0 +1,99 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 90 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook. "Cyborg Body: +2 to your Might Pool and your
+# Speed Pool" is read as +2 to each.
+id: morlock
+category: post-apocalyptic
+name:
+  en: Morlock
+  pt-BR: Morlock
+description:
+  en: >-
+    You have lived your life deep underground in artificial bunkers, hidden
+    from the world's destruction and the brutal scavengers that live above.
+    As a morlock, you have a keen mind for the technology salvaged from the
+    before-time. In fact, every morlock comes of age by fitting a piece of
+    morlock technology to its body to provide enhancement and extend its
+    life. This means that you are part flesh and part machine. Your skin is
+    as pale as milk, except where it's been replaced with strips of metal and
+    glowing circuits.
+  pt-BR: >-
+    Você viveu nas profundezas da terra, em abrigos artificiais, escondido
+    da destruição do mundo e dos catadores brutais que vivem na superfície.
+    Como morlock, você tem uma mente afiada para a tecnologia resgatada do
+    tempo de antes. Na verdade, todo morlock chega à maioridade instalando
+    no corpo uma peça de tecnologia morlock que o aprimora e prolonga a sua
+    vida. Isso significa que você é parte carne e parte máquina. A sua pele
+    é branca como leite, exceto onde foi substituída por tiras de metal e
+    circuitos brilhantes.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+  - stat: might
+    amount: 2
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Partially Metallic
+      pt-BR: Parcialmente Metálico
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+  - name:
+      en: Repair and Maintenance
+      pt-BR: Reparo e Manutenção
+    description:
+      en: >-
+        As an entity of living flesh and humming machinery, you must first
+        succeed on a difficulty 2 repair task before making a recovery roll.
+        On a failure, the recovery roll is not used; however, the normal rules
+        for retrying apply, and you must use Effort on a new roll if you wish
+        to try again. In addition to the normal options for using Effort, you
+        can choose to use Effort to heal additional points to your Pools (each
+        level of Effort healing an additional 2 points to your Pools if you
+        succeed).
+      pt-BR: >-
+        Como uma entidade de carne viva e maquinário zumbindo, você precisa
+        primeiro ter sucesso numa tarefa de reparo de dificuldade 2 antes de
+        fazer uma rolagem de recuperação. Se falhar, a rolagem de recuperação
+        não é gasta; porém, as regras normais para tentar de novo se aplicam,
+        e você precisa usar Esforço numa nova rolagem se quiser tentar de
+        novo. Além das opções normais de uso de Esforço, você pode usar
+        Esforço para curar pontos adicionais nas suas Reservas (cada nível de
+        Esforço cura 2 pontos adicionais nas suas Reservas se você tiver
+        sucesso).
+  - name:
+      en: Morlock Prejudice
+      pt-BR: Preconceito contra Morlocks
+    description:
+      en: While among non-morlocks, all positive interaction tasks are hindered.
+      pt-BR: >-
+        Entre quem não é morlock, todas as tarefas de interação positiva são
+        dificultadas.
+skill_training: []
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: The PCs found you in a collapsed subterranean tunnel.
+    pt-BR: Os personagens o encontraram num túnel subterrâneo desabado.
+  - en: >-
+      The other PCs encountered you exploring underground, and you convinced
+      them to allow you to accompany them.
+    pt-BR: >-
+      Os outros personagens o encontraram explorando o subsolo, e você os
+      convenceu a deixá-lo acompanhá-los.
+  - en: >-
+      You were exiled from the morlock communities and needed help on the
+      surface.
+    pt-BR: >-
+      Você foi exilado das comunidades morlocks e precisava de ajuda na
+      superfície.
+  - en: >-
+      The only way to save the morlock community you hail from is to venture
+      to the surface and find a mechanical part needed to repair a failing
+      ancient system.
+    pt-BR: >-
+      A única maneira de salvar a comunidade morlock de onde você vem é se
+      aventurar na superfície e encontrar uma peça mecânica necessária para
+      consertar um sistema antigo que está falhando.

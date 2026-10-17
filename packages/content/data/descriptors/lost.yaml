@@ -1,0 +1,103 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 63 — Fairy Tale descriptors. Unofficial guide, not the
+# Cypher System Rulebook. "Curiouser" quotes Alice's Adventures in Wonderland.
+id: lost
+category: fairy-tale
+name:
+  en: Lost
+  pt-BR: Perdido
+description:
+  en: >-
+    You can't remember exactly when it happened or why, but you have lost
+    your way. The path through life, or even through your own mind, no
+    longer seems to exist. Once you had a reason and a goal, but now you
+    find yourself wandering aimlessly, without clear purpose or drive.
+  pt-BR: >-
+    Você não lembra exatamente quando aconteceu nem por quê, mas perdeu o
+    rumo. O caminho pela vida, ou mesmo pela sua própria mente, parece não
+    existir mais. Antes você tinha um motivo e um objetivo, mas agora se vê
+    vagando sem rumo, sem propósito nem ímpeto claros.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Curiouser
+      pt-BR: Cada Vez Mais Curioso
+    description:
+      en: >-
+        You're rarely surprised by strange circumstances and are able to go
+        with the flow more than most. You can choose to automatically succeed
+        on an initiative task without rolling. You can do this one time,
+        although the ability renews each time you make a ten-hour recovery
+        roll.
+      pt-BR: >-
+        Você raramente se surpreende com circunstâncias estranhas e consegue
+        seguir o fluxo mais do que a maioria. Você pode escolher ter sucesso
+        automático em uma tarefa de iniciativa sem rolar. Você pode fazer isso
+        uma vez, mas a habilidade é renovada sempre que você faz uma rolagem
+        de recuperação de dez horas.
+  - name:
+      en: And Curiouser
+      pt-BR: E Cada Vez Mais Curioso
+    description:
+      en: >-
+        For being so lost yourself, you are able to help others find things
+        in the world. Anytime you help someone who is searching for a lost
+        object or person, you are able to point them in the right general
+        direction.
+      pt-BR: >-
+        Por estar tão perdido, você consegue ajudar os outros a encontrar
+        coisas no mundo. Sempre que ajuda alguém que procura um objeto ou uma
+        pessoa perdida, você consegue apontar a direção geral certa.
+skill_training:
+  - skill_id: null
+    choice_count: 3
+    note:
+      en: You're trained in three areas of knowledge of your choice.
+      pt-BR: Você é treinado em três áreas de conhecimento à sua escolha.
+  - skill_id: perception
+    choice_count: null
+inabilities:
+  - en: >-
+      Figuring out how to move through the world is not one of your
+      strongpoints. All tasks involving navigation, map reading, geography,
+      and so on are hindered.
+    pt-BR: >-
+      Descobrir como se deslocar pelo mundo não é um dos seus pontos fortes.
+      Todas as tarefas que envolvem navegação, leitura de mapas, geografia e
+      assim por diante são dificultadas.
+  - en: >-
+      Sometimes being directionless makes it hard to get moving. You have an
+      inability in noncombat Speed-related tasks, such as climbing, jumping,
+      and running.
+    pt-BR: >-
+      Às vezes, estar sem rumo torna difícil se pôr em movimento. Você tem
+      inabilidade em tarefas de Velocidade fora de combate, como escalar,
+      saltar e correr.
+additional_equipment:
+  en: >-
+    You carry a broken compass with you. It was a gift from someone you
+    cared about deeply.
+  pt-BR: >-
+    Você carrega consigo uma bússola quebrada. Foi um presente de alguém de
+    quem você gostava muito.
+connection_options:
+  - en: >-
+      The PCs came upon you while you were wandering and lost, and invited you
+      to join them.
+    pt-BR: >-
+      Os personagens o encontraram enquanto você vagava perdido e o
+      convidaram para se juntar a eles.
+  - en: You happened to be in the right place at the right time.
+    pt-BR: Você calhou de estar no lugar certo, na hora certa.
+  - en: >-
+      You wish to find your path again, and you hope that the PCs will help
+      you do that.
+    pt-BR: >-
+      Você deseja reencontrar o seu caminho e espera que os personagens o
+      ajudem nisso.
+  - en: >-
+      The PCs are heading somewhere specific, and it feels good to be
+      surrounded by people who know where they're going.
+    pt-BR: >-
+      Os personagens estão indo para um lugar específico, e é bom estar
+      cercado de pessoas que sabem para onde vão.

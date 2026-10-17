@@ -1,0 +1,96 @@
+# The book's descriptor groups, in its order (OG-CSPG p. 29). Each genre
+# group opens with one line of text, kept here as `intro`; Standard has none.
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), Chapter 3. pt-BR names confirmed by Matheus, 2026-10-16 (see
+# the cypher-pt-br-translation glossary).
+- id: standard
+  name:
+    en: Standard
+    pt-BR: Padrão
+  intro: null
+  page: 30
+- id: cyberpunk
+  name:
+    en: Cyberpunk
+    pt-BR: Cyberpunk
+  intro:
+    en: >-
+      These descriptors are appropriate for settings where humans augment
+      their capabilities with machine and computer components—cyberware.
+    pt-BR: >-
+      Estes descritores são apropriados para cenários em que os humanos
+      ampliam suas capacidades com componentes mecânicos e computacionais — o
+      cyberware.
+  page: 55
+- id: fairy-tale
+  name:
+    en: Fairy Tale
+    pt-BR: Contos de Fadas
+  intro:
+    en: These descriptors combine the idea of magic and mental health.
+    pt-BR: Estes descritores combinam a ideia de magia e saúde mental.
+  page: 60
+- id: fantasy-species
+  name:
+    en: Fantasy Species
+    pt-BR: Espécies de Fantasia
+  intro:
+    en: GMs may want dwarves and elves to be mechanically different from humans.
+    pt-BR: >-
+      O Mestre pode querer que anões e elfos sejam mecanicamente diferentes
+      dos humanos.
+  page: 64
+- id: modern-magic
+  name:
+    en: Modern Magic
+    pt-BR: Magia Moderna
+  intro:
+    en: >-
+      Most of these descriptors are for characters who are or become
+      significantly nonhuman.
+    pt-BR: >-
+      A maioria destes descritores é para personagens que são, ou se tornam,
+      significativamente não humanos.
+  page: 70
+- id: post-apocalyptic
+  name:
+    en: Post-Apocalyptic
+    pt-BR: Pós-Apocalíptico
+  intro:
+    en: >-
+      These descriptors include species affected by the disaster as well as
+      general descriptors for human PCs.
+    pt-BR: >-
+      Estes descritores incluem espécies afetadas pelo desastre, além de
+      descritores gerais para personagens humanos.
+  page: 77
+- id: science-fiction-species
+  name:
+    en: Science Fiction Species
+    pt-BR: Espécies de Ficção Científica
+  intro:
+    en: >-
+      GMs may want to offer alien species or androids who are mechanically
+      different from humans.
+    pt-BR: >-
+      O Mestre pode querer oferecer espécies alienígenas ou androides que
+      sejam mecanicamente diferentes dos humanos.
+  page: 93
+- id: superhero
+  name:
+    en: Superhero
+    pt-BR: Super-Heróis
+  intro:
+    en: GMs may want to offer unique superhero descriptors.
+    pt-BR: O Mestre pode querer oferecer descritores exclusivos de super-heróis.
+  page: 94
+- id: weird-west
+  name:
+    en: Weird West
+    pt-BR: Faroeste Sobrenatural
+  intro:
+    en: GMs may want to offer unique weird west descriptors.
+    pt-BR: >-
+      O Mestre pode querer oferecer descritores exclusivos de faroeste
+      sobrenatural.
+  page: 97

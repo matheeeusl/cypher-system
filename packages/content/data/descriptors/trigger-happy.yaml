@@ -1,0 +1,66 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 102 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook. Spelled "Trigger-Happy" in the p. 29 list; the
+# entry's own heading has no hyphen.
+id: trigger-happy
+category: weird-west
+name:
+  en: Trigger Happy
+  pt-BR: Gatilho Fácil
+description:
+  en: >-
+    You're not just fast, you're lightning fast. Quick thinking and nimble,
+    you're swift to act in critical situations—chiefly, when you're in a
+    showdown with another gunslinger. Some say you're a little too fast on
+    the draw. But any time folks call you "trigger happy" as if it's a put
+    down, you just smile, because they're burnishing your reputation. Your
+    rapid reaction time comes in handy in all sorts of situations. 'Course,
+    nothing is ever as important as putting a bullet in an opponent before
+    they do the same to you.
+  pt-BR: >-
+    Você não é só rápido, é rápido como um raio. De raciocínio rápido e
+    ágil, você age depressa em situações críticas — principalmente quando
+    está num duelo com outro pistoleiro. Há quem diga que você saca rápido
+    demais. Mas sempre que alguém o chama de "gatilho fácil" como se fosse
+    uma ofensa, você só sorri, porque estão polindo a sua reputação. O seu
+    tempo de reação rápido é útil em todo tipo de situação. É claro que
+    nada é tão importante quanto meter uma bala no adversário antes que ele
+    faça o mesmo com você.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+  - skill_id: speed-defense
+    choice_count: null
+inabilities:
+  - en: You may be fleet, but your Might defense rolls are hindered.
+    pt-BR: >-
+      Você pode ser veloz, mas as suas rolagens de defesa de Força são
+      dificultadas.
+additional_equipment:
+  en: You have a light or medium pistol (your choice).
+  pt-BR: Você tem uma pistola leve ou média (à sua escolha).
+connection_options:
+  - en: >-
+      Another PC was about to be gunned down and you saved them with a quick
+      draw of your own.
+    pt-BR: >-
+      Outro personagem estava prestes a ser baleado, e você o salvou com um
+      saque rápido.
+  - en: One of the other PCs recruited you for your unique talents.
+    pt-BR: Um dos outros personagens o recrutou pelos seus talentos únicos.
+  - en: >-
+      You hurt or killed someone important and had to get out of town, so you
+      went with the PCs.
+    pt-BR: >-
+      Você feriu ou matou alguém importante e teve que sair da cidade, então
+      foi com os personagens.
+  - en: >-
+      You showed up when and where you did on a dare—because, hey, you don't
+      back down from dares.
+    pt-BR: >-
+      Você apareceu onde e quando apareceu por causa de um desafio — porque,
+      ei, você não foge de um desafio.

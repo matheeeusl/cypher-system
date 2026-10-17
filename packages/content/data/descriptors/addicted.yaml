@@ -1,0 +1,138 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 55 — Cyberpunk descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: addicted
+category: cyberpunk
+name:
+  en: Addicted
+  pt-BR: Viciado
+description:
+  en: >-
+    You are addicted to a drug, probably something illegal, expensive, or
+    both. You are usually in control enough to be a functional adult,
+    holding down a job and maintaining some personal relationships, but the
+    hunger is always there, threatening to fuck up your life. You have a
+    unique insight about crime, or at least how to interface with the
+    criminal world so you can get your next score. You know you have your
+    addiction under control—your drug of choice helps you cope with your
+    illness, or the crapsack world you live in. Or you're looking for help.
+    Or you need to hit rock bottom before you realize how serious your
+    problem is. Or maybe you're too stubborn to realize this'll kill you
+    sooner rather than later. People who know about your addiction might
+    pity you, want to save you, or dismiss you as a junkie.
+  pt-BR: >-
+    Você é viciado em uma droga, provavelmente algo ilegal, caro ou as duas
+    coisas. Em geral você tem controle suficiente para ser um adulto
+    funcional, mantendo um emprego e alguns relacionamentos pessoais, mas a
+    fissura está sempre ali, ameaçando foder com a sua vida. Você tem uma
+    visão única do crime, ou pelo menos de como lidar com o submundo para
+    conseguir a próxima dose. Você sabe que tem o vício sob controle — a sua
+    droga preferida o ajuda a lidar com a sua doença, ou com o mundo de
+    merda em que você vive. Ou você está procurando ajuda. Ou precisa chegar
+    ao fundo do poço antes de perceber o quanto o seu problema é sério. Ou
+    talvez seja teimoso demais para perceber que isso vai matá-lo mais cedo
+    do que tarde. Quem sabe do seu vício pode ter pena de você, querer
+    salvá-lo ou descartá-lo como um drogado.
+pool_bonus: []
+pool_bonus_choice:
+  kind: divide
+  points: 2
+  stats: [might, speed]
+characteristics:
+  - name:
+      en: Survivor
+      pt-BR: Sobrevivente
+    description:
+      en: >-
+        If you weren't as tough as you are, you'd already be dead—whether
+        from an overdose, starting a fight while high and feeling immortal,
+        or doing something stupid while high (like driving the wrong way on
+        a highway). You get 2 additional points to divide among your Might
+        and Speed Pools.
+      pt-BR: >-
+        Se você não fosse tão resistente, já estaria morto — seja por uma
+        overdose, por começar uma briga chapado e se sentindo imortal, ou por
+        fazer alguma besteira chapado (como dirigir na contramão de uma
+        rodovia). Você recebe 2 pontos adicionais para dividir entre suas
+        Reservas de Força e de Velocidade.
+  - name:
+      en: Addiction
+      pt-BR: Vício
+    description:
+      en: You are addicted to one drug.
+      pt-BR: Você é viciado em uma droga.
+  - name:
+      en: Unusual Skills
+      pt-BR: Perícias Incomuns
+    description:
+      en: >-
+        Your exposure to drugs and drug culture has given you a unique
+        education. You become trained in your choice of two of the following
+        skills: biology, chemistry, climbing, identifying, pickpocketing,
+        running, seduction, sensing motive, sneaking.
+      pt-BR: >-
+        A sua exposição às drogas e à cultura das drogas lhe deu uma educação
+        singular. Você se torna treinado em duas das seguintes perícias, à
+        sua escolha: biologia, química, escalada, identificação, bater
+        carteira, corrida, sedução, perceber intenções, esgueirar-se.
+  - name:
+      en: All for Me
+      pt-BR: Tudo para Mim
+    description:
+      en: >-
+        When the GM gives you 2 XP for a GM intrusion, you get to keep both
+        of them instead of giving one to another player. You can do this one
+        time, but this ability is renewed each time you make a ten-hour
+        recovery roll.
+      pt-BR: >-
+        Quando o Mestre lhe dá 2 XP por uma intrusão do Mestre, você fica com
+        os dois em vez de dar um a outro jogador. Você pode fazer isso uma
+        vez, mas a habilidade é renovada sempre que você faz uma rolagem de
+        recuperação de dez horas.
+skill_training:
+  - skill_id: null
+    choice_count: 2
+    note:
+      en: >-
+        biology, chemistry, climbing, identifying, pickpocketing, running,
+        seduction, sensing motive, sneaking
+      pt-BR: >-
+        biologia, química, escalada, identificação, bater carteira, corrida,
+        sedução, perceber intenções, esgueirar-se
+inabilities:
+  - en: >-
+      Chemicals (of any kind) are hard for you to resist. Might and Intellect
+      tasks to resist addiction, drugs, and chemical attacks (such as tear
+      gas and tranquilizer darts) are hindered.
+    pt-BR: >-
+      Substâncias químicas (de qualquer tipo) são difíceis de resistir para
+      você. Tarefas de Força e de Intelecto para resistir a vícios, drogas e
+      ataques químicos (como gás lacrimogêneo e dardos tranquilizantes) são
+      dificultadas.
+additional_equipment:
+  en: You have two doses of a drug of your choice that costs $50 or less per dose.
+  pt-BR: >-
+    Você tem duas doses de uma droga à sua escolha que custa $50 ou menos por
+    dose.
+connection_options:
+  - en: You think one of the PCs is or knows a cheap source for your drug of choice.
+    pt-BR: >-
+      Você acha que um dos personagens é, ou conhece, uma fonte barata da sua
+      droga preferida.
+  - en: You sobered up to discover that you had agreed to work with the other PCs.
+    pt-BR: >-
+      Você ficou sóbrio e descobriu que tinha concordado em trabalhar com os
+      outros personagens.
+  - en: >-
+      Another PC saved your life (perhaps from an overdose or hostile
+      encounter with a dealer), and now you're trying to repay them.
+    pt-BR: >-
+      Outro personagem salvou a sua vida (talvez de uma overdose ou de um
+      encontro hostil com um traficante), e agora você está tentando
+      retribuir.
+  - en: >-
+      One PC has been your friend since before you became an addict, and you
+      want to keep them around.
+    pt-BR: >-
+      Um dos personagens é seu amigo desde antes de você se viciar, e você
+      quer mantê-lo por perto.

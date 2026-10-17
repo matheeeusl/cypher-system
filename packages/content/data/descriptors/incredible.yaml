@@ -1,0 +1,94 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 94 — Superhero descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The fourth Initial Link has no final period in the
+# book; kept as printed.
+id: incredible
+category: superhero
+name:
+  en: Incredible
+  pt-BR: Incrível
+description:
+  en: >-
+    You're misunderstood, and you might not even think of yourself as a
+    hero, but somehow you keep ending up in situations where your abilities
+    are just what's needed to prevent disaster. Maybe good luck cancels out
+    just enough of being cursed to count as a win. You've saved innocent
+    lives, defeated some really bad people, and perhaps even cheated death a
+    couple of times. Half the time you don't even know how you did it, but
+    you succeeded at the impossible … often with a lot of collateral damage.
+    When you hear police sirens, it's time to leave, but you know that
+    trouble will find you eventually—and you'll be ready to smash it.
+  pt-BR: >-
+    Você é incompreendido e talvez nem se considere um herói, mas de alguma
+    forma sempre acaba em situações em que suas habilidades são exatamente o
+    necessário para evitar um desastre. Talvez a boa sorte compense
+    exatamente o suficiente da maldição para contar como uma vitória. Você
+    já salvou vidas inocentes, derrotou gente realmente ruim e talvez até
+    tenha enganado a morte algumas vezes. Metade das vezes você nem sabe como
+    conseguiu, mas fez o impossível… muitas vezes com muitos danos
+    colaterais. Quando ouve sirenes de polícia, é hora de ir embora, mas você
+    sabe que os problemas vão encontrá-lo cedo ou tarde — e você estará
+    pronto para esmagá-los.
+pool_bonus:
+  - stat: might
+    amount: 2
+pool_bonus_choice:
+  kind: divide
+  points: 2
+  stats: [might, speed, intellect]
+characteristics:
+  - name:
+      en: Incredible Action
+      pt-BR: Ação Incrível
+    description:
+      en: >-
+        You can choose to automatically succeed on one task without rolling,
+        as long as the task's difficulty is no higher than 6. When you do so,
+        however, you also trigger a GM intrusion as if you had rolled a 1.
+        The intrusion doesn't invalidate the success, but it probably
+        qualifies it in some fashion. You can do this one time, although the
+        ability renews each time you make a ten-hour recovery roll.
+      pt-BR: >-
+        Você pode escolher ter sucesso automático em uma tarefa sem rolar,
+        desde que a dificuldade da tarefa não seja maior que 6. Ao fazer
+        isso, porém, você também provoca uma intrusão do Mestre como se
+        tivesse tirado 1. A intrusão não anula o sucesso, mas provavelmente o
+        torna parcial de alguma forma. Você pode fazer isso uma vez, mas a
+        habilidade é renovada sempre que você faz uma rolagem de recuperação
+        de dez horas.
+skill_training:
+  - skill_id: breaking-inanimate-objects
+    choice_count: null
+  - skill_id: jumping
+    choice_count: null
+inabilities:
+  - en: >-
+      Your destructive reputation or some other reluctance to communicate
+      makes people distrust you. Any task involving social interaction is
+      hindered.
+    pt-BR: >-
+      Sua reputação destrutiva, ou alguma outra relutância em se comunicar,
+      faz com que as pessoas desconfiem de você. Qualquer tarefa que envolva
+      interação social é dificultada.
+additional_equipment: null
+connection_options:
+  - en: >-
+      One of the other PCs sensed your decent heart and decided to befriend
+      you.
+    pt-BR: >-
+      Um dos outros personagens percebeu seu bom coração e decidiu se tornar
+      seu amigo.
+  - en: >-
+      You literally crashed through a wall and ended up in the middle of the
+      other PCs.
+    pt-BR: >-
+      Você literalmente atravessou uma parede e foi parar no meio dos outros
+      personagens.
+  - en: One of the other PCs reminds you of someone from your past.
+    pt-BR: Um dos outros personagens o faz lembrar de alguém do seu passado.
+  - en: >-
+      You were feeling lonely and took a risk talking to someone, and so far
+      it's paying off
+    pt-BR: >-
+      Você estava se sentindo sozinho e arriscou conversar com alguém, e até
+      agora está valendo a pena

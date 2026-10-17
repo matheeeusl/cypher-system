@@ -1,0 +1,106 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 70 — Modern Magic descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The Advancement options are listed by name only;
+# each is an ability in data/abilities/.
+id: chimera
+category: modern-magic
+name:
+  en: Chimera
+  pt-BR: Quimera
+description:
+  en: >-
+    You have a blend of animal attributes; you may be a well-known
+    mythological creature, like a satyr or minotaur, or you may have a
+    unique combination of features. Bison horns, boar tusks, bear paws, a
+    wolf's tail, a lion's mane: take your pick. Your thickened skin offers
+    protection from attacks and the elements. Depending on your
+    dexterity—and whether you have opposable thumbs—you may use adaptive
+    weapons and tools, like a dagger modified to be held in a paw instead of
+    a hand. You're eager to protect the ones closest to you, and usually
+    more likely to run toward conflict than away from it.
+  pt-BR: >-
+    Você tem uma mistura de atributos animais; pode ser uma criatura
+    mitológica bem conhecida, como um sátiro ou um minotauro, ou ter uma
+    combinação única de traços. Chifres de bisão, presas de javali, patas de
+    urso, cauda de lobo, juba de leão: escolha à vontade. Sua pele grossa
+    oferece proteção contra ataques e contra as intempéries. Dependendo da
+    sua destreza — e de você ter polegares opositores ou não —, você pode
+    usar armas e ferramentas adaptadas, como uma adaga modificada para ser
+    segurada por uma pata em vez de uma mão. Você é ávido por proteger os
+    mais próximos e, em geral, mais propenso a correr em direção ao conflito
+    do que para longe dele.
+pool_bonus:
+  - stat: might
+    amount: 1
+characteristics:
+  - name:
+      en: Fur and Hide
+      pt-BR: Pelo e Couro
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+  - name:
+      en: Charging Ahead
+      pt-BR: Avançando
+    description:
+      en: You're trained in initiative.
+      pt-BR: Você é treinado em iniciativa.
+  - name:
+      en: For the Gang
+      pt-BR: Pela Turma
+    description:
+      en: >-
+        You stick up for your friends. When you draw the attack, your defense
+        is only hindered by one step.
+      pt-BR: >-
+        Você defende os seus amigos. Quando você atrai o ataque, a sua defesa
+        é dificultada em apenas um passo.
+  - name:
+      en: Ham-fisted
+      pt-BR: Mãos Pesadas
+    description:
+      en: Tasks requiring fine motor skills are hindered.
+      pt-BR: Tarefas que exigem coordenação motora fina são dificultadas.
+  - name:
+      en: Chimera Advancement
+      pt-BR: Avanço de Quimera
+    description:
+      en: >-
+        With the GM's approval, you can choose from these abilities instead
+        of your type abilities: Athlete, Dual Light Wield, Enhanced Might,
+        Enhanced Speed, Fists of Fury, Frenzy.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher entre estas habilidades
+        em vez das habilidades do seu tipo: Atleta, Empunhadura Dupla de
+        Leve, Força Aprimorada, Velocidade Aprimorada, Punhos da Fúria,
+        Frenesi.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      A herd, a pride, a pack, a flock: whatever the collective noun for
+      chimeras is, you're looking to build (or join) one.
+    pt-BR: >-
+      Uma manada, um bando, uma matilha, uma revoada: seja qual for o
+      coletivo de quimeras, você quer formar um (ou entrar em um).
+  - en: >-
+      You need supplies to adapt a legendary weapon perfectly to your
+      physique.
+    pt-BR: >-
+      Você precisa de materiais para adaptar uma arma lendária perfeitamente
+      ao seu físico.
+  - en: >-
+      The other PCs were in the wrong place at the wrong time, and you
+      protected them from harm.
+    pt-BR: >-
+      Os outros personagens estavam no lugar errado, na hora errada, e você
+      os protegeu.
+  - en: >-
+      You were held hostage by someone running a chimera fighting ring, and
+      the other PCs freed you.
+    pt-BR: >-
+      Você era mantido refém por alguém que comandava um ringue de lutas de
+      quimeras, e os outros personagens o libertaram.

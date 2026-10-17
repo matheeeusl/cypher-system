@@ -1,0 +1,116 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 93 — Science Fiction Species descriptors. Unofficial guide,
+# not the Cypher System Rulebook. The book prints no Initial Link options.
+id: artificially-intelligent
+category: science-fiction-species
+name:
+  en: Artificially Intelligent
+  pt-BR: Inteligência Artificial
+description:
+  en: >-
+    You are a machine—not just a sentient machine, but a sapient one. Your
+    awareness might make you an exception, or there may be many like you,
+    depending on the setting.
+
+    Artificially intelligent characters have machine minds of one type or
+    another. This can involve an advanced computer brain, but it could also
+    be a liquid computer, a quantum computer, or a network of smart dust
+    particles creating an ambient intelligence. You might even have been an
+    organic creature whose mind was uploaded into a machine.
+
+    Your body, of course, is also a machine. Most people refer to you as a
+    robot or an android, although you know neither term describes you very
+    well, as you are as free-willed and free-thinking as they are.
+  pt-BR: >-
+    Você é uma máquina — não apenas uma máquina senciente, mas uma máquina
+    sapiente. Sua consciência pode fazer de você uma exceção, ou pode haver
+    muitos como você, dependendo do cenário.
+
+    Personagens com inteligência artificial têm mentes de máquina de um tipo
+    ou de outro. Pode ser um cérebro computacional avançado, mas também um
+    computador líquido, um computador quântico ou uma rede de partículas de
+    poeira inteligente que cria uma inteligência ambiente. Você pode até ter
+    sido uma criatura orgânica cuja mente foi transferida para uma máquina.
+
+    Seu corpo, é claro, também é uma máquina. A maioria das pessoas se
+    refere a você como robô ou androide, embora você saiba que nenhum dos
+    dois termos o descreve muito bem, já que você tem tanto livre-arbítrio e
+    pensamento livre quanto eles.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+  - stat: might
+    amount: 3
+  - stat: speed
+    amount: 3
+characteristics:
+  - name:
+      en: Shell
+      pt-BR: Carcaça
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+  - name:
+      en: Limited Recovery
+      pt-BR: Recuperação Limitada
+    description:
+      en: >-
+        Resting restores points only to your Intellect Pool, not to your
+        Might Pool or your Speed Pool.
+      pt-BR: >-
+        O descanso restaura pontos apenas à sua Reserva de Intelecto, não à
+        sua Reserva de Força nem à sua Reserva de Velocidade.
+  - name:
+      en: Mechanics, Not Medicines
+      pt-BR: Mecânica, Não Medicina
+    description:
+      en: >-
+        Conventional healing methods, including the vast majority of
+        restorative devices and medicines, do not restore points to any of
+        your Pools. You can recover points to your Intellect Pool only by
+        resting, and you can recover points to your Speed and Might Pools
+        only through repair. The difficulty of the repair task is equal to
+        the number of points of damage sustained, to a maximum of 10.
+        Repairing your Might and Speed Pools are always two different tasks.
+      pt-BR: >-
+        Métodos de cura convencionais, incluindo a grande maioria dos
+        dispositivos restauradores e remédios, não restauram pontos em
+        nenhuma de suas Reservas. Você só pode recuperar pontos na sua
+        Reserva de Intelecto descansando, e só pode recuperar pontos nas suas
+        Reservas de Velocidade e de Força por meio de reparos. A dificuldade
+        da tarefa de reparo é igual ao número de pontos de dano sofridos, até
+        um máximo de 10. Reparar suas Reservas de Força e de Velocidade são
+        sempre duas tarefas diferentes.
+  - name:
+      en: Machine Vulnerabilities and Invulnerabilities
+      pt-BR: Vulnerabilidades e Invulnerabilidades de Máquina
+    description:
+      en: >-
+        Damaging effects and other threats that rely on an organic
+        system—poison, disease, cell disruption, and so on—have no effect on
+        you. Neither do beneficial drugs or other effects. Conversely, things
+        that normally affect only inorganic or inanimate objects can affect
+        you, as can effects that disrupt machines.
+      pt-BR: >-
+        Efeitos danosos e outras ameaças que dependem de um sistema orgânico
+        — veneno, doença, ruptura celular e assim por diante — não têm efeito
+        sobre você. Drogas benéficas e outros efeitos do tipo também não.
+        Por outro lado, coisas que normalmente afetam apenas objetos
+        inorgânicos ou inanimados podem afetá-lo, assim como efeitos que
+        perturbam máquinas.
+  - name:
+      en: Uncanny Valley
+      pt-BR: Vale da Estranheza
+    description:
+      en: >-
+        You have a hard time relating to organic beings, and they don't react
+        well to you. All positive interaction tasks with such beings are
+        hindered by two steps.
+      pt-BR: >-
+        Você tem dificuldade de se relacionar com seres orgânicos, e eles não
+        reagem bem a você. Todas as tarefas de interação positiva com esses
+        seres são dificultadas em dois passos.
+skill_training: []
+inabilities: []
+additional_equipment: null
+connection_options: []

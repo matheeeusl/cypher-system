@@ -1,0 +1,132 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 80 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook. Erratic Flyer lets the player pick Hover
+# (data/abilities/hover) as a tier 1 type ability; the wizard doesn't offer
+# it yet.
+id: flutter
+category: post-apocalyptic
+name:
+  en: Flutter
+  pt-BR: Flutter
+description:
+  en: >-
+    You emerged from the chrysalis with your mind awash in skills instilled
+    while you matured, as well as knowledge handed down from your ancestors.
+    If the stories are true, some of your knowledge comes from even further
+    back, ceded by godlike "humans" who raised flutters into the light of
+    self-knowledge. That was before humans were lost, leaving the world in
+    ruins. Ruins that are now yours to refurbish and rebuild or, as many
+    prefer, to ignore while you instead go your own way. Humans may have
+    created you, but they're gone, and you can decide what you think you owe
+    them, if anything.
+
+    As a flutter, you are kin to the much smaller natural moths that still
+    flit by night. But you have an internal skeleton and lungs, and are far
+    larger. For all that, you also have wings, a proboscis, and much thinner
+    limbs than the average animal still roaming the world.
+  pt-BR: >-
+    Você saiu da crisálida com a mente transbordando de perícias incutidas
+    enquanto amadurecia, além de conhecimentos herdados dos seus ancestrais.
+    Se as histórias forem verdadeiras, parte desse conhecimento vem de ainda
+    mais longe, cedido por "humanos" semelhantes a deuses que trouxeram os
+    flutters à luz do autoconhecimento. Isso foi antes de os humanos se
+    perderem, deixando o mundo em ruínas. Ruínas que agora cabe a você
+    reformar e reconstruir ou, como muitos preferem, ignorar e seguir o
+    próprio caminho. Os humanos podem tê-lo criado, mas eles se foram, e
+    você pode decidir o que acha que lhes deve, se é que deve algo.
+
+    Como flutter, você é parente das mariposas naturais, muito menores, que
+    ainda esvoaçam à noite. Mas você tem esqueleto interno e pulmões, e é
+    muito maior. Ainda assim, também tem asas, uma probóscide e membros
+    muito mais finos que os do animal comum que ainda vaga pelo mundo.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Darksight
+      pt-BR: Visão no Escuro
+    description:
+      en: >-
+        You can see in dim light as though it were bright light and can see in
+        darkness as though it were dim light. Enabler.
+      pt-BR: >-
+        Você enxerga na penumbra como se fosse luz forte e no escuro como se
+        fosse penumbra. Habilitador.
+  - name:
+      en: Fragile
+      pt-BR: Frágil
+    description:
+      en: When you fail a Might defense roll to avoid damage, you take 1 extra point of damage.
+      pt-BR: >-
+        Quando você falha em uma rolagem de defesa de Força para evitar dano,
+        sofre 1 ponto de dano extra.
+  - name:
+      en: Erratic Flyer
+      pt-BR: Voo Errático
+    description:
+      en: >-
+        You can select Hover as if it were on your type's list of tier 1
+        abilities. Your ability to move as described in Hover is due to your
+        wings. In addition to the base ability described for Hover, if you
+        succeed on a difficulty 2 Intellect roll, you can keep your position
+        in the air instead of drifting with the wind or allowing momentum to
+        move you.
+
+        On a failure, you fly erratically as your action, possibly into the
+        ground, a wall, or the midst of enemies you were trying to avoid.
+        Enabler.
+      pt-BR: >-
+        Você pode escolher Flutuar como se estivesse na lista de habilidades
+        de grau 1 do seu tipo. A sua capacidade de se mover como descrito em
+        Flutuar vem das suas asas. Além da habilidade básica descrita em
+        Flutuar, se tiver sucesso numa rolagem de Intelecto de dificuldade 2,
+        você pode manter a posição no ar em vez de ser levado pelo vento ou
+        pelo impulso.
+
+        Em caso de falha, você voa de forma errática como sua ação,
+        possivelmente contra o chão, uma parede ou para o meio de inimigos que
+        tentava evitar. Habilitador.
+skill_training:
+  - skill_id: stealth
+    choice_count: null
+    note:
+      en: >-
+        You are adept at using your body's natural patterns of camouflage. You
+        are trained in hiding.
+      pt-BR: >-
+        Você é hábil em usar os padrões naturais de camuflagem do seu corpo.
+        Você é treinado em se esconder.
+inabilities:
+  - en: >-
+      You are confused by bright light. Perception tasks are hindered in
+      bright light.
+    pt-BR: >-
+      A luz forte o confunde. Tarefas de percepção são dificultadas sob luz
+      forte.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Some piece of knowledge gleaned from your time in the chrysalis made you
+      seek out and join the PCs.
+    pt-BR: >-
+      Algum conhecimento colhido no seu tempo na crisálida o fez procurar os
+      personagens e se juntar a eles.
+  - en: >-
+      The ruins are where knowledge of humans exists, and you heard the PCs
+      were headed there.
+    pt-BR: >-
+      As ruínas são onde está o conhecimento dos humanos, e você ouviu dizer
+      que os personagens iam para lá.
+  - en: >-
+      You overheard the PCs talking about a grand adventure, and you wanted to
+      be part of it.
+    pt-BR: >-
+      Você ouviu por acaso os personagens falando de uma grande aventura e
+      quis fazer parte dela.
+  - en: >-
+      You zigged when you should have zagged and ran headlong into the PCs.
+      They patched you up and you stayed with them.
+    pt-BR: >-
+      Você virou para um lado quando devia ter virado para o outro e trombou
+      de frente com os personagens. Eles o remendaram, e você ficou com eles.

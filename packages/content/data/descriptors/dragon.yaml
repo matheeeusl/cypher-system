@@ -1,0 +1,143 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 71 — Modern Magic descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The Advancement options are listed by name only;
+# the last one, "Training in Spitting Flames", is a bare line in the book
+# with no rules text.
+id: dragon
+category: modern-magic
+name:
+  en: Dragon
+  pt-BR: Dragão
+description:
+  en: >-
+    You can shift at will between a dragon and humanoid form; you may choose
+    to spend more time in one form or the other. In your dragon form you're
+    about 10 feet (3.5 m) long with four legs, leathery wings, and a
+    serpentlike tail. You're drawn to treasure and shiny things, but you're
+    willing to share your hoard with those you trust. Though you can speak
+    human languages, you can't ignore the fact that you're a wild part of
+    your local ecosystem—at least some of the time. You're an apex predator,
+    driven to fly and to hunt, and you brumate in cold temperatures like
+    other reptiles.
+  pt-BR: >-
+    Você pode alternar à vontade entre uma forma de dragão e uma forma
+    humanoide; pode escolher passar mais tempo em uma ou na outra. Na forma
+    de dragão você tem cerca de 3,5 m de comprimento, com quatro patas, asas
+    coriáceas e uma cauda serpentina. Você é atraído por tesouros e coisas
+    brilhantes, mas está disposto a dividir o seu tesouro com quem confia.
+    Embora fale línguas humanas, não pode ignorar o fato de que é uma parte
+    selvagem do ecossistema local — pelo menos parte do tempo. Você é um
+    predador de topo, movido a voar e a caçar, e entra em brumação no frio,
+    como outros répteis.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics:
+  - name:
+      en: Dragon Form
+      pt-BR: Forma de Dragão
+    description:
+      en: >-
+        You have both a humanoid form and a dragon form, and you can switch
+        forms up to four times in a 24-hour period. In dragon form, your
+        Speed defense tasks are hindered due to your size. Enabler.
+      pt-BR: >-
+        Você tem uma forma humanoide e uma forma de dragão, e pode trocar de
+        forma até quatro vezes em um período de 24 horas. Na forma de dragão,
+        suas tarefas de defesa de Velocidade são dificultadas por causa do
+        seu tamanho. Habilitador.
+  - name:
+      en: Fireproof
+      pt-BR: À Prova de Fogo
+    description:
+      en: +2 Armor against damage inflicted by fire or heat.
+      pt-BR: +2 de Armadura contra dano causado por fogo ou calor.
+  - name:
+      en: Wings (1 Might point)
+      pt-BR: Asas (1 ponto de Força)
+    description:
+      en: >-
+        When you have wings, you can fly a long distance as your action, or a
+        short distance as part of another action, for up to ten minutes
+        total. Enabler.
+      pt-BR: >-
+        Quando você tem asas, pode voar uma distância longa como sua ação, ou
+        uma distância curta como parte de outra ação, por até dez minutos no
+        total. Habilitador.
+  - name:
+      en: Teeth
+      pt-BR: Dentes
+    description:
+      en: >-
+        You are skilled in making unarmed bite attacks, which are a medium
+        weapon in your dragon form and a light weapon in your humanoid form.
+        Enabler.
+      pt-BR: >-
+        Você é hábil em fazer ataques desarmados de mordida, que são uma arma
+        média na sua forma de dragão e uma arma leve na sua forma humanoide.
+        Habilitador.
+  - name:
+      en: Spitting Flames (1+ Might point)
+      pt-BR: Cuspir Chamas (1+ ponto de Força)
+    description:
+      en: >-
+        You can breathe a ball of fire at a target within short range,
+        inflicting 3 points of fire damage. In addition to the normal options
+        for using Effort, you can use Effort to affect more targets; each
+        level of Effort affects one additional target. Action.
+      pt-BR: >-
+        Você pode soprar uma bola de fogo em um alvo a curta distância,
+        causando 3 pontos de dano de fogo. Além das opções normais de uso de
+        Esforço, você pode usar Esforço para afetar mais alvos; cada nível de
+        Esforço afeta um alvo adicional. Ação.
+  - name:
+      en: Dragon Advancement
+      pt-BR: Avanço de Dragão
+    description:
+      en: >-
+        With the GM's approval, you can choose any of these abilities instead
+        of a type ability, or gain them as an "other" character advancement:
+        Danger Sense, Defensive Field, Enhanced Might, Enhanced Might Edge,
+        Enlarge, Training in Spitting Flames.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher qualquer uma destas
+        habilidades em vez de uma habilidade de tipo, ou ganhá-las como um
+        avanço de personagem "outro": Sentido de Perigo, Campo Defensivo,
+        Força Aprimorada, Margem de Força Aprimorada, Ampliar, Treinamento em
+        Cuspir Chamas.
+skill_training: []
+inabilities:
+  - en: >-
+      Cold weather makes you want to burrow somewhere cozy and go dormant.
+      Speed tasks are hindered when the temperature falls below 50° F (10°
+      C).
+    pt-BR: >-
+      O frio faz você querer se enfiar num lugar aconchegante e hibernar.
+      Tarefas de Velocidade são dificultadas quando a temperatura cai abaixo
+      de 10 °C.
+additional_equipment: null
+connection_options:
+  - en: >-
+      The other PCs were hired as dragon hunters, but once they met you they
+      realized their mission was misguided.
+    pt-BR: >-
+      Os outros personagens foram contratados como caçadores de dragões, mas,
+      ao conhecê-lo, perceberam que a missão deles era um equívoco.
+  - en: >-
+      You're hoping to find a specific discontinued currency to add to your
+      hoard.
+    pt-BR: >-
+      Você espera encontrar uma moeda específica fora de circulação para
+      acrescentar ao seu tesouro.
+  - en: >-
+      You got stuck in your dragon form while molting, and the other PCs
+      helped remove your shed skin.
+    pt-BR: >-
+      Você ficou preso na forma de dragão durante a muda, e os outros
+      personagens ajudaram a remover a sua pele velha.
+  - en: >-
+      You're gathering ingredients for a difficult spell that will increase
+      the range and intensity of your fire-breathing attacks.
+    pt-BR: >-
+      Você está reunindo ingredientes para um feitiço difícil que vai
+      aumentar o alcance e a intensidade dos seus ataques de sopro de fogo.

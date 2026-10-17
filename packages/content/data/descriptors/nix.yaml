@@ -1,0 +1,136 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 74 — Modern Magic descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The Advancement options are listed by name only;
+# Restful Presence has no file in data/abilities/ yet.
+id: nix
+category: modern-magic
+name:
+  en: Nix
+  pt-BR: Nixe
+description:
+  en: >-
+    You're a shapeshifting water spirit. You can walk on two legs and breathe
+    air, but when you're submerged, you gain a tail, fins, and gills. You
+    probably live near flowing water, with no preference for salinity or
+    temperature; you also have a general affinity for nature and a knack for
+    identifying useful plants. Your playful and upbeat disposition doesn't
+    mean you're passive or helpless. Though you may prefer to talk your way
+    out of tough situations, you're quick to react to threats—especially in
+    water, where you maneuver with deadly accuracy.
+  pt-BR: >-
+    Você é um espírito das águas que muda de forma. Você anda sobre duas
+    pernas e respira ar, mas, quando está submerso, ganha cauda, nadadeiras
+    e guelras. Provavelmente vive perto de água corrente, sem preferência por
+    salinidade ou temperatura; também tem uma afinidade geral com a natureza
+    e jeito para identificar plantas úteis. O seu temperamento brincalhão e
+    animado não significa que você seja passivo ou indefeso. Embora prefira
+    sair de situações difíceis na conversa, você reage rápido a ameaças —
+    especialmente na água, onde se move com precisão mortal.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Transformation
+      pt-BR: Transformação
+    description:
+      en: >-
+        When submerged in water, you transform into a fish/human hybrid with
+        gills, fins, sharp teeth, and a tail. This transformation is
+        automatic. Enabler.
+      pt-BR: >-
+        Quando submerso na água, você se transforma num híbrido de peixe e
+        humano, com guelras, nadadeiras, dentes afiados e cauda. Essa
+        transformação é automática. Habilitador.
+  - name:
+      en: Unchillable
+      pt-BR: Imune ao Frio
+    description:
+      en: +2 Armor against damage caused by cold or ice.
+      pt-BR: +2 de Armadura contra dano causado por frio ou gelo.
+  - name:
+      en: Sharp Teeth
+      pt-BR: Dentes Afiados
+    description:
+      en: >-
+        You are skilled in making an unarmed bite attack, which is a medium
+        weapon in your aquatic form and a light weapon in your humanoid form.
+        Enabler.
+      pt-BR: >-
+        Você é hábil em fazer um ataque desarmado de mordida, que é uma arma
+        média na sua forma aquática e uma arma leve na sua forma humanoide.
+        Habilitador.
+  - name:
+      en: Quick Swimming
+      pt-BR: Nado Veloz
+    description:
+      en: >-
+        You can swim a long distance as your action, or a short distance as
+        part of another action.
+      pt-BR: >-
+        Você pode nadar uma distância longa como sua ação, ou uma distância
+        curta como parte de outra ação.
+  - name:
+      en: Close to Nature
+      pt-BR: Perto da Natureza
+    description:
+      en: You're skilled in identifying plants and animals.
+      pt-BR: Você é hábil em identificar plantas e animais.
+  - name:
+      en: Siren Song
+      pt-BR: Canto de Sereia
+    description:
+      en: You're extremely charismatic. You're skilled in persuasion and deception.
+      pt-BR: Você é extremamente carismático. Você é hábil em persuasão e enganação.
+  - name:
+      en: Distractible
+      pt-BR: Distraído
+    description:
+      en: >-
+        You have a hard time focusing. You're hindered in tasks involving
+        knowledge or lore, as well as resisting mental attacks.
+      pt-BR: >-
+        Você tem dificuldade de se concentrar. Você é dificultado em tarefas
+        que envolvem conhecimento ou saber, assim como em resistir a ataques
+        mentais.
+  - name:
+      en: Nix Advancement
+      pt-BR: Avanço de Nixe
+    description:
+      en: >-
+        With the GM's approval, you can choose from these abilities instead
+        of your type abilities: Calm Stranger, Enhanced Speed, Restful
+        Presence, Ruin Lore, Soothe the Savage, Wilderness Life.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher entre estas habilidades
+        em vez das habilidades do seu tipo: Acalmar Desconhecido, Velocidade
+        Aprimorada, Presença Tranquilizante, Conhecimento das Ruínas, Acalmar
+        a Fera, Vida na Natureza.
+skill_training:
+  - skill_id: persuasion
+    choice_count: null
+  - skill_id: deception
+    choice_count: null
+inabilities:
+  - en: When you're in water, attacks using weapons are hindered.
+    pt-BR: Quando você está na água, ataques com armas são dificultados.
+additional_equipment: null
+connection_options:
+  - en: The other PCs were stranded in a shipwreck, and you saved them.
+    pt-BR: Os outros personagens ficaram à deriva após um naufrágio, e você os salvou.
+  - en: >-
+      A factory is polluting your local body of water, and you're looking for
+      revenge.
+    pt-BR: >-
+      Uma fábrica está poluindo as águas onde você vive, e você quer
+      vingança.
+  - en: >-
+      You played a prank on the other PCs while they were swimming; after a
+      good laugh, they invited you to join them.
+    pt-BR: >-
+      Você pregou uma peça nos outros personagens enquanto eles nadavam;
+      depois de boas risadas, eles o convidaram para se juntar ao grupo.
+  - en: >-
+      You've been sent to search for a rare plant, believed by many to be
+      extinct.
+    pt-BR: >-
+      Você foi enviado em busca de uma planta rara que muitos acreditam estar
+      extinta.

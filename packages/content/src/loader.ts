@@ -18,13 +18,22 @@ import {
 } from './schemas/armor-category-table.js'
 import { ArtifactSchema, type Artifact } from './schemas/artifact.js'
 import { CypherSchema, type Cypher } from './schemas/cypher.js'
-import { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
+import {
+  DescriptorCategoryTableSchema,
+  DescriptorSchema,
+  type Descriptor,
+  type DescriptorCategoryTable,
+} from './schemas/descriptor.js'
 import { FlavorSchema, type Flavor } from './schemas/flavor.js'
 import { FocusSchema, type Focus } from './schemas/focus.js'
 import {
   FocusConnectionTableSchema,
   type FocusConnectionTable,
 } from './schemas/focus-connection-table.js'
+import {
+  MutantMutationTableSchema,
+  type MutantMutationTable,
+} from './schemas/mutant-mutation-table.js'
 import { OdditySchema, type Oddity } from './schemas/oddity.js'
 import { PriceTierTableSchema, type PriceTierTable } from './schemas/price-tier-table.js'
 import type { WithVersion } from './schemas/shared.js'
@@ -126,6 +135,14 @@ const animalFormMinorAbilitiesTable = loadReferenceTable<AnimalFormMinorAbilitie
   'animal-form-minor-abilities.yaml',
   AnimalFormMinorAbilitiesTableSchema,
 )
+const descriptorCategoryTable = loadReferenceTable<DescriptorCategoryTable>(
+  'descriptor-categories.yaml',
+  DescriptorCategoryTableSchema,
+)
+const mutantMutationTable = loadReferenceTable<MutantMutationTable>(
+  'mutant-mutations.yaml',
+  MutantMutationTableSchema,
+)
 
 export function getAllTypes(): WithVersion<Type>[] {
   return [...types.values()]
@@ -212,4 +229,14 @@ export function getAmmunition(): Ammunition {
 
 export function getAnimalFormMinorAbilitiesTable(): AnimalFormMinorAbilitiesTable {
   return animalFormMinorAbilitiesTable
+}
+
+/** The descriptor groups (Standard, Cyberpunk…) in the book's order. */
+export function getDescriptorCategoryTable(): DescriptorCategoryTable {
+  return descriptorCategoryTable
+}
+
+/** The Mutant descriptor's five d100 mutation tables. */
+export function getMutantMutationTable(): MutantMutationTable {
+  return mutantMutationTable
 }

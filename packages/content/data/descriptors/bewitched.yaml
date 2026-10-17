@@ -1,0 +1,74 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 60 — Fairy Tale descriptors. Unofficial guide, not the
+# Cypher System Rulebook. Missing from the book's table of contents, but
+# present in the chapter and in the p. 29 list.
+id: bewitched
+category: fairy-tale
+name:
+  en: Bewitched
+  pt-BR: Enfeitiçado
+description:
+  en: >-
+    You're not sure that your thoughts are always your own. You often hear a
+    voice or voices, guiding you and attempting to force your hand.
+    Sometimes these voices are helpful and kind. Other times, not so much.
+    Where do they come from, and are you cursed or blessed by them?
+  pt-BR: >-
+    Você não tem certeza de que seus pensamentos são sempre seus. Com
+    frequência você ouve uma voz, ou várias, guiando-o e tentando forçar a
+    sua mão. Às vezes essas vozes são úteis e gentis. Outras vezes, nem
+    tanto. De onde elas vêm, e elas são uma maldição ou uma bênção?
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics:
+  - name:
+      en: Insight
+      pt-BR: Intuição
+    description:
+      en: >-
+        The voices have many things to tell you and some of them are
+        beneficial. Once after each ten-hour recovery roll, you can use a
+        player intrusion without spending an XP.
+      pt-BR: >-
+        As vozes têm muitas coisas a lhe dizer, e algumas delas são
+        benéficas. Uma vez após cada rolagem de recuperação de dez horas,
+        você pode usar uma intrusão do jogador sem gastar XP.
+skill_training:
+  - skill_id: listening-and-hearing
+    choice_count: null
+inabilities:
+  - en: >-
+      The voices in your head are sometimes so loud it's hard to make sense
+      of the real world. You have an inability in navigation, tracking, and
+      identifying plants and animals.
+    pt-BR: >-
+      As vozes na sua cabeça às vezes são tão altas que fica difícil
+      entender o mundo real. Você tem inabilidade em navegação, rastreamento
+      e identificação de plantas e animais.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You listened to one of your voices, which suggested that this would be
+      a good thing to embark upon.
+    pt-BR: >-
+      Você deu ouvidos a uma das suas vozes, que sugeriu que embarcar nisso
+      seria uma boa ideia.
+  - en: >-
+      One of the other PCs sounds an awful lot like one of your voices, and
+      you'd like to spend time with them to find out if there's a connection.
+    pt-BR: >-
+      Um dos outros personagens soa muito parecido com uma das suas vozes, e
+      você quer passar um tempo com ele para descobrir se há alguma ligação.
+  - en: >-
+      You have reason to believe that being with the other PCs could help you
+      gain a better understanding of the thoughts and voices you hear.
+    pt-BR: >-
+      Você tem motivos para acreditar que estar com os outros personagens
+      pode ajudá-lo a entender melhor os pensamentos e as vozes que ouve.
+  - en: >-
+      You find that you can hear the voices more clearly when you're doing
+      something active, and this seemed like a good fit.
+    pt-BR: >-
+      Você percebe que ouve as vozes com mais clareza quando está fazendo
+      algo ativo, e isto pareceu se encaixar bem.

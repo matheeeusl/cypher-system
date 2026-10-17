@@ -1,0 +1,122 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 68 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook. Helborn Magic points to "Chapter 9: Abilities"
+# of the Cypher System Rulebook / OG-CSRD; OG-CSPG's own low-tier list is on
+# pp. 449–455 and names helborn as a source.
+id: helborn
+category: fantasy-species
+name:
+  en: Helborn
+  pt-BR: Infernato
+description:
+  en: >-
+    Demons of the underworld sometimes escape. When they do, they can taint
+    human bloodlines. Things like you are the result of such unnatural
+    unions. Part human and part something else, you are an orphan of a
+    supernatural dalliance. Thanks to your unsettling appearance, you've
+    probably been forced to make your own way in a world that often fears
+    and resents you.
+
+    Some of your kin have large horns, tails, and pointed teeth. Others are
+    more subtle or more obvious in their differences—a shadow of a
+    knife-edge in their face and a touch that withers normal plants, a
+    little too much fire in their eyes and a scent of ash in the air, a
+    forked tongue, goatlike legs, or the inability to cast a shadow. Work
+    with the GM on your particular helborn appearance.
+  pt-BR: >-
+    Os demônios do submundo às vezes escapam. Quando isso acontece, podem
+    contaminar linhagens humanas. Seres como você são o resultado dessas
+    uniões antinaturais. Parte humano e parte outra coisa, você é órfão de
+    um envolvimento sobrenatural. Por causa da sua aparência perturbadora,
+    provavelmente foi obrigado a abrir o próprio caminho num mundo que
+    muitas vezes o teme e o ressente.
+
+    Alguns dos seus parentes têm chifres grandes, cauda e dentes pontudos.
+    Outros são mais sutis, ou mais óbvios, em suas diferenças — a sombra de
+    um fio de navalha no rosto e um toque que murcha plantas comuns, um
+    pouco de fogo demais nos olhos e um cheiro de cinzas no ar, uma língua
+    bifurcada, pernas de bode ou a incapacidade de projetar sombra.
+    Combine com o Mestre a sua aparência infernata particular.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Fire Adapted
+      pt-BR: Adaptado ao Fogo
+    description:
+      en: +2 to Armor against damage from fire only.
+      pt-BR: +2 de Armadura apenas contra dano de fogo.
+  - name:
+      en: Helborn Magic
+      pt-BR: Magia Infernata
+    description:
+      en: >-
+        You are inherently magical. Choose one low-tier ability from Chapter
+        9: Abilities. If the GM agrees it is appropriate, you gain that
+        ability as part of your helborn heritage, and can use it like any
+        other type or focus ability.
+      pt-BR: >-
+        Você é inerentemente mágico. Escolha uma habilidade de grau baixo do
+        Capítulo 9: Habilidades. Se o Mestre concordar que é apropriada, você
+        ganha essa habilidade como parte da sua herança infernata e pode
+        usá-la como qualquer outra habilidade de tipo ou de foco.
+  - name:
+      en: Inner Evil
+      pt-BR: Mal Interior
+    description:
+      en: >-
+        You sometimes lose control and risk hurting your allies. When you
+        roll a 1, the GM has the option to intrude by indicating that you
+        lose control. Once you've lost control, you attack any and every
+        living creature within short range. You can't spend Intellect points
+        for any reason other than to try to regain control (a difficulty 2
+        task). After you regain control, you suffer a −1 penalty to all rolls
+        for one hour.
+      pt-BR: >-
+        Às vezes você perde o controle e corre o risco de ferir os seus
+        aliados. Quando você tira 1, o Mestre pode fazer uma intrusão
+        indicando que você perde o controle. Depois de perder o controle,
+        você ataca toda e qualquer criatura viva a curta distância. Você não
+        pode gastar pontos de Intelecto por nenhum motivo além de tentar
+        recuperar o controle (uma tarefa de dificuldade 2). Depois de
+        recuperar o controle, você sofre uma penalidade de −1 em todas as
+        rolagens por uma hora.
+skill_training:
+  - skill_id: supernatural-knowledge
+    choice_count: null
+    note:
+      en: You are trained in tasks related to magic lore and lore of the underworld.
+      pt-BR: >-
+        Você é treinado em tarefas relacionadas ao saber mágico e ao saber do
+        submundo.
+inabilities:
+  - en: People distrust you. Tasks to persuade or deceive are hindered.
+    pt-BR: >-
+      As pessoas desconfiam de você. Tarefas para persuadir ou enganar são
+      dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You were nearly beaten to death by people who didn't like your look, but
+      the PCs found and revived you.
+    pt-BR: >-
+      Você quase foi espancado até a morte por pessoas que não gostaram da sua
+      aparência, mas os personagens o encontraram e o reanimaram.
+  - en: The PCs hired you for your knowledge of magic.
+    pt-BR: Os personagens o contrataram pelo seu conhecimento de magia.
+  - en: >-
+      Every so often you get visions of people trapped in the underworld. You
+      tracked those people down and found the PCs, who'd never visited the
+      underworld. Yet.
+    pt-BR: >-
+      De tempos em tempos você tem visões de pessoas presas no submundo. Você
+      rastreou essas pessoas e encontrou os personagens, que nunca tinham
+      visitado o submundo. Ainda.
+  - en: >-
+      Your situation at home became untenable because of how people reacted
+      to your looks. You joined the PCs to get away.
+    pt-BR: >-
+      A sua situação em casa ficou insustentável por causa da reação das
+      pessoas à sua aparência. Você se juntou aos personagens para ir
+      embora.

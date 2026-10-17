@@ -1,0 +1,129 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 56 — Cyberpunk descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The equipment line is missing a word in the book
+# ("allowed you to a comfortable buffer"); kept as printed.
+id: corpo
+category: cyberpunk
+name:
+  en: Corpo
+  pt-BR: Corporativo
+description:
+  en: >-
+    You have (or had) a successful career working for a megacorporation,
+    climbing your way up through the ranks. You've kissed ass and
+    backstabbed as much as you needed to in order to survive the capitalist
+    rat race. You're smart, manipulative, and observant. Maybe you're still
+    employed there, with a "safe" promotion that's giving you some time to
+    take a breather before your next goal. Maybe you were fired for cause,
+    or cut loose to improve the corporation's end-of-quarter profit. You
+    might be a loyalist looking to get back in, or vengeful and ready to see
+    what other opportunities avail you.
+  pt-BR: >-
+    Você tem (ou teve) uma carreira de sucesso trabalhando para uma
+    megacorporação, subindo na hierarquia. Puxou saco e apunhalou pelas
+    costas o quanto precisou para sobreviver à corrida dos ratos
+    capitalista. Você é esperto, manipulador e observador. Talvez ainda
+    trabalhe lá, com uma promoção "segura" que lhe dá algum tempo para
+    respirar antes da próxima meta. Talvez tenha sido demitido por justa
+    causa, ou dispensado para melhorar o lucro do trimestre da corporação.
+    Você pode ser um leal querendo voltar, ou um vingativo pronto para ver
+    que outras oportunidades estão ao seu alcance.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Fake Smile
+      pt-BR: Sorriso Falso
+    description:
+      en: >-
+        You can turn on the charm in order to get what you want. You're
+        trained in positive social interactions.
+      pt-BR: >-
+        Você sabe ligar o charme para conseguir o que quer. Você é treinado
+        em interações sociais positivas.
+  - name:
+      en: Cold Eyes
+      pt-BR: Olhar Frio
+    description:
+      en: You can be ruthless when it suits you. You're trained in intimidation.
+      pt-BR: >-
+        Você sabe ser implacável quando lhe convém. Você é treinado em
+        intimidação.
+  - name:
+      en: Business Acumen
+      pt-BR: Tino para Negócios
+    description:
+      en: >-
+        You know how megacorporations work. You're trained in bureaucracy
+        and corporate business.
+      pt-BR: >-
+        Você sabe como as megacorporações funcionam. Você é treinado em
+        burocracia e negócios corporativos.
+  - name:
+      en: Office Politics
+      pt-BR: Politicagem de Escritório
+    description:
+      en: >-
+        You're aware of how others can manipulate and charm people, and you
+        notice when those tactics are used on you. You are trained in
+        resisting persuasion and seduction.
+      pt-BR: >-
+        Você sabe como os outros podem manipular e encantar as pessoas, e
+        percebe quando essas táticas são usadas contra você. Você é treinado
+        em resistir à persuasão e à sedução.
+  - name:
+      en: Self-serving
+      pt-BR: Interesseiro
+    description:
+      en: >-
+        You're always looking out for number one—yourself. When you help
+        another character, they gain no benefit from your help unless you
+        are trained or specialized in that task.
+      pt-BR: >-
+        Você sempre cuida do número um — você mesmo. Quando ajuda outro
+        personagem, ele não recebe nenhum benefício da sua ajuda, a menos que
+        você seja treinado ou especializado naquela tarefa.
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: intimidation
+    choice_count: null
+inabilities:
+  - en: >-
+      Life in a climate-controlled corporate office has made you a little
+      soft. Might defense tasks are hindered.
+    pt-BR: >-
+      A vida num escritório corporativo climatizado o deixou um pouco mole.
+      Tarefas de defesa de Força são dificultadas.
+additional_equipment:
+  en: >-
+    Your job has allowed you to a comfortable buffer in your savings
+    account. Your starting money is increased by $250.
+  pt-BR: >-
+    Seu emprego lhe permitiu juntar uma reserva confortável na poupança. Seu
+    dinheiro inicial aumenta em $250.
+connection_options:
+  - en: You charmed or intimidated another PC into bringing you along.
+    pt-BR: >-
+      Você encantou ou intimidou outro personagem até ele aceitar levá-lo
+      junto.
+  - en: >-
+      The PCs knew that someone with megacorporation knowledge and
+      connections would be helpful, and chose you.
+    pt-BR: >-
+      Os personagens sabiam que alguém com conhecimento e contatos em
+      megacorporações seria útil, e escolheram você.
+  - en: >-
+      One of the PCs owed you a favor, and this is how you've decided they're
+      repaying it.
+    pt-BR: >-
+      Um dos personagens lhe devia um favor, e foi assim que você decidiu que
+      ele o pagaria.
+  - en: >-
+      You suspect that assisting the other PCs might give you a long-term
+      advantage towards your goals or against your enemies.
+    pt-BR: >-
+      Você suspeita que ajudar os outros personagens pode lhe dar uma
+      vantagem a longo prazo para os seus objetivos ou contra os seus
+      inimigos.

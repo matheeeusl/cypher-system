@@ -23,6 +23,11 @@ description:
     crescia para se desenvolver do jeito que quis — ficou forte, ficou
     rápido ou aprimorou sua mente.
 pool_bonus: []
+# Versatile (below) as structured data, so the engine applies it.
+pool_bonus_choice:
+  kind: divide
+  points: 4
+  stats: [might, speed, intellect]
 characteristics:
   - name:
       en: Versatile

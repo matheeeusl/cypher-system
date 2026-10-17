@@ -1,0 +1,108 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), pp. 81–89 — Post-Apocalyptic descriptors. Unofficial guide,
+# not the Cypher System Rulebook. Every mutation is rolled, so nothing here
+# is structured: the five d100 tables are
+# data/reference-tables/mutant-mutations.yaml. The "transitory mutations"
+# optional rule is mentioned but not defined in this book.
+id: mutant
+category: post-apocalyptic
+name:
+  en: Mutant
+  pt-BR: Mutante
+description:
+  en: >-
+    Savage forces strong enough to destroy a world left you transformed.
+    Either through latent mutations passed down from ancestors that survived
+    the apocalypse, or because something about you reacts when you're
+    exposed to radiation or some other mutagenic source, you are prone to
+    mutation. You might look relatively similar to others of your species,
+    or you might have one or more obvious physical differences that make it
+    hard to disguise your nature. Not that you necessarily want to hide what
+    you are; you might wish to proudly display what makes you different and,
+    to your mind, better.
+  pt-BR: >-
+    Forças selvagens o bastante para destruir um mundo o deixaram
+    transformado. Seja por mutações latentes herdadas de ancestrais que
+    sobreviveram ao apocalipse, seja porque algo em você reage quando é
+    exposto à radiação ou a outra fonte mutagênica, você tende a sofrer
+    mutações. Talvez você se pareça relativamente com os outros da sua
+    espécie, ou talvez tenha uma ou mais diferenças físicas óbvias que
+    dificultam disfarçar a sua natureza. Não que você queira necessariamente
+    esconder o que é; talvez queira exibir com orgulho o que o torna
+    diferente e, na sua opinião, melhor.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Significant Mutations
+      pt-BR: Mutações Significativas
+    description:
+      en: |-
+        Choose which option from the following list you'd like for your mutations. Whichever you choose, it is rolled for randomly; you don't select it.
+        • Two beneficial mutations rolled randomly.
+        • Three beneficial mutations plus one harmful mutation, all rolled randomly
+        • One powerful mutation and one harmful mutation, both rolled randomly.
+        • One beneficial mutation, one distinctive mutation, and one harmful mutation, all rolled randomly.
+      pt-BR: |-
+        Escolha qual opção da lista a seguir você quer para as suas mutações. Seja qual for a escolhida, as mutações são roladas aleatoriamente; você não as escolhe.
+        • Duas mutações benéficas, roladas aleatoriamente.
+        • Três mutações benéficas mais uma mutação prejudicial, todas roladas aleatoriamente.
+        • Uma mutação poderosa e uma mutação prejudicial, ambas roladas aleatoriamente.
+        • Uma mutação benéfica, uma mutação marcante e uma mutação prejudicial, todas roladas aleatoriamente.
+  - name:
+      en: Distinctive Mutations
+      pt-BR: Mutações Marcantes
+    description:
+      en: >-
+        You can choose if you want to have distinctive mutations or not. If
+        you do, choose the number, up to four distinctive mutations, which are
+        rolled for randomly. (If the GM is using the transitory mutations
+        optional rule, you can only choose to have up to three distinctive
+        mutations.)
+      pt-BR: >-
+        Você pode escolher se quer ter mutações marcantes ou não. Se quiser,
+        escolha quantas, até quatro mutações marcantes, que são roladas
+        aleatoriamente. (Se o Mestre estiver usando a regra opcional de
+        mutações transitórias, você só pode escolher ter até três mutações
+        marcantes.)
+  - name:
+      en: Cosmetic Mutations
+      pt-BR: Mutações Cosméticas
+    description:
+      en: >-
+        You can choose if you want to have cosmetic mutations or not. If you
+        do, choose whether you want one or two cosmetic mutations, which are
+        rolled for randomly. Once all your mutations have been rolled for,
+        work together with the GM to ensure that what's been rolled is a
+        character you want to play.
+      pt-BR: >-
+        Você pode escolher se quer ter mutações cosméticas ou não. Se quiser,
+        escolha se quer uma ou duas mutações cosméticas, que são roladas
+        aleatoriamente. Depois de rolar todas as suas mutações, trabalhe
+        junto com o Mestre para garantir que o resultado seja um personagem
+        que você queira jogar.
+skill_training: []
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      The other PCs found you in some weird "mutant" chrysalis and pulled you
+      out; you were grateful and joined them.
+    pt-BR: >-
+      Os outros personagens o encontraram numa estranha crisálida "mutante"
+      e o tiraram de lá; você ficou grato e se juntou a eles.
+  - en: >-
+      The other PCs were "hunting mutants" but when they found you, they
+      realized they had been misguided.
+    pt-BR: >-
+      Os outros personagens estavam "caçando mutantes", mas, ao encontrá-lo,
+      perceberam que estavam enganados.
+  - en: >-
+      You wanted to get away from a bad situation, so you went with the PCs.
+    pt-BR: >-
+      Você queria fugir de uma situação ruim, então foi com os personagens.
+  - en: >-
+      The PCs asked you to come along, believing that your particular
+      mutations could be harnessed for the benefit of the mission.
+    pt-BR: >-
+      Os personagens o chamaram para ir junto, acreditando que as suas
+      mutações específicas poderiam ser aproveitadas em benefício da missão.

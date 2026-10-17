@@ -1,0 +1,1274 @@
+# The Mutant descriptor's five d100 tables, in the book's order. Source: Old
+# Gus' Unofficial Cypher System Player's Guide (OG-CSPG, 2025-09-17), pp.
+# 82–89 (unofficial guide, not the Cypher System Rulebook). Ranges are as
+# printed; "00" is 100. The book heads the last table "COSTMETIC MUTATIONS"
+# (a typo).
+- id: beneficial
+  name:
+    en: Beneficial Mutations
+    pt-BR: Mutações Benéficas
+  intro:
+    en: >-
+      The following mutations do not require any visible changes or
+      distinctions in the character. In other words, people who have these
+      mutations are not obviously recognized as mutants. Using beneficial
+      mutations never costs stat Pool points and never requires an action to
+      "activate."
+    pt-BR: >-
+      As mutações a seguir não exigem nenhuma mudança ou distinção visível no
+      personagem. Em outras palavras, quem tem essas mutações não é
+      reconhecido de imediato como mutante. Usar mutações benéficas nunca
+      custa pontos de Reserva e nunca exige uma ação para "ativar".
+  page: 82
+  rows:
+    - range: 01–05
+      name: { en: Strengthened bones, pt-BR: Ossos fortalecidos }
+      effect: { en: You gain +5 to your Might Pool., pt-BR: Você ganha +5 na sua Reserva de Força. }
+    - range: 06–10
+      name: { en: Improved circulation, pt-BR: Circulação aprimorada }
+      effect: { en: You gain +5 to your Might Pool., pt-BR: Você ganha +5 na sua Reserva de Força. }
+    - range: 11–15
+      name: { en: Improved musculature, pt-BR: Musculatura aprimorada }
+      effect: { en: You gain +5 to your Might Pool., pt-BR: Você ganha +5 na sua Reserva de Força. }
+    - range: 16–20
+      name: { en: Improved nervous system, pt-BR: Sistema nervoso aprimorado }
+      effect:
+        { en: You gain +5 to your Speed Pool., pt-BR: Você ganha +5 na sua Reserva de Velocidade. }
+    - range: 21–25
+      name: { en: Improved neural processes, pt-BR: Processos neurais aprimorados }
+      effect:
+        {
+          en: You gain +5 to your Intellect Pool.,
+          pt-BR: Você ganha +5 na sua Reserva de Intelecto.,
+        }
+    - range: 26–30
+      name: { en: Thick hide, pt-BR: Couro grosso }
+      effect: { en: You gain +1 to Armor., pt-BR: Você ganha +1 de Armadura. }
+    - range: 31–33
+      name: { en: Increased lung capacity, pt-BR: Capacidade pulmonar aumentada }
+      effect:
+        en: You can hold your breath for five minutes.
+        pt-BR: Você consegue prender a respiração por cinco minutos.
+    - range: 34–36
+      name: { en: Adhesion pads, pt-BR: Almofadas adesivas }
+      effect:
+        en: >-
+          Your hands and feet have naturally adhesive pads and thus are assets
+          in tasks involving climbing, keeping your footing, or retaining your
+          grip.
+        pt-BR: >-
+          As suas mãos e os seus pés têm almofadas naturalmente adesivas e por
+          isso são recursos em tarefas que envolvem escalar, manter o
+          equilíbrio ou não perder a pegada.
+    - range: 37–39
+      name: { en: Slippery skin, pt-BR: Pele escorregadia }
+      effect:
+        en: >-
+          You secrete a slippery oil, giving you an asset in any task
+          involving slipping from another's grip, slipping from bonds,
+          squeezing through a small opening, and so on.
+        pt-BR: >-
+          Você secreta um óleo escorregadio, o que lhe dá um recurso em
+          qualquer tarefa que envolva escapar da pegada de alguém, se soltar
+          de amarras, passar por uma abertura pequena e assim por diante.
+    - range: 40–45
+      name: { en: Telekinetic shield, pt-BR: Escudo telecinético }
+      effect:
+        en: >-
+          You reflexively use telekinesis to ward away attacks, giving you an
+          asset in Speed defense tasks.
+        pt-BR: >-
+          Você usa telecinese por reflexo para afastar ataques, o que lhe dá um
+          recurso em tarefas de defesa de Velocidade.
+    - range: 46–50
+      name: { en: Suggestive voice, pt-BR: Voz sugestiva }
+      effect:
+        en: Your voice is so perfectly modulated that it is an asset in all interaction tasks.
+        pt-BR: >-
+          A sua voz é tão perfeitamente modulada que é um recurso em todas as
+          tarefas de interação.
+    - range: 51–53
+      name: { en: Processor dreams, pt-BR: Sonhos processadores }
+      effect:
+        en: >-
+          When you sleep, you process information so that after you wake, you
+          have an asset in any Intellect actions held over from the previous
+          day. For example, if you have to determine whether an unknown plant
+          is poisonous, you could "sleep on it" and make the determination the
+          next day with an asset on the action.
+        pt-BR: >-
+          Quando você dorme, processa informações de modo que, ao acordar, tem
+          um recurso em quaisquer ações de Intelecto pendentes do dia
+          anterior. Por exemplo, se precisar determinar se uma planta
+          desconhecida é venenosa, pode "dormir sobre o assunto" e decidir no
+          dia seguinte com um recurso na ação.
+    - range: 54–60
+      name: { en: Poison immunity, pt-BR: Imunidade a venenos }
+      effect: { en: You are immune to all poisons., pt-BR: Você é imune a todos os venenos. }
+    - range: 61–65
+      name: { en: Disease immunity, pt-BR: Imunidade a doenças }
+      effect: { en: You are immune to all diseases., pt-BR: Você é imune a todas as doenças. }
+    - range: 66–70
+      name: { en: Fire resistance, pt-BR: Resistência a fogo }
+      effect:
+        en: You have +3 to Armor against damage from fire.
+        pt-BR: Você tem +3 de Armadura contra dano de fogo.
+    - range: 71–75
+      name: { en: Cold resistance, pt-BR: Resistência a frio }
+      effect:
+        en: You have +4 to Armor against damage from cold.
+        pt-BR: Você tem +4 de Armadura contra dano de frio.
+    - range: 76–80
+      name: { en: Psychic resistance, pt-BR: Resistência psíquica }
+      effect:
+        en: You have +3 to Armor against Intellect damage.
+        pt-BR: Você tem +3 de Armadura contra dano de Intelecto.
+    - range: 81–85
+      name: { en: Acid resistance, pt-BR: Resistência a ácido }
+      effect:
+        en: You have +5 to Armor against damage from acid.
+        pt-BR: Você tem +5 de Armadura contra dano de ácido.
+    - range: 86–88
+      name: { en: Puncture resistance, pt-BR: Resistência a perfuração }
+      effect:
+        en: You have +2 to Armor against damage from puncturing attacks.
+        pt-BR: Você tem +2 de Armadura contra dano de ataques perfurantes.
+    - range: 89–91
+      name: { en: Slicing resistance, pt-BR: Resistência a corte }
+      effect:
+        en: You have +2 to Armor against damage from slicing attacks.
+        pt-BR: Você tem +2 de Armadura contra dano de ataques cortantes.
+    - range: 92–94
+      name: { en: Bludgeoning resistance, pt-BR: Resistência a impacto }
+      effect:
+        en: You have +2 to Armor against damage from crushing attacks.
+        pt-BR: Você tem +2 de Armadura contra dano de ataques esmagadores.
+    - range: 95–96
+      name: { en: No scent, pt-BR: Sem cheiro }
+      effect:
+        en: You cannot be tracked or located by scent, and you never have offensive odors.
+        pt-BR: >-
+          Você não pode ser rastreado nem localizado pelo cheiro, e nunca tem
+          odores desagradáveis.
+    - range: 97–99
+      name: { en: Scent, pt-BR: Faro }
+      effect:
+        en: >-
+          You can sense creatures, objects, and terrain by scent as well as a
+          normal human can by sight. You can detect scents with that degree of
+          accuracy only in short range, but you can sense strong odors from
+          much farther away (far better than a normal human can). Like a
+          hound, you can track creatures by their scent.
+        pt-BR: >-
+          Você consegue perceber criaturas, objetos e terreno pelo cheiro tão
+          bem quanto um humano comum pela visão. Você só detecta cheiros com
+          essa precisão a curta distância, mas sente odores fortes de muito
+          mais longe (bem melhor que um humano comum). Como um cão de caça,
+          você consegue rastrear criaturas pelo cheiro.
+    - range: '00'
+      name: { en: Sense material, pt-BR: Sentir material }
+      effect:
+        en: >-
+          You can sense the presence of any single substance within short
+          range, although you don't learn details or the precise location. You
+          and the GM should work together to determine the substance: water,
+          iron, plastic, granite, wood, flesh, salt, and so on. You do not need
+          to concentrate to sense the material.
+        pt-BR: >-
+          Você consegue sentir a presença de uma única substância a curta
+          distância, embora não descubra detalhes nem a localização exata.
+          Você e o Mestre devem definir juntos a substância: água, ferro,
+          plástico, granito, madeira, carne, sal e assim por diante. Você não
+          precisa se concentrar para sentir o material.
+- id: harmful
+  name:
+    en: Harmful Mutations
+    pt-BR: Mutações Prejudiciais
+  intro:
+    en: >-
+      Unless noted otherwise, the following mutations are visible and
+      obvious. They offer no benefits, only drawbacks.
+    pt-BR: >-
+      Salvo indicação em contrário, as mutações a seguir são visíveis e
+      óbvias. Elas não oferecem benefícios, apenas desvantagens.
+  page: 83
+  rows:
+    - range: 01–10
+      name: { en: Deformed leg, pt-BR: Perna deformada }
+      effect:
+        {
+          en: All movement tasks are hindered.,
+          pt-BR: Todas as tarefas de movimento são dificultadas.,
+        }
+    - range: 11–20
+      name: { en: Deformed face/appearance, pt-BR: Rosto/aparência deformados }
+      effect:
+        en: All pleasant interaction tasks are hindered.
+        pt-BR: Todas as tarefas de interação agradável são dificultadas.
+    - range: 21–30
+      name: { en: Deformed arm/hand, pt-BR: Braço/mão deformados }
+      effect:
+        en: All tasks involving the arm or hand are hindered.
+        pt-BR: Todas as tarefas que envolvem o braço ou a mão são dificultadas.
+    - range: 31–40
+      name: { en: Malformed brain, pt-BR: Cérebro malformado }
+      effect:
+        en: All memory- or cognitive-related tasks are hindered.
+        pt-BR: Todas as tarefas relacionadas à memória ou à cognição são dificultadas.
+    - range: 41–45
+      name: { en: Mentally vulnerable, pt-BR: Mentalmente vulnerável }
+      effect:
+        en: All Intellect defense tasks are hindered.
+        pt-BR: Todas as tarefas de defesa de Intelecto são dificultadas.
+    - range: 46–50
+      name: { en: Slow and lumbering, pt-BR: Lento e pesadão }
+      effect:
+        en: All Speed defense tasks are hindered.
+        pt-BR: Todas as tarefas de defesa de Velocidade são dificultadas.
+    - range: 51–60
+      name: { en: Sickly, pt-BR: Doentio }
+      effect:
+        en: All Might defense tasks are hindered.
+        pt-BR: Todas as tarefas de defesa de Força são dificultadas.
+    - range: 61–63
+      name: { en: Horrible growth, pt-BR: Crescimento horrível }
+      effect:
+        en: >-
+          A large goiter, immobile tendril, or useless extra eye hangs from
+          your face, hindering all pleasant interactions (with most creatures,
+          particularly humans).
+        pt-BR: >-
+          Um bócio enorme, um tentáculo imóvel ou um olho extra inútil pende
+          do seu rosto, dificultando todas as interações agradáveis (com a
+          maioria das criaturas, principalmente humanos).
+    - range: 64–66
+      name: { en: Useless limb, pt-BR: Membro inútil }
+      effect:
+        en: One of your limbs is unusable or missing.
+        pt-BR: Um dos seus membros é inutilizável ou ausente.
+    - range: 67–71
+      name: { en: Useless eye, pt-BR: Olho inútil }
+      effect:
+        en: >-
+          One of your eyes is unusable or missing. Tasks specifically involving
+          eyesight (spotting, searching, and so on) are hindered.
+        pt-BR: >-
+          Um dos seus olhos é inutilizável ou ausente. Tarefas que envolvem
+          especificamente a visão (avistar, procurar e assim por diante) são
+          dificultadas.
+    - range: 72–76
+      name: { en: Useless ear, pt-BR: Ouvido inútil }
+      effect:
+        en: >-
+          One of your ears is unusable or missing. Tasks specifically involving
+          hearing are hindered.
+        pt-BR: >-
+          Um dos seus ouvidos é inutilizável ou ausente. Tarefas que envolvem
+          especificamente a audição são dificultadas.
+    - range: 77–84
+      name: { en: Weakness in Might, pt-BR: Fraqueza de Força }
+      effect:
+        en: >-
+          Any time you spend points from your Might Pool, the cost is increased
+          by 1 point.
+        pt-BR: >-
+          Sempre que você gasta pontos da sua Reserva de Força, o custo
+          aumenta em 1 ponto.
+    - range: 85–92
+      name: { en: Weakness in Speed, pt-BR: Fraqueza de Velocidade }
+      effect:
+        en: >-
+          Any time you spend points from your Speed Pool, the cost is increased
+          by 1 point.
+        pt-BR: >-
+          Sempre que você gasta pontos da sua Reserva de Velocidade, o custo
+          aumenta em 1 ponto.
+    - range: 93–00
+      name: { en: Weakness in Intellect, pt-BR: Fraqueza de Intelecto }
+      effect:
+        en: >-
+          Any time you spend points from your Intellect Pool, the cost is
+          increased by 1 point.
+        pt-BR: >-
+          Sempre que você gasta pontos da sua Reserva de Intelecto, o custo
+          aumenta em 1 ponto.
+- id: powerful
+  name:
+    en: Powerful Mutations
+    pt-BR: Mutações Poderosas
+  intro:
+    en: >-
+      The following mutations do not require any visible changes in the
+      character until used. People who have these mutations are not obviously
+      recognized as mutants if they don't use their powers. Using some of
+      these mutations costs stat Pool points. Some are actions.
+    pt-BR: >-
+      As mutações a seguir não exigem nenhuma mudança visível no personagem
+      até serem usadas. Quem tem essas mutações não é reconhecido de imediato
+      como mutante se não usar os seus poderes. Usar algumas dessas mutações
+      custa pontos de Reserva. Algumas são ações.
+  page: 83
+  rows:
+    - range: 01–05
+      name: { en: Darksight, pt-BR: Visão no escuro }
+      effect:
+        en: You can see in complete darkness as if it were light. Enabler.
+        pt-BR: Você enxerga na escuridão total como se houvesse luz. Habilitador.
+    - range: 06–10
+      name: { en: No breath, pt-BR: Sem respiração }
+      effect:
+        { en: You do not need to breathe. Enabler., pt-BR: Você não precisa respirar. Habilitador. }
+    - range: 11–15
+      name: { en: No water, pt-BR: Sem água }
+      effect:
+        en: You do not need to drink water to survive. Enabler.
+        pt-BR: Você não precisa beber água para sobreviver. Habilitador.
+    - range: 16–20
+      name: { en: Chameleon skin, pt-BR: Pele de camaleão }
+      effect:
+        en: >-
+          Your skin changes colors as you wish. This is an asset in tasks
+          involving hiding. Enabler.
+        pt-BR: >-
+          A sua pele muda de cor como você quiser. Isso é um recurso em tarefas
+          que envolvem se esconder. Habilitador.
+    - range: 21–24
+      name: { en: Savage bite, pt-BR: Mordida selvagem }
+      effect:
+        en: >-
+          Your mouth widens surprisingly, and hidden, pointed teeth emerge when
+          you wish it. You can make a bite attack that inflicts 3 points of
+          damage. Enabler.
+        pt-BR: >-
+          A sua boca se alarga de forma surpreendente, e dentes pontudos
+          escondidos surgem quando você quer. Você pode fazer um ataque de
+          mordida que causa 3 pontos de dano. Habilitador.
+    - range: 25–26
+      name: { en: Gluey globs, pt-BR: Bolhas grudentas }
+      effect:
+        en: >-
+          You can produce gluey globs at your fingertips. This is an asset in
+          tasks involving climbing or keeping your grip. You can also fling
+          these globs in immediate range, and if they hit, they hinder the
+          target's physical tasks for one round. Enabler to use in a task;
+          action to use as an attack.
+        pt-BR: >-
+          Você consegue produzir bolhas grudentas na ponta dos dedos. Isso é um
+          recurso em tarefas que envolvem escalar ou não perder a pegada. Você
+          também pode arremessar essas bolhas a alcance imediato e, se
+          acertarem, elas dificultam as tarefas físicas do alvo por uma
+          rodada. Habilitador para usar numa tarefa; ação para usar como
+          ataque.
+    - range: 27–30
+      name: { en: Face dancing, pt-BR: Dança facial }
+      effect:
+        en: >-
+          You can alter your features enough to give you an asset in all tasks
+          involving disguise. Enabler.
+        pt-BR: >-
+          Você consegue alterar as suas feições o bastante para ganhar um
+          recurso em todas as tarefas que envolvem disfarce. Habilitador.
+    - range: 31–35
+      name: { en: Sense oddity, pt-BR: Sentir o insólito }
+      effect:
+        en: >-
+          You can sense the presence of an object or creature possessing
+          fantastic abilities (because of alien technology, transdimensional
+          interference, nanites, or similar) within short range. You do not
+          learn details or the precise location. Action.
+        pt-BR: >-
+          Você consegue sentir a presença de um objeto ou criatura com
+          habilidades fantásticas (por causa de tecnologia alienígena,
+          interferência transdimensional, nanitos ou algo parecido) a curta
+          distância. Você não descobre detalhes nem a localização exata. Ação.
+    - range: 36–40
+      name: { en: Stinger in finger, pt-BR: Ferrão no dedo }
+      effect:
+        en: >-
+          You can make an attack with your hand that inflicts 1 point of
+          damage. If you make a second successful attack roll, your stinger
+          also injects a poison that inflicts 4 points of Speed damage (ignores
+          Armor). Action.
+        pt-BR: >-
+          Você pode fazer um ataque com a mão que causa 1 ponto de dano. Se
+          tiver sucesso numa segunda rolagem de ataque, o seu ferrão também
+          injeta um veneno que causa 4 pontos de dano de Velocidade (ignora
+          Armadura). Ação.
+    - range: 41–44
+      name: { en: Stinger in elbow, pt-BR: Ferrão no cotovelo }
+      effect:
+        en: >-
+          You can make an attack with your elbow that inflicts 2 points of
+          damage. If you make a second successful attack roll, your stinger
+          also injects a poison that inflicts 4 points of Speed damage (ignores
+          Armor). Action.
+        pt-BR: >-
+          Você pode fazer um ataque com o cotovelo que causa 2 pontos de dano.
+          Se tiver sucesso numa segunda rolagem de ataque, o seu ferrão também
+          injeta um veneno que causa 4 pontos de dano de Velocidade (ignora
+          Armadura). Ação.
+    - range: 45–47
+      name: { en: Spit needles, pt-BR: Cuspir agulhas }
+      effect:
+        en: >-
+          You can make an attack with immediate range. You spit a needle that
+          inflicts 1 point of damage. If you make a second successful attack
+          roll, the needle also injects a poison that inflicts 4 points of
+          Speed damage (ignores Armor). Action.
+        pt-BR: >-
+          Você pode fazer um ataque a alcance imediato. Você cospe uma agulha
+          que causa 1 ponto de dano. Se tiver sucesso numa segunda rolagem de
+          ataque, a agulha também injeta um veneno que causa 4 pontos de dano
+          de Velocidade (ignora Armadura). Ação.
+    - range: 48–50
+      name: { en: Spit acid, pt-BR: Cuspir ácido }
+      effect:
+        en: >-
+          You can make an attack with immediate range. You spit a glob of acid
+          that inflicts 2 points of damage. Action.
+        pt-BR: >-
+          Você pode fazer um ataque a alcance imediato. Você cospe uma bolha de
+          ácido que causa 2 pontos de dano. Ação.
+    - range: 51–53
+      name: { en: Spit webs, pt-BR: Cuspir teias }
+      effect:
+        en: >-
+          You can make up to 10 feet (3.5 m) of a strong, ropelike material
+          each day at the rate of about 1 foot (30 cm) per minute. The webbing
+          is level 3. You can also spit globs of webbing in immediate range,
+          and if they hit, the target's physical tasks are hindered for one
+          round. Action.
+        pt-BR: >-
+          Você consegue produzir até 3,5 m de um material resistente,
+          parecido com corda, por dia, a cerca de 30 cm por minuto. A teia é de
+          nível 3. Você também pode cuspir bolhas de teia a alcance imediato e,
+          se acertarem, as tarefas físicas do alvo são dificultadas por uma
+          rodada. Ação.
+    - range: 54–59
+      name: { en: Filtered lungs, pt-BR: Pulmões filtrados }
+      effect:
+        en: >-
+          You have an asset to Might defense rolls against vapors or noxious
+          gases. You can survive in a hostile breathing environment (such as
+          underwater or in a vacuum) for up to ten minutes. Enabler.
+        pt-BR: >-
+          Você tem um recurso em rolagens de defesa de Força contra vapores ou
+          gases nocivos. Você consegue sobreviver num ambiente irrespirável
+          (como debaixo d'água ou no vácuo) por até dez minutos. Habilitador.
+    - range: 60–62
+      name:
+        en: Disruptive field (electronics) (2 Intellect points)
+        pt-BR: Campo disruptivo (eletrônicos) (2 pontos de Intelecto)
+      effect:
+        en: >-
+          When you wish it, you disrupt devices within immediate range (no roll
+          needed). All devices operate as if they were 3 levels lower while in
+          range of your field. Devices reduced to level 0 or below do not
+          function. Action.
+        pt-BR: >-
+          Quando quiser, você perturba os dispositivos a alcance imediato (sem
+          rolagem). Todos os dispositivos funcionam como se tivessem 3 níveis a
+          menos enquanto estiverem no alcance do seu campo. Dispositivos
+          reduzidos a nível 0 ou menos não funcionam. Ação.
+    - range: 63–65
+      name:
+        en: Disruptive field (flesh) (2 Intellect points)
+        pt-BR: Campo disruptivo (carne) (2 pontos de Intelecto)
+      effect:
+        en: >-
+          When you wish it, you disrupt flesh within immediate range. All
+          creatures within range of your field take 1 point of damage. If you
+          apply a level of Effort to increase the damage rather than affect the
+          difficulty, each target takes 2 additional points of damage. If your
+          attack fails, targets in the area still take 1 point of damage.
+          Action.
+        pt-BR: >-
+          Quando quiser, você perturba a carne a alcance imediato. Todas as
+          criaturas no alcance do seu campo sofrem 1 ponto de dano. Se você
+          aplicar um nível de Esforço para aumentar o dano em vez de afetar a
+          dificuldade, cada alvo sofre 2 pontos de dano adicionais. Se o seu
+          ataque falhar, os alvos na área ainda sofrem 1 ponto de dano. Ação.
+    - range: 66–68
+      name:
+        en: Disruptive field (thoughts) (1 Intellect point)
+        pt-BR: Campo disruptivo (pensamentos) (1 ponto de Intelecto)
+      effect:
+        en: >-
+          When you wish it, you disrupt thoughts within immediate range.
+          Intellect actions for all creatures within range are hindered.
+          Action.
+        pt-BR: >-
+          Quando quiser, você perturba os pensamentos a alcance imediato. As
+          ações de Intelecto de todas as criaturas no alcance são dificultadas.
+          Ação.
+    - range: 69–70
+      name: { en: Magnetic flesh, pt-BR: Carne magnética }
+      effect:
+        en: >-
+          You attract or repel metal when you desire. Not only do small metal
+          objects cling to you, but this mutation is an asset in tasks
+          involving climbing on metal or keeping your grip on a metal item.
+          This mutation is an asset to Speed defense tasks when being attacked
+          by a metal foe or a foe with a metal weapon. Enabler.
+        pt-BR: >-
+          Você atrai ou repele metal quando quiser. Além de pequenos objetos de
+          metal grudarem em você, esta mutação é um recurso em tarefas que
+          envolvem escalar superfícies de metal ou não perder a pegada de um
+          item de metal. Esta mutação é um recurso em tarefas de defesa de
+          Velocidade quando você é atacado por um inimigo de metal ou com uma
+          arma de metal. Habilitador.
+    - range: 71–73
+      name:
+        {
+          en: Gravity negation (2 Intellect points),
+          pt-BR: Negação da gravidade (2 pontos de Intelecto),
+        }
+      effect:
+        en: >-
+          You float slowly into the air. If you concentrate, you can control
+          your movement at half your normal speed; otherwise, you drift with
+          the wind or with any momentum you have gained. This effect lasts for
+          up to ten minutes. Action to initiate.
+        pt-BR: >-
+          Você flutua lentamente no ar. Se se concentrar, consegue controlar o
+          seu movimento à metade da velocidade normal; caso contrário, é levado
+          pelo vento ou pelo impulso que tiver ganhado. Este efeito dura até
+          dez minutos. Ação para iniciar.
+    - range: 74–80
+      name: { en: Telepathy (2 Intellect points), pt-BR: Telepatia (2 pontos de Intelecto) }
+      effect:
+        en: >-
+          You can speak telepathically with others who are within short range.
+          Communication is two-way, but the other party must be willing and
+          able to communicate. You don't have to see the target, but you must
+          know that it's within range. You can have more than one active
+          contact at once, but you must establish contact with each target
+          individually. Each contact lasts up to ten minutes. In addition to
+          the normal options for using Effort, you can use a level of Effort to
+          increase the duration of contact to a full day. Action to establish
+          contact.
+        pt-BR: >-
+          Você consegue falar telepaticamente com outros a curta distância. A
+          comunicação é de mão dupla, mas a outra parte precisa estar disposta
+          e ser capaz de se comunicar. Você não precisa ver o alvo, mas precisa
+          saber que ele está no alcance. Você pode ter mais de um contato ativo
+          ao mesmo tempo, mas precisa estabelecer o contato com cada alvo
+          individualmente. Cada contato dura até dez minutos. Além das opções
+          normais de uso de Esforço, você pode usar um nível de Esforço para
+          aumentar a duração do contato para um dia inteiro. Ação para
+          estabelecer o contato.
+    - range: 81–85
+      name: { en: Pyrokinesis (1 Intellect point), pt-BR: Pirocinese (1 ponto de Intelecto) }
+      effect:
+        en: >-
+          You can cause a flammable object you can see within immediate range
+          to spontaneously catch fire. If used as an attack, this power
+          inflicts 2 points of damage. Action.
+        pt-BR: >-
+          Você consegue fazer um objeto inflamável que esteja vendo a alcance
+          imediato pegar fogo espontaneamente. Se usado como ataque, este
+          poder causa 2 pontos de dano. Ação.
+    - range: 86–90
+      name: { en: Telekinesis (2 Intellect points), pt-BR: Telecinese (2 pontos de Intelecto) }
+      effect:
+        en: >-
+          You can exert force on objects within short range. Once activated,
+          your power has an effective Might Pool of 10, a Might Edge of 1, and
+          an Effort of 2 (approximately equal to the strength of a fit,
+          capable, adult human), and you can use it to move objects, push
+          against objects, and so on. For example, you could lift and pull a
+          light object anywhere within range to yourself or move a heavy
+          object (like a piece of furniture) about 10 feet (3.5 m). This power
+          lacks the fine control to wield a weapon or move objects with much
+          speed, so in most situations, it's not a means of attack. You can't
+          use this ability on your own body. The power lasts for one hour or
+          until its Might Pool is depleted, whichever comes first. Action.
+        pt-BR: >-
+          Você consegue exercer força sobre objetos a curta distância. Uma vez
+          ativado, o seu poder tem uma Reserva de Força efetiva de 10, uma
+          Margem de Força de 1 e um Esforço de 2 (mais ou menos a força de um
+          humano adulto, capaz e em forma), e você pode usá-lo para mover
+          objetos, empurrá-los e assim por diante. Por exemplo, pode levantar e
+          puxar para si um objeto leve em qualquer ponto do alcance, ou mover
+          um objeto pesado (como um móvel) cerca de 3,5 m. Este poder não tem o
+          controle fino necessário para empunhar uma arma ou mover objetos com
+          muita velocidade, então, na maioria das situações, não serve para
+          atacar. Você não pode usar esta habilidade no próprio corpo. O poder
+          dura uma hora ou até a sua Reserva de Força se esgotar, o que vier
+          primeiro. Ação.
+    - range: 91–92
+      name:
+        { en: Phase shifting (2 Intellect points), pt-BR: Mudança de fase (2 pontos de Intelecto) }
+      effect:
+        en: >-
+          You can pass slowly through solid barriers at a rate of 1 inch (3 cm)
+          per round (minimum of one round to pass through the barrier). You
+          can't act (other than moving) or perceive anything until you pass
+          entirely through the barrier. You can't pass through energy barriers.
+          Action.
+        pt-BR: >-
+          Você consegue atravessar lentamente barreiras sólidas a um ritmo de 3
+          cm por rodada (no mínimo uma rodada para atravessar a barreira). Você
+          não pode agir (a não ser se mover) nem perceber nada até atravessar
+          a barreira por completo. Você não consegue atravessar barreiras de
+          energia. Ação.
+    - range: 93–94
+      name:
+        {
+          en: Power device (1+ Intellect points),
+          pt-BR: Energizar dispositivo (1+ pontos de Intelecto),
+        }
+      effect:
+        en: >-
+          You can charge an artifact or other device (except a cypher) so that
+          it can be used once. The cost is 1 Intellect point plus 1 point per
+          level of the device. Action.
+        pt-BR: >-
+          Você consegue carregar um artefato ou outro dispositivo (exceto uma
+          cifra) para que possa ser usado uma vez. O custo é 1 ponto de
+          Intelecto mais 1 ponto por nível do dispositivo. Ação.
+    - range: 95–96
+      name: { en: Drain power, pt-BR: Drenar energia }
+      effect:
+        en: >-
+          You can drain the power from an artifact or device, allowing you to
+          regain 1 Intellect point per level of the device. You regain points
+          at the rate of 1 point per round and must give your full
+          concentration to the process each round. The GM determines whether
+          the device is fully drained (likely true of most handheld or smaller
+          devices) or retains some power (likely true of large machines).
+          Action to initiate; action each round to drain.
+        pt-BR: >-
+          Você consegue drenar a energia de um artefato ou dispositivo,
+          recuperando 1 ponto de Intelecto por nível do dispositivo. Você
+          recupera pontos à razão de 1 ponto por rodada e precisa dedicar toda
+          a sua concentração ao processo a cada rodada. O Mestre decide se o
+          dispositivo é drenado por completo (provável na maioria dos
+          dispositivos portáteis ou menores) ou se mantém alguma energia
+          (provável em máquinas grandes). Ação para iniciar; ação a cada
+          rodada para drenar.
+    - range: 97–99
+      name: { en: Regeneration, pt-BR: Regeneração }
+      effect:
+        en: >-
+          In addition to regaining points through normal recovery rolls, you
+          regain 1 point to your Might Pool or Speed Pool per hour, regardless
+          of whether you rest, until both Pools are at their maximum. Enabler.
+        pt-BR: >-
+          Além de recuperar pontos com as rolagens de recuperação normais, você
+          recupera 1 ponto na sua Reserva de Força ou de Velocidade por hora,
+          descansando ou não, até as duas Reservas estarem no máximo.
+          Habilitador.
+    - range: '00'
+      name: { en: Feed off pain, pt-BR: Alimentar-se da dor }
+      effect:
+        en: >-
+          Any time a creature within immediate range suffers at least 3 points
+          of damage (after Armor subtraction) in one attack, you can restore 1
+          point to one of your Pools, up to its maximum. You can feed off any
+          creature in this way, whether friend or foe. You never regain more
+          than 1 point per round. Enabler.
+        pt-BR: >-
+          Sempre que uma criatura a alcance imediato sofre pelo menos 3 pontos
+          de dano (depois de subtrair a Armadura) num único ataque, você pode
+          restaurar 1 ponto numa das suas Reservas, até o máximo dela. Você
+          pode se alimentar de qualquer criatura assim, amiga ou inimiga.
+          Você nunca recupera mais de 1 ponto por rodada. Habilitador.
+- id: distinctive
+  name:
+    en: Distinctive Mutations
+    pt-BR: Mutações Marcantes
+  intro:
+    en: >-
+      The following mutations involve dramatic physical changes to the
+      character's appearance. People who have these mutations are always
+      recognized as mutants. Using some of these mutations costs stat Pool
+      points. Some are actions.
+    pt-BR: >-
+      As mutações a seguir envolvem mudanças físicas dramáticas na aparência
+      do personagem. Quem tem essas mutações é sempre reconhecido como
+      mutante. Usar algumas dessas mutações custa pontos de Reserva. Algumas
+      são ações.
+  page: 85
+  rows:
+    - range: 01–02
+      name: { en: Extra eye, pt-BR: Olho extra }
+      effect:
+        en: >-
+          You have an extra eye on your forehead that you normally keep
+          closed, but you can open it in dim light and see as if in bright
+          light, and see in total darkness as if in very dim light. Enabler.
+        pt-BR: >-
+          Você tem um olho extra na testa que normalmente mantém fechado, mas
+          pode abri-lo na penumbra e enxergar como se houvesse luz forte, e
+          enxergar na escuridão total como se fosse uma penumbra fraca.
+          Habilitador.
+    - range: 03–04
+      name: { en: Extra mouth, pt-BR: Boca extra }
+      effect:
+        en: >-
+          You have an extra mouth on your hand, face, or stomach. This mouth is
+          filled with razor-sharp teeth and, if used to attack, inflicts 3
+          points of damage. You can also speak with two voices at once.
+          Enabler.
+        pt-BR: >-
+          Você tem uma boca extra na mão, no rosto ou na barriga. Essa boca é
+          cheia de dentes afiados como navalha e, se usada para atacar, causa
+          3 pontos de dano. Você também consegue falar com duas vozes ao mesmo
+          tempo. Habilitador.
+    - range: 05–06
+      name: { en: Proboscis, pt-BR: Probóscide }
+      effect:
+        en: >-
+          You have a long, moth-like proboscis instead of a mouth. You can
+          speak, but your voice is ever-so-slightly muffled. You take all your
+          nutrition as a liquid, but you can gain sustenance from most plants
+          by inserting the sharp tip of your proboscis into it. You can also
+          feed on the blood of living (or recently living) creatures. Also
+          roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Você tem uma probóscide longa, como a de uma mariposa, em vez de
+          boca. Você consegue falar, mas a sua voz sai levemente abafada. Você
+          se alimenta só de líquidos, mas consegue tirar sustento da maioria
+          das plantas enfiando nelas a ponta afiada da probóscide. Também pode
+          se alimentar do sangue de criaturas vivas (ou recém-mortas). Role
+          também na tabela de Mutações Benéficas. Habilitador.
+    - range: 07–09
+      name: { en: Snakelike arm, pt-BR: Braço de serpente }
+      effect:
+        en: >-
+          One of your arms ends in a fanged mouth. You can use it to attack,
+          inflicting 3 points of damage. If you make a second successful attack
+          with the arm, you also inject a poison that inflicts 4 points of
+          Speed damage (ignores Armor). You can't use the snakelike arm for
+          anything other than biting. Enabler.
+        pt-BR: >-
+          Um dos seus braços termina numa boca com presas. Você pode usá-lo
+          para atacar, causando 3 pontos de dano. Se tiver sucesso num segundo
+          ataque com o braço, também injeta um veneno que causa 4 pontos de
+          dano de Velocidade (ignora Armadura). Você não pode usar o braço de
+          serpente para nada além de morder. Habilitador.
+    - range: 10–12
+      name: { en: Tendrils on forehead, pt-BR: Tentáculos na testa }
+      effect:
+        en: >-
+          Four to six tendrils, each 1 to 2 feet (30 to 60 cm) long, come out
+          of your forehead. They can grasp and carry anything that your hand
+          could, although a large object would block your field of vision.
+          Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          De quatro a seis tentáculos, cada um com 30 a 60 cm de comprimento,
+          saem da sua testa. Eles conseguem agarrar e carregar qualquer coisa
+          que a sua mão conseguiria, embora um objeto grande bloqueie o seu
+          campo de visão. Role também na tabela de Mutações Benéficas.
+          Habilitador.
+    - range: 13–15
+      name: { en: Tendrils instead of fingers, pt-BR: Tentáculos no lugar dos dedos }
+      effect:
+        en: >-
+          Your fingers are tendrils 1 foot (30 cm) long. They are an asset to
+          any task involving climbing, grasping, or keeping your grip.
+          Further, you can effectively pick up and hold two objects in each
+          hand rather than one. You can't wield more than one weapon per hand.
+          Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Os seus dedos são tentáculos de 30 cm. Eles são um recurso em
+          qualquer tarefa que envolva escalar, agarrar ou não perder a pegada.
+          Além disso, você consegue pegar e segurar dois objetos em cada mão em
+          vez de um. Você não pode empunhar mais de uma arma por mão. Role
+          também na tabela de Mutações Benéficas. Habilitador.
+    - range: 16–18
+      name: { en: Tendrils instead of arms, pt-BR: Tentáculos no lugar dos braços }
+      effect:
+        en: >-
+          Your arms are tendrils 6 feet (2 m) long (or only one arm is a
+          tendril, if you prefer). Although you lose the fine manipulative
+          ability of fingers and a thumb, you can still grasp objects, have a
+          much longer reach, and have an asset for all tasks involving
+          grappling or wrestling. Also roll on the Beneficial Mutations table.
+          Enabler.
+        pt-BR: >-
+          Os seus braços são tentáculos de 2 m (ou só um braço é um tentáculo,
+          se preferir). Embora perca a capacidade de manipulação fina dos
+          dedos e do polegar, você ainda consegue agarrar objetos, tem um
+          alcance muito maior e tem um recurso em todas as tarefas que envolvem
+          agarrar ou lutar corpo a corpo. Role também na tabela de Mutações
+          Benéficas. Habilitador.
+    - range: 19–21
+      name: { en: Tendrils instead of eyes, pt-BR: Tentáculos no lugar dos olhos }
+      effect:
+        en: >-
+          You are blind, but each eye socket has a retractable tendril that is
+          10 feet (3.5 m) long. These tendrils can feel around rapidly to give
+          you a physical sense of everything within immediate range. Further,
+          they can be used to manipulate very light objects, activate controls,
+          and so forth. Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Você é cego, mas cada órbita ocular tem um tentáculo retrátil de 3,5
+          m. Esses tentáculos tateiam rapidamente para lhe dar uma percepção
+          física de tudo a alcance imediato. Além disso, podem ser usados para
+          manipular objetos muito leves, acionar controles e assim por diante.
+          Role também na tabela de Mutações Benéficas. Habilitador.
+    - range: 22–24
+      name: { en: Tendrils instead of legs/feet, pt-BR: Tentáculos no lugar das pernas/pés }
+      effect:
+        en: >-
+          Your legs or feet are tendrils that are 6 feet (2 m) long (or only
+          one leg or foot is a tendril, if you prefer). You can still walk and
+          move normally, and you have an asset for all tasks involving
+          grappling or wrestling. The tendrils are prehensile enough to grasp
+          large objects. Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          As suas pernas ou os seus pés são tentáculos de 2 m (ou só uma perna
+          ou um pé é um tentáculo, se preferir). Você ainda anda e se move
+          normalmente, e tem um recurso em todas as tarefas que envolvem
+          agarrar ou lutar corpo a corpo. Os tentáculos são preênseis o
+          bastante para agarrar objetos grandes. Role também na tabela de
+          Mutações Benéficas. Habilitador.
+    - range: 25–26
+      name: { en: Roots instead of feet, pt-BR: Raízes no lugar dos pés }
+      effect:
+        en: >-
+          If you take a minute to burrow your roots into the ground in
+          conjunction with making a recovery roll, add +2 to the points
+          regained from the roll. You can't move from where you rooted for one
+          minute, even if taking what is normally a one-action recovery roll.
+          Enabler.
+        pt-BR: >-
+          Se você passar um minuto enterrando as raízes no chão junto com uma
+          rolagem de recuperação, some +2 aos pontos recuperados pela rolagem.
+          Você não pode sair do lugar onde se enraizou por um minuto, mesmo
+          que faça o que normalmente seria uma rolagem de recuperação de uma
+          ação. Habilitador.
+    - range: 27–29
+      name: { en: Scaly body, pt-BR: Corpo escamoso }
+      effect: { en: You gain +2 to Armor. Enabler., pt-BR: Você ganha +2 de Armadura. Habilitador. }
+    - range: 30–32
+      name: { en: Shaggy fur, pt-BR: Pelagem espessa }
+      effect:
+        en: >-
+          You gain +1 to Armor (+2 against damage from cold) and have an asset
+          on stealth tasks. Enabler.
+        pt-BR: >-
+          Você ganha +1 de Armadura (+2 contra dano de frio) e tem um recurso
+          em tarefas de furtividade. Habilitador.
+    - range: 33–35
+      name: { en: Covered in spiny needles/spikes, pt-BR: Coberto de agulhas/espinhos }
+      effect:
+        en: >-
+          Any creature striking you with its body automatically suffers 1
+          point of damage. Enabler.
+        pt-BR: >-
+          Qualquer criatura que o golpeie com o corpo sofre automaticamente 1
+          ponto de dano. Habilitador.
+    - range: 36–38
+      name: { en: Quills, pt-BR: Espinhos lançáveis }
+      effect:
+        en: >-
+          You have quills that you can launch from your body to attack a foe
+          within short range. This attack inflicts 4 points of damage, and you
+          never run out of ammo. You can also use this attack in melee.
+          Action.
+        pt-BR: >-
+          Você tem espinhos que consegue disparar do corpo para atacar um
+          inimigo a curta distância. Esse ataque causa 4 pontos de dano, e a
+          sua munição nunca acaba. Você também pode usar esse ataque corpo a
+          corpo. Ação.
+    - range: 39–41
+      name: { en: Carapace, pt-BR: Carapaça }
+      effect: { en: You gain +2 to Armor. Enabler., pt-BR: Você ganha +2 de Armadura. Habilitador. }
+    - range: 42–44
+      name: { en: Mirrored skin, pt-BR: Pele espelhada }
+      effect:
+        en: >-
+          You gain +2 to Armor against heat, radiation, lasers, and similar
+          attacks. Enabler.
+        pt-BR: >-
+          Você ganha +2 de Armadura contra calor, radiação, lasers e ataques
+          parecidos. Habilitador.
+    - range: 45–47
+      name: { en: Chlorophyll, pt-BR: Clorofila }
+      effect:
+        en: >-
+          You gain nutrients from the sun and don't need to eat or breathe if
+          you have daily exposure to sunlight. Your skin, not surprisingly, is
+          green. Enabler.
+        pt-BR: >-
+          Você obtém nutrientes do sol e não precisa comer nem respirar se se
+          expuser à luz do sol todos os dias. A sua pele, como era de esperar,
+          é verde. Habilitador.
+    - range: 48–50
+      name: { en: Covered in bursting pods, pt-BR: Coberto de vagens explosivas }
+      effect:
+        en: >-
+          Fruit-like pods grow here and there across your entire body. You can
+          walk and move normally. As your action, you can rupture one pod,
+          creating a burst of color, sound, and odor that dazes all creatures
+          within immediate range on their next turn, hindering their tasks.
+          Enabler.
+        pt-BR: >-
+          Vagens parecidas com frutos crescem aqui e ali por todo o seu corpo.
+          Você anda e se move normalmente. Como sua ação, pode estourar uma
+          vagem, criando uma explosão de cor, som e cheiro que atordoa todas
+          as criaturas a alcance imediato no próximo turno delas, dificultando
+          as suas tarefas. Habilitador.
+    - range: 51–53
+      name: { en: Extra joint in arms, pt-BR: Articulação extra nos braços }
+      effect:
+        en: >-
+          Your arms are long and jointed so that you have two elbows in each.
+          You have a long reach and can strike foes from unexpected angles.
+          This mutation is an asset when making melee attacks. However, you
+          can modify your attacks only by using Speed, not Might. Enabler.
+        pt-BR: >-
+          Os seus braços são longos e articulados, com dois cotovelos cada.
+          Você tem um alcance longo e consegue golpear inimigos de ângulos
+          inesperados. Esta mutação é um recurso ao fazer ataques corpo a
+          corpo. Porém, você só pode modificar os seus ataques usando
+          Velocidade, não Força. Habilitador.
+    - range: 54–56
+      name: { en: Extra joint in legs, pt-BR: Articulação extra nas pernas }
+      effect:
+        en: >-
+          Your legs are long and jointed so that you have two knees in each.
+          You have a long stride, and this mutation is an asset for all
+          running, climbing, jumping, and balancing tasks. Also roll on the
+          Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          As suas pernas são longas e articuladas, com dois joelhos cada. Você
+          tem passadas longas, e esta mutação é um recurso em todas as tarefas
+          de corrida, escalada, salto e equilíbrio. Role também na tabela de
+          Mutações Benéficas. Habilitador.
+    - range: 57–59
+      name: { en: Rubbery body, pt-BR: Corpo borrachudo }
+      effect:
+        en: >-
+          Your bluish-grey body is rubbery through and through. You can act
+          normally and can stretch just your arms to reach things within
+          immediate range that would normally require you to move. You can
+          ignore up to 2 points of falling damage. Also roll on the Beneficial
+          Mutations table. Enabler.
+        pt-BR: >-
+          O seu corpo cinza-azulado é borrachudo de ponta a ponta. Você age
+          normalmente e consegue esticar só os braços para alcançar coisas a
+          alcance imediato que normalmente exigiriam se mover. Você pode
+          ignorar até 2 pontos de dano de queda. Role também na tabela de
+          Mutações Benéficas. Habilitador.
+    - range: 60–62
+      name: { en: Spider legs from torso, pt-BR: Patas de aranha no tronco }
+      effect:
+        en: >-
+          In addition to your normal limbs, six or eight spiderlike legs, each
+          6 feet (2 m) long, extend from your sides. They are an asset in any
+          task involving running, keeping your feet, standing your ground, and
+          climbing. Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Além dos seus membros normais, seis ou oito patas de aranha, cada uma
+          com 2 m, saem das suas laterais. Elas são um recurso em qualquer
+          tarefa que envolva correr, manter-se de pé, não ceder terreno e
+          escalar. Role também na tabela de Mutações Benéficas. Habilitador.
+    - range: 63–65
+      name: { en: Extra arms, pt-BR: Braços extras }
+      effect:
+        en: >-
+          You have one or two extra arms. They can hold objects, wield weapons,
+          hold a shield, and so on. This mutation does not increase the number
+          of actions you can take in a round or the number of attacks you can
+          attempt. Enabler.
+        pt-BR: >-
+          Você tem um ou dois braços extras. Eles podem segurar objetos,
+          empunhar armas, segurar um escudo e assim por diante. Esta mutação
+          não aumenta o número de ações que você pode realizar numa rodada nem
+          o número de ataques que pode tentar. Habilitador.
+    - range: 66–68
+      name: { en: Extra legs, pt-BR: Pernas extras }
+      effect:
+        en: >-
+          You have two extra legs. They are an asset in any task involving
+          running, keeping your feet, and standing your ground. Also roll on
+          the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Você tem duas pernas extras. Elas são um recurso em qualquer tarefa
+          que envolva correr, manter-se de pé e não ceder terreno. Role também
+          na tabela de Mutações Benéficas. Habilitador.
+    - range: 69–71
+      name: { en: Spider legs, pt-BR: Patas de aranha }
+      effect:
+        en: >-
+          Instead of normal legs, you have a wide torso with six or eight
+          spiderlike legs. They are an asset in any task involving running,
+          keeping your feet, standing your ground, and climbing. Also roll on
+          the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Em vez de pernas normais, você tem um tronco largo com seis ou oito
+          patas de aranha. Elas são um recurso em qualquer tarefa que envolva
+          correr, manter-se de pé, não ceder terreno e escalar. Role também na
+          tabela de Mutações Benéficas. Habilitador.
+    - range: 72–74
+      name: { en: Spider eyes, pt-BR: Olhos de aranha }
+      effect:
+        en: >-
+          Instead of normal eyes, you have a crown of shiny orb-like spider
+          eyes. They provide an asset to initiative and perception tasks. Also
+          roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Em vez de olhos normais, você tem uma coroa de olhos de aranha
+          brilhantes como esferas. Eles dão um recurso em tarefas de
+          iniciativa e de percepção. Role também na tabela de Mutações
+          Benéficas. Habilitador.
+    - range: 75–77
+      name: { en: Snake tail, pt-BR: Cauda de serpente }
+      effect:
+        en: >-
+          You have a prehensile tail that is 6 feet (2 m) long. It is an asset
+          for all tasks involving grappling or wrestling. The tail can grasp
+          large objects. Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Você tem uma cauda preênsil de 2 m. Ela é um recurso em todas as
+          tarefas que envolvem agarrar ou lutar corpo a corpo. A cauda
+          consegue agarrar objetos grandes. Role também na tabela de Mutações
+          Benéficas. Habilitador.
+    - range: 78–80
+      name: { en: Snake tail instead of legs, pt-BR: Cauda de serpente no lugar das pernas }
+      effect:
+        en: >-
+          Instead of legs, you have a snaky tail that is 8 feet (2.5 m) long.
+          You move at the same speed and have an asset for all tasks involving
+          grappling or wrestling. The tail is prehensile enough to grasp large
+          objects. Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Em vez de pernas, você tem uma cauda de serpente de 2,5 m. Você se
+          move na mesma velocidade e tem um recurso em todas as tarefas que
+          envolvem agarrar ou lutar corpo a corpo. A cauda é preênsil o
+          bastante para agarrar objetos grandes. Role também na tabela de
+          Mutações Benéficas. Habilitador.
+    - range: 81–83
+      name: { en: Stinging tendril, pt-BR: Tentáculo com ferrão }
+      effect:
+        en: >-
+          You have a prehensile tendril (or tail) that grows from some part of
+          your body and ends in a poisonous stinger. You can make an attack
+          with your stinger that inflicts 2 points of damage. If you make a
+          second successful attack roll, the stinger also injects a poison that
+          inflicts 4 points of Speed damage (ignores Armor). The tendril (or
+          tail) can't be used for anything else. Action.
+        pt-BR: >-
+          Você tem um tentáculo (ou cauda) preênsil que cresce de alguma parte
+          do seu corpo e termina num ferrão venenoso. Você pode fazer um
+          ataque com o ferrão que causa 2 pontos de dano. Se tiver sucesso
+          numa segunda rolagem de ataque, o ferrão também injeta um veneno que
+          causa 4 pontos de dano de Velocidade (ignora Armadura). O tentáculo
+          (ou cauda) não pode ser usado para mais nada. Ação.
+    - range: 84–86
+      name: { en: Eyes on stalks, pt-BR: Olhos em hastes }
+      effect:
+        en: >-
+          Your eyes are on stalks and can move in any direction, independently
+          of each other. You can peek around corners without exposing yourself
+          to danger. This is an asset in initiative and all perception tasks.
+          Also roll on the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Os seus olhos ficam em hastes e se movem em qualquer direção, um
+          independente do outro. Você consegue espiar pelas esquinas sem se
+          expor ao perigo. Isso é um recurso em iniciativa e em todas as
+          tarefas de percepção. Role também na tabela de Mutações Benéficas.
+          Habilitador.
+    - range: 87–89
+      name: { en: Extra eyes on hands/fingers, pt-BR: Olhos extras nas mãos/dedos }
+      effect:
+        en: >-
+          You can peek around corners without exposing yourself to danger.
+          This is an asset in initiative and all perception tasks. Also roll on
+          the Beneficial Mutations table. Enabler.
+        pt-BR: >-
+          Você consegue espiar pelas esquinas sem se expor ao perigo. Isso é
+          um recurso em iniciativa e em todas as tarefas de percepção. Role
+          também na tabela de Mutações Benéficas. Habilitador.
+    - range: 90–93
+      name: { en: Abnormally large head, pt-BR: Cabeça anormalmente grande }
+      effect:
+        en: >-
+          Your head is significantly larger than normal, with a bulging
+          forehead and elongated skull. You gain two assets to any task
+          involving knowledge, memory, lore, understanding, and figuring out
+          puzzles. Enabler.
+        pt-BR: >-
+          A sua cabeça é bem maior que o normal, com a testa saliente e o
+          crânio alongado. Você ganha dois recursos em qualquer tarefa que
+          envolva conhecimento, memória, saber, compreensão e resolver
+          enigmas. Habilitador.
+    - range: 94–96
+      name: { en: Aquatic, pt-BR: Aquático }
+      effect:
+        en: >-
+          Your body is streamlined and finned, your fingers and toes webbed.
+          You gain two assets in swimming, and you can see perfectly underwater
+          (as if above water). Although you have lungs, you also have gills, so
+          you can breathe underwater. Enabler.
+        pt-BR: >-
+          O seu corpo é hidrodinâmico e tem nadadeiras, e os seus dedos das
+          mãos e dos pés são palmados. Você ganha dois recursos em natação e
+          enxerga perfeitamente debaixo d'água (como se estivesse fora dela).
+          Embora tenha pulmões, também tem guelras, então consegue respirar
+          debaixo d'água. Habilitador.
+    - range: 97–98
+      name: { en: Wings, pt-BR: Asas }
+      effect:
+        en: >-
+          You have feathered or fleshy wings on your back that allow you to
+          glide, carried by the wind. They are not powerful enough to carry you
+          aloft like a bird's wings. Enabler.
+        pt-BR: >-
+          Você tem asas de penas ou de carne nas costas que permitem planar,
+          levado pelo vento. Elas não são fortes o bastante para mantê-lo no
+          ar como as asas de um pássaro. Habilitador.
+    - range: 99–00
+      name: { en: Cyborg arm, pt-BR: Braço ciborgue }
+      effect:
+        en: >-
+          One of your arms is a bulky organo-metallic arm-like living machine.
+          You can project a ray of burning light from the arm at a target
+          within short range as your action, inflicting 4 points of damage.
+          You have no sense of touch with the arm or hand, so you are hindered
+          when attempting physical tasks with that arm/hand and for tasks that
+          require you to use both hands. Enabler.
+        pt-BR: >-
+          Um dos seus braços é uma máquina viva volumosa, organometálica, em
+          forma de braço. Como sua ação, você consegue projetar do braço um
+          raio de luz escaldante num alvo a curta distância, causando 4 pontos
+          de dano. Você não tem tato nesse braço nem nessa mão, então é
+          dificultado ao tentar tarefas físicas com esse braço ou essa mão e
+          em tarefas que exigem usar as duas mãos. Habilitador.
+- id: cosmetic
+  name:
+    en: Cosmetic Mutations
+    pt-BR: Mutações Cosméticas
+  intro:
+    en: >-
+      Cosmetic mutations affect nothing but the appearance of a character.
+      None are so pronounced as to make a character decidedly more or less
+      attractive. They are simply distinguishing alterations.
+    pt-BR: >-
+      Mutações cosméticas não afetam nada além da aparência do personagem.
+      Nenhuma é tão acentuada a ponto de tornar o personagem decididamente
+      mais ou menos atraente. São apenas alterações que o distinguem.
+  page: 88
+  rows:
+    - { range: 01–02, name: { en: Purple skin, pt-BR: Pele roxa }, effect: null }
+    - { range: 03–04, name: { en: Green skin, pt-BR: Pele verde }, effect: null }
+    - { range: 05–06, name: { en: Red skin, pt-BR: Pele vermelha }, effect: null }
+    - { range: 07–08, name: { en: Yellow skin, pt-BR: Pele amarela }, effect: null }
+    - { range: 09–10, name: { en: White skin, pt-BR: Pele branca }, effect: null }
+    - { range: 11–12, name: { en: Black skin, pt-BR: Pele preta }, effect: null }
+    - { range: 13–14, name: { en: Blue skin, pt-BR: Pele azul }, effect: null }
+    - { range: '15', name: { en: Purple hair, pt-BR: Cabelo roxo }, effect: null }
+    - { range: '16', name: { en: Green hair, pt-BR: Cabelo verde }, effect: null }
+    - { range: '17', name: { en: Red hair, pt-BR: Cabelo vermelho }, effect: null }
+    - { range: '18', name: { en: Yellow hair, pt-BR: Cabelo amarelo }, effect: null }
+    - { range: '19', name: { en: White hair, pt-BR: Cabelo branco }, effect: null }
+    - { range: '20', name: { en: Blue hair, pt-BR: Cabelo azul }, effect: null }
+    - { range: '21', name: { en: Striped hair, pt-BR: Cabelo listrado }, effect: null }
+    - { range: '22', name: { en: Horns, pt-BR: Chifres }, effect: null }
+    - { range: '23', name: { en: Antlers, pt-BR: Galhadas }, effect: null }
+    - { range: '24', name: { en: Extremely hirsute, pt-BR: Extremamente peludo }, effect: null }
+    - { range: '25', name: { en: Entirely hairless, pt-BR: Totalmente sem pelos }, effect: null }
+    - { range: '26', name: { en: Scaly skin, pt-BR: Pele escamosa }, effect: null }
+    - { range: '27', name: { en: Leathery skin, pt-BR: Pele coriácea }, effect: null }
+    - { range: '28', name: { en: Transparent skin, pt-BR: Pele transparente }, effect: null }
+    - range: '29'
+      name: { en: Skin turns transparent in sunlight, pt-BR: Pele fica transparente ao sol }
+      effect: null
+    - range: '30'
+      name: { en: Skin changes color in sunlight, pt-BR: Pele muda de cor ao sol }
+      effect: null
+    - { range: '31', name: { en: Very tall, pt-BR: Muito alto }, effect: null }
+    - { range: '32', name: { en: Very large, pt-BR: Muito grande }, effect: null }
+    - { range: '33', name: { en: Very short, pt-BR: Muito baixo }, effect: null }
+    - { range: '34', name: { en: Very thin, pt-BR: Muito magro }, effect: null }
+    - { range: '35', name: { en: Very long neck, pt-BR: Pescoço muito longo }, effect: null }
+    - { range: '36', name: { en: Hunched back, pt-BR: Corcunda }, effect: null }
+    - { range: '37', name: { en: 'Long, thin tail', pt-BR: Cauda longa e fina }, effect: null }
+    - { range: '38', name: { en: 'Short, broad tail', pt-BR: Cauda curta e larga }, effect: null }
+    - { range: '39', name: { en: Long arms, pt-BR: Braços longos }, effect: null }
+    - { range: '40', name: { en: Short arms, pt-BR: Braços curtos }, effect: null }
+    - { range: '41', name: { en: Long legs, pt-BR: Pernas longas }, effect: null }
+    - { range: '42', name: { en: Short legs, pt-BR: Pernas curtas }, effect: null }
+    - { range: '43', name: { en: Bony ridge on face, pt-BR: Crista óssea no rosto }, effect: null }
+    - {
+        range: '44',
+        name: { en: Bony ridge on back, pt-BR: Crista óssea nas costas },
+        effect: null,
+      }
+    - {
+        range: '45',
+        name: { en: Bony ridge on arms, pt-BR: Crista óssea nos braços },
+        effect: null,
+      }
+    - { range: '46', name: { en: Purple eye(s), pt-BR: Olho(s) roxo(s) }, effect: null }
+    - { range: '47', name: { en: Red eye(s), pt-BR: Olho(s) vermelho(s) }, effect: null }
+    - { range: '48', name: { en: Yellow eye(s), pt-BR: Olho(s) amarelo(s) }, effect: null }
+    - { range: '49', name: { en: White eye(s), pt-BR: Olho(s) branco(s) }, effect: null }
+    - { range: '50', name: { en: Black eye(s), pt-BR: Olho(s) preto(s) }, effect: null }
+    - { range: '51', name: { en: Large eyes, pt-BR: Olhos grandes }, effect: null }
+    - { range: '52', name: { en: Bulbous eyes, pt-BR: Olhos esbugalhados }, effect: null }
+    - {
+        range: '53',
+        name: { en: Two pupils in one eye, pt-BR: Duas pupilas num olho },
+        effect: null,
+      }
+    - { range: '54', name: { en: Large ears, pt-BR: Orelhas grandes }, effect: null }
+    - { range: 55–56, name: { en: Pointed ears, pt-BR: Orelhas pontudas }, effect: null }
+    - { range: 57–58, name: { en: Webbed fingers, pt-BR: Dedos das mãos palmados }, effect: null }
+    - { range: 59–60, name: { en: Webbed toes, pt-BR: Dedos dos pés palmados }, effect: null }
+    - range: 61–62
+      name: { en: Four fingers on each hand, pt-BR: Quatro dedos em cada mão }
+      effect: null
+    - range: 63–64
+      name: { en: Six fingers on each hand, pt-BR: Seis dedos em cada mão }
+      effect: null
+    - { range: '65', name: { en: Long fingers, pt-BR: Dedos longos }, effect: null }
+    - { range: '66', name: { en: Purple nails, pt-BR: Unhas roxas }, effect: null }
+    - { range: '67', name: { en: Green nails, pt-BR: Unhas verdes }, effect: null }
+    - { range: '68', name: { en: Yellow nails, pt-BR: Unhas amarelas }, effect: null }
+    - { range: '69', name: { en: White nails, pt-BR: Unhas brancas }, effect: null }
+    - { range: '70', name: { en: Black nails, pt-BR: Unhas pretas }, effect: null }
+    - { range: '71', name: { en: Blue nails, pt-BR: Unhas azuis }, effect: null }
+    - {
+        range: '72',
+        name: { en: Odd lumps on flesh, pt-BR: Caroços estranhos na pele },
+        effect: null,
+      }
+    - range: '73'
+      name: { en: Useless antennae (like an insect), pt-BR: Antenas inúteis (como as de um inseto) }
+      effect: null
+    - { range: '74', name: { en: Extra useless limb, pt-BR: Membro extra inútil }, effect: null }
+    - { range: '75', name: { en: Extra useless eye, pt-BR: Olho extra inútil }, effect: null }
+    - range: '76'
+      name:
+        en: Fleshy frills or useless flagella (small)
+        pt-BR: Babados carnudos ou flagelos inúteis (pequenos)
+      effect: null
+    - range: '77'
+      name: { en: Useless tendrils (large), pt-BR: Tentáculos inúteis (grandes) }
+      effect: null
+    - { range: '78', name: { en: Mandibles, pt-BR: Mandíbulas }, effect: null }
+    - { range: 79–80, name: { en: Pointed teeth, pt-BR: Dentes pontudos }, effect: null }
+    - { range: '81', name: { en: Tusks, pt-BR: Presas }, effect: null }
+    - { range: '82', name: { en: Black teeth, pt-BR: Dentes pretos }, effect: null }
+    - { range: '83', name: { en: Red teeth, pt-BR: Dentes vermelhos }, effect: null }
+    - { range: '84', name: { en: Purple teeth, pt-BR: Dentes roxos }, effect: null }
+    - { range: '85', name: { en: Green teeth, pt-BR: Dentes verdes }, effect: null }
+    - { range: '86', name: { en: Purple lips, pt-BR: Lábios roxos }, effect: null }
+    - { range: '87', name: { en: Green lips, pt-BR: Lábios verdes }, effect: null }
+    - { range: '88', name: { en: Yellow lips, pt-BR: Lábios amarelos }, effect: null }
+    - { range: '89', name: { en: White lips, pt-BR: Lábios brancos }, effect: null }
+    - { range: '90', name: { en: Black lips, pt-BR: Lábios pretos }, effect: null }
+    - { range: '91', name: { en: Blue lips, pt-BR: Lábios azuis }, effect: null }
+    - { range: '92', name: { en: Purple spittle, pt-BR: Saliva roxa }, effect: null }
+    - { range: '93', name: { en: Red spittle, pt-BR: Saliva vermelha }, effect: null }
+    - { range: '94', name: { en: Yellow spittle, pt-BR: Saliva amarela }, effect: null }
+    - { range: '95', name: { en: White spittle, pt-BR: Saliva branca }, effect: null }
+    - { range: '96', name: { en: Black spittle, pt-BR: Saliva preta }, effect: null }
+    - { range: 97–98, name: { en: Distinctive odor, pt-BR: Odor marcante }, effect: null }
+    - { range: '99', name: { en: Feathers, pt-BR: Penas }, effect: null }
+    - { range: '00', name: { en: Head crest, pt-BR: Crista na cabeça }, effect: null }

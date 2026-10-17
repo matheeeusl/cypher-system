@@ -1,0 +1,64 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 93 — Science Fiction Species descriptors. Unofficial guide,
+# not the Cypher System Rulebook. The book prints no Initial Link options.
+id: quintar
+category: science-fiction-species
+name:
+  en: Quintar
+  pt-BR: Quintar
+description:
+  en: >-
+    You are a quintar from the planet Quint. You are basically humanoid but
+    taller, thinner, and blue skinned. Your hands end in three very long
+    fingers. Quintar have five genders, but all quintar prefer to be
+    addressed as female when communicating with more binary species. Human
+    emotions and sexuality fascinate them, but not because they don't have
+    such concepts—quintar emotions and sexuality are just very different
+    from those of humans. In general, quintar are more cerebral than other
+    species, valuing knowledge over all else.
+
+    Quint is relatively Earthlike, with slightly less gravity but a slightly
+    denser atmosphere.
+  pt-BR: >-
+    Você é uma quintar do planeta Quint. Você é basicamente humanoide, porém
+    mais alta, mais magra e de pele azul. Suas mãos terminam em três dedos
+    muito longos. As quintar têm cinco gêneros, mas todas preferem ser
+    tratadas no feminino ao se comunicar com espécies mais binárias. As
+    emoções e a sexualidade humanas as fascinam, mas não porque elas não
+    tenham esses conceitos — as emoções e a sexualidade das quintar são
+    apenas muito diferentes das humanas. Em geral, as quintar são mais
+    cerebrais que outras espécies e valorizam o conhecimento acima de tudo.
+
+    Quint é relativamente parecido com a Terra, com uma gravidade um pouco
+    menor, mas uma atmosfera um pouco mais densa.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics:
+  - name:
+      en: Difficult Rest
+      pt-BR: Descanso Difícil
+    description:
+      en: Quintar subtract 2 from all recovery rolls (minimum 1).
+      pt-BR: As quintar subtraem 2 de todas as rolagens de recuperação (mínimo 1).
+skill_training:
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: You are trained in one type of knowledge task of your choice.
+      pt-BR: Você é treinada em um tipo de tarefa de conhecimento à sua escolha.
+  # Labeled "Skill" in the book, but it eases interactions with humans
+  # rather than training a skill everywhere — the same one-step benefit,
+  # scoped by the note.
+  - skill_id: social-interaction
+    choice_count: null
+    note:
+      en: >-
+        Quintar fascination with human behavior eases all interaction rolls
+        (pleasant or not) with humans.
+      pt-BR: >-
+        O fascínio das quintar pelo comportamento humano facilita todas as
+        rolagens de interação (agradáveis ou não) com humanos.
+inabilities: []
+additional_equipment: null
+connection_options: []

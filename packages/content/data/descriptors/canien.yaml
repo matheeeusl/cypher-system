@@ -1,0 +1,115 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 78 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: canien
+category: post-apocalyptic
+name:
+  en: Canien
+  pt-BR: Canien
+description:
+  en: >-
+    You're an evolved, intelligent dog with the ability to speak and use
+    tools. Some caniens stand upright and have hands, and others are
+    quadrupeds who can use a combination of their front paws and mouth as
+    adroitly as a handed canien; you decide which kind of canien you are.
+    Most canien clothing and equipment accommodates walking on either two
+    feet or four, so that's normally not an issue. Either way, you've got
+    fur, a tail, and a noble dog visage true to your particular line of
+    descent. And like most caniens, you're loyal to your pack and friends.
+    But you may find strangers a little suspicious, in which case you aren't
+    shy about letting them know. However, you're usually willing to
+    entertain the idea that a newcomer may be a friend you just don't know
+    yet.
+  pt-BR: >-
+    Você é um cão evoluído e inteligente, capaz de falar e usar ferramentas.
+    Alguns caniens andam eretos e têm mãos, e outros são quadrúpedes que
+    usam uma combinação das patas dianteiras e da boca com a mesma destreza
+    de um canien com mãos; você decide que tipo de canien é. A maior parte
+    das roupas e do equipamento canien serve para andar em duas ou quatro
+    patas, então isso normalmente não é problema. De um jeito ou de outro,
+    você tem pelo, cauda e um nobre semblante canino fiel à sua linhagem. E,
+    como a maioria dos caniens, é leal à sua matilha e aos seus amigos. Mas
+    pode achar os estranhos um pouco suspeitos e, nesse caso, não tem
+    vergonha de deixar isso claro. Ainda assim, costuma estar disposto a
+    considerar que um recém-chegado pode ser um amigo que você só ainda não
+    conhece.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics:
+  - name:
+      en: Loyal
+      pt-BR: Leal
+    description:
+      en: >-
+        If an ally within immediate range descends one or more steps on the
+        damage track, you can take an action immediately but in a restricted
+        fashion. You can use this action either to move the willing ally up
+        to an immediate distance or to attempt a healing task on your ally.
+      pt-BR: >-
+        Se um aliado a alcance imediato descer um ou mais degraus no marcador
+        de dano, você pode realizar uma ação imediatamente, mas de forma
+        restrita. Você pode usar essa ação para mover o aliado, se ele
+        quiser, até uma distância imediata, ou para tentar uma tarefa de
+        cura nele.
+  - name:
+      en: Bite
+      pt-BR: Mordida
+    description:
+      en: You are practiced in making unarmed bite attacks (light weapon). Enabler.
+      pt-BR: >-
+        Você é praticado em fazer ataques desarmados de mordida (arma leve).
+        Habilitador.
+  - name:
+      en: Chewer
+      pt-BR: Mastigador
+    description:
+      en: >-
+        You are something of an oral fidgeter, like most caniens. After each
+        ten-hour recovery roll, make a difficulty 2 Intellect defense roll.
+        If you fail, you discover you've unconsciously been chewing on a
+        piece of your equipment; it's ruined, at least until it is repaired.
+      pt-BR: >-
+        Como a maioria dos caniens, você vive com algo na boca. Após cada
+        rolagem de recuperação de dez horas, faça uma rolagem de defesa de
+        Intelecto de dificuldade 2. Se falhar, descobre que andou mastigando
+        sem perceber uma peça do seu equipamento; ela está arruinada, pelo
+        menos até ser consertada.
+skill_training:
+  - skill_id: perception
+    choice_count: null
+  - skill_id: playing-physical-games
+    choice_count: null
+inabilities:
+  - en: >-
+      You have a hard time seeing disloyalty in others. Tasks that involve
+      detecting falsehoods are hindered.
+    pt-BR: >-
+      Você tem dificuldade de enxergar deslealdade nos outros. Tarefas que
+      envolvem detectar falsidades são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      One of the other PCs needed help, and you obliged without a second's
+      hesitation.
+    pt-BR: >-
+      Um dos outros personagens precisava de ajuda, e você ajudou sem
+      hesitar nem por um segundo.
+  - en: >-
+      The other PCs were going somewhere, and you came along even though they
+      didn't ask you to.
+    pt-BR: >-
+      Os outros personagens iam para algum lugar, e você foi junto mesmo sem
+      eles terem pedido.
+  - en: >-
+      Aggression got the better of you, and now you're running from the
+      fallout of that experience.
+    pt-BR: >-
+      A agressividade levou a melhor sobre você, e agora você está fugindo
+      das consequências dessa experiência.
+  - en: >-
+      You feel that one of the other PCs is in danger in some way, and you'd
+      like to help out or keep an eye on them.
+    pt-BR: >-
+      Você sente que um dos outros personagens está em perigo de alguma forma
+      e gostaria de ajudar ou ficar de olho nele.

@@ -1,0 +1,79 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 67 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: half-giant
+category: fantasy-species
+name:
+  en: Half-Giant
+  pt-BR: Meio-Gigante
+description:
+  en: >-
+    You stand at least 12 feet (4 m) tall and tower over everyone around
+    you. Whether you are a full-blooded giant or merely have giant heritage
+    from large ancestors, you're massive. Always large for your age, it
+    became an issue only once you reached puberty and topped 7 feet (2 m) in
+    height, and kept growing from there.
+  pt-BR: >-
+    Você tem pelo menos 4 m de altura e se ergue acima de todos ao seu
+    redor. Seja um gigante de sangue puro ou apenas tenha herança gigante de
+    ancestrais grandes, você é enorme. Sempre grande para a idade, isso só
+    virou um problema quando você chegou à puberdade e passou dos 2 m de
+    altura, e continuou crescendo a partir daí.
+pool_bonus:
+  - stat: might
+    amount: 4
+characteristics:
+  - name:
+      en: Mass and Strength
+      pt-BR: Massa e Força
+    description:
+      en: >-
+        You inflict +1 point of damage with your melee attacks and attacks
+        with thrown weapons.
+      pt-BR: >-
+        Você causa +1 ponto de dano com os seus ataques corpo a corpo e com
+        ataques de armas arremessadas.
+  - name:
+      en: Breaker
+      pt-BR: Destruidor
+    description:
+      en: Tasks related to breaking things by smashing them are eased.
+      pt-BR: Tarefas relacionadas a quebrar coisas esmagando-as são facilitadas.
+skill_training: []
+inabilities:
+  - en: >-
+      You're too large to accomplish normal things. Tasks related to
+      initiative, stealth, and fine manipulation of any sort (such as
+      lockpicking or repair tasks) are hindered.
+    pt-BR: >-
+      Você é grande demais para fazer coisas normais. Tarefas relacionadas a
+      iniciativa, furtividade e manipulação fina de qualquer tipo (como
+      arrombar fechaduras ou fazer reparos) são dificultadas.
+additional_equipment:
+  en: You have a heavy weapon of your choice.
+  pt-BR: Você tem uma arma pesada à sua escolha.
+connection_options:
+  - en: >-
+      You fished the PCs out of a deep hole they'd fallen into while
+      exploring.
+    pt-BR: >-
+      Você tirou os personagens de um buraco fundo em que eles tinham caído
+      enquanto exploravam.
+  - en: >-
+      You were the PCs' guide in the land of giants and stayed with them
+      afterward.
+    pt-BR: >-
+      Você foi o guia dos personagens na terra dos gigantes e ficou com eles
+      depois.
+  - en: >-
+      The PCs helped you escape a nether realm where other giants were
+      imprisoned by the gods.
+    pt-BR: >-
+      Os personagens o ajudaram a fugir de um reino inferior onde outros
+      gigantes estavam aprisionados pelos deuses.
+  - en: >-
+      You kept the PCs from being discovered by hiding them behind your bulk
+      when they were on the run.
+    pt-BR: >-
+      Você impediu que os personagens fossem descobertos escondendo-os atrás
+      do seu corpanzil quando estavam em fuga.

@@ -1,0 +1,88 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 81 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: hopeful
+category: post-apocalyptic
+name:
+  en: Hopeful
+  pt-BR: Esperançoso
+description:
+  en: >-
+    Despite civilization's fall, you're optimistic about what the future
+    could bring, confident that it will be bright. In fact, now that all the
+    old institutions and cares of the world are gone, you hope something
+    better can be rebuilt in its place. It's possible that you're bubbly and
+    full of cheer. But you might instead be quietly confident, your hope
+    revealed by the way you always try again if at first you fail. Being
+    hopeful doesn't mean you're blind to others' faults, but you can hope
+    they will do better next time, which might lead you to be more forgiving
+    than other survivors. After all, when you screw up, you hope others will
+    allow you the same luxury of learning from your mistakes.
+  pt-BR: >-
+    Apesar da queda da civilização, você é otimista quanto ao que o futuro
+    pode trazer e confia que ele será brilhante. Na verdade, agora que todas
+    as velhas instituições e preocupações do mundo se foram, você espera que
+    algo melhor possa ser reconstruído no lugar. Talvez você seja
+    efervescente e cheio de alegria. Ou talvez tenha uma confiança
+    tranquila, e a sua esperança se revele no jeito como sempre tenta de
+    novo quando falha da primeira vez. Ter esperança não significa ser cego
+    aos defeitos dos outros, mas você pode esperar que eles se saiam melhor
+    da próxima vez, o que talvez o torne mais tolerante que outros
+    sobreviventes. Afinal, quando você pisa na bola, espera que os outros
+    lhe deem o mesmo luxo de aprender com os seus erros.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics:
+  - name:
+      en: Shrug Off Disappointment
+      pt-BR: Superar a Decepção
+    description:
+      en: >-
+        When you fail at a noncombat task and try that task again the very
+        next round, you can apply a free level of Effort toward the success
+        of that task. This benefit effectively alleviates the requirement to
+        apply a level of Effort when retrying failed tasks, at least the first
+        time you retry. Enabler.
+      pt-BR: >-
+        Quando você falha numa tarefa fora de combate e tenta de novo logo na
+        rodada seguinte, pode aplicar um nível de Esforço gratuito para o
+        sucesso dessa tarefa. Na prática, esse benefício elimina a exigência
+        de aplicar um nível de Esforço ao tentar de novo tarefas que falharam,
+        pelo menos na primeira nova tentativa. Habilitador.
+skill_training:
+  - skill_id: intellect-defense
+    choice_count: null
+inabilities:
+  - en: >-
+      You have a lightness of being, but you really feel it when you're
+      physically challenged. Might defense tasks are hindered.
+    pt-BR: >-
+      Você tem uma leveza de espírito, mas sente o baque quando é desafiado
+      fisicamente. Tarefas de defesa de Força são dificultadas.
+  - en: You're spirited but not fast. All movement-related tasks are hindered.
+    pt-BR: >-
+      Você é animado, mas não é rápido. Todas as tarefas relacionadas a
+      movimento são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      The PCs were in a bad spot, and one of the other PCs asked you along to
+      add some perspective.
+    pt-BR: >-
+      Os personagens estavam numa situação ruim, e um deles o chamou para dar
+      um pouco de perspectiva.
+  - en: >-
+      You had a spot of bad luck, but you jumped back in to try something new,
+      hopeful it would work out.
+    pt-BR: >-
+      Você teve um pouco de azar, mas voltou à ativa para tentar algo novo,
+      esperando que desse certo.
+  - en: To make good on a promise to help, you came with the other PCs.
+    pt-BR: >-
+      Para cumprir a promessa de ajudar, você veio com os outros personagens.
+  - en: >-
+      You answered a cry for help when another PC got in over their head.
+    pt-BR: >-
+      Você atendeu a um pedido de socorro quando outro personagem se meteu em
+      algo maior do que podia.

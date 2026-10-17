@@ -1,0 +1,134 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), pp. 97–98 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook. Missing from the p. 29 list. The Advancement
+# options are listed by name only; the last one, "Training in Unarmed
+# Attacks", is a bare line in the book with no rules text. The sidebar on
+# materials and healing is not modeled.
+id: forgeborn
+category: weird-west
+name:
+  en: Forgeborn
+  pt-BR: Forjado
+description:
+  en: >-
+    Forgeborn—also called golems—are animate figures of metal, reanimated
+    flesh, or other normally inert materials. Forgeborn are constructed for
+    a specific purpose; their primary task is often to guard the alchemist
+    that made them. As such, they usually ain't playing with a full deck
+    when it comes to brains. You're different—somehow, you got a fully
+    developed sense of self, and either never had or lost your compulsion to
+    serve your maker. Maybe your alchemist creator emancipated you once they
+    understood your animated form contained a fully realized mind, or maybe
+    you ran away when the chance offered itself. Either way, you're on your
+    own now, choosing your own goals and jobs.
+
+    Most folks who see you don't immediately realize you're not on the short
+    leash of someone nearby. Maybe that's fine by you, since that keeps them
+    from interfering in your business or asking too many pesky questions.
+    Other times, you can't help it, and proudly proclaim your independent
+    status to anyone and everyone.
+  pt-BR: >-
+    Os forjados — também chamados de golens — são figuras animadas de metal,
+    carne reanimada ou outros materiais normalmente inertes. Os forjados são
+    construídos com um propósito específico; a sua tarefa principal costuma
+    ser proteger o alquimista que os fez. Por isso, em geral não batem muito
+    bem da cabeça. Você é diferente — de algum jeito, desenvolveu um senso
+    de si completo e nunca teve, ou perdeu, a compulsão de servir ao seu
+    criador. Talvez o alquimista que o criou o tenha libertado ao entender
+    que a sua forma animada abrigava uma mente plena, ou talvez você tenha
+    fugido quando surgiu a chance. De um jeito ou de outro, agora você está
+    por conta própria, escolhendo os seus objetivos e serviços.
+
+    A maioria das pessoas que o vê não percebe logo que você não está na
+    rédea curta de alguém por perto. Talvez isso lhe convenha, já que as
+    impede de se meter nos seus assuntos ou de fazer perguntas demais. Em
+    outras vezes você não se aguenta e proclama com orgulho a sua
+    independência para todo mundo.
+pool_bonus:
+  - stat: might
+    amount: 4
+characteristics:
+  - name:
+      en: Resistant
+      pt-BR: Resistente
+    description:
+      en: >-
+        You gain two assets to defense rolls to resist effects that would
+        daze or stun you, and you're immune to poison and disease.
+      pt-BR: >-
+        Você ganha dois recursos em rolagens de defesa para resistir a
+        efeitos que o deixariam tonto ou atordoado, e é imune a venenos e
+        doenças.
+  - name:
+      en: Fixable
+      pt-BR: Consertável
+    description:
+      en: >-
+        Even if you are killed, as long as all of your parts are collected, a
+        willing alchemist who spends several days repairing you can bring you
+        back with a successful difficulty 5 Intellect-based roll. However,
+        the GM may decide you have some lasting damage, such as 2 fewer Pool
+        points.
+      pt-BR: >-
+        Mesmo que você seja morto, desde que todas as suas partes sejam
+        recolhidas, um alquimista disposto a passar vários dias consertando-o
+        pode trazê-lo de volta com sucesso numa rolagem de Intelecto de
+        dificuldade 5. Porém, o Mestre pode decidir que você fica com algum
+        dano permanente, como 2 pontos a menos numa Reserva.
+  - name:
+      en: Forgeborn Advancement
+      pt-BR: Avanço de Forjado
+    description:
+      en: >-
+        With the GM's approval, you can choose from these abilities instead
+        of your type abilities: Bash, Enhanced Might, Enhanced Might Edge,
+        Enlarge, Nothing but Defend, Training in Unarmed Attacks.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher entre estas habilidades
+        em vez das habilidades do seu tipo: Golpe Atordoante, Força
+        Aprimorada, Margem de Força Aprimorada, Ampliar, Só Defender,
+        Treinamento em Ataques Desarmados.
+skill_training:
+  - skill_id: knowing-your-own-kind
+    choice_count: null
+    note:
+      en: >-
+        You know your own kind. You are trained in tasks related to
+        interacting with, identifying, tracking, or repairing other
+        forgeborn.
+      pt-BR: >-
+        Você conhece os seus semelhantes. Você é treinado em tarefas
+        relacionadas a interagir com outros forjados, identificá-los,
+        rastreá-los ou consertá-los.
+inabilities:
+  - en: >-
+      You're just not as quick as a living creature. Your Speed defense tasks
+      are hindered.
+    pt-BR: >-
+      Você simplesmente não é tão rápido quanto uma criatura viva. Suas
+      tarefas de defesa de Velocidade são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Though it's not something they necessarily meant to do, the other PCs'
+      actions gave you your independence, and they asked you along.
+    pt-BR: >-
+      Mesmo sem necessariamente terem essa intenção, as ações dos outros
+      personagens lhe deram a independência, e eles o convidaram para ir
+      junto.
+  - en: >-
+      You were looking for a job, same as any other independent being, and
+      applied to a job posting.
+    pt-BR: >-
+      Você estava procurando trabalho, como qualquer outro ser independente,
+      e respondeu a um anúncio de vaga.
+  - en: >-
+      You're on the run from your creator, and the PCs' presence allows you
+      to blend in.
+    pt-BR: >-
+      Você está fugindo do seu criador, e a presença dos personagens permite
+      que você passe despercebido.
+  - en: You were lost. The PCs found you and invited you to join their group.
+    pt-BR: >-
+      Você estava perdido. Os personagens o encontraram e o convidaram para
+      entrar no grupo.

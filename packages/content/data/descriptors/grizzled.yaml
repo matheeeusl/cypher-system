@@ -1,0 +1,91 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 98 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: grizzled
+category: weird-west
+name:
+  en: Grizzled
+  pt-BR: Calejado
+description:
+  en: >-
+    Life's thrown trials aplenty your way. Yet you're still here. Your skin
+    is sun kissed and weathered and your hair is streaked with gray, sure,
+    but that just speaks to your resilience. You're seasoned—you've got the
+    wisdom of long experience behind you. Your crinkled eyes only enhance
+    your steely gaze, because you exude the quiet confidence of the battle
+    tested. 'Course, you've also learned the value of companionship, and
+    your face easily breaks into a warm smile when your friends are nearby.
+  pt-BR: >-
+    A vida lhe jogou provações de sobra. E você continua aqui. A sua pele é
+    queimada de sol e castigada pelo tempo, e o seu cabelo tem fios
+    grisalhos, claro, mas isso só mostra a sua resistência. Você é
+    experiente — tem a sabedoria de uma longa vivência. Os seus olhos
+    enrugados só reforçam o seu olhar de aço, porque você transmite a
+    confiança tranquila de quem já foi testado em batalha. É claro que você
+    também aprendeu o valor da companhia, e o seu rosto se abre fácil num
+    sorriso caloroso quando os amigos estão por perto.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Try, Try Again
+      pt-BR: Tentar de Novo
+    description:
+      en: >-
+        You don't give up easy. You don't have to spend a level of Effort the
+        first time you retry a task, if you don't want to.
+      pt-BR: >-
+        Você não desiste fácil. Você não precisa gastar um nível de Esforço da
+        primeira vez que tenta de novo uma tarefa, se não quiser.
+skill_training:
+  - skill_id: history
+    choice_count: null
+    note:
+      en: You are trained in local lore and history.
+      pt-BR: Você é treinado em saber local e história.
+  - skill_id: discerning-truth
+    choice_count: null
+    note:
+      en: You are trained in detecting falsehoods.
+      pt-BR: Você é treinado em detectar falsidades.
+inabilities:
+  - en: >-
+      You're getting on in years. Your Might tasks and Might defense rolls
+      are hindered.
+    pt-BR: >-
+      Você está ficando velho. Suas tarefas de Força e suas rolagens de
+      defesa de Força são dificultadas.
+additional_equipment:
+  en: >-
+    You have collected your share of valuables, but have at least one
+    favorite. You can choose an extra piece of starting equipment (with a
+    value of expensive or less).
+  pt-BR: >-
+    Você juntou a sua cota de objetos de valor, mas tem pelo menos um
+    favorito. Você pode escolher uma peça extra de equipamento inicial (de
+    valor caro ou menos).
+connection_options:
+  - en: >-
+      A job needed doing. Clearly you were the person with the most
+      experience, so you stepped up.
+    pt-BR: >-
+      Havia um serviço a fazer. Claramente você era quem tinha mais
+      experiência, então se apresentou.
+  - en: >-
+      You got caught out and would've died, but the other PCs saved you.
+    pt-BR: >-
+      Você foi pego desprevenido e teria morrido, mas os outros personagens o
+      salvaram.
+  - en: >-
+      You're looking for one last grand adventure or two before age catches
+      up with you.
+    pt-BR: >-
+      Você procura uma última grande aventura, ou duas, antes que a idade o
+      alcance.
+  - en: >-
+      You don't suffer fools, and the way things were going, the PCs would've
+      failed without you.
+    pt-BR: >-
+      Você não tem paciência para tolos, e do jeito que as coisas iam, os
+      personagens teriam fracassado sem você.

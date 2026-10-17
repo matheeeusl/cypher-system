@@ -1,0 +1,141 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 59 — Cyberpunk descriptors. Unofficial guide, not the
+# Cypher System Rulebook. See also p. 134: a Luddite can't take
+# cyberware-derived (~) abilities.
+id: luddite
+category: cyberpunk
+name:
+  en: Luddite
+  pt-BR: Ludita
+description:
+  en: >-
+    You've made it this far without having any cybernetic implants—an
+    extreme outlier in a world where they're as common as eyeglasses. You
+    should decide the reason why you don't have any—religious objection,
+    allergic to synthetic materials, poverty, or simply lucky (or talented)
+    enough to never have needed them. You might be open and obvious about
+    this, or try to keep it a secret (perhaps using scars or tattoos to make
+    it look like you aren't a luddite).
+  pt-BR: >-
+    Você chegou até aqui sem nenhum implante cibernético — uma exceção
+    extrema num mundo em que eles são tão comuns quanto óculos. Decida por
+    que você não tem nenhum — objeção religiosa, alergia a materiais
+    sintéticos, pobreza, ou simplesmente sorte (ou talento) suficiente para
+    nunca ter precisado deles. Você pode ser aberto e óbvio sobre isso, ou
+    tentar manter segredo (talvez usando cicatrizes ou tatuagens para fingir
+    que não é um ludita).
+pool_bonus: []
+pool_bonus_choice:
+  kind: divide
+  points: 4
+  stats: [might, speed]
+characteristics:
+  - name:
+      en: Natural Fitness
+      pt-BR: Preparo Natural
+    description:
+      en: >-
+        You've had to rely on your own natural organic abilities instead of
+        technological implants. You get 4 additional points to divide among
+        your Might and Speed Pools.
+      pt-BR: >-
+        Você teve que contar com as suas próprias habilidades orgânicas
+        naturais em vez de implantes tecnológicos. Você recebe 4 pontos
+        adicionais para dividir entre suas Reservas de Força e de Velocidade.
+  - name:
+      en: Resourceful
+      pt-BR: Desenrolado
+    description:
+      en: >-
+        A lifetime of exploring non-cybernetic options has let you acquire
+        skills in many areas. You're trained in two areas of knowledge (such
+        as computers, geography, or history) and two physical skills (such as
+        climbing, jumping, or swimming).
+      pt-BR: >-
+        Uma vida inteira explorando opções não cibernéticas lhe permitiu
+        adquirir perícias em muitas áreas. Você é treinado em duas áreas de
+        conhecimento (como computadores, geografia ou história) e em duas
+        perícias físicas (como escalada, salto ou natação).
+  - name:
+      en: Unchromed
+      pt-BR: Sem Cromo
+    description:
+      en: >-
+        You have no cybernetics. If you ever do gain cybernetics (even
+        unwillingly), you lose this descriptor and all of its
+        characteristics. You can regain this descriptor if you have all of
+        your cybernetics removed (and, at the GM's discretion, complete a
+        Cleanse, Recover from a Wound (or Trauma), or Restoration character
+        arc); otherwise, you have no descriptor until you complete a
+        character arc (perhaps Explore, Growth, or Transformation) to gain a
+        new one.
+      pt-BR: >-
+        Você não tem nenhum implante cibernético. Se algum dia ganhar um
+        (mesmo contra a sua vontade), perde este descritor e todas as suas
+        características. Você pode recuperar este descritor se remover todos
+        os seus implantes cibernéticos (e, a critério do Mestre, completar um
+        arco de personagem de Purificação, Recuperar-se de um Ferimento (ou
+        Trauma) ou Restauração); caso contrário, fica sem descritor até
+        completar um arco de personagem (talvez Explorar, Crescimento ou
+        Transformação) para ganhar um novo.
+skill_training:
+  - skill_id: null
+    choice_count: 2
+    note:
+      en: two areas of knowledge (such as computers, geography, or history)
+      pt-BR: duas áreas de conhecimento (como computadores, geografia ou história)
+  - skill_id: null
+    choice_count: 2
+    note:
+      en: two physical skills (such as climbing, jumping, or swimming)
+      pt-BR: duas perícias físicas (como escalada, salto ou natação)
+inabilities:
+  - en: >-
+      At best, your aversion to cyberware makes it hard for people to take
+      you seriously; at worst, they think you're weak or a fool. Social
+      interaction tasks to influence people with extensive cybernetics (GM's
+      discretion, but typically three or more implants) are hindered.
+    pt-BR: >-
+      Na melhor das hipóteses, a sua aversão a cyberware faz as pessoas
+      terem dificuldade de levá-lo a sério; na pior, elas o acham fraco ou
+      tolo. Tarefas de interação social para influenciar pessoas com muitos
+      implantes cibernéticos (a critério do Mestre, mas normalmente três ou
+      mais) são dificultadas.
+additional_equipment:
+  en: >-
+    You have a smartphone. If some other starting aspect of your character
+    (such as your type or focus) gives you cyberware (such as a
+    communicator implant), you instead get money equal to the value of that
+    implant.
+  pt-BR: >-
+    Você tem um smartphone. Se algum outro aspecto inicial do seu personagem
+    (como o seu tipo ou foco) lhe der cyberware (como um implante de
+    comunicação), você recebe, em vez disso, dinheiro equivalente ao valor
+    desse implante.
+connection_options:
+  - en: >-
+      Another PC took pity on you when they realized you don't have any
+      cybernetics. (They probably assumed you're poor or stupid, even if they
+      don't feel that way now.)
+    pt-BR: >-
+      Outro personagem teve pena de você ao perceber que você não tem nenhum
+      implante cibernético. (Ele provavelmente achou que você era pobre ou
+      burro, mesmo que não pense mais assim.)
+  - en: >-
+      One of the PCs invited you, and you're not sure why, but you've decided
+      you don't want to let them down.
+    pt-BR: >-
+      Um dos personagens o convidou, e você não sabe bem por quê, mas decidiu
+      que não quer decepcioná-lo.
+  - en: >-
+      Another PC recruited you before they realized you don't even have any
+      basic chrome.
+    pt-BR: >-
+      Outro personagem o recrutou antes de perceber que você não tem nem o
+      cromo mais básico.
+  - en: >-
+      A chromed PC helped you overcome a bad situation; now you're trying to
+      make it up to them.
+    pt-BR: >-
+      Um personagem cromado o ajudou a superar uma situação ruim; agora você
+      está tentando retribuir.

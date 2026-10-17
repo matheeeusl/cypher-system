@@ -1,0 +1,102 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 64 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: dragonfolk
+category: fantasy-species
+name:
+  en: Dragonfolk
+  pt-BR: Povo-Dragão
+description:
+  en: >-
+    You have scales, fangs, claws, and magic—gifts of the dragons. You might
+    have been born of dragonfolk parents, willingly transformed in a magical
+    ceremony, or chosen by a dragon to be their agent or champion. You have a
+    great destiny before you, but it is your choice whether to make it your
+    own or bend to the will of those who made you what you are. Some people
+    mistrust or fear you, and others consider you a prophet or wish to
+    exploit your power for their own goals.
+  pt-BR: >-
+    Você tem escamas, presas, garras e magia — dádivas dos dragões. Talvez
+    tenha nascido de pais do povo-dragão, sido transformado de bom grado
+    numa cerimônia mágica ou escolhido por um dragão para ser o seu agente
+    ou campeão. Um grande destino o aguarda, mas cabe a você decidir se o
+    torna seu ou se curva à vontade de quem o fez como você é. Algumas
+    pessoas desconfiam de você ou o temem, e outras o consideram um profeta
+    ou querem explorar o seu poder para os próprios fins.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics:
+  - name:
+      en: Dragonbreath (3 Might points)
+      pt-BR: Sopro de Dragão (3 pontos de Força)
+    description:
+      en: >-
+        You breathe out a blast of energy in an immediate area. Choose one
+        type of energy (arcane, cold, fire, thorn, and so on); the blast
+        inflicts 2 points of damage of this kind of energy (ignores Armor) to
+        all creatures or objects within the area. Because this is an area
+        attack, adding Effort to increase your damage works differently than
+        it does for single-target attacks. If you apply a level of Effort to
+        increase the damage, add 2 points of damage for each target, and even
+        if you fail your attack roll, all targets in the area still take 1
+        point of damage. Action.
+      pt-BR: >-
+        Você exala uma rajada de energia numa área imediata. Escolha um tipo
+        de energia (arcana, frio, fogo, espinhos e assim por diante); a
+        rajada causa 2 pontos de dano desse tipo de energia (ignora
+        Armadura) a todas as criaturas ou objetos na área. Como este é um
+        ataque em área, adicionar Esforço para aumentar o dano funciona de
+        forma diferente dos ataques contra um único alvo. Se você aplicar um
+        nível de Esforço para aumentar o dano, adicione 2 pontos de dano para
+        cada alvo e, mesmo que falhe na rolagem de ataque, todos os alvos na
+        área ainda sofrem 1 ponto de dano. Ação.
+  - name:
+      en: Draconic Resistance
+      pt-BR: Resistência Dracônica
+    description:
+      en: >-
+        You gain +2 Armor against the type of energy you create with your
+        dragonbreath.
+      pt-BR: >-
+        Você ganha +2 de Armadura contra o tipo de energia que cria com o seu
+        sopro de dragão.
+  - name:
+      en: Scaly
+      pt-BR: Escamoso
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+skill_training:
+  - skill_id: intimidation
+    choice_count: null
+inabilities:
+  - en: >-
+      You have difficulty relating to non-dragons. Tasks to persuade
+      non-dragons are hindered.
+    pt-BR: >-
+      Você tem dificuldade de se relacionar com quem não é dragão. Tarefas
+      para persuadir quem não é dragão são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You believe the other PCs can help you solve a mystery about your
+      heritage.
+    pt-BR: >-
+      Você acredita que os outros personagens podem ajudá-lo a resolver um
+      mistério sobre a sua herança.
+  - en: >-
+      You needed to get out of town, and the PCs were going in the same
+      direction as you.
+    pt-BR: >-
+      Você precisava sair da cidade, e os personagens iam na mesma direção que
+      você.
+  - en: Your creator, master, or mentor told you to help the PCs.
+    pt-BR: >-
+      O seu criador, mestre ou mentor lhe disse para ajudar os personagens.
+  - en: >-
+      You want to make a name for yourself, and the other PCs seem competent
+      and compatible.
+    pt-BR: >-
+      Você quer fazer nome, e os outros personagens parecem competentes e
+      compatíveis.

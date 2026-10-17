@@ -2,7 +2,13 @@ export { LocalizedString, type WithVersion } from './schemas/shared.js'
 
 export { AbilitySchema, ActionTypeSchema, type Ability } from './schemas/ability.js'
 export { TypeSchema, type Type } from './schemas/type.js'
-export { DescriptorSchema, type Descriptor } from './schemas/descriptor.js'
+export {
+  DescriptorSchema,
+  DescriptorCategoryId,
+  DescriptorCategoryTableSchema,
+  type Descriptor,
+  type DescriptorCategoryTable,
+} from './schemas/descriptor.js'
 export { FocusSchema, type Focus } from './schemas/focus.js'
 export { FlavorSchema, type Flavor } from './schemas/flavor.js'
 export {
@@ -53,4 +59,10 @@ export {
   getPriceTierTable,
   getAmmunition,
   getAnimalFormMinorAbilitiesTable,
+  getDescriptorCategoryTable,
+  getMutantMutationTable,
 } from './loader.js'
+export {
+  MutantMutationTableSchema,
+  type MutantMutationTable,
+} from './schemas/mutant-mutation-table.js'

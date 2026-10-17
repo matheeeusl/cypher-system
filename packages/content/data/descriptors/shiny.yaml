@@ -1,0 +1,118 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 92 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: shiny
+category: post-apocalyptic
+name:
+  en: Shiny
+  pt-BR: Reluzente
+description:
+  en: >-
+    You're brash and bright, and you exult in situations, people, and objects
+    that seem to you as if they have a similar sheen. Literally shiny objects
+    qualify, as well as objects that are not rusted or degraded by time's
+    passage or the effects of the apocalypse. You also tend to fall into the
+    orbit of people who are strong, unbeaten, and possessed of an inner
+    brightness. You believe that they, like you, reflect the light of some
+    greater spiritual purpose in the world. When you believe you are acting
+    in that glow, you are emboldened and may take risks others fear. You
+    don't seek death, but you're confident that death in the pursuit of
+    something shiny is the definition of a life well-lived.
+  pt-BR: >-
+    Você é ousado e radiante, e exulta com situações, pessoas e objetos que
+    lhe parecem ter um brilho parecido. Objetos literalmente reluzentes
+    contam, assim como objetos que não foram enferrujados ou degradados pela
+    passagem do tempo ou pelos efeitos do apocalipse. Você também tende a
+    cair na órbita de pessoas fortes, invictas e dotadas de um brilho
+    interior. Acredita que elas, como você, refletem a luz de algum
+    propósito espiritual maior no mundo. Quando acredita estar agindo sob
+    esse brilho, você se enche de coragem e pode correr riscos que os outros
+    temem. Você não busca a morte, mas tem certeza de que morrer em busca de
+    algo reluzente é a definição de uma vida bem vivida.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Shiny Maneuver
+      pt-BR: Manobra Reluzente
+    description:
+      en: >-
+        You know how to push yourself harder, at the risk of a more dramatic
+        failure. When you attempt a shiny maneuver, you ease a task, attack
+        roll, or defense roll, but in doing so you increase the intrusion range
+        by two for that roll, to a 1–3 on a d20. If you fail and decide to
+        retry the task (requiring that you spend a level of Effort, as normal),
+        it has the same increased intrusion range. Once you attempt a shiny
+        maneuver, you can't attempt another until you make a recovery roll.
+        Enabler.
+      pt-BR: >-
+        Você sabe se esforçar mais, correndo o risco de uma falha mais
+        dramática. Quando tenta uma manobra reluzente, você facilita uma
+        tarefa, uma rolagem de ataque ou uma rolagem de defesa, mas com isso
+        aumenta em dois a faixa de intrusão dessa rolagem, para 1–3 no d20.
+        Se falhar e decidir tentar a tarefa de novo (o que exige gastar um
+        nível de Esforço, como de costume), ela tem a mesma faixa de intrusão
+        aumentada. Depois de tentar uma manobra reluzente, você não pode
+        tentar outra até fazer uma rolagem de recuperação. Habilitador.
+skill_training:
+  - skill_id: vehicle-driving
+    choice_count: null
+    note:
+      en: >-
+        You've had practice driving a before-times vehicle. Choose a
+        motorcycle, car or truck, or long-haul truck; you're trained in
+        driving that kind of vehicle.
+      pt-BR: >-
+        Você já praticou dirigir um veículo do tempo de antes. Escolha uma
+        moto, um carro ou caminhonete, ou um caminhão de longa distância; você
+        é treinado em dirigir esse tipo de veículo.
+  - skill_id: speed-defense
+    choice_count: null
+inabilities:
+  - en: >-
+      You may be lithe and shiny, but you're not sneaky. Tasks related to
+      sneaking and staying quiet are hindered.
+    pt-BR: >-
+      Você pode ser ágil e reluzente, mas não é sorrateiro. Tarefas
+      relacionadas a se esgueirar e ficar em silêncio são dificultadas.
+  - en: >-
+      You are irrepressible, but that makes it hard to dissemble. Deception
+      and disguise tasks are hindered.
+    pt-BR: >-
+      Você é irreprimível, mas isso torna difícil dissimular. Tarefas de
+      enganação e disfarce são dificultadas.
+additional_equipment:
+  en: >-
+    You have a treasured object that is literally shiny in bright light, such
+    as a polished stainless-steel sphere, a silver coin, a pocket watch from
+    the before-times, or something else small and easily carried.
+  pt-BR: >-
+    Você tem um objeto precioso que é literalmente reluzente sob luz forte,
+    como uma esfera polida de aço inoxidável, uma moeda de prata, um relógio
+    de bolso do tempo de antes ou outra coisa pequena e fácil de carregar.
+connection_options:
+  - en: >-
+      It seemed like there were equal odds that the other PCs wouldn't
+      succeed, which sounded good to you.
+    pt-BR: >-
+      Parecia que as chances de os outros personagens não conseguirem eram
+      iguais, e isso lhe pareceu ótimo.
+  - en: >-
+      The first word that popped into your head upon seeing the PCs was
+      "shiny."
+    pt-BR: >-
+      A primeira palavra que lhe veio à cabeça ao ver os personagens foi
+      "reluzente".
+  - en: >-
+      You think the tasks ahead will present you with unique and fulfilling
+      challenges.
+    pt-BR: >-
+      Você acha que as tarefas pela frente vão lhe apresentar desafios únicos
+      e gratificantes.
+  - en: >-
+      Someone you trust and respect above all others suggested you join the
+      PCs to help them complete their task.
+    pt-BR: >-
+      Alguém em quem você confia e que respeita acima de todos sugeriu que
+      você se juntasse aos personagens para ajudá-los a completar a tarefa.

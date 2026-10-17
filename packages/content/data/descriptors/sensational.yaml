@@ -1,0 +1,107 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 95 — Superhero descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: sensational
+category: superhero
+name:
+  en: Sensational
+  pt-BR: Sensacional
+description:
+  en: >-
+    The public and the press like you. Maybe you're photogenic, or you're
+    inherently nice, or you have really good luck with journalists. Whatever
+    the cause of it, you're the darling of the media, and whenever you're
+    seen in public, you generate a lot of positive interest and excitement.
+    (If you don't have a secret identity, this attention probably also
+    carries over to your day job, which is a mixed blessing.) People know
+    that you're a hero and that they can count on you to do the right
+    thing—fighting crime, battling injustice, punching evil robots, that
+    kind of stuff. Sometimes being in the public eye so much can be wearying
+    or even a burden, but you know how to use your reputation to set a good
+    example and make the world a better place.
+  pt-BR: >-
+    O público e a imprensa gostam de você. Talvez você seja fotogênico, ou
+    naturalmente simpático, ou tenha muita sorte com jornalistas. Seja qual
+    for o motivo, você é o queridinho da mídia e, sempre que é visto em
+    público, gera muito interesse e entusiasmo positivos. (Se você não tem
+    uma identidade secreta, essa atenção provavelmente se estende ao seu
+    emprego, o que é uma bênção ambígua.) As pessoas sabem que você é um
+    herói e que podem contar com você para fazer a coisa certa — combater o
+    crime, lutar contra a injustiça, socar robôs malignos, esse tipo de
+    coisa. Às vezes estar tanto sob os holofotes pode ser cansativo ou até
+    um fardo, mas você sabe usar sua reputação para dar o bom exemplo e
+    tornar o mundo um lugar melhor.
+pool_bonus: []
+pool_bonus_choice:
+  kind: divide
+  points: 4
+  stats: [might, speed, intellect]
+characteristics:
+  - name:
+      en: Popular
+      pt-BR: Popular
+    description:
+      en: >-
+        The GM can introduce a GM intrusion on you, based on your fame and
+        the public's perception of you, without awarding you any XP (as if
+        you had rolled a 1 on a d20 roll). However, if this happens, 50
+        percent of the time, your reputation works to your advantage. Rather
+        than hurting you (much), it helps you, or it hurts your enemies. You
+        get spotted by a guard, but they're dumbstruck for a moment because
+        you're even more impressive in person than you are on TV. You attract
+        a crowd of fans, but they slow down the fleeing villain you're trying
+        to catch. A photographer pesters you for a photo and a quote, but
+        their camera catches something interesting in the background. You
+        and the GM should work together to determine the details. If the GM
+        wishes, they can use GM intrusions based on your fame normally
+        (awarding XP).
+      pt-BR: >-
+        O Mestre pode introduzir uma intrusão do Mestre sobre você, baseada
+        na sua fama e na percepção do público a seu respeito, sem lhe
+        conceder XP (como se você tivesse tirado 1 em uma rolagem de d20).
+        Porém, quando isso acontece, em 50% das vezes sua reputação trabalha
+        a seu favor. Em vez de prejudicá-lo (muito), ela o ajuda ou prejudica
+        seus inimigos. Um guarda o vê, mas fica pasmo por um momento porque
+        você é ainda mais impressionante pessoalmente do que na TV. Você atrai
+        uma multidão de fãs, mas ela atrasa o vilão em fuga que você está
+        tentando pegar. Um fotógrafo o importuna atrás de uma foto e uma
+        declaração, mas a câmera dele capta algo interessante ao fundo. Você
+        e o Mestre devem trabalhar juntos para definir os detalhes. Se
+        quiser, o Mestre pode usar intrusões baseadas na sua fama
+        normalmente (concedendo XP).
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: >-
+        You're trained in one skill relating to your current or past career,
+        such as computers, journalism, law, machinery, or medicine.
+      pt-BR: >-
+        Você é treinado em uma perícia relacionada à sua carreira atual ou
+        passada, como computadores, jornalismo, direito, maquinário ou
+        medicina.
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You're related to one of the other superhero PCs, and decided to help
+      out because of family.
+    pt-BR: >-
+      Você é parente de um dos outros personagens super-heróis e decidiu
+      ajudar por causa da família.
+  - en: >-
+      The other PCs relied on your positive reputation to untangle them from
+      a public relations problem, and they invited you along out of
+      gratitude.
+    pt-BR: >-
+      Os outros personagens contaram com sua boa reputação para se livrar de
+      um problema de relações públicas e o convidaram para acompanhá-los por
+      gratidão.
+  - en: The media specifically called you out to fix this problem.
+    pt-BR: A mídia chamou você especificamente para resolver este problema.
+  - en: A supervillain chose to make a scene in the hopes of drawing you out.
+    pt-BR: >-
+      Um supervilão resolveu fazer uma cena na esperança de atraí-lo para
+      fora.

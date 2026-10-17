@@ -1,0 +1,96 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 77 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: bitter
+category: post-apocalyptic
+name:
+  en: Bitter
+  pt-BR: Amargurado
+description:
+  en: >-
+    Someone you cared for wronged you. They may have done so directly by
+    betraying a trust, stealing your supplies, or giving you up to raiders to
+    save their own life. Maybe they did it indirectly by going missing or
+    dying on you. Or maybe it was an organization or institution that let you
+    down. Whatever it was, you've spent a lot of time pulled into yourself,
+    paranoid and mistrustful of others. But something's happened lately that
+    has at least opened you to the possibility of trusting others again.
+    Maybe you have to work with someone else or die. Alternatively, perhaps
+    you've decided to try one more time, despite your disillusionment. It's
+    either that or fully give in to bitterness.
+  pt-BR: >-
+    Alguém de quem você gostava o prejudicou. Talvez tenha sido diretamente,
+    traindo a sua confiança, roubando os seus suprimentos ou entregando você
+    a saqueadores para salvar a própria vida. Talvez tenha sido
+    indiretamente, desaparecendo ou morrendo e deixando você para trás. Ou
+    talvez tenha sido uma organização ou instituição que o decepcionou. Seja
+    o que for, você passou muito tempo fechado em si mesmo, paranoico e
+    desconfiado dos outros. Mas algo aconteceu há pouco que pelo menos o
+    abriu para a possibilidade de voltar a confiar nos outros. Talvez você
+    tenha que trabalhar com alguém ou morrer. Ou talvez tenha decidido
+    tentar mais uma vez, apesar da desilusão. É isso, ou se entregar de vez
+    à amargura.
+pool_bonus:
+  - stat: intellect
+    amount: 4
+characteristics: []
+skill_training:
+  - skill_id: discerning-truth
+    choice_count: null
+    note:
+      en: >-
+        You're always wondering who's going to wrong you next. You are trained
+        in detecting deception.
+      pt-BR: >-
+        Você está sempre se perguntando quem vai prejudicá-lo da próxima vez.
+        Você é treinado em detectar enganações.
+  - skill_id: tracking
+    choice_count: null
+    note:
+      en: >-
+        You are trained in tracking creatures. If a creature has wronged you,
+        the tracking task is eased.
+      pt-BR: >-
+        Você é treinado em rastrear criaturas. Se uma criatura o prejudicou, a
+        tarefa de rastreá-la é facilitada.
+inabilities:
+  - en: >-
+      You have a hard time not letting bitterness stain everything you do.
+      Interaction tasks are hindered.
+    pt-BR: >-
+      Você tem dificuldade de não deixar a amargura manchar tudo o que faz.
+      Tarefas de interação são dificultadas.
+additional_equipment:
+  en: >-
+    You have a keepsake from whoever wronged you. It could be an object they
+    once possessed, a picture of them, or something else you associate with
+    what makes you so bitter.
+  pt-BR: >-
+    Você tem uma lembrança de quem o prejudicou. Pode ser um objeto que já
+    foi dessa pessoa, uma foto dela ou outra coisa que você associa ao que o
+    deixa tão amargurado.
+connection_options:
+  - en: >-
+      You found the other PCs in a situation they couldn't survive.
+      Uncharacteristically, you helped them.
+    pt-BR: >-
+      Você encontrou os outros personagens numa situação em que não
+      sobreviveriam. Contrariando o seu jeito, você os ajudou.
+  - en: >-
+      You were facing certain death, but the PCs saved you, for no reason
+      other than they saw your need.
+    pt-BR: >-
+      Você estava diante da morte certa, mas os personagens o salvaram, sem
+      outro motivo além de terem visto a sua necessidade.
+  - en: >-
+      You want to change your ways, and the PCs seem to offer a chance for you
+      to explore that possibility.
+    pt-BR: >-
+      Você quer mudar de vida, e os personagens parecem lhe oferecer a chance
+      de explorar essa possibilidade.
+  - en: >-
+      You have no idea how you joined the PCs. You're just going along with it
+      for now until answers present themselves.
+    pt-BR: >-
+      Você não faz ideia de como se juntou aos personagens. Por enquanto, está
+      só indo junto até que as respostas apareçam.

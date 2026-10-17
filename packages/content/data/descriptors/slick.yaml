@@ -1,0 +1,90 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 101 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: slick
+category: weird-west
+name:
+  en: Slick
+  pt-BR: Malandro
+description:
+  en: >-
+    You've got a silver tongue. Some of that's down to natural talent, but
+    your polished persona is mostly a product of constant practice. You've
+    spent long hours mastering your ability to manipulate games of chance,
+    run elaborate confidence games to get the better of your enemies, and
+    hold yourself confidently. Plus, you've learned how to dress well—a
+    well-turned-out individual is always taken more seriously, or such has
+    been your experience, so you usually dress to impress.
+  pt-BR: >-
+    Você tem lábia. Parte disso é talento natural, mas a sua persona polida
+    é sobretudo fruto de prática constante. Você passou longas horas
+    dominando a arte de manipular jogos de azar, aplicar golpes elaborados
+    para levar a melhor sobre os inimigos e se portar com confiança. Além
+    disso, aprendeu a se vestir bem — alguém bem-apessoado é sempre levado
+    mais a sério, pelo menos na sua experiência, então você costuma se
+    vestir para impressionar.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: deception
+    choice_count: null
+    note:
+      en: >-
+        You're trained in deception; you can apply this training to games of
+        chance where an element of bluffing is involved, such as poker.
+      pt-BR: >-
+        Você é treinado em enganação; pode aplicar esse treinamento a jogos de
+        azar que envolvam blefe, como o pôquer.
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: identifying-and-assessing
+    choice_count: null
+    note:
+      en: >-
+        You're trained in all tasks involving identifying or assessing danger,
+        lies, quality, importance, function, or power.
+      pt-BR: >-
+        Você é treinado em todas as tarefas que envolvem identificar ou avaliar
+        perigo, mentiras, qualidade, importância, função ou poder.
+inabilities:
+  - en: >-
+      You do not willingly enter dangerous situations. Any initiative actions
+      (to determine who goes first in combat) are hindered.
+    pt-BR: >-
+      Você não entra de bom grado em situações perigosas. Quaisquer ações de
+      iniciativa (para determinar quem age primeiro no combate) são
+      dificultadas.
+additional_equipment:
+  en: >-
+    You have a set of expensive clothing ideal for any occasion where you wish
+    to dress to impress.
+  pt-BR: >-
+    Você tem um conjunto de roupas caras, ideal para qualquer ocasião em que
+    queira se vestir para impressionar.
+connection_options:
+  - en: >-
+      Sometimes your exploits create sore losers, and you joined the PCs
+      hoping their presence would protect you.
+    pt-BR: >-
+      Às vezes as suas façanhas criam maus perdedores, e você se juntou aos
+      personagens esperando que a presença deles o protegesse.
+  - en: >-
+      You tried to fleece the PCs in a confidence game, but somehow you got
+      caught up in their mission.
+    pt-BR: >-
+      Você tentou depenar os personagens num golpe, mas de algum jeito acabou
+      enredado na missão deles.
+  - en: >-
+      You realized the PCs' job might be especially lucrative and you invited
+      yourself along.
+    pt-BR: >-
+      Você percebeu que o serviço dos personagens podia ser especialmente
+      lucrativo e se convidou para ir junto.
+  - en: >-
+      You helped the PCs get out of trouble with the law by winning a bet with
+      their jailer.
+    pt-BR: >-
+      Você ajudou os personagens a se livrar de problemas com a lei ganhando
+      uma aposta do carcereiro deles.

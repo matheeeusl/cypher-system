@@ -1,0 +1,115 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 96 — Superhero descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: uncanny
+category: superhero
+name:
+  en: Uncanny
+  pt-BR: Insólito
+description:
+  en: >-
+    There's something unusual about you, and it makes other people a little
+    uncomfortable. You know you're exceptional—gifted, even—and being a bit
+    odd doesn't make you any less of a person. This uncanny element is a
+    part of you, in your blood, in your DNA. You can't help it, but you won't
+    apologize for it. You feel comfortable around other people with similar
+    strangeness, people who've experienced the same prejudice that you have;
+    these shared experiences mean they're your family, perhaps the only
+    family you've got.
+
+    If the superhero setting has a specific gene or genes responsible for
+    mutant superpowers, Uncanny characters have that gene (perhaps even
+    multiple copies) and can sense others who have it.
+  pt-BR: >-
+    Há algo de incomum em você, e isso deixa as outras pessoas um pouco
+    desconfortáveis. Você sabe que é excepcional — até mesmo talentoso — e
+    ser um pouco estranho não o torna menos pessoa. Esse elemento insólito
+    faz parte de você, está no seu sangue, no seu DNA. Você não consegue
+    evitá-lo, mas não vai pedir desculpas por ele. Você se sente à vontade
+    perto de outras pessoas com estranhezas parecidas, pessoas que sofreram
+    o mesmo preconceito que você; essas experiências em comum fazem delas a
+    sua família, talvez a única família que você tem.
+
+    Se o cenário de super-heróis tem um gene, ou genes, responsável por
+    superpoderes mutantes, personagens Insólitos têm esse gene (talvez até
+    em várias cópias) e conseguem sentir outros que o tenham.
+pool_bonus:
+  - stat: might
+    amount: 2
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Distinctive Physical Quirk
+      pt-BR: Peculiaridade Física Marcante
+    description:
+      en: >-
+        You have an unusual physical aspect. Depending on the setting, this
+        can vary greatly; it might be something external and obvious, such as
+        an odd smell or blue hair, or internal and hidden, like having blood
+        type "omega." Whatever it is, your quirk draws a lot of attention when
+        it's discovered.
+      pt-BR: >-
+        Você tem um aspecto físico incomum. Dependendo do cenário, isso pode
+        variar muito; pode ser algo externo e óbvio, como um cheiro estranho
+        ou cabelo azul, ou interno e oculto, como ter sangue do tipo
+        "ômega". Seja o que for, sua peculiaridade atrai muita atenção quando
+        é descoberta.
+  - name:
+      en: A Sense for the Weird
+      pt-BR: Faro para o Estranho
+    description:
+      en: >-
+        Sometimes—at the GM's discretion—an event or person that seems
+        related to your uncanny nature attracts your attention. You can sense
+        it from afar, and if you get within long range of it, you can sense
+        whether it is overtly dangerous or not.
+      pt-BR: >-
+        Às vezes — a critério do Mestre — um evento ou uma pessoa que parece
+        relacionado à sua natureza insólita chama sua atenção. Você consegue
+        senti-lo de longe e, se chegar a longa distância dele, consegue
+        sentir se ele é abertamente perigoso ou não.
+skill_training:
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: You're trained in either perception tasks or stealth tasks.
+      pt-BR: Você é treinado em tarefas de percepção ou em tarefas de furtividade.
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: >-
+        You're trained in one kind of knowledge related to your quirk, such
+        as olfactory science, mutations, or hematology.
+      pt-BR: >-
+        Você é treinado em um tipo de conhecimento relacionado à sua
+        peculiaridade, como ciência olfativa, mutações ou hematologia.
+inabilities:
+  - en: >-
+      People find you unnerving. All tasks relating to pleasant social
+      interaction are hindered. (Other people who are unusual like you
+      aren't affected by this.)
+    pt-BR: >-
+      As pessoas o acham perturbador. Todas as tarefas relacionadas a
+      interações sociais agradáveis são dificultadas. (Outras pessoas
+      incomuns como você não são afetadas por isso.)
+additional_equipment: null
+connection_options:
+  - en: You felt the objective was someone like you, so you got involved.
+    pt-BR: Você sentiu que o alvo era alguém como você, então se envolveu.
+  - en: >-
+      Whether the other PCs realize it or not, their mission has to do with
+      your field of knowledge, so you got involved.
+    pt-BR: >-
+      Quer os outros personagens percebam ou não, a missão deles tem a ver com
+      a sua área de conhecimento, então você se envolveu.
+  - en: >-
+      As an expert in an unusual kind of knowledge, you were specifically
+      recruited by the other PCs.
+    pt-BR: >-
+      Como especialista em um tipo incomum de conhecimento, você foi
+      recrutado especificamente pelos outros personagens.
+  - en: You believe one of the other PCs may be uncanny or is related to someone who is.
+    pt-BR: >-
+      Você acredita que um dos outros personagens pode ser insólito ou é
+      parente de alguém que é.

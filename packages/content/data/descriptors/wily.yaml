@@ -1,0 +1,95 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 103 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: wily
+category: weird-west
+name:
+  en: Wily
+  pt-BR: Astuto
+description:
+  en: >-
+    You're a real sly dog if ever there was one. Quick-thinking and hard to
+    cheat, folks would be plum foolish to take what you say at face value,
+    'cept for your friends, of course. You know how to work most any
+    situation to your advantage. You're not so much a silver-tongued devil
+    as you are a few steps ahead of whatever's about to happen. Others rely
+    on their looks or their charm to get ahead in the world, and you can't
+    help but smirk when you consider their shortcomings. No sir, for you,
+    it's all about that gray stuff between your ears.
+  pt-BR: >-
+    Você é uma raposa velha como poucas. Rápido no raciocínio e difícil de
+    enganar, as pessoas seriam muito tolas de levar ao pé da letra o que
+    você diz, menos os seus amigos, é claro. Você sabe virar quase qualquer
+    situação a seu favor. Não é tanto um diabo de língua de prata, mas
+    alguém alguns passos à frente do que está para acontecer. Outros contam
+    com a aparência ou o charme para subir na vida, e você não consegue
+    evitar um sorriso de canto ao pensar nas falhas deles. Não senhor, para
+    você, tudo gira em torno da massa cinzenta entre as orelhas.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Hunch
+      pt-BR: Palpite
+    description:
+      en: >-
+        When you apply a level of Effort using Intellect to a non-combat task,
+        you can also choose to apply a free level of Effort once. The ability
+        is restored after you make a recovery roll.
+      pt-BR: >-
+        Quando você aplica um nível de Esforço usando Intelecto numa tarefa
+        fora de combate, também pode escolher aplicar um nível de Esforço
+        gratuito, uma vez. A habilidade é restaurada depois que você faz uma
+        rolagem de recuperação.
+skill_training:
+  - skill_id: deception
+    choice_count: null
+    note:
+      en: >-
+        Always looking for an advantage, you're trained in all interactions
+        involving lies or trickery.
+      pt-BR: >-
+        Sempre em busca de vantagem, você é treinado em todas as interações
+        que envolvem mentiras ou trapaças.
+  - skill_id: perception
+    choice_count: null
+inabilities:
+  - en: >-
+      You pay a little too much attention, even to things you shouldn't. Your
+      Intellect defense rolls are hindered.
+    pt-BR: >-
+      Você presta um pouco de atenção demais, até no que não deveria. Suas
+      rolagens de defesa de Intelecto são dificultadas.
+additional_equipment:
+  en: >-
+    You acquired an item another PC lost and thinks is gone for good. Now you
+    have an additional expensive item, assuming you don't choose to give it
+    back to the PC who lost it.
+  pt-BR: >-
+    Você pegou um item que outro personagem perdeu e acha que sumiu para
+    sempre. Agora você tem um item caro adicional, a menos que decida
+    devolvê-lo ao personagem que o perdeu.
+connection_options:
+  - en: Your wily plan convinced the other PCs to join your mission.
+    pt-BR: >-
+      O seu plano astuto convenceu os outros personagens a se juntar à sua
+      missão.
+  - en: >-
+      Although you won, your scheme angered nearby outlaws, and the PCs are
+      the only reason you lived.
+    pt-BR: >-
+      Embora você tenha vencido, o seu esquema enfureceu foras da lei das
+      redondezas, e os personagens são o único motivo de você estar vivo.
+  - en: >-
+      You told the PCs you would double their profits on their next job if
+      they allowed you in on it.
+    pt-BR: >-
+      Você disse aos personagens que dobraria o lucro deles no próximo
+      serviço se o deixassem participar.
+  - en: >-
+      You're one hundred percent certain the other PCs will fail if you don't
+      come along.
+    pt-BR: >-
+      Você tem cem por cento de certeza de que os outros personagens vão
+      fracassar se você não for junto.

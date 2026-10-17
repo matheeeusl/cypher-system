@@ -1,0 +1,127 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 79 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: felis
+category: post-apocalyptic
+name:
+  en: Felis
+  pt-BR: Felis
+description:
+  en: >-
+    You're an evolved, intelligent cat with the ability to speak and use
+    tools. Felis are equally comfortable running on all fours or standing
+    around in a clowder of other felis gossiping over catswort tea. Your fur
+    is your protection from the elements, but you sometimes wear a harness
+    for your equipment and may adopt boots for rough terrain and hats for
+    fashion or function. Your visage is like that of before-times cats,
+    including piercing, reflective eyes. Like other felis, you are crafty
+    and cautious, unless you feel comfortable with others, in which case you
+    can laze away hours in the sun or a warm spot. But if need be, you are
+    quick to act and are not afraid to use your claws to defend yourself.
+  pt-BR: >-
+    Você é um gato evoluído e inteligente, capaz de falar e usar
+    ferramentas. Os felis ficam igualmente à vontade correndo de quatro ou
+    de pé num bando de outros felis, fofocando com um chá de erva-dos-gatos.
+    O seu pelo o protege das intempéries, mas às vezes você usa um arreio
+    para o equipamento e pode adotar botas para terrenos difíceis e chapéus
+    por moda ou utilidade. O seu semblante é como o dos gatos de antes do
+    fim, incluindo olhos penetrantes e refletivos. Como os outros felis,
+    você é astuto e cauteloso, a menos que se sinta à vontade com os
+    outros, caso em que pode passar horas à toa ao sol ou num lugar
+    quentinho. Mas, se preciso, você age rápido e não tem medo de usar as
+    garras para se defender.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics:
+  - name:
+      en: Darksight
+      pt-BR: Visão no Escuro
+    description:
+      en: >-
+        You can see in dim light as though it were bright light and see in
+        darkness as though it were dim light. Enabler.
+      pt-BR: >-
+        Você enxerga na penumbra como se fosse luz forte e no escuro como se
+        fosse penumbra. Habilitador.
+  - name:
+      en: Claws
+      pt-BR: Garras
+    description:
+      en: You are practiced in making unarmed claw attacks (light weapon). Enabler.
+      pt-BR: >-
+        Você é praticado em fazer ataques desarmados com as garras (arma
+        leve). Habilitador.
+  - name:
+      en: Light on Your Paws
+      pt-BR: Leve nas Patas
+    description:
+      en: >-
+        You ignore the first 4 points of damage you would otherwise suffer
+        from a fall. Enabler.
+      pt-BR: >-
+        Você ignora os primeiros 4 pontos de dano que sofreria numa queda.
+        Habilitador.
+  - name:
+      en: Jumpy
+      pt-BR: Assustadiço
+    description:
+      en: >-
+        Like most felis, you are a bit high-strung. Anytime another creature
+        acts with surprise against you, make a difficulty 2 Intellect defense
+        roll. If you fail, the first action you take on your turn is to flee
+        using your full movement away from whoever surprised you.
+      pt-BR: >-
+        Como a maioria dos felis, você é um pouco nervoso. Sempre que outra
+        criatura agir de surpresa contra você, faça uma rolagem de defesa de
+        Intelecto de dificuldade 2. Se falhar, a primeira ação do seu turno é
+        fugir, usando todo o seu movimento, de quem o surpreendeu.
+skill_training:
+  - skill_id: puzzle-solving
+    choice_count: null
+    note:
+      en: >-
+        You're innately curious. You are trained in tasks involving knowledge,
+        figuring out problems, or solving puzzles.
+      pt-BR: >-
+        Você é curioso por natureza. Você é treinado em tarefas que envolvem
+        conhecimento, resolver problemas ou solucionar enigmas.
+  - skill_id: balance-and-careful-movement
+    choice_count: null
+inabilities:
+  - en: >-
+      You often come across as aloof. Tasks that involve positive social
+      interaction are hindered.
+    pt-BR: >-
+      Você costuma parecer distante. Tarefas que envolvem interação social
+      positiva são dificultadas.
+  - en: >-
+      You sometimes get lost in new locations you haven't visited before. You
+      have an inability in navigation.
+    pt-BR: >-
+      Às vezes você se perde em lugares novos que ainda não visitou. Você tem
+      inabilidade em navegação.
+additional_equipment: null
+connection_options:
+  - en: >-
+      Everything was fine until you were attacked by a raiding band of
+      "cat-skinners." The PCs helped you fight back or flee.
+    pt-BR: >-
+      Estava tudo bem até você ser atacado por um bando de saqueadores
+      "esfoladores de gatos". Os personagens o ajudaram a lutar ou a fugir.
+  - en: >-
+      You saw the PCs up to something, and your curiosity got the better of
+      you, so you followed them.
+    pt-BR: >-
+      Você viu os personagens tramando algo, a curiosidade levou a melhor, e
+      você os seguiu.
+  - en: >-
+      One of the other PCs invited you to join after they saw you scheme,
+      plot, or solve a difficult problem.
+    pt-BR: >-
+      Um dos outros personagens o convidou para se juntar ao grupo depois de
+      vê-lo tramar, conspirar ou resolver um problema difícil.
+  - en: You got lost. The PCs found you and invited you to join their group.
+    pt-BR: >-
+      Você se perdeu. Os personagens o encontraram e o convidaram para entrar
+      no grupo.

@@ -1,0 +1,81 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 102 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The "Vengeance Achieved?" sidebar (tie it to a
+# Revenge character arc) is not modeled.
+id: unforgiving
+category: weird-west
+name:
+  en: Unforgiving
+  pt-BR: Implacável
+description:
+  en: >-
+    They done you wrong and you ain't gonna rest until they've paid the
+    price. Maybe the crime or betrayal that befell you was long ago, and
+    you've been looking for the perpetrators' trail ever since, with only
+    limited luck. Or maybe it happened recently, when your life as you knew
+    it ended. Did you lose a spouse? A child? A community? You go about
+    other tasks in the meantime, but you've become someone with an extra,
+    underlying goal: vengeance. If you can only figure out who deserves it
+    and/or where they're hiding, and/or maybe even who they are in the first
+    place.
+  pt-BR: >-
+    Fizeram mal a você, e você não vai descansar até que paguem o preço.
+    Talvez o crime ou a traição que o atingiu tenha acontecido há muito
+    tempo, e desde então você procura o rastro dos culpados, com pouca
+    sorte. Ou talvez tenha acontecido há pouco, quando a vida que você
+    conhecia acabou. Você perdeu um cônjuge? Um filho? Uma comunidade? Você
+    cuida de outras tarefas enquanto isso, mas se tornou alguém com um
+    objetivo extra por baixo de tudo: vingança. Se ao menos conseguisse
+    descobrir quem merece e/ou onde estão escondidos, e/ou talvez até quem
+    são, para começo de conversa.
+pool_bonus:
+  - stat: might
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: intimidation
+    choice_count: null
+  - skill_id: discerning-truth
+    choice_count: null
+    note:
+      en: >-
+        You've learned to tell when others shade the truth. You're trained in
+        detecting falsehoods.
+      pt-BR: >-
+        Você aprendeu a perceber quando os outros distorcem a verdade. Você é
+        treinado em detectar falsidades.
+  - skill_id: tracking
+    choice_count: null
+inabilities:
+  - en: You don't care enough to be polite. Your positive interaction tasks are hindered.
+    pt-BR: >-
+      Você não se importa o bastante para ser educado. Suas tarefas de
+      interação positiva são dificultadas.
+additional_equipment:
+  en: You have an additional medium weapon.
+  pt-BR: Você tem uma arma média adicional.
+connection_options:
+  - en: >-
+      The other PCs are hunting the same outlaws as you, though they may have
+      different reasons.
+    pt-BR: >-
+      Os outros personagens caçam os mesmos foras da lei que você, embora
+      talvez por motivos diferentes.
+  - en: >-
+      You found the PCs instead of the one(s) you're tracking, and they needed
+      help.
+    pt-BR: >-
+      Você encontrou os personagens em vez de quem estava rastreando, e eles
+      precisavam de ajuda.
+  - en: >-
+      It's something to do until you find another clue to help you along your
+      path.
+    pt-BR: >-
+      É algo para fazer até você encontrar outra pista que o ajude no seu
+      caminho.
+  - en: >-
+      You have no idea how you joined the PCs. You're going along with it
+      until a chance to gain vengeance presents itself.
+    pt-BR: >-
+      Você não faz ideia de como se juntou aos personagens. Está indo junto
+      até que surja uma chance de se vingar.

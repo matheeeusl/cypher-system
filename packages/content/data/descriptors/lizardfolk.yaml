@@ -1,0 +1,88 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 69 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook. "Practiced in using javelins and spears" is
+# weapon proficiency, so it stays a characteristic.
+id: lizardfolk
+category: fantasy-species
+name:
+  en: Lizardfolk
+  pt-BR: Povo-Lagarto
+description:
+  en: >-
+    You are from a long line of fierce reptilian predators. You show your
+    fangs and scales proudly. Your people survive and thrive in the
+    wetlands, guarding their eggs, raising their hatchlings, and protecting
+    their territory. City-builders may call you a savage and your culture
+    primitive, but there is grace in your hunting, artistry in your
+    crafting, joy in your songs, and reverence in your worship.
+  pt-BR: >-
+    Você descende de uma longa linhagem de ferozes predadores reptilianos.
+    Exibe as suas presas e escamas com orgulho. O seu povo sobrevive e
+    prospera nos pântanos, guardando os ovos, criando os filhotes e
+    protegendo o território. Construtores de cidades podem chamá-lo de
+    selvagem e a sua cultura de primitiva, mas há graça na sua caça, arte no
+    seu artesanato, alegria nas suas canções e reverência no seu culto.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Skill
+      pt-BR: Perícia
+    description:
+      en: You are practiced in using javelins and spears.
+      pt-BR: Você é praticado no uso de dardos e lanças.
+  - name:
+      en: Scaly
+      pt-BR: Escamoso
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+skill_training:
+  - skill_id: balance-and-careful-movement
+    choice_count: null
+  - skill_id: jumping
+    choice_count: null
+  - skill_id: swimming
+    choice_count: null
+  - skill_id: tracking
+    choice_count: null
+    note:
+      en: You are trained in hunting and tracking.
+      pt-BR: Você é treinado em caça e rastreamento.
+inabilities:
+  - en: >-
+      Your slightly clawed hands make fine detail work difficult. You have an
+      inability with picking locks, picking pockets, and other manual
+      dexterity tasks (but not crafting).
+    pt-BR: >-
+      As suas mãos ligeiramente em garra tornam difícil o trabalho de
+      detalhe. Você tem inabilidade em arrombar fechaduras, bater carteiras e
+      outras tarefas de destreza manual (mas não em artesanato).
+additional_equipment:
+  en: You have a spear and a pair of javelins.
+  pt-BR: Você tem uma lança e um par de dardos.
+connection_options:
+  - en: >-
+      The other PCs were lost in your territory and you were sent to escort
+      them out.
+    pt-BR: >-
+      Os outros personagens se perderam no seu território, e você foi
+      enviado para escoltá-los para fora.
+  - en: >-
+      Something has been attacking your community and you want to find and
+      destroy it.
+    pt-BR: >-
+      Algo vem atacando a sua comunidade, e você quer encontrá-lo e
+      destruí-lo.
+  - en: >-
+      You were exiled from your community and need to prove your worthiness
+      before you can return to it.
+    pt-BR: >-
+      Você foi exilado da sua comunidade e precisa provar o seu valor antes
+      de poder voltar.
+  - en: >-
+      You or your priest had a vision of you traveling with the other PCs.
+    pt-BR: >-
+      Você ou o seu sacerdote teve uma visão de você viajando com os outros
+      personagens.

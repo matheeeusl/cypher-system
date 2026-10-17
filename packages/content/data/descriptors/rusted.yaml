@@ -1,0 +1,115 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 91 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: rusted
+category: post-apocalyptic
+name:
+  en: Rusted
+  pt-BR: Enferrujado
+description:
+  en: >-
+    Life has dealt you some hard knocks. You lost an eye, an arm, or a leg
+    several years ago, possibly during the apocalypse itself, or perhaps
+    afterward. But you didn't give up. You adjusted, learning to do
+    everything again, despite what first seemed like a limitation. If you
+    lost a limb, you use a prosthetic; if an eye, you sometimes quip that
+    binocular vision is overrated. Sure, there are times when you struggle
+    with discomfort, pain, and possibly even self-consciousness. However,
+    overcoming all that only makes you stronger and more determined to
+    succeed. Ultimately, your scars, your prosthetic (if any), and your story
+    represent who you are: a survivor who overcomes whatever is thrown your
+    way.
+  pt-BR: >-
+    A vida lhe deu uns bons golpes. Você perdeu um olho, um braço ou uma
+    perna vários anos atrás, talvez durante o próprio apocalipse, talvez
+    depois. Mas não desistiu. Você se adaptou, reaprendendo a fazer tudo,
+    apesar do que de início parecia uma limitação. Se perdeu um membro, usa
+    uma prótese; se perdeu um olho, às vezes brinca que visão binocular é
+    superestimada. Claro, há momentos em que você luta contra o desconforto,
+    a dor e talvez até a vergonha. Porém, superar tudo isso só o torna mais
+    forte e mais determinado a vencer. No fim, as suas cicatrizes, a sua
+    prótese (se tiver) e a sua história representam quem você é: um
+    sobrevivente que supera tudo o que aparece no caminho.
+pool_bonus: []
+pool_bonus_choice:
+  kind: one-of
+  options:
+    - - stat: might
+        amount: 2
+    - - stat: intellect
+        amount: 2
+    - - stat: might
+        amount: 1
+      - stat: speed
+        amount: 1
+      - stat: intellect
+        amount: 1
+characteristics: []
+skill_training:
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: >-
+        Hard knocks have toughened you; you are trained in either Might
+        defense tasks or Intellect defense tasks (choose one).
+      pt-BR: >-
+        Os golpes da vida o endureceram; você é treinado em tarefas de defesa
+        de Força ou em tarefas de defesa de Intelecto (escolha uma).
+  - skill_id: null
+    choice_count: 1
+    note:
+      en: >-
+        You had to fake it until you made it; you are trained in one creative
+        skill such as singing, writing, acting, composing, public speaking,
+        painting, sculpture, dancing, or something similar.
+      pt-BR: >-
+        Você teve que fingir até conseguir; você é treinado em uma perícia
+        criativa, como cantar, escrever, atuar, compor, falar em público,
+        pintar, esculpir, dançar ou algo parecido.
+inabilities:
+  - en: >-
+      You've learned to do everything again and, in truth, better than most
+      people ever could. But your injury is real; it's why you sometimes joke
+      that you're "rusted." If you've lost an eye, your perception tasks
+      involving sight are hindered. If you rely on a prosthetic leg, tasks
+      requiring movement are hindered. If you rely on a prosthetic arm, tasks
+      involving using both hands are hindered.
+    pt-BR: >-
+      Você reaprendeu a fazer tudo e, na verdade, melhor do que a maioria das
+      pessoas jamais conseguiria. Mas o seu ferimento é real; é por isso que
+      às vezes brinca que está "enferrujado". Se perdeu um olho, as suas
+      tarefas de percepção que envolvem a visão são dificultadas. Se depende
+      de uma perna protética, tarefas que exigem movimento são dificultadas.
+      Se depende de um braço protético, tarefas que envolvem usar as duas
+      mãos são dificultadas.
+additional_equipment:
+  en: >-
+    You have a prosthetic for one arm or one leg, or you have an eyepatch (and
+    prosthetic eye) for a missing eye.
+  pt-BR: >-
+    Você tem uma prótese para um braço ou uma perna, ou um tapa-olho (e um
+    olho protético) para um olho perdido.
+connection_options:
+  - en: >-
+      You bragged that there's nothing someone else could do that you couldn't
+      do twice as well, which is how you got involved in your current
+      situation.
+    pt-BR: >-
+      Você se gabou de que não havia nada que outra pessoa fizesse que você
+      não fizesse duas vezes melhor, e foi assim que se envolveu na situação
+      atual.
+  - en: You're afraid of what might happen if the other PCs fail.
+    pt-BR: Você teme o que pode acontecer se os outros personagens fracassarem.
+  - en: >-
+      You were tailing one of the other PCs for reasons of your own, which
+      brought you into the action.
+    pt-BR: >-
+      Você seguia um dos outros personagens por motivos próprios, e isso o
+      trouxe para a ação.
+  - en: >-
+      You stepped in to defend one of the PCs when that character was
+      threatened. While talking to them afterward, you heard about the group's
+      task.
+    pt-BR: >-
+      Você interveio para defender um dos personagens quando ele foi
+      ameaçado. Conversando com ele depois, ouviu falar da tarefa do grupo.

@@ -1,0 +1,92 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 65 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook. skill_training has no level: perception
+# (specialized) and woodland stealth (specialized) say so in their notes.
+id: elf
+category: fantasy-species
+name:
+  en: Elf
+  pt-BR: Elfo
+description:
+  en: >-
+    You haunt the woodlands and deep, natural realms, as your people have for
+    millennia. You are the arrow in the night, the shadow in the glade, and
+    the laughter on the wind. As an elf, you are slender, quick, graceful,
+    and long lived. You manage the sorrows of living well past many mortal
+    lifetimes with song, wine, and an appreciation for the deep beauties of
+    growing things, especially trees, which can live even longer than you
+    do.
+  pt-BR: >-
+    Você assombra os bosques e os reinos naturais profundos, como o seu povo
+    faz há milênios. Você é a flecha na noite, a sombra na clareira e o riso
+    no vento. Como elfo, você é esbelto, rápido, gracioso e longevo. Você
+    lida com as tristezas de viver muito além de várias vidas mortais com
+    canções, vinho e apreço pelas belezas profundas das coisas que crescem,
+    especialmente as árvores, que podem viver ainda mais que você.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Long-Lived
+      pt-BR: Longevo
+    description:
+      en: Your natural lifespan (unless tragically cut short) is thousands of years.
+      pt-BR: >-
+        A sua expectativa de vida natural (a menos que seja tragicamente
+        interrompida) é de milhares de anos.
+  - name:
+      en: Skill
+      pt-BR: Perícia
+    description:
+      en: You are practiced in using one bow variety of your choice.
+      pt-BR: Você é praticado no uso de um tipo de arco à sua escolha.
+  - name:
+      en: Fragile
+      pt-BR: Frágil
+    description:
+      en: When you fail a Might defense roll to avoid damage, you take 1 extra point of damage.
+      pt-BR: >-
+        Quando você falha em uma rolagem de defesa de Força para evitar dano,
+        sofre 1 ponto de dano extra.
+skill_training:
+  - skill_id: perception
+    choice_count: null
+    note:
+      en: You are specialized in tasks related to perception.
+      pt-BR: Você é especializado em tarefas relacionadas à percepção.
+  - skill_id: stealth
+    choice_count: null
+    note:
+      en: >-
+        You are trained in stealth tasks. In areas of natural woodland, you
+        are specialized in stealth tasks.
+      pt-BR: >-
+        Você é treinado em tarefas de furtividade. Em áreas de bosque
+        natural, você é especializado em tarefas de furtividade.
+inabilities: []
+additional_equipment:
+  en: You have a bow and a quiver of arrows to go with it.
+  pt-BR: Você tem um arco e uma aljava de flechas para acompanhá-lo.
+connection_options:
+  - en: >-
+      Before putting an arrow in the forest intruders, you confronted them and
+      met the PCs, who were on an important quest.
+    pt-BR: >-
+      Antes de cravar uma flecha nos invasores da floresta, você os
+      confrontou e conheceu os personagens, que estavam numa missão
+      importante.
+  - en: >-
+      Your heart yearned for farther shores, and the PCs offered to take you
+      along to new places.
+    pt-BR: >-
+      O seu coração ansiava por terras distantes, e os personagens se
+      ofereceram para levá-lo a lugares novos.
+  - en: >-
+      Your home was burned by strangers from another place, and you gathered
+      the PCs along the way as you tracked down the villains.
+    pt-BR: >-
+      O seu lar foi incendiado por forasteiros, e você reuniu os personagens
+      pelo caminho enquanto rastreava os vilões.
+  - en: An adventure was in the offing, and you didn't want to be left behind.
+    pt-BR: Uma aventura estava por vir, e você não queria ficar para trás.

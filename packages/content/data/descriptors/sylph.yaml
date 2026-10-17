@@ -1,0 +1,113 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 75 — Modern Magic descriptors. Unofficial guide, not the
+# Cypher System Rulebook. Sylph's "Fragile" hinders Might defense; it is not
+# the "+1 damage on a failed Might defense" Fragile of other descriptors.
+id: sylph
+category: modern-magic
+name:
+  en: Sylph
+  pt-BR: Sílfide
+description:
+  en: >-
+    You're an air spirit, with the gift of wingless flight and hawklike eyes.
+    You're happiest when you have an aerial view; you lean more toward
+    strategy than action, calling the shots from an unmatched vantage point.
+    Your sensitivity to air currents and atmospheric pressure means you're
+    able to predict weather patterns, which you incorporate into your
+    machinations.
+  pt-BR: >-
+    Você é um espírito do ar, com o dom de voar sem asas e olhos de falcão.
+    Você fica mais feliz quando tem uma visão aérea; tende mais à
+    estratégia do que à ação, dando as cartas de um ponto de observação
+    incomparável. A sua sensibilidade a correntes de ar e à pressão
+    atmosférica permite que você preveja padrões do clima, que incorpora às
+    suas maquinações.
+pool_bonus: []
+pool_bonus_choice:
+  kind: one-of
+  options:
+    - - stat: intellect
+        amount: 2
+    - - stat: speed
+        amount: 2
+characteristics:
+  - name:
+      en: Sylph Flight (2 Intellect or Speed points)
+      pt-BR: Voo de Sílfide (2 pontos de Intelecto ou de Velocidade)
+    description:
+      en: >-
+        You can fly a long distance as your action, or a short distance as
+        part of another action, for up to ten minutes total. Enabler.
+      pt-BR: >-
+        Você pode voar uma distância longa como sua ação, ou uma distância
+        curta como parte de outra ação, por até dez minutos no total.
+        Habilitador.
+  - name:
+      en: Top-Down Strategy
+      pt-BR: Estratégia Vista de Cima
+    description:
+      en: You're skilled in logistics and planning.
+      pt-BR: Você é hábil em logística e planejamento.
+  - name:
+      en: Sharp Vision
+      pt-BR: Visão Aguçada
+    description:
+      en: You're trained in visual perception.
+      pt-BR: Você é treinado em percepção visual.
+  - name:
+      en: Oncoming Storm (1 Intellect point)
+      pt-BR: Tempestade a Caminho (1 ponto de Intelecto)
+    description:
+      en: >-
+        You can predict weather patterns (approaching storm systems, cloud
+        cover, wind direction) for the next twelve hours. Action.
+      pt-BR: >-
+        Você pode prever os padrões do clima (frentes de tempestade se
+        aproximando, cobertura de nuvens, direção do vento) para as próximas
+        doze horas. Ação.
+  - name:
+      en: Fragile
+      pt-BR: Frágil
+    description:
+      en: Might defense tasks are hindered.
+      pt-BR: Tarefas de defesa de Força são dificultadas.
+  - name:
+      en: Sylph Advancement
+      pt-BR: Avanço de Sílfide
+    description:
+      en: >-
+        With the GM's approval, you can choose from these abilities instead
+        of your type abilities: Enhanced Intellect, Enhanced Speed, Eyes
+        Adjusted, Influence Swarm, Precision, Shock.
+      pt-BR: >-
+        Com a aprovação do Mestre, você pode escolher entre estas habilidades
+        em vez das habilidades do seu tipo: Intelecto Aprimorado, Velocidade
+        Aprimorada, Olhos Adaptados, Influenciar Enxame, Precisão, Choque.
+skill_training: []
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You saw the other PCs headed toward danger and called out a warning
+      before the situation turned sour.
+    pt-BR: >-
+      Você viu os outros personagens indo em direção ao perigo e gritou um
+      aviso antes que a situação desandasse.
+  - en: >-
+      You got in trouble for flying in restricted airspace, and the other PCs
+      helped cover for you.
+    pt-BR: >-
+      Você se meteu em encrenca por voar em espaço aéreo restrito, e os
+      outros personagens ajudaram a acobertá-lo.
+  - en: >-
+      You need help with a spell that will enable you to communicate with
+      birds of prey.
+    pt-BR: >-
+      Você precisa de ajuda com um feitiço que vai permitir que você se
+      comunique com aves de rapina.
+  - en: >-
+      You helped the other PCs recover a kite that became tangled in tree
+      branches and power lines.
+    pt-BR: >-
+      Você ajudou os outros personagens a recuperar uma pipa que se enroscou
+      em galhos de árvore e fios de alta tensão.

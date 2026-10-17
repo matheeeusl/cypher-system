@@ -8,9 +8,12 @@ import {
   getTypeById,
   getAllAbilities,
   getSkillById,
+  getDescriptorCategoryTable,
+  getMutantMutationTable,
   loadEntities,
 } from '../loader.js'
 import { AbilitySchema } from '../schemas/ability.js'
+import { DescriptorCategoryId, DescriptorSchema } from '../schemas/descriptor.js'
 
 describe('loader', () => {
   it('loads all 4 starter Types with the expected ids', () => {
@@ -165,6 +168,104 @@ describe('loader', () => {
   it('fails loudly, naming the file, when content does not match its schema', () => {
     expect(() => loadEntities('__test-fixtures__/malformed', AbilitySchema)).toThrow(
       /__test-fixtures__\/malformed\/bad-ability\.yaml/,
+    )
+  })
+})
+
+describe('descriptor categories', () => {
+  it('lists every category exactly once, in the book order, with an intro for each genre', () => {
+    const table = getDescriptorCategoryTable()
+    expect(table.map((row) => row.id)).toEqual(DescriptorCategoryId.options)
+    for (const row of table) {
+      expect(row.intro === null).toBe(row.id === 'standard')
+    }
+  })
+
+  // The standard files leave `category` and `pool_bonus_choice` out on
+  // purpose: content_version hashes the raw YAML, so adding the keys would
+  // flag every saved character as having stale rules.
+  it('defaults descriptors without a category to standard, with no Pool choice', () => {
+    const strong = getAllDescriptors().find((d) => d.id === 'strong')
+    expect(strong?.category).toBe('standard')
+    expect(strong?.pool_bonus_choice).toBeNull()
+  })
+})
+
+describe('Mutant mutation tables', () => {
+  // "01–05" -> [1, 5], "15" -> [15, 15], "00" -> [100, 100], "93–00" -> [93, 100].
+  function bounds(range: string): [number, number] {
+    const [low = '', high = low] = range.split('–')
+    const toRoll = (value: string) => (value === '00' ? 100 : Number(value))
+    return [toRoll(low), toRoll(high)]
+  }
+
+  it('covers every d100 result exactly once, in order, in each table', () => {
+    const problems: string[] = []
+    for (const table of getMutantMutationTable()) {
+      let next = 1
+      for (const row of table.rows) {
+        const [low, high] = bounds(row.range)
+        if (low !== next || high < low)
+          problems.push(`${table.id}: "${row.range}" (expected ${next})`)
+        next = high + 1
+      }
+      if (next !== 101) problems.push(`${table.id}: ends at ${next - 1}`)
+    }
+    expect(problems).toEqual([])
+  })
+
+  it('gives every row an effect except the cosmetic ones', () => {
+    for (const table of getMutantMutationTable()) {
+      for (const row of table.rows) {
+        expect(row.effect === null, `${table.id} ${row.range}`).toBe(table.id === 'cosmetic')
+      }
+    }
+  })
+})
+
+describe('DescriptorSchema', () => {
+  const minimal = {
+    id: 'test',
+    name: { en: 'Test', 'pt-BR': 'Teste' },
+    description: { en: '', 'pt-BR': '' },
+    pool_bonus: [],
+    characteristics: [],
+    skill_training: [],
+    inabilities: [],
+    additional_equipment: null,
+    connection_options: [],
+  }
+  const link = { en: 'A link.', 'pt-BR': 'Um vínculo.' }
+
+  it('accepts no Initial Link options (Artificially Intelligent, Quintar) or exactly 4', () => {
+    expect(DescriptorSchema.safeParse(minimal).success).toBe(true)
+    expect(
+      DescriptorSchema.safeParse({ ...minimal, connection_options: [link, link, link, link] })
+        .success,
+    ).toBe(true)
+    expect(
+      DescriptorSchema.safeParse({ ...minimal, connection_options: [link, link, link] }).success,
+    ).toBe(false)
+  })
+
+  it('accepts well-formed Pool choices', () => {
+    const divide = { kind: 'divide', points: 4, stats: ['might', 'speed', 'intellect'] }
+    const oneOf = {
+      kind: 'one-of',
+      options: [[{ stat: 'intellect', amount: 2 }], [{ stat: 'speed', amount: 2 }]],
+    }
+    expect(DescriptorSchema.safeParse({ ...minimal, pool_bonus_choice: divide }).success).toBe(true)
+    expect(DescriptorSchema.safeParse({ ...minimal, pool_bonus_choice: oneOf }).success).toBe(true)
+  })
+
+  it.each([
+    ['no points to divide', { kind: 'divide', points: 0, stats: ['might'] }],
+    ['a repeated stat', { kind: 'divide', points: 2, stats: ['might', 'might'] }],
+    ['a single option', { kind: 'one-of', options: [[{ stat: 'might', amount: 2 }]] }],
+    ['an empty option', { kind: 'one-of', options: [[], [{ stat: 'might', amount: 2 }]] }],
+  ])('rejects a Pool choice with %s', (_label, choice) => {
+    expect(DescriptorSchema.safeParse({ ...minimal, pool_bonus_choice: choice }).success).toBe(
+      false,
     )
   })
 })

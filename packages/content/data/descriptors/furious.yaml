@@ -1,0 +1,92 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 58 — Cyberpunk descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The book labels both inabilities "Ability:" (an
+# error; they hinder tasks), so they are stored as inabilities. Its sidebar
+# on the SHITS GM intrusion is not modeled.
+id: furious
+category: cyberpunk
+name:
+  en: Furious
+  pt-BR: Furioso
+description:
+  en: >-
+    You always feel like you're a hair-trigger away from giving in to an
+    unthinking rage. You may have a mild case of Spontaneous Hypersensitive
+    Induced Trauma Syndrome (SHITS), or suffer an illness or injury that
+    makes you prone to violent outbursts. You might do your best to hide it
+    or control it, or perhaps you have given up trying to tame it and you
+    let it run wild. Either way, it seems to cause you—and those around
+    you—grief more often than not.
+  pt-BR: >-
+    Você sempre sente que está a um fio de ceder a uma fúria irracional.
+    Talvez tenha um caso leve de Síndrome de Trauma Induzido por
+    Hipersensibilidade Espontânea (SHITS, na sigla em inglês), ou sofra de
+    uma doença ou lesão que o torna propenso a explosões violentas. Talvez
+    faça o possível para esconder ou controlar isso, ou talvez tenha
+    desistido de domá-lo e o deixe correr solto. De um jeito ou de outro,
+    isso parece causar sofrimento a você — e a quem está à sua volta — com
+    mais frequência do que não.
+pool_bonus:
+  - stat: might
+    amount: 2
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Time for Violence
+      pt-BR: Hora da Violência
+    description:
+      en: >-
+        If you don't like the result of your die roll, you can reroll it as
+        if you had spent 1 XP. Regardless of whether the roll succeeds or
+        fails, using this ability triggers a SHITS GM intrusion as if you had
+        rolled a 1. You can do this one time, but this ability is renewed
+        each time you make a ten-hour recovery roll.
+      pt-BR: >-
+        Se não gostar do resultado da sua rolagem, você pode rolar de novo
+        como se tivesse gastado 1 XP. Tendo a rolagem sucesso ou não, usar
+        esta habilidade provoca uma intrusão do Mestre de SHITS como se você
+        tivesse tirado 1. Você pode fazer isso uma vez, mas a habilidade é
+        renovada sempre que você faz uma rolagem de recuperação de dez horas.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+inabilities:
+  - en: >-
+      You find it hard to hold your anger back—it seeps through your skin
+      even when you don't mean it to, causing others to shy away from it.
+      Positive social interactions are hindered.
+    pt-BR: >-
+      Você tem dificuldade de conter a raiva — ela transborda pela sua pele
+      mesmo quando você não quer, fazendo os outros se afastarem. Interações
+      sociais positivas são dificultadas.
+  - en: >-
+      Sometimes your anger overrides your good senses, causing you to act
+      before you've properly assessed the situation. Perception is hindered.
+    pt-BR: >-
+      Às vezes a raiva passa por cima do seu bom senso, fazendo você agir
+      antes de avaliar direito a situação. A percepção é dificultada.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You are trying to get a handle on your anger, and you're hoping that
+      being with the other PCs will help you do so.
+    pt-BR: >-
+      Você está tentando controlar a sua raiva e espera que estar com os
+      outros personagens o ajude nisso.
+  - en: >-
+      You let your anger get the best of you recently, and now you're running
+      from the fallout.
+    pt-BR: >-
+      Você deixou a raiva levar a melhor recentemente e agora está fugindo
+      das consequências.
+  - en: >-
+      You believe that this adventure will provide you with a way to channel
+      your ire, allowing you to use it for good.
+    pt-BR: >-
+      Você acredita que esta aventura lhe dará um jeito de canalizar a sua
+      ira, permitindo usá-la para o bem.
+  - en: After seeing you fight, one of the other PCs invited you to join.
+    pt-BR: >-
+      Depois de vê-lo lutar, um dos outros personagens o convidou para se
+      juntar ao grupo.

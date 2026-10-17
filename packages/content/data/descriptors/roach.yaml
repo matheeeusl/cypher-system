@@ -1,0 +1,113 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 90 — Post-Apocalyptic descriptors. Unofficial guide, not
+# the Cypher System Rulebook. Scuttler raises the Speed Edge, not a Pool;
+# there is no Edge field, so it stays prose.
+id: roach
+category: post-apocalyptic
+name:
+  en: Roach
+  pt-BR: Barata
+description:
+  en: >-
+    You are born of a species of evolved insects once called "cockroach,"
+    but that is far in the past. Radiation and forced evolution have
+    radically increased your size, shape, and ability to think. Your
+    exoskeleton mimics the shape of a human being, though not perfectly.
+    When you move about human society, shadows and cloaks are your ally if
+    you wish to pass unnoticed. When those of your kind are discovered, it
+    usually goes poorly for someone. You, however, have a wandering spirit
+    and seek to explore the fallen world and find a new way forward.
+  pt-BR: >-
+    Você nasceu de uma espécie de insetos evoluídos que um dia se chamaram
+    "barata", mas isso foi há muito tempo. A radiação e a evolução forçada
+    aumentaram radicalmente o seu tamanho, a sua forma e a sua capacidade
+    de pensar. O seu exoesqueleto imita a forma de um ser humano, embora
+    não com perfeição. Quando você circula pela sociedade humana, sombras e
+    capas são suas aliadas se quiser passar despercebido. Quando os da sua
+    espécie são descobertos, isso costuma acabar mal para alguém. Você,
+    porém, tem um espírito errante e busca explorar o mundo caído e
+    encontrar um novo caminho adiante.
+pool_bonus: []
+characteristics:
+  - name:
+      en: Scuttler
+      pt-BR: Ligeiro
+    description:
+      en: Your Speed Edge increases by 1.
+      pt-BR: A sua Margem de Velocidade aumenta em 1.
+  - name:
+      en: Sense by Scent
+      pt-BR: Sentir pelo Cheiro
+    description:
+      en: You can sense your environment even in total darkness.
+      pt-BR: Você consegue perceber o ambiente mesmo na escuridão total.
+  - name:
+      en: Cling
+      pt-BR: Aderir
+    description:
+      en: >-
+        You can move an immediate distance each round on walls or clinging to
+        the ceiling.
+      pt-BR: >-
+        Você pode se mover uma distância imediata por rodada em paredes ou
+        agarrado ao teto.
+  - name:
+      en: Carapace
+      pt-BR: Carapaça
+    description:
+      en: +1 to Armor.
+      pt-BR: +1 de Armadura.
+  - name:
+      en: Glide
+      pt-BR: Planar
+    description:
+      en: >-
+        You can extend small wings from your carapace that grant an asset in
+        jumping tasks and allow you to fall up to a short distance without
+        taking damage.
+      pt-BR: >-
+        Você pode abrir pequenas asas da sua carapaça que concedem um recurso
+        em tarefas de salto e permitem cair de até uma distância curta sem
+        sofrer dano.
+  - name:
+      en: Insect Prejudice
+      pt-BR: Preconceito contra Insetos
+    description:
+      en: While among non-roaches, all positive interaction tasks are hindered.
+      pt-BR: >-
+        Entre quem não é barata, todas as tarefas de interação positiva são
+        dificultadas.
+skill_training:
+  - skill_id: disguise
+    choice_count: null
+inabilities:
+  - en: >-
+      You are susceptible to disease and poison. Defense rolls against disease
+      or poison are hindered.
+    pt-BR: >-
+      Você é suscetível a doenças e venenos. Rolagens de defesa contra
+      doenças ou venenos são dificultadas.
+  - en: >-
+      You mimic a human, but you are not as fierce. Tasks involving combat—
+      including attack and defense rolls—are hindered.
+    pt-BR: >-
+      Você imita um humano, mas não é tão feroz. Tarefas que envolvem combate
+      — incluindo rolagens de ataque e de defesa — são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: The PCs didn't realize what you were when they asked for your help.
+    pt-BR: Os personagens não perceberam o que você era quando pediram a sua ajuda.
+  - en: >-
+      You've managed to hide your roach ancestry so well that everyone thinks
+      you are like them.
+    pt-BR: >-
+      Você conseguiu esconder tão bem a sua ascendência de barata que todos
+      acham que você é como eles.
+  - en: You are the last of your kind.
+    pt-BR: Você é o último da sua espécie.
+  - en: >-
+      You have a secret agenda, and the PCs were gullible enough to let you
+      come along.
+    pt-BR: >-
+      Você tem planos secretos, e os personagens foram ingênuos o bastante
+      para deixá-lo ir junto.

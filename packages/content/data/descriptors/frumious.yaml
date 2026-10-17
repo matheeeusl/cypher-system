@@ -1,0 +1,88 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 62 — Fairy Tale descriptors. Unofficial guide, not the
+# Cypher System Rulebook. "Frumious", "Bandersnatch" (and the Pool line's
+# "Manxome") are words from Lewis Carroll's "Jabberwocky". pt-BR "Furiante"
+# blends "furioso" and "fumegante" the way "frumious" blends "fuming" and
+# "furious"; "Bandersnatch" stays in English (glossary, 2026-10-16).
+id: frumious
+category: fairy-tale
+name:
+  en: Frumious
+  pt-BR: Furiante
+description:
+  en: >-
+    A furious, fuming anger waits, always, just beneath your surface,
+    swirling under your skin like a caged beast. You might do your best to
+    hide it or control it, or perhaps you have given up trying to tame it
+    and you let it run wild. Either way, it seems to cause you—and those
+    around you—grief more often than not.
+  pt-BR: >-
+    Uma raiva furiosa e fumegante espera, sempre, logo abaixo da sua
+    superfície, rodopiando sob a sua pele como uma fera enjaulada. Talvez
+    você faça o possível para escondê-la ou controlá-la, ou talvez tenha
+    desistido de domá-la e a deixe correr solta. De um jeito ou de outro,
+    ela parece causar sofrimento a você — e a quem está à sua volta — com
+    mais frequência do que não.
+pool_bonus:
+  - stat: might
+    amount: 2
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Bandersnatch
+      pt-BR: Bandersnatch
+    description:
+      en: >-
+        You extend the reach of your attack, allowing immediate-range
+        character abilities to reach foes a short distance away, and
+        short-range character abilities to reach foes a long distance away.
+      pt-BR: >-
+        Você estende o alcance do seu ataque, permitindo que habilidades de
+        personagem de alcance imediato atinjam inimigos a uma distância
+        curta, e habilidades de alcance curto atinjam inimigos a uma
+        distância longa.
+skill_training:
+  - skill_id: initiative
+    choice_count: null
+inabilities:
+  - en: >-
+      You find it hard to hold your anger back—it seeps through your skin
+      even when you don't mean it to, causing others to shy away from it. All
+      tasks relating to positive social interactions are hindered.
+    pt-BR: >-
+      Você tem dificuldade de conter a raiva — ela transborda pela sua pele
+      mesmo quando você não quer, fazendo os outros se afastarem. Todas as
+      tarefas relacionadas a interações sociais positivas são dificultadas.
+  - en: >-
+      Sometimes your anger overrides your good senses, causing you to act
+      before you've properly assessed the situation. All tasks relating to
+      perception are hindered.
+    pt-BR: >-
+      Às vezes a raiva passa por cima do seu bom senso, fazendo você agir
+      antes de avaliar direito a situação. Todas as tarefas relacionadas à
+      percepção são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: >-
+      You are trying to get a handle on your anger, and you're hoping that
+      being with the other PCs will help you do so.
+    pt-BR: >-
+      Você está tentando controlar a sua raiva e espera que estar com os
+      outros personagens o ajude nisso.
+  - en: >-
+      You let your anger get the best of you recently, and now you're running
+      from the fallout of that experience.
+    pt-BR: >-
+      Você deixou a raiva levar a melhor recentemente e agora está fugindo
+      das consequências dessa experiência.
+  - en: >-
+      You believe that this adventure will provide you with a way to channel
+      your ire, allowing you to use it for good.
+    pt-BR: >-
+      Você acredita que esta aventura lhe dará um jeito de canalizar a sua
+      ira, permitindo usá-la para o bem.
+  - en: One of the other PCs invited you to join, after they watched you fight.
+    pt-BR: >-
+      Um dos outros personagens o convidou para se juntar ao grupo depois de
+      vê-lo lutar.

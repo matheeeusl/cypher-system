@@ -1,0 +1,64 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 99 — Weird West descriptors. Unofficial guide, not the
+# Cypher System Rulebook. The book gives it no inability.
+id: laconic
+category: weird-west
+name:
+  en: Laconic
+  pt-BR: Lacônico
+description:
+  en: >-
+    You're a soul of few words—or no words at all, when a shrug or nod will
+    do. Now there's some who'll flap their jaws about everything that comes
+    into their head. Sometimes they get under your skin. But you don't
+    upbraid them; nope—you just frown. You're direct and to the point,
+    avoiding elaboration. You're comfortable with pauses, and when you do
+    speak, your words carry extra weight. All that said—and that's a hell of
+    a lot more than you would say—you don't mind other folks. Just their
+    prattle.
+  pt-BR: >-
+    Você é de poucas palavras — ou de palavra nenhuma, quando um dar de
+    ombros ou um aceno resolve. Pois tem gente que fica de matraca aberta
+    sobre tudo o que lhe vem à cabeça. Às vezes isso lhe dá nos nervos. Mas
+    você não lhes passa sermão; não senhor — você só franze a testa. Você é
+    direto e objetivo, sem rodeios. Fica à vontade com as pausas e, quando
+    fala, as suas palavras pesam mais. Dito tudo isso — e é muito mais do
+    que você diria —, você não se incomoda com as outras pessoas. Só com o
+    falatório delas.
+pool_bonus:
+  - stat: intellect
+    amount: 2
+characteristics: []
+skill_training:
+  - skill_id: perception
+    choice_count: null
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+    note:
+      en: You've got a dry wit. You're trained in positive interaction tasks.
+      pt-BR: >-
+        Você tem um humor seco. Você é treinado em tarefas de interação
+        positiva.
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      When you didn't answer, everyone assumed you'd agreed to the job, and so
+      here you are.
+    pt-BR: >-
+      Como você não respondeu, todos acharam que tinha aceitado o serviço, e
+      aqui está você.
+  - en: You lost your poker stake and now you need the money.
+    pt-BR: Você perdeu a sua aposta no pôquer e agora precisa do dinheiro.
+  - en: >-
+      Of all the folks you've known, the PCs are the least annoying and most
+      accepting of your stillness.
+    pt-BR: >-
+      De todas as pessoas que você conheceu, os personagens são as menos
+      irritantes e as que mais aceitam o seu silêncio.
+  - en: >-
+      You were wrongfully fingered for a crime, and the PCs believed your side
+      of the story.
+    pt-BR: >-
+      Você foi apontado injustamente por um crime, e os personagens
+      acreditaram na sua versão da história.

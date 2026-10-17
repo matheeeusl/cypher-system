@@ -1,0 +1,73 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 67 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: halfling
+category: fantasy-species
+name:
+  en: Halfling
+  pt-BR: Halfling
+description:
+  en: >-
+    Three feet tall and proud, you are fond of the comforts of home but
+    itching for a little adventure now and then. Small and quick, you have a
+    way of getting along with everyone. You might have been raised in a
+    halfling village, a mixed community where humans and the small folk work
+    and eat side by side as friends, or a less welcoming environment where
+    your people get things done using deception and criminal activity. You
+    and humans have a lot in common—you're just more compact and efficient
+    about it.
+  pt-BR: >-
+    Com 90 cm de altura e muito orgulho, você gosta dos confortos do lar,
+    mas de vez em quando sente coceira por uma pequena aventura. Pequeno e
+    rápido, você tem jeito para se dar bem com todo mundo. Pode ter sido
+    criado numa aldeia halfling, numa comunidade mista onde humanos e o povo
+    pequeno trabalham e comem lado a lado como amigos, ou num ambiente menos
+    acolhedor, onde o seu povo resolve as coisas com enganação e atividades
+    criminosas. Você e os humanos têm muito em comum — você só é mais
+    compacto e eficiente nisso.
+pool_bonus:
+  - stat: speed
+    amount: 2
+characteristics:
+  - name:
+      en: Advantage
+      pt-BR: Vantagem
+    description:
+      en: >-
+        When you use 1 XP to reroll a d20 for any roll that affects only you,
+        add 3 to the reroll.
+      pt-BR: >-
+        Quando você usa 1 XP para rolar de novo um d20 em qualquer rolagem que
+        afete só você, some 3 à nova rolagem.
+skill_training:
+  - skill_id: pleasant-social-interactions
+    choice_count: null
+  - skill_id: stealth
+    choice_count: null
+  - skill_id: intellect-defense
+    choice_count: null
+inabilities:
+  - en: Your small size makes some physical tasks difficult. Might-based tasks are hindered.
+    pt-BR: >-
+      O seu tamanho pequeno torna algumas tarefas físicas difíceis. Tarefas
+      baseadas em Força são dificultadas.
+additional_equipment: null
+connection_options:
+  - en: You were fleeing someone and literally ran into the other PCs.
+    pt-BR: >-
+      Você estava fugindo de alguém e literalmente trombou com os outros
+      personagens.
+  - en: You were invited (or invited yourself) as a good luck charm.
+    pt-BR: Você foi convidado (ou se convidou) como amuleto da sorte.
+  - en: >-
+      You were tricked into going with the other PCs or were brought along
+      despite your very reasonable objections.
+    pt-BR: >-
+      Você foi enganado para ir com os outros personagens, ou foi levado
+      junto apesar das suas objeções muito razoáveis.
+  - en: >-
+      You're very protective of another PC and want to make sure they get
+      through the upcoming challenges.
+    pt-BR: >-
+      Você é muito protetor com outro personagem e quer garantir que ele
+      supere os desafios que estão por vir.

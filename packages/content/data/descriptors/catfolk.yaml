@@ -1,0 +1,67 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 64 — Fantasy Species descriptors. Unofficial guide, not
+# the Cypher System Rulebook.
+id: catfolk
+category: fantasy-species
+name:
+  en: Catfolk
+  pt-BR: Povo-Gato
+description:
+  en: >-
+    You are unmistakably feline. Your people have fur; large, pointed ears;
+    sharp teeth and claws; and even tails. You are nimble, graceful, and
+    quick. An ancient and sophisticated culture, your people have their own
+    language, customs, and traditions developed in relative seclusion over
+    the centuries. Neither conquerors nor conquered, the success of your
+    society has come from the fact that you have given most others a wide
+    berth. As a people, you almost never get involved in wars or similar
+    matters, which has given other cultures the idea that you are aloof,
+    unapproachable, or mysterious. As long as they leave you alone, what
+    they think is fine with you.
+  pt-BR: >-
+    Você é inconfundivelmente felino. O seu povo tem pelo; orelhas grandes e
+    pontudas; dentes e garras afiados; e até cauda. Você é ágil, gracioso e
+    rápido. Uma cultura antiga e sofisticada, o seu povo tem língua,
+    costumes e tradições próprios, desenvolvidos em relativo isolamento ao
+    longo dos séculos. Nem conquistadora nem conquistada, a sua sociedade
+    deve o seu sucesso ao fato de manter distância da maioria dos outros
+    povos. Como povo, vocês quase nunca se envolvem em guerras ou assuntos
+    parecidos, o que deu a outras culturas a ideia de que vocês são
+    distantes, inacessíveis ou misteriosos. Desde que os deixem em paz, o
+    que eles pensam não importa para você.
+pool_bonus:
+  - stat: speed
+    amount: 4
+characteristics:
+  - name:
+      en: Bared Claws
+      pt-BR: Garras à Mostra
+    description:
+      en: Even unarmed, your claws are light weapons that inflict 4 points of damage.
+      pt-BR: >-
+        Mesmo desarmado, as suas garras são armas leves que causam 4 pontos
+        de dano.
+skill_training:
+  - skill_id: climbing
+    choice_count: null
+  - skill_id: balance-and-careful-movement
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: You were curious as to what the other PCs were up to.
+    pt-BR: Você estava curioso para saber o que os outros personagens tramavam.
+  - en: >-
+      You needed to get out of town, and the PCs were going in the same
+      direction as you.
+    pt-BR: >-
+      Você precisava sair da cidade, e os personagens iam na mesma direção que
+      você.
+  - en: >-
+      You are interested in making a profit, and the other PCs seem to have a
+      lead on doing just that.
+    pt-BR: >-
+      Você quer lucrar, e os outros personagens parecem ter uma pista de como
+      fazer exatamente isso.
+  - en: It seemed like a lark.
+    pt-BR: Pareceu uma boa diversão.

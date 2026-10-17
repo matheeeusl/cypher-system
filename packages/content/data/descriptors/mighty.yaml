@@ -1,0 +1,61 @@
+# Source: Old Gus' Unofficial Cypher System Player's Guide (OG-CSPG,
+# 2025-09-17), p. 95 — Superhero descriptors. Unofficial guide, not the
+# Cypher System Rulebook.
+id: mighty
+category: superhero
+name:
+  en: Mighty
+  pt-BR: Poderoso
+description:
+  en: >-
+    You have a very impressive physique. Your strength, power, and very
+    importance are superior. Whether you're truly the mightiest may be up
+    for debate (and you may have a friendly rivalry about this with other
+    superheroes), but there is no question that you are exceptional. These
+    things make you confident, but you know that you have these physical
+    gifts in order to perform heroic deeds, and unseemly conduct is beneath
+    you.
+  pt-BR: >-
+    Você tem um físico muito impressionante. Sua força, seu poder e sua
+    própria importância são superiores. Se você é realmente o mais poderoso
+    pode estar em debate (e você talvez tenha uma rivalidade amigável sobre
+    isso com outros super-heróis), mas não há dúvida de que você é
+    excepcional. Isso lhe dá confiança, mas você sabe que tem esses dons
+    físicos para realizar feitos heroicos, e uma conduta imprópria está
+    abaixo de você.
+pool_bonus:
+  - stat: might
+    amount: 4
+characteristics:
+  - name:
+      en: Healthy
+      pt-BR: Saudável
+    description:
+      en: Add 1 to the points you regain when you make a recovery roll.
+      pt-BR: >-
+        Some 1 aos pontos que você recupera ao fazer uma rolagem de
+        recuperação.
+skill_training:
+  - skill_id: lifting-and-throwing
+    choice_count: null
+  - skill_id: might-defense
+    choice_count: null
+inabilities: []
+additional_equipment: null
+connection_options:
+  - en: >-
+      You joined the other PCs because they would fail without your
+      strength.
+    pt-BR: >-
+      Você se juntou aos outros personagens porque eles fracassariam sem a sua
+      força.
+  - en: You believe this endeavor will earn you a lot of valor.
+    pt-BR: Você acredita que esta empreitada lhe trará muita glória.
+  - en: Another PC asked—rightly—for your help.
+    pt-BR: Outro personagem pediu — com razão — a sua ajuda.
+  - en: >-
+      An authority figure told you to do this to show you the value of
+      humility.
+    pt-BR: >-
+      Uma figura de autoridade mandou você fazer isso para lhe mostrar o
+      valor da humildade.
