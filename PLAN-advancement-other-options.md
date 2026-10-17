@@ -1,10 +1,13 @@
 # Advancement "Other Options" — engine + API + play mode
 
+**Status: done (2026-10-17).** P1–P5 below were confirmed as written. Differences from the plan: `AdvancementPanel` needed no change (the Other row is a fifth `AdvancementStep`), and `SkillGrant.repeatable` is now exposed by the API so the app can offer repeatable abilities.
+
 ## Context
 
 The rule (`apps/docs/src/content/docs/en/rules/experience-and-advancement.mdx`, "Other Options"; OG-CSPG ch. 1 pp. 20–21, same text as the Cypher System Rulebook p. 21 minus its "Additional possible advancements are detailed in Chapter 7" sentence):
 
 > Once each tier, you can substitute a standard advancement for one of the following:
+>
 > - Reduce Speed Effort cost for wearing armor by 1.
 > - Add +2 to your recovery rolls.
 > - Select another special ability from your type from your tier or a lower tier.
@@ -24,9 +27,7 @@ Today `deriveTier` rejects any purchase that isn't one of the 4 standard ones (`
 - **UI:** a fifth "Other option" row in the Advancement panel (see §5).
 - **Wizard edit** that makes an Other ability impossible (different Type/Focus/flavor): **the save is refused**, the same as today's Skills purchase that trained an ability. The player undoes the advancement first.
 
-## Proposed details — confirm before implementing
-
-These are my calls, not decided yet:
+## Details (proposed, then confirmed)
 
 - **P1. Option ids:** `reduce-armor-speed-cost`, `recovery-roll-bonus`, `type-ability`, `focus-ability`. The first is what `character-tier.test.ts:58` already uses.
 - **P2. Ability source:** a new `AbilitySource` `{ kind: 'advancement'; tier: number }`, labelled "Advancement (tier N)" on the sheet. This would apply even when the ability is a flavor ability. The alternative is to reuse `type`/`flavor`/`focus`, but then the sheet couldn't tell why the character has an extra ability.

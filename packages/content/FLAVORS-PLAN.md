@@ -71,7 +71,7 @@ Ten flavors (tiers 1–6 each):
 
 ### Out of scope (now)
 
-Personalized flavors, gaining a flavor in play (4 XP purchase / character arc — add later as an "OTHER OPTIONS" advancement, which the engine rejects today), the full cantrip catalog and spell-preparation rules (`Preparing spells`, recovery-roll activation) — separate follow-up.
+Personalized flavors, gaining a flavor in play (4 XP purchase / character arc — since built as its own purchase, not one of the advancement Other Options of [`PLAN-advancement-other-options.md`](../../PLAN-advancement-other-options.md)), the full cantrip catalog and spell-preparation rules (`Preparing spells`, recovery-roll activation) — separate follow-up.
 
 ## 4. Decisions (2026-10-15)
 
