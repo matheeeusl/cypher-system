@@ -121,6 +121,28 @@ Names and terms with no confirmed translation, chosen as candidates (the glossar
 ## Open questions
 
 1. ~~Saved characters' `pool_max`~~: answered by the existing code, see phase 1 item 5.
-2. **Genre filter in the wizard:** the book says the GM picks which descriptors fit the setting. Show all 103 at once, grouped (plan default), or add a genre filter? A per-campaign restriction is out of scope.
-3. **Advancement abilities:** prose only for now. Later they could join the type ability pick pool with GM approval, the way flavors do (`FLAVORS-PLAN.md` §2). Should that be a follow-up?
-4. **Sidebar subgroup style (layout decision to make, requested by Matheus 2026-10-16):** the Descriptor category subgroups should look like the Rules section's hierarchy, the one difference being that the subgroup heads ("Standard", "Cyberpunk", …) are white by default (dark theme), i.e. `--color-text` instead of the muted label color. The phase 5 CSS (sans 13px row label, entries indented behind a hairline: the `ul ul summary` / `ul ul ul` rules in `apps/docs/src/styles/globals.css`) is a placeholder until this is settled. To confirm before implementing: does "like Rules" mean the mono caps label with flat, unindented entries (so only the color tells a subgroup from a top-level group), and what the light theme gets (presumably `--color-text` there too).
+2. ~~**Genre filter in the wizard**~~: decided 2026-10-16 to keep it as is — all 103 in the book's order, the genre shown and searchable. A per-campaign restriction stays out of scope.
+3. ~~**Advancement abilities**~~: decided 2026-10-16 — yes, treat them like flavors, later. See "Future plan" below.
+4. ~~**Sidebar subgroup style**~~: decided 2026-10-16 and done — the subgroups follow the Rules group's hierarchy: the subgroup label is styled like an ordinary entry (same inset, muted, regular weight) and its entries hang from a hairline at the same inset as a chapter's sections. (An earlier request for white labels was withdrawn.)
+
+## Future plan — Advancement lists as Type ability options
+
+Not started. Seven descriptors (Chimera, Dragon, Ghost, Nix, Sylph, Forgeborn, Risen) print an Advancement list: "With the GM's approval, you can choose from these abilities instead of your type abilities." Today it is a prose characteristic ("Chimera Advancement"). The decision is to model it the way flavors are ([`FLAVORS-PLAN.md`](./FLAVORS-PLAN.md) §2): the list **widens the pool** the Type abilities are picked from; the number of picks doesn't change.
+
+Sketch, by layer (same shape as the flavor work):
+
+1. **Content:** a structured list of ability ids on the descriptor (e.g. `advancement_abilities`), checked by `loader.test.ts` to resolve; `Ability.sources` gains a `descriptor` source listing it back, as flavors do. The prose characteristic stays for display.
+2. **Engine:** `resolveTypeAbilities` / `resolveTypeTierPicks` accept those abilities as picks, with a `{ kind: 'descriptor' }` `KnownAbility` source; skill grants and choice abilities flow through unchanged.
+3. **API:** expose the list on `Descriptor`, and the new ability source.
+4. **App:** play mode's level-up pickers offer them (not the wizard; see below), labelled with the descriptor and a "talk to your GM first" note (like the flavor-gain panel); the sheet credits the descriptor.
+5. **Docs:** link each listed ability from the descriptor page.
+
+Decided by Matheus, 2026-10-16:
+
+- **Tier: always available, play mode only.** As long as the character has the descriptor, its Advancement abilities can be taken, at any tier. They are **not** offered by the wizard at creation (tier-1 picks stay Type + flavor); they appear only in play mode's level-up pickers. So step 4 above is play mode only, and the engine accepts them in `type_ability_picks` (tier 2+) but not in `tier_1_type_ability_ids`.
+- **GM approval: just a warning**, no checkbox.
+- **Dragon's "as an 'other' character advancement"** refers to the "other" advancement option (Cypher System Rulebook p. 21; the OG-CSPG's own copy of it is to be checked): "Once each tier, you can substitute a standard advancement for one of the following: reduce Speed Effort cost for wearing armor by 1; add +2 to your recovery rolls; select another special ability from your type from your tier or a lower tier. The GM might allow you to use this option to gain a second ability choice from your focus. Additional possible advancements are detailed in Chapter 7." It sits next to the four standard ones (Increasing Capabilities, Moving Toward Perfection, Extra Effort, Skills). The engine doesn't model it yet (`deriveTier` rejects any other `option`; the "OTHER OPTIONS" known gap in `packages/cypher-engine/CLAUDE.md`), so Dragon's extra route depends on modelling that substitution first — a separate piece of work that would also benefit every character, not only Dragons.
+
+Still open:
+
+- **Changing descriptor** after picks were made from the list: clear them, like a flavor change does.
