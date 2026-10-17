@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import {
   getAllTypes,
   getAllDescriptors,
+  getDescriptorCategoryTable,
   getAllFoci,
   getAllFlavors,
   getAllSkills,
@@ -43,17 +44,30 @@ const typesSidebarGroup = {
 // Same manual-group pattern as Types, for the same reason: Descriptor pages
 // (src/pages/[locale]/descriptors/[slug].astro) are also generated from
 // @cypher/content rather than Starlight content-collection files.
+//
+// One subgroup per category, in the book's order (Standard first, then the
+// genres), alphabetical inside each. Standard stays open; the genre groups
+// start collapsed, and Starlight opens the one holding the current page.
 const descriptors = getAllDescriptors()
+  .slice()
+  .sort((a, b) => a.name.en.localeCompare(b.name.en))
 
 const descriptorsSidebarGroup = {
   label: 'Descriptors',
   translations: { 'pt-BR': 'Descritores' },
   items: [
     { label: 'Overview', translations: { 'pt-BR': 'Visão Geral' }, link: '/descriptors/' },
-    ...descriptors.map((descriptor) => ({
-      label: descriptor.name.en,
-      translations: { 'pt-BR': descriptor.name['pt-BR'] },
-      link: `/descriptors/${descriptor.id}/`,
+    ...getDescriptorCategoryTable().map((category) => ({
+      label: category.name.en,
+      translations: { 'pt-BR': category.name['pt-BR'] },
+      collapsed: category.id !== 'standard',
+      items: descriptors
+        .filter((descriptor) => descriptor.category === category.id)
+        .map((descriptor) => ({
+          label: descriptor.name.en,
+          translations: { 'pt-BR': descriptor.name['pt-BR'] },
+          link: `/descriptors/${descriptor.id}/`,
+        })),
     })),
   ],
 }
@@ -73,7 +87,7 @@ const abilitiesSidebarGroup = {
 
 // Same manual-group pattern for the 50 Foci: sorted alphabetically (at this
 // size directory order isn't guaranteed to look intentional), but left
-// expanded like Types/Descriptors since 50 is still short enough to scan.
+// expanded like Types since 50 is still short enough to scan.
 const foci = getAllFoci()
   .slice()
   .sort((a, b) => a.name.en.localeCompare(b.name.en))
@@ -113,8 +127,8 @@ const flavorsSidebarGroup = {
 }
 
 // Same manual-group pattern for Skills (src/pages/[locale]/skills/[slug].astro):
-// 51 entries, the same size class as Descriptors/Foci, so alphabetical and
-// left expanded like them.
+// 51 entries, the same size class as Foci, so alphabetical and left
+// expanded like them.
 const skills = getAllSkills()
   .slice()
   .sort((a, b) => a.name.en.localeCompare(b.name.en))

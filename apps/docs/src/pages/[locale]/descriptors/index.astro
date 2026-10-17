@@ -2,6 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getAllDescriptors } from '@cypher/content';
 import { URL_LOCALES, pick, type UrlLocale } from '@lib/locale';
+import { descriptorCategories, poolSummary } from '@lib/descriptor-format';
 import CharacterSentence from '@components/CharacterSentence.astro';
 import EntityIndexList from '@components/EntityIndexList.astro';
 
@@ -16,33 +17,25 @@ const { locale } = Astro.params as { locale: UrlLocale };
 
 const t = (en: string, pt: string) => (locale === 'pt-br' ? pt : en);
 
-// English/Portuguese labels for the pool_bonus stat enum — UI chrome, not
-// rulebook prose, same rationale (and same three labels) as the Descriptor
-// entity page's own STAT_LABELS.
-const STAT_LABELS: Record<'might' | 'speed' | 'intellect', [string, string]> = {
-	might: ['Might', 'Força'],
-	speed: ['Speed', 'Velocidade'],
-	intellect: ['Intellect', 'Intelecto'],
-};
-
-// Same order as the Descriptors sidebar group in astro.config.mjs —
-// alphabetical by English name, since directory read order isn't
-// guaranteed to look intentional at ~50 entries.
+// Same order as the Descriptors sidebar group in astro.config.mjs: one
+// section per category in the book's order, alphabetical by English name
+// inside each.
 const descriptors = getAllDescriptors()
 	.slice()
 	.sort((a, b) => a.name.en.localeCompare(b.name.en));
 
-// Most descriptors grant a single Pool bonus (e.g. "+2 Speed"), a compact
-// and genuinely mechanical fact worth surfacing in the list. A couple grant
-// two at once (see the Descriptor page's own comment on this) — joined with
-// " · " rather than picking one arbitrarily. Descriptors with no pool_bonus
-// (a handful, e.g. Mad) just show no meta.
-const rows = descriptors.map((descriptor) => ({
-	href: `/${locale}/descriptors/${descriptor.id}/`,
-	name: pick(descriptor.name, locale),
-	meta: descriptor.pool_bonus
-		.map((bonus) => `+${bonus.amount} ${t(...STAT_LABELS[bonus.stat])}`)
-		.join(' · '),
+// The meta column is the Pool bonus: fixed bonuses ("+2 Speed"), then the
+// player's choice if there is one ("2 points to divide"). Descriptors with
+// neither (Mad, Mutant, …) just show no meta.
+const sections = descriptorCategories(locale).map((category) => ({
+	...category,
+	rows: descriptors
+		.filter((descriptor) => descriptor.category === category.id)
+		.map((descriptor) => ({
+			href: `/${locale}/descriptors/${descriptor.id}/`,
+			name: pick(descriptor.name, locale),
+			meta: poolSummary(descriptor, locale),
+		})),
 }));
 ---
 
@@ -67,9 +60,28 @@ const rows = descriptors.map((descriptor) => ({
 		}
 	</p>
 
+	<p class="mb-6  text-[15px] leading-[1.55] text-text-muted">
+		{
+			t(
+				'The standard descriptors fit any setting. The genre groups after them fit particular kinds of settings, and some are species rather than personalities; the GM decides which ones are available in a campaign.',
+				'Os descritores padrão servem para qualquer cenário. Os grupos de gênero depois deles servem para tipos específicos de cenário, e alguns são espécies em vez de personalidades; o Mestre decide quais estão disponíveis na campanha.',
+			)
+		}
+	</p>
+
 	<p class="mb-6 font-mono text-xs text-text-muted uppercase">
 		{descriptors.length} {t('descriptors', 'descritores')}
 	</p>
 
-	<EntityIndexList caption={t('Descriptors', 'Descritores')} rows={rows} />
+	{
+		sections.map((section) => (
+			<>
+				<h2 id={section.id}>
+					{section.name} <span class="text-text-muted">· {section.rows.length}</span>
+				</h2>
+				{section.intro && <p class="text-[13px] leading-[1.55] text-text-muted">{section.intro}</p>}
+				<EntityIndexList caption={section.name} rows={section.rows} />
+			</>
+		))
+	}
 </StarlightPage>
