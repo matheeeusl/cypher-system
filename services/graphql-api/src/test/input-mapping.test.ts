@@ -206,6 +206,15 @@ describe('mapCharacterChoicesInput (ability choices)', () => {
     expect(mapCharacterChoicesInput(base)).not.toHaveProperty('ability_choices')
   })
 
+  it('maps abilityEdgeChoices to a key -> stat record, and leaves it out when empty', () => {
+    const result = mapCharacterChoicesInput({
+      ...base,
+      abilityEdgeChoices: [{ key: 'type:1:improved-edge', stat: 'intellect' }],
+    })
+    expect(result.ability_edge_choices).toEqual({ 'type:1:improved-edge': 'intellect' })
+    expect(mapCharacterChoicesInput(base)).not.toHaveProperty('ability_edge_choices')
+  })
+
   it('maps flavorGain to the engine’s flavor_gain, and leaves it out when absent', () => {
     const result = mapCharacterChoicesInput({
       ...base,

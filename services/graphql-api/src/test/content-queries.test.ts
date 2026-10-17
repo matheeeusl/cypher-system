@@ -489,6 +489,31 @@ describe('content queries', () => {
     expect(result.data.blessing?.choice?.learn).toBeNull()
   })
 
+  it('exposes the Edge grant of fixed and chosen Edge abilities', async () => {
+    interface EdgeGrantQueryData {
+      improved: { edgeGrant: { kind: string; stat: string | null; amount: number | null } | null }
+      enhanced: { edgeGrant: { kind: string; stat: string | null; amount: number | null } | null }
+      bash: { edgeGrant: null }
+    }
+
+    const result = await graphqlRequest<EdgeGrantQueryData>(`
+      query {
+        improved: ability(id: "improved-edge") { edgeGrant { kind stat amount } }
+        enhanced: ability(id: "enhanced-might-edge") { edgeGrant { kind stat amount } }
+        bash: ability(id: "bash") { edgeGrant { kind } }
+      }
+    `)
+
+    expect(result.errors).toBeUndefined()
+    expect(result.data.improved.edgeGrant).toEqual({
+      kind: 'choose_zero',
+      stat: null,
+      amount: null,
+    })
+    expect(result.data.enhanced.edgeGrant).toEqual({ kind: 'fixed', stat: 'MIGHT', amount: 1 })
+    expect(result.data.bash.edgeGrant).toBeNull()
+  })
+
   it('resolves a fantastic Cypher with a nested effect table (Chemical Factory)', async () => {
     interface CypherQueryData {
       cypher: {

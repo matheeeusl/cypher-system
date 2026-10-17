@@ -150,6 +150,70 @@ export function tier1ChoiceSlots(choices: WizardChoices, content: WizardContent)
   })
 }
 
+export interface EdgeSlot {
+  key: string
+  abilityId: string
+  /** The Edges at 0 when the ability is gained — the only ones it may raise. */
+  options: Stat[]
+}
+
+const STATS: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
+
+/**
+ * The tier-1 abilities that raise an Edge the player picks (Improved Edge), one
+ * slot each. Same order as @cypher/engine's deriveEdge: the Type's starting
+ * Edge, then the Type picks, then the Focus abilities, each grant applied as it
+ * comes — so `options` are the Edges still at 0 when the ability is gained.
+ * A pick that is no longer among them (the starting Edge changed) doesn't count.
+ */
+export function tier1EdgeSlots(choices: WizardChoices, content: WizardContent): EdgeSlot[] {
+  const { abilities, type, focus } = content
+  if (!abilities || !type) return []
+
+  const edge: Record<Stat, number> = { MIGHT: 0, SPEED: 0, INTELLECT: 0 }
+  const { statChoices, amount } = type.startingEdge
+  const startingStat = statChoices.length > 1 ? choices.startingEdgeChoice : statChoices[0]
+  if (startingStat) edge[startingStat] = amount
+
+  const focusChosenIds = focus
+    ? focusTier1ChoiceEntries(focus).flatMap((entry, i) =>
+        (choices.focusChoiceSelections[i] ?? []).flatMap(
+          (optionIndex) => entry.options[optionIndex] ?? [],
+        ),
+      )
+    : []
+  const sources: Array<{ kind: 'type' | 'focus'; ids: string[] }> = [
+    { kind: 'type', ids: choices.tier1TypeAbilityIds },
+    { kind: 'focus', ids: [...(focus ? focusTier1GrantedIds(focus) : []), ...focusChosenIds] },
+  ]
+
+  const slots: EdgeSlot[] = []
+  for (const { kind, ids } of sources) {
+    for (const abilityId of new Set(ids)) {
+      const grant = abilities.find((a) => a.id === abilityId)?.edgeGrant
+      if (!grant) continue
+      if (grant.kind === 'fixed') {
+        if (grant.stat) edge[grant.stat] += grant.amount ?? 0
+        continue
+      }
+      const key = skillGrantKey(kind, 1, abilityId)
+      const options = STATS.filter((stat) => edge[stat] === 0)
+      // Nothing at 0: there's nothing to pick (the engine owes nothing either).
+      if (options.length === 0) continue
+      slots.push({ key, abilityId, options })
+      const picked = choices.abilityEdgeChoices[key]
+      if (picked && options.includes(picked)) edge[picked] = 1
+    }
+  }
+  return slots
+}
+
+/** The slot's pick, if it is still one of the Edges it may raise. */
+export function currentEdgePick(slot: EdgeSlot, choices: WizardChoices): Stat | null {
+  const picked = choices.abilityEdgeChoices[slot.key]
+  return picked && slot.options.includes(picked) ? picked : null
+}
+
 const POOL_KEY: Record<Stat, keyof PoolAllocation> = {
   MIGHT: 'might',
   SPEED: 'speed',
@@ -313,6 +377,7 @@ export function isStepValid(
         return false
       }
       if (!choiceSlotsComplete(choices, content)) return false
+      if (!edgeSlotsComplete(choices, content)) return false
       return tier1SkillGrantSlots(choices, content).every((slot) => {
         const picked = (choices.abilitySkillChoices[slot.key] ?? []).length
         return picked === slot.count || picked === slot.alternate?.count
@@ -353,6 +418,7 @@ export function issueStepId(code: string): StepId {
     code.startsWith('FOCUS_') ||
     code.startsWith('TYPE_ABILITY_') ||
     code.startsWith('ABILITY_') ||
+    code.startsWith('EDGE_CHOICE_') ||
     code === 'FLAVOR_UNKNOWN'
   ) {
     // Focus choices, flavors and ability picks are all made on the Abilities step.
@@ -365,6 +431,10 @@ function choiceSlotsComplete(choices: WizardChoices, content: WizardContent): bo
   return tier1ChoiceSlots(choices, content).every(
     (slot) => (choices.abilityChoices[slot.key] ?? []).length === slot.count,
   )
+}
+
+function edgeSlotsComplete(choices: WizardChoices, content: WizardContent): boolean {
+  return tier1EdgeSlots(choices, content).every((slot) => currentEdgePick(slot, choices) !== null)
 }
 
 function focusChoicesComplete(choices: WizardChoices, content: WizardContent): boolean {
@@ -405,6 +475,7 @@ export function stepErrorMessage(
       }
       if (!focusChoicesComplete(choices, content)) return copy.focusChoices
       if (!choiceSlotsComplete(choices, content)) return copy.abilityOptions
+      if (!edgeSlotsComplete(choices, content)) return copy.abilityEdge
       return copy.abilitySkills
     }
     case 'background':
@@ -475,6 +546,16 @@ export function buildCharacterChoicesInput(
     ...Object.entries(tierPicks.options ?? {}).map(([key, abilityIds]) => ({ key, abilityIds })),
   ]
 
+  // Only Edge picks that still apply: the ability is still chosen and the
+  // Edge is still at 0. A stale one is left for the step to ask again.
+  const abilityEdgeChoices = [
+    ...tier1EdgeSlots(choices, content).flatMap((slot) => {
+      const stat = currentEdgePick(slot, choices)
+      return stat ? [{ key: slot.key, stat }] : []
+    }),
+    ...Object.entries(tierPicks.edges ?? {}).map(([key, stat]) => ({ key, stat })),
+  ]
+
   const descriptorPoolChoice = currentPoolChoice(descriptor, choices.descriptorPoolChoice)
 
   const learnedOptions = Object.entries(tierPicks.learned ?? {}).map(([abilityId, optionIds]) => ({
@@ -510,6 +591,7 @@ export function buildCharacterChoicesInput(
     descriptorSkillChoices: choices.descriptorSkillChoices,
     ...(abilitySkillChoices.length > 0 ? { abilitySkillChoices } : {}),
     ...(abilityChoices.length > 0 ? { abilityChoices } : {}),
+    ...(abilityEdgeChoices.length > 0 ? { abilityEdgeChoices } : {}),
     ...(learnedOptions.length > 0 ? { learnedOptions } : {}),
     ...(tierPicks.flavorGain
       ? {

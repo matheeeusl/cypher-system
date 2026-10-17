@@ -1,4 +1,5 @@
 import { isSkillIdShape } from '@/lib/custom-skill'
+import type { Stat } from '@/lib/graphql/queries'
 
 /** Level-up choices stored beside the advancement purchases (see db/migrations/003). */
 export interface TierPicks {
@@ -19,6 +20,11 @@ export interface TierPicks {
    * -> ability ids. Left out while empty, like `skills`.
    */
   options?: Record<string, string[]> | undefined
+  /**
+   * Edges picked for Improved Edge taken at tier 2+, or owed since before the
+   * pick existed: `skillGrantKey(...)` -> stat. Left out while empty, like `skills`.
+   */
+  edges?: Record<string, Stat> | undefined
   /**
    * Options bought later for XP (Cantrips): choice ability id -> the options, in
    * the order bought, `learn.count` per purchase. Not tied to a tier, so it
@@ -51,6 +57,7 @@ export const isEmptyPicks = (p: TierPicks) =>
   Object.keys(p.focus).length === 0 &&
   Object.keys(p.skills ?? {}).length === 0 &&
   Object.keys(p.options ?? {}).length === 0 &&
+  Object.keys(p.edges ?? {}).length === 0 &&
   Object.keys(p.learned ?? {}).length === 0 &&
   p.flavorGain === undefined
 
@@ -71,6 +78,18 @@ function parseRecord(
     if (!keyOk(key) || !Array.isArray(ids) || ids.length > maxIds) return null
     if (!ids.every(idOk)) return null
     out[key] = ids as string[]
+  }
+  return out
+}
+
+const STATS: readonly Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
+
+function parseEdges(raw: unknown): Record<string, Stat> | null {
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
+  const out: Record<string, Stat> = {}
+  for (const [key, stat] of Object.entries(raw)) {
+    if (!SKILL_KEY.test(key) || !STATS.includes(stat as Stat)) return null
+    out[key] = stat as Stat
   }
   return out
 }
@@ -105,14 +124,18 @@ export function parsePicks(raw: unknown): TierPicks | null {
   // Skill picks may be typed by the player (`custom:<text>`), not just catalog ids.
   const skills = parseRecord(r.skills ?? {}, (key) => SKILL_KEY.test(key), isSkillIdShape)
   const options = parseRecord(r.options ?? {}, (key) => OPTION_KEY.test(key))
+  const edges = parseEdges(r.edges ?? {})
   const learned = parseRecord(r.learned ?? {}, (key) => ID.test(key), undefined, 100)
   const flavorGain = parseFlavorGain(r.flavorGain)
-  if (!type || !focus || !skills || !options || !learned || flavorGain === null) return null
+  if (!type || !focus || !skills || !options || !edges || !learned || flavorGain === null) {
+    return null
+  }
   return {
     type,
     focus,
     ...(Object.keys(skills).length > 0 ? { skills } : {}),
     ...(Object.keys(options).length > 0 ? { options } : {}),
+    ...(Object.keys(edges).length > 0 ? { edges } : {}),
     ...(Object.keys(learned).length > 0 ? { learned } : {}),
     ...(flavorGain ? { flavorGain } : {}),
   }
@@ -139,6 +162,10 @@ export function withPick(
 
 export function withOptionPick(picks: TierPicks, key: string, abilityIds: string[]): TierPicks {
   return { ...picks, options: { ...picks.options, [key]: abilityIds } }
+}
+
+export function withEdgePick(picks: TierPicks, key: string, stat: Stat): TierPicks {
+  return { ...picks, edges: { ...picks.edges, [key]: stat } }
 }
 
 /** Adds one purchase's worth of learned options for a choice ability. */
@@ -170,6 +197,7 @@ export function withoutLearnedPurchase(
     focus: picks.focus,
     skills: picks.skills,
     options: picks.options,
+    edges: picks.edges,
   }
   return Object.keys(learned).length > 0 ? { ...rest, learned } : rest
 }
@@ -186,17 +214,19 @@ export function picksUpToTier(picks: TierPicks, tier: number): TierPicks {
   const upTo = (record: Record<string, string[]>) =>
     Object.fromEntries(Object.entries(record).filter(([t]) => Number(t) <= tier))
   // Keyed `<kind>:<tier>:<ability>`.
-  const upToKeyed = (record: Record<string, string[]> | undefined) =>
+  const upToKeyed = <V>(record: Record<string, V> | undefined): Record<string, V> =>
     Object.fromEntries(
       Object.entries(record ?? {}).filter(([key]) => Number(key.split(':')[1]) <= tier),
     )
   const skills = upToKeyed(picks.skills)
   const options = upToKeyed(picks.options)
+  const edges = upToKeyed(picks.edges)
   return {
     type: upTo(picks.type),
     focus: upTo(picks.focus),
     ...(Object.keys(skills).length > 0 ? { skills } : {}),
     ...(Object.keys(options).length > 0 ? { options } : {}),
+    ...(Object.keys(edges).length > 0 ? { edges } : {}),
     // Not tied to a tier: it stays whatever tier the character drops to.
     ...(picks.learned ? { learned: picks.learned } : {}),
     // The gain stays too; only exchanges of picks from tiers no longer reached go.

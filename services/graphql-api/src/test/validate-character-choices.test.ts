@@ -726,3 +726,75 @@ describe('validateCharacterChoices (flavor)', () => {
     expect(result.data).toBeNull()
   })
 })
+
+// validInput is a Warrior with Speed as starting Edge and Improved Edge at tier 1.
+describe('validateCharacterChoices (Improved Edge)', () => {
+  const EDGE_QUERY = `
+    query ($input: CharacterChoicesInput!) {
+      validateCharacterChoices(input: $input) {
+        __typename
+        ... on ValidCharacterResult {
+          character {
+            edge { might speed intellect }
+            pendingPicks { kind tier key abilityId required chosen }
+          }
+        }
+        ... on InvalidCharacterResult { issues { code } }
+      }
+    }
+  `
+  interface Payload {
+    validateCharacterChoices: {
+      __typename: string
+      character?: {
+        edge: { might: number; speed: number; intellect: number }
+        pendingPicks: Array<{ kind: string; key: string | null; abilityId: string | null }>
+      }
+      issues?: Array<{ code: string }>
+    }
+  }
+  const edgePicks = (pending: Array<{ kind: string }> = []) =>
+    pending.filter((pick) => pick.kind === 'edge')
+
+  it('owes the Edge as a pending "edge" pick with the key to answer under', async () => {
+    const result = await graphqlRequest<Payload>(EDGE_QUERY, { input: validInput })
+    expect(result.errors).toBeUndefined()
+    expect(edgePicks(result.data.validateCharacterChoices.character?.pendingPicks)).toEqual([
+      {
+        kind: 'edge',
+        tier: 1,
+        key: 'type:1:improved-edge',
+        abilityId: 'improved-edge',
+        required: 1,
+        chosen: 0,
+      },
+    ])
+  })
+
+  it('raises the picked Edge and clears the pending pick', async () => {
+    const before = await graphqlRequest<Payload>(EDGE_QUERY, { input: validInput })
+    const result = await graphqlRequest<Payload>(EDGE_QUERY, {
+      input: {
+        ...validInput,
+        abilityEdgeChoices: [{ key: 'type:1:improved-edge', stat: 'INTELLECT' }],
+      },
+    })
+    const character = result.data.validateCharacterChoices.character
+    expect(character?.edge.intellect).toBe(
+      (before.data.validateCharacterChoices.character?.edge.intellect ?? NaN) + 1,
+    )
+    expect(edgePicks(character?.pendingPicks)).toEqual([])
+  })
+
+  it('rejects the starting Edge stat, which is not 0', async () => {
+    const result = await graphqlRequest<Payload>(EDGE_QUERY, {
+      input: {
+        ...validInput,
+        abilityEdgeChoices: [{ key: 'type:1:improved-edge', stat: 'SPEED' }],
+      },
+    })
+    const payload = result.data.validateCharacterChoices
+    expect(payload.__typename).toBe('InvalidCharacterResult')
+    expect(payload.issues?.map((i) => i.code)).toEqual(['EDGE_CHOICE_NOT_ZERO'])
+  })
+})

@@ -67,6 +67,8 @@ export interface PlayCopy {
     /** Skills an ability trains the character in, gained at `tier`. */
     skillTitle: (abilityName: string, tier: number) => string
     optionTitle: (abilityName: string, tier: number) => string
+    /** Improved Edge gained at `tier`: the Edge at 0 it raises. */
+    edgeTitle: (abilityName: string, tier: number) => string
     /** Hint for an ability that takes two pick counts ("two skills, or one specialized"). */
     skillAlternateHint: (selected: number, required: number, alternate: number) => string
     customPlaceholder: string
@@ -279,6 +281,8 @@ const en: PlayCopy = {
     skillTitle: (abilityName, tier) =>
       `${abilityName} (tier ${tier}) — choose the skills it improves`,
     optionTitle: (abilityName, tier) => `${abilityName} (tier ${tier}) — choose its abilities`,
+    edgeTitle: (abilityName, tier) =>
+      `${abilityName} (tier ${tier}) — choose an Edge at 0 to raise to 1`,
     skillAlternateHint: (selected, required, alternate) =>
       `Choose ${required}, or ${alternate} to specialize in a skill you already know — ${selected} selected`,
     customPlaceholder: 'Or type your own…',
@@ -519,6 +523,8 @@ const ptBr: PlayCopy = {
       `${abilityName} (Grau ${tier}) — escolha as perícias que ela aprimora`,
     optionTitle: (abilityName, tier) =>
       `${abilityName} (Grau ${tier}) — escolha as habilidades dela`,
+    edgeTitle: (abilityName, tier) =>
+      `${abilityName} (Grau ${tier}) — escolha uma Margem em 0 para subir para 1`,
     skillAlternateHint: (selected, required, alternate) =>
       `Escolha ${required}, ou ${alternate} para se especializar em uma perícia que já conhece — ${selected} selecionada(s)`,
     customPlaceholder: 'Ou digite a sua…',

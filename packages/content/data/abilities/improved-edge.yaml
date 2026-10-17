@@ -7,6 +7,8 @@ description:
   pt-BR: 'Escolha uma de suas Margens que esteja em 0. Ela aumenta para 1.'
 cost: null
 action_type: enabler
+edge_grant:
+  kind: choose_zero
 sources:
   - type: type
     id: explorer

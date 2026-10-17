@@ -129,6 +129,24 @@ export const AbilitySchema = z.object({
       message: 'choice.count can’t exceed the number of options',
     })
     .optional(),
+  // Present on abilities that permanently raise an Edge:
+  // - fixed: "+1 to your Might Edge" (the Enhanced <Stat> Edge abilities).
+  // - choose_zero: "Choose one of your Edge stats that is 0. It increases to
+  //   1." (Improved Edge) — the player picks the stat, which must still be 0
+  //   after the Type's starting Edge.
+  // Conditional boosts ("for ten minutes", "while on a starcraft", "in beast
+  // form") stay in the description only. Optional with no default, so
+  // abilities without it keep their content_version.
+  edge_grant: z
+    .discriminatedUnion('kind', [
+      z.object({
+        kind: z.literal('fixed'),
+        stat: z.enum(['might', 'speed', 'intellect']),
+        amount: z.number().int().min(1),
+      }),
+      z.object({ kind: z.literal('choose_zero') }),
+    ])
+    .optional(),
   // True for abilities that are themselves an attack: they make an attack roll
   // or inflict damage on a target (Bash, Bolts of Power, Spray…). The Skills
   // advancement may only train an *attack* ability ("you can choose an ability

@@ -7,6 +7,10 @@ description:
   pt-BR: 'Você ganha +1 na sua Margem de Intelecto.'
 cost: null
 action_type: enabler
+edge_grant:
+  kind: fixed
+  stat: intellect
+  amount: 1
 sources:
   - type: focus
     id: interprets-the-law

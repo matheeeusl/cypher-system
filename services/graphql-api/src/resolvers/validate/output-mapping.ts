@@ -40,7 +40,16 @@ function mapDerivedCharacter(character: DerivedCharacter) {
           }
         : pick.kind === 'option'
           ? { ...pick, abilityId: pick.ability_id, alternateRequired: null }
-          : { ...pick, key: null, abilityId: null, alternateRequired: null },
+          : pick.kind === 'edge'
+            ? // One Edge to pick, so it reads like a one-pick choice.
+              {
+                ...pick,
+                required: 1,
+                chosen: 0,
+                abilityId: pick.ability_id,
+                alternateRequired: null,
+              }
+            : { ...pick, key: null, abilityId: null, alternateRequired: null },
     ),
   }
 }

@@ -10,7 +10,7 @@ import {
   resolveAbilityChoices,
   type AbilityChoicesByAbility,
 } from './character/ability-choices.js'
-import { deriveEdge, resolveStartingEdge } from './character/edge.js'
+import { deriveEdge, resolveStartingEdge, type EdgeGrantsByAbility } from './character/edge.js'
 import { deriveEffort } from './character/effort.js'
 import { resolveFlavor, type FlavorContent } from './character/flavor.js'
 import { applyFlavorGain } from './character/flavor-gain.js'
@@ -57,6 +57,12 @@ export interface CharacterContent {
    * `ability_choices` is rejected.
    */
   ability_choices?: AbilityChoicesByAbility
+  /**
+   * Edge grant of the abilities that have one, by ability id (build it from
+   * every Ability with an `edge_grant`). Left out, no ability raises an Edge
+   * and any `ability_edge_choices` is rejected.
+   */
+  edge_grants?: EdgeGrantsByAbility
   /** Ids of the skills flagged `combat`; a 'noncombat' grant can't pick them. */
   combat_skill_ids?: string[]
 }
@@ -80,7 +86,6 @@ export function deriveCharacter(
 
   const startingEdge = resolveStartingEdge(type, choices.starting_edge_choice)
   const tier = deriveTier(choices.advancement_purchases)
-  const edge = deriveEdge(startingEdge, choices.advancement_purchases)
   const effort = deriveEffort(choices.advancement_purchases)
   const pools = derivePoolMax(
     type,
@@ -132,6 +137,16 @@ export function deriveCharacter(
       knownAbilities,
     ),
   ]
+
+  // After the ability resolution above: collecting the grants assumes the
+  // Type and Focus picks are valid.
+  const edge = deriveEdge(
+    startingEdge,
+    choices.advancement_purchases,
+    collectSkillGrantInstances(type, focus, tier, choices, content.edge_grants ?? {}),
+    choices.ability_edge_choices ?? {},
+    pending,
+  )
 
   let skills = applyDescriptorSkills(descriptor, choices.descriptor_skill_choices)
   const grantApplier = createSkillGrantApplier(

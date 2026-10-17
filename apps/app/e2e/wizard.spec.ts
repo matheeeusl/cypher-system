@@ -29,6 +29,8 @@ const copy = {
     autoTrained: 'Trained automatically by Brash',
     abilitiesTitle: 'Choose Tier-1 Abilities',
     fourSelected: '4 / 4 selected',
+    edgePick: 'Improved Edge — choose an Edge at 0 to raise to 1',
+    intellectEdge: 'Intellect +1',
     effort: /Effort \d/,
     might: /Might \d/,
     namePlaceholder: 'e.g. Kessa Verne',
@@ -64,6 +66,8 @@ const copy = {
     autoTrained: 'Treinadas automaticamente por Atrevido',
     abilitiesTitle: 'Escolha as Habilidades de Grau 1',
     fourSelected: '4 / 4 selecionadas',
+    edgePick: 'Margem Aprimorada — escolha uma Margem em 0 para subir para 1',
+    intellectEdge: 'Intelecto +1',
     effort: /Esforço \d/,
     might: /Força \d/,
     namePlaceholder: 'ex.: Kessa Verne',
@@ -140,6 +144,10 @@ for (const locale of ['en', 'pt-br'] as const) {
     await expect(abilityButtons.first()).toBeVisible()
     for (let i = 0; i < 4; i++) await abilityButtons.nth(i).click()
     await expect(page.getByText(t.fourSelected)).toBeVisible()
+    // The fourth is Improved Edge: it asks which Edge at 0 to raise (Might is
+    // the starting Edge, so only Speed and Intellect are offered).
+    await expect(page.getByText(t.edgePick)).toBeVisible()
+    await page.getByRole('button', { name: t.intellectEdge }).click()
 
     // Now everything required is chosen — the live-validation panel should
     // show real derived numbers instead of an error.

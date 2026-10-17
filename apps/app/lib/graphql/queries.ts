@@ -245,6 +245,16 @@ export interface WizardAbility {
     /** More options learnable later for XP (Cantrips: 2 XP for two). */
     learn: { xpCost: number; count: number } | null
   } | null
+  /**
+   * Set on abilities that permanently raise an Edge: 'fixed' adds `amount` to
+   * `stat` (Enhanced Might Edge); 'choose_zero' (Improved Edge) raises an Edge
+   * the player picks among those at 0, to 1 (`stat`/`amount` null).
+   */
+  edgeGrant: {
+    kind: 'fixed' | 'choose_zero'
+    stat: Stat | null
+    amount: number | null
+  } | null
   // actionType deliberately not fetched: the wizard doesn't display it, and
   // schema.graphql's ActionType enum only covers 4 of the ~28 action-type
   // values real Ability content actually uses — requesting it crashes the
@@ -262,6 +272,7 @@ const ABILITIES_QUERY = `
       attack
       skillGrant { count mode noncombat allowCustom options alternate { count mode } }
       choice { options count learn { xpCost count } }
+      edgeGrant { kind stat amount }
     }
   }
 `
@@ -300,6 +311,8 @@ export interface CharacterChoicesInput {
   abilitySkillChoices?: Array<{ key: string; skillIds: string[] }>
   /** Abilities picked for choice abilities (Blessing of the Gods, Cantrips); `key` as for skills. */
   abilityChoices?: Array<{ key: string; abilityIds: string[] }>
+  /** Edges picked for Improved Edge; `key` as for skills. */
+  abilityEdgeChoices?: Array<{ key: string; stat: Stat }>
   /** Options learned later for XP (Cantrips): the choice ability and the options bought. */
   learnedOptions?: Array<{ abilityId: string; optionIds: string[] }>
   /** A flavor gained in play (not together with `flavorId`), with its exchanges of Type abilities. */
@@ -334,11 +347,11 @@ export interface DerivedCharacter {
   skills: Array<{ skillId: string; level: SkillLevel }>
   /** Level-up choices still owed for tiers already reached. */
   pendingPicks: Array<{
-    kind: 'type' | 'focus' | 'skill' | 'option'
+    kind: 'type' | 'focus' | 'skill' | 'option' | 'edge'
     tier: number
     required: number
     chosen: number
-    /** Only for kind 'skill' | 'option': the ability and the `abilitySkillChoices` / `abilityChoices` key it is answered under. */
+    /** Only for kind 'skill' | 'option' | 'edge': the ability and the `abilitySkillChoices` / `abilityChoices` / `abilityEdgeChoices` key it is answered under. */
     key: string | null
     abilityId: string | null
     alternateRequired: number | null

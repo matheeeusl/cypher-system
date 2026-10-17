@@ -1,4 +1,5 @@
 import { isSkillIdShape } from '@/lib/custom-skill'
+import type { Stat } from '@/lib/graphql/queries'
 import {
   INITIAL_CHOICES,
   type DescriptorPoolChoice,
@@ -45,6 +46,21 @@ function parseAbilityChoices(raw: unknown): Record<string, string[]> | null {
   return out
 }
 
+/** {key: stat} for tier-1 Improved Edge picks; keys look like "type:1:improved-edge". */
+function parseEdgeChoices(raw: unknown): Record<string, Stat> | null {
+  if (raw === undefined) return {} // saved before Edge picks existed
+  if (typeof raw !== 'object' || raw === null || Array.isArray(raw)) return null
+  const entries = Object.entries(raw)
+  if (entries.length > 10) return null
+  const out: Record<string, Stat> = {}
+  for (const [key, stat] of entries) {
+    if (!/^(type|focus):1:[a-z0-9-]{1,100}$/.test(key)) return null
+    if (stat !== 'MIGHT' && stat !== 'SPEED' && stat !== 'INTELLECT') return null
+    out[key] = stat
+  }
+  return out
+}
+
 /**
  * The Descriptor Pool bonus choice: `{ allocation }` or `{ optionIndex }`.
  * Whether it fits the Descriptor is checked later (isStepValid, the API).
@@ -80,6 +96,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
   const flavorId = r.flavorId === undefined ? null : r.flavorId
   const abilitySkillChoices = parseSkillChoices(r.abilitySkillChoices)
   const abilityChoices = parseAbilityChoices(r.abilityChoices)
+  const abilityEdgeChoices = parseEdgeChoices(r.abilityEdgeChoices)
   const descriptorPoolChoice = parsePoolChoice(r.descriptorPoolChoice)
 
   if (
@@ -100,6 +117,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     !isCount(pool.intellect) ||
     !abilitySkillChoices ||
     !abilityChoices ||
+    !abilityEdgeChoices ||
     descriptorPoolChoice === undefined ||
     !isString(r.name) ||
     !isString(r.background)
@@ -121,6 +139,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     tier1TypeAbilityIds: r.tier1TypeAbilityIds,
     abilitySkillChoices,
     abilityChoices,
+    abilityEdgeChoices,
     name: r.name,
     background: r.background,
   }

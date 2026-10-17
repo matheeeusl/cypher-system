@@ -55,6 +55,8 @@ export type RuleErrorCode =
   | 'ABILITY_SKILL_CHOICE_UNKNOWN'
   | 'ABILITY_SKILL_CHOICE_MAXED'
   | 'ABILITY_SKILL_CHOICE_NOT_TRAINED'
+  | 'EDGE_CHOICE_UNKNOWN'
+  | 'EDGE_CHOICE_NOT_ZERO'
   | 'UNKNOWN'
 
 export type RuleErrorParams = Record<string, string | number>

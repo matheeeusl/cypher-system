@@ -102,6 +102,8 @@ export interface WizardCopy {
     focusChoice: (pick: number, count: number, needed: number) => string
     /** Heading of the picker under an ability that asks for other abilities. */
     optionPick: (abilityName: string, count: number, needed: number) => string
+    /** Heading of the Edge picker under Improved Edge. */
+    edgePick: (abilityName: string) => string
     /** Heading of the skill picker under an ability that trains skills. */
     skillPick: (abilityName: string, count: number, needed: number) => string
     /** A skill the character is already trained in, so it can't be picked again. */
@@ -142,6 +144,7 @@ export interface WizardCopy {
     chooseAbilities: (count: number) => string
     focusChoices: string
     abilityOptions: string
+    abilityEdge: string
     abilitySkills: string
     enterName: string
   }
@@ -284,6 +287,7 @@ const en: WizardCopy = {
       `Focus choice — pick ${pick} (${count} / ${needed} selected)`,
     optionPick: (abilityName, count, needed) =>
       `${abilityName} — choose ${needed} ${needed === 1 ? 'ability' : 'abilities'} (${count} / ${needed} selected)`,
+    edgePick: (abilityName) => `${abilityName} — choose an Edge at 0 to raise to 1`,
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — choose ${needed} ${needed === 1 ? 'skill' : 'skills'} (${count} / ${needed} selected)`,
     skillTaken: 'already trained',
@@ -337,6 +341,7 @@ const en: WizardCopy = {
     chooseAbilities: (count) => `Choose exactly ${count} tier-1 abilities.`,
     focusChoices: 'Make a selection for every Focus choice above.',
     abilityOptions: 'Choose the abilities each of your chosen abilities asks for.',
+    abilityEdge: 'Choose which Edge Improved Edge raises.',
     abilitySkills: 'Choose the skills each ability above improves.',
     enterName: 'Enter a character name to continue.',
   },
@@ -418,6 +423,10 @@ const en: WizardCopy = {
         return 'That ability only applies to a skill the character is already trained in.'
       case 'ABILITY_SKILL_CHOICE_UNKNOWN':
         return 'Skills were chosen for an ability the character doesn’t have.'
+      case 'EDGE_CHOICE_NOT_ZERO':
+        return 'Improved Edge can only raise an Edge that is 0 when the ability is gained.'
+      case 'EDGE_CHOICE_UNKNOWN':
+        return 'An Edge was chosen for an ability the character doesn’t have.'
       default:
         return null
     }
@@ -542,6 +551,7 @@ const ptBr: WizardCopy = {
       `Escolha do Foco — escolha ${pick} (${count} / ${needed} selecionadas)`,
     optionPick: (abilityName, count, needed) =>
       `${abilityName} — escolha ${needed} ${needed === 1 ? 'habilidade' : 'habilidades'} (${count} / ${needed} selecionadas)`,
+    edgePick: (abilityName) => `${abilityName} — escolha uma Margem em 0 para subir para 1`,
     skillPick: (abilityName, count, needed) =>
       `${abilityName} — escolha ${needed} ${needed === 1 ? 'perícia' : 'perícias'} (${count} / ${needed} selecionadas)`,
     skillTaken: 'já treinada',
@@ -596,6 +606,7 @@ const ptBr: WizardCopy = {
     chooseAbilities: (count) => `Escolha exatamente ${count} habilidades de Grau 1.`,
     focusChoices: 'Faça uma seleção para cada escolha do Foco acima.',
     abilityOptions: 'Escolha as habilidades que cada uma das suas habilidades escolhidas pede.',
+    abilityEdge: 'Escolha qual Margem a Margem Aprimorada aumenta.',
     abilitySkills: 'Escolha as perícias que cada habilidade acima aprimora.',
     enterName: 'Digite o nome do personagem para continuar.',
   },
@@ -677,6 +688,10 @@ const ptBr: WizardCopy = {
         return 'Essa habilidade só vale para uma perícia em que o personagem já é treinado.'
       case 'ABILITY_SKILL_CHOICE_UNKNOWN':
         return 'Foram escolhidas perícias para uma habilidade que o personagem não possui.'
+      case 'EDGE_CHOICE_NOT_ZERO':
+        return 'A Margem Aprimorada só pode aumentar uma Margem que esteja em 0 quando a habilidade é obtida.'
+      case 'EDGE_CHOICE_UNKNOWN':
+        return 'Foi escolhida uma Margem para uma habilidade que o personagem não possui.'
       default:
         return null
     }

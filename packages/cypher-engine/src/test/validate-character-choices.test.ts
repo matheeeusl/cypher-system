@@ -611,3 +611,44 @@ describe('validateCharacterChoices with a flavor gained in play', () => {
     expect(result.issues.map((i) => i.code)).toContain('FLAVOR_GAIN_CONFLICT')
   })
 })
+
+describe('validateCharacterChoices with an Edge choice', () => {
+  const withGrants = {
+    ...content,
+    edge_grants: { 'improved-edge': { kind: 'choose_zero' as const } },
+  }
+
+  it('matches deriveCharacter when the pick is valid', () => {
+    const choices = {
+      ...validChoices,
+      ability_edge_choices: { 'type:1:improved-edge': 'might' as const },
+    }
+    const result = validateCharacterChoices(choices, withGrants)
+    if (!result.valid) throw new Error(result.errors.join('; '))
+    expect(result.character).toEqual(deriveCharacter(choices, withGrants))
+  })
+
+  it('reports a pick of an Edge that is not 0 with its code', () => {
+    const result = validateCharacterChoices(
+      { ...validChoices, ability_edge_choices: { 'type:1:improved-edge': 'speed' } },
+      withGrants,
+    )
+    if (result.valid) throw new Error('expected invalid')
+    expect(result.issues).toEqual([
+      { code: 'EDGE_CHOICE_NOT_ZERO', params: { abilityId: 'improved-edge', stat: 'speed' } },
+    ])
+  })
+
+  it("doesn't call the pick unknown when the Type picks themselves failed", () => {
+    const result = validateCharacterChoices(
+      {
+        ...validChoices,
+        tier_1_type_ability_ids: ['bash', 'overwatch', 'improved-edge'],
+        ability_edge_choices: { 'type:1:improved-edge': 'might' },
+      },
+      withGrants,
+    )
+    if (result.valid) throw new Error('expected invalid')
+    expect(result.issues.map((issue) => issue.code)).not.toContain('EDGE_CHOICE_UNKNOWN')
+  })
+})

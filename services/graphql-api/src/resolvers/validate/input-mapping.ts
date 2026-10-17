@@ -48,6 +48,11 @@ export interface AbilityChoiceInput {
   abilityIds: string[]
 }
 
+export interface AbilityEdgeChoiceInput {
+  key: string
+  stat: Stat
+}
+
 export interface FlavorGainInput {
   flavorId: string
   swaps: Array<{ tier: number; replaces: string; with: string }>
@@ -107,6 +112,7 @@ export interface CharacterChoicesInput {
   descriptorSkillChoices: string[]
   abilitySkillChoices?: AbilitySkillChoiceInput[] | null
   abilityChoices?: AbilityChoiceInput[] | null
+  abilityEdgeChoices?: AbilityEdgeChoiceInput[] | null
   learnedOptions?: LearnedOptionInput[] | null
   flavorGain?: FlavorGainInput | null
   advancementPurchases: AdvancementPurchaseInput[]
@@ -180,6 +186,10 @@ export function mapAbilityChoices(list: AbilityChoiceInput[]): Record<string, st
   return Object.fromEntries(list.map(({ key, abilityIds }) => [key, abilityIds]))
 }
 
+export function mapAbilityEdgeChoices(list: AbilityEdgeChoiceInput[]): Record<string, Stat> {
+  return Object.fromEntries(list.map(({ key, stat }) => [key, stat]))
+}
+
 export function mapLearnedOptions(list: LearnedOptionInput[]): Record<string, string[]> {
   const learned: Record<string, string[]> = {}
   for (const { abilityId, optionIds } of list) {
@@ -222,6 +232,9 @@ export function mapCharacterChoicesInput(input: CharacterChoicesInput): Characte
       : {}),
     ...((input.abilityChoices ?? []).length > 0
       ? { ability_choices: mapAbilityChoices(input.abilityChoices ?? []) }
+      : {}),
+    ...((input.abilityEdgeChoices ?? []).length > 0
+      ? { ability_edge_choices: mapAbilityEdgeChoices(input.abilityEdgeChoices ?? []) }
       : {}),
     ...((input.learnedOptions ?? []).length > 0
       ? { learned_options: mapLearnedOptions(input.learnedOptions ?? []) }

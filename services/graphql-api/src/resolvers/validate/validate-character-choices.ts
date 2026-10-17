@@ -55,6 +55,7 @@ function resolveContentOrThrow(input: CharacterChoicesInput): CharacterContent {
     flavor: flavor ?? null,
     skill_grants: skillGrantsByAbility(),
     ability_choices: abilityChoicesByAbility(),
+    edge_grants: edgeGrantsByAbility(),
     combat_skill_ids: getAllSkills()
       .filter((skill) => skill.combat)
       .map((skill) => skill.id),
@@ -75,6 +76,14 @@ function abilityChoicesByAbility(): NonNullable<CharacterContent['ability_choice
     if (ability.choice) choices[ability.id] = ability.choice
   }
   return choices
+}
+
+function edgeGrantsByAbility(): NonNullable<CharacterContent['edge_grants']> {
+  const grants: NonNullable<CharacterContent['edge_grants']> = {}
+  for (const ability of getAllAbilities()) {
+    if (ability.edge_grant) grants[ability.id] = ability.edge_grant
+  }
+  return grants
 }
 
 export const validateResolvers = {

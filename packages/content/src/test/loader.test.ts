@@ -153,6 +153,22 @@ describe('loader', () => {
     expect(getAbilityById('cantrips')?.choice?.learn).toEqual({ xp_cost: 2, count: 2 })
   })
 
+  // Only permanent Edge raises are structured; conditional ones (Hidden
+  // Reserves, Incomparable Pilot, Greater Beast Form) stay prose.
+  it('structures the Edge grant of exactly the permanent Edge abilities', () => {
+    const grants = Object.fromEntries(
+      getAllAbilities()
+        .filter((ability) => ability.edge_grant)
+        .map((ability) => [ability.id, ability.edge_grant]),
+    )
+    expect(grants).toEqual({
+      'enhanced-intellect-edge': { kind: 'fixed', stat: 'intellect', amount: 1 },
+      'enhanced-might-edge': { kind: 'fixed', stat: 'might', amount: 1 },
+      'enhanced-speed-edge': { kind: 'fixed', stat: 'speed', amount: 1 },
+      'improved-edge': { kind: 'choose_zero' },
+    })
+  })
+
   it('attaches a non-empty, deterministic content_version to every entity', () => {
     const [first] = getAllAbilities()
     expect(first?.content_version).toBeTruthy()

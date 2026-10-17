@@ -16,6 +16,7 @@ import {
   fetchTypes,
   validateCharacterChoices,
   type ValidationResult,
+  type Stat,
   type WizardAbility,
   type WizardDescriptor,
   type WizardFlavor,
@@ -43,8 +44,10 @@ import {
   type SkillGrantSlot,
   stepErrorMessage,
   tier1ChoiceSlots,
+  tier1EdgeSlots,
   tier1PickPool,
   type ChoiceSlot,
+  type EdgeSlot,
 } from './derive'
 import { EquipmentStep } from './EquipmentStep'
 import { ErrorBanner } from './ErrorBanner'
@@ -95,14 +98,11 @@ function useEntityList<T>(fetcher: () => Promise<T[]>, needed: boolean): Content
   return state
 }
 
-function withoutSkillKey(record: Record<string, string[]>, key: string): Record<string, string[]> {
+function withoutSkillKey<V>(record: Record<string, V>, key: string): Record<string, V> {
   return Object.fromEntries(Object.entries(record).filter(([k]) => k !== key))
 }
 
-function withoutSkillKeys(
-  record: Record<string, string[]>,
-  prefix: string,
-): Record<string, string[]> {
+function withoutSkillKeys<V>(record: Record<string, V>, prefix: string): Record<string, V> {
   return Object.fromEntries(Object.entries(record).filter(([k]) => !k.startsWith(prefix)))
 }
 
@@ -315,6 +315,7 @@ function WizardInner({
       tier1TypeAbilityIds: [],
       abilitySkillChoices: withoutSkillKeys(choices.abilitySkillChoices, 'type:'),
       abilityChoices: {},
+      abilityEdgeChoices: withoutSkillKeys(choices.abilityEdgeChoices, 'type:'),
     })
   }
 
@@ -339,6 +340,10 @@ function WizardInner({
           (record, abilityId) => withoutSkillKey(record, skillGrantKey('type', 1, abilityId)),
           prev.abilityChoices,
         ),
+        abilityEdgeChoices: dropped.reduce(
+          (record, abilityId) => withoutSkillKey(record, skillGrantKey('type', 1, abilityId)),
+          prev.abilityEdgeChoices,
+        ),
       }
     })
     setAttemptedNext(false)
@@ -351,6 +356,7 @@ function WizardInner({
       focusId: id,
       focusChoiceSelections: Array.from({ length: entryCount }, () => []),
       abilitySkillChoices: withoutSkillKeys(choices.abilitySkillChoices, 'focus:'),
+      abilityEdgeChoices: withoutSkillKeys(choices.abilityEdgeChoices, 'focus:'),
     })
   }
 
@@ -382,6 +388,10 @@ function WizardInner({
             skillGrantKey('type', 1, abilityId),
           ),
           abilityChoices: withoutSkillKey(prev.abilityChoices, skillGrantKey('type', 1, abilityId)),
+          abilityEdgeChoices: withoutSkillKey(
+            prev.abilityEdgeChoices,
+            skillGrantKey('type', 1, abilityId),
+          ),
         }
       }
       if (prev.tier1TypeAbilityIds.length >= 4) return prev
@@ -410,6 +420,10 @@ function WizardInner({
       return { ...prev, abilityChoices: { ...prev.abilityChoices, [slot.key]: next } }
     })
     setAttemptedNext(false)
+  }
+
+  function onPickEdge(slot: EdgeSlot, stat: Stat) {
+    update({ abilityEdgeChoices: { ...choices.abilityEdgeChoices, [slot.key]: stat } })
   }
 
   function onToggleFocusChoiceOption(entryIndex: number, optionIndex: number) {
@@ -563,6 +577,9 @@ function WizardInner({
               choiceSlots={tier1ChoiceSlots(choices, content)}
               abilityChoices={choices.abilityChoices}
               onToggleAbilityChoice={onToggleAbilityChoice}
+              edgeSlots={tier1EdgeSlots(choices, content)}
+              abilityEdgeChoices={choices.abilityEdgeChoices}
+              onPickEdge={onPickEdge}
               skills={skills.data}
               skillGrantSlots={tier1SkillGrantSlots(choices, content)}
               abilitySkillChoices={choices.abilitySkillChoices}

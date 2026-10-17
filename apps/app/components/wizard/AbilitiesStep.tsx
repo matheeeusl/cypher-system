@@ -4,6 +4,7 @@ import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 import { DocsLink } from '@/components/DocsLink'
 import { docsLinks } from '@/lib/docs-links'
 import type {
+  Stat,
   WizardAbility,
   WizardFlavor,
   WizardFocus,
@@ -16,6 +17,7 @@ import {
   focusTier1GrantedIds,
   tier1PickPool,
   type ChoiceSlot,
+  type EdgeSlot,
   type SkillGrantSlot,
 } from './derive'
 import { CustomSkillInput } from './CustomSkillInput'
@@ -43,6 +45,10 @@ interface AbilitiesStepProps {
   choiceSlots: ChoiceSlot[]
   abilityChoices: Record<string, string[]>
   onToggleAbilityChoice: (slot: ChoiceSlot, abilityId: string) => void
+  /** The chosen abilities that raise an Edge the player picks (Improved Edge). */
+  edgeSlots: EdgeSlot[]
+  abilityEdgeChoices: Record<string, Stat>
+  onPickEdge: (slot: EdgeSlot, stat: Stat) => void
   /** Skill catalog, for the pickers under abilities that train skills. */
   skills: WizardSkill[] | null
   /** The chosen/granted abilities that train skills, one picker each. */
@@ -71,6 +77,9 @@ export function AbilitiesStep({
   choiceSlots,
   abilityChoices,
   onToggleAbilityChoice,
+  edgeSlots,
+  abilityEdgeChoices,
+  onPickEdge,
   skills,
   skillGrantSlots,
   abilitySkillChoices,
@@ -320,6 +329,41 @@ export function AbilitiesStep({
                 })}
               </ul>
             )}
+          </div>
+        )
+      })}
+
+      {edgeSlots.map((slot) => {
+        // Only Edges still at 0 are offered, so a pick left over from another
+        // starting Edge simply shows as unpicked.
+        const picked = abilityEdgeChoices[slot.key]
+        const done = picked !== undefined && slot.options.includes(picked)
+        return (
+          <div key={slot.key} className="border-border bg-panel mt-5 rounded border p-4">
+            <div
+              className={`mb-2 font-mono text-[11px] tracking-wide uppercase ${
+                done ? 'text-accent' : 'text-text-muted'
+              }`}
+            >
+              {copy.abilities.edgePick(abilityName(slot.abilityId))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {slot.options.map((stat) => (
+                <button
+                  key={stat}
+                  type="button"
+                  aria-pressed={picked === stat}
+                  onClick={() => onPickEdge(slot, stat)}
+                  className={`cursor-pointer rounded border px-3 py-1.5 font-mono text-[12px] ${
+                    picked === stat
+                      ? 'border-accent bg-accent-soft text-accent'
+                      : 'border-border bg-panel text-text-muted'
+                  }`}
+                >
+                  {terms.stats[stat]} +1
+                </button>
+              ))}
+            </div>
           </div>
         )
       })}

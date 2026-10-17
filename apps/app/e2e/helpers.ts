@@ -25,6 +25,8 @@ export async function createCharacter(page: Page, name: string): Promise<void> {
   const abilities = page.locator('div.flex.max-h-\\[340px\\] button')
   await expect(abilities.first()).toBeVisible()
   for (let i = 0; i < 4; i++) await abilities.nth(i).click()
+  // The fourth is Improved Edge: Might is the starting Edge, so raise Intellect.
+  await page.getByRole('button', { name: 'Intellect +1' }).click()
   await page.getByRole('button', { name: 'Next →' }).click() // equipment
   await page.getByRole('button', { name: 'Next →' }).click() // background
   await page.getByPlaceholder('e.g. Kessa Verne').fill(name)

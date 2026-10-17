@@ -7,6 +7,10 @@ description:
   pt-BR: 'Você ganha +1 na sua Margem de Força.'
 cost: null
 action_type: enabler
+edge_grant:
+  kind: fixed
+  stat: might
+  amount: 1
 sources:
   - type: focus
     id: performs-feats-of-strength

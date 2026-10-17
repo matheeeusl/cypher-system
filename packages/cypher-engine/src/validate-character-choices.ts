@@ -135,11 +135,6 @@ export function validateCharacterChoices(
     }
   }
 
-  // deriveEdge is a pure sum with no validation of its own — nothing is
-  // lost by skipping it when resolveStartingEdge already failed.
-  const edge =
-    startingEdge === undefined ? undefined : deriveEdge(startingEdge, choices.advancement_purchases)
-
   let knownAbilities: KnownAbility[] | undefined
   if (typeAbilities === undefined || focusAbilities === undefined || typePicks === undefined) {
     report(
@@ -172,6 +167,26 @@ export function validateCharacterChoices(
     )
     knownAbilities = [...knownAbilities, ...(learned ?? [])]
   }
+
+  // Skipped when the starting Edge failed (already reported). The Edge
+  // grants and picks need the tier and ability picks resolved; when those
+  // failed (also reported), only the purchases are summed, so a pick isn't
+  // flagged as unknown on top of the real error.
+  const abilitiesResolved = tier !== undefined && typeAbilities && focusAbilities && typePicks
+  const edge =
+    startingEdge === undefined
+      ? undefined
+      : attempt(() =>
+          abilitiesResolved
+            ? deriveEdge(
+                startingEdge,
+                choices.advancement_purchases,
+                collectSkillGrantInstances(type, focus, tier, choices, content.edge_grants ?? {}),
+                choices.ability_edge_choices ?? {},
+                pending,
+              )
+            : deriveEdge(startingEdge, choices.advancement_purchases),
+        )
 
   let skills = attempt(() => applyDescriptorSkills(descriptor, choices.descriptor_skill_choices))
 

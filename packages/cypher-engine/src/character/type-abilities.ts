@@ -162,8 +162,8 @@ export function resolveTypeTierPicks(
   return abilities
 }
 
-/** Pending picks in the order a player would make them: by tier, then Type, Focus, skill choices. */
+/** Pending picks in the order a player would make them: by tier, then Type, Focus, option, skill, Edge choices. */
 export function sortPending(pending: PendingPick[]): PendingPick[] {
-  const rank = { type: 0, focus: 1, option: 2, skill: 3 } as const
+  const rank = { type: 0, focus: 1, option: 2, skill: 3, edge: 4 } as const
   return [...pending].sort((a, b) => a.tier - b.tier || rank[a.kind] - rank[b.kind])
 }

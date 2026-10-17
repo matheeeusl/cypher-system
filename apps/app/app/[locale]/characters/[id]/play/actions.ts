@@ -58,6 +58,7 @@ import {
   withFlavorGain,
   withLearned,
   withOptionPick,
+  withEdgePick,
   withPick,
   withSkillPick,
   withoutFlavorGain,
@@ -71,6 +72,7 @@ import {
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 const isInt = (v: unknown, min: number, max: number): v is number =>
   Number.isInteger(v) && (v as number) >= min && (v as number) <= max
+const isStat = (v: unknown): v is Stat => v === 'MIGHT' || v === 'SPEED' || v === 'INTELLECT'
 const isText = (v: unknown, max: number): v is string =>
   typeof v === 'string' && v.trim().length > 0 && v.trim().length <= max
 
@@ -589,10 +591,14 @@ export async function choosePicksAction(
   if (
     typeof characterId !== 'string' ||
     !UUID.test(characterId) ||
-    (kind !== 'type' && kind !== 'focus' && kind !== 'skill' && kind !== 'option') ||
-    // Skill and ability picks can be owed from tier 1 (an ability taken at creation).
-    !isInt(tier, kind === 'skill' || kind === 'option' ? 1 : 2, 6) ||
-    (kind === 'skill' &&
+    (kind !== 'type' &&
+      kind !== 'focus' &&
+      kind !== 'skill' &&
+      kind !== 'option' &&
+      kind !== 'edge') ||
+    // Skill, ability and Edge picks can be owed from tier 1 (an ability taken at creation).
+    !isInt(tier, kind === 'type' || kind === 'focus' ? 2 : 1, 6) ||
+    ((kind === 'skill' || kind === 'edge') &&
       !(typeof skillKey === 'string' && /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/.test(skillKey))) ||
     (kind === 'option' &&
       !(typeof skillKey === 'string' && /^type:[1-6]:[a-z0-9-]{1,100}$/.test(skillKey))) ||
@@ -617,12 +623,12 @@ export async function choosePicksAction(
       (p) =>
         p.kind === kind &&
         p.tier === tier &&
-        (kind !== 'skill' && kind !== 'option' ? true : p.key === skillKey),
+        (kind === 'type' || kind === 'focus' ? true : p.key === skillKey),
     )
     if (!owed) return { ok: false, reason: 'invalid' }
     // A bundled Focus option arrives as "a,b"; a typed skill may contain commas.
     const ids =
-      kind === 'skill' || kind === 'option'
+      kind === 'skill' || kind === 'option' || kind === 'edge'
         ? (optionIds as string[])
         : (optionIds as string[]).flatMap((o) => o.split(','))
     if (kind === 'type' && ids.length !== owed.required - owed.chosen) {
@@ -636,6 +642,9 @@ export async function choosePicksAction(
       ) {
         return { ok: false, reason: 'invalid' }
       }
+    }
+    if (kind === 'edge' && (ids.length !== 1 || !isStat(ids[0]))) {
+      return { ok: false, reason: 'invalid' }
     }
     if (kind === 'skill') {
       // All of the grant's skills at once, each one a real skill.
@@ -656,9 +665,11 @@ export async function choosePicksAction(
     const picks =
       kind === 'skill'
         ? withSkillPick(character.tierPicks, skillKey as string, ids)
-        : kind === 'option'
-          ? withOptionPick(character.tierPicks, skillKey as string, ids)
-          : withPick(character.tierPicks, kind, tier, ids)
+        : kind === 'edge'
+          ? withEdgePick(character.tierPicks, skillKey as string, ids[0] as Stat)
+          : kind === 'option'
+            ? withOptionPick(character.tierPicks, skillKey as string, ids)
+            : withPick(character.tierPicks, kind, tier, ids)
     const input = buildCharacterChoicesInput(
       character.choices,
       {

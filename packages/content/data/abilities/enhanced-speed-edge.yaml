@@ -4,9 +4,13 @@ name:
   pt-BR: Margem de Velocidade Aprimorada
 description:
   en: You gain +1 to your Speed Edge.
-  pt-BR: Você ganha +1 no seu Bônus de Velocidade.
+  pt-BR: 'Você ganha +1 na sua Margem de Velocidade.'
 cost: null
 action_type: enabler
+edge_grant:
+  kind: fixed
+  stat: speed
+  amount: 1
 sources:
   - type: focus
     id: controls-gravity

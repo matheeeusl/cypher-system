@@ -12,14 +12,18 @@ export type SkillGrant = NonNullable<Ability['skill_grant']>
  */
 export type SkillGrantsByAbility = Record<string, SkillGrant>
 
-/** One time a skill-granting ability was gained, and so one set of skills to pick. */
-export interface SkillGrantInstance {
+/**
+ * One time a skill-granting ability was gained, and so one set of skills to
+ * pick. Generic in the grant so Edge grants (`edge.ts`) reuse the same
+ * collection and keys.
+ */
+export interface SkillGrantInstance<G = SkillGrant> {
   /** The `ability_skill_choices` key for this instance. */
   key: string
   ability_id: string
   kind: 'type' | 'focus'
   tier: number
-  grant: SkillGrant
+  grant: G
 }
 
 /** Prefix of a skill the player typed (`custom:chess`) instead of picking from the catalog. */
@@ -66,7 +70,7 @@ export function skillGrantKey(kind: 'type' | 'focus', tier: number, abilityId: s
  * Focus ability resolution has succeeded — it reads the same inputs those
  * validated, and doesn't re-validate them.
  */
-export function collectSkillGrantInstances(
+export function collectSkillGrantInstances<G = SkillGrant>(
   type: Pick<Type, 'special_ability_id'>,
   focus: Pick<Focus, 'tier_abilities'>,
   currentTier: number,
@@ -74,9 +78,9 @@ export function collectSkillGrantInstances(
     CharacterChoices,
     'tier_1_type_ability_ids' | 'type_ability_picks' | 'focus_choice_selections'
   >,
-  grants: SkillGrantsByAbility,
-): SkillGrantInstance[] {
-  const instances: SkillGrantInstance[] = []
+  grants: Record<string, G>,
+): SkillGrantInstance<G>[] {
+  const instances: SkillGrantInstance<G>[] = []
   const add = (kind: 'type' | 'focus', tier: number, ids: Iterable<string>) => {
     for (const ability_id of new Set(ids)) {
       const grant = grants[ability_id]

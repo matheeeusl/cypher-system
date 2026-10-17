@@ -100,6 +100,15 @@ export interface CharacterChoices {
   ability_choices?: Record<string, string[]>
 
   /**
+   * The Edge picked for each `choose_zero` Edge grant (Improved Edge: "Choose
+   * one of your Edge stats that is 0"), keyed like `ability_skill_choices`
+   * (`skillGrantKey(source kind, tier, ability id)`). The stat must be 0 when
+   * the ability is gained (see `deriveEdge`). A missing pick is reported in
+   * `pending_picks` rather than being an error.
+   */
+  ability_edge_choices?: Record<string, Stat>
+
+  /**
    * Options learned later for XP: choice ability id (Cantrips) -> the options
    * bought, in multiples of its `choice.learn.count`. Only available when the
    * character's flavor lists the ability. The XP itself is the caller's to
@@ -190,6 +199,14 @@ export type PendingPick =
       chosen: number
       /** Set when the ability can instead take this many picks (its `alternate` shape). */
       alternate_required?: number
+    }
+  /** The Edge still to choose for a `choose_zero` Edge grant gained at `tier`. */
+  | {
+      kind: 'edge'
+      tier: number
+      /** The `ability_edge_choices` key the pick belongs under. */
+      key: string
+      ability_id: string
     }
 
 export interface DerivedCharacter {

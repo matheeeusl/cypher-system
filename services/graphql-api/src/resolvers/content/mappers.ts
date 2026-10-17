@@ -202,6 +202,11 @@ export function mapAbility(a: WithVersion<Ability>) {
             : null,
         }
       : null,
+    edgeGrant: a.edge_grant
+      ? a.edge_grant.kind === 'fixed'
+        ? { kind: 'fixed', stat: a.edge_grant.stat, amount: a.edge_grant.amount }
+        : { kind: 'choose_zero', stat: null, amount: null }
+      : null,
     contentVersion: a.content_version,
   }
 }

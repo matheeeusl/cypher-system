@@ -181,3 +181,38 @@ describe('deriveCharacter (Warrior, end-to-end)', () => {
     })
   })
 })
+
+describe('deriveCharacter with Improved Edge', () => {
+  const choices: CharacterChoices = {
+    type_id: 'warrior',
+    descriptor_id: 'strong',
+    focus_id: 'wields-two-weapons-at-once',
+    starting_edge_choice: 'speed',
+    pool_point_allocation: { might: 2, speed: 2, intellect: 2 },
+    tier_1_type_ability_ids: ['bash', 'overwatch', 'swipe', 'improved-edge'],
+    focus_choice_selections: {},
+    descriptor_skill_choices: [],
+    advancement_purchases: [],
+  }
+  const content = {
+    type: warrior,
+    descriptor: strong,
+    focus: wieldsTwoWeapons,
+    edge_grants: { 'improved-edge': { kind: 'choose_zero' as const } },
+  }
+
+  it('raises the picked Edge, keyed like a tier-1 Type skill grant', () => {
+    const derived = deriveCharacter(
+      { ...choices, ability_edge_choices: { 'type:1:improved-edge': 'might' } },
+      content,
+    )
+    expect(derived.edge).toEqual({ might: 1, speed: 1, intellect: 0 })
+    expect(derived.pending_picks).toEqual([])
+  })
+
+  it('leaves the pick pending until it is made', () => {
+    expect(deriveCharacter(choices, content).pending_picks).toEqual([
+      { kind: 'edge', tier: 1, key: 'type:1:improved-edge', ability_id: 'improved-edge' },
+    ])
+  })
+})

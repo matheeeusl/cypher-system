@@ -19,9 +19,9 @@ import { terms } from '@/lib/i18n/terms'
 import type { InventoryItem, PlayData, PoolKey, PoolPoints } from '@/lib/play'
 
 export interface PendingChoice {
-  kind: 'type' | 'focus' | 'skill' | 'option'
+  kind: 'type' | 'focus' | 'skill' | 'option' | 'edge'
   tier: number
-  /** Only for kind 'skill' | 'option': the choice key to answer under, and the ability it comes from. */
+  /** Only for kind 'skill' | 'option' | 'edge': the choice key to answer under, and the ability it comes from. */
   skillKey: string | null
   abilityName: string | null
   required: number
@@ -351,6 +351,8 @@ function learnView(
   }
 }
 
+const EDGE_KEY = { MIGHT: 'might', SPEED: 'speed', INTELLECT: 'intellect' } as const
+
 function pendingChoices(
   bundle: DerivedBundle,
   character: SavedCharacter,
@@ -437,6 +439,31 @@ function pendingChoices(
               meta: '',
             }))
             .sort((a, b) => a.label.localeCompare(b.label, locale)),
+          alternateRequired: null,
+          allowCustom: false,
+        },
+      ]
+    }
+    if (pick.kind === 'edge') {
+      // Improved Edge: one Edge that was 0 when the ability was gained. Edge only
+      // goes up, so one at 0 now was 0 then; the engine checks the rest.
+      if (!pick.key || !pick.abilityId) return []
+      const stats = (['MIGHT', 'SPEED', 'INTELLECT'] as const).filter(
+        (stat) => derived.edge[EDGE_KEY[stat]] === 0,
+      )
+      return [
+        {
+          kind: 'edge' as const,
+          tier: pick.tier,
+          skillKey: pick.key,
+          abilityName: nameOf(pick.abilityId),
+          required: 1,
+          options: stats.map((stat) => ({
+            id: stat,
+            label: terms[locale].stats[stat],
+            description: '',
+            meta: '',
+          })),
           alternateRequired: null,
           allowCustom: false,
         },

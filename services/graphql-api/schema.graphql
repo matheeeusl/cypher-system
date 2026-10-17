@@ -276,6 +276,17 @@ type AbilityChoiceLearn {
   count: Int!
 }
 
+# Present on abilities that permanently raise an Edge. kind "fixed": +`amount`
+# to `stat` (Enhanced Might Edge). kind "choose_zero" (Improved Edge): the
+# player picks an Edge that is 0 when the ability is gained, and it becomes 1;
+# `stat` and `amount` are null. The pick is sent as AbilityEdgeChoiceInput under
+# the key a PendingPick of kind "edge" carries.
+type EdgeGrant {
+  kind: String!
+  stat: Stat
+  amount: Int
+}
+
 type SkillGrant {
   count: Int!
   # The player may type their own skill/area instead of picking from the
@@ -302,6 +313,7 @@ type Ability {
   attack: Boolean!
   skillGrant: SkillGrant
   choice: AbilityChoice
+  edgeGrant: EdgeGrant
   contentVersion: String!
 }
 
@@ -411,6 +423,14 @@ input AbilityChoiceInput {
   abilityIds: [ID!]!
 }
 
+# The Edge picked for an Improved Edge (EdgeGrant kind "choose_zero"). `key`
+# is "<type|focus>:<tier>:<abilityId>", the same format as
+# AbilitySkillChoiceInput.key.
+input AbilityEdgeChoiceInput {
+  key: String!
+  stat: Stat!
+}
+
 # A flavor gained in play instead of at creation (so flavorId must be unset), with
 # the exchanges of already-picked Type abilities for flavor ones: `tier` is the
 # tier of the pick, `replaces` the Type ability given up, `with` the flavor
@@ -482,6 +502,8 @@ input CharacterChoicesInput {
   abilitySkillChoices: [AbilitySkillChoiceInput!]! = []
   # Abilities picked for choice abilities (Blessing of the Gods, Cantrips).
   abilityChoices: [AbilityChoiceInput!]! = []
+  # Edges picked for Improved Edge.
+  abilityEdgeChoices: [AbilityEdgeChoiceInput!]! = []
   # Options learned later for XP (cantrips). The XP itself isn't tracked here.
   learnedOptions: [LearnedOptionInput!]! = []
   advancementPurchases: [AdvancementPurchaseInput!]!
@@ -541,13 +563,15 @@ type DerivedCharacterPayload {
 }
 
 type PendingPick {
-  # "type", "focus", "option" or "skill"
+  # "type", "focus", "option", "skill" or "edge" (one Edge to pick: required
+  # 1, chosen 0)
   kind: String!
   tier: Int!
   required: Int!
   chosen: Int!
-  # Only for kind "skill" or "option": the AbilitySkillChoiceInput.key (or
-  # AbilityChoiceInput.key) to answer it under, and the ability it belongs to.
+  # Only for kind "skill", "option" or "edge": the AbilitySkillChoiceInput.key
+  # (or AbilityChoiceInput.key, AbilityEdgeChoiceInput.key) to answer it under,
+  # and the ability it belongs to.
   key: String
   abilityId: ID
   # Only for kind "skill": the pick count of the ability's alternate shape.

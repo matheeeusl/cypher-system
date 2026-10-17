@@ -39,6 +39,8 @@ export interface WizardChoices {
   // Abilities picked for tier-1 choice abilities (Blessing of the Gods, Cantrips),
   // keyed like abilitySkillChoices (`type:1:<abilityId>`).
   abilityChoices: Record<string, string[]>
+  // The Edge picked for a tier-1 Improved Edge, keyed like abilitySkillChoices.
+  abilityEdgeChoices: Record<string, Stat>
   name: string
   background: string
 }
@@ -56,6 +58,7 @@ export const INITIAL_CHOICES: WizardChoices = {
   tier1TypeAbilityIds: [],
   abilitySkillChoices: {},
   abilityChoices: {},
+  abilityEdgeChoices: {},
   name: '',
   background: '',
 }

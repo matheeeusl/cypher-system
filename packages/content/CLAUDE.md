@@ -42,6 +42,10 @@ An ability with a `choice` (`{ options, count }`: Blessing of the Gods — two o
 
 `attack: true` marks the ~90 abilities that are themselves an attack (they make an attack roll or inflict damage: Bash, Bolts of Power, Spray…). The rulebook doesn't tag them, so the list was curated by hand from the action abilities whose text mentions attacks or damage. Buffs that only boost attacks (Fury, Deadly Aim), effects that restrain or summon, and enablers are left unflagged. It exists for the Skills advancement, which can only train an attack ability; if a legitimate attack is missing, add the flag to its yaml.
 
+### Abilities: `edge_grant`
+
+`edge_grant` marks the abilities that permanently raise an Edge: `{ kind: fixed, stat, amount }` (the three Enhanced <Stat> Edge abilities) or `{ kind: choose_zero }` (Improved Edge: the player picks a stat whose Edge is still 0 after the Type's starting Edge, and it becomes 1). Conditional boosts (Hidden Reserves, Incomparable Pilot, beast forms) stay prose. Golem Body's +1 Might Edge is permanent but left out for now, since its Armor and Pool bonus aren't structured either. `loader.test.ts` pins the exact set.
+
 ### Known gap: no cross-reference mechanism for shared rules terms
 
 Some prose fields mention a rules concept that doesn't have its own entity/page yet — e.g. "the damage track" (`data/cyphers/death-bringer.yaml`'s `effect_text`, and the Warrior's Weapon Break player intrusion in `data/types/warrior.yaml`). There's no glossary/Rules entity category and no link syntax inside `LocalizedString` fields, so these stay plain prose with an inline YAML comment flagging the pending cross-reference. Revisit once apps/docs has a Rules/glossary page to actually link to — don't invent link structure for a single recurring term in the meantime.
