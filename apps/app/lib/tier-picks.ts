@@ -192,13 +192,9 @@ export function withoutLearnedPurchase(
   const learned = Object.fromEntries(
     Object.entries({ ...picks.learned, [abilityId]: kept }).filter(([, ids]) => ids.length > 0),
   )
-  const rest = {
-    type: picks.type,
-    focus: picks.focus,
-    skills: picks.skills,
-    options: picks.options,
-    edges: picks.edges,
-  }
+  // Everything else (a flavor gained in play included) is kept as it was.
+  const rest = { ...picks }
+  delete rest.learned
   return Object.keys(learned).length > 0 ? { ...rest, learned } : rest
 }
 
