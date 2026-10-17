@@ -1,7 +1,9 @@
 import type { WizardDescriptor } from '@/lib/graphql/queries'
 
+import { DescriptorPoolChoicePicker, signedAmount } from './DescriptorPoolChoicePicker'
 import { useWizardI18n } from './i18n'
 import { SearchableEntityList } from './SearchableEntityList'
+import type { DescriptorPoolChoice } from './state'
 
 interface DescriptorStepProps {
   descriptors: WizardDescriptor[] | null
@@ -9,6 +11,8 @@ interface DescriptorStepProps {
   error: string | null
   selectedId: string | null
   onSelect: (id: string) => void
+  poolChoice: DescriptorPoolChoice | null
+  onPoolChoiceChange: (value: DescriptorPoolChoice) => void
 }
 
 export function DescriptorStep({
@@ -17,6 +21,8 @@ export function DescriptorStep({
   error,
   selectedId,
   onSelect,
+  poolChoice,
+  onPoolChoiceChange,
 }: DescriptorStepProps) {
   const { copy, terms, t } = useWizardI18n()
   if (loading) {
@@ -30,14 +36,22 @@ export function DescriptorStep({
   if (!descriptors) return null
 
   const selected = descriptors.find((d) => d.id === selectedId)
+  // The book's order: Standard first, then each genre group (by the page it
+  // starts on), alphabetical inside a group in the current language.
+  const sorted = [...descriptors].sort(
+    (a, b) => a.category.page - b.category.page || t(a.name).localeCompare(t(b.name)),
+  )
 
   return (
     <div>
       <SearchableEntityList
-        entities={descriptors}
+        entities={sorted}
         selectedId={selectedId}
         onSelect={onSelect}
         searchPlaceholder={copy.search.descriptors(descriptors.length)}
+        // "Catfolk — Fantasy Species": the genre shows (and is searchable) on
+        // genre descriptors; Standard ones show nothing.
+        getMeta={(d) => (d.category.id === 'standard' ? '' : t(d.category.name))}
       />
 
       {selected && (
@@ -57,9 +71,17 @@ export function DescriptorStep({
             <div className="text-accent mb-4 font-mono text-[12px]">
               {copy.descriptor.poolBonus}{' '}
               {selected.poolBonus
-                .map((bonus) => `+${bonus.amount} ${terms.stats[bonus.stat]}`)
+                .map((bonus) => `${signedAmount(bonus.amount)} ${terms.stats[bonus.stat]}`)
                 .join(', ')}
             </div>
+          )}
+
+          {selected.poolBonusChoice && (
+            <DescriptorPoolChoicePicker
+              choice={selected.poolBonusChoice}
+              value={poolChoice}
+              onChange={onPoolChoiceChange}
+            />
           )}
 
           {selected.characteristics.length > 0 && (

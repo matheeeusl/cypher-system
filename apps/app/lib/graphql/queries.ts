@@ -65,11 +65,25 @@ export const fetchTypes = cachedCatalog(async (): Promise<WizardType[]> => {
 
 // ---- Descriptor ----
 
+export interface DescriptorPoolBonus {
+  stat: Stat
+  amount: number
+}
+
+/** A Pool bonus the player decides: points to divide, or one of a few fixed options. */
+export type DescriptorPoolBonusChoice =
+  | { __typename: 'DescriptorPoolDivide'; points: number; stats: Stat[] }
+  | { __typename: 'DescriptorPoolOneOf'; options: DescriptorPoolBonus[][] }
+
 export interface WizardDescriptor {
   id: string
   name: LocalizedString
   description: LocalizedString
-  poolBonus: Array<{ stat: Stat; amount: number }>
+  /** `page` is where the group starts in the book, so sorting by it gives the book's order. */
+  category: { id: string; name: LocalizedString; page: number }
+  // Fixed bonuses, all applied (some are negative: Clumsy's −2 Speed).
+  poolBonus: DescriptorPoolBonus[]
+  poolBonusChoice: DescriptorPoolBonusChoice | null
   characteristics: Array<{ name: LocalizedString; description: LocalizedString }>
   // skillId is null when this entry is a "choose N skills" slot instead of a
   // specific named skill — see choiceCount.
@@ -83,7 +97,13 @@ const DESCRIPTORS_QUERY = `
       id
       name { en ptBR }
       description { en ptBR }
+      category { id name { en ptBR } page }
       poolBonus { stat amount }
+      poolBonusChoice {
+        __typename
+        ... on DescriptorPoolDivide { points stats }
+        ... on DescriptorPoolOneOf { options { stat amount } }
+      }
       characteristics { name { en ptBR } description { en ptBR } }
       skillTraining { skillId choiceCount }
       connectionOptions { en ptBR }
@@ -270,7 +290,8 @@ export interface CharacterChoicesInput {
   flavorId?: string
   startingEdgeChoice?: Stat
   poolPointAllocation: StatAllocationInput
-  descriptorPoolBonus?: { stat: Stat; amount: number }
+  /** The answer to the Descriptor's poolBonusChoice (@oneOf); only when it has one. */
+  descriptorPoolChoice?: { allocation: StatAllocationInput } | { optionIndex: number }
   tier1TypeAbilityIds: string[]
   focusChoiceSelections: Array<{ tier: number; abilityId: string }>
   typeAbilityPicks?: Array<{ tier: number; abilityId: string }>

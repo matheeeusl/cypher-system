@@ -32,6 +32,7 @@ import { BackgroundStep } from './BackgroundStep'
 import { DescriptorStep } from './DescriptorStep'
 import {
   buildCharacterChoicesInput,
+  descriptorPoolBonus,
   descriptorSkillChoicesNeeded,
   descriptorAutoTrainedSkillIds,
   focusTier1ChoiceEntries,
@@ -176,6 +177,7 @@ function WizardInner({
   const descriptors = useEntityList<WizardDescriptor>(
     fetchDescriptors,
     step.id === 'descriptor' ||
+      step.id === 'pools' || // the Descriptor's bonus is part of the breakdown
       step.id === 'skills' ||
       step.id === 'abilities' ||
       step.id === 'review',
@@ -505,7 +507,11 @@ function WizardInner({
               loading={!descriptors.data && !descriptors.error}
               error={descriptors.error}
               selectedId={choices.descriptorId}
-              onSelect={(id) => update({ descriptorId: id, descriptorSkillChoices: [] })}
+              onSelect={(id) =>
+                update({ descriptorId: id, descriptorSkillChoices: [], descriptorPoolChoice: null })
+              }
+              poolChoice={choices.descriptorPoolChoice}
+              onPoolChoiceChange={(descriptorPoolChoice) => update({ descriptorPoolChoice })}
             />
           )}
           {step.id === 'focus' && (
@@ -520,6 +526,10 @@ function WizardInner({
           {step.id === 'pools' && (
             <PoolsStep
               type={selectedType}
+              descriptorBonus={descriptorPoolBonus(
+                selectedDescriptor,
+                choices.descriptorPoolChoice,
+              )}
               allocation={choices.poolAllocation}
               onChange={(poolAllocation) => update({ poolAllocation })}
             />

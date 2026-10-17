@@ -6,11 +6,20 @@ export interface PoolAllocation {
   intellect: number
 }
 
+/**
+ * The answer to the Descriptor's Pool bonus choice, in the API's shape:
+ * points divided among the offered stats (Hideous, Sensational…), or the
+ * index of the option picked (Sylph, Rusted).
+ */
+export type DescriptorPoolChoice = { allocation: PoolAllocation } | { optionIndex: number }
+
 export interface WizardChoices {
   typeId: string | null
   startingEdgeChoice: Stat | null
   descriptorId: string | null
   descriptorSkillChoices: string[]
+  // Only for a Descriptor with a Pool bonus choice; reset when the Descriptor changes.
+  descriptorPoolChoice: DescriptorPoolChoice | null
   focusId: string | null
   // Optional. Its abilities join the pool the tier-1 Type abilities are picked
   // from (the picks themselves stay in `tier1TypeAbilityIds`).
@@ -39,6 +48,7 @@ export const INITIAL_CHOICES: WizardChoices = {
   startingEdgeChoice: null,
   descriptorId: null,
   descriptorSkillChoices: [],
+  descriptorPoolChoice: null,
   focusId: null,
   flavorId: null,
   focusChoiceSelections: [],

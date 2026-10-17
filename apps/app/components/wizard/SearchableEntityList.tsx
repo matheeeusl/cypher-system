@@ -16,6 +16,7 @@ interface SearchableEntityListProps<T extends EntityLike> {
   selectedId: string | null
   onSelect: (id: string) => void
   searchPlaceholder: string
+  /** A short tag shown on the right of each row; the search matches it too. */
   getMeta?: (entity: T) => string
 }
 
@@ -28,8 +29,11 @@ export function SearchableEntityList<T extends EntityLike>({
 }: SearchableEntityListProps<T>) {
   const { copy, t } = useWizardI18n()
   const [query, setQuery] = useState('')
-  const filtered = entities.filter((entity) =>
-    t(entity.name).toLowerCase().includes(query.trim().toLowerCase()),
+  const needle = query.trim().toLowerCase()
+  const filtered = entities.filter(
+    (entity) =>
+      t(entity.name).toLowerCase().includes(needle) ||
+      (getMeta?.(entity).toLowerCase().includes(needle) ?? false),
   )
 
   return (
@@ -59,7 +63,7 @@ export function SearchableEntityList<T extends EntityLike>({
               }`}
             >
               <span className="text-text text-[14px] font-medium">{t(entity.name)}</span>
-              {getMeta && (
+              {getMeta?.(entity) && (
                 <span className="text-text-muted shrink-0 font-mono text-[11px]">
                   {getMeta(entity)}
                 </span>

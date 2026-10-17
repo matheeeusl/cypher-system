@@ -1,4 +1,5 @@
 import type {
+  Stat,
   WizardAbility,
   WizardDescriptor,
   WizardFlavor,
@@ -13,13 +14,20 @@ import { customSkillText, isCustomSkill } from '@/lib/custom-skill'
 
 import {
   descriptorAutoTrainedSkillIds,
+  descriptorPoolBonus,
   focusTier1ChoiceEntries,
   focusTier1GrantedIds,
   tier1ChoiceSlots,
   tier1SkillGrantSlots,
 } from './derive'
 import { useWizardI18n } from './i18n'
-import type { StepId, WizardChoices } from './state'
+import type { PoolAllocation, StepId, WizardChoices } from './state'
+
+const POOL_STAT: Record<keyof PoolAllocation, Stat> = {
+  might: 'MIGHT',
+  speed: 'SPEED',
+  intellect: 'INTELLECT',
+}
 
 interface ReviewStepProps {
   choices: WizardChoices
@@ -43,6 +51,7 @@ export function ReviewStep({
   onEdit,
 }: ReviewStepProps) {
   const { copy, terms, t } = useWizardI18n()
+  const fromDescriptor = descriptorPoolBonus(descriptor, choices.descriptorPoolChoice)
   const skillName = (id: string) => {
     if (isCustomSkill(id)) return customSkillText(id)
     const skill = skills?.find((s) => s.id === id)
@@ -106,12 +115,16 @@ export function ReviewStep({
       : []),
     {
       key: 'pools',
+      // Type base + the 6 points + the Descriptor (fixed bonuses and choice).
       value: type
-        ? `${terms.stats.MIGHT} ${type.startingPools.might + choices.poolAllocation.might} · ${
-            terms.stats.SPEED
-          } ${type.startingPools.speed + choices.poolAllocation.speed} · ${terms.stats.INTELLECT} ${
-            type.startingPools.intellect + choices.poolAllocation.intellect
-          }`
+        ? (['might', 'speed', 'intellect'] as const)
+            .map(
+              (key) =>
+                `${terms.stats[POOL_STAT[key]]} ${
+                  type.startingPools[key] + choices.poolAllocation[key] + fromDescriptor[key]
+                }`,
+            )
+            .join(' · ')
         : '—',
       stepId: 'pools',
     },

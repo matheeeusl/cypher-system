@@ -6,6 +6,8 @@ import { POOL_POINTS_TOTAL, type PoolAllocation } from './state'
 interface PoolsStepProps {
   type: WizardType | undefined
   allocation: PoolAllocation
+  /** What the Descriptor adds to each Pool (fixed bonuses plus the player's choice). */
+  descriptorBonus: PoolAllocation
   onChange: (allocation: PoolAllocation) => void
 }
 
@@ -15,7 +17,7 @@ const POOLS: Array<{ key: keyof PoolAllocation; stat: Stat }> = [
   { key: 'intellect', stat: 'INTELLECT' },
 ]
 
-export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
+export function PoolsStep({ type, allocation, descriptorBonus, onChange }: PoolsStepProps) {
   const { copy, terms } = useWizardI18n()
   if (!type) return <p className="text-text-muted text-sm">{copy.chooseTypeFirst}</p>
 
@@ -52,7 +54,12 @@ export function PoolsStep({ type, allocation, onChange }: PoolsStepProps) {
                 {terms.stats[stat]}
               </div>
               <div className="text-text-muted font-mono text-[12px]">
-                {copy.pools.breakdown(base, allocation[key], base + allocation[key])}
+                {copy.pools.breakdown(
+                  base,
+                  allocation[key],
+                  descriptorBonus[key],
+                  base + allocation[key] + descriptorBonus[key],
+                )}
               </div>
             </div>
             <div className="flex items-center gap-2.5">

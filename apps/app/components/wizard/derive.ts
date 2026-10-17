@@ -7,6 +7,7 @@ import type {
   WizardFlavor,
   WizardFocus,
   WizardType,
+  Stat,
 } from '@/lib/graphql/queries'
 
 import type { WizardCopy } from '@/lib/i18n/wizard'
@@ -16,6 +17,8 @@ import {
   POOL_POINTS_TOTAL,
   STEPS,
   TIER1_TYPE_ABILITY_COUNT,
+  type DescriptorPoolChoice,
+  type PoolAllocation,
   type StepId,
   type WizardChoices,
 } from './state'
@@ -147,6 +150,80 @@ export function tier1ChoiceSlots(choices: WizardChoices, content: WizardContent)
   })
 }
 
+const POOL_KEY: Record<Stat, keyof PoolAllocation> = {
+  MIGHT: 'might',
+  SPEED: 'speed',
+  INTELLECT: 'intellect',
+}
+
+/**
+ * The player's answer if it fits the Descriptor's choice (an allocation for
+ * points to divide, an index for one-of), else null — an answer left over from
+ * another Descriptor would be rejected by the API as unexpected.
+ */
+export function currentPoolChoice(
+  descriptor: WizardDescriptor | undefined,
+  choice: DescriptorPoolChoice | null,
+): DescriptorPoolChoice | null {
+  const kind = descriptor?.poolBonusChoice?.__typename
+  if (!choice || !kind) return null
+  if (kind === 'DescriptorPoolDivide') return 'allocation' in choice ? choice : null
+  return 'optionIndex' in choice ? choice : null
+}
+
+/**
+ * Whether the Descriptor's Pool bonus choice is fully answered (true when it
+ * has none). Same rules as @cypher/engine's resolveDescriptorPoolChoice:
+ * divide exactly the points, only among the offered stats; or pick an option
+ * that exists.
+ */
+export function descriptorPoolChoiceComplete(
+  descriptor: WizardDescriptor | undefined,
+  choice: DescriptorPoolChoice | null,
+): boolean {
+  const offered = descriptor?.poolBonusChoice
+  if (!offered) return true
+  const answer = currentPoolChoice(descriptor, choice)
+  if (!answer) return false
+  if (offered.__typename === 'DescriptorPoolOneOf') {
+    return (
+      'optionIndex' in answer &&
+      answer.optionIndex >= 0 &&
+      answer.optionIndex < offered.options.length
+    )
+  }
+  if (!('allocation' in answer)) return false
+  const allowed = new Set(offered.stats.map((stat) => POOL_KEY[stat]))
+  const entries = Object.entries(answer.allocation) as Array<[keyof PoolAllocation, number]>
+  return (
+    entries.every(([key, points]) => points >= 0 && (points === 0 || allowed.has(key))) &&
+    entries.reduce((sum, [, points]) => sum + points, 0) === offered.points
+  )
+}
+
+/**
+ * Points the Descriptor adds to each Pool: every fixed bonus, plus the
+ * player's choice (as far as it goes, so the preview moves while they divide).
+ */
+export function descriptorPoolBonus(
+  descriptor: WizardDescriptor | undefined,
+  choice: DescriptorPoolChoice | null,
+): PoolAllocation {
+  const total: PoolAllocation = { might: 0, speed: 0, intellect: 0 }
+  if (!descriptor) return total
+  for (const bonus of descriptor.poolBonus) total[POOL_KEY[bonus.stat]] += bonus.amount
+  const answer = currentPoolChoice(descriptor, choice)
+  const offered = descriptor.poolBonusChoice
+  if (answer && 'allocation' in answer) {
+    for (const key of ['might', 'speed', 'intellect'] as const) total[key] += answer.allocation[key]
+  } else if (answer && offered?.__typename === 'DescriptorPoolOneOf') {
+    for (const bonus of offered.options[answer.optionIndex] ?? []) {
+      total[POOL_KEY[bonus.stat]] += bonus.amount
+    }
+  }
+  return total
+}
+
 /** Sum of a Descriptor's skill_training choice_count entries — the number of
  * skills the player must pick beyond whatever's auto-granted. */
 export function descriptorSkillChoicesNeeded(descriptor: WizardDescriptor | undefined): number {
@@ -207,7 +284,10 @@ export function isStepValid(
       return !needsEdgeChoice || choices.startingEdgeChoice !== null
     }
     case 'descriptor':
-      return choices.descriptorId !== null
+      return (
+        choices.descriptorId !== null &&
+        descriptorPoolChoiceComplete(content.descriptor, choices.descriptorPoolChoice)
+      )
     case 'focus':
       // Focus-choice selections (e.g. Channels Divine Blessings' pick-2-of-13)
       // are picked on the Abilities step, not here — this step only gates on
@@ -266,6 +346,7 @@ export function furthestReachableStep(choices: WizardChoices, content: WizardCon
  */
 export function issueStepId(code: string): StepId {
   if (code.startsWith('STARTING_EDGE_')) return 'type'
+  if (code.startsWith('DESCRIPTOR_POOL_CHOICE_')) return 'descriptor'
   if (code.startsWith('POOL_')) return 'pools'
   if (code.startsWith('SKILL_')) return 'skills'
   if (
@@ -306,7 +387,8 @@ export function stepErrorMessage(
       return ''
     }
     case 'descriptor':
-      return copy.selectDescriptor
+      if (!choices.descriptorId) return copy.selectDescriptor
+      return copy.descriptorPoolChoice
     case 'focus':
       return copy.selectFocus
     case 'pools': {
@@ -370,7 +452,6 @@ export function buildCharacterChoicesInput(
   const flavorId = flavorIdInUse(choices, tierPicks)
   if (flavorId !== null && content.flavor?.id !== flavorId) return null
 
-  const poolBonus = descriptor.poolBonus[0]
   const choiceEntries = focusTier1ChoiceEntries(focus)
 
   // Only tier-1 choices for abilities the character still has are sent — a
@@ -394,6 +475,8 @@ export function buildCharacterChoicesInput(
     ...Object.entries(tierPicks.options ?? {}).map(([key, abilityIds]) => ({ key, abilityIds })),
   ]
 
+  const descriptorPoolChoice = currentPoolChoice(descriptor, choices.descriptorPoolChoice)
+
   const learnedOptions = Object.entries(tierPicks.learned ?? {}).map(([abilityId, optionIds]) => ({
     abilityId,
     optionIds,
@@ -405,10 +488,10 @@ export function buildCharacterChoicesInput(
     focusId: choices.focusId,
     ...(choices.flavorId ? { flavorId: choices.flavorId } : {}),
     ...(choices.startingEdgeChoice ? { startingEdgeChoice: choices.startingEdgeChoice } : {}),
+    // The fixed Descriptor Pool bonuses aren't sent: graphql-api applies them
+    // from content. Only the player's answer to a choice is.
     poolPointAllocation: choices.poolAllocation,
-    ...(poolBonus
-      ? { descriptorPoolBonus: { stat: poolBonus.stat, amount: poolBonus.amount } }
-      : {}),
+    ...(descriptorPoolChoice ? { descriptorPoolChoice } : {}),
     tier1TypeAbilityIds: choices.tier1TypeAbilityIds,
     // One {tier, abilityId} pair per individual ability id — a selected
     // bundled-pair option contributes two pairs, both at the same tier; the

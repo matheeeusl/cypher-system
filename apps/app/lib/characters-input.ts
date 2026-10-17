@@ -1,5 +1,9 @@
 import { isSkillIdShape } from '@/lib/custom-skill'
-import { INITIAL_CHOICES, type WizardChoices } from '@/components/wizard/state'
+import {
+  INITIAL_CHOICES,
+  type DescriptorPoolChoice,
+  type WizardChoices,
+} from '@/components/wizard/state'
 
 export const NAME_MAX = 80
 export const BACKGROUND_MAX = 5000
@@ -42,6 +46,26 @@ function parseAbilityChoices(raw: unknown): Record<string, string[]> | null {
 }
 
 /**
+ * The Descriptor Pool bonus choice: `{ allocation }` or `{ optionIndex }`.
+ * Whether it fits the Descriptor is checked later (isStepValid, the API).
+ * Returns undefined when the shape is wrong.
+ */
+function parsePoolChoice(raw: unknown): DescriptorPoolChoice | null | undefined {
+  if (raw === undefined || raw === null) return null // saved before this existed, or none
+  if (typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const keys = Object.keys(r)
+  if (keys.length !== 1) return undefined
+  if (keys[0] === 'optionIndex')
+    return isCount(r.optionIndex) ? { optionIndex: r.optionIndex } : undefined
+  if (keys[0] !== 'allocation') return undefined
+  const a = r.allocation as Record<string, unknown> | null
+  if (typeof a !== 'object' || a === null) return undefined
+  if (!isCount(a.might) || !isCount(a.speed) || !isCount(a.intellect)) return undefined
+  return { allocation: { might: a.might, speed: a.speed, intellect: a.intellect } }
+}
+
+/**
  * Rebuilds a WizardChoices from known fields only, checking just the shape —
  * a half-finished wizard (empty name, no Type yet) is fine. Used both for
  * untrusted server-action input and for restoring a browser-side draft.
@@ -56,6 +80,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
   const flavorId = r.flavorId === undefined ? null : r.flavorId
   const abilitySkillChoices = parseSkillChoices(r.abilitySkillChoices)
   const abilityChoices = parseAbilityChoices(r.abilityChoices)
+  const descriptorPoolChoice = parsePoolChoice(r.descriptorPoolChoice)
 
   if (
     !isNullableString(r.typeId) ||
@@ -75,6 +100,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     !isCount(pool.intellect) ||
     !abilitySkillChoices ||
     !abilityChoices ||
+    descriptorPoolChoice === undefined ||
     !isString(r.name) ||
     !isString(r.background)
   ) {
@@ -87,6 +113,7 @@ export function parseWizardState(raw: unknown): WizardChoices | null {
     startingEdgeChoice: edge,
     descriptorId: r.descriptorId,
     descriptorSkillChoices: r.descriptorSkillChoices,
+    descriptorPoolChoice,
     focusId: r.focusId,
     flavorId,
     focusChoiceSelections: r.focusChoiceSelections as number[][],

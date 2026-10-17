@@ -1,6 +1,7 @@
 import type { StepId } from '@/components/wizard/state'
 import type { ValidationIssueData } from '@/lib/graphql/queries'
 import type { Locale } from '@/lib/i18n/auth'
+import { terms } from '@/lib/i18n/terms'
 
 // Game terms used by several screens live in lib/i18n/terms.ts. Terms marked
 // UNCONFIRMED have no entry in the project glossary
@@ -57,11 +58,26 @@ export interface WizardCopy {
   }
 
   type: { startingEdge: string }
-  descriptor: { tag: string; poolBonus: string; startingLink: string }
+  descriptor: {
+    tag: string
+    poolBonus: string
+    startingLink: string
+    /** The Pool bonus the player decides (Hideous, Sylph…). */
+    poolChoice: {
+      title: string
+      divide: (points: number) => string
+      oneOf: string
+      remaining: string
+    }
+  }
   focus: { tag: string; grants: (count: number) => string }
   /** Label of the link from an entity to its page in the rules reference. */
   viewInReference: string
-  pools: { remaining: string; breakdown: (base: number, added: number, total: number) => string }
+  pools: {
+    remaining: string
+    /** `descriptor` is what the Descriptor adds (may be negative or 0). */
+    breakdown: (base: number, added: number, descriptor: number, total: number) => string
+  }
   skills: {
     autoTrained: (descriptorName: string) => string
     selected: (count: number, needed: number) => string
@@ -118,6 +134,7 @@ export interface WizardCopy {
     selectType: string
     chooseEdge: string
     selectDescriptor: string
+    descriptorPoolChoice: string
     selectFocus: string
     overspent: (by: number) => string
     allocateAll: string
@@ -134,6 +151,20 @@ export interface WizardCopy {
 
 function param(issue: ValidationIssueData, key: string): string {
   return issue.params.find((p) => p.key === key)?.value ?? ''
+}
+
+// The engine reports a stat in issue params as 'might'/'speed'/'intellect'.
+function statName(locale: Locale, issue: ValidationIssueData): string {
+  const stat = param(issue, 'stat').toUpperCase()
+  return stat === 'MIGHT' || stat === 'SPEED' || stat === 'INTELLECT'
+    ? terms[locale].stats[stat]
+    : param(issue, 'stat')
+}
+
+/** " + 4 descriptor", " − 2 descriptor" (Clumsy), or nothing when it adds 0. */
+function descriptorTerm(points: number, label: string): string {
+  if (points === 0) return ''
+  return points < 0 ? ` − ${-points} ${label}` : ` + ${points} ${label}`
 }
 
 const en: WizardCopy = {
@@ -211,6 +242,13 @@ const en: WizardCopy = {
     tag: 'Descriptor',
     poolBonus: 'Pool bonus:',
     startingLink: 'Initial Link to the Starting Adventure',
+    poolChoice: {
+      title: 'Pool bonus: your choice',
+      divide: (points) =>
+        `Divide ${points} ${points === 1 ? 'point' : 'points'} among these Pools.`,
+      oneOf: 'Pick one:',
+      remaining: 'Points left',
+    },
   },
   viewInReference: 'View in the reference',
   focus: {
@@ -220,7 +258,8 @@ const en: WizardCopy = {
   },
   pools: {
     remaining: 'Points remaining',
-    breakdown: (base, added, total) => `${base} base + ${added} = ${total}`,
+    breakdown: (base, added, descriptor, total) =>
+      `${base} base + ${added}${descriptorTerm(descriptor, 'descriptor')} = ${total}`,
   },
   skills: {
     autoTrained: (name) => `Trained automatically by ${name}`,
@@ -290,6 +329,7 @@ const en: WizardCopy = {
     selectType: 'Select a Type to continue.',
     chooseEdge: 'Choose which stat gets your starting Edge.',
     selectDescriptor: 'Select a Descriptor to continue.',
+    descriptorPoolChoice: "Finish your Descriptor's Pool bonus choice to continue.",
     selectFocus: 'Select a Focus to continue.',
     overspent: (by) => `You've overspent your pool points by ${by}.`,
     allocateAll: 'Allocate all remaining points before continuing.',
@@ -318,6 +358,18 @@ const en: WizardCopy = {
         return 'Pool points must be whole numbers, zero or more.'
       case 'POOL_ALLOCATION_SUM':
         return `Pool points must add up to exactly ${param(issue, 'expected')} (currently ${param(issue, 'actual')}).`
+      case 'DESCRIPTOR_POOL_CHOICE_REQUIRED':
+        return param(issue, 'kind') === 'divide'
+          ? 'Divide your Descriptor’s extra Pool points.'
+          : 'Choose which Pool bonus your Descriptor gives.'
+      case 'DESCRIPTOR_POOL_CHOICE_UNEXPECTED':
+        return 'This Descriptor has no Pool bonus to choose.'
+      case 'DESCRIPTOR_POOL_CHOICE_STAT':
+        return `Your Descriptor’s extra points can’t go to ${statName('en', issue)}.`
+      case 'DESCRIPTOR_POOL_CHOICE_SUM':
+        return `Your Descriptor’s extra points must add up to exactly ${param(issue, 'expected')} (currently ${param(issue, 'actual')}).`
+      case 'DESCRIPTOR_POOL_CHOICE_OPTION':
+        return 'Choose one of your Descriptor’s Pool bonus options.'
       case 'SKILL_CHOICE_COUNT':
         return `Choose exactly ${param(issue, 'required')} trained skills.`
       case 'SKILL_CHOICE_DUPLICATE':
@@ -448,6 +500,13 @@ const ptBr: WizardCopy = {
     tag: 'Descritor',
     poolBonus: 'Bônus de Reserva:', // UNCONFIRMED
     startingLink: 'Vínculo inicial com a aventura inicial', // UNCONFIRMED
+    poolChoice: {
+      title: 'Bônus de Reserva: à sua escolha',
+      divide: (points) =>
+        `Divida ${points} ${points === 1 ? 'ponto' : 'pontos'} entre estas Reservas.`,
+      oneOf: 'Escolha uma opção:',
+      remaining: 'Pontos restantes',
+    },
   },
   viewInReference: 'Ver na referência',
   focus: {
@@ -457,7 +516,8 @@ const ptBr: WizardCopy = {
   },
   pools: {
     remaining: 'Pontos restantes',
-    breakdown: (base, added, total) => `${base} base + ${added} = ${total}`,
+    breakdown: (base, added, descriptor, total) =>
+      `${base} base + ${added}${descriptorTerm(descriptor, 'do descritor')} = ${total}`,
   },
   skills: {
     autoTrained: (name) => `Treinadas automaticamente por ${name}`,
@@ -527,6 +587,7 @@ const ptBr: WizardCopy = {
     selectType: 'Selecione um Tipo para continuar.',
     chooseEdge: 'Escolha qual atributo recebe a Margem inicial.',
     selectDescriptor: 'Selecione um Descritor para continuar.',
+    descriptorPoolChoice: 'Termine a escolha do bônus de Reserva do Descritor para continuar.',
     selectFocus: 'Selecione um Foco para continuar.',
     overspent: (by) => `Você gastou ${by} ${by === 1 ? 'ponto' : 'pontos'} de Reserva a mais.`,
     allocateAll: 'Distribua todos os pontos restantes antes de continuar.',
@@ -556,6 +617,18 @@ const ptBr: WizardCopy = {
         return 'Os pontos de Reserva devem ser números inteiros, zero ou mais.'
       case 'POOL_ALLOCATION_SUM':
         return `Os pontos de Reserva devem somar exatamente ${param(issue, 'expected')} (soma atual: ${param(issue, 'actual')}).`
+      case 'DESCRIPTOR_POOL_CHOICE_REQUIRED':
+        return param(issue, 'kind') === 'divide'
+          ? 'Distribua os pontos extras de Reserva do seu Descritor.'
+          : 'Escolha qual bônus de Reserva o seu Descritor concede.'
+      case 'DESCRIPTOR_POOL_CHOICE_UNEXPECTED':
+        return 'Este Descritor não tem bônus de Reserva para escolher.'
+      case 'DESCRIPTOR_POOL_CHOICE_STAT':
+        return `Os pontos extras do seu Descritor não podem ir para ${statName('pt-br', issue)}.`
+      case 'DESCRIPTOR_POOL_CHOICE_SUM':
+        return `Os pontos extras do seu Descritor devem somar exatamente ${param(issue, 'expected')} (soma atual: ${param(issue, 'actual')}).`
+      case 'DESCRIPTOR_POOL_CHOICE_OPTION':
+        return 'Escolha uma das opções de bônus de Reserva do seu Descritor.'
       case 'SKILL_CHOICE_COUNT':
         return `Escolha exatamente ${param(issue, 'required')} perícias treinadas.`
       case 'SKILL_CHOICE_DUPLICATE':
