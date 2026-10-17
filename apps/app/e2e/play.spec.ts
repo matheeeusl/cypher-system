@@ -462,6 +462,57 @@ test('Log: the newest advancement can be undone and its XP comes back', async ({
   await expect(page.getByRole('button', { name: /^Falconry/ })).toHaveCount(0)
 })
 
+test('advancement: an Other option takes a step’s place; undoing it refunds it', async ({
+  page,
+}) => {
+  await page.goto(playUrl)
+  await addXp(page, 8, 'Other options')
+  await tab(page, 'Status').click()
+
+  // Tier 3: the recovery roll is 1d6 + 3 until the +2 Other option
+  await expect(page.getByText('Recovery roll 1d6 + 3')).toBeVisible()
+  const other = page.getByRole('listitem').filter({ hasText: 'Other option' })
+  await other.getByRole('button', { name: 'Choose…' }).click()
+  await page.getByRole('button', { name: /^Recovery — \+2/ }).click()
+  await expect(page.getByText('Recovery roll 1d6 + 5')).toBeVisible()
+  await expect(page.getByText('1 / 4 steps')).toBeVisible()
+  // One a tier: the row is done
+  await expect(other).toContainText('Purchased')
+  await expect(other.getByRole('button')).toHaveCount(0)
+  await settled(page)
+
+  // Undo it from the history: the XP comes back and the bonus goes
+  await tab(page, 'XP Log').click()
+  const history = page.locator('section').filter({ hasText: 'Advancement history' })
+  await history.getByRole('button', { name: 'Undo' }).first().click()
+  const dialog = page.getByRole('dialog')
+  await expect(dialog).toContainText('Recovery')
+  await dialog.getByRole('button', { name: 'Undo advancement' }).click()
+  await expect(dialog).toBeHidden()
+  await tab(page, 'Status').click()
+  await expect(page.getByText('Recovery roll 1d6 + 3')).toBeVisible()
+
+  // Another Type ability, credited to the advancement
+  await other.getByRole('button', { name: 'Choose…' }).click()
+  await page.getByRole('button', { name: /^Type ability — / }).click()
+  await expect(page.getByPlaceholder('Search your Type’s abilities')).toBeVisible()
+  const first = page.getByRole('button', { name: / — tier [1-3]/ }).first()
+  const name = ((await first.textContent()) ?? '').split(' — ')[0]!
+  await first.click()
+  await expect(page.getByText('1 / 4 steps')).toBeVisible()
+  await completeSkillPicks(page)
+  await settled(page)
+
+  await tab(page, 'Skills').click()
+  // (A repeatable ability, like Physical Skills, may be listed twice: once per source.)
+  await expect(
+    page
+      .getByRole('listitem')
+      .filter({ hasText: name })
+      .filter({ hasText: 'Advancement (tier 4)' }),
+  ).toHaveCount(1)
+})
+
 test('cleanup', async ({ page }) => {
   await deleteCharacter(page, NAME)
 })

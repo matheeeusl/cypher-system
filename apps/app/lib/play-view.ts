@@ -70,6 +70,14 @@ export interface FlavorGainView {
   } | null
 }
 
+/** The abilities an Other Option can take now (the purchase is bought at the current tier). */
+export interface OtherOptionsView {
+  /** Type (and flavor) abilities of the current tier or lower, not known yet (repeatable ones are). */
+  typeAbilities: Array<{ id: string; name: string; tier: number; flavor: string | null }>
+  /** Unchosen options of Focus choices already made, at the current tier or lower. */
+  focusOptions: Array<{ ids: string[]; name: string; tier: number }>
+}
+
 /** Everything the play screen needs, already localized and JSON-serializable. */
 export interface PlayView {
   characterId: string
@@ -77,6 +85,9 @@ export interface PlayView {
   headline: string
   tier: number
   effort: number
+  /** 1d6 + this: the tier plus the Other Option bonus. */
+  recoveryRollBonus: number
+  armorSpeedCostReduction: number
   pools: Array<{ key: PoolKey; name: string; edge: number; max: number }>
   spent: PoolPoints
   skills: Array<{ name: string; level: string; description: string | null; custom: boolean }>
@@ -96,6 +107,8 @@ export interface PlayView {
     bought: AdvancementKey[]
     /** Already at the highest tier: nothing left to buy. */
     nextIsBlocked: boolean
+    /** What the Other Option row offers this tier. */
+    other: OtherOptionsView
   }
   /** Purchases made so far, in order; `revertable` ones can be undone. */
   purchases: Array<{ index: number; tier: number; label: string; revertable: boolean }>
@@ -143,6 +156,8 @@ export async function buildPlayView(
     ].join(' · '),
     tier: derived.tier,
     effort: derived.effort,
+    recoveryRollBonus: derived.tier + derived.recoveryRollBonus,
+    armorSpeedCostReduction: derived.armorSpeedCostReduction,
     pools: POOLS.map(({ key, stat }) => ({
       key,
       name: t.stats[stat],
@@ -169,6 +184,7 @@ export async function buildPlayView(
       tier: derived.tier,
       bought: [...bought],
       nextIsBlocked: atMaxTier(derived.tier, rules.maxTier),
+      other: otherOptionsView(bundle, locale),
     },
     purchases: character.advancement.map((p, index) => ({
       index,
@@ -349,6 +365,51 @@ function learnView(
       names: bought.slice(index * count, (index + 1) * count).map(nameOf),
     })),
   }
+}
+
+function otherOptionsView(bundle: DerivedBundle, locale: Locale): OtherOptionsView {
+  const { derived, type, focus, flavor, abilities } = bundle
+  const nameOf = (id: string) => {
+    const a = abilities.find((x) => x.id === id)
+    return a ? loc(a.name, locale) : id
+  }
+  const known = new Set(derived.knownAbilities.map((k) => k.abilityId))
+  // Abilities that may be taken again ("select this ability multiple times").
+  const repeatable = (id: string) => !!abilities.find((a) => a.id === id)?.skillGrant?.repeatable
+  const flavorName = flavor ? loc(flavor.name, locale) : null
+
+  const listed = new Set<string>()
+  const typeAbilities = [
+    ...type.tierAbilities.map((g) => ({ ...g, flavor: null })),
+    ...(flavor?.tierAbilities ?? []).map((g) => ({ ...g, flavor: flavorName })),
+  ]
+    .filter((g) => g.tier <= derived.tier)
+    .sort((a, b) => a.tier - b.tier)
+    .flatMap((g) =>
+      g.abilityIds
+        .filter((id) => (!known.has(id) || repeatable(id)) && !listed.has(id) && !!listed.add(id))
+        .map((id) => ({ id, name: nameOf(id), tier: g.tier, flavor: g.flavor })),
+    )
+
+  // A Focus choice counts as made once one of its options is known from the Focus.
+  const fromFocus = new Set(
+    derived.knownAbilities
+      .filter((k) => k.source.__typename === 'FocusAbilitySource')
+      .map((k) => k.abilityId),
+  )
+  const focusOptions = focus.tierAbilities
+    .filter((g) => g.tier <= derived.tier)
+    .flatMap((g) =>
+      g.entries.flatMap((entry) => {
+        if (entry.__typename !== 'ChoiceAbility') return []
+        if (!entry.options.some((ids) => ids.some((id) => fromFocus.has(id)))) return []
+        return entry.options
+          .filter((ids) => ids.every((id) => !known.has(id)))
+          .map((ids) => ({ ids, name: ids.map(nameOf).join(' + '), tier: g.tier }))
+      }),
+    )
+
+  return { typeAbilities, focusOptions }
 }
 
 const EDGE_KEY = { MIGHT: 'might', SPEED: 'speed', INTELLECT: 'intellect' } as const

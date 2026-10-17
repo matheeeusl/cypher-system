@@ -13,6 +13,12 @@ export interface SheetCopy {
   fromType: string
   fromFocus: string
   fromFlavor: string
+  /** Bought as an Other Option, by the purchase tagged `tier`. */
+  fromAdvancement: (tier: number) => string
+  /** Quick stat: 1d6 + tier + the Other Option bonus. */
+  recoveryRoll: string
+  /** Quick stat, only once an Other Option reduced it. */
+  armorSpeedCost: string
   /** Marks an ability the character trained with the Skills advancement. */
   abilityTrained: string
   exportPdf: string
@@ -43,6 +49,9 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     fromType: 'Type',
     fromFocus: 'Focus',
     fromFlavor: 'Flavor',
+    fromAdvancement: (tier) => `Advancement (tier ${tier})`,
+    recoveryRoll: 'Recovery roll',
+    armorSpeedCost: 'Armor Speed Effort cost',
     abilityTrained: 'Trained',
     exportPdf: 'Export as PDF',
     edit: 'Edit',
@@ -71,6 +80,9 @@ export const sheetCopy: Record<Locale, SheetCopy> = {
     fromType: 'Tipo',
     fromFocus: 'Foco',
     fromFlavor: 'Traço',
+    fromAdvancement: (tier) => `Avanço (Grau ${tier})`,
+    recoveryRoll: 'Rolagem de recuperação',
+    armorSpeedCost: 'Custo de Esforço de Velocidade da armadura',
     abilityTrained: 'Treinada',
     exportPdf: 'Exportar como PDF',
     edit: 'Editar',

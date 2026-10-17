@@ -6,7 +6,9 @@ import {
   atMaxTier,
   boughtAtTier,
   choiceOf,
+  isOtherKey,
   parseChoice,
+  purchaseTier,
   revertableIndexes,
   tierOf,
   toPurchase,
@@ -63,6 +65,7 @@ import {
   withSkillPick,
   withoutFlavorGain,
   withoutLearnedPurchase,
+  withoutPurchasePicks,
   flavorIdInUse,
 } from '@/lib/tier-picks'
 
@@ -407,6 +410,10 @@ export async function purchaseAdvancementAction(
     const target = tier + 1
     const bought = boughtAtTier(character.advancement, target)
     if (bought.has(choice.key)) return { ok: false, reason: 'invalid' }
+    // Only one Other Option a tier, in place of a standard advancement.
+    if (isOtherKey(choice.key) && [...bought].some(isOtherKey)) {
+      return { ok: false, reason: 'invalid' }
+    }
     if (atMaxTier(tier, rules.maxTier)) return { ok: false, reason: 'capped' }
     let skillIdOverride: string | undefined
     if (choice.key === 'skills') {
@@ -524,7 +531,18 @@ export async function revertAdvancementAction(
 
     const next = purchases.filter((_, i) => i !== index)
     const tier = tierOf(next, rules.perTier)
-    const nextPicks = picksUpToTier(character.tierPicks, tier)
+    // An ability bought as an Other Option takes its own picks (skills…) with it.
+    const undone = choiceOf(purchase)
+    const nextPicks = picksUpToTier(
+      undone.key === 'typeAbility' || undone.key === 'focusAbility'
+        ? withoutPurchasePicks(
+            character.tierPicks,
+            purchaseTier(purchase),
+            undone.key === 'typeAbility' ? [undone.abilityId] : undone.abilityIds,
+          )
+        : character.tierPicks,
+      tier,
+    )
     const input = buildCharacterChoicesInput(
       character.choices,
       {
@@ -599,9 +617,14 @@ export async function choosePicksAction(
     // Skill, ability and Edge picks can be owed from tier 1 (an ability taken at creation).
     !isInt(tier, kind === 'type' || kind === 'focus' ? 2 : 1, 6) ||
     ((kind === 'skill' || kind === 'edge') &&
-      !(typeof skillKey === 'string' && /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/.test(skillKey))) ||
+      !(
+        typeof skillKey === 'string' &&
+        /^(type|focus|advancement):[1-6]:[a-z0-9-]{1,100}$/.test(skillKey)
+      )) ||
     (kind === 'option' &&
-      !(typeof skillKey === 'string' && /^type:[1-6]:[a-z0-9-]{1,100}$/.test(skillKey))) ||
+      !(
+        typeof skillKey === 'string' && /^(type|advancement):[1-6]:[a-z0-9-]{1,100}$/.test(skillKey)
+      )) ||
     !Array.isArray(optionIds) ||
     optionIds.length === 0 ||
     optionIds.length > 10 ||

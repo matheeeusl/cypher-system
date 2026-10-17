@@ -234,6 +234,8 @@ export interface WizardAbility {
     noncombat: boolean
     /** The player may type their own skill/area (sent as `custom:<text>`). */
     allowCustom: boolean
+    /** May be taken again at a later tier ("select this ability multiple times"). */
+    repeatable: boolean
     options: string[]
     /** A second shape instead of `count` picks ("or specialized in one"). */
     alternate: { count: number; mode: 'train' | 'train_or_specialize' | 'specialize' } | null
@@ -270,7 +272,7 @@ const ABILITIES_QUERY = `
       description { en ptBR }
       cost { pool amount }
       attack
-      skillGrant { count mode noncombat allowCustom options alternate { count mode } }
+      skillGrant { count mode noncombat allowCustom repeatable options alternate { count mode } }
       choice { options count learn { xpCost count } }
       edgeGrant { kind stat amount }
     }
@@ -330,12 +332,21 @@ export type AdvancementPurchaseInput =
   | { movingTowardPerfection: { tier: number; edgeStat: Stat } }
   | { extraEffort: { tier: number } }
   | { skills: { tier: number; target: { skillId: string } | { abilityId: string } } }
+  // The Other Options: at most one per tier, in place of a standard one.
+  | { reduceArmorSpeedCost: { tier: number } }
+  | { recoveryRollBonus: { tier: number } }
+  | { typeAbility: { tier: number; abilityId: string } }
+  | { focusAbility: { tier: number; abilityIds: string[] } }
 
 export interface DerivedCharacter {
   tier: number
   pools: { might: { max: number }; speed: { max: number }; intellect: { max: number } }
   edge: { might: number; speed: number; intellect: number }
   effort: number
+  /** Added to recovery rolls (1d6 + tier + this). */
+  recoveryRollBonus: number
+  /** Taken off the Speed Effort cost of wearing armor. */
+  armorSpeedCostReduction: number
   knownAbilities: Array<{
     abilityId: string
     trained: boolean
@@ -343,6 +354,8 @@ export interface DerivedCharacter {
       | { __typename: 'TypeAbilitySource'; typeId: string }
       | { __typename: 'FocusAbilitySource'; focusId: string }
       | { __typename: 'FlavorAbilitySource'; flavorId: string }
+      /** Bought as an Other Option, by the purchase tagged `tier`. */
+      | { __typename: 'AdvancementAbilitySource'; tier: number }
   }>
   skills: Array<{ skillId: string; level: SkillLevel }>
   /** Level-up choices still owed for tiers already reached. */
@@ -378,6 +391,8 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
           pools { might { max } speed { max } intellect { max } }
           edge { might speed intellect }
           effort
+          recoveryRollBonus
+          armorSpeedCostReduction
           knownAbilities {
             abilityId
             trained
@@ -386,6 +401,7 @@ const VALIDATE_CHARACTER_CHOICES_QUERY = `
               ... on TypeAbilitySource { typeId }
               ... on FocusAbilitySource { focusId }
               ... on FlavorAbilitySource { flavorId }
+              ... on AdvancementAbilitySource { tier }
             }
           }
           skills { skillId level }

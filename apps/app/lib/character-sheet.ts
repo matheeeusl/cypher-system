@@ -44,11 +44,14 @@ export function sheetAbilities(bundle: DerivedBundle, locale: Locale) {
   return bundle.derived.knownAbilities.flatMap((known) => {
     const ability = bundle.abilities.find((a) => a.id === known.abilityId)
     if (!ability) return []
-    const source = {
-      TypeAbilitySource: copy.fromType,
-      FocusAbilitySource: copy.fromFocus,
-      FlavorAbilitySource: copy.fromFlavor,
-    }[known.source.__typename]
+    const source =
+      known.source.__typename === 'AdvancementAbilitySource'
+        ? copy.fromAdvancement(known.source.tier)
+        : {
+            TypeAbilitySource: copy.fromType,
+            FocusAbilitySource: copy.fromFocus,
+            FlavorAbilitySource: copy.fromFlavor,
+          }[known.source.__typename]
     return [
       {
         id: ability.id,
@@ -100,6 +103,10 @@ export async function buildCharacterSheet(
     quickStats: [
       { label: copy.tier, value: String(derived.tier) },
       { label: copy.effort, value: String(derived.effort) },
+      { label: copy.recoveryRoll, value: `1d6 + ${derived.tier + derived.recoveryRollBonus}` },
+      ...(derived.armorSpeedCostReduction > 0
+        ? [{ label: copy.armorSpeedCost, value: `−${derived.armorSpeedCostReduction}` }]
+        : []),
       { label: copy.xp, value: String(xpTotal) },
     ],
     pools: STAT_ORDER.map((stat) => {

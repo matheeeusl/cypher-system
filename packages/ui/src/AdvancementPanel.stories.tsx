@@ -80,3 +80,19 @@ export const BlockedNotice: Story = {
 }
 
 export const WithError: Story = { args: { errorMessage: 'Not enough XP.' } }
+
+/** The Other Options share a fifth row: one a tier, in place of a standard step. */
+export const WithOtherOption: Story = {
+  args: {
+    steps: [
+      ...(meta.args?.steps ?? []),
+      {
+        key: 'other',
+        label: 'Other option — in place of one step, once per tier',
+        status: 'available',
+        statusLabel: '4 XP',
+        actionLabel: 'Choose…',
+      },
+    ],
+  },
+}

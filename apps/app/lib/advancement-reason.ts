@@ -18,6 +18,10 @@ export function advancementReason(
   const t = terms[locale]
   const name = copy.advancement.steps[choice.key].split(' — ')[0]
   const stat = (s: Stat) => t.stats[s]
+  const abilityName = (id: string) => {
+    const ability = bundle.abilities.find((a) => a.id === id)
+    return ability ? loc(ability.name, locale) : id
+  }
   let detail: string
   switch (choice.key) {
     case 'pools':
@@ -44,11 +48,22 @@ export function advancementReason(
             ? customSkillText(choice.skillId)
             : choice.skillId
       } else {
-        const ability = bundle.abilities.find((a) => a.id === choice.abilityId)
-        detail = ability ? loc(ability.name, locale) : choice.abilityId
+        detail = abilityName(choice.abilityId)
       }
       break
     }
+    case 'armor':
+      detail = '−1'
+      break
+    case 'recovery':
+      detail = '+2'
+      break
+    case 'typeAbility':
+      detail = abilityName(choice.abilityId)
+      break
+    case 'focusAbility':
+      detail = choice.abilityIds.map(abilityName).join(' + ')
+      break
   }
   return `${copy.advancement.title} — ${name} (${detail})`.slice(0, LIMITS.reason)
 }

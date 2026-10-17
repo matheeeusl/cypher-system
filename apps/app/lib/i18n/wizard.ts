@@ -387,8 +387,18 @@ const en: WizardCopy = {
         return 'You can only train an ability the character already knows.'
       case 'ABILITY_TRAINING_BLOCKED':
         return 'Ability training can’t be checked until the known abilities are resolved.'
-      case 'TIER_SUBSTITUTION_UNSUPPORTED':
-        return `The advancement option "${param(issue, 'option')}" isn’t supported yet.`
+      case 'TIER_OPTION_UNKNOWN':
+        return `"${param(issue, 'option')}" isn’t a known advancement.`
+      case 'TIER_OTHER_REPEATED':
+        return `Tier ${param(issue, 'tier')} has more than one Other option — only one is allowed per tier.`
+      case 'ADVANCEMENT_ABILITY_NOT_OFFERED':
+        return `"${param(issue, 'abilityId')}" isn’t one of your Type’s abilities of tier ${param(issue, 'tier')} or lower.`
+      case 'ADVANCEMENT_ABILITY_KNOWN':
+        return `The advancement takes "${param(issue, 'abilityId')}", which the character already has.`
+      case 'ADVANCEMENT_FOCUS_OPTION_INVALID':
+        return `"${param(issue, 'abilityIds')}" isn’t an unchosen option of a Focus choice of tier ${param(issue, 'tier')} or lower.`
+      case 'ADVANCEMENT_FOCUS_FIRST_CHOICE_MISSING':
+        return `A second Focus choice for tier ${param(issue, 'tier')} needs that tier’s first choice made.`
       case 'TIER_DUPLICATE_OPTION':
         return `Tier ${param(issue, 'tier')} repeats the same advancement option.`
       case 'TIER_INCOMPLETE':
@@ -652,8 +662,18 @@ const ptBr: WizardCopy = {
         return 'Só é possível treinar uma habilidade que o personagem já conhece.'
       case 'ABILITY_TRAINING_BLOCKED':
         return 'O treinamento de habilidades não pode ser verificado até que as habilidades conhecidas sejam definidas.'
-      case 'TIER_SUBSTITUTION_UNSUPPORTED':
-        return `A opção de avanço "${param(issue, 'option')}" ainda não é suportada.`
+      case 'TIER_OPTION_UNKNOWN':
+        return `"${param(issue, 'option')}" não é um avanço conhecido.`
+      case 'TIER_OTHER_REPEATED':
+        return `O Grau ${param(issue, 'tier')} tem mais de uma das Outras Opções — só uma é permitida por Grau.`
+      case 'ADVANCEMENT_ABILITY_NOT_OFFERED':
+        return `"${param(issue, 'abilityId')}" não é uma habilidade do seu Tipo de Grau ${param(issue, 'tier')} ou inferior.`
+      case 'ADVANCEMENT_ABILITY_KNOWN':
+        return `O avanço pega "${param(issue, 'abilityId')}", que o personagem já tem.`
+      case 'ADVANCEMENT_FOCUS_OPTION_INVALID':
+        return `"${param(issue, 'abilityIds')}" não é uma opção ainda não escolhida de uma escolha do Foco de Grau ${param(issue, 'tier')} ou inferior.`
+      case 'ADVANCEMENT_FOCUS_FIRST_CHOICE_MISSING':
+        return `Uma segunda escolha do Foco de Grau ${param(issue, 'tier')} exige que a primeira escolha desse Grau já tenha sido feita.`
       case 'TIER_DUPLICATE_OPTION':
         return `O Grau ${param(issue, 'tier')} repete a mesma opção de avanço.`
       case 'TIER_INCOMPLETE':

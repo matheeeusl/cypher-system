@@ -62,9 +62,11 @@ export const isEmptyPicks = (p: TierPicks) =>
   p.flavorGain === undefined
 
 const ID = /^[a-z0-9][a-z0-9-]{0,99}$/
-const SKILL_KEY = /^(type|focus):[1-6]:[a-z0-9-]{1,100}$/
-// Choice abilities are always Type picks (a flavor's abilities are picked among them).
-const OPTION_KEY = /^type:[1-6]:[a-z0-9-]{1,100}$/
+// `advancement` keys belong to an ability bought as an Other Option (tier = the purchase's).
+const SKILL_KEY = /^(type|focus|advancement):[1-6]:[a-z0-9-]{1,100}$/
+// Choice abilities are Type picks (a flavor's abilities are picked among them),
+// or abilities bought as an Other Option.
+const OPTION_KEY = /^(type|advancement):[1-6]:[a-z0-9-]{1,100}$/
 
 function parseRecord(
   raw: unknown,
@@ -203,6 +205,43 @@ export function withSkillPick(picks: TierPicks, key: string, skillIds: string[])
 }
 
 /**
+ * The tier a keyed pick's ability was gained at. An Other Option purchase
+ * tagged N is bought at tier N−1, so its `advancement:N:<id>` picks are owed
+ * from N−1 on, before the tier is complete.
+ */
+function gainedAt(key: string): number {
+  const [kind, tier] = key.split(':')
+  return kind === 'advancement' ? Number(tier) - 1 : Number(tier)
+}
+
+/**
+ * Drops the skill/option/Edge picks of the abilities an Other Option purchase
+ * gave (`advancement:<tier>:<id>`), for when that purchase is undone.
+ */
+export function withoutPurchasePicks(
+  picks: TierPicks,
+  tier: number,
+  abilityIds: string[],
+): TierPicks {
+  const gone = new Set(abilityIds.map((id) => `advancement:${tier}:${id}`))
+  const keep = <V>(record: Record<string, V> | undefined) =>
+    Object.fromEntries(Object.entries(record ?? {}).filter(([key]) => !gone.has(key)))
+  const rest = { ...picks }
+  delete rest.skills
+  delete rest.options
+  delete rest.edges
+  const skills = keep(picks.skills)
+  const options = keep(picks.options)
+  const edges = keep(picks.edges)
+  return {
+    ...rest,
+    ...(Object.keys(skills).length > 0 ? { skills } : {}),
+    ...(Object.keys(options).length > 0 ? { options } : {}),
+    ...(Object.keys(edges).length > 0 ? { edges } : {}),
+  }
+}
+
+/**
  * The picks that still apply at `tier`: Type/Focus picks and typed-skill picks
  * made for a higher tier are dropped (a lower tier has nothing to pick yet).
  */
@@ -211,9 +250,7 @@ export function picksUpToTier(picks: TierPicks, tier: number): TierPicks {
     Object.fromEntries(Object.entries(record).filter(([t]) => Number(t) <= tier))
   // Keyed `<kind>:<tier>:<ability>`.
   const upToKeyed = <V>(record: Record<string, V> | undefined): Record<string, V> =>
-    Object.fromEntries(
-      Object.entries(record ?? {}).filter(([key]) => Number(key.split(':')[1]) <= tier),
-    )
+    Object.fromEntries(Object.entries(record ?? {}).filter(([key]) => gainedAt(key) <= tier))
   const skills = upToKeyed(picks.skills)
   const options = upToKeyed(picks.options)
   const edges = upToKeyed(picks.edges)

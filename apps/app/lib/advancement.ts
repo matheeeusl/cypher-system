@@ -17,19 +17,41 @@ export type AdvancementChoice =
   | { key: 'effort' }
   | { key: 'skills'; skillId: string }
   | { key: 'skills'; abilityId: string }
+  | { key: 'armor' }
+  | { key: 'recovery' }
+  | { key: 'typeAbility'; abilityId: string }
+  | { key: 'focusAbility'; abilityIds: string[] }
+
+/** The Other Options: once each tier, one of them in place of a standard advancement. */
+export const OTHER_KEYS: ReadonlySet<AdvancementKey> = new Set([
+  'armor',
+  'recovery',
+  'typeAbility',
+  'focusAbility',
+])
+
+export const isOtherKey = (key: AdvancementKey) => OTHER_KEYS.has(key)
 
 export function advancementKeyOf(p: AdvancementPurchaseInput): AdvancementKey {
   if ('increasingCapabilities' in p) return 'pools'
   if ('movingTowardPerfection' in p) return 'edge'
   if ('extraEffort' in p) return 'effort'
-  return 'skills'
+  if ('skills' in p) return 'skills'
+  if ('reduceArmorSpeedCost' in p) return 'armor'
+  if ('recoveryRollBonus' in p) return 'recovery'
+  if ('typeAbility' in p) return 'typeAbility'
+  return 'focusAbility'
 }
 
 export function purchaseTier(p: AdvancementPurchaseInput): number {
   if ('increasingCapabilities' in p) return p.increasingCapabilities.tier
   if ('movingTowardPerfection' in p) return p.movingTowardPerfection.tier
   if ('extraEffort' in p) return p.extraEffort.tier
-  return p.skills.tier
+  if ('skills' in p) return p.skills.tier
+  if ('reduceArmorSpeedCost' in p) return p.reduceArmorSpeedCost.tier
+  if ('recoveryRollBonus' in p) return p.recoveryRollBonus.tier
+  if ('typeAbility' in p) return p.typeAbility.tier
+  return p.focusAbility.tier
 }
 
 /**
@@ -70,6 +92,14 @@ export function toPurchase(
             'skillId' in choice ? { skillId: choice.skillId } : { abilityId: choice.abilityId },
         },
       }
+    case 'armor':
+      return { reduceArmorSpeedCost: { tier } }
+    case 'recovery':
+      return { recoveryRollBonus: { tier } }
+    case 'typeAbility':
+      return { typeAbility: { tier, abilityId: choice.abilityId } }
+    case 'focusAbility':
+      return { focusAbility: { tier, abilityIds: choice.abilityIds } }
   }
 }
 
@@ -84,6 +114,8 @@ const STATS: Stat[] = ['MIGHT', 'SPEED', 'INTELLECT']
 export function parseChoice(raw: unknown): AdvancementChoice | null {
   if (typeof raw !== 'object' || raw === null) return null
   const r = raw as Record<string, unknown>
+  const validId = (v: unknown): v is string =>
+    typeof v === 'string' && v.length > 0 && v.length < 100
   switch (r.key) {
     case 'pools': {
       const a = r.allocation
@@ -108,11 +140,22 @@ export function parseChoice(raw: unknown): AdvancementChoice | null {
     case 'effort':
       return { key: 'effort' }
     case 'skills': {
-      const valid = (v: unknown): v is string =>
-        typeof v === 'string' && v.length > 0 && v.length < 100
-      if (valid(r.skillId)) return { key: 'skills', skillId: r.skillId }
-      if (valid(r.abilityId)) return { key: 'skills', abilityId: r.abilityId }
+      if (validId(r.skillId)) return { key: 'skills', skillId: r.skillId }
+      if (validId(r.abilityId)) return { key: 'skills', abilityId: r.abilityId }
       return null
+    }
+    case 'armor':
+    case 'recovery':
+      return { key: r.key }
+    case 'typeAbility':
+      return validId(r.abilityId) ? { key: 'typeAbility', abilityId: r.abilityId } : null
+    case 'focusAbility': {
+      // One Focus option: a single ability, or a bundled pair.
+      const ids = r.abilityIds
+      if (!Array.isArray(ids) || ids.length < 1 || ids.length > 2 || !ids.every(validId)) {
+        return null
+      }
+      return { key: 'focusAbility', abilityIds: ids }
     }
     default:
       return null
@@ -128,6 +171,10 @@ export function choiceOf(p: AdvancementPurchaseInput): AdvancementChoice {
     return { key: 'edge', stat: p.movingTowardPerfection.edgeStat }
   }
   if ('extraEffort' in p) return { key: 'effort' }
+  if ('reduceArmorSpeedCost' in p) return { key: 'armor' }
+  if ('recoveryRollBonus' in p) return { key: 'recovery' }
+  if ('typeAbility' in p) return { key: 'typeAbility', abilityId: p.typeAbility.abilityId }
+  if ('focusAbility' in p) return { key: 'focusAbility', abilityIds: p.focusAbility.abilityIds }
   const target = p.skills.target
   return 'skillId' in target
     ? { key: 'skills', skillId: target.skillId }

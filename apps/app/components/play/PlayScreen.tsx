@@ -41,7 +41,7 @@ import {
   removeNoteAction,
   updateNoteAction,
 } from '@/app/[locale]/characters/[id]/play/actions'
-import { POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
+import { isOtherKey, POOL_POINTS, type AdvancementChoice } from '@/lib/advancement'
 import { customSkillText, toCustomSkill } from '@/lib/custom-skill'
 import { fetchCyphers, type CatalogCypher } from '@/lib/graphql/cyphers'
 import type { SkillLevel, Stat } from '@/lib/graphql/queries'
@@ -100,7 +100,9 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
   const [openSkill, setOpenSkill] = useState<string | null>(null)
   const [inventory, setInventory] = useState<InventoryItem[]>(initial.inventory)
   const [notes, setNotes] = useState(initial.notes)
-  const [picker, setPicker] = useState<'pools' | 'edge' | 'skills' | 'abilities' | null>(null)
+  const [picker, setPicker] = useState<
+    'pools' | 'edge' | 'skills' | 'abilities' | 'other' | 'otherType' | 'otherFocus' | null
+  >(null)
   const [tierUp, setTierUp] = useState<number | null>(null)
   const [busy, setBusy] = useState(false)
   const [errors, setErrors] = useState<{
@@ -324,6 +326,26 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
       actionLabel: copy.advancement.purchase,
     }
   })
+  // The Other Options share one row: once one is bought, the tier has no other.
+  const otherBought = adv.bought.some(isOtherKey)
+  const otherBlocked = !otherBought && adv.nextIsBlocked
+  steps.push({
+    key: 'other',
+    label: copy.advancement.other,
+    status: otherBought
+      ? 'purchased'
+      : canAfford && !otherBlocked && !busy
+        ? 'available'
+        : 'locked',
+    statusLabel: otherBought
+      ? copy.advancement.purchased
+      : otherBlocked
+        ? copy.advancement.unavailable
+        : canAfford
+          ? copy.advancement.cost(adv.costXp)
+          : copy.advancement.needs(adv.costXp),
+    actionLabel: copy.advancement.otherOption,
+  })
 
   async function purchase(choice: AdvancementChoice) {
     setBusy(true)
@@ -504,7 +526,7 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
     setError('advancement')
     if (busy) return
     if (key === 'effort') void purchase({ key: 'effort' })
-    else setPicker(key as 'pools' | 'edge' | 'skills')
+    else setPicker(key as 'pools' | 'edge' | 'skills' | 'other')
   }
 
   const statOptions = (['MIGHT', 'SPEED', 'INTELLECT'] as const).map((stat) => ({
@@ -614,6 +636,52 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
         onCancel={() => setPicker(null)}
         cancelLabel={copy.advancement.cancel}
       />
+    ) : picker === 'other' ? (
+      <ChipPicker
+        title={copy.advancement.otherTitle}
+        options={(['armor', 'recovery', 'typeAbility', 'focusAbility'] as const).map((key) => ({
+          id: key,
+          label: copy.advancement.steps[key],
+          disabled:
+            (key === 'typeAbility' && adv.other.typeAbilities.length === 0) ||
+            (key === 'focusAbility' && adv.other.focusOptions.length === 0),
+        }))}
+        onPick={(id) => {
+          if (id === 'armor' || id === 'recovery') void purchase({ key: id })
+          else setPicker(id === 'typeAbility' ? 'otherType' : 'otherFocus')
+        }}
+        onCancel={() => setPicker(null)}
+        cancelLabel={copy.advancement.cancel}
+      />
+    ) : picker === 'otherType' ? (
+      <ChipPicker
+        searchPlaceholder={copy.advancement.otherTypeAbilitySearch}
+        options={adv.other.typeAbilities.map((a) => ({
+          id: a.id,
+          label: copy.advancement.otherTypeAbilityOption(a.name, a.tier, a.flavor),
+        }))}
+        onPick={(id) => void purchase({ key: 'typeAbility', abilityId: id })}
+        secondaryAction={{ label: copy.advancement.back, onClick: () => setPicker('other') }}
+        onCancel={() => setPicker(null)}
+        cancelLabel={copy.advancement.cancel}
+      />
+    ) : picker === 'otherFocus' ? (
+      <div className="mt-3">
+        <p className="text-warning mb-1 font-mono text-[11px]">
+          {copy.advancement.otherFocusWarning}
+        </p>
+        <ChipPicker
+          title={copy.advancement.otherFocusTitle}
+          options={adv.other.focusOptions.map((o) => ({
+            id: o.ids.join(','),
+            label: copy.advancement.otherTypeAbilityOption(o.name, o.tier, null),
+          }))}
+          onPick={(id) => void purchase({ key: 'focusAbility', abilityIds: id.split(',') })}
+          secondaryAction={{ label: copy.advancement.back, onClick: () => setPicker('other') }}
+          onCancel={() => setPicker(null)}
+          cancelLabel={copy.advancement.cancel}
+        />
+      </div>
     ) : undefined
 
   // ---- render -------------------------------------------------------------
@@ -740,8 +808,14 @@ export function PlayScreen({ locale, initial }: PlayScreenProps) {
               <h2 className="text-text-muted font-mono text-xs tracking-wider uppercase">
                 {copy.pools.title}
               </h2>
-              <span className="text-text-muted font-mono text-xs">
-                {copy.pools.effort} {view.effort}
+              <span className="text-text-muted flex flex-wrap justify-end gap-x-3 font-mono text-xs">
+                <span>
+                  {copy.pools.effort} {view.effort}
+                </span>
+                <span>{copy.pools.recoveryRoll(view.recoveryRollBonus)}</span>
+                {view.armorSpeedCostReduction > 0 && (
+                  <span>{copy.pools.armorReduction(view.armorSpeedCostReduction)}</span>
+                )}
               </span>
             </div>
             <div className="flex flex-col gap-2.5">

@@ -8,7 +8,16 @@ import { terms } from '@/lib/i18n/terms'
 
 export type CypherCategoryKey = 'MANIFEST' | 'FANTASTIC' | 'SUBTLE' | 'POWER_BOOST'
 export type ConditionKey = 'hale' | 'impaired' | 'debilitated' | 'dead'
-export type AdvancementKey = 'pools' | 'edge' | 'effort' | 'skills'
+export type AdvancementKey =
+  | 'pools'
+  | 'edge'
+  | 'effort'
+  | 'skills'
+  // The Other Options: at most one per tier, in place of a standard one.
+  | 'armor'
+  | 'recovery'
+  | 'typeAbility'
+  | 'focusAbility'
 
 export interface PlayCopy {
   title: string
@@ -23,6 +32,10 @@ export interface PlayCopy {
     recover: string
     recoverFull: string
     amount: string
+    /** "1d6 + N": the recovery roll with the tier and the Other Option bonus. */
+    recoveryRoll: (bonus: number) => string
+    /** Shown only once an Other Option reduced it. */
+    armorReduction: (n: number) => string
   }
   conditions: Record<ConditionKey, { label: string; note: string }>
   advancement: {
@@ -55,6 +68,18 @@ export interface PlayCopy {
     abilitySearch: string
     abilityOption: (name: string) => string
     abilityTrained: (name: string) => string
+    /** The fifth row: one Other Option a tier, in place of a standard step. */
+    other: string
+    otherTitle: string
+    otherOption: string
+    otherTypeAbilitySearch: string
+    /** A Type (or flavor) ability the Other Option can take: its tier, and the flavor when it is one. */
+    otherTypeAbilityOption: (name: string, tier: number, flavor: string | null) => string
+    otherFocusTitle: string
+    /** The GM decides whether a second Focus choice is allowed. */
+    otherFocusWarning: string
+    otherNothing: string
+    back: string
     cancel: string
     tierUp: (tier: number) => string
     dismiss: string
@@ -218,6 +243,8 @@ const en: PlayCopy = {
     recover: 'Recover',
     recoverFull: 'Full recovery',
     amount: 'Amount',
+    recoveryRoll: (bonus) => `Recovery roll 1d6 + ${bonus}`,
+    armorReduction: (n) => `Armor Speed Effort cost −${n}`,
   },
   conditions: {
     hale: { label: 'Hale', note: 'Your normal, healthy state.' },
@@ -241,6 +268,10 @@ const en: PlayCopy = {
       edge: 'Moving Toward Perfection — +1 Edge',
       effort: 'Extra Effort — +1 Effort',
       skills: 'Skills — train a skill',
+      armor: 'Armor — −1 Speed Effort cost for wearing armor',
+      recovery: 'Recovery — +2 to recovery rolls',
+      typeAbility: 'Type ability — another special ability from your Type',
+      focusAbility: 'Focus choice — a second ability choice from your Focus',
     },
     purchased: 'Purchased',
     refundPrefix: 'Refund',
@@ -264,6 +295,16 @@ const en: PlayCopy = {
     abilitySearch: 'Search your special abilities',
     abilityOption: (name) => `${name} — ability (train)`,
     abilityTrained: (name) => `${name} — ability, already trained`,
+    other: 'Other option — in place of one step, once per tier',
+    otherTitle: 'Choose an Other option:',
+    otherOption: 'Choose…',
+    otherTypeAbilitySearch: 'Search your Type’s abilities',
+    otherTypeAbilityOption: (name, tier, flavor) =>
+      `${name} — tier ${tier}${flavor ? ` · ${flavor}` : ''}`,
+    otherFocusTitle: 'Take another option of a Focus choice:',
+    otherFocusWarning: 'A second Focus choice is up to your GM — talk to them before buying it.',
+    otherNothing: 'Nothing left to take.',
+    back: '← Back',
     cancel: 'Cancel',
     tierUp: (tier) => `✓ Advanced to Tier ${tier} — all four steps purchased.`,
     dismiss: 'Dismiss',
@@ -459,6 +500,8 @@ const ptBr: PlayCopy = {
     recover: 'Recuperar',
     recoverFull: 'Recuperação total',
     amount: 'Quantidade',
+    recoveryRoll: (bonus) => `Rolagem de recuperação 1d6 + ${bonus}`,
+    armorReduction: (n) => `Custo de Esforço de Velocidade da armadura −${n}`,
   },
   conditions: {
     hale: { label: 'Íntegro', note: 'Seu estado normal e saudável.' }, // UNCONFIRMED (docs use "Íntegro")
@@ -482,6 +525,10 @@ const ptBr: PlayCopy = {
       edge: 'Caminho para a Perfeição — +1 Margem',
       effort: 'Esforço Extra — +1 Esforço',
       skills: 'Perícias — treinar uma perícia',
+      armor: 'Armadura — −1 no custo de Esforço de Velocidade para usar armadura',
+      recovery: 'Recuperação — +2 nas rolagens de recuperação',
+      typeAbility: 'Habilidade de Tipo — outra habilidade especial do seu Tipo',
+      focusAbility: 'Escolha de Foco — uma segunda escolha de habilidade do seu Foco',
     },
     purchased: 'Comprado',
     refundPrefix: 'Reembolso',
@@ -505,6 +552,17 @@ const ptBr: PlayCopy = {
     abilitySearch: 'Buscar suas habilidades especiais',
     abilityOption: (name) => `${name} — habilidade (treinar)`,
     abilityTrained: (name) => `${name} — habilidade, já treinada`,
+    other: 'Outra opção — no lugar de uma etapa, uma vez por Grau',
+    otherTitle: 'Escolha uma das Outras Opções:',
+    otherOption: 'Escolher…',
+    otherTypeAbilitySearch: 'Buscar habilidades do seu Tipo',
+    otherTypeAbilityOption: (name, tier, flavor) =>
+      `${name} — Grau ${tier}${flavor ? ` · ${flavor}` : ''}`,
+    otherFocusTitle: 'Pegue outra opção de uma escolha do Foco:',
+    otherFocusWarning:
+      'Uma segunda escolha do Foco depende do Mestre — converse com ele antes de comprar.',
+    otherNothing: 'Nada disponível.',
+    back: '← Voltar',
     cancel: 'Cancelar',
     tierUp: (tier) => `✓ Avançou para o Grau ${tier} — as quatro etapas foram compradas.`,
     dismiss: 'Dispensar',
