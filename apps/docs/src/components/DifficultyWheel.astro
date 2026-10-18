@@ -1,19 +1,189 @@
 ---
-// The Core Mechanics page's task-difficulty wheel (a raster figure from the
-// rulebook's own artwork). It has an opaque white background, so it is framed
-// as a white card rather than dropped bare onto the dark theme. The wheel's
-// labels are baked into the image and stay English in both locales, which is
-// why `alt` carries the locale-specific description.
-import { Image } from 'astro:assets';
-import wheel from '../assets/task-difficulty-wheel.png';
-
+// The Core Mechanics page's task-difficulty wheel: difficulties 0–10 around a
+// d20, each with its target number (3 × difficulty) and, while it is above
+// 0%, its chance of success on a d20. Drawn as inline SVG so it follows the
+// theme tokens and the page's locale. Below `sm` the wheel's labels would be
+// too small to read, so it collapses into a vertical timeline instead.
 interface Props {
 	alt: string;
 }
 
 const { alt } = Astro.props;
+
+const locale = Astro.url.pathname.split('/')[1] === 'pt-br' ? 'pt-br' : 'en';
+
+const NAMES = {
+	en: ['Routine', 'Simple', 'Standard', 'Demanding', 'Difficult', 'Challenging', 'Intimidating', 'Formidable', 'Heroic', 'Immortal', 'Impossible'],
+	'pt-br': ['Rotineira', 'Simples', 'Padrão', 'Exigente', 'Difícil', 'Desafiadora', 'Intimidante', 'Formidável', 'Heroica', 'Imortal', 'Impossível'],
+}[locale];
+
+const steps = NAMES.map((name, level) => {
+	const target = level * 3;
+	// A d20 roll succeeds on target or higher: (21 − target) faces of 20.
+	const chance = level === 0 ? 100 : (21 - target) * 5;
+	return {
+		level,
+		name,
+		target,
+		chance: chance > 0 ? `${chance}%` : null,
+		// Easy steps take the accent, hard ones the warning colour.
+		color: `color-mix(in oklch, var(--color-warning) ${level * 10}%, var(--color-accent))`,
+	};
+});
+
+// Wheel geometry, in SVG user units around (0, 0).
+const R = 130; // ring
+const NODE = 15; // node radius
+const point = (i: number, r: number) => {
+	const a = ((-90 + (i * 360) / steps.length) * Math.PI) / 180;
+	return { x: r * Math.cos(a), y: r * Math.sin(a) };
+};
+
+const wheel = steps.map((s, i) => {
+	const node = point(i, R);
+	const label = point(i, R + NODE + 8);
+	const value = point(i, R - NODE - 30);
+	const next = point((i + 1) % steps.length, R);
+	const anchor = label.x > 20 ? 'start' : label.x < -20 ? 'end' : 'middle';
+	// Nudge labels near the top/bottom away from the node vertically.
+	const labelY = label.y + (anchor === 'middle' ? Math.sign(label.y) * 6 : 0);
+	return { ...s, node, label: { x: label.x, y: labelY, anchor }, value, next, closing: i === steps.length - 1 };
+});
+
+// d20 face: an outer hexagon and an upward inner triangle, joined into facets.
+const D = 58;
+const hex = Array.from({ length: 6 }, (_, k) => {
+	const a = ((-90 + k * 60) * Math.PI) / 180;
+	return { x: D * Math.cos(a), y: D * Math.sin(a) };
+});
+const tri = [
+	{ x: 0, y: -0.5 * D },
+	{ x: 0.47 * D, y: 0.32 * D },
+	{ x: -0.47 * D, y: 0.32 * D },
+];
+const facetLines: [number, number][] = [
+	// [hex index, triangle index]
+	[5, 0], [0, 0], [1, 0],
+	[1, 1], [2, 1], [3, 1],
+	[3, 2], [4, 2], [5, 2],
+];
+const pts = (ps: { x: number; y: number }[]) => ps.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
 ---
 
-<figure class="not-content mx-auto my-6 w-fit rounded-lg bg-white p-2 sm:p-3">
-	<Image src={wheel} alt={alt} width={360} class="block h-auto w-full max-w-full sm:w-[360px]" />
+<!-- Centred by the wrapper's flex, not by margins: Starlight's content CSS
+     overrides margins on direct children of the markdown body. -->
+<div class="not-content flex justify-center">
+<figure class="w-full max-w-[520px]">
+	<svg
+		viewBox="-245 -180 490 360"
+		role="img"
+		aria-label={alt}
+		class="hidden h-auto w-full sm:block"
+	>
+		<!-- ring segments: each one in the colour of the step it leaves -->
+		{
+			wheel.map((s) => (
+				<path
+					d={`M ${s.node.x} ${s.node.y} A ${R} ${R} 0 0 1 ${s.next.x} ${s.next.y}`}
+					fill="none"
+					stroke={s.closing ? 'var(--color-border)' : s.color}
+					stroke-width={s.closing ? 2 : 5}
+					stroke-dasharray={s.closing ? '4 5' : undefined}
+				/>
+			))
+		}
+
+		<!-- d20 -->
+		<g stroke="var(--color-accent)" stroke-width="1.5" stroke-linejoin="round">
+			<polygon points={pts(hex)} fill="var(--color-accent-soft)" />
+			<polygon points={pts(tri)} fill="var(--color-accent-soft)" />
+			{facetLines.map(([h, t]) => <line x1={hex[h]!.x} y1={hex[h]!.y} x2={tri[t]!.x} y2={tri[t]!.y} />)}
+		</g>
+		<text
+			y="8"
+			text-anchor="middle"
+			dominant-baseline="middle"
+			class="fill-text font-display text-[22px] font-bold"
+		>20</text>
+
+		{
+			wheel.map((s) => (
+				<g>
+					<circle cx={s.node.x} cy={s.node.y} r={NODE} fill={s.color} />
+					<text
+						x={s.node.x}
+						y={s.node.y}
+						text-anchor="middle"
+						dominant-baseline="central"
+						class="fill-bg font-mono text-[14px] font-bold"
+					>
+						{s.level}
+					</text>
+
+					<text
+						x={s.label.x}
+						y={s.label.y}
+						text-anchor={s.label.anchor}
+						dominant-baseline="central"
+						fill={s.color}
+						class="font-mono text-[11px] font-semibold uppercase tracking-wider"
+					>
+						{s.name}
+					</text>
+
+					<text
+						x={s.value.x}
+						y={s.chance ? s.value.y - 7 : s.value.y}
+						text-anchor="middle"
+						dominant-baseline="central"
+						class="fill-text font-mono text-[15px] font-bold"
+					>
+						{s.target}
+					</text>
+					{s.chance && (
+						<text
+							x={s.value.x}
+							y={s.value.y + 9}
+							text-anchor="middle"
+							dominant-baseline="central"
+							class="fill-text-muted font-mono text-[10px]"
+						>
+							({s.chance})
+						</text>
+					)}
+				</g>
+			))
+		}
+	</svg>
+
+	<!-- narrow screens: the same steps as a vertical timeline -->
+	<ol class="m-0 list-none p-0 sm:hidden" aria-label={alt}>
+		{
+			steps.map((s, i) => (
+				<li class="relative flex items-center gap-3 py-1.5">
+					{i < steps.length - 1 && (
+						<span
+							class="absolute top-1/2 left-[13px] h-full w-[3px]"
+							style={{ background: s.color }}
+							aria-hidden="true"
+						/>
+					)}
+					<span
+						class="relative z-10 flex size-7 shrink-0 items-center justify-center rounded-full font-mono text-sm font-bold text-bg"
+						style={{ background: s.color }}
+					>
+						{s.level}
+					</span>
+					<span class="flex-1 font-mono text-xs font-semibold uppercase tracking-wider" style={{ color: s.color }}>
+						{s.name}
+					</span>
+					<span class="flex items-baseline gap-1 font-mono text-sm font-bold text-text">
+						{s.target}
+						{s.chance && <span class="text-xs font-normal text-text-muted">({s.chance})</span>}
+					</span>
+				</li>
+			))
+		}
+	</ol>
 </figure>
+</div>
