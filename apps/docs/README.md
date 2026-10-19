@@ -1,49 +1,81 @@
-# Starlight Starter Kit: Basics
+# @cypher/docs
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+The Cypher System rules reference at [csrd.app](https://csrd.app), in English (`/en/…`) and
+Brazilian Portuguese (`/pt-br/…`). A static site: rules chapters plus a page for every Type,
+Descriptor, Focus, Flavor, Ability, Skill, Cypher and Artifact.
+
+Part of the [Cypher System monorepo](../../README.md).
+
+## Stack
+
+- [Astro 7](https://astro.build) + [Starlight](https://starlight.astro.build), output as static
+  HTML
+- [`@cypher/content`](../../packages/content/README.md) for all rules data, read at build time
+- [`@cypher/ui`](../../packages/ui/README.md) for design tokens and Tailwind CSS v4
+- Pagefind search (built into Starlight)
+
+## Kinds of pages
+
+| Kind           | Where it lives                               | How to add one                                         |
+| -------------- | -------------------------------------------- | ------------------------------------------------------ |
+| Rules chapters | `src/content/docs/<locale>/rules/*.md(x)`    | Add the file in both locales; the sidebar picks it up  |
+| Entity pages   | `src/pages/[locale]/<category>/[slug].astro` | Nothing: add the YAML to `@cypher/content` and rebuild |
+| Equipment      | `src/pages/[locale]/equipment/index.astro`   | One fixed page of reference tables                     |
+| Homepage       | `src/pages/[locale]/index.astro`             | Standalone page outside the Starlight shell            |
+
+Entity pages are generated with `getStaticPaths()` over every locale and every entry from
+`@cypher/content`, so the site never lists something the data doesn't have. Rules chapters can
+link to entities inline with `src/components/EntityLink.astro`, which fails the build on an
+unknown id instead of shipping a dead link.
+
+### Where things are
 
 ```
-pnpm create astro@latest -- --template starlight
+src/content/docs/   rules chapters and glossary, one folder per locale
+src/pages/          generated entity pages, homepage, 404, sidebar lists
+src/components/     header, sidebar, breadcrumbs, entity links and Starlight overrides
+src/lib/            shared helpers (locale mapping, page context, formatting)
+src/styles/         globals.css: imports @cypher/ui's tokens and maps Starlight's variables onto them
+astro.config.mjs    locales, sidebar groups, component overrides
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Translations
 
-## 🚀 Project Structure
+Both locales are prefixed in the URL (there is no root locale). Content fields from
+`@cypher/content` are `{ en, 'pt-BR' }`; use `pick()` from `src/lib/locale.ts` to read the right
+one.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Portuguese game terms (Margem for Edge, Reserva for Pool, …) come from one glossary:
+[`.claude/skills/cypher-pt-br-translation/references/glossary.md`](../../.claude/skills/cypher-pt-br-translation/references/glossary.md).
+Check it before writing any pt-BR copy.
 
+## Running locally
+
+From the repo root:
+
+```sh
+pnpm install
+pnpm build        # the site imports the packages' compiled output
+pnpm dev:docs     # http://localhost:4321/en/
 ```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+No environment variables are needed.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Scripts
 
-Static assets, like favicons, can be placed in the `public/` directory.
+| Script      | What it does                 |
+| ----------- | ---------------------------- |
+| `dev`       | Astro dev server             |
+| `build`     | Static build to `dist/`      |
+| `preview`   | Serve the built site locally |
+| `typecheck` | `astro check`                |
+| `lint`      | ESLint over `src/`           |
 
-## 🧞 Commands
+## Deployment
 
-All commands are run from the root of the project, from a terminal:
+Vercel project with root `apps/docs`, build command
+`cd ../.. && pnpm --filter "@cypher/docs..." build` (rebuilds the workspace packages first) and
+output directory `dist`. Cache headers are in [`vercel.json`](vercel.json).
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+See [`CLAUDE.md`](CLAUDE.md) for the detailed notes on Starlight overrides, the sidebar, page
+layout and typography.

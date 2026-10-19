@@ -8,9 +8,9 @@ Plain TypeScript implementation of Cypher System mechanics: pools, effort, abili
 - Pure functions only. Given the same inputs, a function here should always return the same output, with no hidden mutation of arguments and no reliance on ambient/global state.
 - Test-first. Write the Vitest spec for a rule (e.g. effort cost math, pool depletion) before or alongside the implementation, not after. A rules engine is only trustworthy if its edge cases (zero pool, negative effort, etc.) are pinned down by tests.
 
-## Current state
+## Layout
 
-`src/index.ts` is a stub (`ENGINE_VERSION`, a placeholder `PoolName` type). Real modules for pools/effort/abilities don't exist yet — build them as separate files under `src/` rather than growing `index.ts` into a monolith, and re-export from there.
+`src/index.ts` is only a barrel of re-exports. The entry points are `deriveCharacter` (`character.ts`) and `validateCharacterChoices` (`validate-character-choices.ts`); each rule lives in its own file under `src/character/` (pools, edge, effort, tier, type/focus abilities, flavors, skill grants, choice abilities, cypher limit…), with advancement constants in `advancement.ts` and `effortCost` in `effort-cost.ts`. Tests are in `src/test/`, one file per rule. Add a new rule as its own file rather than growing `character.ts` or `index.ts`, and re-export from `index.ts` only what callers need.
 
 ## Scope
 
